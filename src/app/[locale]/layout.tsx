@@ -49,7 +49,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={direction} className="dark">
       <head>
-        <meta name="google-site-verification" content="Gc5SbwLPT2C2z" />
+        <meta name="google-site-verification" content="Gc5SbwLPT2C2zV7jHnFJj2pX2EvkjI3QIOsbQUVd6_8" />
         {/* Google AdSense Script Integration */}
         {ADSENSE_CONFIG.enabled && !isAdSensePlaceholder && (
           <Script
