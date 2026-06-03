@@ -3,7 +3,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import GradientText from '../ui/GradientText';
 import SearchBar from '../ui/SearchBar';
 import CategoryFilter from './CategoryFilter';
 
