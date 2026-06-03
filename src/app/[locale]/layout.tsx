@@ -34,24 +34,20 @@ export default async function LocaleLayout({
   children,
   params: { locale }
 }: LocaleLayoutProps) {
-  // Validate that the incoming locale is supported
   const locales = ['en', 'fr', 'es', 'ar'];
   if (!locales.includes(locale)) {
     notFound();
   }
 
-  // Receive messages for next-intl
   const messages = await getMessages();
   const direction = locale === 'ar' ? 'rtl' : 'ltr';
-
   const isAdSensePlaceholder = ADSENSE_CONFIG.publisherId.includes('ca-pub-1234567890123456');
 
   return (
     <html lang={locale} dir={direction} className="dark">
       <head>
         <meta name="google-site-verification" content="Gc5SbwLPT2C2zV7jHnFJj2pX2EvkjI3QIOsbQUVd6_8" />
-        <meta name='impact-site-verification' content='65970350-7c75-4c0b-8992-b3e678105736' />
-        {/* Google AdSense Script Integration */}
+        <meta name="impact-site-verification" content="65970350-7c75-4c0b-8992-b3e678105736" />
         {ADSENSE_CONFIG.enabled && !isAdSensePlaceholder && (
           <Script
             async
@@ -66,4 +62,10 @@ export default async function LocaleLayout({
           <Header />
           <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
             {children}
-   
+          </main>
+          <Footer />
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
+}
