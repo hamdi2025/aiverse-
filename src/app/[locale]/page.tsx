@@ -15,7 +15,6 @@ export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedTool, setSelectedTool] = useState<AITool | null>(null);
-  const [hasSearched, setHasSearched] = useState(false);
   const gridRef = useRef<HTMLDivElement>(null);
 
   const scrollToGrid = useCallback(() => {
@@ -26,14 +25,13 @@ export default function HomePage() {
 
   const handleSearch = useCallback((query: string) => {
     setSearchQuery(query);
-    setHasSearched(true);
     scrollToGrid();
   }, [scrollToGrid]);
 
   const handleCategoryChange = useCallback((category: string) => {
     setSelectedCategory(category);
-    if (hasSearched) scrollToGrid();
-  }, [hasSearched, scrollToGrid]);
+    scrollToGrid();
+  }, [scrollToGrid]);
 
   const filteredTools = TOOLS_DATA.filter((tool) => {
     const matchesCategory = selectedCategory === 'all' || tool.category === selectedCategory;
@@ -57,23 +55,26 @@ export default function HomePage() {
           onCategoryChange={handleCategoryChange}
         />
 
-        {/* Stats bar — always visible */}
+        {/* Stats bar */}
         <StatsBar />
 
-        {/* Newsletter CTA — always visible */}
-        <NewsletterCTA />
+        {/* AdSense — top banner */}
+        <div className="w-full flex justify-center">
+          <AdSenseSlot slot="leaderboard" className="max-w-4xl" />
+        </div>
 
-        {/* Tools grid — only after search */}
-        {hasSearched && (
-          <>
-            <div className="w-full flex justify-center">
-              <AdSenseSlot slot="leaderboard" className="max-w-4xl" />
-            </div>
-            <div ref={gridRef} className="scroll-mt-24">
-              <BentoGrid tools={filteredTools} onToolClick={setSelectedTool} />
-            </div>
-          </>
-        )}
+        {/* Tools grid — always visible */}
+        <div ref={gridRef} className="scroll-mt-24">
+          <BentoGrid tools={filteredTools} onToolClick={setSelectedTool} />
+        </div>
+
+        {/* AdSense — mid banner */}
+        <div className="w-full flex justify-center my-4">
+          <AdSenseSlot slot="leaderboard" className="max-w-4xl" />
+        </div>
+
+        {/* Newsletter CTA */}
+        <NewsletterCTA />
       </div>
 
       <ToolModal tool={selectedTool} onClose={() => setSelectedTool(null)} />

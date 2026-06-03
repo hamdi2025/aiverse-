@@ -7,8 +7,11 @@ export interface AITool {
   pricing: 'Free' | 'Freemium' | 'Paid';
   pricingLocalized: { en: string; fr: string; es: string; ar: string; };
   websiteUrl: string;
+  affiliateUrl?: string;   // lien affilié (prioritaire sur websiteUrl)
+  commission?: string;     // ex: "30% récurrent"
   views: number;
   isWeeklyFeatured?: boolean;
+  isFeaturedSponsored?: boolean; // outil sponsorisé payant
 }
 
 export const TOOLS_DATA: AITool[] = [
@@ -157,6 +160,8 @@ export const TOOLS_DATA: AITool[] = [
       ar: 'مجاني / ١٢ دولار شهرياً'
     },
     websiteUrl: 'https://grammarly.com',
+    affiliateUrl: 'https://grammarly.com?utm_source=aiverse&utm_medium=affiliate',
+    commission: '$0.20 free / $20 premium',
     views: 30100
   },
   {
@@ -199,6 +204,8 @@ export const TOOLS_DATA: AITool[] = [
       ar: 'مجاني / ٣٦ دولار شهرياً'
     },
     websiteUrl: 'https://copy.ai',
+    affiliateUrl: 'https://copy.ai?via=aiverse',
+    commission: '45% récurrent',
     views: 11200
   },
   {
@@ -220,6 +227,8 @@ export const TOOLS_DATA: AITool[] = [
       ar: 'مجاني / ١٦ دولار شهرياً'
     },
     websiteUrl: 'https://writesonic.com',
+    affiliateUrl: 'https://writesonic.com?via=aiverse',
+    commission: '30% récurrent',
     views: 9800
   },
   {
@@ -283,6 +292,8 @@ export const TOOLS_DATA: AITool[] = [
       ar: 'تبدأ من ٣٩ دولار شهرياً'
     },
     websiteUrl: 'https://jasper.ai',
+    affiliateUrl: 'https://jasper.ai?fpr=aiverse',
+    commission: '30% récurrent',
     views: 15600
   },
   {
@@ -1314,6 +1325,8 @@ export const TOOLS_DATA: AITool[] = [
       ar: 'تبدأ من ٨٩ دولار شهرياً'
     },
     websiteUrl: 'https://surferseo.com',
+    affiliateUrl: 'https://surferseo.com?via=aiverse',
+    commission: '25% récurrent',
     views: 13500
   },
   {
@@ -1335,6 +1348,8 @@ export const TOOLS_DATA: AITool[] = [
       ar: 'تبدأ من ١٢٠ دولار شهرياً'
     },
     websiteUrl: 'https://semrush.com',
+    affiliateUrl: 'https://semrush.com?via=aiverse',
+    commission: '$200 par vente',
     views: 22800
   },
   {
