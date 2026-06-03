@@ -50,7 +50,7 @@ export default async function LocaleLayout({
     <html lang={locale} dir={direction} className="dark">
       <head>
         <meta name="google-site-verification" content="Gc5SbwLPT2C2zV7jHnFJj2pX2EvkjI3QIOsbQUVd6_8" />
-        <meta name='impact-site-verification' value='65970350-7c75-4c0b-8992-b3e678105736' />
+        <meta name='impact-site-verification' content='65970350-7c75-4c0b-8992-b3e678105736' />
         {/* Google AdSense Script Integration */}
         {ADSENSE_CONFIG.enabled && !isAdSensePlaceholder && (
           <Script
