@@ -27,20 +27,22 @@
 
 /* ── Hero title gradient parts ──────────────────────────────────────────── */
 .gradient-power {
-  background: linear-gradient(90deg, #a855f7, #7C3AED);
+  background: linear-gradient(90deg, #FF6B00, #FF9F1C, #FFBF00);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
   font-weight: 900;
+  filter: drop-shadow(0 0 12px rgba(255, 107, 0, 0.5));
 }
 .gradient-cost {
-  background: linear-gradient(90deg, #06B6D4, #3B82F6);
+  background: linear-gradient(90deg, #00FF88, #00D4AA, #00BCD4);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
   font-weight: 900;
+  filter: drop-shadow(0 0 12px rgba(0, 255, 136, 0.45));
 }
 
 /* ── Color-cycle dot (header badge) ─────────────────────────────────────── */

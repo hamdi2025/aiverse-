@@ -31,6 +31,21 @@
     "audio": "Audio & Voix",
     "marketing": "Marketing & SEO"
   },
+  "Newsletter": {
+    "badge": "Digest IA Hebdomadaire",
+    "title": "🚀 Les meilleurs outils IA, chaque semaine",
+    "desc": "Rejoignez <b>12 000+ fondateurs & développeurs</b> qui reçoivent notre sélection des meilleurs outils IA, deals et tutoriels — gratuitement, chaque lundi.",
+    "placeholder": "Votre adresse email...",
+    "cta": "S'abonner gratuitement",
+    "fine": "Pas de spam. Désinscription à tout moment. 12 000+ lecteurs.",
+    "success": "✅ C'est noté ! Vérifiez votre boîte mail."
+  },
+  "Stats": {
+    "tools": "Outils IA répertoriés",
+    "readers": "Lecteurs mensuels",
+    "categories": "Catégories",
+    "languages": "Langues"
+  },
   "Footer": {
     "rights": "© 2026 AIverse. Tous droits réservés.",
     "disclosure": "Divulgation d'affiliation : Certains liens sur ce répertoire sont des liens d'affiliation. Si vous cliquez dessus et vous abonnez, nous pouvons recevoir une commission sans frais supplémentaires pour vous. Merci de soutenir AIverse."
