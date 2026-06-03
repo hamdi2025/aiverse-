@@ -14,8 +14,9 @@
   },
   "Hero": {
     "badge": "Más de 2.400 herramientas de IA catalogadas",
-    "title": "+2,400 herramientas IA. Te ayudamos a elegir mejor —",
-    "titleGradient": "Máximo poder, mínimo costo.",
+    "titleMain": "Herramientas IA. Te ayudamos a elegir mejor —",
+    "titleGradient1": "Máximo poder,",
+    "titleGradient2": "mínimo costo.",
     "subtitle": "Explora +2,400 herramientas IA en todos los dominios. Te guiamos hacia la opción más potente y económica — paga solo lo que realmente necesitas.",
     "badge2": "✦ Herramientas gratis & de pago · Todos los dominios · Reseñas imparciales",
     "popularSearch": "Popular: ChatGPT, Midjourney, Claude, Jasper"

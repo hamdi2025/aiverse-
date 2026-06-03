@@ -14,8 +14,9 @@
   },
   "Hero": {
     "badge": "Plus de 2 400 outils IA répertoriés",
-    "title": "+2 400 outils IA. On vous aide à choisir plus intelligemment —",
-    "titleGradient": "Maximum de puissance, minimum de coût.",
+    "titleMain": "Outils IA. On vous aide à choisir plus intelligemment —",
+    "titleGradient1": "La plus puissante,",
+    "titleGradient2": "la moins chère.",
     "subtitle": "Parcourez +2 400 outils IA dans tous les domaines. On vous guide vers l'option la plus puissante et la moins chère — payez uniquement ce dont vous avez besoin.",
     "badge2": "✦ Outils gratuits & payants · Tous les domaines · Avis impartiaux",
     "popularSearch": "Populaire : ChatGPT, Midjourney, Claude, Jasper"

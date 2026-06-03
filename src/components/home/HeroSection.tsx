@@ -32,8 +32,15 @@ export default function HeroSection({
         className="text-4xl sm:text-5xl md:text-7xl font-black text-white tracking-tight leading-[1.1] max-w-4xl mb-6"
       >
         <span className="gradient-blink">+2,400</span>{' '}
-        AI Tools. We Help You Choose Smarter —{' '}
-        <GradientText className="block sm:inline">{t('titleGradient')}</GradientText>
+        {t('titleMain')}{' '}
+        <span className="block sm:inline">
+          <span className="bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent">
+            {t('titleGradient1')}
+          </span>{' '}
+          <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            {t('titleGradient2')}
+          </span>
+        </span>
       </motion.h1>
 
       <motion.p

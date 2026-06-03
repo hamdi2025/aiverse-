@@ -14,8 +14,9 @@
   },
   "Hero": {
     "badge": "2,400+ AI Tools Catalogued",
-    "title": "+2,400 AI Tools. We Help You Choose Smarter —",
-    "titleGradient": "Maximum Power, Minimum Cost.",
+    "titleMain": "AI Tools. We Help You Choose Smarter —",
+    "titleGradient1": "Maximum Power,",
+    "titleGradient2": "Minimum Cost.",
     "subtitle": "Browse +2,400 AI tools across every domain. We guide you to the most powerful and affordable option — pay only what you truly need.",
     "badge2": "✦ Free & Paid Tools · All Domains · Unbiased Reviews",
     "popularSearch": "Popular: ChatGPT, Midjourney, Claude, Jasper"
