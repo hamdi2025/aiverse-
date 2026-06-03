@@ -50,6 +50,7 @@ export default async function LocaleLayout({
     <html lang={locale} dir={direction} className="dark">
       <head>
         <meta name="google-site-verification" content="Gc5SbwLPT2C2zV7jHnFJj2pX2EvkjI3QIOsbQUVd6_8" />
+        <meta name='impact-site-verification' value='9f91d075-3bf3-4598-b717-fc4b8fa8d80f' />
         {/* Google AdSense Script Integration */}
         {ADSENSE_CONFIG.enabled && !isAdSensePlaceholder && (
           <Script
@@ -65,10 +66,4 @@ export default async function LocaleLayout({
           <Header />
           <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
             {children}
-          </main>
-          <Footer />
-        </NextIntlClientProvider>
-      </body>
-    </html>
-  );
-}
+   
