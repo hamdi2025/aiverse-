@@ -32,8 +32,8 @@ export default function HeroSection({
         className="text-4xl sm:text-5xl md:text-7xl font-black text-white tracking-tight leading-[1.1] max-w-4xl mb-6"
       >
         <span className="gradient-blink">+2,400</span>{' '}
-        {t('titleMain')}{' '}
-        <span className="block sm:inline">
+        <span dir="auto">{t('titleMain')}</span>{' '}
+        <span className="block">
           <span className="gradient-power">{t('titleGradient1')}</span>{' '}
           <span className="gradient-cost">{t('titleGradient2')}</span>
         </span>
