@@ -85,3 +85,8 @@ export default function HeroSection({
     </section>
   );
 }
+onCategoryChange} />
+      </motion.div>
+    </section>
+  );
+}

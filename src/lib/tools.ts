@@ -1463,7 +1463,7 @@ export const TOOLS_DATA: AITool[] = [
     category: 'marketing',
     description: {
       en: "AI-powered social listening and brand monitoring tool tracking mentions across the web in real time.",
-      fr: "Outil d'écoute sociale et de surveillance de marque alimenté par IA suivant les mentions sur le web.",
+      fr: "Outil d\'ecoute sociale et de surveillance de marque alimenté par IA suivant les mentions sur le web.",
       es: "Herramienta de escucha social y monitoreo de marca con IA que rastrea menciones en tiempo real.",
       ar: "أداة الاستماع الاجتماعي ومراقبة العلامة التجارية المدعومة بالذكاء الاصطناعي لتتبع الإشارات عبر الويب."
     },

@@ -19,19 +19,16 @@ export default function NewsletterCTA() {
     <section className="relative w-full my-16 rounded-2xl overflow-hidden border border-white/[0.08]">
       <div className="absolute inset-0 bg-gradient-to-br from-[#7C3AED]/10 via-[#3B82F6]/5 to-[#06B6D4]/10 -z-10" />
       <div className="absolute top-0 left-1/3 w-64 h-64 bg-[#7C3AED]/10 blur-[80px] rounded-full -z-10" />
-
       <div className="px-6 py-12 md:py-16 text-center max-w-2xl mx-auto">
         <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#7C3AED] bg-[#7C3AED]/10 border border-[#7C3AED]/20 px-4 py-1.5 rounded-full mb-5">
           <Sparkles className="w-3.5 h-3.5" />
           {t('badge')}
         </div>
-
-        <h2 className="text-2xl md:text-3xl font-black text-white mb-3">
-          {t('title')}
-        </h2>
-        <p className="text-gray-400 text-sm md:text-base mb-8 max-w-md mx-auto"
-           dangerouslySetInnerHTML={{ __html: t('desc') }} />
-
+        <h2 className="text-2xl md:text-3xl font-black text-white mb-3">{t('title')}</h2>
+        <p
+          className="text-gray-400 text-sm md:text-base mb-8 max-w-md mx-auto"
+          dangerouslySetInnerHTML={{ __html: t('desc') }}
+        />
         {subscribed ? (
           <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/30 text-green-400 px-6 py-3 rounded-xl font-semibold">
             {t('success')}
@@ -58,7 +55,6 @@ export default function NewsletterCTA() {
             </button>
           </form>
         )}
-
         <p className="text-[11px] text-gray-600 mt-4">{t('fine')}</p>
       </div>
     </section>

@@ -48,23 +48,35 @@ export default function HomePage() {
   return (
     <>
       <div className="flex flex-col gap-6">
+        {/* Hero */}
         <HeroSection
           onSearch={handleSearch}
           selectedCategory={selectedCategory}
           onCategoryChange={handleCategoryChange}
         />
+
+        {/* Stats bar */}
         <StatsBar />
+
+        {/* AdSense — top banner */}
         <div className="w-full flex justify-center">
           <AdSenseSlot slot="leaderboard" className="max-w-4xl" />
         </div>
+
+        {/* Tools grid — always visible */}
         <div ref={gridRef} className="scroll-mt-24">
           <BentoGrid tools={filteredTools} onToolClick={setSelectedTool} />
         </div>
+
+        {/* AdSense — mid banner */}
         <div className="w-full flex justify-center my-4">
           <AdSenseSlot slot="leaderboard" className="max-w-4xl" />
         </div>
+
+        {/* Newsletter CTA */}
         <NewsletterCTA />
       </div>
+
       <ToolModal tool={selectedTool} onClose={() => setSelectedTool(null)} />
     </>
   );
