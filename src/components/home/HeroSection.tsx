@@ -32,7 +32,7 @@ export default function HeroSection({
         className="text-4xl sm:text-5xl md:text-7xl font-black text-white tracking-tight leading-[1.1] max-w-4xl mb-6"
       >
         <span className="gradient-blink">+2,400</span>{' '}
-        {t('title').replace('+2,400', '').trim()}{' '}
+        AI Tools. We Help You Choose Smarter —{' '}
         <GradientText className="block sm:inline">{t('titleGradient')}</GradientText>
       </motion.h1>
 
