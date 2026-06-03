@@ -1,0 +1,37 @@
+{
+  "Common": {
+    "title": "AIverse",
+    "submitTool": "Enviar una Herramienta",
+    "sponsored": "Patrocinado",
+    "visit": "Visitar Sitio Web",
+    "search": "Buscar herramientas de IA...",
+    "allCategories": "Todas las Categorías",
+    "weeklyFeatured": "Herramienta de la Semana",
+    "backToTop": "Volver arriba",
+    "toolsBadge": "Herramientas IA Catalogadas",
+    "pricing": "Precio",
+    "noResults": "No se encontraron herramientas para su búsqueda."
+  },
+  "Hero": {
+    "badge": "Más de 2.400 herramientas de IA catalogadas",
+    "title": "+2,400 herramientas IA. Te ayudamos a elegir mejor —",
+    "titleGradient": "Máximo poder, mínimo costo.",
+    "subtitle": "Explora +2,400 herramientas IA en todos los dominios. Te guiamos hacia la opción más potente y económica — paga solo lo que realmente necesitas.",
+    "badge2": "✦ Herramientas gratis & de pago · Todos los dominios · Reseñas imparciales",
+    "popularSearch": "Popular: ChatGPT, Midjourney, Claude, Jasper"
+  },
+  "Categories": {
+    "all": "Todas las herramientas",
+    "writing": "Redacción y Contenido",
+    "image": "Imagen y Diseño",
+    "code": "Desarrollo y Código",
+    "video": "Video y Movimiento",
+    "productivity": "Productividad y Oficina",
+    "audio": "Audio y Voz",
+    "marketing": "Marketing y SEO"
+  },
+  "Footer": {
+    "rights": "© 2026 AIverse. Todos los derechos reservados.",
+    "disclosure": "Divulgación de afiliados: Algunos enlaces en este directorio son enlaces de afiliados. Si hace clic en ellos y se suscribe, podemos recibir una comisión sin costo adicional para usted. Gracias por apoyar a AIverse."
+  }
+}

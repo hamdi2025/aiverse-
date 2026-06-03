@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0A0A0F;
+    color: #F3F4F6;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* ── Blink (hero gradient number) ───────────────────────────────────────── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+.gradient-blink {
+  background: linear-gradient(90deg, #7C3AED, #3B82F6, #06B6D4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: blink 2s ease-in-out infinite;
+  display: inline-block;
+  font-weight: 900;
+}
+
+/* ── Color-cycle dot (header badge) ─────────────────────────────────────── */
+@keyframes colorCycle {
+  0%   { background-color: #EF4444; box-shadow: 0 0 8px #EF4444; }
+  25%  { background-color: #22C55E; box-shadow: 0 0 8px #22C55E; }
+  50%  { background-color: #3B82F6; box-shadow: 0 0 8px #3B82F6; }
+  75%  { background-color: #FB923C; box-shadow: 0 0 8px #FB923C; }
+  100% { background-color: #EF4444; box-shadow: 0 0 8px #EF4444; }
+}
+.color-cycle {
+  animation: colorCycle 4s ease-in-out infinite;
+}
+
+/* ── Badge text cycle (header) ──────────────────────────────────────────── */
+@keyframes badgeTextCycle {
+  0%,  18% { content: "2,400+ AI Tools Listed"; }
+  20%, 38% { content: "New Tools Every Week"; }
+  40%, 58% { content: "Free & Paid • All Domains"; }
+  60%, 78% { content: "Unbiased Reviews"; }
+  80%, 100%{ content: "2,400+ AI Tools Listed"; }
+}
+.badge-text-cycle::before {
+  content: "2,400+ AI Tools";
+  animation: badgeTextCycle 12s ease-in-out infinite;
+}
+
+/* ── Slow ping ───────────────────────────────────────────────────────────── */
+@keyframes slowPing {
+  0%  { transform: scale(1);   opacity: 1; }
+  70% { transform: scale(1.8); opacity: 0; }
+  100%{ transform: scale(1);   opacity: 0; }
+}
+.animate-slow-ping {
+  animation: slowPing 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* ── Orange pulse (arrow CTA button) ────────────────────────────────────── */
+@keyframes orangePulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(249,115,22,0.7), 0 0 12px rgba(249,115,22,0.4);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(249,115,22,0), 0 0 20px rgba(249,115,22,0.6);
+    opacity: 0.85;
+  }
+}
+.btn-arrow-orange {
+  animation: orangePulse 1.4s ease-in-out infinite;
+}

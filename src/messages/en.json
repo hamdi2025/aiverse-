@@ -1,0 +1,37 @@
+{
+  "Common": {
+    "title": "AIverse",
+    "submitTool": "Submit a Tool",
+    "sponsored": "Sponsored",
+    "visit": "Visit Website",
+    "search": "Search AI tools...",
+    "allCategories": "All Categories",
+    "weeklyFeatured": "Tool of the Week",
+    "backToTop": "Back to Top",
+    "toolsBadge": "AI Tools Catalogued",
+    "pricing": "Pricing",
+    "noResults": "No tools found matching your request."
+  },
+  "Hero": {
+    "badge": "2,400+ AI Tools Catalogued",
+    "title": "+2,400 AI Tools. We Help You Choose Smarter —",
+    "titleGradient": "Maximum Power, Minimum Cost.",
+    "subtitle": "Browse +2,400 AI tools across every domain. We guide you to the most powerful and affordable option — pay only what you truly need.",
+    "badge2": "✦ Free & Paid Tools · All Domains · Unbiased Reviews",
+    "popularSearch": "Popular: ChatGPT, Midjourney, Claude, Jasper"
+  },
+  "Categories": {
+    "all": "All Tools",
+    "writing": "AI Writing & Content",
+    "image": "Image & Design",
+    "code": "Development & Code",
+    "video": "Video & Motion",
+    "productivity": "Productivity & Office",
+    "audio": "Audio & Speech",
+    "marketing": "Marketing & SEO"
+  },
+  "Footer": {
+    "rights": "© 2026 AIverse. All rights reserved.",
+    "disclosure": "Affiliate Disclosure: Some links on this directory are affiliate links. If you click on them and subscribe, we may receive a commission at no extra cost to you. Thank you for supporting AIverse."
+  }
+}
