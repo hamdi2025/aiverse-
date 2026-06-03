@@ -25,6 +25,24 @@
   font-weight: 900;
 }
 
+/* ── Hero title gradient parts ──────────────────────────────────────────── */
+.gradient-power {
+  background: linear-gradient(90deg, #a855f7, #7C3AED);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: 900;
+}
+.gradient-cost {
+  background: linear-gradient(90deg, #06B6D4, #3B82F6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: 900;
+}
+
 /* ── Color-cycle dot (header badge) ─────────────────────────────────────── */
 @keyframes colorCycle {
   0%   { background-color: #EF4444; box-shadow: 0 0 8px #EF4444; }

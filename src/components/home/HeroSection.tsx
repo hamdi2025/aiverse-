@@ -34,12 +34,8 @@ export default function HeroSection({
         <span className="gradient-blink">+2,400</span>{' '}
         {t('titleMain')}{' '}
         <span className="block sm:inline">
-          <span className="bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent">
-            {t('titleGradient1')}
-          </span>{' '}
-          <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            {t('titleGradient2')}
-          </span>
+          <span className="gradient-power">{t('titleGradient1')}</span>{' '}
+          <span className="gradient-cost">{t('titleGradient2')}</span>
         </span>
       </motion.h1>
 
