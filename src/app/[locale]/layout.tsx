@@ -41,14 +41,12 @@ export default async function LocaleLayout({
 
   const messages = await getMessages();
   const direction = locale === 'ar' ? 'rtl' : 'ltr';
-  const isAdSensePlaceholder = ADSENSE_CONFIG.publisherId.includes('ca-pub-1234567890123456');
-
   return (
     <html lang={locale} dir={direction} className="dark">
       <head>
         <meta name="google-site-verification" content="Gc5SbwLPT2C2zV7jHnFJj2pX2EvkjI3QIOsbQUVd6_8" />
         <meta name="impact-site-verification" content="6aac91e5-f7f3-4393-bf45-173c3ca98a42" />
-        {ADSENSE_CONFIG.enabled && !isAdSensePlaceholder && (
+        {ADSENSE_CONFIG.enabled && (
           <Script
             async
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CONFIG.publisherId}`}
