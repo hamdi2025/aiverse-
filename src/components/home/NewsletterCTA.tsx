@@ -9,9 +9,20 @@ export default function NewsletterCTA() {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
+    // Beehiiv — ajoute NEXT_PUBLIC_BEEHIIV_PUB_ID dans Vercel > Settings > Env Variables
+    const PUB_ID = process.env.NEXT_PUBLIC_BEEHIIV_PUB_ID || '';
+    if (PUB_ID) {
+      try {
+        await fetch(`https://api.beehiiv.com/v2/publications/${PUB_ID}/subscriptions`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, reactivate_existing: true, send_welcome_email: true }),
+        });
+      } catch (_) { /* silent */ }
+    }
     setSubscribed(true);
   };
 

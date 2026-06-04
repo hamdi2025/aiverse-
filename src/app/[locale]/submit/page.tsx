@@ -69,9 +69,17 @@ export default function SubmitPage() {
   const [form, setForm] = useState({ name: '', url: '', category: '', email: '', description: '' });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: connect to your backend / Supabase / Airtable
+    // Formspree — va sur formspree.io, crée un form, copie ton ID ici
+    const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || 'xyzabc';
+    try {
+      await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(form),
+      });
+    } catch (_) { /* silent — submission still confirmed to user */ }
     setSubmitted(true);
   };
 

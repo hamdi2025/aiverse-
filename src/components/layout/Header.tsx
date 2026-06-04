@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import { Globe, Plus } from 'lucide-react';
+import { Globe, Plus, LogIn, UserPlus } from 'lucide-react';
 import { useRouter, usePathname, Link } from '@/navigation';
 import GradientText from '../ui/GradientText';
 
@@ -62,11 +62,32 @@ export default function Header() {
             </select>
           </div>
 
-          {/* Submit CTA */}
-          <button className="bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] hover:from-[#8B5CF6] hover:to-[#22D3EE] text-white rounded-xl px-4 py-2 text-xs md:text-sm font-semibold flex items-center gap-1.5 transition-all duration-200 shadow-md shadow-[#7C3AED]/10 active:scale-95">
+          {/* Sign In */}
+          <Link
+            href="/sign-in"
+            className="hidden sm:flex items-center gap-1.5 text-xs font-semibold text-gray-300 hover:text-white border border-white/[0.08] hover:border-white/20 rounded-xl px-3 py-2 transition-all duration-200"
+          >
+            <LogIn className="w-3.5 h-3.5" />
+            Sign In
+          </Link>
+
+          {/* Sign Up */}
+          <Link
+            href="/sign-up"
+            className="hidden sm:flex items-center gap-1.5 text-xs font-semibold text-white bg-white/[0.08] hover:bg-white/[0.14] border border-white/[0.10] rounded-xl px-3 py-2 transition-all duration-200"
+          >
+            <UserPlus className="w-3.5 h-3.5" />
+            Sign Up
+          </Link>
+
+          {/* Submit Tool CTA */}
+          <Link
+            href="/submit"
+            className="bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] hover:from-[#8B5CF6] hover:to-[#22D3EE] text-white rounded-xl px-4 py-2 text-xs md:text-sm font-semibold flex items-center gap-1.5 transition-all duration-200 shadow-md shadow-[#7C3AED]/10 active:scale-95"
+          >
             <Plus className="w-4 h-4" />
             <span>{t('submitTool')}</span>
-          </button>
+          </Link>
         </div>
 
       </div>
