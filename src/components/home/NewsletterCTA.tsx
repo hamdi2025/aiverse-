@@ -21,7 +21,7 @@ export default function NewsletterCTA() {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, reactivate_existing: true, send_welcome_email: true }),
         });
-      } catch (_) { /* silent */ }
+      } catch { /* silent */ }
     }
     setSubscribed(true);
   };

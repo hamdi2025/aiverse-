@@ -79,7 +79,7 @@ export default function SubmitPage() {
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify(form),
       });
-    } catch (_) { /* silent — submission still confirmed to user */ }
+    } catch { /* silent — submission still confirmed to user */ }
     setSubmitted(true);
   };
 

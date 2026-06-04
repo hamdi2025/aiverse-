@@ -2,8 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import GradientText from '@/components/ui/GradientText';
-import { Mail, Lock, Eye, EyeOff, ArrowRight, Chrome } from 'lucide-react';
+import { Mail, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react';
 
 export default function SignInPage() {
   const [email, setEmail] = useState('');
