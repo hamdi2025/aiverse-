@@ -2373,6 +2373,97 @@ export const TOOLS_DATA: AITool[] = [
     rating: 4.3, pricing: 'Paid', pricingLocalized: { en: 'From $49/mo', fr: 'A partir de 49$/mois', es: 'Desde $49/mes', ar: 'تبدأ من 49 دولار' }, websiteUrl: 'https://writesonic.com/seo-checker-and-optimizer', views: 8000 },
   { id: 'convohunter', name: 'ConvoHunter', category: 'marketing',
     description: { en: "AI tool that finds Reddit and forum conversations where your target audience is asking for your product.", fr: "Outil IA qui trouve les conversations Reddit et forums ou votre cible cherche votre produit.", es: "Herramienta IA que encuentra conversaciones en Reddit y foros donde tu audiencia busca tu producto.", ar: "أداة ذكاء اصطناعي تجد محادثات Reddit والمنتديات حيث يبحث جمهورك المستهدف عن منتجك." },
-    rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $29/mo', fr: 'Gratuit / 29$/mois', es: 'Gratis / $29/mes', ar: 'مجاني / 29 دولار' }, websiteUrl: 'https://convohunter.com', views: 9000 }
+    rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $29/mo', fr: 'Gratuit / 29$/mois', es: 'Gratis / $29/mes', ar: 'مجاني / 29 دولار' }, websiteUrl: 'https://convohunter.com', views: 9000 },
+
+  // ── AGENTS extra ─────────────────────────────────────────────
+  { id: 'superagent', name: 'Superagent', category: 'agents',
+    description: { en: "Open-source platform to build, deploy and manage AI agents with memory, tools, and LLM integrations.", fr: "Plateforme open-source pour construire, deployer et gerer des agents IA avec memoire et outils.", es: "Plataforma open-source para construir, desplegar y gestionar agentes IA con memoria y herramientas.", ar: "منصة مفتوحة المصدر لبناء ونشر وإدارة وكلاء الذكاء الاصطناعي بذاكرة وأدوات." },
+    rating: 4.3, pricing: 'Freemium', pricingLocalized: { en: 'Free / $29/mo', fr: 'Gratuit / 29$/mois', es: 'Gratis / $29/mes', ar: 'مجاني / 29 دولار' }, websiteUrl: 'https://superagent.sh', views: 11000 },
+  { id: 'langflow', name: 'Langflow', category: 'agents',
+    description: { en: "Visual framework for building multi-agent and RAG applications with drag-and-drop LLM pipeline editor.", fr: "Framework visuel pour construire des applications multi-agents avec editeur de pipeline LLM.", es: "Framework visual para construir aplicaciones multi-agente con editor de pipeline LLM.", ar: "إطار مرئي لبناء تطبيقات متعددة الوكلاء مع محرر مسار LLM بالسحب والإفلات." },
+    rating: 4.4, pricing: 'Free', pricingLocalized: { en: 'Free / Open Source', fr: 'Gratuit / Open Source', es: 'Gratis / Codigo abierto', ar: 'مجاني / مفتوح المصدر' }, websiteUrl: 'https://langflow.org', views: 14000 },
+  { id: 'autogen', name: 'AutoGen', category: 'agents',
+    description: { en: "Microsoft's framework for building multi-agent conversational AI systems that solve complex tasks collaboratively.", fr: "Framework Microsoft pour des systemes IA multi-agents conversationnels resolvant des taches complexes.", es: "Framework de Microsoft para sistemas IA multi-agente conversacionales que resuelven tareas complejas.", ar: "إطار Microsoft لبناء أنظمة ذكاء اصطناعي متعددة الوكلاء تحل المهام المعقدة بشكل تعاوني." },
+    rating: 4.5, pricing: 'Free', pricingLocalized: { en: 'Free / Open Source', fr: 'Gratuit / Open Source', es: 'Gratis / Codigo abierto', ar: 'مجاني / مفتوح المصدر' }, websiteUrl: 'https://microsoft.github.io/autogen', views: 18000 },
+  { id: 'ai-sdk', name: 'Vercel AI SDK', category: 'agents',
+    description: { en: "TypeScript toolkit for building AI-powered applications with streaming, tool use, and agent support.", fr: "Boite a outils TypeScript pour construire des applications IA avec streaming et support d'agents.", es: "Kit de herramientas TypeScript para construir aplicaciones IA con streaming y soporte de agentes.", ar: "مجموعة أدوات TypeScript لبناء تطبيقات مدعومة بالذكاء الاصطناعي مع البث واستخدام الأدوات." },
+    rating: 4.6, pricing: 'Free', pricingLocalized: { en: 'Free / Open Source', fr: 'Gratuit / Open Source', es: 'Gratis / Codigo abierto', ar: 'مجاني / مفتوح المصدر' }, websiteUrl: 'https://sdk.vercel.ai', views: 16000 },
+  { id: 'fixie-ai', name: 'Fixie AI', category: 'agents',
+    description: { en: "Platform for building and deploying conversational AI agents with real-time web search and tool access.", fr: "Plateforme pour construire et deployer des agents IA conversationnels avec recherche web en temps reel.", es: "Plataforma para construir y desplegar agentes IA conversacionales con busqueda web en tiempo real.", ar: "منصة لبناء ونشر وكلاء ذكاء اصطناعي محادثة مع بحث الويب في الوقت الفعلي." },
+    rating: 4.2, pricing: 'Freemium', pricingLocalized: { en: 'Free / $25/mo', fr: 'Gratuit / 25$/mois', es: 'Gratis / $25/mes', ar: 'مجاني / 25 دولار' }, websiteUrl: 'https://fixie.ai', views: 8000 },
+
+  // ── WRITING extra ─────────────────────────────────────────────
+  { id: 'scalenut', name: 'Scalenut', category: 'writing',
+    description: { en: "AI-powered SEO content platform that plans, researches, writes, and optimizes articles for organic traffic.", fr: "Plateforme de contenu SEO IA qui planifie, recherche, redige et optimise les articles.", es: "Plataforma de contenido SEO IA que planifica, investiga, escribe y optimiza articulos.", ar: "منصة محتوى SEO بالذكاء الاصطناعي تخطط وتبحث وتكتب وتحسن المقالات للزيارات العضوية." },
+    rating: 4.3, pricing: 'Paid', pricingLocalized: { en: 'From $39/mo', fr: 'A partir de 39$/mois', es: 'Desde $39/mes', ar: 'تبدأ من 39 دولار' }, websiteUrl: 'https://scalenut.com', views: 10000 },
+  { id: 'ink-for-all', name: 'INK AI', category: 'writing',
+    description: { en: "AI writing assistant with SEO optimization built-in — scores your content in real time for search ranking.", fr: "Assistant redaction IA avec optimisation SEO integree - note votre contenu en temps reel.", es: "Asistente de escritura IA con optimizacion SEO integrada que puntua tu contenido en tiempo real.", ar: "مساعد كتابة بالذكاء الاصطناعي مع تحسين SEO المدمج يسجل محتواك في الوقت الفعلي." },
+    rating: 4.2, pricing: 'Freemium', pricingLocalized: { en: 'Free / $49/mo', fr: 'Gratuit / 49$/mois', es: 'Gratis / $49/mes', ar: 'مجاني / 49 دولار' }, websiteUrl: 'https://inkforall.com', views: 8500 },
+  { id: 'peppertype', name: 'Peppertype AI', category: 'writing',
+    description: { en: "AI content assistant that generates social media posts, ad copies, product descriptions, and blog ideas instantly.", fr: "Assistant contenu IA generant posts sociaux, copies publicitaires et descriptions de produits.", es: "Asistente de contenido IA que genera posts sociales, copias publicitarias y descripciones.", ar: "مساعد محتوى بالذكاء الاصطناعي يولد منشورات التواصل الاجتماعي والإعلانات وأوصاف المنتجات." },
+    rating: 4.2, pricing: 'Paid', pricingLocalized: { en: 'From $35/mo', fr: 'A partir de 35$/mois', es: 'Desde $35/mes', ar: 'تبدأ من 35 دولار' }, websiteUrl: 'https://peppertype.ai', views: 7000 },
+
+  // ── IMAGE extra ───────────────────────────────────────────────
+  { id: 'getimg', name: 'GetIMG', category: 'image',
+    description: { en: "Suite of AI image tools including text-to-image, image editing, AI canvas, and custom model training.", fr: "Suite d'outils IA incluant texte vers image, edition d'images et canvas IA.", es: "Suite de herramientas IA incluyendo texto a imagen, edicion de imagenes y canvas IA.", ar: "مجموعة أدوات صور ذكاء اصطناعي تشمل النص إلى صورة وتحرير الصور ولوحة الرسم." },
+    rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $12/mo', fr: 'Gratuit / 12$/mois', es: 'Gratis / $12/mes', ar: 'مجاني / 12 دولار' }, websiteUrl: 'https://getimg.ai', views: 13000 },
+  { id: 'pixlr-ai', name: 'Pixlr AI', category: 'image',
+    description: { en: "Online photo editor with AI-powered tools for background removal, retouching, and generative fill.", fr: "Editeur photo en ligne avec outils IA pour suppression de fond, retouche et remplissage generatif.", es: "Editor de fotos en linea con herramientas IA para eliminar fondo y relleno generativo.", ar: "محرر صور عبر الإنترنت مع أدوات ذكاء اصطناعي لإزالة الخلفية والتعبئة التوليدية." },
+    rating: 4.3, pricing: 'Freemium', pricingLocalized: { en: 'Free / $7.99/mo', fr: 'Gratuit / 7.99$/mois', es: 'Gratis / $7.99/mes', ar: 'مجاني / 7.99 دولار' }, websiteUrl: 'https://pixlr.com', views: 14000 },
+  { id: 'removal-ai', name: 'Removal.ai', category: 'image',
+    description: { en: "AI background remover that automatically removes backgrounds from photos in seconds with high precision.", fr: "Suppresseur de fond IA qui retire automatiquement les fonds des photos en quelques secondes.", es: "Eliminador de fondo IA que elimina automaticamente fondos de fotos en segundos.", ar: "أداة إزالة خلفية بالذكاء الاصطناعي تزيل الخلفيات من الصور تلقائياً في ثوانٍ بدقة عالية." },
+    rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $9.90/mo', fr: 'Gratuit / 9.90$/mois', es: 'Gratis / $9.90/mes', ar: 'مجاني / 9.90 دولار' }, websiteUrl: 'https://removal.ai', views: 12000 },
+
+  // ── CODE extra ────────────────────────────────────────────────
+  { id: 'phind', name: 'Phind', category: 'code',
+    description: { en: "AI search engine for developers that searches the web and Stack Overflow to answer coding questions.", fr: "Moteur de recherche IA pour developpeurs cherchant sur le web pour repondre aux questions de code.", es: "Motor de busqueda IA para desarrolladores que busca en la web para responder preguntas de codigo.", ar: "محرك بحث بالذكاء الاصطناعي للمطورين يبحث في الويب للإجابة على أسئلة البرمجة." },
+    rating: 4.5, pricing: 'Freemium', pricingLocalized: { en: 'Free / $17/mo', fr: 'Gratuit / 17$/mois', es: 'Gratis / $17/mes', ar: 'مجاني / 17 دولار' }, websiteUrl: 'https://phind.com', views: 15000 },
+  { id: 'coderabbit', name: 'CodeRabbit', category: 'code',
+    description: { en: "AI code review tool that provides line-by-line review suggestions on pull requests with context awareness.", fr: "Outil de revue de code IA fournissant des suggestions ligne par ligne sur les pull requests.", es: "Herramienta de revision de codigo IA que proporciona sugerencias linea por linea en pull requests.", ar: "أداة مراجعة كود بالذكاء الاصطناعي تقدم اقتراحات سطراً بسطر على طلبات السحب." },
+    rating: 4.5, pricing: 'Freemium', pricingLocalized: { en: 'Free / $15/mo', fr: 'Gratuit / 15$/mois', es: 'Gratis / $15/mes', ar: 'مجاني / 15 دولار' }, websiteUrl: 'https://coderabbit.ai', views: 12000 },
+  { id: 'mutable-ai', name: 'Mutable AI', category: 'code',
+    description: { en: "AI-accelerated software development platform for autocomplete, test generation, and documentation writing.", fr: "Plateforme de developpement logiciel acceleree par IA pour l'autocompletion et la generation de tests.", es: "Plataforma de desarrollo de software acelerada por IA para autocompletado y generacion de tests.", ar: "منصة تطوير برمجيات مسرّعة بالذكاء الاصطناعي للإكمال التلقائي وتوليد الاختبارات." },
+    rating: 4.3, pricing: 'Freemium', pricingLocalized: { en: 'Free / $13/mo', fr: 'Gratuit / 13$/mois', es: 'Gratis / $13/mes', ar: 'مجاني / 13 دولار' }, websiteUrl: 'https://mutable.ai', views: 9000 },
+
+  // ── VIDEO extra ───────────────────────────────────────────────
+  { id: 'pictory-ai', name: 'Pictory AI', category: 'video',
+    description: { en: "AI video creation platform that turns long-form content, scripts, and blog posts into short branded videos.", fr: "Plateforme de creation video IA transformant le contenu long en courtes videos brandees.", es: "Plataforma de creacion de video IA que convierte contenido extenso en videos cortos de marca.", ar: "منصة إنشاء فيديو بالذكاء الاصطناعي تحول المحتوى الطويل إلى مقاطع فيديو قصيرة بعلامة تجارية." },
+    rating: 4.4, pricing: 'Paid', pricingLocalized: { en: 'From $23/mo', fr: 'A partir de 23$/mois', es: 'Desde $23/mes', ar: 'تبدأ من 23 دولار' }, websiteUrl: 'https://pictory.ai', affiliateUrl: 'https://pictory.ai?via=aiverse', commission: '30% recurring', views: 16000 },
+  { id: 'opus-clip', name: 'Opus Clip', category: 'video',
+    description: { en: "AI video repurposing tool that transforms long videos into viral short clips for TikTok, YouTube Shorts.", fr: "Outil de reutilisation video IA transformant les longs videos en clips courts viraux pour TikTok.", es: "Herramienta de reutilizacion de video IA que transforma videos largos en clips cortos virales.", ar: "أداة إعادة استخدام الفيديو بالذكاء الاصطناعي تحول الفيديوهات الطويلة إلى مقاطع قصيرة فيروسية." },
+    rating: 4.6, pricing: 'Freemium', pricingLocalized: { en: 'Free / $15/mo', fr: 'Gratuit / 15$/mois', es: 'Gratis / $15/mes', ar: 'مجاني / 15 دولار' }, websiteUrl: 'https://opus.pro', views: 20000 },
+  { id: 'wisecut', name: 'Wisecut', category: 'video',
+    description: { en: "AI video editor that automatically cuts silences, adds subtitles, and creates background music for videos.", fr: "Editeur video IA qui coupe automatiquement les silences, ajoute des sous-titres et cree de la musique.", es: "Editor de video IA que corta automaticamente silencios, agrega subtitulos y crea musica de fondo.", ar: "محرر فيديو بالذكاء الاصطناعي يقطع الصمت تلقائياً ويضيف تعليقات ويُنشئ موسيقى خلفية." },
+    rating: 4.3, pricing: 'Freemium', pricingLocalized: { en: 'Free / $10/mo', fr: 'Gratuit / 10$/mois', es: 'Gratis / $10/mes', ar: 'مجاني / 10 دولار' }, websiteUrl: 'https://wisecut.video', views: 11000 },
+
+  // ── PRODUCTIVITY extra ────────────────────────────────────────
+  { id: 'ai-notes', name: 'Notepd AI', category: 'productivity',
+    description: { en: "AI-enhanced note-taking app that summarizes meetings, emails, and documents and links related ideas.", fr: "Application de notes amelioree par IA qui resume reunions, emails et documents.", es: "Aplicacion de notas mejorada con IA que resume reuniones, correos y documentos.", ar: "تطبيق تدوين ملاحظات معزز بالذكاء الاصطناعي يلخص الاجتماعات والبريد الإلكتروني والمستندات." },
+    rating: 4.2, pricing: 'Freemium', pricingLocalized: { en: 'Free / $5/mo', fr: 'Gratuit / 5$/mois', es: 'Gratis / $5/mes', ar: 'مجاني / 5 دولار' }, websiteUrl: 'https://notepd.com', views: 7000 },
+  { id: 'tana-ai', name: 'Tana', category: 'productivity',
+    description: { en: "AI-powered outliner and knowledge management tool combining notes, tasks, and databases in one workspace.", fr: "Gestionnaire de connaissances IA combinant notes, taches et bases de donnees en un seul espace.", es: "Herramienta de gestion del conocimiento IA que combina notas, tareas y bases de datos.", ar: "أداة إدارة المعرفة بالذكاء الاصطناعي تجمع الملاحظات والمهام وقواعد البيانات في مساحة واحدة." },
+    rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $10/mo', fr: 'Gratuit / 10$/mois', es: 'Gratis / $10/mes', ar: 'مجاني / 10 دولار' }, websiteUrl: 'https://tana.inc', views: 10000 },
+  { id: 'magical-ai', name: 'Magical', category: 'productivity',
+    description: { en: "AI productivity tool that automates repetitive tasks like data entry, messaging, and CRM updates.", fr: "Outil de productivite IA automatisant les taches repetitives comme la saisie de donnees.", es: "Herramienta de productividad IA que automatiza tareas repetitivas como entrada de datos.", ar: "أداة إنتاجية بالذكاء الاصطناعي تؤتمت المهام المتكررة كإدخال البيانات والمراسلة." },
+    rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $10/mo', fr: 'Gratuit / 10$/mois', es: 'Gratis / $10/mes', ar: 'مجاني / 10 دولار' }, websiteUrl: 'https://magical.com', views: 12000 },
+
+  // ── AUDIO extra ───────────────────────────────────────────────
+  { id: 'soundraw', name: 'Soundraw', category: 'audio',
+    description: { en: "AI music generator that creates royalty-free customizable background music for content creators.", fr: "Generateur de musique IA creant de la musique de fond libre de droits personnalisable.", es: "Generador de musica IA que crea musica de fondo personalizable libre de derechos.", ar: "مولد موسيقى بالذكاء الاصطناعي يُنشئ موسيقى خلفية خالية من حقوق الملكية قابلة للتخصيص." },
+    rating: 4.5, pricing: 'Paid', pricingLocalized: { en: 'From $16.99/mo', fr: 'A partir de 16.99$/mois', es: 'Desde $16.99/mes', ar: 'تبدأ من 16.99 دولار' }, websiteUrl: 'https://soundraw.io', views: 13000 },
+  { id: 'podcastle', name: 'Podcastle', category: 'audio',
+    description: { en: "All-in-one podcast creation platform with AI audio enhancement, transcription, and remote recording.", fr: "Plateforme de creation de podcast tout-en-un avec amelioration audio IA et transcription.", es: "Plataforma de creacion de podcast todo en uno con mejora de audio IA y transcripcion.", ar: "منصة إنشاء بودكاست شاملة مع تحسين الصوت بالذكاء الاصطناعي والنسخ." },
+    rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $11.99/mo', fr: 'Gratuit / 11.99$/mois', es: 'Gratis / $11.99/mes', ar: 'مجاني / 11.99 دولار' }, websiteUrl: 'https://podcastle.ai', views: 10000 },
+
+  // ── MARKETING extra ───────────────────────────────────────────
+  { id: 'jasper-ai', name: 'Jasper AI', category: 'marketing',
+    description: { en: "Enterprise AI marketing platform for creating on-brand content at scale with brand voice training.", fr: "Plateforme marketing IA d'entreprise pour creer du contenu a la marque a grande echelle.", es: "Plataforma de marketing IA empresarial para crear contenido de marca a escala.", ar: "منصة تسويق بالذكاء الاصطناعي للمؤسسات لإنشاء محتوى العلامة التجارية على نطاق واسع." },
+    rating: 4.5, pricing: 'Paid', pricingLocalized: { en: 'From $49/mo', fr: 'A partir de 49$/mois', es: 'Desde $49/mes', ar: 'تبدأ من 49 دولار' }, websiteUrl: 'https://jasper.ai', affiliateUrl: 'https://jasper.ai?via=aiverse', commission: '30% for 12 months', views: 24000 },
+  { id: 'vidyard', name: 'Vidyard', category: 'marketing',
+    description: { en: "Video platform for sales and marketing teams with AI scripts, personalized video, and analytics.", fr: "Plateforme video pour equipes commerciales avec scripts IA et video personnalisee.", es: "Plataforma de video para equipos de ventas con scripts IA y video personalizado.", ar: "منصة فيديو لفرق المبيعات والتسويق مع نصوص الذكاء الاصطناعي والفيديو الشخصي والتحليلات." },
+    rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $19/mo', fr: 'Gratuit / 19$/mois', es: 'Gratis / $19/mes', ar: 'مجاني / 19 دولار' }, websiteUrl: 'https://vidyard.com', views: 13000 },
+  { id: 'ocoya', name: 'Ocoya', category: 'marketing',
+    description: { en: "AI social media marketing tool that generates captions, hashtags, and schedules posts across all platforms.", fr: "Outil marketing social media IA generant legendes, hashtags et planifiant les posts.", es: "Herramienta de marketing en redes sociales IA que genera subtitulos, hashtags y programa publicaciones.", ar: "أداة تسويق وسائل التواصل الاجتماعي بالذكاء الاصطناعي تولد التعليقات والهاشتاغات وتجدول المنشورات." },
+    rating: 4.3, pricing: 'Paid', pricingLocalized: { en: 'From $19/mo', fr: 'A partir de 19$/mois', es: 'Desde $19/mes', ar: 'تبدأ من 19 دولار' }, websiteUrl: 'https://ocoya.com', views: 9000 }
 
 ];

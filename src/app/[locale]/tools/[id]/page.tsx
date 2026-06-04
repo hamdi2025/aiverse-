@@ -40,12 +40,40 @@ export default async function ToolPage({ params }: Props) {
   const locale = params.locale;
   const outboundUrl = buildAffiliateUrl(tool.id, tool.websiteUrl);
 
+  // JSON-LD structured data for SEO
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: tool.name,
+    description: tool.description.en,
+    applicationCategory: 'AIApplication',
+    operatingSystem: 'Web',
+    offers: {
+      '@type': 'Offer',
+      price: tool.pricing === 'Free' ? '0' : undefined,
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/OnlineOnly',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: tool.rating,
+      bestRating: 5,
+      worstRating: 1,
+      ratingCount: tool.views,
+    },
+    url: outboundUrl,
+  };
+
   const pricingColor =
     tool.pricing === 'Free' ? 'text-green-400' :
     tool.pricing === 'Freemium' ? 'text-amber-400' : 'text-gray-300';
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Back */}
       <a href={`/${locale}`} className="text-sm text-gray-500 hover:text-white transition mb-8 inline-block">
         ← {locale === 'fr' ? 'Retour' : locale === 'es' ? 'Volver' : locale === 'ar' ? 'رجوع' : 'Back'}
