@@ -2202,16 +2202,15 @@ export const TOOLS_DATA: AITool[] = [
     rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $19/mo', fr: 'Gratuit / 19$/mois', es: 'Gratis / $19/mes', ar: 'مجاني / 19 دولار' }, websiteUrl: 'https://relevanceai.com', views: 13000 },
   { id: 'vertex-ai', name: 'Google Vertex AI', category: 'agents',
     description: { en: "Google Cloud platform for building, deploying, and scaling AI agents and ML models in production.", fr: "Plateforme Google Cloud pour construire, deployer et mettre a l'echelle des agents IA en production.", es: "Plataforma Google Cloud para construir, desplegar y escalar agentes IA y modelos ML en produccion.", ar: "منصة Google Cloud لبناء ونشر وتوسيع نطاق وكلاء الذكاء الاصطناعي ونماذج ML في الإنتاج." },
-    rating: 4.5, pricing: 'Paid', pricingLocalized: { en: 'Pay as you go', fr: 'Paiement a l'utilisation', es: 'Pago por uso', ar: 'الدفع حسب الاستخدام' }, websiteUrl: 'https://cloud.google.com/vertex-ai', views: 17000 },
+    rating: 4.5, pricing: 'Paid', pricingLocalized: { en: 'Pay as you go', fr: 'Paiement a l usage', es: 'Pago por uso', ar: 'الدفع حسب الاستخدام' }, websiteUrl: 'https://cloud.google.com/vertex-ai', views: 17000 },
   { id: 'aws-bedrock', name: 'AWS Bedrock', category: 'agents',
     description: { en: "Amazon's fully managed AI service to build generative AI applications with foundation models and AI agents.", fr: "Service IA manage d'Amazon pour construire des apps IA generative avec des modeles fondamentaux.", es: "Servicio IA gestionado de Amazon para construir apps de IA generativa con modelos base.", ar: "خدمة الذكاء الاصطناعي المُدارة من Amazon لبناء تطبيقات الذكاء الاصطناعي التوليدي." },
-    rating: 4.5, pricing: 'Paid', pricingLocalized: { en: 'Pay as you go', fr: 'Paiement a l'utilisation', es: 'Pago por uso', ar: 'الدفع حسب الاستخدام' }, websiteUrl: 'https://aws.amazon.com/bedrock', views: 15000 },
+    rating: 4.5, pricing: 'Paid', pricingLocalized: { en: 'Pay as you go', fr: 'Paiement a l usage', es: 'Pago por uso', ar: 'الدفع حسب الاستخدام' }, websiteUrl: 'https://aws.amazon.com/bedrock', views: 15000 },
   { id: 'openai-assistants', name: 'OpenAI Assistants', category: 'agents',
     description: { en: "OpenAI API for building AI assistants with persistent threads, file search, code interpreter, and function calling.", fr: "API OpenAI pour construire des assistants IA avec threads persistants et appel de fonctions.", es: "API OpenAI para construir asistentes IA con hilos persistentes y llamada a funciones.", ar: "واجهة برمجة OpenAI لبناء مساعدات ذكاء اصطناعي مع خيوط مستمرة واستدعاء الوظائف." },
-    rating: 4.6, pricing: 'Paid', pricingLocalized: { en: 'Pay as you go', fr: 'Paiement a l'utilisation', es: 'Pago por uso', ar: 'الدفع حسب الاستخدام' }, websiteUrl: 'https://platform.openai.com/assistants', views: 21000 },
+    rating: 4.6, pricing: 'Paid', pricingLocalized: { en: 'Pay as you go', fr: 'Paiement a l usage', es: 'Pago por uso', ar: 'الدفع حسب الاستخدام' }, websiteUrl: 'https://platform.openai.com/assistants', views: 21000 },
 
   // ── WRITING extra ─────────────────────────────────────────────
-    rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $49/mo', fr: 'Gratuit / 49$/mois', es: 'Gratis / $49/mes', ar: 'مجاني / 49 دولار' }, websiteUrl: 'https://copy.ai', views: 16000 },
   { id: 'ai21-labs', name: 'AI21 Labs', category: 'writing',
     description: { en: "NLP company offering Jurassic language models and Wordtune — specialized in contextual AI writing assistance.", fr: "Entreprise NLP offrant des modeles Jurassic et Wordtune specialises dans l'assistance a la redaction.", es: "Empresa NLP que ofrece modelos Jurassic y Wordtune especializados en asistencia de escritura.", ar: "شركة معالجة اللغة تقدم نماذج Jurassic وWordtune المتخصصة في مساعدة الكتابة السياقية." },
     rating: 4.3, pricing: 'Freemium', pricingLocalized: { en: 'Free / $39/mo', fr: 'Gratuit / 39$/mois', es: 'Gratis / $39/mes', ar: 'مجاني / 39 دولار' }, websiteUrl: 'https://ai21.com', views: 11000 },
@@ -2381,7 +2380,6 @@ export const TOOLS_DATA: AITool[] = [
     rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $11.99/mo', fr: 'Gratuit / 11.99$/mois', es: 'Gratis / $11.99/mes', ar: 'مجاني / 11.99 دولار' }, websiteUrl: 'https://podcastle.ai', views: 10000 },
 
   // ── MARKETING extra ───────────────────────────────────────────
-    rating: 4.5, pricing: 'Paid', pricingLocalized: { en: 'From $49/mo', fr: 'A partir de 49$/mois', es: 'Desde $49/mes', ar: 'تبدأ من 49 دولار' }, websiteUrl: 'https://jasper.ai', affiliateUrl: 'https://jasper.ai?via=aiverse', commission: '30% for 12 months', views: 24000 },
   { id: 'vidyard', name: 'Vidyard', category: 'marketing',
     description: { en: "Video platform for sales and marketing teams with AI scripts, personalized video, and analytics.", fr: "Plateforme video pour equipes commerciales avec scripts IA et video personnalisee.", es: "Plataforma de video para equipos de ventas con scripts IA y video personalizado.", ar: "منصة فيديو لفرق المبيعات والتسويق مع نصوص الذكاء الاصطناعي والفيديو الشخصي والتحليلات." },
     rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $19/mo', fr: 'Gratuit / 19$/mois', es: 'Gratis / $19/mes', ar: 'مجاني / 19 دولار' }, websiteUrl: 'https://vidyard.com', views: 13000 },
