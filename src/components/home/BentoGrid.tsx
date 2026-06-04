@@ -71,9 +71,9 @@ export default function BentoGrid({ tools, onToolClick }: BentoGridProps) {
       )}
 
       {/* Grille uniforme — aucun trou possible */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-stretch">
         {regularTools.map((tool, index) => {
-          const showAd = index > 0 && index % 12 === 0;
+          const showAd = false; // ads disabled until AdSense approved
           return (
             <React.Fragment key={tool.id}>
               {showAd && (
