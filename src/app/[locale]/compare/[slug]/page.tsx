@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { TOOLS_DATA } from '@/lib/tools';
 import { buildAffiliateUrl } from '@/lib/affiliate';
-import { Star, Check, X, ArrowUpRight, Zap } from 'lucide-react';
+import { Star, Check, ArrowUpRight, Zap } from 'lucide-react';
 
 type Locale = 'en' | 'fr' | 'es' | 'ar';
 interface Props { params: { slug: string; locale: Locale } }
