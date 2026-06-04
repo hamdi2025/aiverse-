@@ -27,70 +27,65 @@ export default function BentoGrid({ tools, onToolClick }: BentoGridProps) {
   }
 
   const featuredTool = tools.find((t) => t.isWeeklyFeatured);
-  const remainingTools = tools.filter((t) => !t.isWeeklyFeatured);
-
-  // Mode bento seulement quand l'outil featured est présent (pas de filtre actif)
-  const gridClass = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6';
+  const regularTools = tools.filter((t) => !t.isWeeklyFeatured);
 
   return (
-    <div className={gridClass}>
+    <div className="flex flex-col gap-6">
+      {/* Featured card — hors grille, pleine largeur */}
       {featuredTool && (
-        <div className="md:col-span-2 min-h-[480px]">
-          <GlassCard
-            glowColor="from-[#7C3AED]/20 to-[#06B6D4]/20"
-            className="p-8 h-full flex flex-col justify-between border-[#7C3AED]/40 relative overflow-hidden"
-            onClick={() => onToolClick(featuredTool)}
-          >
-            <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-gradient-to-br from-[#7C3AED]/10 to-transparent blur-3xl rounded-full" />
-
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <span className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest bg-gradient-to-r from-amber-500 to-orange-500 text-white px-3 py-1.5 rounded-full shadow-lg shadow-orange-950/45 animate-pulse">
-                  <Flame className="w-3.5 h-3.5" />
-                  {t('weeklyFeatured')}
-                </span>
-              </div>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-3">
-                <GradientText>{featuredTool.name}</GradientText>
-              </h2>
-              <p className="text-gray-300 text-sm md:text-base leading-relaxed max-w-xl mb-6">
-                {featuredTool.description[locale]}
-              </p>
-            </div>
-
-            <div className="pt-6 border-t border-white/[0.08] flex items-center justify-between">
-              <span className="text-sm font-semibold text-gray-400 bg-white/[0.04] px-3 py-1 rounded">
-                {t('pricing')}: <span className="text-white font-bold">{featuredTool.pricingLocalized[locale]}</span>
+        <GlassCard
+          glowColor="from-[#7C3AED]/20 to-[#06B6D4]/20"
+          className="p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 border-[#7C3AED]/40 relative overflow-hidden"
+          onClick={() => onToolClick(featuredTool)}
+        >
+          <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-gradient-to-br from-[#7C3AED]/10 to-transparent blur-3xl rounded-full pointer-events-none" />
+          <div className="flex-1">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest bg-gradient-to-r from-amber-500 to-orange-500 text-white px-3 py-1.5 rounded-full shadow-lg shadow-orange-950/45 animate-pulse">
+                <Flame className="w-3.5 h-3.5" />
+                {t('weeklyFeatured')}
               </span>
-              <a
-                href={featuredTool.websiteUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] hover:from-[#8B5CF6] hover:to-[#22D3EE] text-white px-6 py-3 rounded-xl text-sm font-bold shadow-lg shadow-[#7C3AED]/25 hover:shadow-[#06B6D4]/25 transition-all duration-300 hover:scale-[1.02]"
-              >
-                {t('visit')}
-              </a>
             </div>
-          </GlassCard>
-        </div>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-2">
+              <GradientText>{featuredTool.name}</GradientText>
+            </h2>
+            <p className="text-gray-300 text-sm md:text-base leading-relaxed max-w-2xl">
+              {featuredTool.description[locale]}
+            </p>
+          </div>
+          <div className="flex items-center gap-4 shrink-0">
+            <span className="text-sm font-semibold text-gray-400 bg-white/[0.04] px-3 py-1 rounded">
+              {t('pricing')}: <span className="text-white font-bold">{featuredTool.pricingLocalized[locale]}</span>
+            </span>
+            <a
+              href={featuredTool.websiteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] hover:from-[#8B5CF6] hover:to-[#22D3EE] text-white px-6 py-3 rounded-xl text-sm font-bold shadow-lg transition-all duration-300 hover:scale-[1.02]"
+            >
+              {t('visit')}
+            </a>
+          </div>
+        </GlassCard>
       )}
 
-      {remainingTools.map((tool, index) => {
-        const showAd = index > 0 && index % 3 === 0;
-        return (
-          <React.Fragment key={tool.id}>
-            {showAd && (
-              <div className="md:col-span-1">
-                <AdSenseSlot slot="inGrid" className="h-full flex items-center justify-center" />
-              </div>
-            )}
-            <div className="md:col-span-1">
+      {/* Grille uniforme — aucun trou possible */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {regularTools.map((tool, index) => {
+          const showAd = index > 0 && index % 12 === 0;
+          return (
+            <React.Fragment key={tool.id}>
+              {showAd && (
+                <div className="md:col-span-1">
+                  <AdSenseSlot slot="inGrid" className="h-full flex items-center justify-center" />
+                </div>
+              )}
               <ToolCard tool={tool} onClick={onToolClick} />
-            </div>
-          </React.Fragment>
-        );
-      })}
+            </React.Fragment>
+          );
+        })}
+      </div>
     </div>
   );
 }
