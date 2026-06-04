@@ -8,6 +8,7 @@ import BentoGrid from '@/components/home/BentoGrid';
 import StatsBar from '@/components/home/StatsBar';
 import NewsletterCTA from '@/components/home/NewsletterCTA';
 import AdSenseSlot from '@/components/ads/AdSenseSlot';
+import AgentsSpotlight from '@/components/home/AgentsSpotlight';
 
 const ToolModal = dynamic(() => import('@/components/home/ToolModal'), { ssr: false });
 
@@ -54,6 +55,7 @@ export default function HomePage() {
           onCategoryChange={handleCategoryChange}
         />
         <StatsBar />
+        <AgentsSpotlight onExplore={() => { setSelectedCategory('agents'); scrollToGrid(); }} />
         <div className="w-full flex justify-center">
           <AdSenseSlot slot="leaderboard" className="max-w-4xl" />
         </div>
