@@ -1479,20 +1479,6 @@ export const TOOLS_DATA: AITool[] = [
     views: 8200
   },
   {
-    id: 'perplexity-ai',
-    name: 'Perplexity AI',
-    category: 'writing',
-    description: {
-      en: "AI search engine that gives direct answers with cited sources in real time.",
-      fr: "Moteur de recherche IA qui fournit des réponses directes avec des sources citées.",
-      es: "Motor de búsqueda IA que ofrece respuestas directas con fuentes citadas.",
-      ar: "محرك بحث بالذكاء الاصطناعي يقدم إجابات مباشرة مع مصادر مذكورة."
-    },
-    rating: 4.7, pricing: 'Freemium',
-    pricingLocalized: { en: 'Free / $20/mo', fr: 'Gratuit / 20$/mois', es: 'Gratis / $20/mes', ar: 'مجاني / ٢٠ دولار شهرياً' },
-    websiteUrl: 'https://perplexity.ai', views: 31000
-  },
-  {
     id: 'rytr',
     name: 'Rytr',
     category: 'writing',
@@ -1563,51 +1549,6 @@ export const TOOLS_DATA: AITool[] = [
     websiteUrl: 'https://runwayml.com', views: 28000
   },
   {
-    id: 'elevenlabs-tts',
-    name: 'ElevenLabs',
-    category: 'audio',
-    description: {
-      en: "Leading AI voice generation with ultra-realistic text-to-speech and voice cloning in 30+ languages.",
-      fr: "Génération vocale IA avec synthèse vocale ultra-réaliste et clonage de voix en 30+ langues.",
-      es: "Generación de voz IA con texto a voz ultra-realista y clonación de voz en 30+ idiomas.",
-      ar: "توليد الصوت بالذكاء الاصطناعي مع تحويل النص إلى كلام واستنساخ الصوت بأكثر من 30 لغة."
-    },
-    rating: 4.8, pricing: 'Freemium',
-    pricingLocalized: { en: 'Free / $5/mo', fr: 'Gratuit / 5$/mois', es: 'Gratis / $5/mes', ar: 'مجاني / ٥ دولار شهرياً' },
-    websiteUrl: 'https://elevenlabs.io',
-    affiliateUrl: 'https://elevenlabs.io/?from=aiverse',
-    commission: '22% recurring',
-    views: 34000
-  },
-  {
-    id: 'suno-ai',
-    name: 'Suno',
-    category: 'audio',
-    description: {
-      en: "AI music generation that creates full songs with vocals and instruments from a text prompt.",
-      fr: "Génération musicale IA qui crée des chansons complètes avec voix et instruments.",
-      es: "Generación musical IA que crea canciones completas con voces e instrumentos.",
-      ar: "توليد الموسيقى بالذكاء الاصطناعي ينشئ أغانٍ كاملة بالأصوات والآلات."
-    },
-    rating: 4.6, pricing: 'Freemium',
-    pricingLocalized: { en: 'Free / $8/mo', fr: 'Gratuit / 8$/mois', es: 'Gratis / $8/mes', ar: 'مجاني / ٨ دولار شهرياً' },
-    websiteUrl: 'https://suno.com', views: 25000
-  },
-  {
-    id: 'udio-music',
-    name: 'Udio',
-    category: 'audio',
-    description: {
-      en: "AI music creator generating studio-quality tracks from text descriptions across all genres.",
-      fr: "Créateur de musique IA générant des pistes de qualité studio depuis des descriptions textuelles.",
-      es: "Creador de música IA que genera pistas de calidad de estudio en todos los géneros.",
-      ar: "منصة إنشاء الموسيقى بالذكاء الاصطناعي تولّد مسارات بجودة الاستوديو."
-    },
-    rating: 4.4, pricing: 'Freemium',
-    pricingLocalized: { en: 'Free / $10/mo', fr: 'Gratuit / 10$/mois', es: 'Gratis / $10/mes', ar: 'مجاني / ١٠ دولار شهرياً' },
-    websiteUrl: 'https://udio.com', views: 14000
-  },
-  {
     id: 'zapier',
     name: 'Zapier',
     category: 'productivity',
@@ -1620,20 +1561,6 @@ export const TOOLS_DATA: AITool[] = [
     rating: 4.5, pricing: 'Freemium',
     pricingLocalized: { en: 'Free / $19.99/mo', fr: 'Gratuit / 19,99$/mois', es: 'Gratis / $19.99/mes', ar: 'مجاني / ١٩.٩٩ دولار شهرياً' },
     websiteUrl: 'https://zapier.com', views: 28000
-  },
-  {
-    id: 'make-com',
-    name: 'Make',
-    category: 'productivity',
-    description: {
-      en: "Visual automation platform connecting 1,500+ apps with AI-powered workflows and no-code scenarios.",
-      fr: "Plateforme d'automatisation visuelle connectant 1 500+ applications avec des workflows IA.",
-      es: "Plataforma de automatización visual que conecta 1.500+ apps con flujos de trabajo IA.",
-      ar: "منصة أتمتة مرئية تربط أكثر من 1500 تطبيق بسير عمل مدعوم بالذكاء الاصطناعي."
-    },
-    rating: 4.6, pricing: 'Freemium',
-    pricingLocalized: { en: 'Free / $9/mo', fr: 'Gratuit / 9$/mois', es: 'Gratis / $9/mes', ar: 'مجاني / ٩ دولار شهرياً' },
-    websiteUrl: 'https://make.com', views: 22000
   },
   {
     id: 'tldv',
@@ -2284,8 +2211,6 @@ export const TOOLS_DATA: AITool[] = [
     rating: 4.6, pricing: 'Paid', pricingLocalized: { en: 'Pay as you go', fr: 'Paiement a l'utilisation', es: 'Pago por uso', ar: 'الدفع حسب الاستخدام' }, websiteUrl: 'https://platform.openai.com/assistants', views: 21000 },
 
   // ── WRITING extra ─────────────────────────────────────────────
-  { id: 'copy-ai-new', name: 'Copy.ai', category: 'writing',
-    description: { en: "AI-powered marketing copy and content generation platform with workflows for sales and marketing teams.", fr: "Plateforme de generation de contenu marketing IA avec flux de travail pour les equipes commerciales.", es: "Plataforma de generacion de contenido marketing IA con flujos de trabajo para equipos de ventas.", ar: "منصة توليد محتوى تسويقي بالذكاء الاصطناعي مع سير عمل لفرق المبيعات والتسويق." },
     rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $49/mo', fr: 'Gratuit / 49$/mois', es: 'Gratis / $49/mes', ar: 'مجاني / 49 دولار' }, websiteUrl: 'https://copy.ai', views: 16000 },
   { id: 'ai21-labs', name: 'AI21 Labs', category: 'writing',
     description: { en: "NLP company offering Jurassic language models and Wordtune — specialized in contextual AI writing assistance.", fr: "Entreprise NLP offrant des modeles Jurassic et Wordtune specialises dans l'assistance a la redaction.", es: "Empresa NLP que ofrece modelos Jurassic y Wordtune especializados en asistencia de escritura.", ar: "شركة معالجة اللغة تقدم نماذج Jurassic وWordtune المتخصصة في مساعدة الكتابة السياقية." },
@@ -2456,8 +2381,6 @@ export const TOOLS_DATA: AITool[] = [
     rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $11.99/mo', fr: 'Gratuit / 11.99$/mois', es: 'Gratis / $11.99/mes', ar: 'مجاني / 11.99 دولار' }, websiteUrl: 'https://podcastle.ai', views: 10000 },
 
   // ── MARKETING extra ───────────────────────────────────────────
-  { id: 'jasper-ai', name: 'Jasper AI', category: 'marketing',
-    description: { en: "Enterprise AI marketing platform for creating on-brand content at scale with brand voice training.", fr: "Plateforme marketing IA d'entreprise pour creer du contenu a la marque a grande echelle.", es: "Plataforma de marketing IA empresarial para crear contenido de marca a escala.", ar: "منصة تسويق بالذكاء الاصطناعي للمؤسسات لإنشاء محتوى العلامة التجارية على نطاق واسع." },
     rating: 4.5, pricing: 'Paid', pricingLocalized: { en: 'From $49/mo', fr: 'A partir de 49$/mois', es: 'Desde $49/mes', ar: 'تبدأ من 49 دولار' }, websiteUrl: 'https://jasper.ai', affiliateUrl: 'https://jasper.ai?via=aiverse', commission: '30% for 12 months', views: 24000 },
   { id: 'vidyard', name: 'Vidyard', category: 'marketing',
     description: { en: "Video platform for sales and marketing teams with AI scripts, personalized video, and analytics.", fr: "Plateforme video pour equipes commerciales avec scripts IA et video personnalisee.", es: "Plataforma de video para equipos de ventas con scripts IA y video personalizado.", ar: "منصة فيديو لفرق المبيعات والتسويق مع نصوص الذكاء الاصطناعي والفيديو الشخصي والتحليلات." },
