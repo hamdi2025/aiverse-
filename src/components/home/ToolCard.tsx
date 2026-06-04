@@ -23,6 +23,7 @@ export default function ToolCard({ tool, isLarge = false, onClick }: ToolCardPro
   const outboundUrl = buildAffiliateUrl(tool.id, tool.websiteUrl);
   const ratingFormatted = tool.rating.toFixed(1);
   const viewsFormatted = tool.views >= 1000 ? `${(tool.views / 1000).toFixed(1)}k` : tool.views;
+  const isTrending = tool.views >= 20000;
 
   // Pricing badge style: Free = green, Freemium = amber, Paid = gray
   const isFree = tool.pricing === 'Free';
@@ -50,6 +51,11 @@ export default function ToolCard({ tool, isLarge = false, onClick }: ToolCardPro
           {sponsored && (
             <span className="text-[10px] font-extrabold tracking-wider uppercase bg-gradient-to-r from-purple-600 to-pink-600 text-white px-2.5 py-1 rounded-full animate-pulse shadow-md shadow-purple-900/50">
               {sponsored.badgeText[locale] || t('sponsored')}
+            </span>
+          )}
+          {!sponsored && isTrending && (
+            <span className="text-[10px] font-extrabold tracking-wider uppercase bg-gradient-to-r from-orange-500 to-red-500 text-white px-2.5 py-1 rounded-full shadow-md shadow-orange-900/50">
+              🔥 Trending
             </span>
           )}
         </div>
