@@ -13,13 +13,16 @@
     "noResults": "No tools found matching your request."
   },
   "Hero": {
-    "badge": "2,400+ AI Tools Catalogued",
-    "titleMain": "AI Tools. We Help You Choose Smarter —",
+    "badge": "🤖 The AI Agents Era is Here — 2026",
+    "agentsLabel": "AI Agents & Tools",
+    "titleMain": "The #1 Directory for",
+    "titleAgents": "AI Agents & AI Tools",
+    "titleSub": "in 2026 — Choose Smarter.",
     "titleGradient1": "Maximum Power,",
     "titleGradient2": "Minimum Cost.",
-    "subtitle": "Browse +2,400 AI tools across every domain. We guide you to the most powerful and affordable option — pay only what you truly need.",
-    "badge2": "✦ Free & Paid Tools · All Domains · Unbiased Reviews",
-    "popularSearch": "Popular: ChatGPT, Midjourney, Claude, Jasper"
+    "subtitle": "Discover 200+ AI tools and autonomous AI Agents that work, plan, and execute for you — across writing, code, video, marketing and more.",
+    "badge2": "✦ AI Agents · AI Tools · 8 Categories · Unbiased Reviews",
+    "popularSearch": "Popular: AI Agents, ChatGPT, Claude, Midjourney"
   },
   "Categories": {
     "all": "All Tools",

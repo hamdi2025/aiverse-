@@ -13,13 +13,16 @@
     "noResults": "No tools found matching your search."
   },
   "Hero": {
-    "badge": "2,400+ AI Tools Listed",
-    "titleMain": "AI Tools. Choose Smarter",
-    "titleGradient1": "Maximum Power,",
-    "titleGradient2": "Minimum Cost.",
-    "subtitle": "Browse 2,400+ AI tools across all domains. We guide you to the most powerful and affordable option.",
-    "badge2": "Free and Paid Tools. All Domains. Unbiased Reviews.",
-    "popularSearch": "Popular: ChatGPT, Midjourney, Claude, Jasper"
+    "badge": "🤖 عصر وكلاء الذكاء الاصطناعي وصل — 2026",
+    "agentsLabel": "وكلاء الذكاء الاصطناعي والأدوات",
+    "titleMain": "الدليل الأول لـ",
+    "titleAgents": "وكلاء الذكاء الاصطناعي وأدواته",
+    "titleSub": "في 2026 — اختر بذكاء.",
+    "titleGradient1": "أقصى قوة،",
+    "titleGradient2": "أدنى تكلفة.",
+    "subtitle": "اكتشف 200+ أداة ذكاء اصطناعي ووكلاء مستقلين يعملون ويخططون وينفذون نيابةً عنك — كتابة، كود، فيديو، تسويق والمزيد.",
+    "badge2": "✦ وكلاء ذكاء اصطناعي · أدوات ذكاء اصطناعي · 8 فئات · مراجعات محايدة",
+    "popularSearch": "شائع: وكلاء الذكاء الاصطناعي، ChatGPT، Claude، Midjourney"
   },
   "Categories": {
     "all": "All Tools",

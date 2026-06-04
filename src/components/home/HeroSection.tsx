@@ -21,32 +21,56 @@ export default function HeroSection({
 
   return (
     <section className="relative w-full py-20 md:py-32 overflow-hidden flex flex-col items-center justify-center text-center px-4">
+      {/* Glow blobs */}
       <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[350px] md:w-[600px] h-[350px] md:h-[600px] rounded-full bg-[#7C3AED]/10 blur-[100px] -z-10 animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[350px] md:w-[600px] h-[350px] md:h-[600px] rounded-full bg-[#06B6D4]/10 blur-[100px] -z-10 animate-pulse [animation-delay:2s]" />
 
+      {/* Top badge — AI Agents Era */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.05 }}
+        className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-violet-900/60 to-cyan-900/40 border border-violet-500/40 backdrop-blur-md mb-6 shadow-lg shadow-violet-900/30"
+      >
+        <span className="text-[11px] md:text-xs font-bold text-violet-300 tracking-widest uppercase">
+          {t('badge')}
+        </span>
+      </motion.div>
+
+      {/* H1 — AI Agents front and center */}
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.1 }}
-        className="text-4xl sm:text-5xl md:text-7xl font-black text-white tracking-tight leading-[1.1] max-w-4xl mb-6"
+        className="text-4xl sm:text-5xl md:text-7xl font-black text-white tracking-tight leading-[1.1] max-w-5xl mb-4"
       >
-        <span className="gradient-blink">+2,400</span>{' '}
-        <span dir="auto">{t('titleMain')}</span>{' '}
-        <span className="block">
-          <span className="gradient-power">{t('titleGradient1')}</span>{' '}
-          <span className="gradient-cost">{t('titleGradient2')}</span>
+        {/* Line 1 */}
+        <span className="block text-2xl sm:text-3xl md:text-4xl font-bold text-gray-300 mb-2">
+          {t('titleMain')}
+        </span>
+
+        {/* Line 2 — AI Agents highlighted — KEY SEO line */}
+        <span className="block bg-gradient-to-r from-violet-400 via-purple-300 to-cyan-400 bg-clip-text text-transparent pb-1">
+          {t('titleAgents')}
+        </span>
+
+        {/* Line 3 */}
+        <span className="block text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-400 mt-2">
+          {t('titleSub')}
         </span>
       </motion.h1>
 
+      {/* Subtitle */}
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-gray-300 text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed mb-6"
+        className="text-gray-300 text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed mb-6 mt-4"
       >
         {t('subtitle')}
       </motion.p>
 
+      {/* Secondary badge */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -58,6 +82,7 @@ export default function HeroSection({
         </span>
       </motion.div>
 
+      {/* Search */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -74,6 +99,7 @@ export default function HeroSection({
         </p>
       </motion.div>
 
+      {/* Category filter */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

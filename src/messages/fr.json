@@ -13,13 +13,16 @@
     "noResults": "Aucun outil trouve pour votre recherche."
   },
   "Hero": {
-    "badge": "Plus de 2 400 outils IA repertories",
-    "titleMain": "Outils IA. On vous aide a choisir plus intelligemment",
-    "titleGradient1": "La plus puissante,",
-    "titleGradient2": "la moins chere.",
-    "subtitle": "Parcourez +2 400 outils IA dans tous les domaines. On vous guide vers l'option la plus puissante et la moins chere.",
-    "badge2": "Outils gratuits et payants. Tous les domaines. Avis impartiaux.",
-    "popularSearch": "Populaire : ChatGPT, Midjourney, Claude, Jasper"
+    "badge": "🤖 L'ere des Agents IA est arrivee — 2026",
+    "agentsLabel": "Agents IA & Outils",
+    "titleMain": "Le #1 Repertoire des",
+    "titleAgents": "Agents IA & Outils IA",
+    "titleSub": "en 2026 — Choisissez Mieux.",
+    "titleGradient1": "Maximum de Puissance,",
+    "titleGradient2": "Minimum de Cout.",
+    "subtitle": "Decouvrez 200+ outils IA et des Agents IA autonomes qui travaillent, planifient et executent pour vous — ecriture, code, video, marketing et plus.",
+    "badge2": "✦ Agents IA · Outils IA · 8 Categories · Avis impartiaux",
+    "popularSearch": "Populaire : Agents IA, ChatGPT, Claude, Midjourney"
   },
   "Categories": {
     "all": "Tous les outils",
