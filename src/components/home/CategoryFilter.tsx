@@ -26,7 +26,7 @@ export default function CategoryFilter({ selected, onSelect }: CategoryFilterPro
 
   return (
     <div className="w-full overflow-x-auto no-scrollbar py-4">
-      <div className="flex gap-2.5 px-4 md:px-0 min-w-max justify-center">
+      <div className="flex flex-wrap gap-2 px-4 md:px-0 justify-center">
         {categories.map((cat) => {
           const isActive = selected === cat.id;
           return (
