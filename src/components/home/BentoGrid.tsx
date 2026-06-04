@@ -29,9 +29,13 @@ export default function BentoGrid({ tools, onToolClick }: BentoGridProps) {
   const featuredTool = tools.find((t) => t.isWeeklyFeatured);
   const remainingTools = tools.filter((t) => !t.isWeeklyFeatured);
 
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-rows-[240px]">
+  // Mode bento seulement quand l'outil featured est présent (pas de filtre actif)
+  const gridClass = featuredTool
+    ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-rows-[240px]'
+    : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6';
 
+  return (
+    <div className={gridClass}>
       {featuredTool && (
         <div className="md:col-span-2 md:row-span-2 h-full">
           <GlassCard
@@ -79,11 +83,11 @@ export default function BentoGrid({ tools, onToolClick }: BentoGridProps) {
         return (
           <React.Fragment key={tool.id}>
             {showAd && (
-              <div className="md:col-span-1 h-full">
+              <div className="md:col-span-1">
                 <AdSenseSlot slot="inGrid" className="h-full flex items-center justify-center" />
               </div>
             )}
-            <div className="md:col-span-1 h-full">
+            <div className="md:col-span-1">
               <ToolCard tool={tool} onClick={onToolClick} />
             </div>
           </React.Fragment>
