@@ -10,7 +10,7 @@
   }
 }
 
-/* ── Blink (hero gradient number) ───────────────────────────────────────── */
+/* Blink */
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50%       { opacity: 0.3; }
@@ -25,7 +25,7 @@
   font-weight: 900;
 }
 
-/* ── Hero title gradient parts ──────────────────────────────────────────── */
+/* Hero title gradients */
 .gradient-power {
   background: linear-gradient(90deg, #FF6B00, #FF9F1C, #FFBF00);
   -webkit-background-clip: text;
@@ -45,7 +45,7 @@
   filter: drop-shadow(0 0 12px rgba(0, 255, 136, 0.45));
 }
 
-/* ── Color-cycle dot (header badge) ─────────────────────────────────────── */
+/* Color-cycle dot */
 @keyframes colorCycle {
   0%   { background-color: #EF4444; box-shadow: 0 0 8px #EF4444; }
   25%  { background-color: #22C55E; box-shadow: 0 0 8px #22C55E; }
@@ -57,11 +57,11 @@
   animation: colorCycle 4s ease-in-out infinite;
 }
 
-/* ── Badge text cycle (header) ──────────────────────────────────────────── */
+/* Badge text cycle */
 @keyframes badgeTextCycle {
   0%,  18% { content: "2,400+ AI Tools Listed"; }
   20%, 38% { content: "New Tools Every Week"; }
-  40%, 58% { content: "Free & Paid • All Domains"; }
+  40%, 58% { content: "Free & Paid. All Domains"; }
   60%, 78% { content: "Unbiased Reviews"; }
   80%, 100%{ content: "2,400+ AI Tools Listed"; }
 }
@@ -70,7 +70,7 @@
   animation: badgeTextCycle 12s ease-in-out infinite;
 }
 
-/* ── Slow ping ───────────────────────────────────────────────────────────── */
+/* Slow ping */
 @keyframes slowPing {
   0%  { transform: scale(1);   opacity: 1; }
   70% { transform: scale(1.8); opacity: 0; }
@@ -80,7 +80,7 @@
   animation: slowPing 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
-/* ── Orange pulse (arrow CTA button) ────────────────────────────────────── */
+/* Orange pulse */
 @keyframes orangePulse {
   0%, 100% {
     box-shadow: 0 0 0 0 rgba(249,115,22,0.7), 0 0 12px rgba(249,115,22,0.4);

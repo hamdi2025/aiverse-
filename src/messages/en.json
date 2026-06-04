@@ -33,12 +33,12 @@
   },
   "Newsletter": {
     "badge": "Weekly AI Digest",
-    "title": "🚀 The best AI tools, every week",
-    "desc": "Join <b>12,000+ founders & builders</b> getting our curated selection of the best new AI tools, deals, and tutorials — free, every Monday.",
+    "title": "The best AI tools, every week",
+    "desc": "Join 12,000+ founders and builders getting our curated selection of the best new AI tools, deals, and tutorials — free, every Monday.",
     "placeholder": "Enter your email...",
     "cta": "Subscribe Free",
     "fine": "No spam. Unsubscribe anytime. 12,000+ readers.",
-    "success": "✅ You're in! Check your inbox."
+    "success": "You are in! Check your inbox."
   },
   "Stats": {
     "tools": "AI Tools Listed",
@@ -47,7 +47,7 @@
     "languages": "Languages"
   },
   "Footer": {
-    "rights": "© 2026 AIverse. All rights reserved.",
+    "rights": "2026 AIverse. All rights reserved.",
     "disclosure": "Affiliate Disclosure: Some links on this directory are affiliate links. If you click on them and subscribe, we may receive a commission at no extra cost to you. Thank you for supporting AIverse."
   }
 }

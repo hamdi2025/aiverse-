@@ -5,27 +5,27 @@
     "sponsored": "Patrocinado",
     "visit": "Visitar Sitio Web",
     "search": "Buscar herramientas de IA...",
-    "allCategories": "Todas las Categorías",
+    "allCategories": "Todas las Categorias",
     "weeklyFeatured": "Herramienta de la Semana",
     "backToTop": "Volver arriba",
     "toolsBadge": "Herramientas IA Catalogadas",
     "pricing": "Precio",
-    "noResults": "No se encontraron herramientas para su búsqueda."
+    "noResults": "No se encontraron herramientas para su busqueda."
   },
   "Hero": {
-    "badge": "Más de 2.400 herramientas de IA catalogadas",
-    "titleMain": "Herramientas IA. Te ayudamos a elegir mejor —",
-    "titleGradient1": "Máximo poder,",
-    "titleGradient2": "mínimo costo.",
-    "subtitle": "Explora +2,400 herramientas IA en todos los dominios. Te guiamos hacia la opción más potente y económica — paga solo lo que realmente necesitas.",
-    "badge2": "✦ Herramientas gratis & de pago · Todos los dominios · Reseñas imparciales",
+    "badge": "Mas de 2.400 herramientas de IA catalogadas",
+    "titleMain": "Herramientas IA. Te ayudamos a elegir mejor",
+    "titleGradient1": "Maximo poder,",
+    "titleGradient2": "minimo costo.",
+    "subtitle": "Explora +2,400 herramientas IA en todos los dominios. Te guiamos hacia la opcion mas potente y economica.",
+    "badge2": "Herramientas gratis y de pago. Todos los dominios. Resenas imparciales.",
     "popularSearch": "Popular: ChatGPT, Midjourney, Claude, Jasper"
   },
   "Categories": {
     "all": "Todas las herramientas",
-    "writing": "Redacción y Contenido",
-    "image": "Imagen y Diseño",
-    "code": "Desarrollo y Código",
+    "writing": "Redaccion y Contenido",
+    "image": "Imagen y Diseno",
+    "code": "Desarrollo y Codigo",
     "video": "Video y Movimiento",
     "productivity": "Productividad y Oficina",
     "audio": "Audio y Voz",
@@ -33,21 +33,21 @@
   },
   "Newsletter": {
     "badge": "Digest IA Semanal",
-    "title": "🚀 Las mejores herramientas IA, cada semana",
-    "desc": "Únete a <b>12.000+ fundadores y desarrolladores</b> que reciben nuestra selección de las mejores herramientas IA, ofertas y tutoriales — gratis, cada lunes.",
-    "placeholder": "Tu correo electrónico...",
+    "title": "Las mejores herramientas IA, cada semana",
+    "desc": "Unete a 12.000 fundadores y desarrolladores que reciben nuestra seleccion de las mejores herramientas IA, ofertas y tutoriales, gratis cada lunes.",
+    "placeholder": "Tu correo electronico...",
     "cta": "Suscribirse gratis",
     "fine": "Sin spam. Cancela cuando quieras. 12.000+ lectores.",
-    "success": "✅ ¡Estás dentro! Revisa tu bandeja de entrada."
+    "success": "Estas dentro! Revisa tu bandeja de entrada."
   },
   "Stats": {
     "tools": "Herramientas IA listadas",
     "readers": "Lectores mensuales",
-    "categories": "Categorías",
+    "categories": "Categorias",
     "languages": "Idiomas"
   },
   "Footer": {
-    "rights": "© 2026 AIverse. Todos los derechos reservados.",
-    "disclosure": "Divulgación de afiliados: Algunos enlaces en este directorio son enlaces de afiliados. Si hace clic en ellos y se suscribe, podemos recibir una comisión sin costo adicional para usted. Gracias por apoyar a AIverse."
+    "rights": "2026 AIverse. Todos los derechos reservados.",
+    "disclosure": "Divulgacion de afiliados: Algunos enlaces en este directorio son enlaces de afiliados. Si hace clic en ellos y se suscribe, podemos recibir una comision sin costo adicional. Gracias por apoyar AIverse."
   }
 }
