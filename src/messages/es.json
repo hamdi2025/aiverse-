@@ -13,14 +13,13 @@
     "noResults": "No se encontraron herramientas para su busqueda."
   },
   "Hero": {
-    "badge": "🤖 La Era de los Agentes IA ha llegado — 2026",
-    "agentsLabel": "Agentes IA y Herramientas",
-    "titleMain": "El #1 Directorio de",
-    "titleAgents": "Agentes IA y Herramientas IA",
-    "titleSub": "en 2026 — Elige Mejor.",
+    "badge": "🤖 La Era de los Agentes IA ha llegado",
+    "titleAgents": "+50 Agentes IA",
+    "titleTools": "+2.400 Herramientas IA",
+    "titleMain": "Elige con Mas Inteligencia —",
     "titleGradient1": "Maximo Poder,",
     "titleGradient2": "Minimo Costo.",
-    "subtitle": "Descubre 200+ herramientas IA y Agentes IA autonomos que trabajan, planifican y ejecutan por ti — escritura, codigo, video, marketing y mas.",
+    "subtitle": "Descubre miles de herramientas IA y Agentes IA autonomos que trabajan, planifican y ejecutan por ti — escritura, codigo, video, marketing y mas.",
     "badge2": "✦ Agentes IA · Herramientas IA · 8 Categorias · Resenas imparciales",
     "popularSearch": "Popular: Agentes IA, ChatGPT, Claude, Midjourney"
   },

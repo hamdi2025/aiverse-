@@ -37,26 +37,33 @@ export default function HeroSection({
         </span>
       </motion.div>
 
-      {/* H1 — AI Agents front and center */}
+      {/* H1 — AI Agents + count front and center */}
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.1 }}
         className="text-4xl sm:text-5xl md:text-7xl font-black text-white tracking-tight leading-[1.1] max-w-5xl mb-4"
       >
-        {/* Line 1 */}
-        <span className="block text-2xl sm:text-3xl md:text-4xl font-bold text-gray-300 mb-2">
+        {/* Line 1 — +50 AI Agents (violet) & +2,400 AI Tools (orange) */}
+        <span className="block pb-2 leading-tight">
+          <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
+            {t('titleAgents')}
+          </span>
+          <span className="text-gray-400 font-light mx-3">&</span>
+          <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
+            {t('titleTools')}
+          </span>
+        </span>
+
+        {/* Line 2 */}
+        <span className="block text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-300 mt-2">
           {t('titleMain')}
         </span>
 
-        {/* Line 2 — AI Agents highlighted — KEY SEO line */}
-        <span className="block bg-gradient-to-r from-violet-400 via-purple-300 to-cyan-400 bg-clip-text text-transparent pb-1">
-          {t('titleAgents')}
-        </span>
-
-        {/* Line 3 */}
-        <span className="block text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-400 mt-2">
-          {t('titleSub')}
+        {/* Line 3 — gradient */}
+        <span className="block">
+          <span className="gradient-power">{t('titleGradient1')}</span>{' '}
+          <span className="gradient-cost">{t('titleGradient2')}</span>
         </span>
       </motion.h1>
 
