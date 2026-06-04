@@ -30,14 +30,12 @@ export default function BentoGrid({ tools, onToolClick }: BentoGridProps) {
   const remainingTools = tools.filter((t) => !t.isWeeklyFeatured);
 
   // Mode bento seulement quand l'outil featured est présent (pas de filtre actif)
-  const gridClass = featuredTool
-    ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-rows-[240px]'
-    : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6';
+  const gridClass = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6';
 
   return (
     <div className={gridClass}>
       {featuredTool && (
-        <div className="md:col-span-2 md:row-span-2 h-full">
+        <div className="md:col-span-2 min-h-[480px]">
           <GlassCard
             glowColor="from-[#7C3AED]/20 to-[#06B6D4]/20"
             className="p-8 h-full flex flex-col justify-between border-[#7C3AED]/40 relative overflow-hidden"
