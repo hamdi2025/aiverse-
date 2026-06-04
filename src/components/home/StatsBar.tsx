@@ -8,7 +8,7 @@ export default function StatsBar() {
   const t = useTranslations('Stats');
 
   const STATS = [
-    { icon: <Zap className="w-5 h-5 text-[#7C3AED]" />, value: '120+', label: t('tools') },
+    { icon: <Zap className="w-5 h-5 text-[#7C3AED]" />, value: '150+', label: t('tools') },
     { icon: <Users className="w-5 h-5 text-[#06B6D4]" />, value: '12K+', label: t('readers') },
     { icon: <TrendingUp className="w-5 h-5 text-amber-400" />, value: '7', label: t('categories') },
     { icon: <Globe className="w-5 h-5 text-green-400" />, value: '4', label: t('languages') },

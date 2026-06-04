@@ -28,6 +28,7 @@ export default function SearchBar({
     { id: 'productivity', label: tCat('productivity') },
     { id: 'audio', label: tCat('audio') },
     { id: 'marketing', label: tCat('marketing') },
+    { id: 'agents', label: tCat('agents') },
   ];
 
   const handleSubmit = () => {

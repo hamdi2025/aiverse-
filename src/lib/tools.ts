@@ -1,7 +1,7 @@
 export interface AITool {
   id: string;
   name: string;
-  category: 'writing' | 'image' | 'code' | 'video' | 'productivity' | 'audio' | 'marketing';
+  category: 'writing' | 'image' | 'code' | 'video' | 'productivity' | 'audio' | 'marketing' | 'agents';
   description: { en: string; fr: string; es: string; ar: string; };
   rating: number;
   pricing: 'Free' | 'Freemium' | 'Paid';
@@ -2245,19 +2245,134 @@ export const TOOLS_DATA: AITool[] = [
     websiteUrl: 'https://mailmodo.com',
     views: 7000
   },
-  {
-    id: 'breakcold',
-    name: 'Breakcold',
-    category: 'marketing',
-    description: {
-      en: "AI sales CRM that helps close deals by aggregating LinkedIn, email, and Twitter activity for warm outreach.",
-      fr: "CRM de vente IA qui aide a conclure des deals en agregant LinkedIn, email et Twitter.",
-      es: "CRM de ventas IA que ayuda a cerrar tratos agregando actividad de LinkedIn, email y Twitter.",
-      ar: "CRM مبيعات بالذكاء الاصطناعي يساعد في إتمام الصفقات بتجميع نشاط LinkedIn والبريد الإلكتروني."
-    },
-    rating: 4.3, pricing: 'Paid',
-    pricingLocalized: { en: 'From $29/mo', fr: 'A partir de 29$/mois', es: 'Desde $29/mes', ar: 'تبدأ من 29 دولار' },
-    websiteUrl: 'https://breakcold.com',
-    views: 6000
-  }
+  // ── AI AGENTS (nouvelle catégorie) ───────────────────────────
+  { id: 'langchain', name: 'LangChain', category: 'agents',
+    description: { en: "Open-source framework for building LLM-powered applications and autonomous AI agents with memory and tools.", fr: "Framework open-source pour construire des applications LLM et des agents IA autonomes avec memoire.", es: "Framework open-source para construir aplicaciones LLM y agentes IA autonomos con memoria.", ar: "إطار مفتوح المصدر لبناء تطبيقات LLM ووكلاء ذكاء اصطناعي مستقلين بذاكرة وأدوات." },
+    rating: 4.6, pricing: 'Free', pricingLocalized: { en: 'Free / Open Source', fr: 'Gratuit / Open Source', es: 'Gratis / Codigo abierto', ar: 'مجاني / مفتوح المصدر' }, websiteUrl: 'https://langchain.com', views: 32000 },
+  { id: 'crewai', name: 'CrewAI', category: 'agents',
+    description: { en: "Framework for orchestrating multi-agent AI systems where agents collaborate to complete complex tasks autonomously.", fr: "Framework pour orchestrer des systemes multi-agents IA collaborant pour accomplir des taches complexes.", es: "Framework para orquestar sistemas multi-agente IA que colaboran para completar tareas complejas.", ar: "إطار لتنسيق أنظمة متعددة الوكلاء حيث تتعاون لإنجاز المهام المعقدة باستقلالية." },
+    rating: 4.5, pricing: 'Freemium', pricingLocalized: { en: 'Free / $29/mo', fr: 'Gratuit / 29$/mois', es: 'Gratis / $29/mes', ar: 'مجاني / 29 دولار' }, websiteUrl: 'https://crewai.com', views: 22000 },
+  { id: 'autogpt', name: 'AutoGPT', category: 'agents',
+    description: { en: "Autonomous AI agent that breaks down goals into tasks and executes them independently using the internet and tools.", fr: "Agent IA autonome qui decompose les objectifs en taches et les execute independamment.", es: "Agente IA autonomo que descompone objetivos en tareas y las ejecuta independientemente.", ar: "وكيل ذكاء اصطناعي مستقل يقسم الأهداف إلى مهام وينفذها بشكل مستقل باستخدام الإنترنت." },
+    rating: 4.3, pricing: 'Free', pricingLocalized: { en: 'Free / Open Source', fr: 'Gratuit / Open Source', es: 'Gratis / Codigo abierto', ar: 'مجاني / مفتوح المصدر' }, websiteUrl: 'https://agpt.co', views: 28000 },
+  { id: 'agentgpt', name: 'AgentGPT', category: 'agents',
+    description: { en: "Browser-based autonomous AI agent platform that lets you configure and deploy AI agents directly in your browser.", fr: "Plateforme d'agents IA autonomes dans le navigateur pour configurer et deployer des agents directement.", es: "Plataforma de agentes IA autonomos basada en navegador para configurar y desplegar agentes.", ar: "منصة وكلاء ذكاء اصطناعي مستقلة في المتصفح تتيح تكوين ونشر وكلاء ذكاء اصطناعي مباشرة." },
+    rating: 4.2, pricing: 'Freemium', pricingLocalized: { en: 'Free / $40/mo', fr: 'Gratuit / 40$/mois', es: 'Gratis / $40/mes', ar: 'مجاني / 40 دولار' }, websiteUrl: 'https://agentgpt.reworkd.ai', views: 18000 },
+  { id: 'n8n-ai', name: 'n8n AI', category: 'agents',
+    description: { en: "Fair-code workflow automation with AI agent nodes — build powerful automated pipelines connecting 400+ services.", fr: "Automatisation de flux de travail avec noeuds d'agents IA pour connecter 400+ services.", es: "Automatizacion de flujos de trabajo con nodos de agentes IA para conectar 400+ servicios.", ar: "أتمتة سير العمل مع عقد وكلاء الذكاء الاصطناعي لربط أكثر من 400 خدمة." },
+    rating: 4.6, pricing: 'Freemium', pricingLocalized: { en: 'Free / $20/mo', fr: 'Gratuit / 20$/mois', es: 'Gratis / $20/mes', ar: 'مجاني / 20 دولار' }, websiteUrl: 'https://n8n.io', views: 25000 },
+  { id: 'flowise', name: 'Flowise', category: 'agents',
+    description: { en: "Open-source drag-and-drop UI to build LLM flows and AI agents visually without writing code.", fr: "Interface glisser-deposer open-source pour construire des flux LLM et agents IA visuellement.", es: "Interfaz drag-and-drop open-source para construir flujos LLM y agentes IA visualmente.", ar: "واجهة سحب وإفلات مفتوحة المصدر لبناء تدفقات LLM ووكلاء الذكاء الاصطناعي بصرياً." },
+    rating: 4.5, pricing: 'Free', pricingLocalized: { en: 'Free / Open Source', fr: 'Gratuit / Open Source', es: 'Gratis / Codigo abierto', ar: 'مجاني / مفتوح المصدر' }, websiteUrl: 'https://flowiseai.com', views: 20000 },
+  { id: 'dify', name: 'Dify', category: 'agents',
+    description: { en: "LLM application development platform for building AI agents, chatbots, and workflows with a visual interface.", fr: "Plateforme de developpement d'applications LLM pour construire des agents IA et chatbots.", es: "Plataforma de desarrollo de aplicaciones LLM para construir agentes IA y chatbots.", ar: "منصة تطوير تطبيقات LLM لبناء وكلاء الذكاء الاصطناعي وروبوتات الدردشة بواجهة مرئية." },
+    rating: 4.6, pricing: 'Freemium', pricingLocalized: { en: 'Free / $59/mo', fr: 'Gratuit / 59$/mois', es: 'Gratis / $59/mes', ar: 'مجاني / 59 دولار' }, websiteUrl: 'https://dify.ai', views: 19000 },
+  { id: 'composio', name: 'Composio', category: 'agents',
+    description: { en: "Toolset for AI agents with 250+ integrations — connects agents to GitHub, Gmail, Slack, and more.", fr: "Ensemble d'outils pour agents IA avec 250+ integrations - connecte les agents a GitHub, Gmail, Slack.", es: "Conjunto de herramientas para agentes IA con 250+ integraciones que los conecta a GitHub, Gmail.", ar: "مجموعة أدوات لوكلاء الذكاء الاصطناعي مع 250+ تكاملاً يربطها بـ GitHub وGmail وSlack." },
+    rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $49/mo', fr: 'Gratuit / 49$/mois', es: 'Gratis / $49/mes', ar: 'مجاني / 49 دولار' }, websiteUrl: 'https://composio.dev', views: 14000 },
+  { id: 'relevance-ai', name: 'Relevance AI', category: 'agents',
+    description: { en: "No-code platform to build and deploy custom AI agents and multi-agent teams for business automation.", fr: "Plateforme no-code pour construire et deployer des agents IA personnalises pour l'automatisation.", es: "Plataforma no-code para construir y desplegar agentes IA personalizados para automatizacion empresarial.", ar: "منصة بدون كود لبناء ونشر وكلاء ذكاء اصطناعي مخصصة لأتمتة الأعمال." },
+    rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $19/mo', fr: 'Gratuit / 19$/mois', es: 'Gratis / $19/mes', ar: 'مجاني / 19 دولار' }, websiteUrl: 'https://relevanceai.com', views: 13000 },
+  { id: 'vertex-ai', name: 'Google Vertex AI', category: 'agents',
+    description: { en: "Google Cloud platform for building, deploying, and scaling AI agents and ML models in production.", fr: "Plateforme Google Cloud pour construire, deployer et mettre a l'echelle des agents IA en production.", es: "Plataforma Google Cloud para construir, desplegar y escalar agentes IA y modelos ML en produccion.", ar: "منصة Google Cloud لبناء ونشر وتوسيع نطاق وكلاء الذكاء الاصطناعي ونماذج ML في الإنتاج." },
+    rating: 4.5, pricing: 'Paid', pricingLocalized: { en: 'Pay as you go', fr: 'Paiement a l'utilisation', es: 'Pago por uso', ar: 'الدفع حسب الاستخدام' }, websiteUrl: 'https://cloud.google.com/vertex-ai', views: 17000 },
+  { id: 'aws-bedrock', name: 'AWS Bedrock', category: 'agents',
+    description: { en: "Amazon's fully managed AI service to build generative AI applications with foundation models and AI agents.", fr: "Service IA manage d'Amazon pour construire des apps IA generative avec des modeles fondamentaux.", es: "Servicio IA gestionado de Amazon para construir apps de IA generativa con modelos base.", ar: "خدمة الذكاء الاصطناعي المُدارة من Amazon لبناء تطبيقات الذكاء الاصطناعي التوليدي." },
+    rating: 4.5, pricing: 'Paid', pricingLocalized: { en: 'Pay as you go', fr: 'Paiement a l'utilisation', es: 'Pago por uso', ar: 'الدفع حسب الاستخدام' }, websiteUrl: 'https://aws.amazon.com/bedrock', views: 15000 },
+  { id: 'openai-assistants', name: 'OpenAI Assistants', category: 'agents',
+    description: { en: "OpenAI API for building AI assistants with persistent threads, file search, code interpreter, and function calling.", fr: "API OpenAI pour construire des assistants IA avec threads persistants et appel de fonctions.", es: "API OpenAI para construir asistentes IA con hilos persistentes y llamada a funciones.", ar: "واجهة برمجة OpenAI لبناء مساعدات ذكاء اصطناعي مع خيوط مستمرة واستدعاء الوظائف." },
+    rating: 4.6, pricing: 'Paid', pricingLocalized: { en: 'Pay as you go', fr: 'Paiement a l'utilisation', es: 'Pago por uso', ar: 'الدفع حسب الاستخدام' }, websiteUrl: 'https://platform.openai.com/assistants', views: 21000 },
+
+  // ── WRITING extra ─────────────────────────────────────────────
+  { id: 'copy-ai-new', name: 'Copy.ai', category: 'writing',
+    description: { en: "AI-powered marketing copy and content generation platform with workflows for sales and marketing teams.", fr: "Plateforme de generation de contenu marketing IA avec flux de travail pour les equipes commerciales.", es: "Plataforma de generacion de contenido marketing IA con flujos de trabajo para equipos de ventas.", ar: "منصة توليد محتوى تسويقي بالذكاء الاصطناعي مع سير عمل لفرق المبيعات والتسويق." },
+    rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $49/mo', fr: 'Gratuit / 49$/mois', es: 'Gratis / $49/mes', ar: 'مجاني / 49 دولار' }, websiteUrl: 'https://copy.ai', views: 16000 },
+  { id: 'ai21-labs', name: 'AI21 Labs', category: 'writing',
+    description: { en: "NLP company offering Jurassic language models and Wordtune — specialized in contextual AI writing assistance.", fr: "Entreprise NLP offrant des modeles Jurassic et Wordtune specialises dans l'assistance a la redaction.", es: "Empresa NLP que ofrece modelos Jurassic y Wordtune especializados en asistencia de escritura.", ar: "شركة معالجة اللغة تقدم نماذج Jurassic وWordtune المتخصصة في مساعدة الكتابة السياقية." },
+    rating: 4.3, pricing: 'Freemium', pricingLocalized: { en: 'Free / $39/mo', fr: 'Gratuit / 39$/mois', es: 'Gratis / $39/mes', ar: 'مجاني / 39 دولار' }, websiteUrl: 'https://ai21.com', views: 11000 },
+  { id: 'textblaze', name: 'Text Blaze', category: 'writing',
+    description: { en: "Text expansion and templating tool with AI assistance for creating snippets and automating repetitive typing.", fr: "Outil d'expansion de texte avec assistance IA pour creer des extraits et automatiser la frappe.", es: "Herramienta de expansion de texto con asistencia IA para crear fragmentos y automatizar escritura.", ar: "أداة توسيع النص مع مساعدة الذكاء الاصطناعي لإنشاء مقتطفات وأتمتة الكتابة المتكررة." },
+    rating: 4.5, pricing: 'Freemium', pricingLocalized: { en: 'Free / $2.99/mo', fr: 'Gratuit / 2.99$/mois', es: 'Gratis / $2.99/mes', ar: 'مجاني / 2.99 دولار' }, websiteUrl: 'https://blaze.today', views: 9000 },
+  { id: 'lex-ai', name: 'Lex', category: 'writing',
+    description: { en: "AI-native word processor with inline suggestions, auto-complete, and feedback built directly into writing flow.", fr: "Traitement de texte natif IA avec suggestions en ligne et completions automatiques integrees.", es: "Procesador de texto nativo IA con sugerencias en linea y autocompletado integrado.", ar: "معالج نصوص أصلي للذكاء الاصطناعي مع اقتراحات مضمنة وإكمال تلقائي مدمج في تدفق الكتابة." },
+    rating: 4.2, pricing: 'Freemium', pricingLocalized: { en: 'Free / $18/mo', fr: 'Gratuit / 18$/mois', es: 'Gratis / $18/mes', ar: 'مجاني / 18 دولار' }, websiteUrl: 'https://lex.page', views: 8000 },
+
+  // ── IMAGE extra ───────────────────────────────────────────────
+  { id: 'adobe-express', name: 'Adobe Express AI', category: 'image',
+    description: { en: "Adobe's all-in-one creative tool with Firefly AI for quick graphic design, social posts, and image editing.", fr: "Outil creatif tout-en-un d'Adobe avec Firefly IA pour le design graphique rapide et l'edition d'images.", es: "Herramienta creativa todo en uno de Adobe con Firefly IA para diseno grafico rapido.", ar: "أداة إبداعية شاملة من Adobe مع Firefly AI للتصميم الجرافيكي السريع وتحرير الصور." },
+    rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $9.99/mo', fr: 'Gratuit / 9.99$/mois', es: 'Gratis / $9.99/mes', ar: 'مجاني / 9.99 دولار' }, websiteUrl: 'https://express.adobe.com', views: 15000 },
+  { id: 'looka', name: 'Looka', category: 'image',
+    description: { en: "AI logo maker that generates professional brand identities including logos, business cards, and brand kits.", fr: "Createur de logo IA qui genere des identites de marque professionnelles incluant logos et cartes de visite.", es: "Creador de logos IA que genera identidades de marca profesionales incluyendo logos y tarjetas.", ar: "صانع شعارات بالذكاء الاصطناعي يولد هويات العلامات التجارية الاحترافية بما في ذلك الشعارات." },
+    rating: 4.4, pricing: 'Paid', pricingLocalized: { en: 'From $20 one-time', fr: 'A partir de 20$ unique', es: 'Desde $20 unico', ar: 'تبدأ من 20 دولار مرة واحدة' }, websiteUrl: 'https://looka.com', views: 13000 },
+  { id: 'stockimg-ai', name: 'Stockimg AI', category: 'image',
+    description: { en: "AI image generation platform specialized in stock photos, book covers, posters, and UI/UX designs.", fr: "Plateforme de generation d'images IA specialisee dans les photos stock, couvertures de livres et UI.", es: "Plataforma de generacion de imagenes IA especializada en fotos stock, portadas y disenos UI/UX.", ar: "منصة توليد صور بالذكاء الاصطناعي متخصصة في صور المخزون وأغلفة الكتب وتصاميم UI/UX." },
+    rating: 4.3, pricing: 'Freemium', pricingLocalized: { en: 'Free / $19/mo', fr: 'Gratuit / 19$/mois', es: 'Gratis / $19/mes', ar: 'مجاني / 19 دولار' }, websiteUrl: 'https://stockimg.ai', views: 10000 },
+
+  // ── CODE extra ────────────────────────────────────────────────
+  { id: 'deepseek', name: 'DeepSeek', category: 'code',
+    description: { en: "Chinese open-source LLM with exceptional coding capabilities and competitive performance at low cost.", fr: "LLM open-source chinois avec des capacites de codage exceptionnelles et performances competitives.", es: "LLM open-source chino con capacidades de codificacion excepcionales y rendimiento competitivo.", ar: "نموذج لغوي كبير صيني مفتوح المصدر بقدرات برمجة استثنائية وأداء تنافسي بتكلفة منخفضة." },
+    rating: 4.7, pricing: 'Freemium', pricingLocalized: { en: 'Free / API pricing', fr: 'Gratuit / Tarif API', es: 'Gratis / Precio API', ar: 'مجاني / تسعير API' }, websiteUrl: 'https://deepseek.com', views: 29000 },
+  { id: 'qwen', name: 'Qwen (Alibaba)', category: 'code',
+    description: { en: "Alibaba's open-source LLM series with strong coding, reasoning, and multilingual capabilities.", fr: "Serie de LLM open-source d'Alibaba avec de solides capacites de codage et de raisonnement.", es: "Serie de LLM open-source de Alibaba con solidas capacidades de codificacion y razonamiento.", ar: "سلسلة نماذج لغوية مفتوحة المصدر من Alibaba بقدرات برمجة واستدلال ومتعددة اللغات قوية." },
+    rating: 4.5, pricing: 'Free', pricingLocalized: { en: 'Free / Open Source', fr: 'Gratuit / Open Source', es: 'Gratis / Codigo abierto', ar: 'مجاني / مفتوح المصدر' }, websiteUrl: 'https://qwenlm.github.io', views: 18000 },
+  { id: 'aider', name: 'Aider', category: 'code',
+    description: { en: "AI pair programming in your terminal — edit code across multiple files using GPT-4 or Claude directly in CLI.", fr: "Programmation en binome IA dans votre terminal - editez le code avec GPT-4 ou Claude en CLI.", es: "Programacion en pareja IA en tu terminal - edita codigo con GPT-4 o Claude directamente en CLI.", ar: "برمجة ثنائية بالذكاء الاصطناعي في طرفيتك - تحرير الكود عبر ملفات متعددة باستخدام GPT-4 أو Claude." },
+    rating: 4.5, pricing: 'Free', pricingLocalized: { en: 'Free / Open Source', fr: 'Gratuit / Open Source', es: 'Gratis / Codigo abierto', ar: 'مجاني / مفتوح المصدر' }, websiteUrl: 'https://aider.chat', views: 16000 },
+  { id: 'fine-dev', name: 'Fine', category: 'code',
+    description: { en: "AI developer platform that plans, codes, and ships features autonomously by reading your GitHub issues.", fr: "Plateforme de developpement IA qui planifie, code et livre des fonctionnalites autonomement.", es: "Plataforma de desarrollo IA que planifica, codifica y lanza funcionalidades autonomamente.", ar: "منصة مطورين بالذكاء الاصطناعي تخطط وتبرمج وتسلم الميزات بشكل مستقل من مشاكل GitHub." },
+    rating: 4.3, pricing: 'Freemium', pricingLocalized: { en: 'Free / $25/mo', fr: 'Gratuit / 25$/mois', es: 'Gratis / $25/mes', ar: 'مجاني / 25 دولار' }, websiteUrl: 'https://fine.dev', views: 10000 },
+
+  // ── VIDEO extra ───────────────────────────────────────────────
+  { id: 'luma-ai', name: 'Luma AI', category: 'video',
+    description: { en: "AI video generation model by Luma that creates cinematic, physically accurate videos from text and image prompts.", fr: "Modele de generation video IA par Luma creant des videos cinematographiques precises physiquement.", es: "Modelo de generacion de video IA por Luma que crea videos cinematograficos precisos fisicamente.", ar: "نموذج توليد فيديو بالذكاء الاصطناعي من Luma يُنشئ مقاطع سينمائية دقيقة فيزيائياً." },
+    rating: 4.7, pricing: 'Freemium', pricingLocalized: { en: 'Free / $29.99/mo', fr: 'Gratuit / 29.99$/mois', es: 'Gratis / $29.99/mes', ar: 'مجاني / 29.99 دولار' }, websiteUrl: 'https://lumalabs.ai', views: 24000 },
+  { id: 'capcut-ai', name: 'CapCut AI', category: 'video',
+    description: { en: "Popular video editor with powerful AI features including auto-captions, background removal, and AI avatars.", fr: "Editeur video populaire avec fonctionnalites IA puissantes incluant sous-titres auto et avatars IA.", es: "Editor de video popular con potentes funciones IA incluyendo subtitulos automaticos y avatares IA.", ar: "محرر فيديو شهير مع ميزات ذكاء اصطناعي قوية تشمل التسميات التوضيحية التلقائية وإزالة الخلفية." },
+    rating: 4.6, pricing: 'Freemium', pricingLocalized: { en: 'Free / $7.99/mo', fr: 'Gratuit / 7.99$/mois', es: 'Gratis / $7.99/mes', ar: 'مجاني / 7.99 دولار' }, websiteUrl: 'https://capcut.com', views: 35000 },
+  { id: 'vidiq-ai', name: 'vidIQ AI', category: 'video',
+    description: { en: "YouTube growth tool with AI coaching, keyword research, and competitor analysis to grow your channel faster.", fr: "Outil de croissance YouTube avec coaching IA et recherche de mots-cles pour developper votre chaine.", es: "Herramienta de crecimiento YouTube con coaching IA e investigacion de palabras clave.", ar: "أداة نمو YouTube مع تدريب بالذكاء الاصطناعي وبحث الكلمات المفتاحية لتنمية قناتك." },
+    rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $16.58/mo', fr: 'Gratuit / 16.58$/mois', es: 'Gratis / $16.58/mes', ar: 'مجاني / 16.58 دولار' }, websiteUrl: 'https://vidiq.com', affiliateUrl: 'https://vidiq.com?via=aiverse', commission: '30% recurring', views: 18000 },
+
+  // ── PRODUCTIVITY extra ────────────────────────────────────────
+  { id: 'claude-projects', name: 'Claude Projects', category: 'productivity',
+    description: { en: "Anthropic's collaborative workspace in Claude where you can organize conversations, share context, and build with teams.", fr: "Espace de travail collaboratif dans Claude pour organiser conversations et partager contexte avec equipes.", es: "Espacio de trabajo colaborativo en Claude para organizar conversaciones y compartir contexto.", ar: "مساحة عمل تعاونية في Claude لتنظيم المحادثات ومشاركة السياق والبناء مع الفرق." },
+    rating: 4.7, pricing: 'Freemium', pricingLocalized: { en: 'Free / $20/mo', fr: 'Gratuit / 20$/mois', es: 'Gratis / $20/mes', ar: 'مجاني / 20 دولار' }, websiteUrl: 'https://claude.ai/projects', views: 19000 },
+  { id: 'taskade', name: 'Taskade', category: 'productivity',
+    description: { en: "AI-powered project management and team collaboration tool with built-in AI agents for task automation.", fr: "Outil de gestion de projet et collaboration d'equipe IA avec agents IA integres pour l'automatisation.", es: "Herramienta de gestion de proyectos IA con agentes IA integrados para automatizacion de tareas.", ar: "أداة إدارة مشاريع وتعاون فريق بالذكاء الاصطناعي مع وكلاء ذكاء اصطناعي مدمجين." },
+    rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $8/mo', fr: 'Gratuit / 8$/mois', es: 'Gratis / $8/mes', ar: 'مجاني / 8 دولار' }, websiteUrl: 'https://taskade.com', affiliateUrl: 'https://taskade.com?via=aiverse', commission: '30% recurring', views: 12000 },
+  { id: 'hiver', name: 'Hiver', category: 'productivity',
+    description: { en: "AI-powered email collaboration tool for teams to manage shared inboxes in Gmail with analytics and automation.", fr: "Outil de collaboration email IA pour equipes gerant des boites de reception partagees dans Gmail.", es: "Herramienta de colaboracion email IA para equipos que gestionan bandejas de entrada compartidas.", ar: "أداة تعاون بريد إلكتروني بالذكاء الاصطناعي للفرق لإدارة صناديق البريد المشتركة في Gmail." },
+    rating: 4.4, pricing: 'Paid', pricingLocalized: { en: 'From $19/mo', fr: 'A partir de 19$/mois', es: 'Desde $19/mes', ar: 'تبدأ من 19 دولار' }, websiteUrl: 'https://hiverhq.com', views: 9000 },
+  { id: 'coda-ai', name: 'Coda AI', category: 'productivity',
+    description: { en: "All-in-one doc platform with native AI to summarize, analyze, and automate your documents and workflows.", fr: "Plateforme de documents tout-en-un avec IA native pour resumer, analyser et automatiser vos docs.", es: "Plataforma de documentos todo en uno con IA nativa para resumir, analizar y automatizar.", ar: "منصة مستندات شاملة مع ذكاء اصطناعي أصلي لتلخيص وتحليل وأتمتة المستندات وسير العمل." },
+    rating: 4.5, pricing: 'Freemium', pricingLocalized: { en: 'Free / $10/mo', fr: 'Gratuit / 10$/mois', es: 'Gratis / $10/mes', ar: 'مجاني / 10 دولار' }, websiteUrl: 'https://coda.io', views: 14000 },
+  { id: 'raycast-ai', name: 'Raycast AI', category: 'productivity',
+    description: { en: "Mac launcher with built-in AI assistant to search, write, code, and control your Mac with keyboard shortcuts.", fr: "Lanceur Mac avec assistant IA integre pour rechercher, ecrire, coder et controler votre Mac.", es: "Lanzador Mac con asistente IA integrado para buscar, escribir, codificar y controlar tu Mac.", ar: "قاذف Mac مع مساعد ذكاء اصطناعي مدمج للبحث والكتابة والبرمجة والتحكم في جهازك." },
+    rating: 4.7, pricing: 'Freemium', pricingLocalized: { en: 'Free / $8/mo', fr: 'Gratuit / 8$/mois', es: 'Gratis / $8/mes', ar: 'مجاني / 8 دولار' }, websiteUrl: 'https://raycast.com', views: 20000 },
+
+  // ── AUDIO extra ───────────────────────────────────────────────
+  { id: 'audo-ai', name: 'Audo AI', category: 'audio',
+    description: { en: "AI audio enhancement tool that removes background noise and improves voice clarity in recordings automatically.", fr: "Outil d'amelioration audio IA qui supprime le bruit de fond et ameliore la clarte vocale.", es: "Herramienta de mejora de audio IA que elimina ruido de fondo y mejora la claridad de voz.", ar: "أداة تحسين الصوت بالذكاء الاصطناعي تزيل ضوضاء الخلفية وتحسن وضوح الصوت تلقائياً." },
+    rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $9/mo', fr: 'Gratuit / 9$/mois', es: 'Gratis / $9/mes', ar: 'مجاني / 9 دولار' }, websiteUrl: 'https://audo.ai', views: 11000 },
+  { id: 'musicfy', name: 'Musicfy', category: 'audio',
+    description: { en: "AI voice cloning and music generation tool — create songs in the voice of any artist or custom AI voice.", fr: "Outil de clonage vocal et generation musicale IA - creez des chansons avec la voix de tout artiste.", es: "Herramienta de clonacion de voz y generacion musical IA para crear canciones con cualquier voz.", ar: "أداة استنساخ الصوت وتوليد الموسيقى بالذكاء الاصطناعي لإنشاء أغاني بصوت أي فنان." },
+    rating: 4.3, pricing: 'Freemium', pricingLocalized: { en: 'Free / $9.99/mo', fr: 'Gratuit / 9.99$/mois', es: 'Gratis / $9.99/mes', ar: 'مجاني / 9.99 دولار' }, websiteUrl: 'https://musicfy.lol', views: 13000 },
+  { id: 'beatoven-ai', name: 'Beatoven AI', category: 'audio',
+    description: { en: "AI music composer that creates unique royalty-free background music for videos and podcasts based on mood.", fr: "Compositeur musical IA creant de la musique de fond libre de droits pour videos et podcasts.", es: "Compositor musical IA que crea musica de fondo libre de derechos para videos y podcasts.", ar: "ملحن موسيقي بالذكاء الاصطناعي يُنشئ موسيقى خلفية خالية من حقوق الملكية للفيديو والبودكاست." },
+    rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $9/mo', fr: 'Gratuit / 9$/mois', es: 'Gratis / $9/mes', ar: 'مجاني / 9 دولار' }, websiteUrl: 'https://beatoven.ai', views: 9000 },
+
+  // ── MARKETING extra ───────────────────────────────────────────
+  { id: 'getresponse-ai', name: 'GetResponse AI', category: 'marketing',
+    description: { en: "All-in-one email marketing platform with AI email writer, automation, landing pages, and webinars.", fr: "Plateforme email marketing tout-en-un avec redacteur IA, automatisation et pages d'atterrissage.", es: "Plataforma de email marketing todo en uno con redactor IA, automatizacion y paginas de aterrizaje.", ar: "منصة تسويق بريد إلكتروني شاملة مع كاتب بريد إلكتروني بالذكاء الاصطناعي وأتمتة وصفحات هبوط." },
+    rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $15.58/mo', fr: 'Gratuit / 15.58$/mois', es: 'Gratis / $15.58/mes', ar: 'مجاني / 15.58 دولار' }, websiteUrl: 'https://getresponse.com', affiliateUrl: 'https://getresponse.com?via=aiverse', commission: '33% recurring', views: 15000 },
+  { id: 'systeme-io', name: 'Systeme.io', category: 'marketing',
+    description: { en: "All-in-one online business platform with AI for funnels, email marketing, courses, and affiliate management.", fr: "Plateforme de business en ligne tout-en-un avec IA pour funnels, email marketing et cours.", es: "Plataforma de negocio en linea todo en uno con IA para embudos, email marketing y cursos.", ar: "منصة أعمال عبر الإنترنت شاملة مع ذكاء اصطناعي للمسارات والتسويق والدورات وإدارة الانتساب." },
+    rating: 4.5, pricing: 'Freemium', pricingLocalized: { en: 'Free / $27/mo', fr: 'Gratuit / 27$/mois', es: 'Gratis / $27/mes', ar: 'مجاني / 27 دولار' }, websiteUrl: 'https://systeme.io', affiliateUrl: 'https://systeme.io?via=aiverse', commission: '40% recurring', views: 14000 },
+  { id: 'writersonic-seo', name: 'Writesonic SEO', category: 'marketing',
+    description: { en: "Writesonic's dedicated SEO module with AI keyword clustering, content briefs, and SERP optimization built-in.", fr: "Module SEO dedie de Writesonic avec clustering de mots-cles IA et optimisation SERP integrees.", es: "Modulo SEO dedicado de Writesonic con clustering de palabras clave IA y optimizacion SERP.", ar: "وحدة SEO المخصصة من Writesonic مع تجميع الكلمات المفتاحية بالذكاء الاصطناعي وتحسين SERP." },
+    rating: 4.3, pricing: 'Paid', pricingLocalized: { en: 'From $49/mo', fr: 'A partir de 49$/mois', es: 'Desde $49/mes', ar: 'تبدأ من 49 دولار' }, websiteUrl: 'https://writesonic.com/seo-checker-and-optimizer', views: 8000 },
+  { id: 'convohunter', name: 'ConvoHunter', category: 'marketing',
+    description: { en: "AI tool that finds Reddit and forum conversations where your target audience is asking for your product.", fr: "Outil IA qui trouve les conversations Reddit et forums ou votre cible cherche votre produit.", es: "Herramienta IA que encuentra conversaciones en Reddit y foros donde tu audiencia busca tu producto.", ar: "أداة ذكاء اصطناعي تجد محادثات Reddit والمنتديات حيث يبحث جمهورك المستهدف عن منتجك." },
+    rating: 4.4, pricing: 'Freemium', pricingLocalized: { en: 'Free / $29/mo', fr: 'Gratuit / 29$/mois', es: 'Gratis / $29/mes', ar: 'مجاني / 29 دولار' }, websiteUrl: 'https://convohunter.com', views: 9000 }
+
 ];

@@ -20,7 +20,8 @@ export default function CategoryFilter({ selected, onSelect }: CategoryFilterPro
     { id: 'video', label: t('video') },
     { id: 'productivity', label: t('productivity') },
     { id: 'audio', label: t('audio') },
-    { id: 'marketing', label: t('marketing') }
+    { id: 'marketing', label: t('marketing') },
+    { id: 'agents', label: t('agents') }
   ];
 
   return (
