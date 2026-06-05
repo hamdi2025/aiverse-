@@ -133,6 +133,28 @@ export default async function ToolPage({ params }: Props) {
         </div>
       </div>
 
+      {/* Compare with section */}
+      {(() => {
+        const similar = TOOLS_DATA.filter(t => t.id !== tool.id && t.category === tool.category).slice(0, 5);
+        if (similar.length === 0) return null;
+        const compareLabel = locale === 'fr' ? `Comparer ${tool.name} avec` : locale === 'es' ? `Comparar ${tool.name} con` : locale === 'ar' ? `قارن ${tool.name} مع` : `Compare ${tool.name} with`;
+        return (
+          <div className="mb-8 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
+            <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">🔀 {compareLabel}</h3>
+            <div className="flex flex-wrap gap-2">
+              {similar.map(s => (
+                <a key={s.id} href={`/${locale}/compare/${tool.id}-vs-${s.id}`}
+                  className="flex items-center gap-1.5 text-sm text-gray-300 hover:text-white border border-white/[0.08] hover:border-violet-500/50 hover:bg-violet-500/10 rounded-xl px-4 py-2 transition-all duration-200">
+                  <span className="text-violet-400 font-bold">{tool.name}</span>
+                  <span className="text-gray-600 text-xs">vs</span>
+                  <span className="text-orange-400 font-bold">{s.name}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        );
+      })()}
+
       {/* CTA */}
       <div className="rounded-2xl border border-[#7C3AED]/30 bg-[#7C3AED]/5 p-8 text-center">
         <h2 className="text-xl font-black text-white mb-2">
