@@ -7,6 +7,9 @@ import Footer from '@/components/layout/Footer';
 import Script from 'next/script';
 import { ADSENSE_CONFIG } from '@/config/adsense';
 import { Inter } from 'next/font/google';
+// Analytics — run: npm install @vercel/analytics @vercel/speed-insights
+// import { Analytics } from '@vercel/analytics/react';
+// import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -63,6 +66,8 @@ export default async function LocaleLayout({
           </main>
           <Footer />
         </NextIntlClientProvider>
+        {/* <Analytics /> */}
+        {/* <SpeedInsights /> */}
       </body>
     </html>
   );
