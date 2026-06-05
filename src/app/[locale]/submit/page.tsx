@@ -11,7 +11,7 @@ const T = {
   en: {
     badge: 'Submit Your AI Tool or Agent',
     title: 'Reach',
-    titleHighlight: '70,000+ Builders',
+    titleHighlight: '+70 000 Builders',
     titleEnd: 'Monthly',
     subtitle: 'List your AI tool or AI Agent on AIverse and get discovered by developers, creators, and companies actively searching for AI solutions.',
     mostPopular: 'Most Popular',
@@ -42,7 +42,7 @@ const T = {
   fr: {
     badge: 'Soumettre un Outil ou Agent IA',
     title: 'Atteignez',
-    titleHighlight: '70 000+ Créateurs',
+    titleHighlight: '+70 000 Créateurs',
     titleEnd: 'par Mois',
     subtitle: 'Listez votre outil IA ou Agent IA sur AIverse et soyez découvert par des développeurs, créateurs et entreprises à la recherche de solutions IA.',
     mostPopular: 'Le plus populaire',
@@ -73,7 +73,7 @@ const T = {
   es: {
     badge: 'Enviar una Herramienta o Agente IA',
     title: 'Llega a',
-    titleHighlight: '70.000+ Creadores',
+    titleHighlight: '+70 000 Creadores',
     titleEnd: 'al Mes',
     subtitle: 'Lista tu herramienta IA o Agente IA en AIverse y sé descubierto por desarrolladores, creadores y empresas que buscan soluciones IA.',
     mostPopular: 'Más popular',
