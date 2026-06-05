@@ -1,11 +1,28 @@
-import createMiddleware from 'next-intl/middleware';
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
+import createIntlMiddleware from 'next-intl/middleware';
+import { NextRequest } from 'next/server';
 
-export default createMiddleware({
-  locales: ['en', 'fr', 'ar', 'es'],
-  defaultLocale: 'en'
+const locales = ['en', 'fr', 'ar', 'es'];
+const defaultLocale = 'en';
+
+const intlMiddleware = createIntlMiddleware({
+  locales,
+  defaultLocale,
+});
+
+// Routes that require authentication
+const isProtectedRoute = createRouteMatcher([
+  '/:locale/dashboard(.*)',
+  '/:locale/profile(.*)',
+]);
+
+export default clerkMiddleware(async (auth, req: NextRequest) => {
+  if (isProtectedRoute(req)) {
+    await auth.protect();
+  }
+  return intlMiddleware(req);
 });
 
 export const config = {
-  // Match every path except Next.js internals and static files
-  matcher: ['/((?!_next|_vercel|.*\\..*).*)']
+  matcher: ['/((?!_next|_vercel|.*\\..*).*)'],
 };

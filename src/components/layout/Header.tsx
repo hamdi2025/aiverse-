@@ -5,6 +5,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Globe, Plus, LogIn, UserPlus } from 'lucide-react';
 import { useRouter, usePathname, Link } from '@/navigation';
 import GradientText from '../ui/GradientText';
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 
 export default function Header() {
   const t = useTranslations('Common');
@@ -62,23 +63,30 @@ export default function Header() {
             </select>
           </div>
 
-          {/* Sign In */}
-          <Link
-            href="/sign-in"
-            className="hidden sm:flex items-center gap-1.5 text-xs font-semibold text-gray-300 hover:text-white border border-white/[0.08] hover:border-white/20 rounded-xl px-3 py-2 transition-all duration-200"
-          >
-            <LogIn className="w-3.5 h-3.5" />
-            Sign In
-          </Link>
-
-          {/* Sign Up */}
-          <Link
-            href="/sign-up"
-            className="hidden sm:flex items-center gap-1.5 text-xs font-semibold text-white bg-white/[0.08] hover:bg-white/[0.14] border border-white/[0.10] rounded-xl px-3 py-2 transition-all duration-200"
-          >
-            <UserPlus className="w-3.5 h-3.5" />
-            Sign Up
-          </Link>
+          {/* Clerk — boutons conditionnels */}
+          <SignedOut>
+            <Link
+              href="/sign-in"
+              className="hidden sm:flex items-center gap-1.5 text-xs font-semibold text-gray-300 hover:text-white border border-white/[0.08] hover:border-white/20 rounded-xl px-3 py-2 transition-all duration-200"
+            >
+              <LogIn className="w-3.5 h-3.5" />
+              Sign In
+            </Link>
+            <Link
+              href="/sign-up"
+              className="hidden sm:flex items-center gap-1.5 text-xs font-semibold text-white bg-white/[0.08] hover:bg-white/[0.14] border border-white/[0.10] rounded-xl px-3 py-2 transition-all duration-200"
+            >
+              <UserPlus className="w-3.5 h-3.5" />
+              Sign Up
+            </Link>
+          </SignedOut>
+          <SignedIn>
+            <UserButton afterSignOutUrl="/" appearance={{
+              elements: {
+                avatarBox: 'w-8 h-8 rounded-xl border border-violet-500/40',
+              }
+            }} />
+          </SignedIn>
 
           {/* Submit Tool CTA */}
           <Link

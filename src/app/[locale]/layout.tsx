@@ -9,6 +9,7 @@ import { ADSENSE_CONFIG } from '@/config/adsense';
 import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { ClerkProvider } from '@clerk/nextjs';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -58,13 +59,15 @@ export default async function LocaleLayout({
         )}
       </head>
       <body className={`${inter.className} bg-[#0A0A0F] text-[#F3F4F6] min-h-screen flex flex-col selection:bg-[#7C3AED] selection:text-white antialiased overflow-x-hidden`}>
-        <NextIntlClientProvider messages={messages} locale={locale}>
-          <Header />
-          <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-            {children}
-          </main>
-          <Footer />
-        </NextIntlClientProvider>
+        <ClerkProvider>
+          <NextIntlClientProvider messages={messages} locale={locale}>
+            <Header />
+            <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+              {children}
+            </main>
+            <Footer />
+          </NextIntlClientProvider>
+        </ClerkProvider>
         <Analytics />
         <SpeedInsights />
       </body>
