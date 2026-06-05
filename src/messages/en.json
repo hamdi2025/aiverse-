@@ -19,8 +19,8 @@
     "titleMain": "We Help You Choose Smarter —",
     "titleGradient1": "Maximum Power,",
     "titleGradient2": "Minimum Cost.",
-    "subtitle": "Discover thousands of AI tools and autonomous AI Agents that work, plan, and execute for you — writing, code, video, marketing and more.",
-    "badge2": "✦ AI Agents · AI Tools · 8 Categories · Unbiased Reviews",
+    "subtitle": "Discover thousands of <agents>AI Agents</agents> and <tools>AI Tools</tools> that work, plan, and execute for you — writing, code, video, marketing and more.",
+    "badge2items": "AI Agents|AI Tools|8 Categories|Unbiased Reviews",
     "popularSearch": "Popular: AI Agents, ChatGPT, Claude, Midjourney"
   },
   "Categories": {

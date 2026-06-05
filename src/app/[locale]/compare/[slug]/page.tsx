@@ -48,11 +48,11 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-const LABELS: Record<Locale, { winner: string; tie: string; pricing: string; rating: string; category: string; pros: string; cons: string; verdict: string; visit: string; compare: string; back: string }> = {
-  en: { winner: 'Winner', tie: 'Tie', pricing: 'Pricing', rating: 'Rating', category: 'Category', pros: 'Pros', cons: 'Cons', verdict: 'Our Verdict', visit: 'Visit', compare: 'Compare', back: '← Back' },
-  fr: { winner: 'Gagnant', tie: 'Égalité', pricing: 'Tarif', rating: 'Note', category: 'Catégorie', pros: 'Avantages', cons: 'Inconvénients', verdict: 'Notre Verdict', visit: 'Visiter', compare: 'Comparer', back: '← Retour' },
-  es: { winner: 'Ganador', tie: 'Empate', pricing: 'Precio', rating: 'Valoración', category: 'Categoría', pros: 'Ventajas', cons: 'Desventajas', verdict: 'Nuestro Veredicto', visit: 'Visitar', compare: 'Comparar', back: '← Volver' },
-  ar: { winner: 'الفائز', tie: 'تعادل', pricing: 'السعر', rating: 'التقييم', category: 'الفئة', pros: 'المزايا', cons: 'العيوب', verdict: 'حكمنا', visit: 'زيارة', compare: 'مقارنة', back: '→ رجوع' },
+const LABELS: Record<Locale, { winner: string; tie: string; pricing: string; rating: string; category: string; pros: string; cons: string; verdict: string; visit: string; compare: string; back: string; criteria: string; about: string; moreComparisons: string; try: string; winnerText: (name: string, rating: string) => string; tieText: (n1: string, n2: string) => string }> = {
+  en: { winner: 'Winner', tie: 'Tie', pricing: 'Pricing', rating: 'Rating', category: 'Category', pros: 'Pros', cons: 'Cons', verdict: 'Our Verdict', visit: 'Visit', compare: 'Compare', back: '← Back', criteria: 'Criteria', about: 'About', moreComparisons: 'More Comparisons', try: 'Try', winnerText: (name, rating) => `After comparing ratings, pricing and features, ${name} comes out ahead with a ${rating}/5 rating. It is the better choice for most users.`, tieText: (n1, n2) => `${n1} and ${n2} are equally matched — your choice depends on your specific use case and budget.` },
+  fr: { winner: 'Gagnant', tie: 'Égalité', pricing: 'Tarif', rating: 'Note', category: 'Catégorie', pros: 'Avantages', cons: 'Inconvénients', verdict: 'Notre Verdict', visit: 'Visiter', compare: 'Comparer', back: '← Retour', criteria: 'Critère', about: 'À propos de', moreComparisons: 'Plus de comparaisons', try: 'Essayer', winnerText: (name, rating) => `Après comparaison des notes, tarifs et fonctionnalités, ${name} s'impose avec une note de ${rating}/5. C'est le meilleur choix pour la plupart des utilisateurs.`, tieText: (n1, n2) => `${n1} et ${n2} sont à égalité — votre choix dépend de votre cas d'usage et de votre budget.` },
+  es: { winner: 'Ganador', tie: 'Empate', pricing: 'Precio', rating: 'Valoración', category: 'Categoría', pros: 'Ventajas', cons: 'Desventajas', verdict: 'Nuestro Veredicto', visit: 'Visitar', compare: 'Comparar', back: '← Volver', criteria: 'Criterio', about: 'Acerca de', moreComparisons: 'Más comparaciones', try: 'Probar', winnerText: (name, rating) => `Tras comparar valoraciones, precios y funciones, ${name} sale adelante con una nota de ${rating}/5. Es la mejor opción para la mayoría de usuarios.`, tieText: (n1, n2) => `${n1} y ${n2} están igualados — tu elección depende de tu caso de uso y presupuesto.` },
+  ar: { winner: 'الفائز', tie: 'تعادل', pricing: 'السعر', rating: 'التقييم', category: 'الفئة', pros: 'المزايا', cons: 'العيوب', verdict: 'حكمنا', visit: 'زيارة', compare: 'مقارنة', back: '→ رجوع', criteria: 'المعيار', about: 'حول', moreComparisons: 'مقارنات أخرى', try: 'جرّب', winnerText: (name, rating) => `بعد مقارنة التقييمات والأسعار والميزات، يتفوق ${name} بتقييم ${rating}/5. هو الخيار الأفضل لمعظم المستخدمين.`, tieText: (n1, n2) => `${n1} و${n2} متكافئان — يعتمد اختيارك على حالة استخدامك وميزانيتك.` },
 };
 
 export default function ComparePage({ params }: Props) {
@@ -152,7 +152,7 @@ export default function ComparePage({ params }: Props) {
       {/* Comparison table */}
       <div className="rounded-2xl border border-white/[0.08] overflow-hidden mb-10">
         <div className="grid grid-cols-3 bg-white/[0.04] px-6 py-3 text-xs font-bold uppercase tracking-wider text-gray-500 border-b border-white/[0.06]">
-          <span>Criteria</span>
+          <span>{L.criteria}</span>
           <span className="text-violet-400">{t1.name}</span>
           <span className="text-orange-400">{t2.name}</span>
         </div>
@@ -176,7 +176,7 @@ export default function ComparePage({ params }: Props) {
         {[{ tool: t1, color: 'violet' }, { tool: t2, color: 'orange' }].map(({ tool, color }) => (
           <div key={tool.id} className={`rounded-2xl border p-6 ${color === 'violet' ? 'border-violet-500/20' : 'border-orange-500/20'}`}>
             <h3 className={`font-black text-lg mb-3 ${color === 'violet' ? 'text-violet-300' : 'text-orange-300'}`}>
-              About {tool.name}
+              {L.about} {tool.name}
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed">{tool.description[locale]}</p>
           </div>
@@ -188,24 +188,24 @@ export default function ComparePage({ params }: Props) {
         <h2 className="text-2xl font-black text-white mb-4">{L.verdict}</h2>
         <p className="text-gray-300 text-base leading-relaxed max-w-2xl mx-auto">
           {winner
-            ? `After comparing ratings, pricing, and features, ${winner.name} comes out ahead with a ${winner.rating.toFixed(1)}/5 rating. It is the better choice for most users.`
-            : `${t1.name} and ${t2.name} are equally matched — your choice depends on your specific use case and budget.`}
+            ? L.winnerText(winner.name, winner.rating.toFixed(1))
+            : L.tieText(t1.name, t2.name)}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
           <a href={url1} target="_blank" rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-violet-600 hover:bg-violet-500 text-white px-6 py-3 rounded-xl font-bold text-sm transition-all">
-            Try {t1.name} <ArrowUpRight className="w-4 h-4" />
+            {L.try} {t1.name} <ArrowUpRight className="w-4 h-4" />
           </a>
           <a href={url2} target="_blank" rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white px-6 py-3 rounded-xl font-bold text-sm transition-all">
-            Try {t2.name} <ArrowUpRight className="w-4 h-4" />
+            {L.try} {t2.name} <ArrowUpRight className="w-4 h-4" />
           </a>
         </div>
       </div>
 
       {/* Other comparisons */}
       <div className="mt-16">
-        <h3 className="text-lg font-black text-white mb-6">More Comparisons</h3>
+        <h3 className="text-lg font-black text-white mb-6">{L.moreComparisons}</h3>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           {TOP_COMPARISONS.filter(s => s !== params.slug).slice(0, 6).map((slug) => {
             const [a, b] = slug.split('-vs-');
