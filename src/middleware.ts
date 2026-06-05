@@ -1,4 +1,4 @@
-import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
+import { authMiddleware } from '@clerk/nextjs/server';
 import createIntlMiddleware from 'next-intl/middleware';
 import { NextRequest } from 'next/server';
 
@@ -10,17 +10,11 @@ const intlMiddleware = createIntlMiddleware({
   defaultLocale,
 });
 
-// Routes that require authentication
-const isProtectedRoute = createRouteMatcher([
-  '/:locale/dashboard(.*)',
-  '/:locale/profile(.*)',
-]);
-
-export default clerkMiddleware(async (auth, req: NextRequest) => {
-  if (isProtectedRoute(req)) {
-    await auth.protect();
-  }
-  return intlMiddleware(req);
+export default authMiddleware({
+  beforeAuth: (req: NextRequest) => {
+    return intlMiddleware(req);
+  },
+  publicRoutes: ['/:locale', '/:locale/tools/:id', '/:locale/compare/:slug', '/:locale/submit', '/:locale/sign-in', '/:locale/sign-up'],
 });
 
 export const config = {
