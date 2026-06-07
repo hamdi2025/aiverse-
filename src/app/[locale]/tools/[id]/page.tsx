@@ -22,10 +22,10 @@ export async function generateMetadata({ params }: Props) {
   if (!tool) return {};
   const desc = tool.description[params.locale] || tool.description.en;
   return {
-    title: `${tool.name} — Aiverse`,
+    title: `${tool.name} — AIverse`,
     description: desc,
     openGraph: {
-      title: `${tool.name} | Aiverse`,
+      title: `${tool.name} | AIverse`,
       description: desc,
       url: `https://aiverse-lemon.vercel.app/${params.locale}/tools/${tool.id}`,
     },
@@ -158,4 +158,32 @@ export default async function ToolPage({ params }: Props) {
       {/* CTA */}
       <div className="rounded-2xl border border-[#7C3AED]/30 bg-[#7C3AED]/5 p-8 text-center">
         <h2 className="text-xl font-black text-white mb-2">
-          {locale === 'fr' ? `Essayer ${tool.
+          {locale === 'fr' ? `Essayer ${tool.name} maintenant` :
+           locale === 'es' ? `Prueba ${tool.name} ahora` :
+           locale === 'ar' ? `جرّب ${tool.name} الآن` :
+           `Try ${tool.name} Now`}
+        </h2>
+        <p className="text-gray-400 text-sm mb-5">
+          {locale === 'fr' ? `Accédez directement à ${tool.name} — ${tool.pricingLocalized.fr}` :
+           locale === 'es' ? `Accede directamente a ${tool.name} — ${tool.pricingLocalized.es}` :
+           locale === 'ar' ? `الوصول مباشرة إلى ${tool.name} — ${tool.pricingLocalized.ar}` :
+           `Access ${tool.name} directly — ${tool.pricingLocalized.en}`}
+        </p>
+        <a
+          href={outboundUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] text-white px-8 py-4 rounded-xl font-bold text-base hover:opacity-90 transition-all hover:scale-105 shadow-xl shadow-purple-900/30"
+        >
+          {t('visit')} {tool.name} <ArrowUpRight className="w-5 h-5" />
+        </a>
+        {tool.commission && (
+          <p className="text-xs text-gray-600 mt-4">
+            {locale === 'fr' ? `💼 Programme affilié : ${tool.commission}` :
+             `💼 Affiliate program: ${tool.commission}`}
+          </p>
+        )}
+      </div>
+    </div>
+  );
+}

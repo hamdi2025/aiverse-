@@ -38,10 +38,10 @@ export async function generateMetadata({ params }: Props) {
   const t2 = TOOLS_DATA.find((t) => t.id === id2);
   if (!t1 || !t2) return {};
   return {
-    title: `${t1.name} vs ${t2.name} — Which is Better in 2025? | Aiverse`,
+    title: `${t1.name} vs ${t2.name} — Which is Better in 2025? | AIverse`,
     description: `Compare ${t1.name} vs ${t2.name}: pricing, features, ratings, pros & cons. Find out which AI tool is right for you.`,
     openGraph: {
-      title: `${t1.name} vs ${t2.name} | Aiverse`,
+      title: `${t1.name} vs ${t2.name} | AIverse`,
       description: `${t1.name} vs ${t2.name}: full comparison of pricing, features and ratings.`,
       url: `https://aiverse-lemon.vercel.app/${params.locale}/compare/${params.slug}`,
     },
@@ -75,7 +75,7 @@ export default function ComparePage({ params }: Props) {
     headline: `${t1.name} vs ${t2.name} — Which AI Tool is Better?`,
     description: `Full comparison of ${t1.name} and ${t2.name} including pricing, features, ratings and pros & cons.`,
     url: `https://aiverse-lemon.vercel.app/${locale}/compare/${params.slug}`,
-    author: { '@type': 'Organization', name: 'Aiverse' },
+    author: { '@type': 'Organization', name: 'AIverse' },
   };
 
   const rows = [
@@ -193,4 +193,36 @@ export default function ComparePage({ params }: Props) {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
           <a href={url1} target="_blank" rel="noopener noreferrer"
-            cl
+            className="flex items-center justify-center gap-2 bg-violet-600 hover:bg-violet-500 text-white px-6 py-3 rounded-xl font-bold text-sm transition-all">
+            {L.try} {t1.name} <ArrowUpRight className="w-4 h-4" />
+          </a>
+          <a href={url2} target="_blank" rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white px-6 py-3 rounded-xl font-bold text-sm transition-all">
+            {L.try} {t2.name} <ArrowUpRight className="w-4 h-4" />
+          </a>
+        </div>
+      </div>
+
+      {/* Other comparisons */}
+      <div className="mt-16">
+        <h3 className="text-lg font-black text-white mb-6">{L.moreComparisons}</h3>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+          {TOP_COMPARISONS.filter(s => s !== params.slug).slice(0, 6).map((slug) => {
+            const [a, b] = slug.split('-vs-');
+            const ta = TOOLS_DATA.find(t => t.id === a);
+            const tb = TOOLS_DATA.find(t => t.id === b);
+            if (!ta || !tb) return null;
+            return (
+              <a key={slug} href={`/${locale}/compare/${slug}`}
+                className="flex items-center gap-2 text-sm text-gray-400 hover:text-white border border-white/[0.06] hover:border-white/20 rounded-xl px-4 py-3 transition-all">
+                <span className="text-violet-400 font-semibold">{ta.name}</span>
+                <span className="text-gray-600">vs</span>
+                <span className="text-orange-400 font-semibold">{tb.name}</span>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
