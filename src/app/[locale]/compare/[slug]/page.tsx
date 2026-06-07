@@ -188,68 +188,26 @@ export default function ComparePage({ params }: Props) {
           <div key={i} className={`grid grid-cols-3 px-6 py-4 items-center ${i % 2 === 0 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.04] last:border-0`}>
             <span className="text-sm font-semibold text-gray-400">{row.label}</span>
             <div className="flex items-center gap-2">
-              {row.v1}
-              {row.winner1 && row.label !== 'Category' && <Check className="w-4 h-4 text-green-400 flex-shrink-0" />}
+              {row.winner1 && <Check className="w-4 h-4 text-green-400 ml-1" />}
             </div>
             <div className="flex items-center gap-2">
               {row.v2}
-              {row.winner2 && row.label !== 'Category' && <Check className="w-4 h-4 text-green-400 flex-shrink-0" />}
+              {row.winner2 && <Check className="w-4 h-4 text-green-400 ml-1" />}
             </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Descriptions full */}
-      <div className="grid md:grid-cols-2 gap-6 mb-12">
-        {[{ tool: t1, color: 'violet' }, { tool: t2, color: 'orange' }].map(({ tool, color }) => (
-          <div key={tool.id} className={`rounded-2xl border p-6 ${color === 'violet' ? 'border-violet-500/20' : 'border-orange-500/20'}`}>
-            <h3 className={`font-black text-lg mb-3 ${color === 'violet' ? 'text-violet-300' : 'text-orange-300'}`}>
-              {L.about} {tool.name}
-            </h3>
-            <p className="text-gray-400 text-sm leading-relaxed">{tool.description[locale]}</p>
           </div>
         ))}
       </div>
 
       {/* Verdict */}
-      <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-8 text-center">
-        <h2 className="text-2xl font-black text-white mb-4">{L.verdict}</h2>
-        <p className="text-gray-300 text-base leading-relaxed max-w-2xl mx-auto">
+      <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 mb-10">
+        <h2 className="text-lg font-black text-white mb-3 flex items-center gap-2">
+          <Zap className="w-5 h-5 text-violet-400" /> {L.verdict}
+        </h2>
+        <p className="text-gray-300 leading-relaxed text-sm">
           {winner
             ? L.winnerText(winner.name, winner.rating.toFixed(1))
             : L.tieText(t1.name, t2.name)}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-          <a href={url1} target="_blank" rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-violet-600 hover:bg-violet-500 text-white px-6 py-3 rounded-xl font-bold text-sm transition-all">
-            {L.try} {t1.name} <ArrowUpRight className="w-4 h-4" />
-          </a>
-          <a href={url2} target="_blank" rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 text-white px-6 py-3 rounded-xl font-bold text-sm transition-all">
-            {L.try} {t2.name} <ArrowUpRight className="w-4 h-4" />
-          </a>
-        </div>
-      </div>
-
-      {/* Other comparisons */}
-      <div className="mt-16">
-        <h3 className="text-lg font-black text-white mb-6">{L.moreComparisons}</h3>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-          {TOP_COMPARISONS.filter(s => s !== params.slug).slice(0, 6).map((slug) => {
-            const [a, b] = slug.split('-vs-');
-            const ta = TOOLS_DATA.find(t => t.id === a);
-            const tb = TOOLS_DATA.find(t => t.id === b);
-            if (!ta || !tb) return null;
-            return (
-              <a key={slug} href={`/${locale}/compare/${slug}`}
-                className="flex items-center gap-2 text-sm text-gray-400 hover:text-white border border-white/[0.06] hover:border-white/20 rounded-xl px-4 py-3 transition-all">
-                <span className="text-violet-400 font-semibold">{ta.name}</span>
-                <span className="text-gray-600">vs</span>
-                <span className="text-orange-400 font-semibold">{tb.name}</span>
-              </a>
-            );
-          })}
-        </div>
       </div>
     </div>
   );

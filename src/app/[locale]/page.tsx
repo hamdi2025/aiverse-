@@ -69,7 +69,9 @@ export default function HomePage() {
         </div>
         <NewsletterCTA />
       </div>
-      <ToolModal tool={selectedTool} onClose={() => setSelectedTool(null)} />
+      {selectedTool && (
+        <ToolModal tool={selectedTool} onClose={() => setSelectedTool(null)} />
+      )}
     </>
   );
 }

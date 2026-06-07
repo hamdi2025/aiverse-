@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { TOOLS_DATA } from '@/lib/tools';
 
-const BASE_URL = 'https://aiverse-lemon.vercel.app';
+const BASE_URL = 'https://getaiverse.online';
 const LOCALES = ['en', 'fr', 'es', 'ar'];
 
 const TOP_COMPARISONS = [
@@ -43,10 +43,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     LOCALES.map((locale) => ({
       url: `${BASE_URL}/${locale}/compare/${slug}`,
       lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.9,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
     }))
   );
 
-  return [...homepages, ...comparePages, ...toolPages];
+  return [...homepages, ...toolPages, ...comparePages];
 }

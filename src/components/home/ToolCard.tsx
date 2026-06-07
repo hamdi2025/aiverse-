@@ -24,8 +24,6 @@ export default function ToolCard({ tool, isLarge = false, onClick }: ToolCardPro
   const ratingFormatted = tool.rating.toFixed(1);
   const viewsFormatted = tool.views >= 1000 ? `${(tool.views / 1000).toFixed(1)}k` : tool.views;
   const isTrending = tool.views >= 20000;
-
-  // Pricing badge style: Free = green, Freemium = amber, Paid = gray
   const isFree = tool.pricing === 'Free';
   const isFreemium = tool.pricing === 'Freemium';
   const pricingClass = isFree
@@ -42,7 +40,6 @@ export default function ToolCard({ tool, isLarge = false, onClick }: ToolCardPro
       }`}
       onClick={() => onClick?.(tool)}
     >
-      {/* Header */}
       <div>
         <div className="flex justify-between items-start gap-4 mb-3">
           <span className="text-[11px] font-bold tracking-wider uppercase bg-white/[0.06] text-gray-300 px-2.5 py-1 rounded-full border border-white/5">
@@ -71,9 +68,7 @@ export default function ToolCard({ tool, isLarge = false, onClick }: ToolCardPro
         </p>
       </div>
 
-      {/* Footer */}
       <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between gap-4 mt-auto">
-        {/* Rating + Views */}
         <div className="flex items-center gap-3.5 text-xs text-gray-400">
           <div className="flex items-center gap-1">
             <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
@@ -85,21 +80,19 @@ export default function ToolCard({ tool, isLarge = false, onClick }: ToolCardPro
           </div>
         </div>
 
-        {/* Pricing badge + arrow */}
         <div className="flex items-center gap-2">
           <span className={`text-[11px] px-2.5 py-0.5 rounded-full ${pricingClass}`}>
             {isFree ? '✦ FREE' : tool.pricingLocalized[locale]}
           </span>
-
           <a
             href={outboundUrl}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
             aria-label={t('visit')}
-            className="btn-arrow-orange flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br from-orange-500 to-amber-400 text-white shadow-lg shadow-orange-500/40 hover:from-orange-400 hover:to-yellow-400 hover:scale-110 transition-transform duration-200"
+            className="flex items-center justify-center w-9 h-9 rounded-xl bg-white/[0.06] hover:bg-[#7C3AED]/30 border border-white/[0.08] hover:border-[#7C3AED]/40 text-gray-400 hover:text-white transition-all duration-200"
           >
-            <ArrowUpRight className="w-5 h-5 stroke-[2.5]" />
+            <ArrowUpRight className="w-4 h-4" />
           </a>
         </div>
       </div>
