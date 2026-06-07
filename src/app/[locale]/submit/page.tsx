@@ -198,7 +198,8 @@ export default function SubmitPage() {
             ))}
           </ul>
           <a
-            href={`mailto:contact@aiverse.com?subject=${encodeURIComponent(t.contactSubject)}`}
+            href="https://getaiverse.lemonsqueezy.com/checkout/buy/ce8a1d0a-c7d4-48b2-aefe-fb3d4391190e"
+            target="_blank" rel="noopener noreferrer"
             className="w-full py-2 rounded-xl bg-violet-600 hover:bg-violet-500 text-white text-sm font-semibold text-center transition"
           >
             {t.stdCta}
@@ -222,7 +223,8 @@ export default function SubmitPage() {
             ))}
           </ul>
           <a
-            href={`mailto:contact@aiverse.com?subject=${encodeURIComponent(t.contactSubjectFeat)}`}
+            href="https://getaiverse.lemonsqueezy.com/checkout/buy/404170b0-173c-4b0e-abb6-b2fa44d79274"
+            target="_blank" rel="noopener noreferrer"
             className="w-full py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-black text-sm font-semibold text-center transition"
           >
             {t.featCta}
