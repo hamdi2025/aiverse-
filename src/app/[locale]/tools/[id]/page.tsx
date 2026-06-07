@@ -20,14 +20,50 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const tool = TOOLS_DATA.find((t) => t.id === params.id);
   if (!tool) return {};
-  const desc = tool.description[params.locale] || tool.description.en;
+
+  const locale = params.locale;
+  const desc = tool.description[locale] || tool.description.en;
+  const BASE = 'https://getaiverse.online';
+
+  // Multilingual keywords for maximum SEO coverage
+  const keywordMap: Record<string, string> = {
+    en: `${tool.name}, best ${tool.name} alternative, ${tool.name} review 2026, top AI tools, free AI tool, ${tool.category} AI, artificial intelligence tools`,
+    fr: `${tool.name}, meilleur outil IA, alternative ${tool.name}, avis ${tool.name} 2026, outils intelligence artificielle, outil IA gratuit, ${tool.category} IA`,
+    es: `${tool.name}, mejor herramienta IA, alternativa ${tool.name}, reseña ${tool.name} 2026, herramientas inteligencia artificial, herramienta IA gratis`,
+    ar: `${tool.name}, أفضل أداة ذكاء اصطناعي, بديل ${tool.name}, مراجعة ${tool.name} 2026, أدوات الذكاء الاصطناعي, أداة ذكاء اصطناعي مجانية`,
+  };
+
+  const titleMap: Record<string, string> = {
+    en: `${tool.name} — Review, Pricing & Alternatives 2026 | Aiverse`,
+    fr: `${tool.name} — Avis, Prix & Alternatives 2026 | Aiverse`,
+    es: `${tool.name} — Reseña, Precio & Alternativas 2026 | Aiverse`,
+    ar: `${tool.name} — مراجعة، أسعار وبدائل 2026 | Aiverse`,
+  };
+
   return {
-    title: `${tool.name} — AIverse`,
+    title: titleMap[locale] || `${tool.name} — Aiverse`,
     description: desc,
+    keywords: keywordMap[locale],
+    alternates: {
+      canonical: `${BASE}/${locale}/tools/${tool.id}`,
+      languages: {
+        'en': `${BASE}/en/tools/${tool.id}`,
+        'fr': `${BASE}/fr/tools/${tool.id}`,
+        'es': `${BASE}/es/tools/${tool.id}`,
+        'ar': `${BASE}/ar/tools/${tool.id}`,
+      },
+    },
     openGraph: {
-      title: `${tool.name} | AIverse`,
+      title: titleMap[locale] || `${tool.name} | Aiverse`,
       description: desc,
-      url: `https://aiverse-lemon.vercel.app/${params.locale}/tools/${tool.id}`,
+      url: `${BASE}/${locale}/tools/${tool.id}`,
+      siteName: 'Aiverse',
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary',
+      title: titleMap[locale] || `${tool.name} | Aiverse`,
+      description: desc,
     },
   };
 }

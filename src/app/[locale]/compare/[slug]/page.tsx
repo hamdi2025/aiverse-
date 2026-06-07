@@ -37,13 +37,41 @@ export async function generateMetadata({ params }: Props) {
   const t1 = TOOLS_DATA.find((t) => t.id === id1);
   const t2 = TOOLS_DATA.find((t) => t.id === id2);
   if (!t1 || !t2) return {};
+  const BASE = 'https://getaiverse.online';
+  const locale = params.locale;
+
+  const titleMap: Record<string, string> = {
+    en: `${t1.name} vs ${t2.name} — Which is Better in 2026? | Aiverse`,
+    fr: `${t1.name} vs ${t2.name} — Lequel est Meilleur en 2026 ? | Aiverse`,
+    es: `${t1.name} vs ${t2.name} — ¿Cuál es Mejor en 2026? | Aiverse`,
+    ar: `${t1.name} مقابل ${t2.name} — أيهما أفضل في 2026؟ | Aiverse`,
+  };
+
+  const descMap: Record<string, string> = {
+    en: `Compare ${t1.name} vs ${t2.name}: pricing, features, ratings, pros & cons. Find the best AI tool for you in 2026.`,
+    fr: `Comparez ${t1.name} vs ${t2.name} : prix, fonctionnalités, notes, avantages et inconvénients. Trouvez le meilleur outil IA en 2026.`,
+    es: `Compara ${t1.name} vs ${t2.name}: precios, características, valoraciones, pros y contras. Encuentra la mejor herramienta IA en 2026.`,
+    ar: `قارن بين ${t1.name} و${t2.name}: الأسعار، الميزات، التقييمات، المزايا والعيوب. اعثر على أفضل أداة ذكاء اصطناعي في 2026.`,
+  };
+
   return {
-    title: `${t1.name} vs ${t2.name} — Which is Better in 2025? | AIverse`,
-    description: `Compare ${t1.name} vs ${t2.name}: pricing, features, ratings, pros & cons. Find out which AI tool is right for you.`,
+    title: titleMap[locale],
+    description: descMap[locale],
+    keywords: `${t1.name} vs ${t2.name}, ${t1.name} alternative, ${t2.name} alternative, best AI tool 2026, compare AI tools, meilleur outil IA, herramienta IA, أداة ذكاء اصطناعي`,
+    alternates: {
+      canonical: `${BASE}/${locale}/compare/${params.slug}`,
+      languages: {
+        'en': `${BASE}/en/compare/${params.slug}`,
+        'fr': `${BASE}/fr/compare/${params.slug}`,
+        'es': `${BASE}/es/compare/${params.slug}`,
+        'ar': `${BASE}/ar/compare/${params.slug}`,
+      },
+    },
     openGraph: {
-      title: `${t1.name} vs ${t2.name} | AIverse`,
-      description: `${t1.name} vs ${t2.name}: full comparison of pricing, features and ratings.`,
-      url: `https://aiverse-lemon.vercel.app/${params.locale}/compare/${params.slug}`,
+      title: titleMap[locale],
+      description: descMap[locale],
+      url: `${BASE}/${locale}/compare/${params.slug}`,
+      siteName: 'Aiverse',
     },
   };
 }
