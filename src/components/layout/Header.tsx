@@ -43,7 +43,7 @@ export default function Header() {
         <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] backdrop-blur-md">
           <span className="w-2 h-2 rounded-full bg-violet-400 animate-pulse flex-shrink-0" />
           <span className="text-[10px] md:text-[11px] text-gray-400 tracking-wider uppercase whitespace-nowrap">
-            595 AI Tools · 70 Agents · 20 Categories
+            648 AI Tools · 70 Agents · 28 Categories
           </span>
         </div>
 

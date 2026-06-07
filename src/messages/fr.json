@@ -22,7 +22,7 @@
     "titleGradient1": "Puissance maximale,",
     "titleGradient2": "Coût minimal.",
     "subtitle": "Découvrez des centaines d'<agents>agents IA</agents> et d'<tools>outils IA</tools> qui travaillent, planifient et exécutent pour vous.",
-    "badge2items": "+100 Agents IA|+500 Outils IA|20 Catégories|Avis impartiaux",
+    "badge2items": "+100 Agents IA|+648 Outils IA|28 Catégories|Avis impartiaux",
     "popularSearch": "Populaire : Agents IA, ChatGPT, Midjourney, FLUX, Suno"
   },
   "Categories": {
@@ -46,7 +46,15 @@
     "chatbots": "Chatbots & Support",
     "data": "Données & Analyse",
     "hr": "RH & Recrutement",
-    "finance": "Finance & Business"
+    "finance": "Finance & Business",
+    "contract": "Gestion des Contrats",
+    "projectmgmt": "Gestion de Projet",
+    "mindmap": "Cartes Mentales",
+    "elearning": "E-learning & Formation",
+    "legal": "Juridique & Conformité",
+    "cybersecurity": "Cybersécurité & Vie privée",
+    "socialmedia": "Réseaux Sociaux",
+    "travel": "Voyage & Vols"
   },
   "Newsletter": {
     "badge": "Digest IA hebdomadaire",

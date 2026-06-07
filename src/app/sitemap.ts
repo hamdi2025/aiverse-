@@ -3,7 +3,7 @@ import { TOOLS_DATA } from '@/lib/tools';
 
 const BASE_URL = 'https://getaiverse.online';
 const LOCALES = ['en', 'fr', 'es', 'ar'];
-const CATEGORIES = ['writing','image','code','video','audio','marketing','productivity','agents','slides','excel','design3d','seo','pdf','compression','conversion','translation','chatbots','data','hr','finance'];
+const CATEGORIES = ['writing','image','code','video','audio','marketing','productivity','agents','slides','excel','design3d','seo','pdf','compression','conversion','translation','chatbots','data','hr','finance','contract','projectmgmt','mindmap','elearning','legal','cybersecurity','socialmedia','travel'];
 
 const TOP_COMPARISONS = [
   'chatgpt-vs-claude','chatgpt-vs-gemini','midjourney-vs-dalle3',
