@@ -168,14 +168,14 @@ export default function SubmitPage() {
       icon: <Star className="w-6 h-6" />, color: 'border-[#7C3AED]/40', badge: t.mostPopular,
       features: t.stdFeatures,
       cta: t.stdCta, ctaStyle: 'bg-gradient-to-r from-[#7C3AED] to-[#3B82F6] hover:from-[#8B5CF6] hover:to-[#60A5FA] text-white',
-      payUrl: `mailto:hamdi.abdwd@gmail.com?subject=${encodeURIComponent(t.contactSubject)}&body=${encodeURIComponent('Hello, I would like to get the Standard listing on AIverse ($49). My tool: ')}`,
+      payUrl: 'https://getaiverse.lemonsqueezy.com/checkout/buy/ce8a1d0a-c7d4-48b2-aefe-fb3d4391190e',
     },
     {
       id: 'featured', name: t.featName, priceLabel: t.featPriceLabel,
       icon: <Crown className="w-6 h-6 text-amber-400" />, color: 'border-amber-500/40', badge: t.bestRoi,
       features: t.featFeatures,
       cta: t.featCta, ctaStyle: 'bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-white',
-      payUrl: `mailto:hamdi.abdwd@gmail.com?subject=${encodeURIComponent(t.contactSubjectFeat)}&body=${encodeURIComponent('Hello, I would like to become a Featured Sponsor on AIverse ($99/mo). My tool: ')}`,
+      payUrl: 'https://getaiverse.lemonsqueezy.com/checkout/buy/404170b0-173c-4b0e-abb6-b2fa44d79274',
     },
   ];
 
