@@ -22,7 +22,7 @@
     "titleGradient1": "Maximum Power,",
     "titleGradient2": "Minimum Cost.",
     "subtitle": "Discover hundreds of <agents>AI Agents</agents> and <tools>AI Tools</tools> that work, plan, and execute for you — writing, code, video, SEO, design and more.",
-    "badge2items": "+100 AI Agents|+500 AI Tools|15 Categories|Unbiased Reviews",
+    "badge2items": "+100 AI Agents|+500 AI Tools|20 Categories|Unbiased Reviews",
     "popularSearch": "Popular: AI Agents, ChatGPT, Midjourney, FLUX, Suno"
   },
   "Categories": {
@@ -41,7 +41,12 @@
     "seo": "SEO & Search",
     "pdf": "PDF & Documents",
     "compression": "File Compression",
-    "conversion": "File Conversion"
+    "conversion": "File Conversion",
+    "translation": "Translation & Multilingual",
+    "chatbots": "Chatbots & Support",
+    "data": "Data & Analytics",
+    "hr": "HR & Recruitment",
+    "finance": "Finance & Business"
   },
   "Newsletter": {
     "badge": "Weekly AI Digest",
