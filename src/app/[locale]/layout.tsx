@@ -49,6 +49,7 @@ export default async function LocaleLayout({
       <head>
         <meta name="google-site-verification" content="Gc5SbwLPT2C2zV7jHnFJj2pX2EvkjI3QIOsbQUVd6_8" />
         <meta name="impact-site-verification" content="6aac91e5-f7f3-4393-bf45-173c3ca98a42" />
+        <meta name="google-adsense-account" content="ca-pub-5384145624117299" />
         {ADSENSE_CONFIG.enabled && (
           <Script
             async
