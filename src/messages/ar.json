@@ -1,56 +1,65 @@
 {
   "Common": {
     "title": "AIverse",
-    "submitTool": "Add tool",
-    "sponsored": "Sponsored",
-    "visit": "Visit Website",
-    "search": "Search AI tools...",
-    "allCategories": "All Categories",
-    "weeklyFeatured": "Tool of the Week",
-    "backToTop": "Back to Top",
-    "toolsBadge": "AI Tools Listed",
-    "pricing": "Pricing",
-    "noResults": "No tools found matching your search."
+    "submitTool": "إضافة أداة",
+    "sponsored": "برعاية",
+    "visit": "زيارة الموقع",
+    "search": "ابحث عن أدوات الذكاء الاصطناعي...",
+    "allCategories": "جميع الفئات",
+    "weeklyFeatured": "أداة الأسبوع",
+    "backToTop": "العودة للأعلى",
+    "toolsBadge": "أدوات ذكاء اصطناعي مُدرجة",
+    "pricing": "التسعير",
+    "noResults": "لا توجد أدوات مطابقة.",
+    "submit": "إضافة",
+    "signIn": "تسجيل الدخول"
   },
   "Hero": {
-    "badge": "🤖 عصر وكلاء الذكاء الاصطناعي وصل",
-    "titleAgents": "+50 وكيل ذكاء اصطناعي",
-    "titleTools": "+2,400 أداة ذكاء اصطناعي",
-    "titleMain": "اختر بذكاء —",
-    "titleGradient1": "أقصى قوة،",
+    "badge": "🤖 عصر وكلاء الذكاء الاصطناعي هنا",
+    "titleAgents": "+100 وكيل ذكاء اصطناعي",
+    "titleTools": "+500 أداة ذكاء اصطناعي",
+    "titleMain": "اختر بذكاء أكثر —",
+    "titleGradient1": "أقصى قدرة،",
     "titleGradient2": "أدنى تكلفة.",
-    "subtitle": "اكتشف آلاف <tools>أدوات الذكاء الاصطناعي</tools> و<agents>وكلاء الذكاء الاصطناعي</agents> المستقلين الذين يعملون ويخططون وينفذون نيابةً عنك — كتابة، كود، فيديو، تسويق والمزيد.",
-    "badge2items": "وكلاء الذكاء الاصطناعي|أدوات الذكاء الاصطناعي|8 فئات|مراجعات محايدة",
-    "popularSearch": "شائع: وكلاء الذكاء الاصطناعي، ChatGPT، Claude، Midjourney"
+    "subtitle": "اكتشف مئات من <agents>وكلاء الذكاء الاصطناعي</agents> و<tools>أدوات الذكاء الاصطناعي</tools> التي تعمل وتخطط وتنفذ نيابة عنك.",
+    "badge2items": "+100 وكيل ذكاء اصطناعي|+500 أداة ذكاء اصطناعي|15 فئة|مراجعات محايدة",
+    "popularSearch": "الأكثر بحثاً: وكلاء الذكاء الاصطناعي، ChatGPT، Midjourney، FLUX، Suno"
   },
   "Categories": {
-    "all": "All Tools",
-    "writing": "Writing and Content",
-    "image": "Image and Design",
-    "code": "Development and Code",
-    "video": "Video and Motion",
-    "productivity": "Productivity and Office",
-    "audio": "Audio and Speech",
-    "marketing": "Marketing and SEO",
-    "agents": "وكلاء الذكاء الاصطناعي"
+    "all": "جميع الأدوات",
+    "writing": "الكتابة ونماذج اللغة",
+    "image": "الصور والفن",
+    "code": "البرمجة والتطوير",
+    "video": "الفيديو والحركة",
+    "productivity": "الإنتاجية",
+    "audio": "الصوت والموسيقى",
+    "marketing": "التسويق والنمو",
+    "agents": "وكلاء الذكاء الاصطناعي",
+    "slides": "الشرائح والعروض",
+    "excel": "Excel وجداول البيانات",
+    "design3d": "التصميم ثلاثي الأبعاد",
+    "seo": "SEO والبحث",
+    "pdf": "PDF والمستندات",
+    "compression": "ضغط الملفات",
+    "conversion": "تحويل الملفات"
   },
   "Newsletter": {
-    "badge": "Weekly AI Newsletter",
-    "title": "Best AI tools, every week",
-    "desc": "Join 12,000+ founders and developers receiving our curated selection of the best AI tools, deals and tutorials, free every Monday.",
-    "placeholder": "Enter your email...",
-    "cta": "Subscribe Free",
-    "fine": "No spam. Unsubscribe anytime. 12,000+ readers.",
-    "success": "You are in! Check your inbox."
+    "badge": "ملخص الذكاء الاصطناعي الأسبوعي",
+    "title": "أفضل أدوات الذكاء الاصطناعي، كل أسبوع",
+    "desc": "انضم إلى أكثر من 20,000 مؤسس يتلقون أفضل أدوات الذكاء الاصطناعي والصفقات والدروس — مجاناً كل اثنين.",
+    "placeholder": "بريدك الإلكتروني...",
+    "cta": "اشترك مجاناً",
+    "fine": "لا رسائل مزعجة. إلغاء الاشتراك في أي وقت.",
+    "success": "أنت الآن مشترك! تحقق من بريدك."
   },
   "Stats": {
-    "tools": "AI Tools Listed",
-    "readers": "Monthly Readers",
-    "categories": "Categories",
-    "languages": "Languages"
+    "tools": "أدوات ذكاء اصطناعي مُدرجة",
+    "readers": "قراء شهرياً",
+    "categories": "فئات",
+    "languages": "لغات"
   },
   "Footer": {
-    "rights": "2026 AIverse. All rights reserved.",
-    "disclosure": "Affiliate Disclosure: Some links are affiliate links. If you click and subscribe, we may receive a commission at no extra cost to you. Thank you for supporting AIverse."
+    "rights": "2026 AIverse. جميع الحقوق محفوظة.",
+    "disclosure": "إفصاح عن الروابط التسويقية: بعض الروابط في هذا الموقع هي روابط تابعة. قد نكسب عمولة دون أي تكلفة إضافية عليك."
   }
 }

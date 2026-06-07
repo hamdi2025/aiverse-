@@ -2,55 +2,64 @@
   "Common": {
     "title": "AIverse",
     "submitTool": "Soumettre un outil",
-    "sponsored": "Sponsorise",
+    "sponsored": "Sponsorisé",
     "visit": "Visiter le site",
     "search": "Rechercher des outils IA...",
-    "allCategories": "Toutes categories",
+    "allCategories": "Toutes catégories",
     "weeklyFeatured": "Outil de la semaine",
     "backToTop": "Retour en haut",
-    "toolsBadge": "Outils IA Repertories",
-    "pricing": "Tarif",
-    "noResults": "Aucun outil trouve pour votre recherche."
+    "toolsBadge": "Outils IA répertoriés",
+    "pricing": "Tarification",
+    "noResults": "Aucun outil trouvé.",
+    "submit": "Soumettre",
+    "signIn": "Connexion"
   },
   "Hero": {
-    "badge": "🤖 L'ere des Agents IA est arrivee",
-    "titleAgents": "+50 Agents IA",
-    "titleTools": "+2 400 Outils IA",
-    "titleMain": "Choisissez Plus Intelligemment —",
-    "titleGradient1": "Maximum de Puissance,",
-    "titleGradient2": "Minimum de Cout.",
-    "subtitle": "Decouvrez des milliers d'<tools>Outils IA</tools> et des <agents>Agents IA</agents> autonomes qui travaillent, planifient et executent pour vous — ecriture, code, video, marketing et plus.",
-    "badge2items": "Agents IA|Outils IA|8 Categories|Avis impartiaux",
-    "popularSearch": "Populaire : Agents IA, ChatGPT, Claude, Midjourney"
+    "badge": "🤖 L'ère des agents IA est là",
+    "titleAgents": "+100 Agents IA",
+    "titleTools": "+500 Outils IA",
+    "titleMain": "Choisissez plus intelligemment —",
+    "titleGradient1": "Puissance maximale,",
+    "titleGradient2": "Coût minimal.",
+    "subtitle": "Découvrez des centaines d'<agents>agents IA</agents> et d'<tools>outils IA</tools> qui travaillent, planifient et exécutent pour vous.",
+    "badge2items": "+100 Agents IA|+500 Outils IA|15 Catégories|Avis impartiaux",
+    "popularSearch": "Populaire : Agents IA, ChatGPT, Midjourney, FLUX, Suno"
   },
   "Categories": {
     "all": "Tous les outils",
-    "writing": "Redaction et Contenu",
-    "image": "Image et Design",
-    "code": "Developpement et Code",
-    "video": "Video et Animation",
-    "productivity": "Productivite et Bureau",
-    "audio": "Audio et Voix",
-    "marketing": "Marketing et SEO",
-    "agents": "Agents IA"
+    "writing": "Écriture & LLMs",
+    "image": "Image & Art",
+    "code": "Code & Développement",
+    "video": "Vidéo & Motion",
+    "productivity": "Productivité",
+    "audio": "Audio & Musique",
+    "marketing": "Marketing & Croissance",
+    "agents": "Agents IA",
+    "slides": "Diapositives & Présentations",
+    "excel": "Excel & Tableurs",
+    "design3d": "3D & Design",
+    "seo": "SEO & Recherche",
+    "pdf": "PDF & Documents",
+    "compression": "Compression de fichiers",
+    "conversion": "Conversion de fichiers"
   },
   "Newsletter": {
-    "badge": "Digest IA Hebdomadaire",
+    "badge": "Digest IA hebdomadaire",
     "title": "Les meilleurs outils IA, chaque semaine",
-    "desc": "Rejoignez 12 000 fondateurs et developpeurs qui recoivent notre selection des meilleurs outils IA, deals et tutoriels, gratuitement chaque lundi.",
-    "placeholder": "Votre adresse email...",
+    "desc": "Rejoignez 20 000+ fondateurs qui reçoivent notre sélection des meilleurs outils IA, offres et tutoriels — gratuit, chaque lundi.",
+    "placeholder": "Votre email...",
     "cta": "S'abonner gratuitement",
-    "fine": "Pas de spam. Desinscription a tout moment. 12 000+ lecteurs.",
-    "success": "C'est note ! Verifiez votre boite mail."
+    "fine": "Pas de spam. Désinscription facile.",
+    "success": "C'est parti ! Vérifiez votre boîte mail."
   },
   "Stats": {
-    "tools": "Outils IA repertories",
+    "tools": "Outils IA répertoriés",
     "readers": "Lecteurs mensuels",
-    "categories": "Categories",
+    "categories": "Catégories",
     "languages": "Langues"
   },
   "Footer": {
-    "rights": "2026 AIverse. Tous droits reserves.",
-    "disclosure": "Divulgation d'affiliation : Certains liens sur ce repertoire sont des liens d'affiliation. Si vous cliquez dessus et vous abonnez, nous pouvons recevoir une commission sans frais supplementaires. Merci de soutenir AIverse."
+    "rights": "2026 AIverse. Tous droits réservés.",
+    "disclosure": "Divulgation d'affiliation : Certains liens sont des liens affiliés. Nous pouvons percevoir une commission sans frais supplémentaires pour vous."
   }
 }

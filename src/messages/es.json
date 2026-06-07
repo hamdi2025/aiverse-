@@ -1,56 +1,65 @@
 {
   "Common": {
     "title": "AIverse",
-    "submitTool": "Enviar una Herramienta",
+    "submitTool": "Enviar herramienta",
     "sponsored": "Patrocinado",
-    "visit": "Visitar Sitio Web",
-    "search": "Buscar herramientas de IA...",
-    "allCategories": "Todas las Categorias",
-    "weeklyFeatured": "Herramienta de la Semana",
+    "visit": "Visitar sitio",
+    "search": "Buscar herramientas IA...",
+    "allCategories": "Todas las categorías",
+    "weeklyFeatured": "Herramienta de la semana",
     "backToTop": "Volver arriba",
-    "toolsBadge": "Herramientas IA Catalogadas",
+    "toolsBadge": "Herramientas IA catalogadas",
     "pricing": "Precio",
-    "noResults": "No se encontraron herramientas para su busqueda."
+    "noResults": "No se encontraron herramientas.",
+    "submit": "Enviar",
+    "signIn": "Iniciar sesión"
   },
   "Hero": {
-    "badge": "🤖 La Era de los Agentes IA ha llegado",
-    "titleAgents": "+50 Agentes IA",
-    "titleTools": "+2.400 Herramientas IA",
-    "titleMain": "Elige con Mas Inteligencia —",
-    "titleGradient1": "Maximo Poder,",
-    "titleGradient2": "Minimo Costo.",
-    "subtitle": "Descubre miles de <tools>Herramientas IA</tools> y <agents>Agentes IA</agents> autonomos que trabajan, planifican y ejecutan por ti — escritura, codigo, video, marketing y mas.",
-    "badge2items": "Agentes IA|Herramientas IA|8 Categorias|Resenas imparciales",
-    "popularSearch": "Popular: Agentes IA, ChatGPT, Claude, Midjourney"
+    "badge": "🤖 La era de los agentes IA ha llegado",
+    "titleAgents": "+100 Agentes IA",
+    "titleTools": "+500 Herramientas IA",
+    "titleMain": "Elige de forma más inteligente —",
+    "titleGradient1": "Máxima potencia,",
+    "titleGradient2": "Mínimo costo.",
+    "subtitle": "Descubre cientos de <agents>agentes IA</agents> y <tools>herramientas IA</tools> que trabajan, planifican y ejecutan por ti.",
+    "badge2items": "+100 Agentes IA|+500 Herramientas|15 Categorías|Reseñas imparciales",
+    "popularSearch": "Popular: Agentes IA, ChatGPT, Midjourney, FLUX, Suno"
   },
   "Categories": {
     "all": "Todas las herramientas",
-    "writing": "Redaccion y Contenido",
-    "image": "Imagen y Diseno",
-    "code": "Desarrollo y Codigo",
-    "video": "Video y Movimiento",
-    "productivity": "Productividad y Oficina",
-    "audio": "Audio y Voz",
-    "marketing": "Marketing y SEO",
-    "agents": "Agentes IA"
+    "writing": "Escritura & LLMs",
+    "image": "Imagen & Arte",
+    "code": "Código & Dev",
+    "video": "Video & Movimiento",
+    "productivity": "Productividad",
+    "audio": "Audio & Música",
+    "marketing": "Marketing & Crecimiento",
+    "agents": "Agentes IA",
+    "slides": "Diapositivas & Presentaciones",
+    "excel": "Excel & Hojas de cálculo",
+    "design3d": "3D & Diseño",
+    "seo": "SEO & Búsqueda",
+    "pdf": "PDF & Documentos",
+    "compression": "Compresión de archivos",
+    "conversion": "Conversión de archivos"
   },
   "Newsletter": {
-    "badge": "Digest IA Semanal",
+    "badge": "Digest IA semanal",
     "title": "Las mejores herramientas IA, cada semana",
-    "desc": "Unete a 12.000 fundadores y desarrolladores que reciben nuestra seleccion de las mejores herramientas IA, ofertas y tutoriales, gratis cada lunes.",
-    "placeholder": "Tu correo electronico...",
+    "desc": "Únete a 20,000+ fundadores que reciben nuestra selección de las mejores herramientas IA, ofertas y tutoriales — gratis, cada lunes.",
+    "placeholder": "Tu email...",
     "cta": "Suscribirse gratis",
-    "fine": "Sin spam. Cancela cuando quieras. 12.000+ lectores.",
-    "success": "Estas dentro! Revisa tu bandeja de entrada."
+    "fine": "Sin spam. Cancelación fácil.",
+    "success": "¡Ya estás dentro! Revisa tu bandeja."
   },
   "Stats": {
     "tools": "Herramientas IA listadas",
     "readers": "Lectores mensuales",
-    "categories": "Categorias",
+    "categories": "Categorías",
     "languages": "Idiomas"
   },
   "Footer": {
     "rights": "2026 AIverse. Todos los derechos reservados.",
-    "disclosure": "Divulgacion de afiliados: Algunos enlaces en este directorio son enlaces de afiliados. Si hace clic en ellos y se suscribe, podemos recibir una comision sin costo adicional. Gracias por apoyar AIverse."
+    "disclosure": "Divulgación de afiliados: Algunos enlaces son de afiliados. Podemos ganar una comisión sin costo adicional para ti."
   }
 }

@@ -10,37 +10,46 @@
     "backToTop": "Back to Top",
     "toolsBadge": "AI Tools Catalogued",
     "pricing": "Pricing",
-    "noResults": "No tools found matching your request."
+    "noResults": "No tools found matching your request.",
+    "submit": "Submit Tool",
+    "signIn": "Sign In"
   },
   "Hero": {
     "badge": "🤖 The AI Agents Era is Here",
-    "titleAgents": "+50 AI Agents",
-    "titleTools": "+2,400 AI Tools",
+    "titleAgents": "+100 AI Agents",
+    "titleTools": "+500 AI Tools",
     "titleMain": "We Help You Choose Smarter —",
     "titleGradient1": "Maximum Power,",
     "titleGradient2": "Minimum Cost.",
-    "subtitle": "Discover thousands of <agents>AI Agents</agents> and <tools>AI Tools</tools> that work, plan, and execute for you — writing, code, video, marketing and more.",
-    "badge2items": "AI Agents|AI Tools|8 Categories|Unbiased Reviews",
-    "popularSearch": "Popular: AI Agents, ChatGPT, Claude, Midjourney"
+    "subtitle": "Discover hundreds of <agents>AI Agents</agents> and <tools>AI Tools</tools> that work, plan, and execute for you — writing, code, video, SEO, design and more.",
+    "badge2items": "+100 AI Agents|+500 AI Tools|15 Categories|Unbiased Reviews",
+    "popularSearch": "Popular: AI Agents, ChatGPT, Midjourney, FLUX, Suno"
   },
   "Categories": {
     "all": "All Tools",
-    "writing": "AI Writing & Content",
-    "image": "Image & Design",
-    "code": "Development & Code",
+    "writing": "Writing & LLMs",
+    "image": "Image & Art",
+    "code": "Code & Dev",
     "video": "Video & Motion",
-    "productivity": "Productivity & Office",
-    "audio": "Audio & Speech",
-    "marketing": "Marketing & SEO",
-    "agents": "AI Agents"
+    "productivity": "Productivity",
+    "audio": "Audio & Music",
+    "marketing": "Marketing & Growth",
+    "agents": "AI Agents",
+    "slides": "Slides & Presentations",
+    "excel": "Excel & Spreadsheets",
+    "design3d": "3D & Design",
+    "seo": "SEO & Search",
+    "pdf": "PDF & Documents",
+    "compression": "File Compression",
+    "conversion": "File Conversion"
   },
   "Newsletter": {
     "badge": "Weekly AI Digest",
     "title": "The best AI tools, every week",
-    "desc": "Join 12,000+ founders and builders getting our curated selection of the best new AI tools, deals, and tutorials — free, every Monday.",
+    "desc": "Join 20,000+ founders and builders getting our curated selection of the best new AI tools, deals, and tutorials — free, every Monday.",
     "placeholder": "Enter your email...",
     "cta": "Subscribe Free",
-    "fine": "No spam. Unsubscribe anytime. 12,000+ readers.",
+    "fine": "No spam. Unsubscribe anytime.",
     "success": "You are in! Check your inbox."
   },
   "Stats": {
@@ -51,6 +60,6 @@
   },
   "Footer": {
     "rights": "2026 AIverse. All rights reserved.",
-    "disclosure": "Affiliate Disclosure: Some links on this directory are affiliate links. If you click on them and subscribe, we may receive a commission at no extra cost to you. Thank you for supporting AIverse."
+    "disclosure": "Affiliate Disclosure: Some links are affiliate links. We may earn a commission at no extra cost to you. Rankings are based on genuine analysis."
   }
 }
