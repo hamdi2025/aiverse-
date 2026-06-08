@@ -1,57 +1,97 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { ArrowRight, Zap, Shuffle } from 'lucide-react';
+import { ArrowRight, Zap, Shuffle, ChevronDown } from 'lucide-react';
 import { useLocale } from 'next-intl';
 import { TOOLS_DATA } from '@/lib/tools';
 
 type Locale = 'en' | 'fr' | 'es' | 'ar';
 
-const POPULAR = [
-  { slug: 'chatgpt-vs-claude', emoji: '🤖' },
-  { slug: 'chatgpt-vs-gemini', emoji: '🧠' },
-  { slug: 'claude-vs-gemini', emoji: '⚡' },
-  { slug: 'midjourney-vs-dalle3', emoji: '🎨' },
-  { slug: 'midjourney-vs-stable-diffusion', emoji: '🖼️' },
-  { slug: 'jasper-vs-writesonic', emoji: '✍️' },
-  { slug: 'cursor-vs-github-copilot', emoji: '💻' },
-  { slug: 'elevenlabs-vs-murf-ai', emoji: '🎙️' },
-  { slug: 'runway-ml-vs-pika-labs', emoji: '🎬' },
-  { slug: 'bolt-new-vs-v0-dev', emoji: '🔧' },
-  { slug: 'jasper-vs-copy-ai', emoji: '📝' },
-  { slug: 'grammarly-ai-vs-quillbot', emoji: '📖' },
+const CATEGORIES = [
+  { id: 'agents',       en: '🤖 AI Agents',         fr: '🤖 Agents IA',           es: '🤖 Agentes IA',          ar: '🤖 وكلاء الذكاء الاصطناعي' },
+  { id: 'writing',      en: '✍️ Writing & LLMs',    fr: '✍️ Écriture & LLMs',     es: '✍️ Escritura & LLMs',    ar: '✍️ الكتابة' },
+  { id: 'image',        en: '🎨 Image & Art',        fr: '🎨 Image & Art',          es: '🎨 Imagen & Arte',        ar: '🎨 الصور' },
+  { id: 'code',         en: '💻 Code & Dev',         fr: '💻 Code & Dev',           es: '💻 Código & Dev',         ar: '💻 البرمجة' },
+  { id: 'video',        en: '🎬 Video & Motion',     fr: '🎬 Vidéo & Motion',       es: '🎬 Video & Motion',       ar: '🎬 الفيديو' },
+  { id: 'audio',        en: '🎙️ Audio & Music',     fr: '🎙️ Audio & Musique',     es: '🎙️ Audio & Música',      ar: '🎙️ الصوت' },
+  { id: 'marketing',    en: '📈 Marketing & Growth', fr: '📈 Marketing & Croissance',es: '📈 Marketing & Crecimiento', ar: '📈 التسويق' },
+  { id: 'productivity', en: '⚡ Productivity',       fr: '⚡ Productivité',          es: '⚡ Productividad',         ar: '⚡ الإنتاجية' },
+  { id: 'seo',          en: '🔍 SEO & Search',       fr: '🔍 SEO & Recherche',      es: '🔍 SEO & Búsqueda',       ar: '🔍 السيو' },
+  { id: 'socialmedia',  en: '📱 Social Media',       fr: '📱 Réseaux Sociaux',      es: '📱 Redes Sociales',       ar: '📱 التواصل الاجتماعي' },
+  { id: 'chatbots',     en: '💬 Chatbots & Support', fr: '💬 Chatbots & Support',   es: '💬 Chatbots & Soporte',   ar: '💬 الدردشة' },
+  { id: 'data',         en: '📊 Data & Analytics',   fr: '📊 Données & Analytics',  es: '📊 Datos & Analytics',    ar: '📊 البيانات' },
+  { id: 'design3d',     en: '🎯 3D & Design',        fr: '🎯 3D & Design',          es: '🎯 3D & Diseño',          ar: '🎯 التصميم' },
+  { id: 'slides',       en: '📊 Slides & Presentations', fr: '📊 Présentations',   es: '📊 Presentaciones',       ar: '📊 العروض' },
+  { id: 'excel',        en: '📋 Excel & Spreadsheets', fr: '📋 Excel & Tableurs',   es: '📋 Excel & Hojas',        ar: '📋 الجداول' },
+  { id: 'translation',  en: '🌐 Translation',        fr: '🌐 Traduction',           es: '🌐 Traducción',           ar: '🌐 الترجمة' },
+  { id: 'finance',      en: '💰 Finance & Business', fr: '💰 Finance & Business',   es: '💰 Finanzas & Negocio',   ar: '💰 المالية' },
+  { id: 'legal',        en: '⚖️ Legal & Compliance', fr: '⚖️ Juridique',           es: '⚖️ Legal',                ar: '⚖️ القانوني' },
+  { id: 'hr',           en: '👥 HR & Recruitment',   fr: '👥 RH & Recrutement',     es: '👥 RRHH & Reclutamiento', ar: '👥 الموارد البشرية' },
+  { id: 'cybersecurity',en: '🔐 Cybersecurity',      fr: '🔐 Cybersécurité',        es: '🔐 Ciberseguridad',       ar: '🔐 الأمن السيبراني' },
+  { id: 'pdf',          en: '📄 PDF & Documents',    fr: '📄 PDF & Documents',      es: '📄 PDF & Documentos',     ar: '📄 PDF والمستندات' },
+  { id: 'elearning',    en: '🎓 E-Learning',         fr: '🎓 E-Learning',           es: '🎓 E-Learning',           ar: '🎓 التعلم الإلكتروني' },
+  { id: 'projectmgmt',  en: '📌 Project Management', fr: '📌 Gestion de Projet',    es: '📌 Gestión de Proyectos', ar: '📌 إدارة المشاريع' },
+  { id: 'mindmap',      en: '🧠 MindMap & Brainstorm', fr: '🧠 MindMap',            es: '🧠 MindMap',              ar: '🧠 الخرائط الذهنية' },
+  { id: 'travel',       en: '✈️ Travel & Flights',  fr: '✈️ Voyage & Vols',        es: '✈️ Viajes & Vuelos',      ar: '✈️ السفر' },
+  { id: 'contract',     en: '📝 Contract Management', fr: '📝 Gestion Contrats',    es: '📝 Gestión Contratos',    ar: '📝 إدارة العقود' },
+  { id: 'compression',  en: '🗜️ File Compression',  fr: '🗜️ Compression',         es: '🗜️ Compresión',          ar: '🗜️ الضغط' },
+  { id: 'conversion',   en: '🔄 File Conversion',    fr: '🔄 Conversion',           es: '🔄 Conversión',           ar: '🔄 التحويل' },
 ];
 
-const T: Record<Locale, { badge: string; title: string; subtitle: string; tool1: string; tool2: string; compare: string; popular: string; pick: string; agents: string }> = {
-  en: { badge: 'AI Tool Comparisons', title: 'Compare Any Two AI Tools', subtitle: 'Pick any two tools and get an instant side-by-side comparison — pricing, ratings, features and a verdict.', tool1: 'Select first tool...', tool2: 'Select second tool...', compare: 'Compare Now →', popular: 'Popular Comparisons', pick: 'Or pick from popular', agents: '🤖 AI Agents' },
-  fr: { badge: 'Comparaisons d\'outils IA', title: 'Comparez n\'importe quels 2 outils IA', subtitle: 'Choisissez deux outils et obtenez une comparaison instantanée — prix, notes, fonctionnalités et verdict.', tool1: 'Sélectionnez le premier outil...', tool2: 'Sélectionnez le deuxième outil...', compare: 'Comparer →', popular: 'Comparaisons populaires', pick: 'Ou choisissez parmi les populaires', agents: '🤖 Agents IA' },
-  es: { badge: 'Comparaciones de herramientas IA', title: 'Compara cualquier herramienta IA', subtitle: 'Elige dos herramientas y obtén una comparación instantánea — precios, valoraciones, funciones y veredicto.', tool1: 'Selecciona la primera...', tool2: 'Selecciona la segunda...', compare: 'Comparar →', popular: 'Comparaciones populares', pick: 'O elige entre las populares', agents: '🤖 Agentes IA' },
-  ar: { badge: 'مقارنات أدوات الذكاء الاصطناعي', title: 'قارن أي أداتَي ذكاء اصطناعي', subtitle: 'اختر أي أداتين واحصل على مقارنة فورية — الأسعار والتقييمات والميزات وحكم نهائي.', tool1: 'اختر الأداة الأولى...', tool2: 'اختر الأداة الثانية...', compare: 'قارن الآن ←', popular: 'المقارنات الشائعة', pick: 'أو اختر من الشائعة', agents: '🤖 وكلاء الذكاء الاصطناعي' },
-};
+const POPULAR = [
+  { slug: 'chatgpt-vs-claude', emoji: '🤖', cat: 'agents' },
+  { slug: 'chatgpt-vs-gemini', emoji: '🧠', cat: 'agents' },
+  { slug: 'midjourney-vs-dalle3', emoji: '🎨', cat: 'image' },
+  { slug: 'jasper-vs-writesonic', emoji: '✍️', cat: 'writing' },
+  { slug: 'cursor-vs-github-copilot', emoji: '💻', cat: 'code' },
+  { slug: 'elevenlabs-vs-murf-ai', emoji: '🎙️', cat: 'audio' },
+];
 
-// All tools sorted by views for the dropdown
-const ALL_TOOLS = [...TOOLS_DATA].sort((a, b) => b.views - a.views);
-const AGENTS = ALL_TOOLS.filter(t => t.category === 'agents');
-const OTHER_TOOLS = ALL_TOOLS.filter(t => t.category !== 'agents');
+const T: Record<Locale, { badge: string; title: string; subtitle: string; step1: string; step2: string; step3: string; selectCat: string; tool1: string; tool2: string; compare: string; popular: string; random: string; samecat: string }> = {
+  en: { badge: 'AI Tool Comparisons', title: 'Compare AI Tools', subtitle: 'Select a category, then pick two tools to compare side by side.', step1: '1. Choose a category', step2: '2. First tool', step3: '3. Second tool', selectCat: 'Select a category...', tool1: 'Select first tool...', tool2: 'Select second tool...', compare: 'Compare Now →', popular: 'Popular Comparisons', random: 'Random', samecat: 'Only tools from the same category are compared.' },
+  fr: { badge: 'Comparaisons d\'outils IA', title: 'Comparer les Outils IA', subtitle: 'Sélectionnez une catégorie, puis choisissez deux outils à comparer côte à côte.', step1: '1. Choisir une catégorie', step2: '2. Premier outil', step3: '3. Deuxième outil', selectCat: 'Sélectionnez une catégorie...', tool1: 'Premier outil...', tool2: 'Deuxième outil...', compare: 'Comparer →', popular: 'Comparaisons populaires', random: 'Aléatoire', samecat: 'Seuls les outils de la même catégorie sont comparés.' },
+  es: { badge: 'Comparaciones IA', title: 'Comparar Herramientas IA', subtitle: 'Selecciona una categoría, luego elige dos herramientas para comparar.', step1: '1. Elegir categoría', step2: '2. Primera herramienta', step3: '3. Segunda herramienta', selectCat: 'Selecciona una categoría...', tool1: 'Primera herramienta...', tool2: 'Segunda herramienta...', compare: 'Comparar →', popular: 'Comparaciones populares', random: 'Aleatorio', samecat: 'Solo se comparan herramientas de la misma categoría.' },
+  ar: { badge: 'مقارنات الذكاء الاصطناعي', title: 'قارن أدوات الذكاء الاصطناعي', subtitle: 'اختر فئة، ثم حدد أداتين للمقارنة جنباً إلى جنب.', step1: '١. اختر فئة', step2: '٢. الأداة الأولى', step3: '٣. الأداة الثانية', selectCat: 'اختر فئة...', tool1: 'الأداة الأولى...', tool2: 'الأداة الثانية...', compare: 'قارن الآن ←', popular: 'المقارنات الشائعة', random: 'عشوائي', samecat: 'تتم المقارنة فقط بين أدوات من نفس الفئة.' },
+};
 
 export default function ComparePage() {
   const locale = useLocale() as Locale;
   const router = useRouter();
   const t = T[locale] || T.en;
 
+  const [category, setCategory] = useState('');
   const [tool1, setTool1] = useState('');
   const [tool2, setTool2] = useState('');
 
+  // Tools filtered by selected category
+  const categoryTools = useMemo(() => {
+    if (!category) return [];
+    return [...TOOLS_DATA]
+      .filter(t => t.category === category)
+      .sort((a, b) => b.views - a.views);
+  }, [category]);
+
   const canCompare = tool1 && tool2 && tool1 !== tool2;
+
+  const handleCategoryChange = (cat: string) => {
+    setCategory(cat);
+    setTool1('');
+    setTool2('');
+  };
 
   const handleCompare = () => {
     if (canCompare) router.push(`/${locale}/compare/${tool1}-vs-${tool2}`);
   };
 
   const handleRandom = () => {
-    const pool = ALL_TOOLS.slice(0, 50);
+    // Pick a random category with enough tools
+    const richCats = CATEGORIES.filter(c =>
+      TOOLS_DATA.filter(t => t.category === c.id).length >= 2
+    );
+    const cat = richCats[Math.floor(Math.random() * richCats.length)];
+    const pool = TOOLS_DATA.filter(t => t.category === cat.id).sort((a, b) => b.views - a.views).slice(0, 20);
     const a = pool[Math.floor(Math.random() * pool.length)];
     let b = pool[Math.floor(Math.random() * pool.length)];
     while (b.id === a.id) b = pool[Math.floor(Math.random() * pool.length)];
@@ -66,61 +106,98 @@ export default function ComparePage() {
           <Zap className="w-3 h-3" /> {t.badge}
         </span>
         <h1 className="text-4xl md:text-5xl font-black text-white mb-3">{t.title}</h1>
-        <p className="text-gray-400 max-w-2xl mx-auto">{t.subtitle}</p>
+        <p className="text-gray-400 max-w-xl mx-auto">{t.subtitle}</p>
       </div>
 
-      {/* Interactive comparator */}
+      {/* Comparator */}
       <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-12">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-3 items-center">
-          <div className="md:col-span-2">
-            <select value={tool1} onChange={e => setTool1(e.target.value)}
-              className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-violet-500 appearance-none">
-              <option value="">{t.tool1}</option>
-              <optgroup label="🤖 AI Agents">
-                {AGENTS.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
-              </optgroup>
-              <optgroup label="🛠️ AI Tools">
-                {OTHER_TOOLS.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
-              </optgroup>
-            </select>
-          </div>
 
-          <div className="flex items-center justify-center">
-            <span className="text-gray-500 font-black text-lg">VS</span>
-          </div>
+        {/* Step 1 — Category */}
+        <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">{t.step1}</p>
+        <select
+          value={category}
+          onChange={e => handleCategoryChange(e.target.value)}
+          className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-violet-500 appearance-none mb-5"
+        >
+          <option value="">{t.selectCat}</option>
+          {CATEGORIES.map(cat => (
+            <option key={cat.id} value={cat.id} className="bg-[#0A0A0F]">
+              {cat[locale] || cat.en}
+            </option>
+          ))}
+        </select>
 
-          <div className="md:col-span-2">
-            <select value={tool2} onChange={e => setTool2(e.target.value)}
-              className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-violet-500 appearance-none">
-              <option value="">{t.tool2}</option>
-              <optgroup label="🤖 AI Agents">
-                {AGENTS.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
-              </optgroup>
-              <optgroup label="🛠️ AI Tools">
-                {OTHER_TOOLS.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
-              </optgroup>
-            </select>
-          </div>
-        </div>
+        {/* Steps 2 & 3 — Tools (only shown when category selected) */}
+        {category && (
+          <>
+            <p className="text-xs text-violet-400 font-semibold mb-4 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-violet-400 inline-block" />
+              {categoryTools.length} tools available · {t.samecat}
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-3 items-center mb-4">
+              <div className="md:col-span-2">
+                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">{t.step2}</p>
+                <select
+                  value={tool1}
+                  onChange={e => setTool1(e.target.value)}
+                  className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-violet-500 appearance-none"
+                >
+                  <option value="">{t.tool1}</option>
+                  {categoryTools.map(tool => (
+                    <option key={tool.id} value={tool.id} disabled={tool.id === tool2} className="bg-[#0A0A0F]">
+                      {tool.name} — {tool.pricingLocalized[locale]}
+                    </option>
+                  ))}
+                </select>
+              </div>
 
-        <div className="flex gap-3 mt-4">
-          <button onClick={handleCompare} disabled={!canCompare}
+              <div className="flex items-end justify-center pb-1">
+                <span className="text-gray-500 font-black text-lg">VS</span>
+              </div>
+
+              <div className="md:col-span-2">
+                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">{t.step3}</p>
+                <select
+                  value={tool2}
+                  onChange={e => setTool2(e.target.value)}
+                  className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-violet-500 appearance-none"
+                >
+                  <option value="">{t.tool2}</option>
+                  {categoryTools.map(tool => (
+                    <option key={tool.id} value={tool.id} disabled={tool.id === tool1} className="bg-[#0A0A0F]">
+                      {tool.name} — {tool.pricingLocalized[locale]}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </>
+        )}
+
+        {/* Buttons */}
+        <div className="flex gap-3">
+          <button
+            onClick={handleCompare}
+            disabled={!canCompare}
             className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm transition ${
               canCompare
                 ? 'bg-violet-600 hover:bg-violet-500 text-white'
                 : 'bg-white/5 text-gray-600 cursor-not-allowed'
-            }`}>
+            }`}
+          >
             <ArrowRight className="w-4 h-4" /> {t.compare}
           </button>
-          <button onClick={handleRandom}
-            className="flex items-center gap-2 px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-gray-400 hover:text-white text-sm font-semibold transition">
-            <Shuffle className="w-4 h-4" /> Random
+          <button
+            onClick={handleRandom}
+            className="flex items-center gap-2 px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-gray-400 hover:text-white text-sm font-semibold transition"
+          >
+            <Shuffle className="w-4 h-4" /> {t.random}
           </button>
         </div>
       </div>
 
       {/* Popular comparisons */}
-      <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-5">{t.pick}</p>
+      <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-5">{t.popular}</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {POPULAR.map(({ slug, emoji }) => {
           const [a, b] = slug.split('-vs-').map(s =>
