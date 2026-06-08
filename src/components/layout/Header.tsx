@@ -65,6 +65,14 @@ export default function Header() {
             </select>
           </div>
 
+          {/* Compare link */}
+          <Link
+            href="/compare"
+            className="hidden md:flex items-center gap-1.5 text-xs font-semibold text-gray-300 hover:text-white border border-white/[0.08] hover:border-white/20 rounded-xl px-3 py-2 transition-all"
+          >
+            ⚡ Compare
+          </Link>
+
           {/* Submit link */}
           <Link
             href="/submit"
