@@ -81,7 +81,7 @@ export default function HeroSection({ onSearch, selectedCategory, onCategoryChan
         transition={{ duration: 0.6, delay: 0.3 }}
         className="w-full max-w-2xl mb-6"
       >
-        <SearchBar onSearch={onSearch} />
+        <SearchBar onSearch={onSearch} selectedCategory={selectedCategory} onCategoryChange={onCategoryChange} />
       </motion.div>
 
       <motion.div

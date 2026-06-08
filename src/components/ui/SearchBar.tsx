@@ -53,11 +53,13 @@ export default function SearchBar({
 
   const handleSubmit = () => {
     onSearch(query);
+    // Also apply the selected category from dropdown
+    if (selectedCategory) onCategoryChange(selectedCategory);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      onSearch(query);
+      handleSubmit();
     }
   };
 
