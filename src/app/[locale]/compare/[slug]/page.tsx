@@ -25,12 +25,16 @@ const TOP_COMPARISONS = [
   'reclaim-ai-vs-fireflies-ai',
 ];
 
+// Generate static params for top comparisons (others rendered on-demand)
 export async function generateStaticParams() {
   const locales = ['en', 'fr', 'es', 'ar'];
   return TOP_COMPARISONS.flatMap((slug) =>
     locales.map((locale) => ({ slug, locale }))
   );
 }
+
+// Allow any slug beyond the pre-generated ones
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }: Props) {
   const [id1, id2] = params.slug.split('-vs-');
@@ -188,6 +192,7 @@ export default function ComparePage({ params }: Props) {
           <div key={i} className={`grid grid-cols-3 px-6 py-4 items-center ${i % 2 === 0 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.04] last:border-0`}>
             <span className="text-sm font-semibold text-gray-400">{row.label}</span>
             <div className="flex items-center gap-2">
+              {row.v1}
               {row.winner1 && <Check className="w-4 h-4 text-green-400 ml-1" />}
             </div>
             <div className="flex items-center gap-2">
@@ -208,6 +213,38 @@ export default function ComparePage({ params }: Props) {
             ? L.winnerText(winner.name, winner.rating.toFixed(1))
             : L.tieText(t1.name, t2.name)}
         </p>
+      </div>
+
+      {/* More comparisons — same category */}
+      {(() => {
+        const sameCategory = TOOLS_DATA
+          .filter(t => t.category === t1.category && t.id !== t1.id && t.id !== t2.id)
+          .sort((a, b) => b.views - a.views)
+          .slice(0, 6);
+        if (sameCategory.length === 0) return null;
+        return (
+          <div className="mb-10">
+            <h2 className="text-lg font-black text-white mb-4">{L.moreComparisons}</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              {sameCategory.map(tool => (
+                <a key={tool.id}
+                  href={`/${locale}/compare/${t1.id}-vs-${tool.id}`}
+                  className="flex items-center gap-2 bg-white/5 hover:bg-violet-600/10 border border-white/10 hover:border-violet-500/30 rounded-xl px-4 py-3 transition group">
+                  <span className="text-sm text-white font-semibold truncate flex-1">{t1.name} vs {tool.name}</span>
+                  <ArrowUpRight className="w-3 h-3 text-gray-600 group-hover:text-violet-400 shrink-0" />
+                </a>
+              ))}
+            </div>
+          </div>
+        );
+      })()}
+
+      {/* Back to compare */}
+      <div className="text-center">
+        <a href={`/${locale}/compare`}
+          className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white border border-white/10 hover:border-white/20 px-5 py-2.5 rounded-xl transition">
+          {L.back} {L.moreComparisons}
+        </a>
       </div>
     </div>
   );

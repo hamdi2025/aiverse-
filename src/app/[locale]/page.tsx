@@ -10,6 +10,7 @@ import NewsletterCTA from '@/components/home/NewsletterCTA';
 import AdSenseSlot from '@/components/ads/AdSenseSlot';
 import AgentsSpotlight from '@/components/home/AgentsSpotlight';
 import CompareWidget from '@/components/home/CompareWidget';
+import TrendingAgents from '@/components/home/TrendingAgents';
 
 const ToolModal = dynamic(() => import('@/components/home/ToolModal'), { ssr: false });
 
@@ -57,6 +58,7 @@ export default function HomePage() {
         />
         <StatsBar />
         <AgentsSpotlight onExplore={() => { setSelectedCategory('agents'); scrollToGrid(); }} />
+        <TrendingAgents />
         <CompareWidget />
         <div className="w-full flex justify-center">
           <AdSenseSlot slot="leaderboard" className="max-w-4xl" />

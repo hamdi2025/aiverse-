@@ -196,10 +196,16 @@ export default async function ToolPage({ params }: Props) {
           {locale === 'fr' ? `Essayer ${tool.name} maintenant` : locale === 'es' ? `Prueba ${tool.name} ahora` : locale === 'ar' ? `جرّب ${tool.name} الآن` : `Try ${tool.name} Now`}
         </h2>
         <p className="text-gray-400 text-sm mb-6">{tool.description[locale]}</p>
-        <a href={outboundUrl} target="_blank" rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] hover:opacity-90 text-white px-8 py-3 rounded-xl font-bold transition-all hover:scale-105">
-          {locale === 'fr' ? 'Essayer' : locale === 'es' ? 'Probar' : locale === 'ar' ? 'جرّب الآن' : 'Try Free'} <ArrowUpRight className="w-4 h-4" />
-        </a>
+        <div className="flex flex-wrap gap-3 justify-center">
+          <a href={outboundUrl} target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] hover:opacity-90 text-white px-8 py-3 rounded-xl font-bold transition-all hover:scale-105">
+            {locale === 'fr' ? 'Essayer' : locale === 'es' ? 'Probar' : locale === 'ar' ? 'جرّب الآن' : 'Try Free'} <ArrowUpRight className="w-4 h-4" />
+          </a>
+          <a href={`/${locale}/compare`}
+            className="inline-flex items-center gap-2 border border-white/20 hover:border-violet-500/50 hover:bg-violet-600/10 text-gray-300 hover:text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all">
+            ⚡ {locale === 'fr' ? `Comparer ${tool.name}` : locale === 'es' ? `Comparar ${tool.name}` : locale === 'ar' ? `قارن ${tool.name}` : `Compare ${tool.name}`}
+          </a>
+        </div>
       </div>
     </div>
     </div>

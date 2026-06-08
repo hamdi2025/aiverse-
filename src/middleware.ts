@@ -13,9 +13,15 @@ const isPublicRoute = createRouteMatcher([
   '/:locale',
   '/:locale/tools/:id',
   '/:locale/compare/:slug',
+  '/:locale/compare',
   '/:locale/submit',
+  '/:locale/newsletter',
+  '/:locale/stack',
   '/:locale/sign-in',
   '/:locale/sign-up',
+  '/:locale/about',
+  '/:locale/privacy',
+  '/:locale/terms',
 ]);
 
 export default clerkMiddleware((auth, req) => {
