@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useLocale } from 'next-intl';
 import { useRouter } from '@/navigation';
 import { TOOLS_DATA } from '@/lib/tools';
@@ -8,19 +8,50 @@ import { ArrowLeftRight, Zap } from 'lucide-react';
 
 type Locale = 'en' | 'fr' | 'es' | 'ar';
 
-const LABELS: Record<Locale, { title: string; sub: string; tool1: string; tool2: string; btn: string; popular: string }> = {
-  en: { title: 'Compare AI Tools', sub: 'Pick any two tools and get an instant side-by-side comparison.', tool1: 'Select first tool...', tool2: 'Select second tool...', btn: 'Compare Now', popular: 'Popular:' },
-  fr: { title: 'Comparer des Outils IA', sub: 'Choisissez deux outils et obtenez une comparaison instantanée côte à côte.', tool1: 'Sélectionnez le premier outil...', tool2: 'Sélectionnez le second outil...', btn: 'Comparer maintenant', popular: 'Populaire :' },
-  es: { title: 'Comparar Herramientas IA', sub: 'Elige dos herramientas y obtén una comparación instantánea lado a lado.', tool1: 'Selecciona la primera herramienta...', tool2: 'Selecciona la segunda herramienta...', btn: 'Comparar ahora', popular: 'Popular:' },
-  ar: { title: 'قارن أدوات الذكاء الاصطناعي', sub: 'اختر أداتين واحصل على مقارنة فورية جنباً إلى جنب.', tool1: 'اختر الأداة الأولى...', tool2: 'اختر الأداة الثانية...', btn: 'قارن الآن', popular: 'شائع:' },
+const CATEGORIES = [
+  { id: 'agents',       en: '🤖 AI Agents',          fr: '🤖 Agents IA',            es: '🤖 Agentes IA',           ar: '🤖 وكلاء ذكاء اصطناعي' },
+  { id: 'writing',      en: '✍️ Writing & LLMs',     fr: '✍️ Écriture & LLMs',      es: '✍️ Escritura & LLMs',     ar: '✍️ الكتابة' },
+  { id: 'image',        en: '🎨 Image & Art',         fr: '🎨 Image & Art',           es: '🎨 Imagen & Arte',         ar: '🎨 الصور' },
+  { id: 'code',         en: '💻 Code & Dev',          fr: '💻 Code & Dev',            es: '💻 Código & Dev',          ar: '💻 البرمجة' },
+  { id: 'video',        en: '🎬 Video & Motion',      fr: '🎬 Vidéo & Motion',        es: '🎬 Video & Motion',        ar: '🎬 الفيديو' },
+  { id: 'audio',        en: '🎙️ Audio & Music',      fr: '🎙️ Audio & Musique',      es: '🎙️ Audio & Música',       ar: '🎙️ الصوت' },
+  { id: 'marketing',    en: '📈 Marketing & Growth',  fr: '📈 Marketing',             es: '📈 Marketing',             ar: '📈 التسويق' },
+  { id: 'productivity', en: '⚡ Productivity',        fr: '⚡ Productivité',           es: '⚡ Productividad',          ar: '⚡ الإنتاجية' },
+  { id: 'seo',          en: '🔍 SEO & Search',        fr: '🔍 SEO & Recherche',       es: '🔍 SEO',                   ar: '🔍 السيو' },
+  { id: 'design3d',     en: '🎯 3D & Design',         fr: '🎯 3D & Design',           es: '🎯 3D & Diseño',           ar: '🎯 التصميم' },
+  { id: 'socialmedia',  en: '📱 Social Media',        fr: '📱 Réseaux Sociaux',       es: '📱 Redes Sociales',        ar: '📱 التواصل' },
+  { id: 'chatbots',     en: '💬 Chatbots',            fr: '💬 Chatbots',              es: '💬 Chatbots',              ar: '💬 الدردشة' },
+  { id: 'data',         en: '📊 Data & Analytics',    fr: '📊 Données',               es: '📊 Datos',                 ar: '📊 البيانات' },
+  { id: 'translation',  en: '🌐 Translation',         fr: '🌐 Traduction',            es: '🌐 Traducción',            ar: '🌐 الترجمة' },
+  { id: 'finance',      en: '💰 Finance',             fr: '💰 Finance',               es: '💰 Finanzas',              ar: '💰 المالية' },
+  { id: 'legal',        en: '⚖️ Legal',              fr: '⚖️ Juridique',            es: '⚖️ Legal',                ar: '⚖️ القانوني' },
+  { id: 'hr',           en: '👥 HR',                  fr: '👥 RH',                    es: '👥 RRHH',                  ar: '👥 الموارد' },
+  { id: 'cybersecurity',en: '🔐 Cybersecurity',       fr: '🔐 Cybersécurité',         es: '🔐 Ciberseguridad',        ar: '🔐 الأمن' },
+  { id: 'slides',       en: '📊 Slides',              fr: '📊 Présentations',         es: '📊 Presentaciones',        ar: '📊 العروض' },
+  { id: 'excel',        en: '📋 Excel',               fr: '📋 Excel',                 es: '📋 Excel',                 ar: '📋 الجداول' },
+  { id: 'pdf',          en: '📄 PDF & Docs',          fr: '📄 PDF & Docs',            es: '📄 PDF & Docs',            ar: '📄 PDF' },
+  { id: 'elearning',    en: '🎓 E-Learning',          fr: '🎓 E-Learning',            es: '🎓 E-Learning',            ar: '🎓 التعلم' },
+  { id: 'projectmgmt',  en: '📌 Project Mgmt',        fr: '📌 Gestion Projet',        es: '📌 Gestión',               ar: '📌 المشاريع' },
+  { id: 'mindmap',      en: '🧠 MindMap',             fr: '🧠 MindMap',               es: '🧠 MindMap',               ar: '🧠 الخرائط' },
+  { id: 'travel',       en: '✈️ Travel',             fr: '✈️ Voyage',               es: '✈️ Viajes',                ar: '✈️ السفر' },
+  { id: 'contract',     en: '📝 Contracts',           fr: '📝 Contrats',              es: '📝 Contratos',             ar: '📝 العقود' },
+  { id: 'compression',  en: '🗜️ Compression',        fr: '🗜️ Compression',          es: '🗜️ Compresión',           ar: '🗜️ الضغط' },
+  { id: 'conversion',   en: '🔄 Conversion',          fr: '🔄 Conversion',            es: '🔄 Conversión',            ar: '🔄 التحويل' },
+];
+
+const LABELS: Record<Locale, { title: string; sub: string; selectCat: string; tool1: string; tool2: string; btn: string; popular: string; pickCat: string }> = {
+  en: { title: 'Compare AI Tools', sub: 'Select a category, then compare two tools side by side.', selectCat: '1. Category...', tool1: '2. First tool...', tool2: '3. Second tool...', btn: 'Compare', popular: 'Popular:', pickCat: '← Pick a category first' },
+  fr: { title: 'Comparer des Outils IA', sub: 'Choisissez une catégorie, puis comparez deux outils côte à côte.', selectCat: '1. Catégorie...', tool1: '2. Premier outil...', tool2: '3. Deuxième outil...', btn: 'Comparer', popular: 'Populaire :', pickCat: '← Choisir une catégorie' },
+  es: { title: 'Comparar Herramientas IA', sub: 'Selecciona una categoría, luego compara dos herramientas lado a lado.', selectCat: '1. Categoría...', tool1: '2. Primera herramienta...', tool2: '3. Segunda herramienta...', btn: 'Comparar', popular: 'Popular:', pickCat: '← Elige una categoría' },
+  ar: { title: 'قارن أدوات الذكاء الاصطناعي', sub: 'اختر فئة، ثم قارن بين أداتين جنباً إلى جنب.', selectCat: '١. فئة...', tool1: '٢. الأداة الأولى...', tool2: '٣. الأداة الثانية...', btn: 'قارن', popular: 'شائع:', pickCat: '← اختر فئة أولاً' },
 };
 
 const QUICK_COMPARES = [
   { label: 'ChatGPT vs Claude', slug: 'chatgpt-vs-claude' },
   { label: 'Midjourney vs DALL-E', slug: 'midjourney-vs-dalle3' },
   { label: 'Jasper vs Writesonic', slug: 'jasper-vs-writesonic' },
-  { label: 'Bolt.new vs v0', slug: 'bolt-new-vs-v0-dev' },
-  { label: 'Gemini vs Claude', slug: 'claude-vs-gemini' },
+  { label: 'Cursor vs Copilot', slug: 'cursor-vs-github-copilot' },
+  { label: 'ElevenLabs vs Murf', slug: 'elevenlabs-vs-murf-ai' },
 ];
 
 export default function CompareWidget() {
@@ -28,16 +59,27 @@ export default function CompareWidget() {
   const router = useRouter();
   const L = LABELS[locale];
 
+  const [category, setCategory] = useState('');
   const [tool1, setTool1] = useState('');
   const [tool2, setTool2] = useState('');
-  const [shake, setShake] = useState(false);
 
-  const sortedTools = [...TOOLS_DATA].sort((a, b) => a.name.localeCompare(b.name));
+  const categoryTools = useMemo(() => {
+    if (!category) return [];
+    return [...TOOLS_DATA]
+      .filter(t => t.category === category)
+      .sort((a, b) => b.views - a.views);
+  }, [category]);
+
+  const handleCategoryChange = (cat: string) => {
+    setCategory(cat);
+    setTool1('');
+    setTool2('');
+  };
+
+  const canCompare = tool1 && tool2 && tool1 !== tool2;
 
   const handleCompare = () => {
-    if (!tool1 || !tool2) { setShake(true); setTimeout(() => setShake(false), 600); return; }
-    if (tool1 === tool2) return;
-    router.push(`/compare/${tool1}-vs-${tool2}` as never);
+    if (canCompare) router.push(`/compare/${tool1}-vs-${tool2}` as never);
   };
 
   const handleQuick = (slug: string) => {
@@ -45,12 +87,11 @@ export default function CompareWidget() {
   };
 
   return (
-    <section className="w-full my-10 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 md:p-10 relative overflow-hidden">
-      {/* Glow */}
+    <section className="w-full my-10 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 md:p-8 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-72 h-72 bg-violet-600/5 blur-3xl rounded-full pointer-events-none" />
 
       {/* Header */}
-      <div className="flex items-center gap-3 mb-2">
+      <div className="flex items-center gap-3 mb-5">
         <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-600 to-cyan-500 flex items-center justify-center flex-shrink-0">
           <ArrowLeftRight className="w-4 h-4 text-white" />
         </div>
@@ -60,57 +101,85 @@ export default function CompareWidget() {
         </div>
       </div>
 
-      {/* Comparator */}
-      <div className={`flex flex-col sm:flex-row items-center gap-3 mt-6 ${shake ? 'animate-bounce' : ''}`}>
-        {/* Select 1 */}
-        <select
-          value={tool1}
-          onChange={e => setTool1(e.target.value)}
-          className="flex-1 w-full bg-white/[0.05] border border-white/[0.10] hover:border-violet-500/50 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-violet-500/70 transition-colors cursor-pointer"
-        >
-          <option value="" className="bg-[#0A0A0F]">{L.tool1}</option>
-          {sortedTools.map(t => (
-            <option key={t.id} value={t.id} className="bg-[#0A0A0F]">{t.name}</option>
-          ))}
-        </select>
+      {/* Comparator — single row: [Category] [Tool1] VS [Tool2] [Button] */}
+      <div className="grid grid-cols-1 md:grid-cols-7 gap-3 items-center mb-2">
 
-        {/* VS badge */}
-        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-violet-600/30 to-orange-500/30 border border-white/10 flex items-center justify-center">
-          <span className="text-xs font-black text-gray-300">VS</span>
+        {/* Category */}
+        <div className="md:col-span-2">
+          <select
+            value={category}
+            onChange={e => handleCategoryChange(e.target.value)}
+            className="w-full bg-white/[0.05] border border-white/[0.10] hover:border-violet-500/50 rounded-xl px-3 py-3 text-white text-sm focus:outline-none focus:border-violet-500 transition-colors cursor-pointer appearance-none"
+          >
+            <option value="" className="bg-[#0A0A0F]">{L.selectCat}</option>
+            {CATEGORIES.map(cat => (
+              <option key={cat.id} value={cat.id} className="bg-[#0A0A0F]">
+                {cat[locale] || cat.en}
+              </option>
+            ))}
+          </select>
         </div>
 
-        {/* Select 2 */}
-        <select
-          value={tool2}
-          onChange={e => setTool2(e.target.value)}
-          className="flex-1 w-full bg-white/[0.05] border border-white/[0.10] hover:border-orange-500/50 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-orange-500/70 transition-colors cursor-pointer"
-        >
-          <option value="" className="bg-[#0A0A0F]">{L.tool2}</option>
-          {sortedTools.filter(t => t.id !== tool1).map(t => (
-            <option key={t.id} value={t.id} className="bg-[#0A0A0F]">{t.name}</option>
-          ))}
-        </select>
+        {/* Tool 1 */}
+        <div className="md:col-span-2">
+          <select
+            value={tool1}
+            onChange={e => setTool1(e.target.value)}
+            disabled={!category}
+            className="w-full bg-white/[0.05] border border-white/[0.10] hover:border-violet-500/50 rounded-xl px-3 py-3 text-white text-sm focus:outline-none focus:border-violet-500 transition-colors cursor-pointer appearance-none disabled:opacity-40 disabled:cursor-not-allowed"
+          >
+            <option value="" className="bg-[#0A0A0F]">{category ? L.tool1 : L.pickCat}</option>
+            {categoryTools.map(t => (
+              <option key={t.id} value={t.id} disabled={t.id === tool2} className="bg-[#0A0A0F]">{t.name}</option>
+            ))}
+          </select>
+        </div>
 
-        {/* Button */}
+        {/* VS */}
+        <div className="hidden md:flex items-center justify-center">
+          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-violet-600/30 to-orange-500/30 border border-white/10 flex items-center justify-center">
+            <span className="text-[11px] font-black text-gray-300">VS</span>
+          </div>
+        </div>
+
+        {/* Tool 2 */}
+        <div className="md:col-span-2">
+          <select
+            value={tool2}
+            onChange={e => setTool2(e.target.value)}
+            disabled={!category}
+            className="w-full bg-white/[0.05] border border-white/[0.10] hover:border-orange-500/50 rounded-xl px-3 py-3 text-white text-sm focus:outline-none focus:border-orange-500 transition-colors cursor-pointer appearance-none disabled:opacity-40 disabled:cursor-not-allowed"
+          >
+            <option value="" className="bg-[#0A0A0F]">{category ? L.tool2 : L.pickCat}</option>
+            {categoryTools.map(t => (
+              <option key={t.id} value={t.id} disabled={t.id === tool1} className="bg-[#0A0A0F]">{t.name}</option>
+            ))}
+          </select>
+        </div>
+      </div>
+
+      {/* Compare button + info */}
+      <div className="flex items-center gap-3 mt-3">
         <button
           onClick={handleCompare}
-          disabled={!tool1 || !tool2 || tool1 === tool2}
-          className="flex-shrink-0 flex items-center gap-2 bg-gradient-to-r from-violet-600 to-cyan-500 hover:from-violet-500 hover:to-cyan-400 text-white px-6 py-3 rounded-xl font-bold text-sm transition-all duration-200 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed whitespace-nowrap shadow-lg shadow-violet-900/30"
+          disabled={!canCompare}
+          className="flex items-center gap-2 bg-gradient-to-r from-violet-600 to-cyan-500 hover:from-violet-500 hover:to-cyan-400 text-white px-6 py-2.5 rounded-xl font-bold text-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed shadow-lg shadow-violet-900/30"
         >
-          <Zap className="w-4 h-4" />
-          {L.btn}
+          <Zap className="w-4 h-4" /> {L.btn}
         </button>
+        {category && (
+          <span className="text-xs text-violet-400">
+            {categoryTools.length} tools available
+          </span>
+        )}
       </div>
 
       {/* Quick compare links */}
-      <div className="flex flex-wrap items-center gap-2 mt-5">
+      <div className="flex flex-wrap items-center gap-2 mt-4">
         <span className="text-xs text-gray-500 font-medium">{L.popular}</span>
         {QUICK_COMPARES.map(({ label, slug }) => (
-          <button
-            key={slug}
-            onClick={() => handleQuick(slug)}
-            className="text-xs text-gray-400 hover:text-white border border-white/[0.06] hover:border-violet-500/40 hover:bg-violet-500/10 rounded-full px-3 py-1 transition-all duration-200"
-          >
+          <button key={slug} onClick={() => handleQuick(slug)}
+            className="text-xs text-gray-400 hover:text-white border border-white/[0.06] hover:border-violet-500/40 hover:bg-violet-500/10 rounded-full px-3 py-1 transition-all">
             {label}
           </button>
         ))}
