@@ -18,7 +18,7 @@ const LINKS = {
     { label: 'Submit Your Tool', href: '/submit' },
     { label: 'Advertise / Sponsor', href: '/submit#featured' },
     { label: 'Affiliate Program', href: '/affiliates' },
-    { label: 'Newsletter Sponsorship', href: '/submit#featured' },
+    { label: 'Newsletter Sponsorship', href: '/newsletter' },
   ],
   company: [
     { label: 'About AIverse', href: '/about' },
