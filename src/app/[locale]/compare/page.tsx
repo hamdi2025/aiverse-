@@ -109,69 +109,88 @@ export default function ComparePage() {
         <p className="text-gray-400 max-w-xl mx-auto">{t.subtitle}</p>
       </div>
 
-      {/* Comparator */}
+      {/* Comparator — single row: [Category] [Tool1] VS [Tool2] [Button] */}
       <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-12">
 
-        {/* Step 1 — Category */}
-        <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">{t.step1}</p>
-        <select
-          value={category}
-          onChange={e => handleCategoryChange(e.target.value)}
-          className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-violet-500 appearance-none mb-5"
-        >
-          <option value="">{t.selectCat}</option>
-          {CATEGORIES.map(cat => (
-            <option key={cat.id} value={cat.id} className="bg-[#0A0A0F]">
-              {cat[locale] || cat.en}
-            </option>
-          ))}
-        </select>
+        {/* Labels row */}
+        <div className="grid grid-cols-1 md:grid-cols-7 gap-3 mb-1">
+          <div className="md:col-span-2">
+            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">{t.step1}</p>
+          </div>
+          <div className="md:col-span-2">
+            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">{t.step2}</p>
+          </div>
+          <div className="hidden md:flex items-center justify-center" />
+          <div className="md:col-span-2">
+            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">{t.step3}</p>
+          </div>
+        </div>
 
-        {/* Steps 2 & 3 — Tools (only shown when category selected) */}
+        {/* Selects row */}
+        <div className="grid grid-cols-1 md:grid-cols-7 gap-3 items-center mb-4">
+
+          {/* Category */}
+          <div className="md:col-span-2">
+            <select
+              value={category}
+              onChange={e => handleCategoryChange(e.target.value)}
+              className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-3 text-white text-sm focus:outline-none focus:border-violet-500 appearance-none"
+            >
+              <option value="">{t.selectCat}</option>
+              {CATEGORIES.map(cat => (
+                <option key={cat.id} value={cat.id} className="bg-[#0A0A0F]">
+                  {cat[locale] || cat.en}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Tool 1 */}
+          <div className="md:col-span-2">
+            <select
+              value={tool1}
+              onChange={e => setTool1(e.target.value)}
+              disabled={!category}
+              className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-3 text-white text-sm focus:outline-none focus:border-violet-500 appearance-none disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              <option value="">{category ? t.tool1 : '← ' + t.step1}</option>
+              {categoryTools.map(tool => (
+                <option key={tool.id} value={tool.id} disabled={tool.id === tool2} className="bg-[#0A0A0F]">
+                  {tool.name}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* VS */}
+          <div className="flex items-center justify-center">
+            <span className="text-gray-500 font-black text-base">VS</span>
+          </div>
+
+          {/* Tool 2 */}
+          <div className="md:col-span-2">
+            <select
+              value={tool2}
+              onChange={e => setTool2(e.target.value)}
+              disabled={!category}
+              className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-3 text-white text-sm focus:outline-none focus:border-violet-500 appearance-none disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              <option value="">{category ? t.tool2 : '← ' + t.step1}</option>
+              {categoryTools.map(tool => (
+                <option key={tool.id} value={tool.id} disabled={tool.id === tool1} className="bg-[#0A0A0F]">
+                  {tool.name}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        {/* Info */}
         {category && (
-          <>
-            <p className="text-xs text-violet-400 font-semibold mb-4 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-violet-400 inline-block" />
-              {categoryTools.length} tools available · {t.samecat}
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-3 items-center mb-4">
-              <div className="md:col-span-2">
-                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">{t.step2}</p>
-                <select
-                  value={tool1}
-                  onChange={e => setTool1(e.target.value)}
-                  className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-violet-500 appearance-none"
-                >
-                  <option value="">{t.tool1}</option>
-                  {categoryTools.map(tool => (
-                    <option key={tool.id} value={tool.id} disabled={tool.id === tool2} className="bg-[#0A0A0F]">
-                      {tool.name} — {tool.pricingLocalized[locale]}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="flex items-end justify-center pb-1">
-                <span className="text-gray-500 font-black text-lg">VS</span>
-              </div>
-
-              <div className="md:col-span-2">
-                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">{t.step3}</p>
-                <select
-                  value={tool2}
-                  onChange={e => setTool2(e.target.value)}
-                  className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-violet-500 appearance-none"
-                >
-                  <option value="">{t.tool2}</option>
-                  {categoryTools.map(tool => (
-                    <option key={tool.id} value={tool.id} disabled={tool.id === tool1} className="bg-[#0A0A0F]">
-                      {tool.name} — {tool.pricingLocalized[locale]}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-          </>
+          <p className="text-xs text-violet-400 font-semibold mb-4 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-violet-400 inline-block" />
+            {categoryTools.length} tools · {t.samecat}
+          </p>
         )}
 
         {/* Buttons */}
