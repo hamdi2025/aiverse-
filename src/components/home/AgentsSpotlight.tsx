@@ -30,7 +30,7 @@ export default function AgentsSpotlight({ onExplore }: AgentsSpotlightProps) {
             <Bot className="w-8 h-8 text-white" />
           </div>
           <span className="text-[10px] font-bold uppercase tracking-widest text-violet-400 bg-violet-500/10 border border-violet-500/20 px-3 py-1 rounded-full animate-pulse">
-            🔥 Trending 2026
+            🔥 Trending
           </span>
         </div>
 
@@ -45,9 +45,9 @@ export default function AgentsSpotlight({ onExplore }: AgentsSpotlightProps) {
           {/* Feature pills */}
           <div className="flex flex-wrap gap-2 justify-center md:justify-start">
             {features.map((f) => (
-              <span key={f.label} className="flex items-center gap-1.5 text-xs font-medium text-gray-300 bg-white/[0.05] border border-white/[0.08] px-3 py-1.5 rounded-full">
+              <button key={f.label} onClick={onExplore} className="flex items-center gap-1.5 text-xs font-medium text-gray-300 bg-white/[0.05] hover:bg-violet-500/20 hover:text-violet-300 border border-white/[0.08] hover:border-violet-500/30 px-3 py-1.5 rounded-full transition-all cursor-pointer">
                 {f.icon} {f.label}
-              </span>
+              </button>
             ))}
           </div>
         </div>
