@@ -61,8 +61,6 @@ export default async function LocaleLayout({
       </head>
       <body className={`${inter.className} bg-[#0A0A0F] text-[#F3F4F6] min-h-screen flex flex-col selection:bg-[#7C3AED] selection:text-white antialiased overflow-x-hidden`}>
         <ClerkProvider
-          signInUrl={`/${locale}/sign-in`}
-          signUpUrl={`/${locale}/sign-up`}
           signInFallbackRedirectUrl={`/${locale}`}
           fallbackRedirectUrl={`/${locale}`}
         >
