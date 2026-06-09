@@ -1,36 +1,19 @@
 'use client';
 import React, { useState } from 'react';
-import { Mail, CheckCircle, Loader2 } from 'lucide-react';
+import { Mail, CheckCircle } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 export default function NewsletterCTA() {
   const t = useTranslations('Newsletter');
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    setLoading(true);
-    setError('');
-    try {
-      const res = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
-      });
-      if (res.ok) {
-        setSubmitted(true);
-      } else {
-        setError('Something went wrong. Please try again.');
-      }
-    } catch {
-      setError('Network error. Please try again.');
-    } finally {
-      setLoading(false);
-    }
+    // Open Beehiiv subscribe page with email pre-filled
+    window.open(`https://aiverse-weekly.beehiiv.com/subscribe?email=${encodeURIComponent(email)}`, '_blank');
+    setSubmitted(true);
   };
 
   return (
@@ -42,35 +25,33 @@ export default function NewsletterCTA() {
         <h2 className="text-2xl font-black text-white mb-2">{t('title')}</h2>
         <p className="text-gray-400 text-sm mb-6">{t('subtitle')}</p>
         {submitted ? (
-          <div className="flex items-center justify-center gap-2 text-green-400 font-bold">
-            <CheckCircle className="w-5 h-5" />
-            <span>{t('success')}</span>
+          <div className="flex flex-col items-center gap-2">
+            <div className="flex items-center gap-2 text-green-400 font-bold">
+              <CheckCircle className="w-5 h-5" />
+              <span>Almost done! Check the new tab to confirm ✅</span>
+            </div>
+            <p className="text-gray-500 text-xs mt-1">A tab opened — click Subscribe to confirm your subscription</p>
           </div>
         ) : (
-          <>
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <div className="relative flex-1">
-                <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-                <input
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder={t('placeholder')}
-                  className="w-full pl-10 pr-4 py-3 bg-white/[0.05] border border-white/[0.10] rounded-xl text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[#7C3AED]/50"
-                />
-              </div>
-              <button
-                type="submit"
-                disabled={loading}
-                className="px-6 py-3 bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] text-white font-bold rounded-xl hover:opacity-90 transition-all text-sm whitespace-nowrap disabled:opacity-60 flex items-center gap-2 justify-center"
-              >
-                {loading && <Loader2 className="w-4 h-4 animate-spin" />}
-                {t('cta')}
-              </button>
-            </form>
-            {error && <p className="text-red-400 text-xs mt-2">{error}</p>}
-          </>
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <div className="relative flex-1">
+              <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder={t('placeholder')}
+                className="w-full pl-10 pr-4 py-3 bg-white/[0.05] border border-white/[0.10] rounded-xl text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[#7C3AED]/50"
+              />
+            </div>
+            <button
+              type="submit"
+              className="px-6 py-3 bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] text-white font-bold rounded-xl hover:opacity-90 transition-all text-sm whitespace-nowrap"
+            >
+              {t('cta')}
+            </button>
+          </form>
         )}
       </div>
     </section>
