@@ -4,6 +4,7 @@ export default function SignInPage() {
   return (
     <div className="min-h-screen flex items-center justify-center px-4 py-20">
       <SignIn
+        fallbackRedirectUrl="/"
         appearance={{
           variables: {
             colorPrimary: '#7C3AED',
