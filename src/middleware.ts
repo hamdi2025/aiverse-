@@ -9,23 +9,13 @@ const intlMiddleware = createMiddleware({
   defaultLocale,
 });
 
-const isPublicRoute = createRouteMatcher([
-  '/:locale',
-  '/:locale/tools/:id',
-  '/:locale/compare/:slug',
-  '/:locale/compare',
-  '/:locale/submit',
-  '/:locale/newsletter',
-  '/:locale/stack',
-  '/:locale/sign-in(.*)',
-  '/:locale/sign-up(.*)',
-  '/:locale/about',
-  '/:locale/privacy',
-  '/:locale/terms',
+// Only protect truly private routes (admin, dashboard, etc.)
+const isProtectedRoute = createRouteMatcher([
+  '/:locale/admin(.*)',
 ]);
 
 export default clerkMiddleware(async (auth, req) => {
-  if (!isPublicRoute(req)) {
+  if (isProtectedRoute(req)) {
     await auth.protect();
   }
   return intlMiddleware(req);
