@@ -12,7 +12,8 @@
     "pricing": "Pricing",
     "noResults": "No tools found matching your request.",
     "submit": "Submit Tool",
-    "signIn": "Sign In"
+    "signIn": "Sign In",
+    "signUp": "Sign Up"
   },
   "Hero": {
     "badge": "🤖 The AI Agents Era is Here",

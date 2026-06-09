@@ -100,6 +100,17 @@ export default function ComparePage({ params }: Props) {
 
   const winner = t1.rating > t2.rating ? t1 : t2.rating > t1.rating ? t2 : null;
 
+  // Generate popularity label from views
+  const popularityLabel = (views: number) => {
+    if (views >= 30000) return '🔥 Very High';
+    if (views >= 15000) return '📈 High';
+    if (views >= 5000) return '👍 Medium';
+    return '🌱 Growing';
+  };
+
+  // Pricing score (lower = better)
+  const pricingScore = (p: string) => p === 'Free' ? 3 : p === 'Freemium' ? 2 : 1;
+
   // JSON-LD for SEO
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -133,6 +144,23 @@ export default function ComparePage({ params }: Props) {
       v1: <span className="capitalize text-gray-300">{t1.category}</span>,
       v2: <span className="capitalize text-gray-300">{t2.category}</span>,
       winner1: false, winner2: false,
+    },
+    {
+      label: 'Popularity',
+      v1: <span className="text-gray-300">{popularityLabel(t1.views)}</span>,
+      v2: <span className="text-gray-300">{popularityLabel(t2.views)}</span>,
+      winner1: t1.views >= t2.views, winner2: t2.views >= t1.views,
+    },
+    {
+      label: 'Value for Money',
+      v1: <span className={pricingScore(t1.pricing) === 3 ? 'text-green-400 font-bold' : pricingScore(t1.pricing) === 2 ? 'text-amber-400' : 'text-gray-300'}>
+        {pricingScore(t1.pricing) === 3 ? '⭐⭐⭐ Excellent' : pricingScore(t1.pricing) === 2 ? '⭐⭐ Good' : '⭐ Paid only'}
+      </span>,
+      v2: <span className={pricingScore(t2.pricing) === 3 ? 'text-green-400 font-bold' : pricingScore(t2.pricing) === 2 ? 'text-amber-400' : 'text-gray-300'}>
+        {pricingScore(t2.pricing) === 3 ? '⭐⭐⭐ Excellent' : pricingScore(t2.pricing) === 2 ? '⭐⭐ Good' : '⭐ Paid only'}
+      </span>,
+      winner1: pricingScore(t1.pricing) >= pricingScore(t2.pricing),
+      winner2: pricingScore(t2.pricing) >= pricingScore(t1.pricing),
     },
     ...(t1.company || t2.company ? [{
       label: 'Company',

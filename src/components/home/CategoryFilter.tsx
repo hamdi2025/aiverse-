@@ -50,11 +50,11 @@ export default function CategoryFilter({ selectedCategory, onCategoryChange }: C
           return (
             <button key={cat.id} onClick={() => onCategoryChange(cat.id)}
               className={clsx(
-                'px-4 py-2 rounded-full text-xs font-semibold tracking-wide border transition-all duration-200 active:scale-95 flex items-center gap-1.5 whitespace-nowrap hover:scale-110 hover:shadow-lg hover:z-10 relative',
-                isSpecial && !isActive && 'bg-violet-500/10 text-violet-300 border-violet-500/30 hover:border-violet-400 hover:bg-violet-500/20 hover:shadow-violet-500/20',
-                isSpecial && isActive && 'bg-gradient-to-r from-violet-600 to-cyan-500 text-white border-transparent shadow-lg shadow-violet-500/30 scale-105',
-                !isSpecial && isActive && 'bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] text-white border-transparent shadow-lg shadow-[#7C3AED]/25 scale-105',
-                !isSpecial && !isActive && 'bg-white/[0.03] text-gray-400 hover:text-white border-white/[0.08] hover:border-white/20 hover:bg-white/[0.08]'
+                'px-4 py-2 rounded-full text-xs font-semibold tracking-wide border transition-all duration-150 active:scale-95 flex items-center gap-1.5 whitespace-nowrap hover:scale-125 hover:shadow-xl hover:z-10 relative',
+                isSpecial && !isActive && 'bg-violet-500/10 text-violet-300 border-violet-500/30 hover:bg-gradient-to-r hover:from-violet-600 hover:to-cyan-500 hover:text-white hover:border-transparent hover:shadow-violet-500/40',
+                isSpecial && isActive && 'bg-gradient-to-r from-violet-600 to-cyan-500 text-white border-transparent shadow-lg shadow-violet-500/30 scale-110',
+                !isSpecial && isActive && 'bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] text-white border-transparent shadow-lg shadow-[#7C3AED]/25 scale-110',
+                !isSpecial && !isActive && 'bg-white/[0.03] text-gray-400 border-white/[0.08] hover:bg-gradient-to-r hover:from-[#7C3AED] hover:to-[#06B6D4] hover:text-white hover:border-transparent hover:shadow-[#7C3AED]/30'
               )}>
               {cat.icon}{cat.label}
               {cat.badge && (

@@ -12,7 +12,8 @@
     "pricing": "Precio",
     "noResults": "No se encontraron herramientas.",
     "submit": "Enviar",
-    "signIn": "Iniciar sesión"
+    "signIn": "Iniciar sesión",
+    "signUp": "Registrarse"
   },
   "Hero": {
     "badge": "🤖 La era de los agentes IA ha llegado",
