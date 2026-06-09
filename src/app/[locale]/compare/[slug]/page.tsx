@@ -110,13 +110,16 @@ export default function ComparePage({ params }: Props) {
     author: { '@type': 'Organization', name: 'AIverse' },
   };
 
+  const yesNo = (val: boolean | undefined) => val
+    ? <span className="text-green-400 font-bold">✅ Yes</span>
+    : <span className="text-red-400 font-semibold">❌ No</span>;
+
   const rows = [
     {
       label: L.rating,
-      v1: <div className="flex items-center gap-1"><Star className="w-4 h-4 fill-amber-400 text-amber-400" /><span className="font-black text-white">{t1.rating.toFixed(1)}</span></div>,
-      v2: <div className="flex items-center gap-1"><Star className="w-4 h-4 fill-amber-400 text-amber-400" /><span className="font-black text-white">{t2.rating.toFixed(1)}</span></div>,
-      winner1: t1.rating >= t2.rating,
-      winner2: t2.rating >= t1.rating,
+      v1: <div className="flex items-center gap-1"><Star className="w-4 h-4 fill-amber-400 text-amber-400" /><span className="font-black text-white">{t1.rating.toFixed(1)}/5</span></div>,
+      v2: <div className="flex items-center gap-1"><Star className="w-4 h-4 fill-amber-400 text-amber-400" /><span className="font-black text-white">{t2.rating.toFixed(1)}/5</span></div>,
+      winner1: t1.rating >= t2.rating, winner2: t2.rating >= t1.rating,
     },
     {
       label: L.pricing,
@@ -129,9 +132,32 @@ export default function ComparePage({ params }: Props) {
       label: L.category,
       v1: <span className="capitalize text-gray-300">{t1.category}</span>,
       v2: <span className="capitalize text-gray-300">{t2.category}</span>,
-      winner1: false,
-      winner2: false,
+      winner1: false, winner2: false,
     },
+    ...(t1.company || t2.company ? [{
+      label: 'Company',
+      v1: <span className="text-gray-300">{t1.company || '—'}</span>,
+      v2: <span className="text-gray-300">{t2.company || '—'}</span>,
+      winner1: false, winner2: false,
+    }] : []),
+    ...(t1.founded || t2.founded ? [{
+      label: 'Founded',
+      v1: <span className="text-gray-300">{t1.founded || '—'}</span>,
+      v2: <span className="text-gray-300">{t2.founded || '—'}</span>,
+      winner1: false, winner2: false,
+    }] : []),
+    ...(t1.hasAPI !== undefined || t2.hasAPI !== undefined ? [{
+      label: 'API Access',
+      v1: yesNo(t1.hasAPI),
+      v2: yesNo(t2.hasAPI),
+      winner1: !!t1.hasAPI && !t2.hasAPI, winner2: !!t2.hasAPI && !t1.hasAPI,
+    }] : []),
+    ...(t1.hasMobileApp !== undefined || t2.hasMobileApp !== undefined ? [{
+      label: 'Mobile App',
+      v1: yesNo(t1.hasMobileApp),
+      v2: yesNo(t2.hasMobileApp),
+      winner1: !!t1.hasMobileApp && !t2.hasMobileApp, winner2: !!t2.hasMobileApp && !t1.hasMobileApp,
+    }] : []),
   ];
 
   return (
@@ -202,6 +228,69 @@ export default function ComparePage({ params }: Props) {
           </div>
         ))}
       </div>
+
+      {/* Pros & Cons */}
+      {(t1.pros || t2.pros) && (
+        <div className="grid grid-cols-2 gap-4 mb-10">
+          {[{ tool: t1, color: 'violet' }, { tool: t2, color: 'orange' }].map(({ tool, color }, i) => (
+            tool.pros && (
+              <div key={tool.id} className={`rounded-2xl border p-5 ${i === 0 ? 'border-violet-500/20 bg-violet-950/10' : 'border-orange-500/20 bg-orange-950/10'}`}>
+                <h3 className={`font-bold text-sm mb-3 ${i === 0 ? 'text-violet-300' : 'text-orange-300'}`}>{tool.name}</h3>
+                <div className="mb-3">
+                  <p className="text-xs font-bold text-green-400 uppercase tracking-wider mb-2">✅ {L.pros}</p>
+                  <ul className="space-y-1">
+                    {tool.pros?.map((p, j) => <li key={j} className="text-xs text-gray-300 flex items-start gap-1.5"><span className="text-green-400 mt-0.5">+</span>{p}</li>)}
+                  </ul>
+                </div>
+                {tool.cons && (
+                  <div>
+                    <p className="text-xs font-bold text-red-400 uppercase tracking-wider mb-2">❌ {L.cons}</p>
+                    <ul className="space-y-1">
+                      {tool.cons?.map((c, j) => <li key={j} className="text-xs text-gray-300 flex items-start gap-1.5"><span className="text-red-400 mt-0.5">−</span>{c}</li>)}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            )
+          ))}
+        </div>
+      )}
+
+      {/* Use Cases */}
+      {(t1.useCases || t2.useCases) && (
+        <div className="grid grid-cols-2 gap-4 mb-10">
+          {[{ tool: t1 }, { tool: t2 }].map(({ tool }, i) => (
+            tool.useCases && (
+              <div key={tool.id} className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5">
+                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">🎯 Best for — {tool.name}</p>
+                <div className="flex flex-wrap gap-2">
+                  {tool.useCases.map((u, j) => (
+                    <span key={j} className="text-xs bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-full">{u}</span>
+                  ))}
+                </div>
+              </div>
+            )
+          ))}
+        </div>
+      )}
+
+      {/* Tags */}
+      {(t1.tags || t2.tags) && (
+        <div className="grid grid-cols-2 gap-4 mb-10">
+          {[{ tool: t1, color: 'violet' }, { tool: t2, color: 'orange' }].map(({ tool }, i) => (
+            tool.tags && (
+              <div key={tool.id} className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5">
+                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">🏷️ Tags — {tool.name}</p>
+                <div className="flex flex-wrap gap-2">
+                  {tool.tags.map((tag, j) => (
+                    <span key={j} className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${i === 0 ? 'text-violet-300 bg-violet-500/10 border-violet-500/20' : 'text-orange-300 bg-orange-500/10 border-orange-500/20'}`}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+            )
+          ))}
+        </div>
+      )}
 
       {/* Verdict */}
       <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 mb-10">

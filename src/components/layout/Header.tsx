@@ -92,8 +92,14 @@ export default function Header() {
           {/* Auth */}
           <SignedOut>
             <Link
-              href="/sign-in"
+              href="/sign-up"
               className="hidden sm:flex items-center gap-1.5 text-xs font-semibold text-gray-300 hover:text-white border border-white/[0.08] hover:border-white/20 rounded-xl px-3 py-2 transition-all"
+            >
+              {t('signUp') || 'Sign Up'}
+            </Link>
+            <Link
+              href="/sign-in"
+              className="hidden sm:flex items-center gap-1.5 text-xs font-semibold text-white bg-white/10 hover:bg-white/20 rounded-xl px-3 py-2 transition-all"
             >
               {t('signIn')}
             </Link>

@@ -7,11 +7,20 @@ export interface AITool {
   pricing: 'Free' | 'Freemium' | 'Paid';
   pricingLocalized: { en: string; fr: string; es: string; ar: string; };
   websiteUrl: string;
-  affiliateUrl?: string;   // lien affilié (prioritaire sur websiteUrl)
-  commission?: string;     // ex: "30% récurrent"
+  affiliateUrl?: string;
+  commission?: string;
   views: number;
   isWeeklyFeatured?: boolean;
-  isFeaturedSponsored?: boolean; // outil sponsorisé payant
+  isFeaturedSponsored?: boolean;
+  // Rich comparison fields
+  pros?: string[];
+  cons?: string[];
+  tags?: string[];
+  hasAPI?: boolean;
+  hasMobileApp?: boolean;
+  founded?: string;
+  company?: string;
+  useCases?: string[];
 }
 
 export const TOOLS_DATA: AITool[] = [
@@ -34,7 +43,12 @@ export const TOOLS_DATA: AITool[] = [
       ar: 'مجاني / ٢٠ دولار شهرياً'
     },
     websiteUrl: 'https://chat.openai.com',
-    views: 45200
+    views: 45200,
+    company: 'OpenAI', founded: '2022', hasAPI: true, hasMobileApp: true,
+    pros: ['Best ecosystem & plugins', 'DALL-E image generation built-in', 'GPT-4o multimodal', 'Largest user base', 'Voice mode available'],
+    cons: ['Expensive Pro plan', 'Data privacy concerns', 'Can hallucinate facts', 'No real-time web in free tier'],
+    tags: ['LLM', 'ChatBot', 'Code', 'Images', 'Voice'],
+    useCases: ['Writing & editing', 'Code generation', 'Research', 'Customer support', 'Image creation'],
   },
   {
     id: 'claude',
@@ -55,7 +69,12 @@ export const TOOLS_DATA: AITool[] = [
       ar: 'مجاني / ٢٠ دولار شهرياً'
     },
     websiteUrl: 'https://anthropic.com/claude',
-    views: 39400
+    views: 39400,
+    company: 'Anthropic', founded: '2023', hasAPI: true, hasMobileApp: false,
+    pros: ['Best writing quality', 'Longest context window (200K)', 'Safer & more honest', 'Excellent at coding', 'Less hallucinations'],
+    cons: ['No image generation', 'No voice mode', 'No plugins/extensions', 'Slower than GPT-4'],
+    tags: ['LLM', 'Writing', 'Code', 'Analysis', 'Safety'],
+    useCases: ['Long document analysis', 'Code review', 'Academic writing', 'Complex reasoning', 'Summarization'],
   },
   {
     id: 'gemini',
@@ -76,7 +95,12 @@ export const TOOLS_DATA: AITool[] = [
       ar: 'مجاني / ٢٠ دولار شهرياً'
     },
     websiteUrl: 'https://gemini.google.com',
-    views: 38600
+    views: 38600,
+    company: 'Google', founded: '2023', hasAPI: true, hasMobileApp: true,
+    pros: ['Free with Google account', 'Google Workspace integration', 'Real-time web search', 'Multimodal (image/video/audio)', 'Fast responses'],
+    cons: ['Less accurate than GPT-4', 'Privacy concerns (Google)', 'Inconsistent quality', 'Weaker at coding tasks'],
+    tags: ['LLM', 'Google', 'Multimodal', 'Search', 'Workspace'],
+    useCases: ['Google Docs integration', 'Web research', 'Image analysis', 'Email drafting', 'Data analysis'],
   },
   {
     id: 'grok',
