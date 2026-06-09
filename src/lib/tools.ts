@@ -21,6 +21,9 @@ export interface AITool {
   founded?: string;
   company?: string;
   useCases?: string[];
+  releaseDate?: string;   // ex: 'Nov 2022'
+  lastUpdate?: string;    // ex: 'May 2026'
+  verdict?: string;       // recommendation visible après inscription
 }
 
 export const TOOLS_DATA: AITool[] = [
@@ -45,10 +48,12 @@ export const TOOLS_DATA: AITool[] = [
     websiteUrl: 'https://chat.openai.com',
     views: 45200,
     company: 'OpenAI', founded: '2022', hasAPI: true, hasMobileApp: true,
+    releaseDate: 'Nov 2022', lastUpdate: 'May 2026',
     pros: ['Best ecosystem & plugins', 'DALL-E image generation built-in', 'GPT-4o multimodal', 'Largest user base', 'Voice mode available'],
     cons: ['Expensive Pro plan', 'Data privacy concerns', 'Can hallucinate facts', 'No real-time web in free tier'],
     tags: ['LLM', 'ChatBot', 'Code', 'Images', 'Voice'],
     useCases: ['Writing & editing', 'Code generation', 'Research', 'Customer support', 'Image creation'],
+    verdict: 'ChatGPT is the best choice for users who need an all-in-one AI assistant with image generation, voice mode and the largest plugin ecosystem. Ideal for general use, content creation and coding.',
   },
   {
     id: 'claude',
@@ -71,10 +76,12 @@ export const TOOLS_DATA: AITool[] = [
     websiteUrl: 'https://anthropic.com/claude',
     views: 39400,
     company: 'Anthropic', founded: '2023', hasAPI: true, hasMobileApp: false,
+    releaseDate: 'Mar 2023', lastUpdate: 'Jun 2026',
     pros: ['Best writing quality', 'Longest context window (200K)', 'Safer & more honest', 'Excellent at coding', 'Less hallucinations'],
     cons: ['No image generation', 'No voice mode', 'No plugins/extensions', 'Slower than GPT-4'],
     tags: ['LLM', 'Writing', 'Code', 'Analysis', 'Safety'],
     useCases: ['Long document analysis', 'Code review', 'Academic writing', 'Complex reasoning', 'Summarization'],
+    verdict: 'Claude is the best choice for professionals who need high-quality writing, long document analysis and honest, safe AI responses. Superior for coding tasks and research that requires accuracy over speed.',
   },
   {
     id: 'gemini',
@@ -97,10 +104,12 @@ export const TOOLS_DATA: AITool[] = [
     websiteUrl: 'https://gemini.google.com',
     views: 38600,
     company: 'Google', founded: '2023', hasAPI: true, hasMobileApp: true,
+    releaseDate: 'Dec 2023', lastUpdate: 'Apr 2026',
     pros: ['Free with Google account', 'Google Workspace integration', 'Real-time web search', 'Multimodal (image/video/audio)', 'Fast responses'],
     cons: ['Less accurate than GPT-4', 'Privacy concerns (Google)', 'Inconsistent quality', 'Weaker at coding tasks'],
     tags: ['LLM', 'Google', 'Multimodal', 'Search', 'Workspace'],
     useCases: ['Google Docs integration', 'Web research', 'Image analysis', 'Email drafting', 'Data analysis'],
+    verdict: 'Gemini is the best choice for users already in the Google ecosystem (Gmail, Docs, Drive). Best for web research and multimodal tasks. Not recommended as a primary coding or writing assistant.',
   },
   {
     id: 'grok',

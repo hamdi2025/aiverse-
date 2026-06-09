@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation';
+import { auth } from '@clerk/nextjs/server';
 import { TOOLS_DATA } from '@/lib/tools';
 import { buildAffiliateUrl } from '@/lib/affiliate';
-import { Star, Check, ArrowUpRight, Zap } from 'lucide-react';
+import { Star, Check, ArrowUpRight, Zap, Lock } from 'lucide-react';
 
 type Locale = 'en' | 'fr' | 'es' | 'ar';
 interface Props { params: { slug: string; locale: Locale } }
@@ -87,7 +88,9 @@ const LABELS: Record<Locale, { winner: string; tie: string; pricing: string; rat
   ar: { winner: 'الفائز', tie: 'تعادل', pricing: 'السعر', rating: 'التقييم', category: 'الفئة', pros: 'المزايا', cons: 'العيوب', verdict: 'حكمنا', visit: 'زيارة', compare: 'مقارنة', back: '→ رجوع', criteria: 'المعيار', about: 'حول', moreComparisons: 'مقارنات أخرى', try: 'جرّب', winnerText: (name, rating) => `بعد مقارنة التقييمات والأسعار والميزات، يتفوق ${name} بتقييم ${rating}/5. هو الخيار الأفضل لمعظم المستخدمين.`, tieText: (n1, n2) => `${n1} و${n2} متكافئان — يعتمد اختيارك على حالة استخدامك وميزانيتك.` },
 };
 
-export default function ComparePage({ params }: Props) {
+export default async function ComparePage({ params }: Props) {
+  const { userId } = auth();
+  const isLoggedIn = !!userId;
   const [id1, id2] = params.slug.split('-vs-');
   const t1 = TOOLS_DATA.find((t) => t.id === id1);
   const t2 = TOOLS_DATA.find((t) => t.id === id2);
@@ -162,6 +165,18 @@ export default function ComparePage({ params }: Props) {
       winner1: pricingScore(t1.pricing) >= pricingScore(t2.pricing),
       winner2: pricingScore(t2.pricing) >= pricingScore(t1.pricing),
     },
+    ...(t1.releaseDate || t2.releaseDate ? [{
+      label: '📅 Release Date',
+      v1: <span className="text-gray-300">{t1.releaseDate || '—'}</span>,
+      v2: <span className="text-gray-300">{t2.releaseDate || '—'}</span>,
+      winner1: false, winner2: false,
+    }] : []),
+    ...(t1.lastUpdate || t2.lastUpdate ? [{
+      label: '🔄 Last Update',
+      v1: <span className="text-green-400 font-semibold">{t1.lastUpdate || '—'}</span>,
+      v2: <span className="text-green-400 font-semibold">{t2.lastUpdate || '—'}</span>,
+      winner1: false, winner2: false,
+    }] : []),
     ...(t1.company || t2.company ? [{
       label: 'Company',
       v1: <span className="text-gray-300">{t1.company || '—'}</span>,
@@ -320,8 +335,8 @@ export default function ComparePage({ params }: Props) {
         </div>
       )}
 
-      {/* Verdict */}
-      <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 mb-10">
+      {/* Verdict — public summary */}
+      <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 mb-6">
         <h2 className="text-lg font-black text-white mb-3 flex items-center gap-2">
           <Zap className="w-5 h-5 text-violet-400" /> {L.verdict}
         </h2>
@@ -330,6 +345,61 @@ export default function ComparePage({ params }: Props) {
             ? L.winnerText(winner.name, winner.rating.toFixed(1))
             : L.tieText(t1.name, t2.name)}
         </p>
+      </div>
+
+      {/* Expert Recommendation — protected by sign-in */}
+      <div className="rounded-2xl border border-violet-500/30 bg-violet-950/10 p-6 mb-10 relative overflow-hidden">
+        <div className="flex items-center gap-2 mb-3">
+          <Star className="w-5 h-5 text-amber-400 fill-amber-400" />
+          <h2 className="text-lg font-black text-white">Expert Recommendation</h2>
+          {!isLoggedIn && (
+            <span className="ml-auto flex items-center gap-1.5 text-xs font-bold text-violet-300 bg-violet-500/20 px-2.5 py-1 rounded-full border border-violet-500/30">
+              <Lock className="w-3 h-3" /> Free account required
+            </span>
+          )}
+        </div>
+
+        {isLoggedIn ? (
+          <div className="space-y-4">
+            {t1.verdict && (
+              <div className="bg-violet-950/30 rounded-xl p-4 border border-violet-500/20">
+                <p className="text-xs font-bold text-violet-300 mb-2">📌 {t1.name}</p>
+                <p className="text-gray-300 text-sm leading-relaxed">{t1.verdict}</p>
+              </div>
+            )}
+            {t2.verdict && (
+              <div className="bg-orange-950/30 rounded-xl p-4 border border-orange-500/20">
+                <p className="text-xs font-bold text-orange-300 mb-2">📌 {t2.name}</p>
+                <p className="text-gray-300 text-sm leading-relaxed">{t2.verdict}</p>
+              </div>
+            )}
+            {!t1.verdict && !t2.verdict && (
+              <p className="text-gray-400 text-sm">Expert analysis coming soon for these tools.</p>
+            )}
+          </div>
+        ) : (
+          <div className="relative">
+            <div className="blur-sm select-none pointer-events-none">
+              <div className="bg-violet-950/30 rounded-xl p-4 border border-violet-500/20 mb-3">
+                <p className="text-xs font-bold text-violet-300 mb-2">📌 {t1.name}</p>
+                <p className="text-gray-300 text-sm">████████ is the best choice for ████████ who need ████████. Recommended for ████████ and ████████.</p>
+              </div>
+              <div className="bg-orange-950/30 rounded-xl p-4 border border-orange-500/20">
+                <p className="text-xs font-bold text-orange-300 mb-2">📌 {t2.name}</p>
+                <p className="text-gray-300 text-sm">████████ is ideal for ████████ use cases. Best for ████████ and ████████ professionals.</p>
+              </div>
+            </div>
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 rounded-xl backdrop-blur-sm">
+              <Lock className="w-8 h-8 text-violet-400 mb-3" />
+              <p className="text-white font-bold text-base mb-1">Unlock Expert Recommendations</p>
+              <p className="text-gray-400 text-xs mb-4 text-center">Create a free account to see which tool we recommend and why</p>
+              <a href={`/${locale}/sign-up`}
+                className="flex items-center gap-2 bg-gradient-to-r from-violet-600 to-cyan-500 text-white px-6 py-2.5 rounded-xl font-bold text-sm hover:opacity-90 transition">
+                Create Free Account →
+              </a>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* More comparisons — same category */}
