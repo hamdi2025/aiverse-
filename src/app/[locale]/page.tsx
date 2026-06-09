@@ -57,6 +57,7 @@ export default function HomePage() {
           onCategoryChange={handleCategoryChange}
         />
         <StatsBar />
+        <NewsletterCTA />
         <AgentsSpotlight onExplore={() => { setSelectedCategory('agents'); scrollToGrid(); }} />
         <TrendingAgents />
         <CompareWidget />
@@ -69,7 +70,6 @@ export default function HomePage() {
         <div className="w-full flex justify-center my-4">
           <AdSenseSlot slot="leaderboard" className="max-w-4xl" />
         </div>
-        <NewsletterCTA />
       </div>
       {selectedTool && (
         <ToolModal tool={selectedTool} onClose={() => setSelectedTool(null)} />
