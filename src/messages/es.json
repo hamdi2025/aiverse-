@@ -65,8 +65,7 @@
     "placeholder": "Tu email...",
     "cta": "Suscribirse gratis",
     "fine": "Sin spam. Cancelación fácil.",
-    "success": "¡Ya estás dentro! Revisa tu bandeja.",
-    "error": "Algo salió mal. Inténtalo de nuevo."
+    "success": "¡Ya estás dentro! Revisa tu bandeja."
   },
   "Stats": {
     "tools": "Herramientas IA listadas",
@@ -76,4 +75,6 @@
   },
   "Footer": {
     "rights": "2026 AIverse. Todos los derechos reservados.",
-    "disclosure": "Divulgación de afiliados: Algunos enlaces son de afiliados. Podemos g
+    "disclosure": "Divulgación de afiliados: Algunos enlaces son de afiliados. Podemos ganar una comisión sin costo adicional para ti."
+  }
+}

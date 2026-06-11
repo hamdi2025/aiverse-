@@ -65,8 +65,7 @@
     "placeholder": "Enter your email...",
     "cta": "Subscribe Free",
     "fine": "No spam. Unsubscribe anytime.",
-    "success": "You are in! Check your inbox.",
-    "error": "Something went wrong. Please try again."
+    "success": "You are in! Check your inbox."
   },
   "Stats": {
     "tools": "AI Tools Listed",
@@ -76,4 +75,6 @@
   },
   "Footer": {
     "rights": "2026 AIverse. All rights reserved.",
-    "disclosure": "Affiliate Disclosure: Some links are affiliate links. We may earn a commission at no extra cos
+    "disclosure": "Affiliate Disclosure: Some links are affiliate links. We may earn a commission at no extra cost to you. Rankings are based on genuine analysis."
+  }
+}

@@ -58,4 +58,21 @@ export default function NewsletterCTA() {
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="px-6 py-3 bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] text-white font-bold rounded-xl hover:opacity-90 transit
+                className="px-6 py-3 bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] text-white font-bold rounded-xl hover:opacity-90 transition-all text-sm whitespace-nowrap disabled:opacity-60 flex items-center justify-center gap-2"
+              >
+                {status === 'loading' ? <Loader2 className="w-4 h-4 animate-spin" /> : t('cta')}
+              </button>
+            </form>
+            <p className="text-gray-500 text-xs mt-3">{t('fine')}</p>
+            {status === 'error' && (
+              <div className="flex items-center justify-center gap-2 text-red-400 text-xs mt-2">
+                <AlertCircle className="w-4 h-4" />
+                <span>{t('error')}</span>
+              </div>
+            )}
+          </>
+        )}
+      </div>
+    </section>
+  );
+}

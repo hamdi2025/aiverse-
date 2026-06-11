@@ -65,8 +65,7 @@
     "placeholder": "Votre email...",
     "cta": "S'abonner gratuitement",
     "fine": "Pas de spam. Désinscription facile.",
-    "success": "C'est parti ! Vérifiez votre boîte mail.",
-    "error": "Une erreur est survenue. Réessayez."
+    "success": "C'est parti ! Vérifiez votre boîte mail."
   },
   "Stats": {
     "tools": "Outils IA répertoriés",
@@ -76,4 +75,6 @@
   },
   "Footer": {
     "rights": "2026 AIverse. Tous droits réservés.",
-    "disclosure": "Divulgation d'affiliation : Certains liens sont des liens affiliés. Nous pouvons percevoir une com
+    "disclosure": "Divulgation d'affiliation : Certains liens sont des liens affiliés. Nous pouvons percevoir une commission sans frais supplémentaires pour vous."
+  }
+}
