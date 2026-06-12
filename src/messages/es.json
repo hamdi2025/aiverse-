@@ -65,7 +65,8 @@
     "placeholder": "Tu email...",
     "cta": "Suscribirse gratis",
     "fine": "Sin spam. Cancelación fácil.",
-    "success": "¡Ya estás dentro! Revisa tu bandeja."
+    "success": "¡Ya estás dentro! Revisa tu bandeja.",
+    "error": "Algo salió mal. Inténtalo de nuevo."
   },
   "Stats": {
     "tools": "Herramientas IA listadas",

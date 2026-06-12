@@ -65,7 +65,8 @@
     "placeholder": "Enter your email...",
     "cta": "Subscribe Free",
     "fine": "No spam. Unsubscribe anytime.",
-    "success": "You are in! Check your inbox."
+    "success": "You are in! Check your inbox.",
+    "error": "Something went wrong. Please try again."
   },
   "Stats": {
     "tools": "AI Tools Listed",
