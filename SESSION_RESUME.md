@@ -46,7 +46,7 @@
 - Pages /sign-in et /sign-up : ✅ Clerk connecté (Google SSO actif)
 - Navbar : Sign In | Sign Up | Submit a Tool
 - Page /submit : 4 langues + onglet AI Tool / AI Agent
-- Formulaire → Formspree (besoin ID)
+- Formulaire → ✅ Formspree connecté et testé (soumissions reçues par email + dashboard)
 - Newsletter → ✅ Beehiiv connecté et fonctionnel (abonnés réels confirmés)
 - Paiements ($49 Standard / $99 Sponsor) → ✅ Lemon Squeezy connecté, checkout testé avec succès. ⚠️ Vérification d'identité "Rejected" (Settings > General > Identity verification) → à refaire avec un document valide pour activer les vrais paiements
 
@@ -57,13 +57,7 @@
 
 ## 🔴 PRIORITÉ HAUTE — À FAIRE
 
-1. **Formspree** — ✅ Code modifié : formulaire /submit branché sur Formspree (ID: mvznzpwd, form "Alverse Tool Submission"). ⚠️ Reste à push depuis le terminal Windows :
-   ```
-   cd C:\Users\HAMDI\Desktop\averse
-   git add -A && git commit -m "feat: wire submit form to Formspree" && git push origin main
-   ```
-
-2. **Lemon Squeezy** — Identity verification "Rejected" + bouton "Verify your identity" grisé (ne peut pas resoumettre seul).
+1. **Lemon Squeezy** — Identity verification "Rejected" + bouton "Verify your identity" grisé (ne peut pas resoumettre seul).
    → ✅ Email envoyé au support Lemon Squeezy (hello@lemonsqueezy-mail.com) le 13/06/2026 pour demander la réouverture de la vérification d'identité. En attente de réponse.
    → Une fois réouvert : resoumettre avec document d'identité valide/net, nom identique au compte. Approbation 2-3 jours ouvrables. Ensuite "Test mode" peut être désactivé pour les vrais paiements.
 
