@@ -24,6 +24,11 @@ const TOP_COMPARISONS = [
   'elevenlabs-vs-murf-ai',
   'opus-clip-vs-fliki-ai',
   'reclaim-ai-vs-fireflies-ai',
+  'gamma-app-vs-tome-ai',
+  'beautiful-ai-vs-pitch-deck-ai',
+  'surfer-seo-vs-semrush-ai',
+  'ilovepdf-ai-vs-smallpdf',
+  'tinypng-ai-vs-squoosh-app',
 ];
 
 // Generate static params for top comparisons (others rendered on-demand)

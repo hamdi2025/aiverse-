@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { TOOLS_DATA } from '@/lib/tools';
+import { BLOG_POSTS } from '@/lib/blog';
 
 const BASE_URL = 'https://getaiverse.online';
 const LOCALES = ['en', 'fr', 'es', 'ar'];
@@ -11,7 +12,7 @@ const TOP_COMPARISONS = [
   'claude-vs-gemini','grammarly-ai-vs-quillbot','runway-ml-vs-pika-labs',
   'notion-ai-vs-coda-ai','bolt-new-vs-v0-dev','cursor-vs-github-copilot',
   'elevenlabs-vs-murf-ai','opus-clip-vs-fliki-ai','reclaim-ai-vs-fireflies-ai',
-  'gamma-vs-tome','beautiful-ai-vs-pitch','surfer-seo-vs-semrush-ai',
+  'gamma-app-vs-tome-ai','beautiful-ai-vs-pitch-deck-ai','surfer-seo-vs-semrush-ai',
   'ilovepdf-ai-vs-smallpdf','tinypng-ai-vs-squoosh-app',
 ];
 
@@ -50,5 +51,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...homepages, ...toolPages, ...categoryPages, ...comparePages];
+  const blogIndexPages = LOCALES.map(locale => ({
+    url: `${BASE_URL}/${locale}/blog`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }));
+
+  const blogPostPages = BLOG_POSTS.flatMap(post =>
+    LOCALES.map(locale => ({
+      url: `${BASE_URL}/${locale}/blog/${post.slug}`,
+      lastModified: new Date(post.publishedDate),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    }))
+  );
+
+  return [...homepages, ...toolPages, ...categoryPages, ...comparePages, ...blogIndexPages, ...blogPostPages];
 }
