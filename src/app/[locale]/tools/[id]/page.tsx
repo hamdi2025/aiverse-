@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { TOOLS_DATA } from '@/lib/tools';
+import { TOOL_FAQS } from '@/lib/faq';
 import { buildAffiliateUrl } from '@/lib/affiliate';
 import { getTranslations } from 'next-intl/server';
 import { Star, ArrowUpRight, Tag, Globe, TrendingUp } from 'lucide-react';
@@ -104,12 +105,34 @@ export default async function ToolPage({ params }: Props) {
     tool.pricing === 'Free' ? 'text-green-400' :
     tool.pricing === 'Freemium' ? 'text-amber-400' : 'text-gray-300';
 
+  const faq = TOOL_FAQS[tool.id];
+  const faqJsonLd = faq ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((item) => ({
+      '@type': 'Question',
+      name: item.question[locale] || item.question.en,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer[locale] || item.answer.en,
+      },
+    })),
+  } : null;
+
+  const faqTitle = locale === 'fr' ? 'Questions fréquentes' : locale === 'es' ? 'Preguntas frecuentes' : locale === 'ar' ? 'الأسئلة الشائعة' : 'Frequently Asked Questions';
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-16">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       {/* Back */}
       <a href={`/${locale}`} className="text-sm text-gray-500 hover:text-white transition mb-8 inline-block">
         ← {locale === 'fr' ? 'Retour' : locale === 'es' ? 'Volver' : locale === 'ar' ? 'رجوع' : 'Back'}
@@ -208,6 +231,21 @@ export default async function ToolPage({ params }: Props) {
         </div>
       </div>
     </div>
+
+      {/* FAQ */}
+      {faq && (
+        <div className="mt-8 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
+          <h2 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">❓ {faqTitle}</h2>
+          <div className="space-y-4">
+            {faq.map((item, idx) => (
+              <div key={idx} className="border-b border-white/[0.06] pb-4 last:border-b-0 last:pb-0">
+                <h3 className="text-white font-semibold mb-1.5">{item.question[locale] || item.question.en}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{item.answer[locale] || item.answer.en}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

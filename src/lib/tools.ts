@@ -24,6 +24,7 @@ export interface AITool {
   releaseDate?: string;   // ex: 'Nov 2022'
   lastUpdate?: string;    // ex: 'May 2026'
   verdict?: string;       // recommendation visible après inscription
+  faq?: { question: { en: string; fr: string; es: string; ar: string }; answer: { en: string; fr: string; es: string; ar: string } }[];
 }
 
 export const TOOLS_DATA: AITool[] = [
