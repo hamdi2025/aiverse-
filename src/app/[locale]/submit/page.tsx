@@ -139,10 +139,36 @@ export default function SubmitPage() {
 
   const [formData, setFormData] = useState({ name: '', url: '', category: 'tool', email: '', description: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(false);
+
+  const errorMsg: Record<Locale, string> = {
+    en: 'Something went wrong. Please try again or email us directly.',
+    fr: "Une erreur s'est produite. Réessayez ou contactez-nous par email.",
+    es: 'Algo salió mal. Inténtalo de nuevo o contáctanos por email.',
+    ar: 'حدث خطأ ما. حاول مرة أخرى أو راسلنا عبر البريد الإلكتروني.',
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setError(false);
+    try {
+      const res = await fetch('https://formspree.io/f/mvznzpwd', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -279,10 +305,11 @@ export default function SubmitPage() {
                 className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-violet-500 resize-none" />
             </div>
             <div className="md:col-span-2">
-              <button type="submit"
-                className="w-full py-3 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-bold text-sm transition flex items-center justify-center gap-2">
-                <ArrowRight className="w-4 h-4" /> {t.submitBtn}
+              <button type="submit" disabled={submitting}
+                className="w-full py-3 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-bold text-sm transition flex items-center justify-center gap-2 disabled:opacity-60">
+                <ArrowRight className="w-4 h-4" /> {submitting ? '...' : t.submitBtn}
               </button>
+              {error && <p className="text-xs text-red-400 mt-2 text-center">{errorMsg[locale]}</p>}
               <p className="text-xs text-gray-500 mt-3 text-center">{t.fine}</p>
             </div>
           </form>

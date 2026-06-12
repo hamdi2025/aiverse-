@@ -1,11 +1,12 @@
 # 📋 RÉSUMÉ AIVERSE — À LIRE EN DÉBUT DE SESSION
 
 ## 🌐 Projet
-- **URL** : https://aiverse-lemon.vercel.app
+- **URL principale** : https://getaiverse.online (nouveau domaine, SSL + Search Console OK)
+- **Ancienne URL** : https://aiverse-lemon.vercel.app (toujours en ligne via Vercel)
 - **Repo** : https://github.com/hamdi2025/aiverse-.git
 - **Dossier local** : C:\Users\HAMDI\Desktop\averse
 - **Email** : hamdi.abdwd@gmail.com
-- **AdSense Publisher ID** : ca-pub-5384145624117299
+- **AdSense Publisher ID** : ca-pub-5384145624117299 (CMP configuré, en attente de validation Google)
 
 ---
 
@@ -16,28 +17,38 @@
 - Liens affiliés sur ~35 outils
 - Badge 🔥 Trending automatique (views ≥ 20k)
 - StatsBar : 200+, 12K+, 8 catégories, 4 langues
+- 32 outils enrichis (pros/cons/tags/cas d'usage/verdict/société/API/app mobile)
 
 ### Hero & SEO
 - H1 : "+50 AI Agents (violet) & +2 400 AI Tools (orange)"
 - Badge 4 couleurs (violet/cyan/amber/vert)
 - Mots colorés dans le subtitle
-- JSON-LD sur toutes les pages /tools/[id]
-- Sitemap dynamique (200 outils + 15 comparaisons)
+- JSON-LD sur toutes les pages /tools/[id], /compare/[slug] et /blog/[slug]
+- Sitemap dynamique (200 outils + 20 comparaisons + pages blog)
 - 4 langues : EN, FR, ES, AR
+- Domaine getaiverse.online vérifié sur Google Search Console, indexation demandée
 
 ### Pages /compare
 - Système dynamique /compare/[tool1]-vs-[tool2]
-- 15 comparaisons pré-générées
+- 20 comparaisons pré-générées (15 → 20, 2 slugs cassés corrigés)
 - CompareWidget interactif sur homepage
 - Boutons "Comparer avec" sur chaque page /tools/[id]
 
+### Blog (nouveau)
+- /blog (liste) + /blog/[slug] (article), 4 langues, SEO + JSON-LD
+- 2 premiers articles : "Best AI Writing Assistants 2026" et "Best AI Image Generators 2026"
+- Liens internes vers /tools et /compare (renforce le SEO + les clics affiliés)
+
+### Newsletter & Inscription
+- Beehiiv branché via /api/subscribe (sans redirection)
+
 ### Inscription
-- Pages /sign-in et /sign-up (UI prête, Clerk pas encore connecté)
+- Pages /sign-in et /sign-up : ✅ Clerk connecté (Google SSO actif)
 - Navbar : Sign In | Sign Up | Submit a Tool
 - Page /submit : 4 langues + onglet AI Tool / AI Agent
 - Formulaire → Formspree (besoin ID)
-- Newsletter → Beehiiv (besoin Publication ID)
-- Liens Stripe → mailto temporaire
+- Newsletter → ✅ Beehiiv connecté et fonctionnel (abonnés réels confirmés)
+- Paiements ($49 Standard / $99 Sponsor) → ✅ Lemon Squeezy connecté, checkout testé avec succès. ⚠️ Vérification d'identité "Rejected" (Settings > General > Identity verification) → à refaire avec un document valide pour activer les vrais paiements
 
 ### Analytics
 - @vercel/analytics + @vercel/speed-insights installés et activés
@@ -46,35 +57,26 @@
 
 ## 🔴 PRIORITÉ HAUTE — À FAIRE
 
-1. **Clerk** — vrais comptes Google/Email
-   - Aller sur clerk.com → créer app → copier les 2 clés
-   - Ajouter dans Vercel > Settings > Environment Variables :
-     - NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
-     - CLERK_SECRET_KEY
+1. **Formspree** — ✅ Code modifié : formulaire /submit branché sur Formspree (ID: mvznzpwd, form "Alverse Tool Submission"). ⚠️ Reste à push depuis le terminal Windows :
+   ```
+   cd C:\Users\HAMDI\Desktop\averse
+   git add -A && git commit -m "feat: wire submit form to Formspree" && git push origin main
+   ```
 
-2. **Formspree** — vraies soumissions d'outils
-   - Aller sur formspree.io → New Form → copier l'ID
-   - Ajouter dans Vercel > Env Variables :
-     - NEXT_PUBLIC_FORMSPREE_ID = xxxxxid
-
-3. **Beehiiv** — newsletter fonctionnelle
-   - Aller sur beehiiv.com → Settings → Publication ID
-   - Ajouter dans Vercel > Env Variables :
-     - NEXT_PUBLIC_BEEHIIV_PUB_ID = pub_xxxxx
-
-4. **Stripe** — paiements réels ($49 Standard / $99 Sponsor)
-   - Créer compte Stripe → Payment Links
-   - Remplacer les mailto: dans /submit/page.tsx
+2. **Lemon Squeezy** — Identity verification "Rejected" + bouton "Verify your identity" grisé (ne peut pas resoumettre seul).
+   → ✅ Email envoyé au support Lemon Squeezy (hello@lemonsqueezy-mail.com) le 13/06/2026 pour demander la réouverture de la vérification d'identité. En attente de réponse.
+   → Une fois réouvert : resoumettre avec document d'identité valide/net, nom identique au compte. Approbation 2-3 jours ouvrables. Ensuite "Test mode" peut être désactivé pour les vrais paiements.
 
 ---
 
 ## 🟡 PRIORITÉ MOYENNE
 
-- **Domaine custom** : acheter aiverse.ai ou aiverse.io (~$10-15/an)
-- **Blog SEO** : articles "Best AI Tools 2026", "Top AI Agents"
+- **Domaine custom** : ✅ fait (getaiverse.online)
+- **Blog SEO** : ✅ 2 articles publiés, en ajouter d'autres (coding assistants, AI agents, AI video, etc.)
 - **Product Hunt** : préparer le launch
 - **Compteur visiteurs** : ajouter dans StatsBar via Vercel Analytics API
-- **Pages /compare** supplémentaires (on peut en faire 50+)
+- **Pages /compare** supplémentaires : 20 faites, on peut monter à 50+
+- **Réseaux sociaux** : créer comptes X/Twitter, Pinterest, TikTok, Reddit pour partager les comparatifs et articles de blog
 
 ---
 
