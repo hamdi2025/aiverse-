@@ -1548,4 +1548,884 @@ export const TOOL_FAQS: Record<string, FAQItem[]> = {
       },
     },
   ],
+  writesonic: [
+    {
+      question: {
+        en: 'Is Writesonic free?',
+        fr: 'Writesonic est-il gratuit ?',
+        es: '¿Es Writesonic gratis?',
+        ar: 'هل Writesonic مجاني؟',
+      },
+      answer: {
+        en: 'Writesonic offers a free trial with limited words. Paid plans unlock unlimited words on some tiers, plus access to AI article writers, AI chat, and SEO tools.',
+        fr: 'Writesonic propose un essai gratuit avec un nombre limité de mots. Les plans payants débloquent des mots illimités sur certains paliers, ainsi que l\'accès aux rédacteurs d\'articles IA, au chat IA et aux outils SEO.',
+        es: 'Writesonic ofrece una prueba gratuita con palabras limitadas. Los planes de pago desbloquean palabras ilimitadas en algunos niveles, además del acceso a redactores de artículos con IA, chat de IA y herramientas SEO.',
+        ar: 'يوفر Writesonic تجربة مجانية بعدد كلمات محدود. تفتح الخطط المدفوعة كلمات غير محدودة في بعض المستويات، بالإضافة إلى الوصول إلى كاتب المقالات بالذكاء الاصطناعي ودردشة الذكاء الاصطناعي وأدوات SEO.',
+      },
+    },
+    {
+      question: {
+        en: 'What is Writesonic best for?',
+        fr: 'À quoi Writesonic sert-il le mieux ?',
+        es: '¿Para qué es mejor Writesonic?',
+        ar: 'لماذا يُستخدم Writesonic بشكل أفضل؟',
+      },
+      answer: {
+        en: 'Writesonic specializes in long-form SEO articles, with a workflow that researches keywords, builds an outline, and writes a full optimized blog post in one pass.',
+        fr: 'Writesonic se spécialise dans les articles SEO longs, avec un workflow qui recherche les mots-clés, construit un plan et rédige un article de blog complet et optimisé en une seule fois.',
+        es: 'Writesonic se especializa en artículos SEO largos, con un flujo de trabajo que investiga palabras clave, crea un esquema y redacta un post de blog completo y optimizado de una vez.',
+        ar: 'يتخصص Writesonic في المقالات الطويلة المحسّنة لمحركات البحث، بسير عمل يبحث عن الكلمات المفتاحية، يبني مخططاً، ويكتب مقالة مدونة كاملة ومحسّنة دفعة واحدة.',
+      },
+    },
+    {
+      question: {
+        en: 'Does Writesonic check for plagiarism?',
+        fr: 'Writesonic vérifie-t-il le plagiat ?',
+        es: '¿Writesonic verifica el plagio?',
+        ar: 'هل يتحقق Writesonic من الاستلال؟',
+      },
+      answer: {
+        en: 'Yes, higher-tier Writesonic plans include a built-in plagiarism checker so you can verify originality before publishing AI-generated content.',
+        fr: 'Oui, les plans Writesonic supérieurs incluent un vérificateur de plagiat intégré pour s\'assurer de l\'originalité avant de publier du contenu généré par IA.',
+        es: 'Sí, los planes superiores de Writesonic incluyen un verificador de plagio integrado para confirmar la originalidad antes de publicar contenido generado por IA.',
+        ar: 'نعم، تتضمن خطط Writesonic الأعلى فاحص استلال مدمجاً للتحقق من الأصالة قبل نشر المحتوى المُولَّد بالذكاء الاصطناعي.',
+      },
+    },
+  ],
+  deepl: [
+    {
+      question: {
+        en: 'Is DeepL free?',
+        fr: 'DeepL est-il gratuit ?',
+        es: '¿Es DeepL gratis?',
+        ar: 'هل DeepL مجاني؟',
+      },
+      answer: {
+        en: 'Yes, DeepL has a free web translator with a character limit per request. DeepL Pro removes the limit, allows document translation, and offers an API for developers.',
+        fr: 'Oui, DeepL propose un traducteur web gratuit avec une limite de caractères par requête. DeepL Pro supprime cette limite, permet la traduction de documents et offre une API pour les développeurs.',
+        es: 'Sí, DeepL tiene un traductor web gratuito con un límite de caracteres por solicitud. DeepL Pro elimina el límite, permite traducir documentos y ofrece una API para desarrolladores.',
+        ar: 'نعم، يوفر DeepL مترجماً مجانياً على الويب بحد أحرف لكل طلب. تزيل نسخة DeepL Pro هذا الحد، وتتيح ترجمة المستندات، وتوفر واجهة برمجة تطبيقات للمطورين.',
+      },
+    },
+    {
+      question: {
+        en: 'Is DeepL more accurate than Google Translate?',
+        fr: 'DeepL est-il plus précis que Google Traduction ?',
+        es: '¿Es DeepL más preciso que Google Translate?',
+        ar: 'هل DeepL أكثر دقة من Google Translate؟',
+      },
+      answer: {
+        en: 'DeepL is widely praised for producing more natural, context-aware translations, especially for European languages, though Google Translate supports more languages overall.',
+        fr: 'DeepL est largement reconnu pour produire des traductions plus naturelles et contextuelles, en particulier pour les langues européennes, bien que Google Traduction prenne en charge davantage de langues au total.',
+        es: 'DeepL es muy elogiado por producir traducciones más naturales y contextuales, especialmente para idiomas europeos, aunque Google Translate admite más idiomas en general.',
+        ar: 'يُحظى DeepL بتقدير واسع لتقديم ترجمات أكثر طبيعية ووعياً بالسياق، خاصة للغات الأوروبية، على الرغم من أن Google Translate يدعم عدداً أكبر من اللغات بشكل عام.',
+      },
+    },
+    {
+      question: {
+        en: 'Can DeepL translate documents?',
+        fr: 'DeepL peut-il traduire des documents ?',
+        es: '¿Puede DeepL traducir documentos?',
+        ar: 'هل يمكن لـ DeepL ترجمة المستندات؟',
+      },
+      answer: {
+        en: 'Yes, DeepL can translate Word, PowerPoint, and PDF files while preserving the original formatting, available with usage limits on the free plan and higher limits on Pro.',
+        fr: 'Oui, DeepL peut traduire des fichiers Word, PowerPoint et PDF en préservant la mise en forme d\'origine, avec des limites d\'utilisation sur le plan gratuit et des limites plus élevées sur Pro.',
+        es: 'Sí, DeepL puede traducir archivos de Word, PowerPoint y PDF conservando el formato original, con límites de uso en el plan gratuito y límites más altos en Pro.',
+        ar: 'نعم، يمكن لـ DeepL ترجمة ملفات Word وPowerPoint وPDF مع الحفاظ على التنسيق الأصلي، بحدود استخدام في الخطة المجانية وحدود أعلى في Pro.',
+      },
+    },
+  ],
+  flux: [
+    {
+      question: {
+        en: 'Is FLUX.1 free?',
+        fr: 'FLUX.1 est-il gratuit ?',
+        es: '¿Es FLUX.1 gratis?',
+        ar: 'هل FLUX.1 مجاني؟',
+      },
+      answer: {
+        en: 'FLUX.1 has an open-weight "schnell" version that is free to download and run, while the higher-quality "pro" and "dev" versions are accessed through paid APIs and hosted platforms.',
+        fr: 'FLUX.1 dispose d\'une version open-weight "schnell" gratuite à télécharger et exécuter, tandis que les versions "pro" et "dev" de meilleure qualité sont accessibles via des API payantes et des plateformes hébergées.',
+        es: 'FLUX.1 tiene una versión "schnell" de peso abierto gratuita para descargar y ejecutar, mientras que las versiones "pro" y "dev" de mayor calidad se acceden mediante APIs de pago y plataformas alojadas.',
+        ar: 'يحتوي FLUX.1 على نسخة "schnell" مفتوحة الأوزان مجانية للتنزيل والتشغيل، بينما يتم الوصول إلى نسختي "pro" و"dev" الأعلى جودة عبر واجهات برمجة تطبيقات مدفوعة ومنصات مستضافة.',
+      },
+    },
+    {
+      question: {
+        en: 'How does FLUX.1 compare to Midjourney?',
+        fr: 'Comment FLUX.1 se compare-t-il à Midjourney ?',
+        es: '¿Cómo se compara FLUX.1 con Midjourney?',
+        ar: 'كيف يُقارن FLUX.1 بـ Midjourney؟',
+      },
+      answer: {
+        en: 'FLUX.1 is known for strong prompt accuracy and realistic detail, and unlike Midjourney it offers open-weight versions you can self-host, giving more flexibility for developers.',
+        fr: 'FLUX.1 est reconnu pour sa grande précision de suivi des prompts et son détail réaliste, et contrairement à Midjourney, il propose des versions open-weight auto-hébergeables, offrant plus de flexibilité aux développeurs.',
+        es: 'FLUX.1 es conocido por su gran precisión en seguir indicaciones y detalle realista, y a diferencia de Midjourney, ofrece versiones de peso abierto que puedes alojar tú mismo, dando más flexibilidad a los desarrolladores.',
+        ar: 'يُعرف FLUX.1 بدقته العالية في اتباع الأوامر والتفاصيل الواقعية، وبخلاف Midjourney، يقدم نسخاً مفتوحة الأوزان يمكن استضافتها ذاتياً، مما يوفر مرونة أكبر للمطورين.',
+      },
+    },
+    {
+      question: {
+        en: 'Where can I use FLUX.1?',
+        fr: 'Où peut-on utiliser FLUX.1 ?',
+        es: '¿Dónde puedo usar FLUX.1?',
+        ar: 'أين يمكن استخدام FLUX.1؟',
+      },
+      answer: {
+        en: 'FLUX.1 is available through platforms like Replicate, Hugging Face, and various AI image generators that have integrated it, as well as locally via ComfyUI for the open-weight versions.',
+        fr: 'FLUX.1 est disponible via des plateformes comme Replicate, Hugging Face et divers générateurs d\'images IA qui l\'ont intégré, ainsi qu\'en local via ComfyUI pour les versions open-weight.',
+        es: 'FLUX.1 está disponible a través de plataformas como Replicate, Hugging Face y varios generadores de imágenes de IA que lo han integrado, así como localmente vía ComfyUI para las versiones de peso abierto.',
+        ar: 'يتوفر FLUX.1 عبر منصات مثل Replicate وHugging Face ومولدات صور ذكاء اصطناعي متعددة دمجته، وكذلك محلياً عبر ComfyUI للنسخ مفتوحة الأوزان.',
+      },
+    },
+  ],
+  ideogram: [
+    {
+      question: {
+        en: 'Is Ideogram free?',
+        fr: 'Ideogram est-il gratuit ?',
+        es: '¿Es Ideogram gratis?',
+        ar: 'هل Ideogram مجاني؟',
+      },
+      answer: {
+        en: 'Yes, Ideogram offers a free plan with a limited number of daily image generations. Paid plans increase generation limits and add private generations.',
+        fr: 'Oui, Ideogram propose un plan gratuit avec un nombre limité de générations d\'images par jour. Les plans payants augmentent les limites de génération et ajoutent des générations privées.',
+        es: 'Sí, Ideogram ofrece un plan gratuito con un número limitado de generaciones de imágenes al día. Los planes de pago aumentan los límites de generación y añaden generaciones privadas.',
+        ar: 'نعم، يوفر Ideogram خطة مجانية بعدد محدود من توليدات الصور يومياً. تزيد الخطط المدفوعة حدود التوليد وتضيف توليدات خاصة.',
+      },
+    },
+    {
+      question: {
+        en: 'What makes Ideogram different from other image generators?',
+        fr: 'Qu\'est-ce qui différencie Ideogram des autres générateurs d\'images ?',
+        es: '¿Qué diferencia a Ideogram de otros generadores de imágenes?',
+        ar: 'ما الذي يميز Ideogram عن مولدات الصور الأخرى؟',
+      },
+      answer: {
+        en: 'Ideogram is particularly strong at rendering legible, accurately spelled text within images, which makes it popular for logos, posters, and designs that include words.',
+        fr: 'Ideogram excelle particulièrement dans le rendu de texte lisible et correctement orthographié dans les images, ce qui le rend populaire pour les logos, affiches et designs comportant du texte.',
+        es: 'Ideogram destaca especialmente en renderizar texto legible y correctamente escrito dentro de las imágenes, lo que lo hace popular para logos, carteles y diseños que incluyen palabras.',
+        ar: 'يتميز Ideogram بشكل خاص في عرض نص واضح ومكتوب بشكل صحيح داخل الصور، مما يجعله شائعاً للشعارات والملصقات والتصاميم التي تتضمن كلمات.',
+      },
+    },
+    {
+      question: {
+        en: 'Can I use Ideogram images commercially?',
+        fr: 'Peut-on utiliser les images Ideogram à des fins commerciales ?',
+        es: '¿Puedo usar las imágenes de Ideogram comercialmente?',
+        ar: 'هل يمكن استخدام صور Ideogram تجارياً؟',
+      },
+      answer: {
+        en: 'Paid plan subscribers generally receive commercial usage rights to the images they generate — check the current plan details for specifics on licensing and ownership.',
+        fr: 'Les abonnés aux plans payants reçoivent généralement des droits d\'usage commercial sur les images qu\'ils génèrent — consultez les détails actuels du plan pour les spécificités de licence et de propriété.',
+        es: 'Los suscriptores de planes de pago generalmente reciben derechos de uso comercial sobre las imágenes que generan — consulta los detalles actuales del plan para conocer las especificaciones de licencia y propiedad.',
+        ar: 'يحصل مشتركو الخطط المدفوعة عموماً على حقوق استخدام تجاري للصور التي يولّدونها — تحقق من تفاصيل الخطة الحالية لمعرفة تفاصيل الترخيص والملكية.',
+      },
+    },
+  ],
+  'leonardo-ai': [
+    {
+      question: {
+        en: 'Is Leonardo AI free?',
+        fr: 'Leonardo AI est-il gratuit ?',
+        es: '¿Es Leonardo AI gratis?',
+        ar: 'هل Leonardo AI مجاني؟',
+      },
+      answer: {
+        en: 'Yes, Leonardo AI offers a free daily allowance of generation credits. Paid plans provide more credits, faster generation, and access to private models.',
+        fr: 'Oui, Leonardo AI propose une allocation quotidienne gratuite de crédits de génération. Les plans payants offrent plus de crédits, une génération plus rapide et l\'accès à des modèles privés.',
+        es: 'Sí, Leonardo AI ofrece una asignación diaria gratuita de créditos de generación. Los planes de pago proporcionan más créditos, generación más rápida y acceso a modelos privados.',
+        ar: 'نعم، يوفر Leonardo AI حصة يومية مجانية من أرصدة التوليد. تقدم الخطط المدفوعة أرصدة أكثر وتوليداً أسرع والوصول إلى نماذج خاصة.',
+      },
+    },
+    {
+      question: {
+        en: 'What is Leonardo AI used for?',
+        fr: 'À quoi sert Leonardo AI ?',
+        es: '¿Para qué se usa Leonardo AI?',
+        ar: 'لماذا يُستخدم Leonardo AI؟',
+      },
+      answer: {
+        en: 'Leonardo AI is popular for generating game assets, character designs, and concept art, with fine-tuned models tailored to specific visual styles.',
+        fr: 'Leonardo AI est populaire pour générer des assets de jeu, des designs de personnages et des concept arts, avec des modèles affinés adaptés à des styles visuels spécifiques.',
+        es: 'Leonardo AI es popular para generar assets de videojuegos, diseños de personajes y arte conceptual, con modelos ajustados a estilos visuales específicos.',
+        ar: 'يحظى Leonardo AI بشعبية لتوليد أصول الألعاب وتصاميم الشخصيات والفن المفهومي، بنماذج مضبوطة بدقة لأنماط بصرية محددة.',
+      },
+    },
+    {
+      question: {
+        en: 'Can I train my own model on Leonardo AI?',
+        fr: 'Peut-on entraîner son propre modèle sur Leonardo AI ?',
+        es: '¿Puedo entrenar mi propio modelo en Leonardo AI?',
+        ar: 'هل يمكنني تدريب نموذجي الخاص على Leonardo AI؟',
+      },
+      answer: {
+        en: 'Yes, Leonardo AI lets you train custom models on your own images to consistently generate a specific character, product, or art style.',
+        fr: 'Oui, Leonardo AI permet d\'entraîner des modèles personnalisés sur vos propres images pour générer de manière cohérente un personnage, produit ou style artistique spécifique.',
+        es: 'Sí, Leonardo AI permite entrenar modelos personalizados con tus propias imágenes para generar de forma consistente un personaje, producto o estilo artístico específico.',
+        ar: 'نعم، يتيح Leonardo AI تدريب نماذج مخصصة على صورك الخاصة لتوليد شخصية أو منتج أو نمط فني محدد بشكل متناسق.',
+      },
+    },
+  ],
+  'replit-ai': [
+    {
+      question: {
+        en: 'Is Replit AI free?',
+        fr: 'Replit AI est-il gratuit ?',
+        es: '¿Es Replit AI gratis?',
+        ar: 'هل Replit AI مجاني؟',
+      },
+      answer: {
+        en: 'Replit offers a free plan with limited AI usage (Agent and Assistant). The paid Core plan includes monthly credits for AI-powered app building and deployment.',
+        fr: 'Replit propose un plan gratuit avec un usage IA limité (Agent et Assistant). Le plan Core payant inclut des crédits mensuels pour la création et le déploiement d\'applications avec IA.',
+        es: 'Replit ofrece un plan gratuito con uso limitado de IA (Agent y Assistant). El plan Core de pago incluye créditos mensuales para crear y desplegar apps con IA.',
+        ar: 'يوفر Replit خطة مجانية باستخدام محدود للذكاء الاصطناعي (Agent وAssistant). تتضمن خطة Core المدفوعة أرصدة شهرية لبناء التطبيقات ونشرها بالذكاء الاصطناعي.',
+      },
+    },
+    {
+      question: {
+        en: 'What is Replit Agent?',
+        fr: 'Qu\'est-ce que Replit Agent ?',
+        es: '¿Qué es Replit Agent?',
+        ar: 'ما هو Replit Agent؟',
+      },
+      answer: {
+        en: 'Replit Agent can build a full application from a description — setting up the project, writing code, installing packages, and deploying it — all within the browser-based Replit environment.',
+        fr: 'Replit Agent peut construire une application complète à partir d\'une description — configuration du projet, écriture du code, installation des paquets et déploiement — tout dans l\'environnement Replit basé sur le navigateur.',
+        es: 'Replit Agent puede construir una aplicación completa a partir de una descripción — configurando el proyecto, escribiendo código, instalando paquetes y desplegándola — todo dentro del entorno de Replit basado en el navegador.',
+        ar: 'يمكن لـ Replit Agent بناء تطبيق كامل من وصف — إعداد المشروع، كتابة الكود، تثبيت الحزم، ونشره — كل ذلك ضمن بيئة Replit المستندة إلى المتصفح.',
+      },
+    },
+    {
+      question: {
+        en: 'Do I need to install anything to use Replit?',
+        fr: 'Faut-il installer quelque chose pour utiliser Replit ?',
+        es: '¿Necesito instalar algo para usar Replit?',
+        ar: 'هل أحتاج إلى تثبيت أي شيء لاستخدام Replit؟',
+      },
+      answer: {
+        en: 'No, Replit runs entirely in the browser, including the code editor, terminal, and AI tools, so you can build and deploy apps from any device with no setup.',
+        fr: 'Non, Replit fonctionne entièrement dans le navigateur, y compris l\'éditeur de code, le terminal et les outils IA, vous pouvez donc créer et déployer des applications depuis n\'importe quel appareil sans configuration.',
+        es: 'No, Replit funciona completamente en el navegador, incluyendo el editor de código, la terminal y las herramientas de IA, por lo que puedes crear y desplegar apps desde cualquier dispositivo sin configuración.',
+        ar: 'لا، يعمل Replit بالكامل في المتصفح، بما في ذلك محرر الكود والطرفية وأدوات الذكاء الاصطناعي، فيمكنك بناء التطبيقات ونشرها من أي جهاز دون إعداد.',
+      },
+    },
+  ],
+  tabnine: [
+    {
+      question: {
+        en: 'Is Tabnine free?',
+        fr: 'Tabnine est-il gratuit ?',
+        es: '¿Es Tabnine gratis?',
+        ar: 'هل Tabnine مجاني؟',
+      },
+      answer: {
+        en: 'Yes, Tabnine has a free tier with basic AI code completions. Paid plans add more advanced chat, full-function generation, and team-trained models on private codebases.',
+        fr: 'Oui, Tabnine propose un palier gratuit avec des complétions de code IA basiques. Les plans payants ajoutent un chat plus avancé, la génération de fonctions complètes et des modèles entraînés sur le code privé de l\'équipe.',
+        es: 'Sí, Tabnine tiene un nivel gratuito con completados de código de IA básicos. Los planes de pago añaden chat más avanzado, generación de funciones completas y modelos entrenados con el código privado del equipo.',
+        ar: 'نعم، يوفر Tabnine مستوى مجانياً بإكمالات كود أساسية بالذكاء الاصطناعي. تضيف الخطط المدفوعة دردشة أكثر تطوراً، وتوليد دوال كاملة، ونماذج مدربة على كود الفريق الخاص.',
+      },
+    },
+    {
+      question: {
+        en: 'Is Tabnine good for privacy and security?',
+        fr: 'Tabnine est-il bon pour la confidentialité et la sécurité ?',
+        es: '¿Es Tabnine bueno para la privacidad y seguridad?',
+        ar: 'هل Tabnine جيد للخصوصية والأمان؟',
+      },
+      answer: {
+        en: 'Yes, Tabnine is often chosen by enterprises because it offers on-premises and private deployment options, ensuring code never leaves the company\'s infrastructure.',
+        fr: 'Oui, Tabnine est souvent choisi par les entreprises car il offre des options de déploiement sur site et privé, garantissant que le code ne quitte jamais l\'infrastructure de l\'entreprise.',
+        es: 'Sí, las empresas suelen elegir Tabnine porque ofrece opciones de implementación local y privada, garantizando que el código nunca salga de la infraestructura de la empresa.',
+        ar: 'نعم، تختار الشركات Tabnine غالباً لأنه يقدم خيارات نشر محلية وخاصة، مما يضمن عدم خروج الكود من بنية الشركة التحتية.',
+      },
+    },
+    {
+      question: {
+        en: 'Which editors does Tabnine support?',
+        fr: 'Quels éditeurs Tabnine prend-il en charge ?',
+        es: '¿Qué editores admite Tabnine?',
+        ar: 'ما هي المحررات التي يدعمها Tabnine؟',
+      },
+      answer: {
+        en: 'Tabnine works as an extension in VS Code, JetBrains IDEs, Visual Studio, Eclipse, Vim, and several other popular editors.',
+        fr: 'Tabnine fonctionne comme une extension dans VS Code, les IDE JetBrains, Visual Studio, Eclipse, Vim et plusieurs autres éditeurs populaires.',
+        es: 'Tabnine funciona como una extensión en VS Code, los IDE de JetBrains, Visual Studio, Eclipse, Vim y otros editores populares.',
+        ar: 'يعمل Tabnine كإضافة في VS Code وبيئات JetBrains وVisual Studio وEclipse وVim ومحررات شائعة أخرى.',
+      },
+    },
+  ],
+  codeium: [
+    {
+      question: {
+        en: 'Is Codeium free?',
+        fr: 'Codeium est-il gratuit ?',
+        es: '¿Es Codeium gratis?',
+        ar: 'هل Codeium مجاني؟',
+      },
+      answer: {
+        en: 'Yes, Codeium\'s individual plan is free with unlimited basic code completions. Paid Teams and Enterprise plans add advanced chat models and admin controls.',
+        fr: 'Oui, le plan individuel de Codeium est gratuit avec des complétions de code basiques illimitées. Les plans Teams et Enterprise payants ajoutent des modèles de chat avancés et des contrôles d\'administration.',
+        es: 'Sí, el plan individual de Codeium es gratuito con completados de código básicos ilimitados. Los planes de pago Teams y Enterprise añaden modelos de chat avanzados y controles de administración.',
+        ar: 'نعم، الخطة الفردية لـ Codeium مجانية مع إكمالات كود أساسية غير محدودة. تضيف خطط Teams وEnterprise المدفوعة نماذج دردشة متقدمة وأدوات تحكم إدارية.',
+      },
+    },
+    {
+      question: {
+        en: 'What can Codeium do besides autocomplete?',
+        fr: 'Que peut faire Codeium en plus de l\'autocomplétion ?',
+        es: '¿Qué puede hacer Codeium además de autocompletar?',
+        ar: 'ما الذي يمكن لـ Codeium فعله إلى جانب الإكمال التلقائي؟',
+      },
+      answer: {
+        en: 'Codeium also includes an in-editor AI chat for explaining code, generating tests, refactoring, and a search feature to find relevant code across your repository.',
+        fr: 'Codeium inclut aussi un chat IA intégré à l\'éditeur pour expliquer le code, générer des tests, refactoriser, ainsi qu\'une fonction de recherche pour trouver du code pertinent dans votre dépôt.',
+        es: 'Codeium también incluye un chat de IA dentro del editor para explicar código, generar pruebas, refactorizar, y una función de búsqueda para encontrar código relevante en tu repositorio.',
+        ar: 'يتضمن Codeium أيضاً دردشة ذكاء اصطناعي داخل المحرر لشرح الكود وتوليد الاختبارات وإعادة الهيكلة، وميزة بحث للعثور على الكود ذي الصلة في مستودعك.',
+      },
+    },
+    {
+      question: {
+        en: 'Which editors and languages does Codeium support?',
+        fr: 'Quels éditeurs et langages Codeium prend-il en charge ?',
+        es: '¿Qué editores y lenguajes admite Codeium?',
+        ar: 'ما هي المحررات واللغات التي يدعمها Codeium؟',
+      },
+      answer: {
+        en: 'Codeium supports over 70 programming languages and integrates with VS Code, JetBrains IDEs, Vim/Neovim, Jupyter notebooks, and more.',
+        fr: 'Codeium prend en charge plus de 70 langages de programmation et s\'intègre à VS Code, aux IDE JetBrains, Vim/Neovim, aux notebooks Jupyter et plus encore.',
+        es: 'Codeium admite más de 70 lenguajes de programación y se integra con VS Code, los IDE de JetBrains, Vim/Neovim, notebooks de Jupyter y más.',
+        ar: 'يدعم Codeium أكثر من 70 لغة برمجة ويتكامل مع VS Code وبيئات JetBrains وVim/Neovim ودفاتر Jupyter وغيرها.',
+      },
+    },
+  ],
+  'kling-ai': [
+    {
+      question: {
+        en: 'Is Kling AI free?',
+        fr: 'Kling AI est-il gratuit ?',
+        es: '¿Es Kling AI gratis?',
+        ar: 'هل Kling AI مجاني؟',
+      },
+      answer: {
+        en: 'Kling AI offers a free tier with daily credits for generating short videos. Paid plans provide more credits, longer videos, and faster generation speeds.',
+        fr: 'Kling AI propose un palier gratuit avec des crédits quotidiens pour générer de courtes vidéos. Les plans payants offrent plus de crédits, des vidéos plus longues et une génération plus rapide.',
+        es: 'Kling AI ofrece un nivel gratuito con créditos diarios para generar videos cortos. Los planes de pago proporcionan más créditos, videos más largos y generación más rápida.',
+        ar: 'يوفر Kling AI مستوى مجانياً بأرصدة يومية لتوليد فيديوهات قصيرة. تقدم الخطط المدفوعة أرصدة أكثر وفيديوهات أطول وسرعة توليد أعلى.',
+      },
+    },
+    {
+      question: {
+        en: 'What can Kling AI generate?',
+        fr: 'Que peut générer Kling AI ?',
+        es: '¿Qué puede generar Kling AI?',
+        ar: 'ما الذي يمكن لـ Kling AI توليده؟',
+      },
+      answer: {
+        en: 'Kling AI generates high-quality video clips from text prompts or images, with realistic physics and motion, and supports extending clips to longer durations.',
+        fr: 'Kling AI génère des clips vidéo de haute qualité à partir de prompts texte ou d\'images, avec une physique et un mouvement réalistes, et permet d\'étendre les clips à des durées plus longues.',
+        es: 'Kling AI genera clips de video de alta calidad a partir de prompts de texto o imágenes, con física y movimiento realistas, y permite extender los clips a duraciones más largas.',
+        ar: 'يولّد Kling AI مقاطع فيديو عالية الجودة من أوامر نصية أو صور، بفيزياء وحركة واقعية، ويدعم تمديد المقاطع لمدد أطول.',
+      },
+    },
+    {
+      question: {
+        en: 'How does Kling AI compare to Sora and Runway?',
+        fr: 'Comment Kling AI se compare-t-il à Sora et Runway ?',
+        es: '¿Cómo se compara Kling AI con Sora y Runway?',
+        ar: 'كيف يُقارن Kling AI بـ Sora وRunway؟',
+      },
+      answer: {
+        en: 'Kling AI is often praised for realistic motion and longer generation lengths compared to some competitors, while access and pricing models vary across these AI video tools — worth comparing for your specific use case.',
+        fr: 'Kling AI est souvent salué pour son mouvement réaliste et ses durées de génération plus longues par rapport à certains concurrents, tandis que l\'accès et les modèles de prix varient selon ces outils vidéo IA — à comparer selon votre usage.',
+        es: 'Kling AI es a menudo elogiado por su movimiento realista y duraciones de generación más largas comparado con algunos competidores, mientras que el acceso y los modelos de precios varían entre estas herramientas de video con IA — vale la pena comparar según tu caso de uso.',
+        ar: 'يُحظى Kling AI غالباً بالتقدير لحركته الواقعية ومدة التوليد الأطول مقارنة ببعض المنافسين، بينما تختلف نماذج الوصول والتسعير بين أدوات الفيديو هذه — يستحق المقارنة حسب استخدامك.',
+      },
+    },
+  ],
+  'pika-labs': [
+    {
+      question: {
+        en: 'Is Pika Labs free?',
+        fr: 'Pika Labs est-il gratuit ?',
+        es: '¿Es Pika Labs gratis?',
+        ar: 'هل Pika Labs مجاني؟',
+      },
+      answer: {
+        en: 'Yes, Pika offers a free plan with a limited number of monthly video credits. Paid plans increase credits, remove watermarks, and add higher-resolution exports.',
+        fr: 'Oui, Pika propose un plan gratuit avec un nombre limité de crédits vidéo mensuels. Les plans payants augmentent les crédits, suppriment les filigranes et ajoutent des exports en résolution supérieure.',
+        es: 'Sí, Pika ofrece un plan gratuito con un número limitado de créditos de video mensuales. Los planes de pago aumentan los créditos, eliminan las marcas de agua y añaden exportaciones de mayor resolución.',
+        ar: 'نعم، يوفر Pika خطة مجانية بعدد محدود من أرصدة الفيديو شهرياً. تزيد الخطط المدفوعة الأرصدة، وتزيل العلامات المائية، وتضيف تصديراً بدقة أعلى.',
+      },
+    },
+    {
+      question: {
+        en: 'What is Pika Labs used for?',
+        fr: 'À quoi sert Pika Labs ?',
+        es: '¿Para qué se usa Pika Labs?',
+        ar: 'لماذا يُستخدم Pika Labs؟',
+      },
+      answer: {
+        en: 'Pika turns text prompts or images into short animated video clips, and includes fun effects ("Pikaffects") that apply specific transformations like inflating or melting objects.',
+        fr: 'Pika transforme des prompts texte ou des images en courts clips vidéo animés, et inclut des effets amusants ("Pikaffects") qui appliquent des transformations spécifiques comme gonfler ou faire fondre des objets.',
+        es: 'Pika convierte prompts de texto o imágenes en clips de video animados cortos, e incluye efectos divertidos ("Pikaffects") que aplican transformaciones específicas como inflar o derretir objetos.',
+        ar: 'يحوّل Pika الأوامر النصية أو الصور إلى مقاطع فيديو متحركة قصيرة، ويتضمن تأثيرات ممتعة ("Pikaffects") تطبق تحويلات محددة مثل نفخ أو إذابة الأشياء.',
+      },
+    },
+    {
+      question: {
+        en: 'Can I edit existing videos with Pika?',
+        fr: 'Peut-on modifier des vidéos existantes avec Pika ?',
+        es: '¿Puedo editar videos existentes con Pika?',
+        ar: 'هل يمكن تعديل فيديوهات موجودة مع Pika؟',
+      },
+      answer: {
+        en: 'Yes, Pika supports editing and extending existing video clips, modifying specific regions of a video, and adding new elements through text instructions.',
+        fr: 'Oui, Pika permet de modifier et d\'étendre des clips vidéo existants, de modifier des zones spécifiques d\'une vidéo et d\'ajouter de nouveaux éléments via des instructions texte.',
+        es: 'Sí, Pika permite editar y extender clips de video existentes, modificar regiones específicas de un video y añadir nuevos elementos mediante instrucciones de texto.',
+        ar: 'نعم، يدعم Pika تعديل وتمديد مقاطع فيديو موجودة، وتعديل مناطق محددة من الفيديو، وإضافة عناصر جديدة عبر تعليمات نصية.',
+      },
+    },
+  ],
+  descript: [
+    {
+      question: {
+        en: 'Is Descript free?',
+        fr: 'Descript est-il gratuit ?',
+        es: '¿Es Descript gratis?',
+        ar: 'هل Descript مجاني؟',
+      },
+      answer: {
+        en: 'Yes, Descript has a free plan with limited transcription hours and export quality. Paid plans add more transcription time, higher export resolution, and advanced AI features like Overdub.',
+        fr: 'Oui, Descript propose un plan gratuit avec des heures de transcription limitées et une qualité d\'export réduite. Les plans payants ajoutent plus de temps de transcription, une résolution d\'export supérieure et des fonctionnalités IA avancées comme Overdub.',
+        es: 'Sí, Descript tiene un plan gratuito con horas de transcripción limitadas y calidad de exportación reducida. Los planes de pago añaden más tiempo de transcripción, mayor resolución de exportación y funciones de IA avanzadas como Overdub.',
+        ar: 'نعم، يوفر Descript خطة مجانية بساعات نسخ محدودة وجودة تصدير منخفضة. تضيف الخطط المدفوعة وقت نسخ أكبر ودقة تصدير أعلى وميزات ذكاء اصطناعي متقدمة مثل Overdub.',
+      },
+    },
+    {
+      question: {
+        en: 'What makes Descript different from traditional video editors?',
+        fr: 'Qu\'est-ce qui différencie Descript des éditeurs vidéo traditionnels ?',
+        es: '¿Qué diferencia a Descript de los editores de video tradicionales?',
+        ar: 'ما الذي يميز Descript عن محررات الفيديو التقليدية؟',
+      },
+      answer: {
+        en: 'Descript lets you edit video and audio by editing a text transcript — deleting a word in the text removes it from the recording, which makes editing as simple as word processing.',
+        fr: 'Descript permet de modifier vidéo et audio en éditant une transcription texte — supprimer un mot dans le texte le retire de l\'enregistrement, ce qui rend l\'édition aussi simple que du traitement de texte.',
+        es: 'Descript permite editar video y audio editando una transcripción de texto — eliminar una palabra en el texto la quita de la grabación, lo que hace que editar sea tan simple como procesar texto.',
+        ar: 'يتيح Descript تعديل الفيديو والصوت من خلال تعديل النص المكتوب — حذف كلمة من النص يزيلها من التسجيل، مما يجعل التحرير بسيطاً كمعالجة النصوص.',
+      },
+    },
+    {
+      question: {
+        en: 'What is Overdub in Descript?',
+        fr: 'Qu\'est-ce que Overdub dans Descript ?',
+        es: '¿Qué es Overdub en Descript?',
+        ar: 'ما هو Overdub في Descript؟',
+      },
+      answer: {
+        en: 'Overdub is Descript\'s AI voice cloning feature that lets you generate new spoken audio in your own voice (or a stock voice) by typing text, useful for fixing mistakes without re-recording.',
+        fr: 'Overdub est la fonctionnalité de clonage vocal IA de Descript qui permet de générer un nouvel audio parlé avec votre propre voix (ou une voix prédéfinie) en tapant du texte, utile pour corriger des erreurs sans réenregistrer.',
+        es: 'Overdub es la función de clonación de voz con IA de Descript que permite generar nuevo audio hablado con tu propia voz (o una voz predefinida) escribiendo texto, útil para corregir errores sin volver a grabar.',
+        ar: 'Overdub هي ميزة استنساخ الصوت بالذكاء الاصطناعي في Descript التي تتيح توليد صوت منطوق جديد بصوتك (أو صوت جاهز) عن طريق كتابة نص، مفيدة لتصحيح الأخطاء دون إعادة التسجيل.',
+      },
+    },
+  ],
+  'luma-dream': [
+    {
+      question: {
+        en: 'Is Luma Dream Machine free?',
+        fr: 'Luma Dream Machine est-il gratuit ?',
+        es: '¿Es Luma Dream Machine gratis?',
+        ar: 'هل Luma Dream Machine مجاني؟',
+      },
+      answer: {
+        en: 'Yes, Luma Dream Machine offers free monthly video generations. Paid plans increase the number of generations, allow faster processing, and remove watermarks.',
+        fr: 'Oui, Luma Dream Machine propose des générations vidéo gratuites mensuelles. Les plans payants augmentent le nombre de générations, permettent un traitement plus rapide et suppriment les filigranes.',
+        es: 'Sí, Luma Dream Machine ofrece generaciones de video gratuitas mensuales. Los planes de pago aumentan el número de generaciones, permiten un procesamiento más rápido y eliminan las marcas de agua.',
+        ar: 'نعم، يوفر Luma Dream Machine توليدات فيديو مجانية شهرياً. تزيد الخطط المدفوعة عدد التوليدات وتسمح بمعالجة أسرع وتزيل العلامات المائية.',
+      },
+    },
+    {
+      question: {
+        en: 'What is Luma Dream Machine used for?',
+        fr: 'À quoi sert Luma Dream Machine ?',
+        es: '¿Para qué se usa Luma Dream Machine?',
+        ar: 'لماذا يُستخدم Luma Dream Machine؟',
+      },
+      answer: {
+        en: 'Dream Machine generates realistic video clips from text descriptions or a starting image, with smooth camera movements and natural motion of people, animals, and objects.',
+        fr: 'Dream Machine génère des clips vidéo réalistes à partir de descriptions texte ou d\'une image de départ, avec des mouvements de caméra fluides et des mouvements naturels de personnes, animaux et objets.',
+        es: 'Dream Machine genera clips de video realistas a partir de descripciones de texto o una imagen inicial, con movimientos de cámara fluidos y movimiento natural de personas, animales y objetos.',
+        ar: 'يولّد Dream Machine مقاطع فيديو واقعية من أوصاف نصية أو صورة بداية، بحركات كاميرا سلسة وحركة طبيعية للأشخاص والحيوانات والأشياء.',
+      },
+    },
+    {
+      question: {
+        en: 'How long are the videos generated by Luma?',
+        fr: 'Quelle est la durée des vidéos générées par Luma ?',
+        es: '¿Cuánto duran los videos generados por Luma?',
+        ar: 'ما مدة الفيديوهات التي يولّدها Luma؟',
+      },
+      answer: {
+        en: 'Luma typically generates short clips of a few seconds, which can be extended or combined to create longer sequences for social media and creative projects.',
+        fr: 'Luma génère généralement de courts clips de quelques secondes, qui peuvent être étendus ou combinés pour créer des séquences plus longues pour les réseaux sociaux et projets créatifs.',
+        es: 'Luma generalmente genera clips cortos de unos segundos, que pueden extenderse o combinarse para crear secuencias más largas para redes sociales y proyectos creativos.',
+        ar: 'يولّد Luma عادة مقاطع قصيرة من ثوانٍ معدودة، يمكن تمديدها أو دمجها لإنشاء تسلسلات أطول لوسائل التواصل الاجتماعي والمشاريع الإبداعية.',
+      },
+    },
+  ],
+  whisper: [
+    {
+      question: {
+        en: 'Is Whisper free?',
+        fr: 'Whisper est-il gratuit ?',
+        es: '¿Es Whisper gratis?',
+        ar: 'هل Whisper مجاني؟',
+      },
+      answer: {
+        en: 'Yes, OpenAI\'s Whisper is an open-source model that is free to download and run locally. Using it via the OpenAI API incurs a small per-minute cost.',
+        fr: 'Oui, Whisper d\'OpenAI est un modèle open-source gratuit à télécharger et exécuter localement. L\'utiliser via l\'API OpenAI entraîne un petit coût par minute.',
+        es: 'Sí, Whisper de OpenAI es un modelo de código abierto gratuito para descargar y ejecutar localmente. Usarlo a través de la API de OpenAI tiene un pequeño costo por minuto.',
+        ar: 'نعم، Whisper من OpenAI نموذج مفتوح المصدر مجاني للتنزيل والتشغيل محلياً. استخدامه عبر واجهة برمجة تطبيقات OpenAI يكلّف رسوماً صغيرة لكل دقيقة.',
+      },
+    },
+    {
+      question: {
+        en: 'What languages does Whisper support?',
+        fr: 'Quelles langues Whisper prend-il en charge ?',
+        es: '¿Qué idiomas admite Whisper?',
+        ar: 'ما هي اللغات التي يدعمها Whisper؟',
+      },
+      answer: {
+        en: 'Whisper supports transcription and translation across nearly 100 languages, with varying accuracy depending on the amount of training data available for each language.',
+        fr: 'Whisper prend en charge la transcription et la traduction dans près de 100 langues, avec une précision variable selon la quantité de données d\'entraînement disponibles pour chaque langue.',
+        es: 'Whisper admite transcripción y traducción en casi 100 idiomas, con una precisión variable según la cantidad de datos de entrenamiento disponibles para cada idioma.',
+        ar: 'يدعم Whisper النسخ والترجمة في ما يقارب 100 لغة، بدقة متفاوتة حسب كمية بيانات التدريب المتاحة لكل لغة.',
+      },
+    },
+    {
+      question: {
+        en: 'How accurate is Whisper for transcription?',
+        fr: 'Quelle est la précision de Whisper pour la transcription ?',
+        es: '¿Qué tan preciso es Whisper para la transcripción?',
+        ar: 'ما مدى دقة Whisper في النسخ؟',
+      },
+      answer: {
+        en: 'Whisper achieves near-human accuracy on clear English audio and is widely used as the underlying engine for many transcription apps, though accuracy drops with heavy background noise or rare accents.',
+        fr: 'Whisper atteint une précision proche de l\'humain sur de l\'audio anglais clair et est largement utilisé comme moteur sous-jacent de nombreuses applications de transcription, bien que la précision baisse avec un bruit de fond important ou des accents rares.',
+        es: 'Whisper alcanza una precisión casi humana en audio en inglés claro y se usa ampliamente como motor subyacente de muchas apps de transcripción, aunque la precisión baja con ruido de fondo intenso o acentos poco comunes.',
+        ar: 'يحقق Whisper دقة تقارب البشر في الصوت الإنجليزي الواضح، ويُستخدم على نطاق واسع كمحرك أساسي للعديد من تطبيقات النسخ، لكن الدقة تقل مع ضجيج الخلفية الشديد أو اللكنات النادرة.',
+      },
+    },
+  ],
+  'murf-ai': [
+    {
+      question: {
+        en: 'Is Murf AI free?',
+        fr: 'Murf AI est-il gratuit ?',
+        es: '¿Es Murf AI gratis?',
+        ar: 'هل Murf AI مجاني؟',
+      },
+      answer: {
+        en: 'Yes, Murf offers a free trial with limited voice generation minutes. Paid plans increase usage limits, add more voices, and unlock commercial licensing.',
+        fr: 'Oui, Murf propose un essai gratuit avec un nombre limité de minutes de génération vocale. Les plans payants augmentent les limites d\'utilisation, ajoutent plus de voix et débloquent une licence commerciale.',
+        es: 'Sí, Murf ofrece una prueba gratuita con minutos limitados de generación de voz. Los planes de pago aumentan los límites de uso, añaden más voces y desbloquean licencias comerciales.',
+        ar: 'نعم، يوفر Murf تجربة مجانية بدقائق محدودة لتوليد الصوت. تزيد الخطط المدفوعة حدود الاستخدام، وتضيف أصواتاً أكثر، وتفتح ترخيصاً تجارياً.',
+      },
+    },
+    {
+      question: {
+        en: 'What is Murf AI used for?',
+        fr: 'À quoi sert Murf AI ?',
+        es: '¿Para qué se usa Murf AI?',
+        ar: 'لماذا يُستخدم Murf AI؟',
+      },
+      answer: {
+        en: 'Murf converts text into natural-sounding voiceovers in over 20 languages, commonly used for presentations, e-learning courses, video narration, and ads.',
+        fr: 'Murf convertit du texte en voix off naturelles dans plus de 20 langues, couramment utilisé pour les présentations, cours e-learning, narrations vidéo et publicités.',
+        es: 'Murf convierte texto en voces en off de sonido natural en más de 20 idiomas, comúnmente usado para presentaciones, cursos de e-learning, narración de videos y anuncios.',
+        ar: 'يحوّل Murf النص إلى تعليق صوتي طبيعي بأكثر من 20 لغة، يُستخدم بكثرة للعروض التقديمية ودورات التعلّم الإلكتروني والسرد بالفيديو والإعلانات.',
+      },
+    },
+    {
+      question: {
+        en: 'Can I customize the AI voices in Murf?',
+        fr: 'Peut-on personnaliser les voix IA dans Murf ?',
+        es: '¿Puedo personalizar las voces de IA en Murf?',
+        ar: 'هل يمكن تخصيص الأصوات في Murf؟',
+      },
+      answer: {
+        en: 'Yes, Murf lets you adjust pitch, speed, emphasis, and pauses for each voice, and supports syncing voiceovers to video timing.',
+        fr: 'Oui, Murf permet d\'ajuster la hauteur, la vitesse, l\'accentuation et les pauses pour chaque voix, et prend en charge la synchronisation des voix off avec le timing vidéo.',
+        es: 'Sí, Murf permite ajustar el tono, la velocidad, el énfasis y las pausas de cada voz, y admite sincronizar las voces en off con el tiempo del video.',
+        ar: 'نعم، يتيح Murf ضبط النغمة والسرعة والتشديد والوقفات لكل صوت، ويدعم مزامنة التعليق الصوتي مع توقيت الفيديو.',
+      },
+    },
+  ],
+  'otter-ai': [
+    {
+      question: {
+        en: 'Is Otter.ai free?',
+        fr: 'Otter.ai est-il gratuit ?',
+        es: '¿Es Otter.ai gratis?',
+        ar: 'هل Otter.ai مجاني؟',
+      },
+      answer: {
+        en: 'Yes, Otter.ai has a free plan with a monthly limit of transcription minutes. Paid plans increase the limit, add advanced search, and offer team collaboration features.',
+        fr: 'Oui, Otter.ai propose un plan gratuit avec une limite mensuelle de minutes de transcription. Les plans payants augmentent la limite, ajoutent une recherche avancée et des fonctionnalités de collaboration d\'équipe.',
+        es: 'Sí, Otter.ai tiene un plan gratuito con un límite mensual de minutos de transcripción. Los planes de pago aumentan el límite, añaden búsqueda avanzada y funciones de colaboración en equipo.',
+        ar: 'نعم، يوفر Otter.ai خطة مجانية بحد شهري لدقائق النسخ. تزيد الخطط المدفوعة الحد، وتضيف بحثاً متقدماً، وميزات تعاون جماعي.',
+      },
+    },
+    {
+      question: {
+        en: 'What is Otter.ai best used for?',
+        fr: 'À quoi Otter.ai sert-il le mieux ?',
+        es: '¿Para qué es mejor Otter.ai?',
+        ar: 'لماذا يُستخدم Otter.ai بشكل أفضل؟',
+      },
+      answer: {
+        en: 'Otter.ai is widely used for real-time meeting transcription, generating automatic summaries, action items, and searchable notes from Zoom, Google Meet, and Microsoft Teams calls.',
+        fr: 'Otter.ai est largement utilisé pour la transcription en temps réel de réunions, générant des résumés automatiques, des éléments d\'action et des notes consultables depuis Zoom, Google Meet et Microsoft Teams.',
+        es: 'Otter.ai se usa ampliamente para la transcripción en tiempo real de reuniones, generando resúmenes automáticos, elementos de acción y notas buscables desde llamadas de Zoom, Google Meet y Microsoft Teams.',
+        ar: 'يُستخدم Otter.ai على نطاق واسع لنسخ الاجتماعات في الوقت الفعلي، وتوليد ملخصات تلقائية، وعناصر إجراءات، وملاحظات قابلة للبحث من مكالمات Zoom وGoogle Meet وMicrosoft Teams.',
+      },
+    },
+    {
+      question: {
+        en: 'Does Otter.ai work in languages other than English?',
+        fr: 'Otter.ai fonctionne-t-il dans d\'autres langues que l\'anglais ?',
+        es: '¿Funciona Otter.ai en otros idiomas además del inglés?',
+        ar: 'هل يعمل Otter.ai بلغات أخرى غير الإنجليزية؟',
+      },
+      answer: {
+        en: 'Otter.ai primarily focuses on English transcription with the highest accuracy, though it has expanded limited support for some other languages over time.',
+        fr: 'Otter.ai se concentre principalement sur la transcription en anglais avec la plus haute précision, bien qu\'il ait étendu un support limité pour d\'autres langues au fil du temps.',
+        es: 'Otter.ai se centra principalmente en la transcripción en inglés con la mayor precisión, aunque ha ampliado un soporte limitado para otros idiomas con el tiempo.',
+        ar: 'يركز Otter.ai بشكل أساسي على النسخ بالإنجليزية بأعلى دقة، لكنه وسّع دعماً محدوداً لبعض اللغات الأخرى مع مرور الوقت.',
+      },
+    },
+  ],
+  'zapier-ai': [
+    {
+      question: {
+        en: 'Is Zapier AI free?',
+        fr: 'Zapier AI est-il gratuit ?',
+        es: '¿Es Zapier AI gratis?',
+        ar: 'هل Zapier AI مجاني؟',
+      },
+      answer: {
+        en: 'Zapier has a free plan with limited tasks per month and basic AI features. Paid plans increase task limits and unlock advanced AI automation tools like AI-powered Zaps and Central agents.',
+        fr: 'Zapier propose un plan gratuit avec un nombre limité de tâches par mois et des fonctionnalités IA basiques. Les plans payants augmentent les limites de tâches et débloquent des outils d\'automatisation IA avancés comme les Zaps alimentés par IA et les agents Central.',
+        es: 'Zapier tiene un plan gratuito con tareas limitadas al mes y funciones de IA básicas. Los planes de pago aumentan los límites de tareas y desbloquean herramientas de automatización con IA avanzadas como Zaps potenciados por IA y agentes Central.',
+        ar: 'يوفر Zapier خطة مجانية بمهام محدودة شهرياً وميزات ذكاء اصطناعي أساسية. تزيد الخطط المدفوعة حدود المهام وتفتح أدوات أتمتة ذكاء اصطناعي متقدمة مثل Zaps المدعومة بالذكاء الاصطناعي وعملاء Central.',
+      },
+    },
+    {
+      question: {
+        en: 'What is Zapier AI used for?',
+        fr: 'À quoi sert Zapier AI ?',
+        es: '¿Para qué se usa Zapier AI?',
+        ar: 'لماذا يُستخدم Zapier AI؟',
+      },
+      answer: {
+        en: 'Zapier AI adds intelligence to automated workflows ("Zaps"), letting you use AI steps to summarize, categorize, draft text, or make decisions between apps without writing code.',
+        fr: 'Zapier AI ajoute de l\'intelligence aux workflows automatisés ("Zaps"), permettant d\'utiliser des étapes IA pour résumer, catégoriser, rédiger du texte ou prendre des décisions entre applications sans écrire de code.',
+        es: 'Zapier AI añade inteligencia a los flujos de trabajo automatizados ("Zaps"), permitiendo usar pasos de IA para resumir, categorizar, redactar texto o tomar decisiones entre apps sin escribir código.',
+        ar: 'يضيف Zapier AI الذكاء إلى تدفقات العمل المؤتمتة ("Zaps")، مما يتيح استخدام خطوات ذكاء اصطناعي لتلخيص أو تصنيف أو كتابة نص أو اتخاذ قرارات بين التطبيقات دون كتابة كود.',
+      },
+    },
+    {
+      question: {
+        en: 'How many apps does Zapier connect with?',
+        fr: 'Avec combien d\'applications Zapier se connecte-t-il ?',
+        es: '¿Con cuántas aplicaciones se conecta Zapier?',
+        ar: 'مع كم تطبيق يتصل Zapier؟',
+      },
+      answer: {
+        en: 'Zapier connects with thousands of apps, including Gmail, Slack, Notion, Google Sheets, and CRMs, making it one of the most widely integrated automation platforms.',
+        fr: 'Zapier se connecte à des milliers d\'applications, dont Gmail, Slack, Notion, Google Sheets et des CRM, ce qui en fait l\'une des plateformes d\'automatisation les plus largement intégrées.',
+        es: 'Zapier se conecta con miles de aplicaciones, incluyendo Gmail, Slack, Notion, Google Sheets y CRMs, lo que la convierte en una de las plataformas de automatización más integradas.',
+        ar: 'يتصل Zapier بآلاف التطبيقات، بما في ذلك Gmail وSlack وNotion وGoogle Sheets وأنظمة CRM، مما يجعله من أكثر منصات الأتمتة تكاملاً.',
+      },
+    },
+  ],
+  'gamma-app': [
+    {
+      question: {
+        en: 'Is Gamma free?',
+        fr: 'Gamma est-il gratuit ?',
+        es: '¿Es Gamma gratis?',
+        ar: 'هل Gamma مجاني؟',
+      },
+      answer: {
+        en: 'Yes, Gamma offers a free plan with a limited number of AI credits for generating presentations, documents, and webpages. Paid plans provide more credits and advanced customization.',
+        fr: 'Oui, Gamma propose un plan gratuit avec un nombre limité de crédits IA pour générer présentations, documents et pages web. Les plans payants offrent plus de crédits et une personnalisation avancée.',
+        es: 'Sí, Gamma ofrece un plan gratuito con un número limitado de créditos de IA para generar presentaciones, documentos y páginas web. Los planes de pago proporcionan más créditos y personalización avanzada.',
+        ar: 'نعم، يوفر Gamma خطة مجانية بعدد محدود من أرصدة الذكاء الاصطناعي لتوليد العروض التقديمية والمستندات وصفحات الويب. تقدم الخطط المدفوعة أرصدة أكثر وتخصيصاً متقدماً.',
+      },
+    },
+    {
+      question: {
+        en: 'What is Gamma used for?',
+        fr: 'À quoi sert Gamma ?',
+        es: '¿Para qué se usa Gamma?',
+        ar: 'لماذا يُستخدم Gamma؟',
+      },
+      answer: {
+        en: 'Gamma turns a text prompt or outline into a designed presentation, document, or webpage in seconds, automatically choosing layouts, images, and formatting.',
+        fr: 'Gamma transforme un prompt texte ou un plan en présentation, document ou page web designé en quelques secondes, en choisissant automatiquement les mises en page, images et mise en forme.',
+        es: 'Gamma convierte un prompt de texto o esquema en una presentación, documento o página web diseñada en segundos, eligiendo automáticamente diseños, imágenes y formato.',
+        ar: 'يحوّل Gamma أمراً نصياً أو مخططاً إلى عرض تقديمي أو مستند أو صفحة ويب مصممة في ثوانٍ، مع اختيار تلقائي للتخطيطات والصور والتنسيق.',
+      },
+    },
+    {
+      question: {
+        en: 'Can I export Gamma presentations to PowerPoint or PDF?',
+        fr: 'Peut-on exporter les présentations Gamma vers PowerPoint ou PDF ?',
+        es: '¿Puedo exportar presentaciones de Gamma a PowerPoint o PDF?',
+        ar: 'هل يمكن تصدير عروض Gamma إلى PowerPoint أو PDF؟',
+      },
+      answer: {
+        en: 'Yes, Gamma allows exporting your creations to PDF and PowerPoint formats, as well as sharing them as live web pages with interactive elements.',
+        fr: 'Oui, Gamma permet d\'exporter vos créations aux formats PDF et PowerPoint, ainsi que de les partager en tant que pages web interactives.',
+        es: 'Sí, Gamma permite exportar tus creaciones a formatos PDF y PowerPoint, así como compartirlas como páginas web interactivas en vivo.',
+        ar: 'نعم، يتيح Gamma تصدير إبداعاتك إلى صيغ PDF وPowerPoint، وكذلك مشاركتها كصفحات ويب تفاعلية مباشرة.',
+      },
+    },
+  ],
+  'surfer-seo': [
+    {
+      question: {
+        en: 'Is Surfer SEO free?',
+        fr: 'Surfer SEO est-il gratuit ?',
+        es: '¿Es Surfer SEO gratis?',
+        ar: 'هل Surfer SEO مجاني؟',
+      },
+      answer: {
+        en: 'Surfer SEO does not have a permanent free plan, but offers a trial period. Paid plans are based on the number of content articles and keyword analyses per month.',
+        fr: 'Surfer SEO n\'a pas de plan gratuit permanent, mais propose une période d\'essai. Les plans payants sont basés sur le nombre d\'articles de contenu et d\'analyses de mots-clés par mois.',
+        es: 'Surfer SEO no tiene un plan gratuito permanente, pero ofrece un período de prueba. Los planes de pago se basan en el número de artículos de contenido y análisis de palabras clave al mes.',
+        ar: 'لا يوفر Surfer SEO خطة مجانية دائمة، لكنه يقدم فترة تجريبية. تعتمد الخطط المدفوعة على عدد مقالات المحتوى وتحليلات الكلمات المفتاحية شهرياً.',
+      },
+    },
+    {
+      question: {
+        en: 'What does Surfer SEO do?',
+        fr: 'Que fait Surfer SEO ?',
+        es: '¿Qué hace Surfer SEO?',
+        ar: 'ما الذي يفعله Surfer SEO؟',
+      },
+      answer: {
+        en: 'Surfer SEO analyzes top-ranking pages for a target keyword and generates a content outline with recommended word count, headings, and key terms to help your article rank higher.',
+        fr: 'Surfer SEO analyse les pages les mieux classées pour un mot-clé cible et génère un plan de contenu avec un nombre de mots recommandé, des titres et des termes clés pour aider votre article à mieux se classer.',
+        es: 'Surfer SEO analiza las páginas mejor posicionadas para una palabra clave objetivo y genera un esquema de contenido con un recuento de palabras recomendado, encabezados y términos clave para ayudar a que tu artículo se posicione mejor.',
+        ar: 'يحلل Surfer SEO الصفحات الأعلى تصنيفاً لكلمة مفتاحية مستهدفة ويولّد مخطط محتوى بعدد كلمات موصى به وعناوين ومصطلحات أساسية لمساعدة مقالتك على ترتيب أعلى.',
+      },
+    },
+    {
+      question: {
+        en: 'Does Surfer SEO integrate with content writing tools?',
+        fr: 'Surfer SEO s\'intègre-t-il avec des outils de rédaction de contenu ?',
+        es: '¿Se integra Surfer SEO con herramientas de redacción de contenido?',
+        ar: 'هل يتكامل Surfer SEO مع أدوات كتابة المحتوى؟',
+      },
+      answer: {
+        en: 'Yes, Surfer integrates with Google Docs, WordPress, and AI writing tools like Jasper, and includes its own built-in AI content editor that scores your draft against the SEO outline in real time.',
+        fr: 'Oui, Surfer s\'intègre à Google Docs, WordPress et des outils de rédaction IA comme Jasper, et inclut son propre éditeur de contenu IA intégré qui note votre brouillon par rapport au plan SEO en temps réel.',
+        es: 'Sí, Surfer se integra con Google Docs, WordPress y herramientas de redacción de IA como Jasper, e incluye su propio editor de contenido con IA que puntúa tu borrador frente al esquema SEO en tiempo real.',
+        ar: 'نعم، يتكامل Surfer مع Google Docs وWordPress وأدوات الكتابة بالذكاء الاصطناعي مثل Jasper، ويتضمن محرر محتوى مدمجاً بالذكاء الاصطناعي يقيّم مسودتك مقابل مخطط السيو في الوقت الفعلي.',
+      },
+    },
+  ],
+  synthesia: [
+    {
+      question: {
+        en: 'Is Synthesia free?',
+        fr: 'Synthesia est-il gratuit ?',
+        es: '¿Es Synthesia gratis?',
+        ar: 'هل Synthesia مجاني؟',
+      },
+      answer: {
+        en: 'Synthesia offers a limited free trial. Paid plans unlock more video minutes per month, additional AI avatars, and custom avatar creation.',
+        fr: 'Synthesia propose un essai gratuit limité. Les plans payants débloquent plus de minutes vidéo par mois, des avatars IA supplémentaires et la création d\'avatars personnalisés.',
+        es: 'Synthesia ofrece una prueba gratuita limitada. Los planes de pago desbloquean más minutos de video al mes, avatares de IA adicionales y la creación de avatares personalizados.',
+        ar: 'يوفر Synthesia تجربة مجانية محدودة. تفتح الخطط المدفوعة دقائق فيديو أكثر شهرياً، وصوراً رمزية إضافية بالذكاء الاصطناعي، وإنشاء صور رمزية مخصصة.',
+      },
+    },
+    {
+      question: {
+        en: 'What is Synthesia used for?',
+        fr: 'À quoi sert Synthesia ?',
+        es: '¿Para qué se usa Synthesia?',
+        ar: 'لماذا يُستخدم Synthesia؟',
+      },
+      answer: {
+        en: 'Synthesia creates videos featuring realistic AI avatars that speak your script in over 140 languages, commonly used for corporate training, marketing, and product explainer videos.',
+        fr: 'Synthesia crée des vidéos avec des avatars IA réalistes qui parlent votre script dans plus de 140 langues, couramment utilisé pour la formation d\'entreprise, le marketing et les vidéos explicatives produits.',
+        es: 'Synthesia crea videos con avatares de IA realistas que hablan tu guion en más de 140 idiomas, comúnmente usado para capacitación corporativa, marketing y videos explicativos de productos.',
+        ar: 'يُنشئ Synthesia فيديوهات بصور رمزية واقعية بالذكاء الاصطناعي تتحدث نصك بأكثر من 140 لغة، يُستخدم بكثرة للتدريب المؤسسي والتسويق وفيديوهات شرح المنتجات.',
+      },
+    },
+    {
+      question: {
+        en: 'Can I create a custom AI avatar of myself in Synthesia?',
+        fr: 'Peut-on créer un avatar IA personnalisé de soi-même dans Synthesia ?',
+        es: '¿Puedo crear un avatar de IA personalizado de mí mismo en Synthesia?',
+        ar: 'هل يمكن إنشاء صورة رمزية مخصصة لي بالذكاء الاصطناعي في Synthesia؟',
+      },
+      answer: {
+        en: 'Yes, higher-tier Synthesia plans let you create a personal AI avatar (and voice clone) from a short video recording of yourself, which you can then use to generate new videos by typing scripts.',
+        fr: 'Oui, les plans Synthesia supérieurs permettent de créer un avatar IA personnel (et un clone vocal) à partir d\'un court enregistrement vidéo de vous-même, utilisable ensuite pour générer de nouvelles vidéos en tapant des scripts.',
+        es: 'Sí, los planes superiores de Synthesia permiten crear un avatar de IA personal (y un clon de voz) a partir de una breve grabación de video de ti mismo, que luego puedes usar para generar nuevos videos escribiendo guiones.',
+        ar: 'نعم، تتيح خطط Synthesia الأعلى إنشاء صورة رمزية شخصية بالذكاء الاصطناعي (واستنساخ صوت) من تسجيل فيديو قصير لك، يمكنك استخدامها لتوليد فيديوهات جديدة بكتابة نصوص.',
+      },
+    },
+  ],
+  recraft: [
+    {
+      question: {
+        en: 'Is Recraft free?',
+        fr: 'Recraft est-il gratuit ?',
+        es: '¿Es Recraft gratis?',
+        ar: 'هل Recraft مجاني؟',
+      },
+      answer: {
+        en: 'Yes, Recraft offers a free plan with daily generation credits. Paid plans increase credits, allow commercial use, and unlock vector and brand-style features.',
+        fr: 'Oui, Recraft propose un plan gratuit avec des crédits de génération quotidiens. Les plans payants augmentent les crédits, permettent un usage commercial et débloquent les fonctionnalités vectorielles et de style de marque.',
+        es: 'Sí, Recraft ofrece un plan gratuito con créditos de generación diarios. Los planes de pago aumentan los créditos, permiten el uso comercial y desbloquean funciones vectoriales y de estilo de marca.',
+        ar: 'نعم، يوفر Recraft خطة مجانية بأرصدة توليد يومية. تزيد الخطط المدفوعة الأرصدة، وتسمح بالاستخدام التجاري، وتفتح ميزات المتجهات وأسلوب العلامة التجارية.',
+      },
+    },
+    {
+      question: {
+        en: 'What makes Recraft different from other AI image tools?',
+        fr: 'Qu\'est-ce qui différencie Recraft des autres outils d\'image IA ?',
+        es: '¿Qué diferencia a Recraft de otras herramientas de imágenes con IA?',
+        ar: 'ما الذي يميز Recraft عن أدوات الصور الأخرى بالذكاء الاصطناعي؟',
+      },
+      answer: {
+        en: 'Recraft can generate vector graphics (SVG) in addition to raster images, and lets you define a consistent brand style — colors, fonts, and icon sets — applied across all generated assets.',
+        fr: 'Recraft peut générer des graphiques vectoriels (SVG) en plus des images raster, et permet de définir un style de marque cohérent — couleurs, polices et jeux d\'icônes — appliqué à tous les assets générés.',
+        es: 'Recraft puede generar gráficos vectoriales (SVG) además de imágenes ráster, y permite definir un estilo de marca consistente — colores, fuentes y conjuntos de iconos — aplicado a todos los assets generados.',
+        ar: 'يمكن لـ Recraft توليد رسومات متجهة (SVG) بالإضافة إلى الصور النقطية، ويتيح تحديد أسلوب علامة تجارية متناسق — ألوان وخطوط ومجموعات أيقونات — يُطبَّق على جميع الأصول المولّدة.',
+      },
+    },
+    {
+      question: {
+        en: 'Can Recraft generate icons and logos?',
+        fr: 'Recraft peut-il générer des icônes et des logos ?',
+        es: '¿Puede Recraft generar iconos y logos?',
+        ar: 'هل يمكن لـ Recraft توليد أيقونات وشعارات؟',
+      },
+      answer: {
+        en: 'Yes, Recraft is well-suited for generating icon sets, logos, illustrations, and mockups in consistent vector styles, making it popular among designers and UI teams.',
+        fr: 'Oui, Recraft est bien adapté pour générer des jeux d\'icônes, logos, illustrations et mockups dans des styles vectoriels cohérents, ce qui le rend populaire auprès des designers et équipes UI.',
+        es: 'Sí, Recraft es muy adecuado para generar conjuntos de iconos, logos, ilustraciones y mockups en estilos vectoriales consistentes, lo que lo hace popular entre diseñadores y equipos de UI.',
+        ar: 'نعم، يناسب Recraft توليد مجموعات أيقونات وشعارات ورسوم توضيحية ونماذج أولية بأساليب متجهة متناسقة، مما يجعله شائعاً بين المصممين وفرق واجهات المستخدم.',
+      },
+    },
+  ],
 };
