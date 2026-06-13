@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { auth } from '@clerk/nextjs/server';
 import { TOOLS_DATA } from '@/lib/tools';
 import { buildAffiliateUrl } from '@/lib/affiliate';
+import { getCompareFaq } from '@/lib/compareFaq';
 import { Star, Check, ArrowUpRight, Zap, Lock } from 'lucide-react';
 
 type Locale = 'en' | 'fr' | 'es' | 'ar';
@@ -129,6 +130,23 @@ export default async function ComparePage({ params }: Props) {
     author: { '@type': 'Organization', name: 'AIverse' },
   };
 
+  // AEO: FAQ + FAQPage JSON-LD for "X vs Y" long-tail questions
+  const faq = getCompareFaq(t1, t2);
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((item) => ({
+      '@type': 'Question',
+      name: item.question[locale] || item.question.en,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer[locale] || item.answer.en,
+      },
+    })),
+  };
+
+  const faqTitle = locale === 'fr' ? 'Questions fréquentes' : locale === 'es' ? 'Preguntas frecuentes' : locale === 'ar' ? 'الأسئلة الشائعة' : 'Frequently Asked Questions';
+
   const yesNo = (val: boolean | undefined) => val
     ? <span className="text-green-400 font-bold">✅ Yes</span>
     : <span className="text-red-400 font-semibold">❌ No</span>;
@@ -211,6 +229,7 @@ export default async function ComparePage({ params }: Props) {
   return (
     <div className="max-w-4xl mx-auto px-4 py-16">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Back */}
       <a href={`/${locale}`} className="text-sm text-gray-500 hover:text-white transition mb-8 inline-block">{L.back}</a>
@@ -414,6 +433,19 @@ export default async function ComparePage({ params }: Props) {
             </div>
           </div>
         )}
+      </div>
+
+      {/* FAQ — AEO */}
+      <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 mb-10">
+        <h2 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">❓ {faqTitle}</h2>
+        <div className="space-y-4">
+          {faq.map((item, idx) => (
+            <div key={idx} className="border-b border-white/[0.06] pb-4 last:border-b-0 last:pb-0">
+              <h3 className="text-white font-semibold mb-1.5">{item.question[locale] || item.question.en}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">{item.answer[locale] || item.answer.en}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* More comparisons — same category */}

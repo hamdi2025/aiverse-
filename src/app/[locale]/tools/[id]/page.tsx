@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { TOOLS_DATA } from '@/lib/tools';
 import { TOOL_FAQS } from '@/lib/faq';
+import { getGenericFaq } from '@/lib/genericFaq';
 import { buildAffiliateUrl } from '@/lib/affiliate';
 import { getTranslations } from 'next-intl/server';
 import { Star, ArrowUpRight, Tag, Globe, TrendingUp } from 'lucide-react';
@@ -105,7 +106,7 @@ export default async function ToolPage({ params }: Props) {
     tool.pricing === 'Free' ? 'text-green-400' :
     tool.pricing === 'Freemium' ? 'text-amber-400' : 'text-gray-300';
 
-  const faq = TOOL_FAQS[tool.id];
+  const faq = TOOL_FAQS[tool.id] || getGenericFaq(tool);
   const faqJsonLd = faq ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
