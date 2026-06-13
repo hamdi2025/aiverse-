@@ -34,6 +34,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-*.png 
+*.png
 .vercel
 .env*
+
+# internal planning / research docs (not part of the site)
+BACKLINKS_GUEST_POSTS.md
+PLAN_TRAFFIC_MONETISATION.md
+guest-post-*.md
