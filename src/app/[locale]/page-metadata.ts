@@ -1,15 +1,15 @@
 // SEO metadata helper for the homepage
 export const getHomeMetadata = (locale: string) => {
   const titles: Record<string, string> = {
-    en: "AIverse — Best AI Tools Directory 2026 | 555+ AI Tools & 100+ Agents",
-    fr: "AIverse — Meilleurs Outils IA 2026 | 555+ Outils & 100+ Agents",
-    es: "AIverse — Mejores Herramientas IA 2026 | 555+ Herramientas & 100+ Agentes",
-    ar: "AIverse — أفضل أدوات الذكاء الاصطناعي 2026 | 555+ أداة و100+ وكيل",
+    en: "AIverse — Best AI Tools Directory 2026 | 1000+ AI Tools & 100+ Agents",
+    fr: "AIverse — Meilleurs Outils IA 2026 | 1000+ Outils & 100+ Agents",
+    es: "AIverse — Mejores Herramientas IA 2026 | 1000+ Herramientas & 100+ Agentes",
+    ar: "AIverse — أفضل أدوات الذكاء الاصطناعي 2026 | 1000+ أداة و100+ وكيل",
   };
   const descs: Record<string, string> = {
-    en: "Discover 555+ AI tools and 100+ AI agents in 15 categories: writing, image, code, video, SEO, PDF, 3D design, slides, Excel, file conversion and more. Updated daily.",
-    fr: "Découvrez 555+ outils IA et 100+ agents IA en 15 catégories : rédaction, image, code, vidéo, SEO, PDF, design 3D, diapositives, Excel, conversion de fichiers et plus.",
-    es: "Descubre 555+ herramientas IA y 100+ agentes IA en 15 categorías: escritura, imagen, código, video, SEO, PDF, diseño 3D, diapositivas, Excel, conversión de archivos y más.",
+    en: "Discover 1000+ AI tools and 100+ AI agents in 15 categories: writing, image, code, video, SEO, PDF, 3D design, slides, Excel, file conversion and more. Updated daily.",
+    fr: "Découvrez 1000+ outils IA et 100+ agents IA en 15 catégories : rédaction, image, code, vidéo, SEO, PDF, design 3D, diapositives, Excel, conversion de fichiers et plus.",
+    es: "Descubre 1000+ herramientas IA y 100+ agentes IA en 15 categorías: escritura, imagen, código, video, SEO, PDF, diseño 3D, diapositivas, Excel, conversión de archivos y más.",
     ar: "اكتشف أكثر من 555 أداة ذكاء اصطناعي و100 وكيل ذكي في 15 فئة: الكتابة والصور والبرمجة والفيديو والـ SEO وPDF والتصميم ثلاثي الأبعاد والعروض و Excel وتحويل الملفات.",
   };
   const keywords: Record<string, string> = {

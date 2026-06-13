@@ -1,0 +1,20 @@
+# AIverse
+
+> AIverse (getaiverse.online) is a directory of 649+ AI tools and 100+ AI agents across 28 categories — writing, image generation, code, video, audio, marketing, productivity, SEO, PDF, slides/presentations, chatbots, 3D design, data, HR, finance, legal, e-learning, and more. Content is available in English, French, Spanish, and Arabic. The site is updated regularly with new tools, comparisons, alternatives, and AI buying guides.
+
+## Key sections
+
+- [Tool directory](https://getaiverse.online/en): Browse and filter 649+ AI tools by category, pricing model (free, freemium, paid), and rating. Each tool page includes a description, pricing details, pros/cons, and an FAQ section.
+- [Comparisons](https://getaiverse.online/en/compare): Head-to-head comparisons between popular AI tools (e.g. ChatGPT vs Claude, Midjourney vs DALL-E 3, Gamma vs Tome), including pricing differences and which tool is better for specific use cases.
+- [Alternatives](https://getaiverse.online/en/alternatives): Curated alternative tools to popular AI products (ChatGPT, Midjourney, Notion AI, GitHub Copilot, Canva AI, Grammarly, ElevenLabs, DALL-E 3, Runway Gen-3, Jasper).
+- [Blog](https://getaiverse.online/en/blog): Long-form guides answering "best AI tools for X in 2026" questions (presentations, chatbot builders, free AI tools, YouTube creators, AI agents by category, and more), each with a FAQ section.
+
+## Content format notes
+
+- Every tool, comparison, alternative, and blog page includes a FAQ section marked up with FAQPage structured data (JSON-LD), formatted as direct ~40-60 word answers followed by details — designed to be quoted directly.
+- Each locale is served under a path prefix: /en, /fr, /es, /ar (e.g. https://getaiverse.online/fr/tools/chatgpt).
+- Full URL list: https://getaiverse.online/sitemap.xml
+
+## Contact
+
+- Submit a tool: https://getaiverse.online/en/submit
