@@ -2428,4 +2428,444 @@ export const TOOL_FAQS: Record<string, FAQItem[]> = {
       },
     },
   ],
+  'dify-ai': [
+    {
+      question: {
+        en: 'What is Dify used for?',
+        fr: 'À quoi sert Dify ?',
+        es: '¿Para qué se usa Dify?',
+        ar: 'لماذا يُستخدم Dify؟',
+      },
+      answer: {
+        en: 'Dify is a platform for building AI applications and agent workflows on a visual canvas, then exposing them through an API or embedded widget. It is popular with teams adding AI features to an existing product.',
+        fr: 'Dify est une plateforme pour créer des applications IA et des workflows d\'agents sur une interface visuelle, puis les exposer via une API ou un widget intégré. Il est populaire auprès des équipes qui ajoutent des fonctionnalités IA à un produit existant.',
+        es: 'Dify es una plataforma para crear aplicaciones de IA y flujos de trabajo de agentes en un lienzo visual, y luego exponerlos mediante una API o un widget integrado. Es popular entre equipos que añaden funciones de IA a un producto existente.',
+        ar: 'Dify هي منصة لبناء تطبيقات الذكاء الاصطناعي وسير عمل الوكلاء على لوحة بصرية، ثم عرضها عبر واجهة برمجة تطبيقات أو أداة مدمجة. تحظى بشعبية بين الفرق التي تضيف ميزات ذكاء اصطناعي لمنتج موجود.',
+      },
+    },
+    {
+      question: {
+        en: 'Does Dify require coding?',
+        fr: 'Dify nécessite-t-il de coder ?',
+        es: '¿Dify requiere programación?',
+        ar: 'هل يتطلب Dify كتابة كود؟',
+      },
+      answer: {
+        en: 'Most of Dify\'s workflow builder is visual and no-code, but it also offers an API and SDKs for developers who want to integrate AI apps into their own codebase, making it usable by both technical and non-technical teams.',
+        fr: 'La majeure partie du constructeur de workflows de Dify est visuelle et sans code, mais il propose aussi une API et des SDK pour les développeurs souhaitant intégrer des applications IA dans leur propre code, ce qui le rend utilisable par les équipes techniques et non techniques.',
+        es: 'La mayor parte del constructor de flujos de Dify es visual y sin código, pero también ofrece una API y SDKs para desarrolladores que quieran integrar aplicaciones de IA en su propio código, lo que lo hace útil tanto para equipos técnicos como no técnicos.',
+        ar: 'معظم منشئ سير العمل في Dify بصري وبدون كود، لكنه يوفر أيضاً واجهة برمجة تطبيقات وحزم تطوير للمطورين الذين يريدون دمج تطبيقات الذكاء الاصطناعي في كودهم الخاص، مما يجعله قابلاً للاستخدام من الفرق التقنية وغير التقنية.',
+      },
+    },
+    {
+      question: {
+        en: 'Can Dify connect to external data sources?',
+        fr: 'Dify peut-il se connecter à des sources de données externes ?',
+        es: '¿Puede Dify conectarse a fuentes de datos externas?',
+        ar: 'هل يمكن لـ Dify الاتصال بمصادر بيانات خارجية؟',
+      },
+      answer: {
+        en: 'Yes, Dify supports knowledge bases built from your own documents (RAG), plus plugins and API tools so agents can query databases, call external services, and ground their answers in your data.',
+        fr: 'Oui, Dify prend en charge des bases de connaissances construites à partir de vos propres documents (RAG), ainsi que des plugins et outils API permettant aux agents d\'interroger des bases de données, d\'appeler des services externes et de fonder leurs réponses sur vos données.',
+        es: 'Sí, Dify admite bases de conocimiento construidas a partir de tus propios documentos (RAG), además de plugins y herramientas de API para que los agentes consulten bases de datos, llamen a servicios externos y basen sus respuestas en tus datos.',
+        ar: 'نعم، يدعم Dify قواعد معرفية مبنية من مستنداتك الخاصة (RAG)، بالإضافة إلى الإضافات وأدوات واجهة برمجة التطبيقات حتى يتمكن الوكلاء من الاستعلام عن قواعد البيانات واستدعاء خدمات خارجية وتأسيس إجاباتهم على بياناتك.',
+      },
+    },
+  ],
+  langchain: [
+    {
+      question: {
+        en: 'Is LangChain free to use?',
+        fr: 'LangChain est-il gratuit ?',
+        es: '¿LangChain es gratuito?',
+        ar: 'هل LangChain مجاني الاستخدام؟',
+      },
+      answer: {
+        en: 'LangChain is an open-source framework and free to use. You only pay for the underlying LLM API calls (such as OpenAI or Anthropic) and any optional hosted services like LangSmith for monitoring.',
+        fr: 'LangChain est un framework open-source et gratuit. Vous ne payez que pour les appels API du LLM sous-jacent (comme OpenAI ou Anthropic) et les services hébergés optionnels comme LangSmith pour le monitoring.',
+        es: 'LangChain es un framework de código abierto y gratuito. Solo pagas por las llamadas a la API del LLM subyacente (como OpenAI o Anthropic) y por servicios alojados opcionales como LangSmith para monitoreo.',
+        ar: 'LangChain إطار عمل مفتوح المصدر ومجاني الاستخدام. تدفع فقط مقابل استدعاءات واجهة برمجة تطبيقات النموذج اللغوي الأساسي (مثل OpenAI أو Anthropic) وأي خدمات استضافة اختيارية مثل LangSmith للمراقبة.',
+      },
+    },
+    {
+      question: {
+        en: 'What programming languages does LangChain support?',
+        fr: 'Quels langages de programmation LangChain prend-il en charge ?',
+        es: '¿Qué lenguajes de programación admite LangChain?',
+        ar: 'ما لغات البرمجة التي يدعمها LangChain؟',
+      },
+      answer: {
+        en: 'LangChain is available as a Python library and a JavaScript/TypeScript library, with largely equivalent feature sets, so you can build agents in either ecosystem.',
+        fr: 'LangChain est disponible en tant que bibliothèque Python et bibliothèque JavaScript/TypeScript, avec des fonctionnalités largement équivalentes, ce qui permet de créer des agents dans l\'un ou l\'autre écosystème.',
+        es: 'LangChain está disponible como biblioteca de Python y como biblioteca de JavaScript/TypeScript, con conjuntos de funciones prácticamente equivalentes, por lo que puedes crear agentes en cualquiera de los dos ecosistemas.',
+        ar: 'يتوفر LangChain كمكتبة بايثون ومكتبة جافاسكريبت/تايبسكريبت، بميزات متكافئة إلى حد كبير، حتى تتمكن من بناء وكلاء في أي من النظامين.',
+      },
+    },
+    {
+      question: {
+        en: 'What is LangGraph and how does it relate to LangChain?',
+        fr: 'Qu\'est-ce que LangGraph et quel est son lien avec LangChain ?',
+        es: '¿Qué es LangGraph y cómo se relaciona con LangChain?',
+        ar: 'ما هو LangGraph وكيف يرتبط بـ LangChain؟',
+      },
+      answer: {
+        en: 'LangGraph is a companion library built on top of LangChain for creating stateful, multi-step agents represented as graphs, with explicit control over loops, branching, and human-in-the-loop checkpoints — useful for complex production agents.',
+        fr: 'LangGraph est une bibliothèque complémentaire construite sur LangChain pour créer des agents avec état, en plusieurs étapes, représentés sous forme de graphes, avec un contrôle explicite sur les boucles, les branchements et les points de contrôle humains — utile pour les agents de production complexes.',
+        es: 'LangGraph es una biblioteca complementaria construida sobre LangChain para crear agentes con estado y de varios pasos representados como grafos, con control explícito sobre bucles, ramificaciones y puntos de control con intervención humana — útil para agentes de producción complejos.',
+        ar: 'LangGraph مكتبة مكملة مبنية فوق LangChain لإنشاء وكلاء ذوي حالة ومتعددي الخطوات يتم تمثيلهم كرسوم بيانية، مع تحكم واضح في الحلقات والتفرعات ونقاط تدخل الإنسان — مفيدة للوكلاء الإنتاجيين المعقدين.',
+      },
+    },
+  ],
+  'n8n-ai': [
+    {
+      question: {
+        en: 'Is n8n free to use?',
+        fr: 'n8n est-il gratuit ?',
+        es: '¿n8n es gratuito?',
+        ar: 'هل n8n مجاني الاستخدام؟',
+      },
+      answer: {
+        en: 'n8n is open-source and free to self-host with no execution limits. It also offers a paid cloud plan with managed hosting, additional users, and support, priced by workflow execution volume.',
+        fr: 'n8n est open-source et gratuit en auto-hébergement, sans limite d\'exécution. Il propose aussi un plan cloud payant avec hébergement géré, utilisateurs supplémentaires et support, tarifé selon le volume d\'exécutions de workflows.',
+        es: 'n8n es de código abierto y gratuito para autohospedar sin límites de ejecución. También ofrece un plan en la nube de pago con hospedaje gestionado, usuarios adicionales y soporte, con precio según el volumen de ejecuciones de flujos de trabajo.',
+        ar: 'n8n مفتوح المصدر ومجاني للاستضافة الذاتية دون حدود تنفيذ. كما يقدم خطة سحابية مدفوعة باستضافة مدارة ومستخدمين إضافيين ودعم، يتم تسعيرها بحسب حجم تنفيذ سير العمل.',
+      },
+    },
+    {
+      question: {
+        en: 'Can n8n run AI agents inside a workflow?',
+        fr: 'n8n peut-il exécuter des agents IA dans un workflow ?',
+        es: '¿Puede n8n ejecutar agentes de IA dentro de un flujo de trabajo?',
+        ar: 'هل يمكن لـ n8n تشغيل وكلاء ذكاء اصطناعي داخل سير العمل؟',
+      },
+      answer: {
+        en: 'Yes, n8n includes native AI agent nodes that connect to LLMs, give the agent access to tools and memory, and let it make decisions mid-workflow, combining traditional automation with autonomous reasoning.',
+        fr: 'Oui, n8n inclut des nœuds d\'agents IA natifs qui se connectent aux LLM, donnent à l\'agent accès à des outils et à une mémoire, et lui permettent de prendre des décisions en cours de workflow, combinant automatisation traditionnelle et raisonnement autonome.',
+        es: 'Sí, n8n incluye nodos de agentes de IA nativos que se conectan a LLMs, le dan al agente acceso a herramientas y memoria, y le permiten tomar decisiones en medio del flujo de trabajo, combinando automatización tradicional con razonamiento autónomo.',
+        ar: 'نعم، يتضمن n8n عقد وكيل ذكاء اصطناعي أصلية تتصل بالنماذج اللغوية، وتمنح الوكيل وصولاً إلى الأدوات والذاكرة، وتتيح له اتخاذ القرارات في منتصف سير العمل، مما يجمع بين الأتمتة التقليدية والتفكير المستقل.',
+      },
+    },
+    {
+      question: {
+        en: 'How many apps can n8n integrate with?',
+        fr: 'Avec combien d\'applications n8n peut-il s\'intégrer ?',
+        es: '¿Con cuántas aplicaciones puede integrarse n8n?',
+        ar: 'مع كم تطبيق يمكن لـ n8n التكامل؟',
+      },
+      answer: {
+        en: 'n8n ships with hundreds of pre-built integrations (CRMs, email, databases, messaging apps, and more), plus an HTTP request node and custom code nodes for connecting to virtually any API.',
+        fr: 'n8n est livré avec des centaines d\'intégrations prêtes à l\'emploi (CRM, email, bases de données, applications de messagerie, etc.), ainsi qu\'un nœud de requête HTTP et des nœuds de code personnalisé pour se connecter à pratiquement n\'importe quelle API.',
+        es: 'n8n viene con cientos de integraciones preconstruidas (CRMs, correo electrónico, bases de datos, aplicaciones de mensajería y más), además de un nodo de solicitud HTTP y nodos de código personalizado para conectarse a prácticamente cualquier API.',
+        ar: 'يأتي n8n مزوداً بمئات التكاملات الجاهزة (أنظمة CRM، البريد الإلكتروني، قواعد البيانات، تطبيقات المراسلة، وأكثر)، بالإضافة إلى عقدة طلب HTTP وعقد كود مخصصة للاتصال بأي واجهة برمجة تطبيقات تقريباً.',
+      },
+    },
+  ],
+  'flowise-ai': [
+    {
+      question: {
+        en: 'What is Flowise?',
+        fr: 'Qu\'est-ce que Flowise ?',
+        es: '¿Qué es Flowise?',
+        ar: 'ما هو Flowise؟',
+      },
+      answer: {
+        en: 'Flowise is an open-source, drag-and-drop visual builder for creating LLM-powered apps and agent flows, built on top of LangChain components but accessible without writing code.',
+        fr: 'Flowise est un constructeur visuel open-source par glisser-déposer pour créer des applications et flux d\'agents basés sur des LLM, construit sur des composants LangChain mais accessible sans écrire de code.',
+        es: 'Flowise es un constructor visual de código abierto, de arrastrar y soltar, para crear aplicaciones y flujos de agentes potenciados por LLM, construido sobre componentes de LangChain pero accesible sin escribir código.',
+        ar: 'Flowise هو منشئ بصري مفتوح المصدر بالسحب والإفلات لإنشاء تطبيقات وتدفقات وكلاء مدعومة بالنماذج اللغوية، مبني على مكونات LangChain لكنه قابل للاستخدام دون كتابة كود.',
+      },
+    },
+    {
+      question: {
+        en: 'Is Flowise free and can it be self-hosted?',
+        fr: 'Flowise est-il gratuit et peut-il être auto-hébergé ?',
+        es: '¿Flowise es gratis y se puede autohospedar?',
+        ar: 'هل Flowise مجاني ويمكن استضافته ذاتياً؟',
+      },
+      answer: {
+        en: 'Flowise is open-source under an Apache-based license and free to self-host on your own server or via Docker. A hosted cloud version is also available for teams that prefer managed infrastructure.',
+        fr: 'Flowise est open-source sous une licence basée sur Apache et gratuit à auto-héberger sur votre propre serveur ou via Docker. Une version cloud hébergée est également disponible pour les équipes qui préfèrent une infrastructure gérée.',
+        es: 'Flowise es de código abierto bajo una licencia basada en Apache y gratuito para autohospedar en tu propio servidor o vía Docker. También hay disponible una versión en la nube alojada para equipos que prefieren infraestructura gestionada.',
+        ar: 'Flowise مفتوح المصدر بموجب ترخيص قائم على Apache ومجاني للاستضافة الذاتية على خادمك الخاص أو عبر Docker. تتوفر أيضاً نسخة سحابية مستضافة للفرق التي تفضل بنية تحتية مدارة.',
+      },
+    },
+    {
+      question: {
+        en: 'Do I need to know how to code to use Flowise?',
+        fr: 'Faut-il savoir coder pour utiliser Flowise ?',
+        es: '¿Necesito saber programar para usar Flowise?',
+        ar: 'هل أحتاج لمعرفة البرمجة لاستخدام Flowise؟',
+      },
+      answer: {
+        en: 'No — Flowise is designed so you can build chatbots and agent workflows by connecting nodes on a canvas. Developers can still extend it with custom JavaScript/TypeScript functions when needed.',
+        fr: 'Non — Flowise est conçu pour vous permettre de créer des chatbots et des workflows d\'agents en connectant des nœuds sur une interface. Les développeurs peuvent toujours l\'étendre avec des fonctions JavaScript/TypeScript personnalisées si nécessaire.',
+        es: 'No — Flowise está diseñado para que puedas crear chatbots y flujos de trabajo de agentes conectando nodos en un lienzo. Los desarrolladores aún pueden extenderlo con funciones personalizadas de JavaScript/TypeScript cuando sea necesario.',
+        ar: 'لا — تم تصميم Flowise حتى تتمكن من بناء روبوتات محادثة وتدفقات وكلاء عبر ربط العقد على لوحة. يمكن للمطورين توسيعه بوظائف جافاسكريبت/تايبسكريبت مخصصة عند الحاجة.',
+      },
+    },
+  ],
+  crewai: [
+    {
+      question: {
+        en: 'What is CrewAI used for?',
+        fr: 'À quoi sert CrewAI ?',
+        es: '¿Para qué se usa CrewAI?',
+        ar: 'لماذا يُستخدم CrewAI؟',
+      },
+      answer: {
+        en: 'CrewAI is a Python framework for orchestrating teams of AI agents, each with a defined role, goal, and tools, that collaborate on multi-step tasks such as research, content creation, and data analysis pipelines.',
+        fr: 'CrewAI est un framework Python pour orchestrer des équipes d\'agents IA, chacun avec un rôle, un objectif et des outils définis, qui collaborent sur des tâches en plusieurs étapes comme la recherche, la création de contenu et les pipelines d\'analyse de données.',
+        es: 'CrewAI es un framework de Python para orquestar equipos de agentes de IA, cada uno con un rol, un objetivo y herramientas definidos, que colaboran en tareas de varios pasos como investigación, creación de contenido y pipelines de análisis de datos.',
+        ar: 'CrewAI هو إطار عمل بايثون لتنسيق فرق من وكلاء الذكاء الاصطناعي، كل منهم له دور وهدف وأدوات محددة، يتعاونون في مهام متعددة الخطوات مثل البحث وإنشاء المحتوى وخطوط تحليل البيانات.',
+      },
+    },
+    {
+      question: {
+        en: 'Is CrewAI free to use?',
+        fr: 'CrewAI est-il gratuit ?',
+        es: '¿CrewAI es gratuito?',
+        ar: 'هل CrewAI مجاني الاستخدام؟',
+      },
+      answer: {
+        en: 'The CrewAI open-source framework is free. CrewAI also offers a paid enterprise platform with hosting, observability, and team collaboration features for running crews in production.',
+        fr: 'Le framework open-source CrewAI est gratuit. CrewAI propose également une plateforme entreprise payante avec hébergement, observabilité et fonctionnalités de collaboration d\'équipe pour exécuter des équipes en production.',
+        es: 'El framework de código abierto CrewAI es gratuito. CrewAI también ofrece una plataforma empresarial de pago con hospedaje, observabilidad y funciones de colaboración en equipo para ejecutar crews en producción.',
+        ar: 'إطار عمل CrewAI مفتوح المصدر مجاني. يقدم CrewAI أيضاً منصة مؤسسية مدفوعة مع استضافة وإمكانية مراقبة وميزات تعاون جماعي لتشغيل الفرق في الإنتاج.',
+      },
+    },
+    {
+      question: {
+        en: 'How is CrewAI different from AutoGen or LangChain?',
+        fr: 'En quoi CrewAI diffère-t-il d\'AutoGen ou LangChain ?',
+        es: '¿En qué se diferencia CrewAI de AutoGen o LangChain?',
+        ar: 'كيف يختلف CrewAI عن AutoGen أو LangChain؟',
+      },
+      answer: {
+        en: 'CrewAI uses a higher-level, role-based abstraction (agents with roles, goals, and processes) compared to AutoGen\'s conversational multi-agent model and LangChain\'s lower-level component toolbox, making it faster to set up for business-process-style automations.',
+        fr: 'CrewAI utilise une abstraction de plus haut niveau basée sur les rôles (agents avec rôles, objectifs et processus) par rapport au modèle conversationnel multi-agents d\'AutoGen et à la boîte à outils de composants de bas niveau de LangChain, ce qui le rend plus rapide à configurer pour les automatisations de type processus métier.',
+        es: 'CrewAI utiliza una abstracción de nivel más alto basada en roles (agentes con roles, objetivos y procesos) en comparación con el modelo conversacional multiagente de AutoGen y la caja de herramientas de componentes de bajo nivel de LangChain, lo que lo hace más rápido de configurar para automatizaciones tipo proceso empresarial.',
+        ar: 'يستخدم CrewAI تجريداً أعلى مستوى قائماً على الأدوار (وكلاء بأدوار وأهداف وعمليات) مقارنة بنموذج AutoGen الحواري متعدد الوكلاء وصندوق أدوات LangChain منخفض المستوى، مما يجعله أسرع في الإعداد لأتمتة العمليات التجارية.',
+      },
+    },
+  ],
+  opendevin: [
+    {
+      question: {
+        en: 'What is OpenDevin?',
+        fr: 'Qu\'est-ce qu\'OpenDevin ?',
+        es: '¿Qué es OpenDevin?',
+        ar: 'ما هو OpenDevin؟',
+      },
+      answer: {
+        en: 'OpenDevin (also known as OpenHands) is an open-source platform for AI software development agents that can write code, run commands in a sandboxed terminal, browse the web, and iterate on tasks autonomously.',
+        fr: 'OpenDevin (également connu sous le nom d\'OpenHands) est une plateforme open-source d\'agents de développement logiciel IA capables d\'écrire du code, d\'exécuter des commandes dans un terminal sandboxé, de naviguer sur le web et d\'itérer sur des tâches de manière autonome.',
+        es: 'OpenDevin (también conocido como OpenHands) es una plataforma de código abierto para agentes de desarrollo de software con IA que pueden escribir código, ejecutar comandos en una terminal aislada, navegar por la web e iterar sobre tareas de forma autónoma.',
+        ar: 'OpenDevin (المعروف أيضاً باسم OpenHands) هو منصة مفتوحة المصدر لوكلاء تطوير برمجيات بالذكاء الاصطناعي يمكنها كتابة الكود وتشغيل أوامر في طرفية معزولة والتصفح على الويب وتكرار المهام بشكل مستقل.',
+      },
+    },
+    {
+      question: {
+        en: 'Is it safe to let OpenDevin run code automatically?',
+        fr: 'Est-il sûr de laisser OpenDevin exécuter du code automatiquement ?',
+        es: '¿Es seguro dejar que OpenDevin ejecute código automáticamente?',
+        ar: 'هل من الآمن ترك OpenDevin يشغل الكود تلقائياً؟',
+      },
+      answer: {
+        en: 'OpenDevin runs commands inside an isolated sandbox (typically a Docker container), which limits the impact on your main system. Even so, it is recommended to review agent-generated changes before merging them into production codebases.',
+        fr: 'OpenDevin exécute les commandes dans un sandbox isolé (généralement un conteneur Docker), ce qui limite l\'impact sur votre système principal. Néanmoins, il est recommandé de relire les modifications générées par l\'agent avant de les fusionner dans des bases de code de production.',
+        es: 'OpenDevin ejecuta los comandos dentro de un sandbox aislado (normalmente un contenedor Docker), lo que limita el impacto en tu sistema principal. Aun así, se recomienda revisar los cambios generados por el agente antes de fusionarlos en bases de código de producción.',
+        ar: 'يشغل OpenDevin الأوامر داخل بيئة معزولة (عادة حاوية Docker)، مما يحد من التأثير على نظامك الرئيسي. ومع ذلك، يُنصح بمراجعة التغييرات التي يولدها الوكيل قبل دمجها في قواعد الكود الإنتاجية.',
+      },
+    },
+    {
+      question: {
+        en: 'Do I need my own LLM API key to use OpenDevin?',
+        fr: 'Ai-je besoin de ma propre clé API LLM pour utiliser OpenDevin ?',
+        es: '¿Necesito mi propia clave API de LLM para usar OpenDevin?',
+        ar: 'هل أحتاج إلى مفتاح واجهة برمجة تطبيقات نموذج لغوي خاص بي لاستخدام OpenDevin؟',
+      },
+      answer: {
+        en: 'Yes, since OpenDevin is open-source and self-hosted, you connect it to an LLM provider of your choice (such as OpenAI, Anthropic, or a local model) using your own API key, and you pay that provider directly for usage.',
+        fr: 'Oui, puisqu\'OpenDevin est open-source et auto-hébergé, vous le connectez à un fournisseur de LLM de votre choix (comme OpenAI, Anthropic ou un modèle local) avec votre propre clé API, et vous payez ce fournisseur directement pour l\'utilisation.',
+        es: 'Sí, dado que OpenDevin es de código abierto y autohospedado, lo conectas a un proveedor de LLM de tu elección (como OpenAI, Anthropic o un modelo local) usando tu propia clave API, y pagas a ese proveedor directamente por el uso.',
+        ar: 'نعم، بما أن OpenDevin مفتوح المصدر ومستضاف ذاتياً، فإنك تربطه بمزود نموذج لغوي من اختيارك (مثل OpenAI أو Anthropic أو نموذج محلي) باستخدام مفتاح واجهة برمجة التطبيقات الخاص بك، وتدفع لذلك المزود مباشرة مقابل الاستخدام.',
+      },
+    },
+  ],
+  'gpt-researcher': [
+    {
+      question: {
+        en: 'What does GPT Researcher do?',
+        fr: 'Que fait GPT Researcher ?',
+        es: '¿Qué hace GPT Researcher?',
+        ar: 'ما الذي يفعله GPT Researcher؟',
+      },
+      answer: {
+        en: 'GPT Researcher is an autonomous agent that takes a research query, searches and reads multiple web sources, and compiles the findings into a structured, cited report — automating hours of manual research into minutes.',
+        fr: 'GPT Researcher est un agent autonome qui prend une question de recherche, parcourt et lit plusieurs sources web, et compile les résultats dans un rapport structuré et sourcé — automatisant des heures de recherche manuelle en quelques minutes.',
+        es: 'GPT Researcher es un agente autónomo que toma una consulta de investigación, busca y lee múltiples fuentes web, y compila los hallazgos en un informe estructurado y citado — automatizando horas de investigación manual en minutos.',
+        ar: 'GPT Researcher هو وكيل مستقل يأخذ استعلام بحث، ويبحث ويقرأ مصادر ويب متعددة، ويجمع النتائج في تقرير منظم وموثق — مما يحول ساعات من البحث اليدوي إلى دقائق.',
+      },
+    },
+    {
+      question: {
+        en: 'Is GPT Researcher free?',
+        fr: 'GPT Researcher est-il gratuit ?',
+        es: '¿GPT Researcher es gratis?',
+        ar: 'هل GPT Researcher مجاني؟',
+      },
+      answer: {
+        en: 'GPT Researcher is open-source and free to run yourself. You pay only for the LLM and search API calls it makes (such as OpenAI and a search provider), so cost depends on how many reports you generate.',
+        fr: 'GPT Researcher est open-source et gratuit à exécuter soi-même. Vous payez uniquement les appels API LLM et de recherche qu\'il effectue (comme OpenAI et un fournisseur de recherche), donc le coût dépend du nombre de rapports générés.',
+        es: 'GPT Researcher es de código abierto y gratis para ejecutar por tu cuenta. Solo pagas las llamadas a la API de LLM y de búsqueda que realiza (como OpenAI y un proveedor de búsqueda), por lo que el costo depende de cuántos informes generes.',
+        ar: 'GPT Researcher مفتوح المصدر ومجاني للتشغيل بنفسك. تدفع فقط مقابل استدعاءات النموذج اللغوي والبحث التي يقوم بها (مثل OpenAI ومزود بحث)، لذا تعتمد التكلفة على عدد التقارير التي تنشئها.',
+      },
+    },
+    {
+      question: {
+        en: 'How accurate and reliable are GPT Researcher\'s reports?',
+        fr: 'Quelle est la fiabilité des rapports de GPT Researcher ?',
+        es: '¿Qué tan precisos y confiables son los informes de GPT Researcher?',
+        ar: 'ما مدى دقة وموثوقية تقارير GPT Researcher؟',
+      },
+      answer: {
+        en: 'GPT Researcher cites the sources it used for each claim, which makes it easier to verify, but like any AI tool it can still misread or misweight sources. Treat its reports as a strong first draft to be reviewed, not a final authority.',
+        fr: 'GPT Researcher cite les sources utilisées pour chaque affirmation, ce qui facilite la vérification, mais comme tout outil IA, il peut encore mal interpréter ou mal pondérer les sources. Considérez ses rapports comme un solide premier brouillon à vérifier, pas comme une autorité finale.',
+        es: 'GPT Researcher cita las fuentes que usó para cada afirmación, lo que facilita su verificación, pero como cualquier herramienta de IA, puede malinterpretar o sobrevalorar fuentes. Trata sus informes como un buen primer borrador a revisar, no como una autoridad final.',
+        ar: 'يستشهد GPT Researcher بالمصادر التي استخدمها لكل ادعاء، مما يسهل التحقق، لكنه مثل أي أداة ذكاء اصطناعي قد يخطئ في قراءة أو تقييم المصادر. تعامل مع تقاريره كمسودة أولى قوية تحتاج للمراجعة، وليس كمرجع نهائي.',
+      },
+    },
+  ],
+  'gpt-engineer': [
+    {
+      question: {
+        en: 'What is GPT Engineer?',
+        fr: 'Qu\'est-ce que GPT Engineer ?',
+        es: '¿Qué es GPT Engineer?',
+        ar: 'ما هو GPT Engineer؟',
+      },
+      answer: {
+        en: 'GPT Engineer is an open-source AI agent that generates an entire codebase from a plain-language project description, asking clarifying questions before writing the code, project structure, and dependencies.',
+        fr: 'GPT Engineer est un agent IA open-source qui génère une base de code entière à partir d\'une description de projet en langage naturel, en posant des questions de clarification avant d\'écrire le code, la structure du projet et les dépendances.',
+        es: 'GPT Engineer es un agente de IA de código abierto que genera toda una base de código a partir de una descripción de proyecto en lenguaje natural, haciendo preguntas aclaratorias antes de escribir el código, la estructura del proyecto y las dependencias.',
+        ar: 'GPT Engineer هو وكيل ذكاء اصطناعي مفتوح المصدر يولد قاعدة كود كاملة من وصف مشروع بلغة طبيعية، ويطرح أسئلة توضيحية قبل كتابة الكود وبنية المشروع والتبعيات.',
+      },
+    },
+    {
+      question: {
+        en: 'Can GPT Engineer build a complete application?',
+        fr: 'GPT Engineer peut-il créer une application complète ?',
+        es: '¿Puede GPT Engineer crear una aplicación completa?',
+        ar: 'هل يمكن لـ GPT Engineer بناء تطبيق كامل؟',
+      },
+      answer: {
+        en: 'GPT Engineer can scaffold a working starting point for small-to-medium applications, including file structure and basic logic. For larger or production-grade apps, expect to refine and extend the generated code yourself.',
+        fr: 'GPT Engineer peut créer un point de départ fonctionnel pour des applications petites à moyennes, incluant la structure des fichiers et la logique de base. Pour des applications plus grandes ou de niveau production, attendez-vous à devoir affiner et étendre le code généré vous-même.',
+        es: 'GPT Engineer puede crear un punto de partida funcional para aplicaciones pequeñas a medianas, incluyendo la estructura de archivos y la lógica básica. Para aplicaciones más grandes o de nivel de producción, deberás refinar y ampliar el código generado tú mismo.',
+        ar: 'يمكن لـ GPT Engineer إنشاء نقطة بداية عاملة لتطبيقات صغيرة إلى متوسطة، بما في ذلك بنية الملفات والمنطق الأساسي. بالنسبة للتطبيقات الأكبر أو الجاهزة للإنتاج، توقع أنك ستحتاج لتحسين وتوسيع الكود المولّد بنفسك.',
+      },
+    },
+    {
+      question: {
+        en: 'Is GPT Engineer free to use?',
+        fr: 'GPT Engineer est-il gratuit ?',
+        es: '¿GPT Engineer es gratis?',
+        ar: 'هل GPT Engineer مجاني الاستخدام؟',
+      },
+      answer: {
+        en: 'GPT Engineer is open-source and free to run locally. You provide your own LLM API key, so the only cost is the API usage charged by your chosen model provider.',
+        fr: 'GPT Engineer est open-source et gratuit à exécuter localement. Vous fournissez votre propre clé API LLM, donc le seul coût est l\'utilisation de l\'API facturée par le fournisseur de modèle choisi.',
+        es: 'GPT Engineer es de código abierto y gratis para ejecutar localmente. Tú proporcionas tu propia clave API de LLM, por lo que el único costo es el uso de la API que cobra el proveedor del modelo elegido.',
+        ar: 'GPT Engineer مفتوح المصدر ومجاني للتشغيل محلياً. توفر مفتاح واجهة برمجة تطبيقات النموذج اللغوي الخاص بك، لذا فإن التكلفة الوحيدة هي استخدام واجهة برمجة التطبيقات التي يفرضها مزود النموذج الذي تختاره.',
+      },
+    },
+  ],
+  'botpress-ai': [
+    {
+      question: {
+        en: 'What is Botpress used for?',
+        fr: 'À quoi sert Botpress ?',
+        es: '¿Para qué se usa Botpress?',
+        ar: 'لماذا يُستخدم Botpress؟',
+      },
+      answer: {
+        en: 'Botpress is a platform for building AI-powered chatbots and conversational agents that can be deployed on websites, WhatsApp, Messenger, Slack, and other channels, combining a visual flow builder with LLM-based responses.',
+        fr: 'Botpress est une plateforme pour créer des chatbots et agents conversationnels alimentés par IA, déployables sur des sites web, WhatsApp, Messenger, Slack et d\'autres canaux, combinant un constructeur de flux visuel avec des réponses basées sur des LLM.',
+        es: 'Botpress es una plataforma para crear chatbots y agentes conversacionales impulsados por IA que se pueden desplegar en sitios web, WhatsApp, Messenger, Slack y otros canales, combinando un constructor de flujos visual con respuestas basadas en LLM.',
+        ar: 'Botpress منصة لبناء روبوتات محادثة ووكلاء حوار مدعومين بالذكاء الاصطناعي يمكن نشرها على المواقع وWhatsApp وMessenger وSlack وقنوات أخرى، تجمع بين منشئ تدفقات بصري وردود قائمة على النماذج اللغوية.',
+      },
+    },
+    {
+      question: {
+        en: 'Is Botpress free to use?',
+        fr: 'Botpress est-il gratuit ?',
+        es: '¿Botpress es gratuito?',
+        ar: 'هل Botpress مجاني الاستخدام؟',
+      },
+      answer: {
+        en: 'Botpress offers a free plan with usage limits suitable for testing and small bots, plus paid plans that scale with the number of conversations and add features like advanced analytics and team collaboration.',
+        fr: 'Botpress propose un plan gratuit avec des limites d\'utilisation adaptées aux tests et aux petits bots, ainsi que des plans payants qui évoluent selon le nombre de conversations et ajoutent des fonctionnalités comme l\'analytique avancée et la collaboration d\'équipe.',
+        es: 'Botpress ofrece un plan gratuito con límites de uso adecuados para pruebas y bots pequeños, además de planes de pago que escalan según el número de conversaciones y añaden funciones como análisis avanzado y colaboración en equipo.',
+        ar: 'يقدم Botpress خطة مجانية بحدود استخدام مناسبة للاختبار والروبوتات الصغيرة، بالإضافة إلى خطط مدفوعة تتوسع مع عدد المحادثات وتضيف ميزات مثل التحليلات المتقدمة والتعاون الجماعي.',
+      },
+    },
+    {
+      question: {
+        en: 'Can Botpress connect to WhatsApp and Messenger?',
+        fr: 'Botpress peut-il se connecter à WhatsApp et Messenger ?',
+        es: '¿Puede Botpress conectarse a WhatsApp y Messenger?',
+        ar: 'هل يمكن لـ Botpress الاتصال بـ WhatsApp و Messenger؟',
+      },
+      answer: {
+        en: 'Yes, Botpress provides built-in channel integrations for WhatsApp, Messenger, Slack, Telegram, and web chat widgets, so the same bot logic can run across multiple messaging platforms.',
+        fr: 'Oui, Botpress fournit des intégrations de canaux intégrées pour WhatsApp, Messenger, Slack, Telegram et des widgets de chat web, afin que la même logique de bot puisse fonctionner sur plusieurs plateformes de messagerie.',
+        es: 'Sí, Botpress proporciona integraciones de canal incorporadas para WhatsApp, Messenger, Slack, Telegram y widgets de chat web, de modo que la misma lógica del bot puede ejecutarse en múltiples plataformas de mensajería.',
+        ar: 'نعم، يوفر Botpress تكاملات قنوات مدمجة لـ WhatsApp و Messenger و Slack و Telegram وأدوات الدردشة على الويب، حتى يتمكن منطق الروبوت نفسه من العمل عبر منصات مراسلة متعددة.',
+      },
+    },
+  ],
+  'voiceflow-ai': [
+    {
+      question: {
+        en: 'What is Voiceflow used for?',
+        fr: 'À quoi sert Voiceflow ?',
+        es: '¿Para qué se usa Voiceflow?',
+        ar: 'لماذا يُستخدم Voiceflow؟',
+      },
+      answer: {
+        en: 'Voiceflow is a design and development platform for building conversational AI agents — chat and voice assistants — with a visual canvas that lets teams collaborate on dialogue flows before connecting them to an LLM.',
+        fr: 'Voiceflow est une plateforme de conception et de développement pour créer des agents IA conversationnels — assistants de chat et vocaux — avec une interface visuelle permettant aux équipes de collaborer sur les flux de dialogue avant de les connecter à un LLM.',
+        es: 'Voiceflow es una plataforma de diseño y desarrollo para crear agentes de IA conversacionales — asistentes de chat y voz — con un lienzo visual que permite a los equipos colaborar en flujos de diálogo antes de conectarlos a un LLM.',
+        ar: 'Voiceflow منصة تصميم وتطوير لبناء وكلاء ذكاء اصطناعي حواريين — مساعدات دردشة وصوت — بلوحة بصرية تتيح للفرق التعاون على تدفقات الحوار قبل ربطها بنموذج لغوي.',
+      },
+    },
+    {
+      question: {
+        en: 'Is Voiceflow free?',
+        fr: 'Voiceflow est-il gratuit ?',
+        es: '¿Voiceflow es gratis?',
+        ar: 'هل Voiceflow مجاني؟',
+      },
+      answer: {
+        en: 'Voiceflow offers a free starter plan for individuals building a single agent, with paid plans for teams that need more agents, higher usage limits, and collaboration features.',
+        fr: 'Voiceflow propose un plan de démarrage gratuit pour les particuliers créant un seul agent, avec des plans payants pour les équipes ayant besoin de plus d\'agents, de limites d\'utilisation plus élevées et de fonctionnalités de collaboration.',
+        es: 'Voiceflow ofrece un plan inicial gratuito para personas que crean un solo agente, con planes de pago para equipos que necesitan más agentes, límites de uso más altos y funciones de colaboración.',
+        ar: 'يقدم Voiceflow خطة بداية مجانية للأفراد الذين يبنون وكيلاً واحداً، مع خطط مدفوعة للفرق التي تحتاج المزيد من الوكلاء وحدود استخدام أعلى وميزات تعاون.',
+      },
+    },
+    {
+      question: {
+        en: 'Can Voiceflow build voice assistants, not just text chatbots?',
+        fr: 'Voiceflow peut-il créer des assistants vocaux, pas seulement des chatbots texte ?',
+        es: '¿Puede Voiceflow crear asistentes de voz, no solo chatbots de texto?',
+        ar: 'هل يمكن لـ Voiceflow بناء مساعدات صوتية، وليس فقط روبوتات محادثة نصية؟',
+      },
+      answer: {
+        en: 'Yes, Voiceflow was originally built for voice assistant design (such as Alexa skills) and supports both voice and text/chat interfaces from the same dialogue flow, making it useful for omnichannel agent design.',
+        fr: 'Oui, Voiceflow a été conçu à l\'origine pour la conception d\'assistants vocaux (comme les skills Alexa) et prend en charge à la fois les interfaces vocales et texte/chat à partir du même flux de dialogue, ce qui le rend utile pour la conception d\'agents omnicanaux.',
+        es: 'Sí, Voiceflow se creó originalmente para el diseño de asistentes de voz (como las skills de Alexa) y admite interfaces de voz y de texto/chat desde el mismo flujo de diálogo, lo que lo hace útil para el diseño de agentes omnicanal.',
+        ar: 'نعم، تم بناء Voiceflow في الأصل لتصميم المساعدات الصوتية (مثل مهارات Alexa) ويدعم واجهات الصوت والنص/الدردشة من نفس تدفق الحوار، مما يجعله مفيداً لتصميم الوكلاء متعددي القنوات.',
+      },
+    },
+  ],
 };

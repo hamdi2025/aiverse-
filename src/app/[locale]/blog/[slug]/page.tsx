@@ -43,11 +43,11 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-const T: Record<Locale, { back: string; readTime: (n: number) => string; relatedTools: string; relatedComparisons: string; visitTool: string; moreArticles: string }> = {
-  en: { back: '← Back to Blog', readTime: (n) => `${n} min read`, relatedTools: 'Related Tools', relatedComparisons: 'Related Comparisons', visitTool: 'View Tool', moreArticles: 'More Articles' },
-  fr: { back: '← Retour au Blog', readTime: (n) => `${n} min de lecture`, relatedTools: 'Outils Associés', relatedComparisons: 'Comparatifs Associés', visitTool: 'Voir l\'outil', moreArticles: 'Plus d\'articles' },
-  es: { back: '← Volver al Blog', readTime: (n) => `${n} min de lectura`, relatedTools: 'Herramientas Relacionadas', relatedComparisons: 'Comparativas Relacionadas', visitTool: 'Ver herramienta', moreArticles: 'Más artículos' },
-  ar: { back: '→ العودة إلى المدونة', readTime: (n) => `${n} دقائق قراءة`, relatedTools: 'أدوات ذات صلة', relatedComparisons: 'مقارنات ذات صلة', visitTool: 'عرض الأداة', moreArticles: 'مقالات أخرى' },
+const T: Record<Locale, { back: string; readTime: (n: number) => string; relatedTools: string; relatedComparisons: string; visitTool: string; moreArticles: string; faqTitle: string }> = {
+  en: { back: '← Back to Blog', readTime: (n) => `${n} min read`, relatedTools: 'Related Tools', relatedComparisons: 'Related Comparisons', visitTool: 'View Tool', moreArticles: 'More Articles', faqTitle: 'Frequently Asked Questions' },
+  fr: { back: '← Retour au Blog', readTime: (n) => `${n} min de lecture`, relatedTools: 'Outils Associés', relatedComparisons: 'Comparatifs Associés', visitTool: 'Voir l\'outil', moreArticles: 'Plus d\'articles', faqTitle: 'Questions fréquentes' },
+  es: { back: '← Volver al Blog', readTime: (n) => `${n} min de lectura`, relatedTools: 'Herramientas Relacionadas', relatedComparisons: 'Comparativas Relacionadas', visitTool: 'Ver herramienta', moreArticles: 'Más artículos', faqTitle: 'Preguntas frecuentes' },
+  ar: { back: '→ العودة إلى المدونة', readTime: (n) => `${n} دقائق قراءة`, relatedTools: 'أدوات ذات صلة', relatedComparisons: 'مقارنات ذات صلة', visitTool: 'عرض الأداة', moreArticles: 'مقالات أخرى', faqTitle: 'الأسئلة الشائعة' },
 };
 
 export default function BlogPostPage({ params }: Props) {
@@ -75,9 +75,25 @@ export default function BlogPostPage({ params }: Props) {
     publisher: { '@type': 'Organization', name: 'AIverse' },
   };
 
+  const faqJsonLd = post.faq && post.faq.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: post.faq.map((item) => ({
+      '@type': 'Question',
+      name: item.question[locale] || item.question.en,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer[locale] || item.answer.en,
+      },
+    })),
+  } : null;
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-16">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {faqJsonLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      )}
 
       <a href={`/${locale}/blog`} className="text-sm text-gray-500 hover:text-white transition mb-8 inline-block">{L.back}</a>
 
@@ -103,6 +119,21 @@ export default function BlogPostPage({ params }: Props) {
           </div>
         ))}
       </div>
+
+      {/* FAQ */}
+      {post.faq && post.faq.length > 0 && (
+        <div className="mb-10 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
+          <h2 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">❓ {L.faqTitle}</h2>
+          <div className="space-y-4">
+            {post.faq.map((item, idx) => (
+              <div key={idx} className="border-b border-white/[0.06] pb-4 last:border-b-0 last:pb-0">
+                <h3 className="text-white font-semibold mb-1.5">{item.question[locale] || item.question.en}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{item.answer[locale] || item.answer.en}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Related comparisons */}
       {post.relatedComparisons && post.relatedComparisons.length > 0 && (
