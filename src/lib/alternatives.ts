@@ -6,4 +6,9 @@ export const TOP_ALTERNATIVES = [
   'jasper-alternatives',
   'notion-ai-alternatives',
   'canva-ai-alternatives',
+  'grammarly-alternatives',
+  'github-copilot-alternatives',
+  'elevenlabs-alternatives',
+  'dalle3-alternatives',
+  'runway-gen3-alternatives',
 ];
