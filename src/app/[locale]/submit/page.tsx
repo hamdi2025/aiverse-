@@ -129,6 +129,7 @@ const T = {
     toolPlaceholder: 'مثال: سوبر وكيل', urlPlaceholder: 'https://yoursite.com', descPlaceholder: 'ماذا يفعل في جملة أو جملتين؟',
     catOptions: { tool: 'أداة ذكاء اصطناعي', agent: 'وكيل ذكاء اصطناعي', both: 'أداة + وكيل' },
     submitBtn: 'إرسال للمراجعة',
+    successTitle: 'تم الإرسال! 🎉', successDesc: 'سنراجعه وننشره خلال 24-48 ساعة.',
     fine: 'تُراجع الطلبات المجانية خلال 48 ساعة. نحتفظ بحق رفض أي أداة لا تستوفي معاييرنا.',
   },
 };
