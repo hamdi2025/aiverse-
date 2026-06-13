@@ -251,6 +251,15 @@ export default async function ComparePage({ params }: Props) {
               className={`flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-bold transition-all ${i === 0 ? 'bg-violet-600 hover:bg-violet-500 text-white' : 'bg-orange-500 hover:bg-orange-400 text-white'}`}>
               {L.visit} {tool.name} <ArrowUpRight className="w-4 h-4" />
             </a>
+            <div className="flex items-center justify-center gap-3 text-xs">
+              <a href={`/${locale}/tools/${tool.id}`} className="text-gray-400 hover:text-white transition">
+                {locale === 'fr' ? 'Voir la fiche' : locale === 'es' ? 'Ver detalles' : locale === 'ar' ? 'عرض التفاصيل' : 'View details'}
+              </a>
+              <span className="text-gray-700">·</span>
+              <a href={`/${locale}/alternatives/${tool.id}-alternatives`} className="text-gray-400 hover:text-white transition">
+                🔁 {locale === 'fr' ? 'Alternatives' : locale === 'es' ? 'Alternativas' : locale === 'ar' ? 'بدائل' : 'Alternatives'}
+              </a>
+            </div>
           </div>
         ))}
       </div>

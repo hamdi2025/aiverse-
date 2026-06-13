@@ -228,6 +228,10 @@ export default async function ToolPage({ params }: Props) {
             className="inline-flex items-center gap-2 border border-white/20 hover:border-violet-500/50 hover:bg-violet-600/10 text-gray-300 hover:text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all">
             ⚡ {locale === 'fr' ? `Comparer ${tool.name}` : locale === 'es' ? `Comparar ${tool.name}` : locale === 'ar' ? `قارن ${tool.name}` : `Compare ${tool.name}`}
           </a>
+          <a href={`/${locale}/alternatives/${tool.id}-alternatives`}
+            className="inline-flex items-center gap-2 border border-white/20 hover:border-cyan-500/50 hover:bg-cyan-600/10 text-gray-300 hover:text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all">
+            🔁 {locale === 'fr' ? `Alternatives à ${tool.name}` : locale === 'es' ? `Alternativas a ${tool.name}` : locale === 'ar' ? `بدائل ${tool.name}` : `${tool.name} Alternatives`}
+          </a>
         </div>
       </div>
     </div>
