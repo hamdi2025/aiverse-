@@ -5,7 +5,6 @@ import { TOP_ALTERNATIVES } from '@/lib/alternatives';
 
 const BASE_URL = 'https://getaiverse.online';
 const LOCALES = ['en', 'fr', 'es', 'ar'];
-const CATEGORIES = ['writing','image','code','video','audio','marketing','productivity','agents','slides','excel','design3d','seo','pdf','compression','conversion','translation','chatbots','data','hr','finance','contract','projectmgmt','mindmap','elearning','legal','cybersecurity','socialmedia','travel'];
 
 const TOP_COMPARISONS = [
   'chatgpt-vs-claude','chatgpt-vs-gemini','midjourney-vs-dalle3',
@@ -31,15 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.8,
-    }))
-  );
-
-  const categoryPages = CATEGORIES.flatMap(cat =>
-    LOCALES.map(locale => ({
-      url: `${BASE_URL}/${locale}?category=${cat}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
     }))
   );
 
@@ -84,5 +74,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...homepages, ...toolPages, ...categoryPages, ...comparePages, ...alternativesIndexPages, ...alternativesPages, ...blogIndexPages, ...blogPostPages];
+  return [...homepages, ...toolPages, ...comparePages, ...alternativesIndexPages, ...alternativesPages, ...blogIndexPages, ...blogPostPages];
 }
