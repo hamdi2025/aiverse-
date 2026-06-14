@@ -102,6 +102,25 @@ export const AFFILIATE_CONFIG: AffiliateNetworkConfig = {
     affiliateId: 'aiverse',
     trackedUrl: 'https://suno.com/?via=aiverse'
   },
+  // Synthesia — Rewardful (25% recurring, 12 months)
+  synthesia: {
+    baseUrl: 'https://synthesia.io',
+    network: 'direct',
+    affiliateId: 'abdelwahed',
+    trackedUrl: 'https://www.synthesia.io?via=abdelwahed'
+  },
+  'synthesia-io': {
+    baseUrl: 'https://synthesia.io',
+    network: 'direct',
+    affiliateId: 'abdelwahed',
+    trackedUrl: 'https://www.synthesia.io?via=abdelwahed'
+  },
+  'synthesia-elearning': {
+    baseUrl: 'https://synthesia.io',
+    network: 'direct',
+    affiliateId: 'abdelwahed',
+    trackedUrl: 'https://www.synthesia.io/use-cases/training?via=abdelwahed'
+  },
 };
 
 export function buildAffiliateUrl(toolId: string, destinationUrl: string): string {
