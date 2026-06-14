@@ -79,6 +79,35 @@ function switchAnswer(t1: AITool, t2: AITool): Record<Locale, string> {
   };
 }
 
+// Expert verdict: a real, data-driven recommendation for /compare/[slug] pages.
+export function getExpertVerdict(t1: AITool, t2: AITool): Record<Locale, string> {
+  const tie = t1.rating === t2.rating;
+  const winner = t1.rating >= t2.rating ? t1 : t2;
+  const other = winner === t1 ? t2 : t1;
+  const s1 = pricingScore(t1.pricing);
+  const s2 = pricingScore(t2.pricing);
+  const cheaper = s1 > s2 ? t1 : s2 > s1 ? t2 : null;
+  const wStrength = winner.pros && winner.pros.length ? winner.pros[0] : '';
+  const oStrength = other.pros && other.pros.length ? other.pros[0] : '';
+  const wUse = winner.useCases && winner.useCases.length ? winner.useCases[0] : '';
+  const cat = winner.category;
+
+  return {
+    en: `Our expert verdict: ${tie
+      ? `${t1.name} and ${t2.name} are very evenly matched at ${t1.rating}/5, so the right pick comes down to your priorities`
+      : `${winner.name} is the stronger all-round choice, scoring ${winner.rating}/5 versus ${other.rating}/5 for ${other.name}`}${wStrength ? `, and it stands out for "${wStrength}"` : ''}. ${cheaper && cheaper !== winner ? `If budget is your priority, ${cheaper.name} (${cheaper.pricingLocalized.en}) is the more affordable option. ` : ''}Choose ${winner.name} if you want the best ${cat} tool overall${wUse ? `, especially for ${wUse.toLowerCase()}` : ''}; pick ${other.name} if ${oStrength ? `"${oStrength}"` : 'its pricing or specific features'} matters more for your workflow.`,
+    fr: `Notre avis d'expert : ${tie
+      ? `${t1.name} et ${t2.name} sont au coude-à-coude (${t1.rating}/5 chacun), le bon choix dépend donc de vos priorités`
+      : `${winner.name} est le choix le plus solide globalement, avec ${winner.rating}/5 contre ${other.rating}/5 pour ${other.name}`}${wStrength ? `, et il se distingue par « ${wStrength} »` : ''}. ${cheaper && cheaper !== winner ? `Si le budget prime, ${cheaper.name} (${cheaper.pricingLocalized.fr}) est l'option la plus abordable. ` : ''}Choisissez ${winner.name} pour le meilleur outil de ${cat} dans l'ensemble${wUse ? `, surtout pour « ${wUse} »` : ''} ; préférez ${other.name} si ${oStrength ? `« ${oStrength} »` : 'son prix ou ses fonctionnalités spécifiques'} compte davantage pour vous.`,
+    es: `Nuestro veredicto experto: ${tie
+      ? `${t1.name} y ${t2.name} están muy igualados (${t1.rating}/5 cada uno), así que la mejor opción depende de tus prioridades`
+      : `${winner.name} es la opción más sólida en general, con ${winner.rating}/5 frente a ${other.rating}/5 de ${other.name}`}${wStrength ? `, y destaca por «${wStrength}»` : ''}. ${cheaper && cheaper !== winner ? `Si el presupuesto es tu prioridad, ${cheaper.name} (${cheaper.pricingLocalized.es}) es la opción más económica. ` : ''}Elige ${winner.name} si quieres la mejor herramienta de ${cat} en general${wUse ? `, especialmente para ${wUse.toLowerCase()}` : ''}; elige ${other.name} si ${oStrength ? `«${oStrength}»` : 'su precio o funciones específicas'} importa más para ti.`,
+    ar: `رأي خبرائنا: ${tie
+      ? `${t1.name} و${t2.name} متقاربان جدًا (${t1.rating}/5 لكليهما)، لذا يعتمد الاختيار على أولوياتك`
+      : `${winner.name} هو الخيار الأقوى عمومًا بتقييم ${winner.rating}/5 مقابل ${other.rating}/5 لـ ${other.name}`}${wStrength ? `، ويتميّز بـ «${wStrength}»` : ''}. ${cheaper && cheaper !== winner ? `إذا كانت الميزانية أولويتك، فإن ${cheaper.name} (${cheaper.pricingLocalized.ar}) هو الخيار الأوفر. ` : ''}اختر ${winner.name} إذا أردت أفضل أداة ${cat} إجمالاً${wUse ? `، خاصةً لـ ${wUse}` : ''}؛ واختر ${other.name} إذا كان ${oStrength ? `«${oStrength}»` : 'سعره أو ميزاته'} أهم بالنسبة لسير عملك.`,
+  };
+}
+
 // Generic, direct-answer-first (AEO) FAQ for /compare/[slug] pages.
 export function getCompareFaq(t1: AITool, t2: AITool): FAQItem[] {
   return [

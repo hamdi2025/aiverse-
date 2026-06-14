@@ -117,6 +117,18 @@ export default function Header() {
           </SignedIn>
         </div>
       </div>
+
+      {/* Mobile navigation (visible on phones/small screens) */}
+      <div className="md:hidden border-t border-white/[0.06] overflow-x-auto no-scrollbar">
+        <nav className="flex items-center gap-2 px-4 py-2 whitespace-nowrap text-xs font-semibold">
+          <Link href="/" className="text-gray-300 hover:text-white border border-white/[0.08] rounded-lg px-3 py-1.5">🏠 Tools</Link>
+          <Link href="/compare" className="text-gray-300 hover:text-white border border-white/[0.08] rounded-lg px-3 py-1.5">⚡ Compare</Link>
+          <Link href="/alternatives" className="text-gray-300 hover:text-white border border-white/[0.08] rounded-lg px-3 py-1.5">🔁 Alternatives</Link>
+          <Link href="/stack" className="text-gray-300 hover:text-white border border-white/[0.08] rounded-lg px-3 py-1.5">🧰 Stack</Link>
+          <Link href="/blog" className="text-gray-300 hover:text-white border border-white/[0.08] rounded-lg px-3 py-1.5">📚 Blog</Link>
+          <Link href="/submit" className="text-white bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] rounded-lg px-3 py-1.5">+ Submit</Link>
+        </nav>
+      </div>
     </header>
   );
 }

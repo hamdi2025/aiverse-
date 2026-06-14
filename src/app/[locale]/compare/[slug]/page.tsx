@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import { auth } from '@clerk/nextjs/server';
 import { TOOLS_DATA } from '@/lib/tools';
 import { buildAffiliateUrl } from '@/lib/affiliate';
-import { getCompareFaq } from '@/lib/compareFaq';
+import { getCompareFaq, getExpertVerdict } from '@/lib/compareFaq';
 import { Star, Check, ArrowUpRight, Zap, Lock } from 'lucide-react';
 
 type Locale = 'en' | 'fr' | 'es' | 'ar';
@@ -270,6 +270,14 @@ export default async function ComparePage({ params }: Props) {
           <span className="text-amber-400 text-sm font-semibold">(⭐ {winner.rating.toFixed(1)})</span>
         </div>
       )}
+
+      {/* Expert verdict */}
+      <div className="mb-10 rounded-2xl border border-violet-500/20 bg-violet-500/[0.06] p-6">
+        <h2 className="text-sm font-bold text-violet-300 uppercase tracking-wider mb-2">
+          🧠 {locale === 'fr' ? "Avis d'expert" : locale === 'es' ? 'Veredicto experto' : locale === 'ar' ? 'رأي الخبراء' : 'Expert verdict'}
+        </h2>
+        <p className="text-gray-200 leading-relaxed">{getExpertVerdict(t1, t2)[locale]}</p>
+      </div>
 
       {/* Side-by-side cards */}
       <div className="grid grid-cols-2 gap-4 mb-10">

@@ -49,6 +49,16 @@ const POPULAR = [
   { slug: 'elevenlabs-vs-murf-ai', emoji: '🎙️', cat: 'audio' },
 ];
 
+// Featured AI Agent comparisons (agent-vs-agent)
+const POPULAR_AGENTS = [
+  { slug: 'autogpt-vs-agentgpt', emoji: '🤖', cat: 'agents' },
+  { slug: 'langchain-vs-crewai', emoji: '🔗', cat: 'agents' },
+  { slug: 'crewai-vs-autogen', emoji: '👥', cat: 'agents' },
+  { slug: 'n8n-ai-vs-flowise', emoji: '⚙️', cat: 'agents' },
+  { slug: 'dify-vs-flowise', emoji: '🛠️', cat: 'agents' },
+  { slug: 'langchain-vs-autogen', emoji: '🧩', cat: 'agents' },
+];
+
 const T: Record<Locale, { badge: string; title: string; subtitle: string; step1: string; step2: string; step3: string; selectCat: string; tool1: string; tool2: string; compare: string; popular: string; random: string; samecat: string }> = {
   en: { badge: 'AI Tool Comparisons', title: 'Compare AI Tools', subtitle: 'Select a category, then pick two tools to compare side by side.', step1: '1. Choose a category', step2: '2. First tool', step3: '3. Second tool', selectCat: 'Select a category...', tool1: 'Select first tool...', tool2: 'Select second tool...', compare: 'Compare Now →', popular: 'Popular Comparisons', random: 'Random', samecat: 'Only tools from the same category are compared.' },
   fr: { badge: 'Comparaisons d\'outils IA', title: 'Comparer les Outils IA', subtitle: 'Sélectionnez une catégorie, puis choisissez deux outils à comparer côte à côte.', step1: '1. Choisir une catégorie', step2: '2. Premier outil', step3: '3. Deuxième outil', selectCat: 'Sélectionnez une catégorie...', tool1: 'Premier outil...', tool2: 'Deuxième outil...', compare: 'Comparer →', popular: 'Comparaisons populaires', random: 'Aléatoire', samecat: 'Seuls les outils de la même catégorie sont comparés.' },
@@ -219,6 +229,31 @@ export default function ComparePage() {
       <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-5">{t.popular}</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {POPULAR.map(({ slug, emoji }) => {
+          const [a, b] = slug.split('-vs-').map(s =>
+            s.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+          );
+          return (
+            <Link key={slug} href={`/${locale}/compare/${slug}`}
+              className="group flex items-center justify-between gap-3 bg-white/5 hover:bg-violet-600/10 border border-white/10 hover:border-violet-500/40 rounded-2xl px-5 py-4 transition-all">
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">{emoji}</span>
+                <div>
+                  <p className="text-white font-semibold text-sm">{a}</p>
+                  <p className="text-gray-500 text-xs">vs {b}</p>
+                </div>
+              </div>
+              <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-violet-400 group-hover:translate-x-1 transition-all" />
+            </Link>
+          );
+        })}
+      </div>
+
+      {/* Featured AI Agent comparisons */}
+      <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mt-12 mb-5">
+        🤖 {locale === 'fr' ? "Comparaisons d'agents IA" : locale === 'es' ? 'Comparativas de agentes IA' : locale === 'ar' ? 'مقارنات وكلاء الذكاء الاصطناعي' : 'AI Agent Comparisons'}
+      </p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {POPULAR_AGENTS.map(({ slug, emoji }) => {
           const [a, b] = slug.split('-vs-').map(s =>
             s.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
           );

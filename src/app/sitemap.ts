@@ -14,6 +14,9 @@ const TOP_COMPARISONS = [
   'elevenlabs-vs-murf-ai','opus-clip-vs-fliki-ai','reclaim-ai-vs-fireflies-ai',
   'gamma-app-vs-tome-ai','beautiful-ai-vs-pitch-deck-ai','surfer-seo-vs-semrush-ai',
   'ilovepdf-ai-vs-smallpdf','tinypng-ai-vs-squoosh-app',
+  // AI agent comparisons
+  'autogpt-vs-agentgpt','langchain-vs-crewai','crewai-vs-autogen',
+  'n8n-ai-vs-flowise','dify-vs-flowise','langchain-vs-autogen',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
