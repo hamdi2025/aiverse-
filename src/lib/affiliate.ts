@@ -54,12 +54,12 @@ export const AFFILIATE_CONFIG: AffiliateNetworkConfig = {
     affiliateId: 'aiverse',
     trackedUrl: 'https://murf.ai/?via=aiverse'
   },
-  // HeyGen — direct (~20%)
+  // HeyGen — Rewardful (25% recurring, 3 months)
   heygen: {
     baseUrl: 'https://heygen.com',
     network: 'direct',
-    affiliateId: 'aiverse',
-    trackedUrl: 'https://heygen.com/?sid=aiverse'
+    affiliateId: 'abdelwahed',
+    trackedUrl: 'https://www.heygen.com/?sid=rewardful&utm_content=creator&utm_medium=influencerb&via=abdelwahed'
   },
   // Descript — direct (~15%)
   descript: {
