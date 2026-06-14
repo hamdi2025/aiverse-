@@ -531,3 +531,233 @@ export function tl(en: string, locale: Locale): string {
   const v = locale === 'fr' ? t[0] : locale === 'es' ? t[1] : t[2];
   return v || en;
 }
+
+// Category id → localized label [fr, es, ar]
+const CATS: Record<string, [string, string, string]> = {
+  writing: ["Rédaction", "Escritura", "الكتابة"],
+  image: ["Image", "Imagen", "الصور"],
+  code: ["Code", "Código", "البرمجة"],
+  video: ["Vidéo", "Video", "الفيديو"],
+  productivity: ["Productivité", "Productividad", "الإنتاجية"],
+  audio: ["Audio", "Audio", "الصوت"],
+  marketing: ["Marketing", "Marketing", "التسويق"],
+  agents: ["Agents IA", "Agentes IA", "وكلاء الذكاء الاصطناعي"],
+  slides: ["Présentations", "Presentaciones", "العروض التقديمية"],
+  excel: ["Excel", "Excel", "Excel"],
+  design3d: ["Design 3D", "Diseño 3D", "التصميم ثلاثي الأبعاد"],
+  seo: ["SEO", "SEO", "تحسين محركات البحث (SEO)"],
+  pdf: ["PDF", "PDF", "PDF"],
+  compression: ["Compression", "Compresión", "الضغط"],
+  conversion: ["Conversion", "Conversión", "التحويل"],
+  translation: ["Traduction", "Traducción", "الترجمة"],
+  chatbots: ["Chatbots", "Chatbots", "روبوتات المحادثة"],
+  data: ["Données", "Datos", "البيانات"],
+  hr: ["RH", "RR. HH.", "الموارد البشرية"],
+  finance: ["Finance", "Finanzas", "المالية"],
+  contract: ["Contrats", "Contratos", "العقود"],
+  projectmgmt: ["Gestion de projet", "Gestión de proyectos", "إدارة المشاريع"],
+  mindmap: ["Cartes mentales", "Mapas mentales", "الخرائط الذهنية"],
+  elearning: ["E-learning", "E-learning", "التعلّم الإلكتروني"],
+  legal: ["Juridique", "Legal", "القانون"],
+  cybersecurity: ["Cybersécurité", "Ciberseguridad", "الأمن السيبراني"],
+  socialmedia: ["Réseaux sociaux", "Redes sociales", "وسائل التواصل"],
+  travel: ["Voyage", "Viajes", "السفر"],
+};
+
+export function tlCategory(cat: string, locale: Locale): string {
+  if (locale === 'en') return cat;
+  const t = CATS[cat];
+  if (!t) return cat;
+  return (locale === 'fr' ? t[0] : locale === 'es' ? t[1] : t[2]) || cat;
+}
+
+// Per-tool expert verdict, keyed by tool id → [fr, es, ar]
+const VERDICTS: Record<string, [string, string, string]> = {
+  chatgpt: [
+    "ChatGPT est le meilleur choix pour ceux qui veulent un assistant IA tout-en-un avec génération d'images, mode vocal et le plus grand écosystème de plugins. Idéal pour un usage général, la création de contenu et le code.",
+    "ChatGPT es la mejor opción para quienes quieren un asistente IA todo en uno con generación de imágenes, modo de voz y el mayor ecosistema de plugins. Ideal para uso general, creación de contenido y programación.",
+    "ChatGPT هو الخيار الأفضل لمن يريد مساعدًا شاملاً مع توليد الصور والوضع الصوتي وأكبر منظومة إضافات (plugins). مثالي للاستخدام العام وإنشاء المحتوى والبرمجة.",
+  ],
+  headshotpro: [
+    "HeadshotPro est le meilleur choix pour les professionnels et les équipes qui veulent des portraits pro soignés sans studio photo. Importez quelques selfies, choisissez un style et obtenez des portraits prêts pour LinkedIn en quelques heures.",
+    "HeadshotPro es la mejor opción para profesionales y equipos que quieren retratos pulidos sin estudio fotográfico. Sube unas selfies, elige un estilo y obtén retratos listos para LinkedIn en horas.",
+    "HeadshotPro هو الخيار الأفضل للمحترفين والفرق الذين يريدون صورًا احترافية أنيقة دون استوديو تصوير. ارفع بعض الصور الذاتية، اختر نمطًا، واحصل على صور جاهزة لـ LinkedIn خلال ساعات.",
+  ],
+  claude: [
+    "Claude est le meilleur choix pour les professionnels qui ont besoin d'une rédaction de haute qualité, d'analyse de longs documents et de réponses IA honnêtes et sûres. Supérieur pour le code et la recherche exigeant la précision plutôt que la vitesse.",
+    "Claude es la mejor opción para profesionales que necesitan escritura de alta calidad, análisis de documentos largos y respuestas honestas y seguras. Superior para programación e investigación que requieren precisión sobre velocidad.",
+    "Claude هو الخيار الأفضل للمحترفين الذين يحتاجون كتابة عالية الجودة وتحليل المستندات الطويلة وإجابات صادقة وآمنة. متفوّق في مهام البرمجة والبحث الذي يتطلب الدقة على السرعة.",
+  ],
+  gemini: [
+    "Gemini est le meilleur choix pour les utilisateurs déjà dans l'écosystème Google (Gmail, Docs, Drive). Idéal pour la recherche web et les tâches multimodales. Moins recommandé comme assistant principal de code ou de rédaction.",
+    "Gemini es la mejor opción para usuarios ya en el ecosistema de Google (Gmail, Docs, Drive). Ideal para investigación web y tareas multimodales. Menos recomendado como asistente principal de código o escritura.",
+    "Gemini هو الخيار الأفضل للمستخدمين ضمن منظومة Google (Gmail وDocs وDrive). مثالي للبحث على الويب والمهام متعددة الوسائط. غير موصى به كمساعد أساسي للبرمجة أو الكتابة.",
+  ],
+  quillbot: [
+    "QuillBot est idéal pour les étudiants et chercheurs qui ont surtout besoin d'aide rapide pour paraphraser, résumer et gérer les citations.",
+    "QuillBot es ideal para estudiantes e investigadores que necesitan ayuda rápida para parafrasear, resumir y gestionar citas.",
+    "QuillBot مثالي للطلاب والباحثين الذين يحتاجون أساسًا مساعدة سريعة في إعادة الصياغة والتلخيص والاقتباسات.",
+  ],
+  "copy-ai": [
+    "Copy.ai est idéal pour les équipes qui veulent automatiser les tâches répétitives de rédaction marketing, avec une offre gratuite généreuse pour démarrer.",
+    "Copy.ai es ideal para equipos que quieren automatizar tareas repetitivas de redacción de marketing, con un generoso plan gratuito para empezar.",
+    "Copy.ai مثالي للفرق التي تريد أتمتة مهام الكتابة التسويقية المتكررة، مع خطة مجانية سخية للبدء.",
+  ],
+  writesonic: [
+    "Writesonic convient aux équipes au budget serré qui veulent de la génération de contenu optimisée SEO plus un chatbot intégré, le tout dans un forfait abordable.",
+    "Writesonic conviene a equipos con presupuesto ajustado que quieren generación de contenido optimizado para SEO más un chatbot integrado, en un plan asequible.",
+    "Writesonic مناسب للفرق محدودة الميزانية التي تريد توليد محتوى محسّن لـ SEO مع روبوت محادثة مدمج في خطة واحدة بأسعار معقولة.",
+  ],
+  jasper: [
+    "Jasper est idéal pour les équipes marketing qui ont besoin d'une copie cohérente et fidèle à la marque à grande échelle, et qui acceptent de payer pour des fonctions de collaboration de niveau entreprise.",
+    "Jasper es ideal para equipos de marketing que necesitan copy coherente y fiel a la marca a gran escala y están dispuestos a pagar por funciones de colaboración empresariales.",
+    "Jasper مثالي لفرق التسويق التي تحتاج نصوصًا متسقة ومتوافقة مع العلامة على نطاق واسع وعلى استعداد للدفع مقابل ميزات تعاون على مستوى المؤسسات.",
+  ],
+  midjourney: [
+    "Midjourney est le premier choix pour ceux qui veulent la plus haute qualité artistique et cinématographique d'emblée, même si maîtriser les prompts demande un peu de pratique.",
+    "Midjourney es la mejor opción para quienes quieren la máxima calidad artística y cinematográfica de inmediato, aunque dominar los prompts requiera algo de práctica.",
+    "Midjourney هو الخيار الأول لمن يريد أعلى جودة فنية وسينمائية مباشرة، رغم أن إتقان الموجّهات يتطلب بعض الممارسة.",
+  ],
+  dalle3: [
+    "DALL-E 3 l'emporte pour les utilisateurs déjà dans l'écosystème ChatGPT qui veulent des images précises et sûres pour la marque, générées par conversation naturelle.",
+    "DALL-E 3 gana para usuarios ya en el ecosistema de ChatGPT que quieren imágenes precisas y seguras para la marca, generadas mediante conversación natural.",
+    "يتفوّق DALL-E 3 للمستخدمين ضمن منظومة ChatGPT الذين يريدون صورًا دقيقة وآمنة للعلامة، تُولّد عبر محادثة طبيعية.",
+  ],
+  "stable-diffusion": [
+    "Stable Diffusion est le meilleur choix pour les utilisateurs techniques qui veulent un contrôle total, la confidentialité et zéro coût de licence via l'auto-hébergement ou des modèles open-source.",
+    "Stable Diffusion es la mejor opción para usuarios técnicos que quieren control total, privacidad y cero costos de licencia mediante autoalojamiento o modelos de código abierto.",
+    "Stable Diffusion هو الخيار الأفضل للمستخدمين التقنيين الذين يريدون تحكمًا كاملاً وخصوصية وبلا تكاليف ترخيص عبر الاستضافة الذاتية أو النماذج مفتوحة المصدر.",
+  ],
+  "github-copilot": [
+    "GitHub Copilot est le choix le plus sûr pour l'entreprise grâce à ses intégrations IDE profondes et au support de Microsoft, idéal pour les équipes standardisées sur des éditeurs familiers.",
+    "GitHub Copilot es la opción empresarial más segura gracias a sus profundas integraciones con IDE y al respaldo de Microsoft, ideal para equipos estandarizados en editores conocidos.",
+    "GitHub Copilot هو الخيار الأكثر أمانًا للمؤسسات بفضل تكامله العميق مع بيئات التطوير ودعم Microsoft، مثالي للفرق التي توحّد أدواتها على محررات مألوفة.",
+  ],
+  cursor: [
+    "Cursor est le premier choix des développeurs qui veulent un IDE natif IA avec une compréhension profonde du code et une puissante édition multi-fichiers.",
+    "Cursor es la mejor opción para desarrolladores que quieren un IDE nativo de IA con comprensión profunda del código y potente edición multiarchivo.",
+    "Cursor هو الخيار الأول للمطوّرين الذين يريدون بيئة تطوير أصلية بالذكاء الاصطناعي مع فهم عميق للكود وتحرير قوي متعدد الملفات.",
+  ],
+  "bolt-new": [
+    "Bolt.new est idéal pour transformer rapidement une idée en application full-stack fonctionnelle entièrement dans le navigateur, sans aucune configuration.",
+    "Bolt.new es ideal para convertir rápidamente una idea en una app full-stack funcional totalmente en el navegador, sin configuración.",
+    "Bolt.new مثالي لتحويل فكرة بسرعة إلى تطبيق متكامل (full-stack) يعمل بالكامل في المتصفّح دون أي إعداد.",
+  ],
+  "v0-dev": [
+    "v0 de Vercel est le meilleur choix pour les développeurs React/Next.js qui veulent du code d'interface propre et prêt pour la production à partir de simples consignes.",
+    "v0 de Vercel es la mejor opción para desarrolladores de React/Next.js que quieren código de UI limpio y listo para producción a partir de prompts simples.",
+    "v0 من Vercel هو الخيار الأفضل لمطوّري React/Next.js الذين يريدون كود واجهة نظيفًا وجاهزًا للإنتاج من موجّهات بسيطة.",
+  ],
+  "pika-labs": [
+    "Pika Labs est idéal pour générer rapidement de courts clips vidéo ludiques sans courbe d'apprentissage abrupte, même si Runway prend l'avantage pour les projets professionnels.",
+    "Pika Labs es ideal para generar rápidamente clips de video cortos y divertidos sin una curva de aprendizaje pronunciada, aunque Runway destaca en proyectos profesionales.",
+    "Pika Labs مثالي لإنشاء مقاطع فيديو قصيرة وممتعة بسرعة دون منحنى تعلّم حاد، رغم تفوّق Runway في المشاريع الاحترافية.",
+  ],
+  elevenlabs: [
+    "ElevenLabs est la meilleure option pour les voix IA et le clonage les plus réalistes, surtout pour les développeurs qui intègrent la voix dans leurs propres applications.",
+    "ElevenLabs es la mejor opción para las voces IA y la clonación más realistas, especialmente para desarrolladores que integran voz en sus propias apps.",
+    "ElevenLabs هو الخيار الأفضل لأكثر الأصوات الاصطناعية والاستنساخ واقعية، خاصة للمطوّرين الذين يدمجون الصوت في تطبيقاتهم.",
+  ],
+  "murf-ai": [
+    "Murf AI est idéal pour les équipes qui ont besoin de voix off soignées pour des présentations et de l'e-learning, avec un éditeur intégré facile à utiliser.",
+    "Murf AI es ideal para equipos que necesitan voces en off pulidas para presentaciones y e-learning, con un editor integrado fácil de usar.",
+    "Murf AI مثالي للفرق التي تحتاج تعليقات صوتية أنيقة للعروض والتعلّم الإلكتروني مع محرر مدمج سهل الاستخدام.",
+  ],
+  "notion-ai": [
+    "Notion AI est idéal pour les équipes déjà sur Notion qui veulent de la rédaction IA et des questions-réponses directement dans leurs documents et wikis.",
+    "Notion AI es ideal para equipos que ya usan Notion y quieren escritura con IA y preguntas y respuestas directamente en sus documentos y wikis.",
+    "Notion AI مثالي للفرق التي تستخدم Notion بالفعل وتريد كتابة بالذكاء الاصطناعي وأسئلة وأجوبة مباشرة داخل مستنداتها وويكياتها.",
+  ],
+  "gamma-app": [
+    "Gamma est idéal pour transformer rapidement un plan ou une consigne en présentation moderne et soignée, sans travail de design manuel.",
+    "Gamma es ideal para convertir rápidamente un esquema o prompt en una presentación moderna y pulida, sin trabajo de diseño manual.",
+    "Gamma مثالي لتحويل مخطط أو موجّه بسرعة إلى عرض تقديمي عصري وأنيق دون عمل تصميم يدوي.",
+  ],
+  "reclaim-ai": [
+    "Reclaim AI est idéal pour les personnes et équipes qui veulent que leur agenda protège automatiquement du temps pour les tâches et les habitudes, pas seulement les réunions.",
+    "Reclaim AI es ideal para personas y equipos que quieren que su calendario proteja automáticamente tiempo para tareas y hábitos, no solo reuniones.",
+    "Reclaim AI مثالي للأفراد والفرق الذين يريدون أن يحمي تقويمهم تلقائيًا وقتًا للمهام والعادات، وليس الاجتماعات فقط.",
+  ],
+  "fireflies-ai": [
+    "Fireflies.ai est le meilleur choix pour les équipes qui veulent que chaque réunion soit automatiquement transcrite, résumée et consultable.",
+    "Fireflies.ai es la mejor opción para equipos que quieren que cada reunión se transcriba, resuma y sea consultable automáticamente.",
+    "Fireflies.ai هو الخيار الأفضل للفرق التي تريد تفريغ كل اجتماع وتلخيصه وجعله قابلاً للبحث تلقائيًا.",
+  ],
+  "beautiful-ai": [
+    "Beautiful.ai excelle à garder les présentations visuellement cohérentes et professionnelles automatiquement, idéal pour les équipes sans designers dédiés.",
+    "Beautiful.ai destaca en mantener las presentaciones visualmente consistentes y profesionales de forma automática, ideal para equipos sin diseñadores dedicados.",
+    "يتميّز Beautiful.ai في الحفاظ على العروض متسقة بصريًا واحترافية تلقائيًا، مثالي للفرق التي لا تملك مصمّمين متخصّصين.",
+  ],
+  "surfer-seo": [
+    "Surfer SEO est le meilleur choix pour les rédacteurs et équipes de contenu qui veulent une optimisation en temps réel et basée sur les données pendant la rédaction, tandis que Semrush l'emporte pour le SEO global et la recherche concurrentielle.",
+    "Surfer SEO es la mejor opción para redactores y equipos de contenido que quieren optimización en tiempo real y basada en datos al escribir, mientras que Semrush gana en SEO amplio e investigación competitiva.",
+    "Surfer SEO هو الخيار الأفضل للكتّاب وفرق المحتوى الذين يريدون تحسينًا فوريًا قائمًا على البيانات أثناء الكتابة، بينما يتفوّق Semrush في SEO الأوسع وبحث المنافسين.",
+  ],
+  "semrush-ai": [
+    "Semrush AI est idéal pour les entreprises qui ont besoin d'une plateforme tout-en-un de SEO et d'intelligence concurrentielle, avec de la rédaction IA par-dessus.",
+    "Semrush AI es ideal para empresas que necesitan una plataforma todo en uno de SEO e inteligencia competitiva, con escritura IA integrada.",
+    "Semrush AI مثالي للشركات التي تحتاج منصّة شاملة لـ SEO وذكاء تنافسي مع كتابة بالذكاء الاصطناعي فوقها.",
+  ],
+  "runway-ml": [
+    "Runway ML est le premier choix des créateurs professionnels qui ont besoin de la suite de génération et d'édition vidéo IA la plus avancée disponible.",
+    "Runway ML es la mejor opción para creadores profesionales que necesitan el conjunto más avanzado de generación y edición de video con IA.",
+    "Runway ML هو الخيار الأول للمبدعين المحترفين الذين يحتاجون أكثر أدوات توليد وتحرير الفيديو بالذكاء الاصطناعي تقدّمًا.",
+  ],
+  "coda-ai": [
+    "Coda AI convient aux équipes qui veulent créer des outils internes et des automatisations sur mesure au-dessus d'une plateforme de documents flexible.",
+    "Coda AI conviene a equipos que quieren crear herramientas internas y automatizaciones a medida sobre una plataforma de documentos flexible.",
+    "Coda AI مناسب للفرق التي تريد بناء أدوات داخلية وأتمتة مخصّصة فوق منصّة مستندات مرنة.",
+  ],
+  "opus-clip": [
+    "Opus Clip est l'outil de référence pour les créateurs qui veulent transformer automatiquement de longues vidéos en clips courts prêts à devenir viraux.",
+    "Opus Clip es la herramienta de referencia para creadores que quieren convertir automáticamente videos largos en clips cortos listos para volverse virales.",
+    "Opus Clip هو الأداة المثالية للمبدعين الذين يريدون تحويل الفيديوهات الطويلة تلقائيًا إلى مقاطع قصيرة جاهزة للانتشار.",
+  ],
+  "grammarly-ai": [
+    "Grammarly est le meilleur compagnon d'écriture au quotidien grâce à son intégration universelle (navigateur/apps) et à ses corrections fiables de grammaire et de ton.",
+    "Grammarly es el mejor compañero de escritura diario gracias a su integración universal (navegador/apps) y sus correcciones fiables de gramática y tono.",
+    "Grammarly هو أفضل رفيق كتابة يومي بفضل تكامله الشامل (المتصفّح/التطبيقات) وتصحيحاته الموثوقة للنحو والنبرة.",
+  ],
+  "tome-ai": [
+    "Tome brille pour les pitch decks narratifs où l'IA aide à structurer une histoire convaincante, même si Gamma offre plus de flexibilité de modèles.",
+    "Tome brilla en pitch decks narrativos donde la IA ayuda a estructurar una historia convincente, aunque Gamma ofrece más flexibilidad de plantillas.",
+    "يتألّق Tome في عروض المستثمرين السردية حيث يساعد الذكاء الاصطناعي في بناء قصة مقنعة، رغم أن Gamma يقدّم مرونة قوالب أوسع.",
+  ],
+  "fliki-ai": [
+    "Fliki est idéal pour les blogueurs et marketeurs qui veulent transformer rapidement du contenu écrit en vidéos avec des voix off IA réalistes.",
+    "Fliki es ideal para blogueros y marketers que quieren convertir rápidamente contenido escrito en videos con voces en off IA realistas.",
+    "Fliki مثالي للمدوّنين والمسوّقين الذين يريدون تحويل المحتوى المكتوب بسرعة إلى فيديوهات مع تعليقات صوتية واقعية.",
+  ],
+  "pitch-deck-ai": [
+    "Pitch est un bon choix pour les équipes qui veulent l'édition collaborative de présentations avec des statistiques intégrées sur leur performance.",
+    "Pitch es una buena opción para equipos que quieren edición colaborativa de presentaciones con analíticas integradas sobre su rendimiento.",
+    "Pitch خيار جيد للفرق التي تريد تحرير العروض تعاونيًا مع تحليلات مدمجة حول أدائها.",
+  ],
+  "ilovepdf-ai": [
+    "iLovePDF est la boîte à outils PDF gratuite la plus complète, idéale pour ceux qui veulent une solution tout-en-un pour les tâches PDF du quotidien.",
+    "iLovePDF es el kit de herramientas PDF gratuito más completo, ideal para quienes quieren una solución todo en uno para tareas PDF diarias.",
+    "iLovePDF هو أكثر مجموعات أدوات PDF المجانية اكتمالاً، مثالي لمن يريد حلاً شاملاً لمهام PDF اليومية.",
+  ],
+  smallpdf: [
+    "Smallpdf est un excellent choix pour ceux qui veulent un outil PDF intuitif et soigné avec de solides intégrations cloud, même si iLovePDF offre plus d'usage gratuit quotidien.",
+    "Smallpdf es una gran opción para quienes quieren una herramienta PDF intuitiva y cuidada con sólidas integraciones en la nube, aunque iLovePDF ofrece más uso gratuito diario.",
+    "Smallpdf خيار رائع لمن يريد أداة PDF سهلة وأنيقة مع تكاملات سحابية قوية، رغم أن iLovePDF يقدّم استخدامًا يوميًا مجانيًا أكبر.",
+  ],
+  "tinypng-ai": [
+    "TinyPNG est l'outil de référence pour une compression d'images rapide et de haute qualité, avec un solide support d'API et de plugins pour les développeurs.",
+    "TinyPNG es la herramienta de referencia para una compresión de imágenes rápida y de alta calidad, con sólido soporte de API y plugins para desarrolladores.",
+    "TinyPNG هو الأداة المثالية لضغط الصور بسرعة وجودة عالية مع دعم قوي لـ API والإضافات للمطوّرين.",
+  ],
+  "squoosh-app": [
+    "Squoosh est idéal pour les développeurs et designers qui veulent un contrôle précis et manuel de la compression d'images avec un retour visuel instantané, tandis que TinyPNG l'emporte pour l'automatisation rapide en masse.",
+    "Squoosh es ideal para desarrolladores y diseñadores que quieren un control preciso y manual de la compresión de imágenes con retroalimentación visual instantánea, mientras que TinyPNG gana en automatización rápida masiva.",
+    "Squoosh مثالي للمطوّرين والمصمّمين الذين يريدون تحكمًا دقيقًا ويدويًا في ضغط الصور مع معاينة فورية، بينما يتفوّق TinyPNG في الأتمتة السريعة بالجملة.",
+  ],
+};
+
+export function tlVerdict(id: string, en: string, locale: Locale): string {
+  if (locale === 'en') return en;
+  const t = VERDICTS[id];
+  if (!t) return en;
+  return (locale === 'fr' ? t[0] : locale === 'es' ? t[1] : t[2]) || en;
+}

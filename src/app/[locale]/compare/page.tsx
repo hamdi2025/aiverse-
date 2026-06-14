@@ -140,11 +140,11 @@ export default function ComparePage() {
         <div className="grid grid-cols-1 md:grid-cols-7 gap-3 items-center mb-4">
 
           {/* Category */}
-          <div className="md:col-span-2">
+          <div className="md:col-span-2 relative">
             <select
               value={category}
               onChange={e => handleCategoryChange(e.target.value)}
-              className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-3 text-white text-sm focus:outline-none focus:border-violet-500 appearance-none"
+              className="w-full bg-white/[0.05] hover:bg-white/[0.08] border-2 border-white/15 hover:border-violet-500/40 rounded-2xl pl-4 pr-10 py-3.5 text-white text-sm font-semibold focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/30 appearance-none cursor-pointer transition-all"
             >
               <option value="">{t.selectCat}</option>
               {CATEGORIES.map(cat => (
@@ -153,15 +153,16 @@ export default function ComparePage() {
                 </option>
               ))}
             </select>
+            <ChevronDown className="w-4 h-4 text-violet-300 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
           </div>
 
           {/* Tool 1 */}
-          <div className="md:col-span-2">
+          <div className="md:col-span-2 relative">
             <select
               value={tool1}
               onChange={e => setTool1(e.target.value)}
               disabled={!category}
-              className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-3 text-white text-sm focus:outline-none focus:border-violet-500 appearance-none disabled:opacity-40 disabled:cursor-not-allowed"
+              className="w-full bg-white/[0.05] hover:bg-white/[0.08] border-2 border-white/15 hover:border-violet-500/40 rounded-2xl pl-4 pr-10 py-3.5 text-white text-sm font-semibold focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/30 appearance-none cursor-pointer transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white/[0.05]"
             >
               <option value="">{category ? t.tool1 : '← ' + t.step1}</option>
               {categoryTools.map(tool => (
@@ -170,20 +171,21 @@ export default function ComparePage() {
                 </option>
               ))}
             </select>
+            <ChevronDown className="w-4 h-4 text-gray-400 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
           </div>
 
           {/* VS */}
           <div className="flex items-center justify-center">
-            <span className="text-gray-500 font-black text-base">VS</span>
+            <span className="w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-tr from-violet-600 to-orange-500 text-white font-black text-xs shadow-lg shadow-violet-900/40 ring-4 ring-white/5">VS</span>
           </div>
 
           {/* Tool 2 */}
-          <div className="md:col-span-2">
+          <div className="md:col-span-2 relative">
             <select
               value={tool2}
               onChange={e => setTool2(e.target.value)}
               disabled={!category}
-              className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-3 text-white text-sm focus:outline-none focus:border-violet-500 appearance-none disabled:opacity-40 disabled:cursor-not-allowed"
+              className="w-full bg-white/[0.05] hover:bg-white/[0.08] border-2 border-white/15 hover:border-orange-500/40 rounded-2xl pl-4 pr-10 py-3.5 text-white text-sm font-semibold focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30 appearance-none cursor-pointer transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white/[0.05]"
             >
               <option value="">{category ? t.tool2 : '← ' + t.step1}</option>
               {categoryTools.map(tool => (
@@ -192,6 +194,7 @@ export default function ComparePage() {
                 </option>
               ))}
             </select>
+            <ChevronDown className="w-4 h-4 text-orange-300 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
           </div>
         </div>
 
@@ -199,7 +202,7 @@ export default function ComparePage() {
         {category && (
           <p className="text-xs text-violet-400 font-semibold mb-4 flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-violet-400 inline-block" />
-            {categoryTools.length} tools · {t.samecat}
+            {categoryTools.length} {locale === 'fr' ? 'outils' : locale === 'es' ? 'herramientas' : locale === 'ar' ? 'أداة' : 'tools'} · {t.samecat}
           </p>
         )}
 
@@ -208,9 +211,9 @@ export default function ComparePage() {
           <button
             onClick={handleCompare}
             disabled={!canCompare}
-            className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm transition ${
+            className={`flex-1 flex items-center justify-center gap-2 py-3.5 rounded-2xl font-bold text-sm transition-all ${
               canCompare
-                ? 'bg-violet-600 hover:bg-violet-500 text-white'
+                ? 'bg-gradient-to-r from-violet-600 to-cyan-500 hover:opacity-90 text-white shadow-lg shadow-violet-900/30 hover:scale-[1.02]'
                 : 'bg-white/5 text-gray-600 cursor-not-allowed'
             }`}
           >

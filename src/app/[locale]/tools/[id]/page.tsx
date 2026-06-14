@@ -3,7 +3,7 @@ import { TOOLS_DATA } from '@/lib/tools';
 import { TOOL_FAQS } from '@/lib/faq';
 import { getGenericFaq } from '@/lib/genericFaq';
 import { buildAffiliateUrl } from '@/lib/affiliate';
-import { tl } from '@/lib/dataI18n';
+import { tl, tlCategory, tlVerdict } from '@/lib/dataI18n';
 import { getTranslations } from 'next-intl/server';
 import { Star, ArrowUpRight, Tag, Globe, TrendingUp } from 'lucide-react';
 
@@ -160,7 +160,7 @@ export default async function ToolPage({ params }: Props) {
       <nav aria-label="Breadcrumb" className="text-sm text-gray-500 mb-8 flex flex-wrap items-center gap-1.5">
         <a href={`/${locale}`} className="hover:text-white transition">{locale === 'fr' ? 'Accueil' : locale === 'es' ? 'Inicio' : locale === 'ar' ? 'الرئيسية' : 'Home'}</a>
         <span className="text-gray-700">/</span>
-        <a href={`/${locale}?cat=${tool.category}`} className="hover:text-white transition capitalize">{tool.category}</a>
+        <a href={`/${locale}?cat=${tool.category}`} className="hover:text-white transition capitalize">{tlCategory(tool.category, locale)}</a>
         <span className="text-gray-700">/</span>
         <span className="text-gray-300">{tool.name}</span>
       </nav>
@@ -170,7 +170,7 @@ export default async function ToolPage({ params }: Props) {
         <div className="flex items-start justify-between gap-4 flex-wrap mb-4">
           <div>
             <span className="text-xs font-bold uppercase tracking-wider text-gray-400 bg-white/[0.06] px-3 py-1 rounded-full border border-white/5">
-              {tool.category}
+              {tlCategory(tool.category, locale)}
             </span>
             <h1 className="text-4xl font-black text-white mt-3 mb-2">{tool.name}</h1>
             <div className="flex items-center gap-4 text-sm">
@@ -204,7 +204,7 @@ export default async function ToolPage({ params }: Props) {
       {tool.verdict && (
         <div className="rounded-2xl border border-violet-500/20 bg-violet-500/[0.06] p-6 mb-6">
           <h2 className="text-sm font-bold text-violet-300 uppercase tracking-wider mb-2">✅ {RT.verdict}</h2>
-          <p className="text-gray-200 leading-relaxed">{tool.verdict}</p>
+          <p className="text-gray-200 leading-relaxed">{tlVerdict(tool.id, tool.verdict, locale)}</p>
         </div>
       )}
 

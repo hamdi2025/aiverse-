@@ -3,7 +3,7 @@ import { auth } from '@clerk/nextjs/server';
 import { TOOLS_DATA } from '@/lib/tools';
 import { buildAffiliateUrl } from '@/lib/affiliate';
 import { getCompareFaq, getExpertVerdict } from '@/lib/compareFaq';
-import { tl } from '@/lib/dataI18n';
+import { tl, tlCategory, tlVerdict } from '@/lib/dataI18n';
 import { Star, Check, ArrowUpRight, Zap, Lock } from 'lucide-react';
 
 type Locale = 'en' | 'fr' | 'es' | 'ar';
@@ -200,8 +200,8 @@ export default async function ComparePage({ params }: Props) {
     },
     {
       label: L.category,
-      v1: <span className="capitalize text-gray-300">{t1.category}</span>,
-      v2: <span className="capitalize text-gray-300">{t2.category}</span>,
+      v1: <span className="capitalize text-gray-300">{tlCategory(t1.category, locale)}</span>,
+      v2: <span className="capitalize text-gray-300">{tlCategory(t2.category, locale)}</span>,
       winner1: false, winner2: false,
     },
     {
@@ -435,13 +435,13 @@ export default async function ComparePage({ params }: Props) {
             {t1.verdict && (
               <div className="bg-violet-950/30 rounded-xl p-4 border border-violet-500/20">
                 <p className="text-xs font-bold text-violet-300 mb-2">📌 {t1.name}</p>
-                <p className="text-gray-300 text-sm leading-relaxed">{t1.verdict}</p>
+                <p className="text-gray-300 text-sm leading-relaxed">{tlVerdict(t1.id, t1.verdict, locale)}</p>
               </div>
             )}
             {t2.verdict && (
               <div className="bg-orange-950/30 rounded-xl p-4 border border-orange-500/20">
                 <p className="text-xs font-bold text-orange-300 mb-2">📌 {t2.name}</p>
-                <p className="text-gray-300 text-sm leading-relaxed">{t2.verdict}</p>
+                <p className="text-gray-300 text-sm leading-relaxed">{tlVerdict(t2.id, t2.verdict, locale)}</p>
               </div>
             )}
           </div>
