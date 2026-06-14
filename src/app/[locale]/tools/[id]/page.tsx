@@ -92,13 +92,6 @@ export default async function ToolPage({ params }: Props) {
       priceCurrency: 'USD',
       availability: 'https://schema.org/OnlineOnly',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: tool.rating,
-      bestRating: 5,
-      worstRating: 1,
-      ratingCount: tool.views,
-    },
     url: outboundUrl,
   };
 

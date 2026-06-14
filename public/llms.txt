@@ -1,10 +1,10 @@
 # AIverse
 
-> AIverse (getaiverse.online) is a directory of 649+ AI tools and 100+ AI agents across 28 categories — writing, image generation, code, video, audio, marketing, productivity, SEO, PDF, slides/presentations, chatbots, 3D design, data, HR, finance, legal, e-learning, and more. Content is available in English, French, Spanish, and Arabic. The site is updated regularly with new tools, comparisons, alternatives, and AI buying guides.
+> AIverse (getaiverse.online) is a directory of 580+ AI tools and 100+ AI agents across 28 categories — writing, image generation, code, video, audio, marketing, productivity, SEO, PDF, slides/presentations, chatbots, 3D design, data, HR, finance, legal, e-learning, and more. Content is available in English, French, Spanish, and Arabic. The site is updated regularly with new tools, comparisons, alternatives, and AI buying guides.
 
 ## Key sections
 
-- [Tool directory](https://getaiverse.online/en): Browse and filter 649+ AI tools by category, pricing model (free, freemium, paid), and rating. Each tool page includes a description, pricing details, pros/cons, and an FAQ section.
+- [Tool directory](https://getaiverse.online/en): Browse and filter 580+ AI tools by category, pricing model (free, freemium, paid), and rating. Each tool page includes a description, pricing details, pros/cons, and an FAQ section.
 - [Comparisons](https://getaiverse.online/en/compare): Head-to-head comparisons between popular AI tools (e.g. ChatGPT vs Claude, Midjourney vs DALL-E 3, Gamma vs Tome), including pricing differences and which tool is better for specific use cases.
 - [Alternatives](https://getaiverse.online/en/alternatives): Curated alternative tools to popular AI products (ChatGPT, Midjourney, Notion AI, GitHub Copilot, Canva AI, Grammarly, ElevenLabs, DALL-E 3, Runway Gen-3, Jasper).
 - [Blog](https://getaiverse.online/en/blog): Long-form guides answering "best AI tools for X in 2026" questions (presentations, chatbot builders, free AI tools, YouTube creators, AI agents by category, and more), each with a FAQ section.
