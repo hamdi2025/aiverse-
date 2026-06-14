@@ -10,6 +10,13 @@ export interface AffiliateNetworkConfig {
 
 // ── Real affiliate program links (replace IDs with yours after signup) ──────
 export const AFFILIATE_CONFIG: AffiliateNetworkConfig = {
+  // HeadshotPro — Rewardful (30% on all payments) — REAL link
+  headshotpro: {
+    baseUrl: 'https://www.headshotpro.com',
+    network: 'direct',
+    affiliateId: 'abdelwahed',
+    trackedUrl: 'https://www.headshotpro.com?via=abdelwahed'
+  },
   // Jasper — Impact.com (~30% recurring)
   jasper: {
     baseUrl: 'https://jasper.ai',

@@ -57,6 +57,35 @@ export const TOOLS_DATA: AITool[] = [
     verdict: 'ChatGPT is the best choice for users who need an all-in-one AI assistant with image generation, voice mode and the largest plugin ecosystem. Ideal for general use, content creation and coding.',
   },
   {
+    id: 'headshotpro',
+    name: 'HeadshotPro',
+    category: 'image',
+    description: {
+      en: "AI headshot generator that turns your selfies into studio-quality professional business portraits in dozens of styles and backgrounds.",
+      fr: "Générateur de portraits IA qui transforme vos selfies en photos professionnelles de qualité studio, dans des dizaines de styles et arrière-plans.",
+      es: "Generador de retratos con IA que convierte tus selfies en fotos profesionales de calidad de estudio, en decenas de estilos y fondos.",
+      ar: "مولّد صور شخصية بالذكاء الاصطناعي يحوّل صورك الذاتية إلى صور احترافية بجودة الاستوديو بعشرات الأنماط والخلفيات."
+    },
+    rating: 4.6,
+    pricing: 'Paid',
+    pricingLocalized: {
+      en: 'From $29 (one-time)',
+      fr: 'À partir de 29$ (paiement unique)',
+      es: 'Desde $29 (pago único)',
+      ar: 'ابتداءً من ٢٩ دولار (دفعة واحدة)'
+    },
+    websiteUrl: 'https://www.headshotpro.com',
+    commission: '30%',
+    views: 9100,
+    company: 'HeadshotPro', founded: '2023', hasAPI: false, hasMobileApp: false,
+    releaseDate: 'Feb 2023', lastUpdate: 'Jun 2026',
+    pros: ['Studio-quality results from simple selfies', 'Dozens of styles & backgrounds', 'Fast turnaround (around 1-2 hours)', 'Great for teams & LinkedIn', 'One-time price, no subscription'],
+    cons: ['Paid only (no free tier)', 'Quality depends on the selfies you upload', 'Occasional unrealistic outputs'],
+    tags: ['Headshots', 'Portraits', 'Business', 'LinkedIn'],
+    useCases: ['LinkedIn profile photos', 'Team & company headshots', 'Resume & CV photos', 'Social media avatars'],
+    verdict: 'HeadshotPro is the best pick for professionals and teams who need polished business headshots without booking a photo studio. Upload a few selfies, pick a style, and get LinkedIn-ready portraits in hours.',
+  },
+  {
     id: 'claude',
     name: 'Claude 3.5 Sonnet',
     category: 'writing',
