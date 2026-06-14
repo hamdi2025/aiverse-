@@ -115,11 +115,39 @@ export default async function ToolPage({ params }: Props) {
 
   const faqTitle = locale === 'fr' ? 'Questions fréquentes' : locale === 'es' ? 'Preguntas frecuentes' : locale === 'ar' ? 'الأسئلة الشائعة' : 'Frequently Asked Questions';
 
+  const siteBase = 'https://getaiverse.online';
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'AIverse', item: `${siteBase}/${locale}` },
+      { '@type': 'ListItem', position: 2, name: tool.category, item: `${siteBase}/${locale}?cat=${tool.category}` },
+      { '@type': 'ListItem', position: 3, name: tool.name, item: `${siteBase}/${locale}/tools/${tool.id}` },
+    ],
+  };
+
+  const RT = {
+    verdict: locale === 'fr' ? 'Notre verdict' : locale === 'es' ? 'Nuestro veredicto' : locale === 'ar' ? 'خلاصتنا' : 'Our verdict',
+    pros: locale === 'fr' ? 'Points forts' : locale === 'es' ? 'Ventajas' : locale === 'ar' ? 'الإيجابيات' : 'Pros',
+    cons: locale === 'fr' ? 'Points faibles' : locale === 'es' ? 'Desventajas' : locale === 'ar' ? 'السلبيات' : 'Cons',
+    useCases: locale === 'fr' ? "Cas d'usage" : locale === 'es' ? 'Casos de uso' : locale === 'ar' ? 'حالات الاستخدام' : 'Use cases',
+    keyFacts: locale === 'fr' ? 'Infos clés' : locale === 'es' ? 'Datos clave' : locale === 'ar' ? 'معلومات أساسية' : 'Key facts',
+    updated: locale === 'fr' ? 'Mis à jour' : locale === 'es' ? 'Actualizado' : locale === 'ar' ? 'آخر تحديث' : 'Last updated',
+    company: locale === 'fr' ? 'Éditeur' : locale === 'es' ? 'Empresa' : locale === 'ar' ? 'الشركة' : 'Company',
+    founded: locale === 'fr' ? 'Fondé' : locale === 'es' ? 'Fundado' : locale === 'ar' ? 'تأسست' : 'Founded',
+    mobile: locale === 'fr' ? 'App mobile' : locale === 'es' ? 'App móvil' : locale === 'ar' ? 'تطبيق جوال' : 'Mobile app',
+    yes: locale === 'fr' ? 'Oui' : locale === 'es' ? 'Sí' : locale === 'ar' ? 'نعم' : 'Yes',
+  };
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-16">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       {faqJsonLd && (
         <script
@@ -127,10 +155,14 @@ export default async function ToolPage({ params }: Props) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       )}
-      {/* Back */}
-      <a href={`/${locale}`} className="text-sm text-gray-500 hover:text-white transition mb-8 inline-block">
-        ← {locale === 'fr' ? 'Retour' : locale === 'es' ? 'Volver' : locale === 'ar' ? 'رجوع' : 'Back'}
-      </a>
+      {/* Breadcrumb */}
+      <nav aria-label="Breadcrumb" className="text-sm text-gray-500 mb-8 flex flex-wrap items-center gap-1.5">
+        <a href={`/${locale}`} className="hover:text-white transition">{locale === 'fr' ? 'Accueil' : locale === 'es' ? 'Inicio' : locale === 'ar' ? 'الرئيسية' : 'Home'}</a>
+        <span className="text-gray-700">/</span>
+        <a href={`/${locale}?cat=${tool.category}`} className="hover:text-white transition capitalize">{tool.category}</a>
+        <span className="text-gray-700">/</span>
+        <span className="text-gray-300">{tool.name}</span>
+      </nav>
 
       {/* Header */}
       <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-8 mb-6">
@@ -166,6 +198,68 @@ export default async function ToolPage({ params }: Props) {
           {tool.description[locale]}
         </p>
       </div>
+
+      {/* Our verdict */}
+      {tool.verdict && (
+        <div className="rounded-2xl border border-violet-500/20 bg-violet-500/[0.06] p-6 mb-6">
+          <h2 className="text-sm font-bold text-violet-300 uppercase tracking-wider mb-2">✅ {RT.verdict}</h2>
+          <p className="text-gray-200 leading-relaxed">{tool.verdict}</p>
+        </div>
+      )}
+
+      {/* Pros & Cons */}
+      {(!!tool.pros?.length || !!tool.cons?.length) && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+          {!!tool.pros?.length && (
+            <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/[0.05] p-6">
+              <h2 className="text-sm font-bold text-emerald-300 uppercase tracking-wider mb-3">👍 {RT.pros}</h2>
+              <ul className="space-y-2">
+                {tool.pros.map((p, i) => (
+                  <li key={i} className="flex gap-2 text-sm text-gray-300"><span className="text-emerald-400">+</span><span>{p}</span></li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {!!tool.cons?.length && (
+            <div className="rounded-2xl border border-rose-500/20 bg-rose-500/[0.05] p-6">
+              <h2 className="text-sm font-bold text-rose-300 uppercase tracking-wider mb-3">👎 {RT.cons}</h2>
+              <ul className="space-y-2">
+                {tool.cons.map((c, i) => (
+                  <li key={i} className="flex gap-2 text-sm text-gray-300"><span className="text-rose-400">−</span><span>{c}</span></li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Use cases */}
+      {!!tool.useCases?.length && (
+        <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 mb-6">
+          <h2 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">🎯 {RT.useCases}</h2>
+          <div className="flex flex-wrap gap-2">
+            {tool.useCases.map((u, i) => (
+              <span key={i} className="text-sm text-gray-300 border border-white/[0.08] bg-white/[0.03] rounded-lg px-3 py-1.5">{u}</span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Key facts */}
+      {(tool.company || tool.founded || tool.hasAPI || tool.hasMobileApp || tool.lastUpdate) && (
+        <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 mb-6">
+          <h2 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">ℹ️ {RT.keyFacts}</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
+            {tool.company && (<div><div className="text-gray-500 text-xs">{RT.company}</div><div className="text-white font-semibold">{tool.company}</div></div>)}
+            {tool.founded && (<div><div className="text-gray-500 text-xs">{RT.founded}</div><div className="text-white font-semibold">{tool.founded}</div></div>)}
+            {tool.hasAPI && (<div><div className="text-gray-500 text-xs">API</div><div className="text-white font-semibold">{RT.yes}</div></div>)}
+            {tool.hasMobileApp && (<div><div className="text-gray-500 text-xs">{RT.mobile}</div><div className="text-white font-semibold">{RT.yes}</div></div>)}
+          </div>
+          {tool.lastUpdate && (
+            <p className="text-xs text-gray-500 mt-4">{RT.updated}: {tool.lastUpdate}</p>
+          )}
+        </div>
+      )}
 
       {/* Details */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">

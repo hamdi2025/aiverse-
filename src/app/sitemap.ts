@@ -74,5 +74,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...homepages, ...toolPages, ...comparePages, ...alternativesIndexPages, ...alternativesPages, ...blogIndexPages, ...blogPostPages];
+  const STATIC_PAGES = ['about', 'privacy', 'terms', 'disclosure', 'contact', 'submit', 'newsletter', 'stack', 'compare'];
+  const staticPages = STATIC_PAGES.flatMap(slug =>
+    LOCALES.map(locale => ({
+      url: `${BASE_URL}/${locale}/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: slug === 'compare' ? 0.7 : 0.5,
+    }))
+  );
+
+  return [...homepages, ...toolPages, ...comparePages, ...alternativesIndexPages, ...alternativesPages, ...blogIndexPages, ...blogPostPages, ...staticPages];
 }

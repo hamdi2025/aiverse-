@@ -7,6 +7,8 @@ import { Star, ArrowUpRight, Zap, ArrowRight } from 'lucide-react';
 type Locale = 'en' | 'fr' | 'es' | 'ar';
 interface Props { params: { slug: string; locale: Locale } }
 
+const BASE = 'https://getaiverse.online';
+
 const CATEGORY_EMOJI: Record<string, string> = {
   agents: '🤖', writing: '✍️', image: '🎨', code: '💻', video: '🎬', audio: '🎙️',
   marketing: '📈', productivity: '⚡', seo: '🔍', socialmedia: '📱', chatbots: '💬',
@@ -225,6 +227,16 @@ export default async function AlternativesPage({ params }: Props) {
     })),
   };
 
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'AIverse', item: `${BASE}/${locale}` },
+      { '@type': 'ListItem', position: 2, name: 'Alternatives', item: `${BASE}/${locale}/alternatives` },
+      { '@type': 'ListItem', position: 3, name: `${tool.name} Alternatives`, item: `${BASE}/${locale}/alternatives/${tool.id}-alternatives` },
+    ],
+  };
+
   const faqJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -238,6 +250,7 @@ export default async function AlternativesPage({ params }: Props) {
   return (
     <div className="max-w-4xl mx-auto px-4 py-16">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Back */}

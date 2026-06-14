@@ -9,6 +9,32 @@ import { ADSENSE_CONFIG } from '@/config/adsense';
 import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import type { Metadata } from 'next';
+import { getHomeMetadata } from './page-metadata';
+
+const BASE_URL = 'https://getaiverse.online';
+
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { title, description, keywords } = getHomeMetadata(params.locale);
+  return {
+    metadataBase: new URL(BASE_URL),
+    title,
+    description,
+    keywords,
+    openGraph: {
+      title,
+      description,
+      url: `${BASE_URL}/${params.locale}`,
+      siteName: 'AIverse',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+  };
+}
 
 const inter = Inter({
   subsets: ['latin'],
@@ -63,7 +89,7 @@ export default async function LocaleLayout({
                   name: 'AIverse',
                   url: 'https://getaiverse.online',
                   logo: 'https://getaiverse.online/favicon.ico',
-                  description: 'AIverse is a directory of 649+ AI tools and 100+ AI agents across 28 categories, with comparisons, alternatives, and AI buying guides, available in English, French, Spanish, and Arabic.',
+                  description: 'AIverse is a directory of 580+ AI tools and 60+ AI agents across 28 categories, with comparisons, alternatives, and AI buying guides, available in English, French, Spanish, and Arabic.',
                 },
                 {
                   '@type': 'WebSite',

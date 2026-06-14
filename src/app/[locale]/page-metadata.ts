@@ -1,16 +1,16 @@
 // SEO metadata helper for the homepage
 export const getHomeMetadata = (locale: string) => {
   const titles: Record<string, string> = {
-    en: "AIverse — Best AI Tools Directory 2026 | 1000+ AI Tools & 100+ Agents",
-    fr: "AIverse — Meilleurs Outils IA 2026 | 1000+ Outils & 100+ Agents",
-    es: "AIverse — Mejores Herramientas IA 2026 | 1000+ Herramientas & 100+ Agentes",
-    ar: "AIverse — أفضل أدوات الذكاء الاصطناعي 2026 | 1000+ أداة و100+ وكيل",
+    en: "AIverse — Best AI Tools Directory 2026 | 580+ AI Tools & 60+ Agents",
+    fr: "AIverse — Meilleurs Outils IA 2026 | 580+ Outils & 60+ Agents",
+    es: "AIverse — Mejores Herramientas IA 2026 | 580+ Herramientas & 60+ Agentes",
+    ar: "AIverse — أفضل أدوات الذكاء الاصطناعي 2026 | 580+ أداة و60+ وكيل",
   };
   const descs: Record<string, string> = {
-    en: "Discover 1000+ AI tools and 100+ AI agents in 15 categories: writing, image, code, video, SEO, PDF, 3D design, slides, Excel, file conversion and more. Updated daily.",
-    fr: "Découvrez 1000+ outils IA et 100+ agents IA en 15 catégories : rédaction, image, code, vidéo, SEO, PDF, design 3D, diapositives, Excel, conversion de fichiers et plus.",
-    es: "Descubre 1000+ herramientas IA y 100+ agentes IA en 15 categorías: escritura, imagen, código, video, SEO, PDF, diseño 3D, diapositivas, Excel, conversión de archivos y más.",
-    ar: "اكتشف أكثر من 555 أداة ذكاء اصطناعي و100 وكيل ذكي في 15 فئة: الكتابة والصور والبرمجة والفيديو والـ SEO وPDF والتصميم ثلاثي الأبعاد والعروض و Excel وتحويل الملفات.",
+    en: "Discover 580+ AI tools and 60+ AI agents across 28 categories: writing, image, code, video, audio, SEO, PDF, 3D design, slides, Excel and more. Compare tools, find alternatives, and read buying guides. Updated regularly.",
+    fr: "Découvrez 580+ outils IA et 60+ agents IA dans 28 catégories : rédaction, image, code, vidéo, audio, SEO, PDF, design 3D, diapositives, Excel et plus. Comparez les outils et trouvez des alternatives.",
+    es: "Descubre 580+ herramientas IA y 60+ agentes IA en 28 categorías: escritura, imagen, código, video, audio, SEO, PDF, diseño 3D, diapositivas, Excel y más. Compara herramientas y encuentra alternativas.",
+    ar: "اكتشف أكثر من 580 أداة ذكاء اصطناعي و60+ وكيلاً في 28 فئة: الكتابة والصور والبرمجة والفيديو والصوت والـ SEO وPDF والتصميم ثلاثي الأبعاد والعروض و Excel والمزيد. قارن الأدوات وابحث عن البدائل.",
   };
   const keywords: Record<string, string> = {
     en: "AI tools, AI agents, best AI tools 2026, ChatGPT alternatives, AI image generator, AI video maker, AI SEO tools, AI presentation maker, PDF AI tools, 3D AI design, Excel AI, file converter, file compressor, AI writing tools",

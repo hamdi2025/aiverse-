@@ -8,6 +8,8 @@ import { Star, Check, ArrowUpRight, Zap, Lock } from 'lucide-react';
 type Locale = 'en' | 'fr' | 'es' | 'ar';
 interface Props { params: { slug: string; locale: Locale } }
 
+const BASE = 'https://getaiverse.online';
+
 // Pre-generate the most searched comparisons
 const TOP_COMPARISONS = [
   'chatgpt-vs-claude',
@@ -126,8 +128,18 @@ export default async function ComparePage({ params }: Props) {
     '@type': 'Article',
     headline: `${t1.name} vs ${t2.name} — Which AI Tool is Better?`,
     description: `Full comparison of ${t1.name} and ${t2.name} including pricing, features, ratings and pros & cons.`,
-    url: `https://aiverse-lemon.vercel.app/${locale}/compare/${params.slug}`,
+    url: `${BASE}/${locale}/compare/${params.slug}`,
     author: { '@type': 'Organization', name: 'AIverse' },
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'AIverse', item: `${BASE}/${locale}` },
+      { '@type': 'ListItem', position: 2, name: 'Compare', item: `${BASE}/${locale}/compare` },
+      { '@type': 'ListItem', position: 3, name: `${t1.name} vs ${t2.name}`, item: `${BASE}/${locale}/compare/${params.slug}` },
+    ],
   };
 
   // AEO: FAQ + FAQPage JSON-LD for "X vs Y" long-tail questions
@@ -229,6 +241,7 @@ export default async function ComparePage({ params }: Props) {
   return (
     <div className="max-w-4xl mx-auto px-4 py-16">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Back */}

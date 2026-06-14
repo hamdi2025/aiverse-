@@ -6,6 +6,39 @@ import { TOP_ALTERNATIVES } from '@/lib/alternatives';
 type Locale = 'en' | 'fr' | 'es' | 'ar';
 interface Props { params: { locale: Locale } }
 
+const BASE = 'https://getaiverse.online';
+
+export async function generateMetadata({ params }: Props) {
+  const locale = params.locale;
+  const titleMap: Record<Locale, string> = {
+    en: 'AI Tool Alternatives — Ranked Free & Paid Options 2026 | AIverse',
+    fr: 'Alternatives aux Outils IA — Options Gratuites & Payantes 2026 | AIverse',
+    es: 'Alternativas a Herramientas IA — Opciones Gratuitas y de Pago 2026 | AIverse',
+    ar: 'بدائل أدوات الذكاء الاصطناعي — خيارات مجانية ومدفوعة 2026 | AIverse',
+  };
+  const descMap: Record<Locale, string> = {
+    en: 'Discover ranked free and paid alternatives to the most popular AI tools in 2026 — compare features, pricing, and find the best fit.',
+    fr: 'Découvrez des alternatives gratuites et payantes classées aux outils IA les plus populaires en 2026 — comparez fonctionnalités et tarifs.',
+    es: 'Descubre alternativas gratuitas y de pago a las herramientas IA más populares en 2026 — compara funciones y precios.',
+    ar: 'اكتشف بدائل مجانية ومدفوعة مصنّفة لأشهر أدوات الذكاء الاصطناعي في 2026 — قارن الميزات والأسعار.',
+  };
+  return {
+    title: titleMap[locale],
+    description: descMap[locale],
+    alternates: {
+      canonical: `${BASE}/${locale}/alternatives`,
+      languages: {
+        en: `${BASE}/en/alternatives`, fr: `${BASE}/fr/alternatives`,
+        es: `${BASE}/es/alternatives`, ar: `${BASE}/ar/alternatives`,
+      },
+    },
+    openGraph: {
+      title: titleMap[locale], description: descMap[locale],
+      url: `${BASE}/${locale}/alternatives`, siteName: 'AIverse', type: 'website',
+    },
+  };
+}
+
 const CATEGORY_EMOJI: Record<string, string> = {
   agents: '🤖', writing: '✍️', image: '🎨', code: '💻', video: '🎬', audio: '🎙️',
   marketing: '📈', productivity: '⚡', seo: '🔍', socialmedia: '📱', chatbots: '💬',

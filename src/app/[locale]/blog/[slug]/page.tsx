@@ -75,6 +75,16 @@ export default function BlogPostPage({ params }: Props) {
     publisher: { '@type': 'Organization', name: 'AIverse' },
   };
 
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'AIverse', item: `${BASE}/${locale}` },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${BASE}/${locale}/blog` },
+      { '@type': 'ListItem', position: 3, name: post.title[locale], item: `${BASE}/${locale}/blog/${post.slug}` },
+    ],
+  };
+
   const faqJsonLd = post.faq && post.faq.length > 0 ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -91,6 +101,7 @@ export default function BlogPostPage({ params }: Props) {
   return (
     <div className="max-w-3xl mx-auto px-4 py-16">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       {faqJsonLd && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       )}

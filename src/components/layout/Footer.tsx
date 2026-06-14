@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from '@/navigation';
 import GradientText from '../ui/GradientText';
-import { Mail, Rss } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 const LINKS = {
   directory: [
@@ -17,7 +17,7 @@ const LINKS = {
   monetize: [
     { label: 'Submit Your Tool', href: '/submit' },
     { label: 'Advertise / Sponsor', href: '/submit#featured' },
-    { label: 'Affiliate Program', href: '/affiliates' },
+    { label: 'Partner With Us', href: '/contact' },
     { label: 'Newsletter Sponsorship', href: '/newsletter' },
   ],
   company: [
@@ -54,13 +54,9 @@ export default function Footer() {
                 className="p-2 rounded-lg bg-white/[0.04] border border-white/[0.06] text-gray-400 hover:text-white hover:border-white/20 transition-all">
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.741-8.861L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               </a>
-              <a href="/newsletter"
+              <a href="/en/newsletter"
                 className="p-2 rounded-lg bg-white/[0.04] border border-white/[0.06] text-gray-400 hover:text-white hover:border-white/20 transition-all">
                 <Mail className="w-4 h-4" />
-              </a>
-              <a href="/rss.xml"
-                className="p-2 rounded-lg bg-white/[0.04] border border-white/[0.06] text-gray-400 hover:text-white hover:border-white/20 transition-all">
-                <Rss className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -129,7 +125,7 @@ export default function Footer() {
           <div className="flex gap-5">
             <Link href="/privacy" className="hover:text-gray-400 transition-colors">Privacy</Link>
             <Link href="/terms" className="hover:text-gray-400 transition-colors">Terms</Link>
-            <a href="mailto:contact@aiverse.com" className="hover:text-gray-400 transition-colors">Contact</a>
+            <Link href="/contact" className="hover:text-gray-400 transition-colors">Contact</Link>
           </div>
         </div>
       </div>
