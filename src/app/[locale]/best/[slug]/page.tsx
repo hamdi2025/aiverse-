@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { TOOLS_DATA } from '@/lib/tools';
 import { buildAffiliateUrl } from '@/lib/affiliate';
+import { tl } from '@/lib/dataI18n';
 import { BEST_FOR, getBestFor, getBestForFaq } from '@/lib/bestFor';
 
 type Locale = 'en' | 'fr' | 'es' | 'ar';
@@ -115,7 +116,7 @@ export default function BestForPage({ params }: Props) {
                   {!!t.pros?.length && (
                     <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
                       {t.pros.slice(0, 3).map((p, k) => (
-                        <li key={k} className="text-xs text-gray-400"><span className="text-emerald-400">+</span> {p}</li>
+                        <li key={k} className="text-xs text-gray-400"><span className="text-emerald-400">+</span> {tl(p, locale)}</li>
                       ))}
                     </ul>
                   )}

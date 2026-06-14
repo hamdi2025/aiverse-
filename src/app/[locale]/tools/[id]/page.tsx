@@ -3,6 +3,7 @@ import { TOOLS_DATA } from '@/lib/tools';
 import { TOOL_FAQS } from '@/lib/faq';
 import { getGenericFaq } from '@/lib/genericFaq';
 import { buildAffiliateUrl } from '@/lib/affiliate';
+import { tl } from '@/lib/dataI18n';
 import { getTranslations } from 'next-intl/server';
 import { Star, ArrowUpRight, Tag, Globe, TrendingUp } from 'lucide-react';
 
@@ -215,7 +216,7 @@ export default async function ToolPage({ params }: Props) {
               <h2 className="text-sm font-bold text-emerald-300 uppercase tracking-wider mb-3">👍 {RT.pros}</h2>
               <ul className="space-y-2">
                 {tool.pros.map((p, i) => (
-                  <li key={i} className="flex gap-2 text-sm text-gray-300"><span className="text-emerald-400">+</span><span>{p}</span></li>
+                  <li key={i} className="flex gap-2 text-sm text-gray-300"><span className="text-emerald-400">+</span><span>{tl(p, locale)}</span></li>
                 ))}
               </ul>
             </div>
@@ -225,7 +226,7 @@ export default async function ToolPage({ params }: Props) {
               <h2 className="text-sm font-bold text-rose-300 uppercase tracking-wider mb-3">👎 {RT.cons}</h2>
               <ul className="space-y-2">
                 {tool.cons.map((c, i) => (
-                  <li key={i} className="flex gap-2 text-sm text-gray-300"><span className="text-rose-400">−</span><span>{c}</span></li>
+                  <li key={i} className="flex gap-2 text-sm text-gray-300"><span className="text-rose-400">−</span><span>{tl(c, locale)}</span></li>
                 ))}
               </ul>
             </div>
@@ -239,7 +240,7 @@ export default async function ToolPage({ params }: Props) {
           <h2 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">🎯 {RT.useCases}</h2>
           <div className="flex flex-wrap gap-2">
             {tool.useCases.map((u, i) => (
-              <span key={i} className="text-sm text-gray-300 border border-white/[0.08] bg-white/[0.03] rounded-lg px-3 py-1.5">{u}</span>
+              <span key={i} className="text-sm text-gray-300 border border-white/[0.08] bg-white/[0.03] rounded-lg px-3 py-1.5">{tl(u, locale)}</span>
             ))}
           </div>
         </div>

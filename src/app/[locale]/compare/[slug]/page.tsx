@@ -3,6 +3,7 @@ import { auth } from '@clerk/nextjs/server';
 import { TOOLS_DATA } from '@/lib/tools';
 import { buildAffiliateUrl } from '@/lib/affiliate';
 import { getCompareFaq, getExpertVerdict } from '@/lib/compareFaq';
+import { tl } from '@/lib/dataI18n';
 import { Star, Check, ArrowUpRight, Zap, Lock } from 'lucide-react';
 
 type Locale = 'en' | 'fr' | 'es' | 'ar';
@@ -356,14 +357,14 @@ export default async function ComparePage({ params }: Props) {
                 <div className="mb-3">
                   <p className="text-xs font-bold text-green-400 uppercase tracking-wider mb-2">✅ {L.pros}</p>
                   <ul className="space-y-1">
-                    {tool.pros?.map((p, j) => <li key={j} className="text-xs text-gray-300 flex items-start gap-1.5"><span className="text-green-400 mt-0.5">+</span>{p}</li>)}
+                    {tool.pros?.map((p, j) => <li key={j} className="text-xs text-gray-300 flex items-start gap-1.5"><span className="text-green-400 mt-0.5">+</span>{tl(p, locale)}</li>)}
                   </ul>
                 </div>
                 {tool.cons && (
                   <div>
                     <p className="text-xs font-bold text-red-400 uppercase tracking-wider mb-2">❌ {L.cons}</p>
                     <ul className="space-y-1">
-                      {tool.cons?.map((c, j) => <li key={j} className="text-xs text-gray-300 flex items-start gap-1.5"><span className="text-red-400 mt-0.5">−</span>{c}</li>)}
+                      {tool.cons?.map((c, j) => <li key={j} className="text-xs text-gray-300 flex items-start gap-1.5"><span className="text-red-400 mt-0.5">−</span>{tl(c, locale)}</li>)}
                     </ul>
                   </div>
                 )}
@@ -382,7 +383,7 @@ export default async function ComparePage({ params }: Props) {
                 <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">🎯 {CL.bestFor} — {tool.name}</p>
                 <div className="flex flex-wrap gap-2">
                   {tool.useCases.map((u, j) => (
-                    <span key={j} className="text-xs bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-full">{u}</span>
+                    <span key={j} className="text-xs bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-full">{tl(u, locale)}</span>
                   ))}
                 </div>
               </div>
@@ -400,7 +401,7 @@ export default async function ComparePage({ params }: Props) {
                 <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">🏷️ {CL.tags} — {tool.name}</p>
                 <div className="flex flex-wrap gap-2">
                   {tool.tags.map((tag, j) => (
-                    <span key={j} className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${i === 0 ? 'text-violet-300 bg-violet-500/10 border-violet-500/20' : 'text-orange-300 bg-orange-500/10 border-orange-500/20'}`}>{tag}</span>
+                    <span key={j} className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${i === 0 ? 'text-violet-300 bg-violet-500/10 border-violet-500/20' : 'text-orange-300 bg-orange-500/10 border-orange-500/20'}`}>{tl(tag, locale)}</span>
                   ))}
                 </div>
               </div>
