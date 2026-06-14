@@ -401,19 +401,15 @@ export default async function ComparePage({ params }: Props) {
         </p>
       </div>
 
-      {/* Expert Recommendation — protected by sign-in */}
-      <div className="rounded-2xl border border-violet-500/30 bg-violet-950/10 p-6 mb-10 relative overflow-hidden">
-        <div className="flex items-center gap-2 mb-3">
-          <Star className="w-5 h-5 text-amber-400 fill-amber-400" />
-          <h2 className="text-lg font-black text-white">Expert Recommendation</h2>
-          {!isLoggedIn && (
-            <span className="ml-auto flex items-center gap-1.5 text-xs font-bold text-violet-300 bg-violet-500/20 px-2.5 py-1 rounded-full border border-violet-500/30">
-              <Lock className="w-3 h-3" /> Free account required
-            </span>
-          )}
-        </div>
-
-        {isLoggedIn ? (
+      {/* Expert take on each tool (shown openly when we have written verdicts) */}
+      {(t1.verdict || t2.verdict) && (
+        <div className="rounded-2xl border border-violet-500/30 bg-violet-950/10 p-6 mb-10">
+          <div className="flex items-center gap-2 mb-4">
+            <Star className="w-5 h-5 text-amber-400 fill-amber-400" />
+            <h2 className="text-lg font-black text-white">
+              {locale === 'fr' ? 'Notre avis sur chaque outil' : locale === 'es' ? 'Nuestra opinión de cada herramienta' : locale === 'ar' ? 'رأينا في كل أداة' : 'Expert take on each tool'}
+            </h2>
+          </div>
           <div className="space-y-4">
             {t1.verdict && (
               <div className="bg-violet-950/30 rounded-xl p-4 border border-violet-500/20">
@@ -427,34 +423,9 @@ export default async function ComparePage({ params }: Props) {
                 <p className="text-gray-300 text-sm leading-relaxed">{t2.verdict}</p>
               </div>
             )}
-            {!t1.verdict && !t2.verdict && (
-              <p className="text-gray-400 text-sm">Expert analysis coming soon for these tools.</p>
-            )}
           </div>
-        ) : (
-          <div className="relative">
-            <div className="blur-sm select-none pointer-events-none">
-              <div className="bg-violet-950/30 rounded-xl p-4 border border-violet-500/20 mb-3">
-                <p className="text-xs font-bold text-violet-300 mb-2">📌 {t1.name}</p>
-                <p className="text-gray-300 text-sm">████████ is the best choice for ████████ who need ████████. Recommended for ████████ and ████████.</p>
-              </div>
-              <div className="bg-orange-950/30 rounded-xl p-4 border border-orange-500/20">
-                <p className="text-xs font-bold text-orange-300 mb-2">📌 {t2.name}</p>
-                <p className="text-gray-300 text-sm">████████ is ideal for ████████ use cases. Best for ████████ and ████████ professionals.</p>
-              </div>
-            </div>
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 rounded-xl backdrop-blur-sm">
-              <Lock className="w-8 h-8 text-violet-400 mb-3" />
-              <p className="text-white font-bold text-base mb-1">Unlock Expert Recommendations</p>
-              <p className="text-gray-400 text-xs mb-4 text-center">Create a free account to see which tool we recommend and why</p>
-              <a href={`/${locale}/sign-up`}
-                className="flex items-center gap-2 bg-gradient-to-r from-violet-600 to-cyan-500 text-white px-6 py-2.5 rounded-xl font-bold text-sm hover:opacity-90 transition">
-                Create Free Account →
-              </a>
-            </div>
-          </div>
-        )}
-      </div>
+        </div>
+      )}
 
       {/* FAQ — AEO */}
       <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 mb-10">
