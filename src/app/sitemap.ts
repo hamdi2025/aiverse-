@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import { TOOLS_DATA } from '@/lib/tools';
 import { BLOG_POSTS } from '@/lib/blog';
 import { TOP_ALTERNATIVES } from '@/lib/alternatives';
+import { BEST_FOR } from '@/lib/bestFor';
 
 const BASE_URL = 'https://getaiverse.online';
 const LOCALES = ['en', 'fr', 'es', 'ar'];
@@ -77,6 +78,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
+  const bestPages = ['best', ...BEST_FOR.map((g) => `best/${g.slug}`)].flatMap(slug =>
+    LOCALES.map(locale => ({
+      url: `${BASE_URL}/${locale}/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    }))
+  );
+
   const STATIC_PAGES = ['about', 'privacy', 'terms', 'disclosure', 'contact', 'submit', 'newsletter', 'stack', 'compare'];
   const staticPages = STATIC_PAGES.flatMap(slug =>
     LOCALES.map(locale => ({
@@ -87,5 +97,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...homepages, ...toolPages, ...comparePages, ...alternativesIndexPages, ...alternativesPages, ...blogIndexPages, ...blogPostPages, ...staticPages];
+  return [...homepages, ...toolPages, ...comparePages, ...alternativesIndexPages, ...alternativesPages, ...blogIndexPages, ...blogPostPages, ...staticPages, ...bestPages];
 }

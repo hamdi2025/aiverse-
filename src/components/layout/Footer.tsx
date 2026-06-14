@@ -8,6 +8,7 @@ import { Mail } from 'lucide-react';
 const LINKS = {
   directory: [
     { label: 'All Tools', href: '/' },
+    { label: 'Best AI Tools by Use Case', href: '/best' },
     { label: 'Writing & AI', href: '/?cat=writing' },
     { label: 'Image Generation', href: '/?cat=image' },
     { label: 'Code & Dev', href: '/?cat=code' },

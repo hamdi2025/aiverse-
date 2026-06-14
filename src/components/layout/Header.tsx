@@ -89,6 +89,14 @@ export default function Header() {
             🔁 Alternatives
           </Link>
 
+          {/* Best AI tools link */}
+          <Link
+            href="/best"
+            className="hidden lg:flex items-center gap-1.5 text-xs font-semibold text-gray-300 hover:text-white border border-white/[0.08] hover:border-white/20 rounded-xl px-3 py-2 transition-all"
+          >
+            🏆 Best
+          </Link>
+
           {/* Submit link */}
           <Link
             href="/submit"
@@ -124,6 +132,7 @@ export default function Header() {
           <Link href="/" className="text-gray-300 hover:text-white border border-white/[0.08] rounded-lg px-3 py-1.5">🏠 Tools</Link>
           <Link href="/compare" className="text-gray-300 hover:text-white border border-white/[0.08] rounded-lg px-3 py-1.5">⚡ Compare</Link>
           <Link href="/alternatives" className="text-gray-300 hover:text-white border border-white/[0.08] rounded-lg px-3 py-1.5">🔁 Alternatives</Link>
+          <Link href="/best" className="text-gray-300 hover:text-white border border-white/[0.08] rounded-lg px-3 py-1.5">🏆 Best</Link>
           <Link href="/stack" className="text-gray-300 hover:text-white border border-white/[0.08] rounded-lg px-3 py-1.5">🧰 Stack</Link>
           <Link href="/blog" className="text-gray-300 hover:text-white border border-white/[0.08] rounded-lg px-3 py-1.5">📚 Blog</Link>
           <Link href="/submit" className="text-white bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] rounded-lg px-3 py-1.5">+ Submit</Link>
