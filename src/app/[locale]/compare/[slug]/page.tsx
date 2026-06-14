@@ -111,12 +111,16 @@ export default async function ComparePage({ params }: Props) {
 
   const winner = t1.rating > t2.rating ? t1 : t2.rating > t1.rating ? t2 : null;
 
-  // Generate popularity label from views
+  // Generate popularity label from views (localized)
   const popularityLabel = (views: number) => {
-    if (views >= 30000) return '🔥 Very High';
-    if (views >= 15000) return '📈 High';
-    if (views >= 5000) return '👍 Medium';
-    return '🌱 Growing';
+    const vh = locale === 'fr' ? 'Très élevée' : locale === 'es' ? 'Muy alta' : locale === 'ar' ? 'مرتفعة جدًا' : 'Very High';
+    const hi = locale === 'fr' ? 'Élevée' : locale === 'es' ? 'Alta' : locale === 'ar' ? 'مرتفعة' : 'High';
+    const me = locale === 'fr' ? 'Moyenne' : locale === 'es' ? 'Media' : locale === 'ar' ? 'متوسطة' : 'Medium';
+    const gr = locale === 'fr' ? 'En croissance' : locale === 'es' ? 'Creciendo' : locale === 'ar' ? 'متنامية' : 'Growing';
+    if (views >= 30000) return `🔥 ${vh}`;
+    if (views >= 15000) return `📈 ${hi}`;
+    if (views >= 5000) return `👍 ${me}`;
+    return `🌱 ${gr}`;
   };
 
   // Pricing score (lower = better)
@@ -160,8 +164,24 @@ export default async function ComparePage({ params }: Props) {
   const faqTitle = locale === 'fr' ? 'Questions fréquentes' : locale === 'es' ? 'Preguntas frecuentes' : locale === 'ar' ? 'الأسئلة الشائعة' : 'Frequently Asked Questions';
 
   const yesNo = (val: boolean | undefined) => val
-    ? <span className="text-green-400 font-bold">✅ Yes</span>
-    : <span className="text-red-400 font-semibold">❌ No</span>;
+    ? <span className="text-green-400 font-bold">✅ {locale === 'fr' ? 'Oui' : locale === 'es' ? 'Sí' : locale === 'ar' ? 'نعم' : 'Yes'}</span>
+    : <span className="text-red-400 font-semibold">❌ {locale === 'fr' ? 'Non' : locale === 'es' ? 'No' : locale === 'ar' ? 'لا' : 'No'}</span>;
+
+  const CL = {
+    popularity: locale === 'fr' ? 'Popularité' : locale === 'es' ? 'Popularidad' : locale === 'ar' ? 'الشعبية' : 'Popularity',
+    value: locale === 'fr' ? 'Rapport qualité-prix' : locale === 'es' ? 'Relación calidad-precio' : locale === 'ar' ? 'القيمة مقابل السعر' : 'Value for Money',
+    releaseDate: locale === 'fr' ? 'Date de sortie' : locale === 'es' ? 'Fecha de lanzamiento' : locale === 'ar' ? 'تاريخ الإصدار' : 'Release Date',
+    lastUpdate: locale === 'fr' ? 'Dernière MAJ' : locale === 'es' ? 'Última actualización' : locale === 'ar' ? 'آخر تحديث' : 'Last Update',
+    company: locale === 'fr' ? 'Éditeur' : locale === 'es' ? 'Empresa' : locale === 'ar' ? 'الشركة' : 'Company',
+    founded: locale === 'fr' ? 'Fondé' : locale === 'es' ? 'Fundado' : locale === 'ar' ? 'تأسست' : 'Founded',
+    apiAccess: locale === 'fr' ? 'Accès API' : locale === 'es' ? 'Acceso API' : locale === 'ar' ? 'الوصول إلى API' : 'API Access',
+    mobileApp: locale === 'fr' ? 'App mobile' : locale === 'es' ? 'App móvil' : locale === 'ar' ? 'تطبيق الجوال' : 'Mobile App',
+    bestFor: locale === 'fr' ? 'Idéal pour' : locale === 'es' ? 'Ideal para' : locale === 'ar' ? 'الأفضل لـ' : 'Best for',
+    tags: locale === 'fr' ? 'Étiquettes' : locale === 'es' ? 'Etiquetas' : locale === 'ar' ? 'الوسوم (Tags)' : 'Tags',
+    excellent: locale === 'fr' ? 'Excellent' : locale === 'es' ? 'Excelente' : locale === 'ar' ? 'ممتاز' : 'Excellent',
+    good: locale === 'fr' ? 'Bon' : locale === 'es' ? 'Bueno' : locale === 'ar' ? 'جيد' : 'Good',
+    paidOnly: locale === 'fr' ? 'Payant uniquement' : locale === 'es' ? 'Solo de pago' : locale === 'ar' ? 'مدفوع فقط' : 'Paid only',
+  };
 
   const rows = [
     {
@@ -184,54 +204,54 @@ export default async function ComparePage({ params }: Props) {
       winner1: false, winner2: false,
     },
     {
-      label: 'Popularity',
+      label: CL.popularity,
       v1: <span className="text-gray-300">{popularityLabel(t1.views)}</span>,
       v2: <span className="text-gray-300">{popularityLabel(t2.views)}</span>,
       winner1: t1.views >= t2.views, winner2: t2.views >= t1.views,
     },
     {
-      label: 'Value for Money',
+      label: CL.value,
       v1: <span className={pricingScore(t1.pricing) === 3 ? 'text-green-400 font-bold' : pricingScore(t1.pricing) === 2 ? 'text-amber-400' : 'text-gray-300'}>
-        {pricingScore(t1.pricing) === 3 ? '⭐⭐⭐ Excellent' : pricingScore(t1.pricing) === 2 ? '⭐⭐ Good' : '⭐ Paid only'}
+        {pricingScore(t1.pricing) === 3 ? `⭐⭐⭐ ${CL.excellent}` : pricingScore(t1.pricing) === 2 ? `⭐⭐ ${CL.good}` : `⭐ ${CL.paidOnly}`}
       </span>,
       v2: <span className={pricingScore(t2.pricing) === 3 ? 'text-green-400 font-bold' : pricingScore(t2.pricing) === 2 ? 'text-amber-400' : 'text-gray-300'}>
-        {pricingScore(t2.pricing) === 3 ? '⭐⭐⭐ Excellent' : pricingScore(t2.pricing) === 2 ? '⭐⭐ Good' : '⭐ Paid only'}
+        {pricingScore(t2.pricing) === 3 ? `⭐⭐⭐ ${CL.excellent}` : pricingScore(t2.pricing) === 2 ? `⭐⭐ ${CL.good}` : `⭐ ${CL.paidOnly}`}
       </span>,
       winner1: pricingScore(t1.pricing) >= pricingScore(t2.pricing),
       winner2: pricingScore(t2.pricing) >= pricingScore(t1.pricing),
     },
     ...(t1.releaseDate || t2.releaseDate ? [{
-      label: '📅 Release Date',
+      label: `📅 ${CL.releaseDate}`,
       v1: <span className="text-gray-300">{t1.releaseDate || '—'}</span>,
       v2: <span className="text-gray-300">{t2.releaseDate || '—'}</span>,
       winner1: false, winner2: false,
     }] : []),
     ...(t1.lastUpdate || t2.lastUpdate ? [{
-      label: '🔄 Last Update',
+      label: `🔄 ${CL.lastUpdate}`,
       v1: <span className="text-green-400 font-semibold">{t1.lastUpdate || '—'}</span>,
       v2: <span className="text-green-400 font-semibold">{t2.lastUpdate || '—'}</span>,
       winner1: false, winner2: false,
     }] : []),
     ...(t1.company || t2.company ? [{
-      label: 'Company',
+      label: CL.company,
       v1: <span className="text-gray-300">{t1.company || '—'}</span>,
       v2: <span className="text-gray-300">{t2.company || '—'}</span>,
       winner1: false, winner2: false,
     }] : []),
     ...(t1.founded || t2.founded ? [{
-      label: 'Founded',
+      label: CL.founded,
       v1: <span className="text-gray-300">{t1.founded || '—'}</span>,
       v2: <span className="text-gray-300">{t2.founded || '—'}</span>,
       winner1: false, winner2: false,
     }] : []),
     ...(t1.hasAPI !== undefined || t2.hasAPI !== undefined ? [{
-      label: 'API Access',
+      label: CL.apiAccess,
       v1: yesNo(t1.hasAPI),
       v2: yesNo(t2.hasAPI),
       winner1: !!t1.hasAPI && !t2.hasAPI, winner2: !!t2.hasAPI && !t1.hasAPI,
     }] : []),
     ...(t1.hasMobileApp !== undefined || t2.hasMobileApp !== undefined ? [{
-      label: 'Mobile App',
+      label: CL.mobileApp,
       v1: yesNo(t1.hasMobileApp),
       v2: yesNo(t2.hasMobileApp),
       winner1: !!t1.hasMobileApp && !t2.hasMobileApp, winner2: !!t2.hasMobileApp && !t1.hasMobileApp,
@@ -359,7 +379,7 @@ export default async function ComparePage({ params }: Props) {
           {[{ tool: t1 }, { tool: t2 }].map(({ tool }, i) => (
             tool.useCases && (
               <div key={tool.id} className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5">
-                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">🎯 Best for — {tool.name}</p>
+                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">🎯 {CL.bestFor} — {tool.name}</p>
                 <div className="flex flex-wrap gap-2">
                   {tool.useCases.map((u, j) => (
                     <span key={j} className="text-xs bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-full">{u}</span>
@@ -377,7 +397,7 @@ export default async function ComparePage({ params }: Props) {
           {[{ tool: t1, color: 'violet' }, { tool: t2, color: 'orange' }].map(({ tool }, i) => (
             tool.tags && (
               <div key={tool.id} className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5">
-                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">🏷️ Tags — {tool.name}</p>
+                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">🏷️ {CL.tags} — {tool.name}</p>
                 <div className="flex flex-wrap gap-2">
                   {tool.tags.map((tag, j) => (
                     <span key={j} className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${i === 0 ? 'text-violet-300 bg-violet-500/10 border-violet-500/20' : 'text-orange-300 bg-orange-500/10 border-orange-500/20'}`}>{tag}</span>
