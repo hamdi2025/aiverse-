@@ -174,9 +174,21 @@ export default function ComparePage() {
             <ChevronDown className="w-4 h-4 text-gray-400 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
           </div>
 
-          {/* VS */}
-          <div className="flex items-center justify-center">
-            <span className="w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-tr from-violet-600 to-orange-500 text-white font-black text-xs shadow-lg shadow-violet-900/40 ring-4 ring-white/5">VS</span>
+          {/* Compare button (center) */}
+          <div className="flex items-stretch justify-center">
+            <button
+              onClick={handleCompare}
+              disabled={!canCompare}
+              aria-label={t.compare}
+              className={`w-full min-h-[52px] flex flex-col items-center justify-center gap-1 rounded-2xl font-black text-xs transition-all px-2 ${
+                canCompare
+                  ? 'bg-gradient-to-tr from-violet-600 to-cyan-500 hover:opacity-90 text-white shadow-lg shadow-violet-900/40 hover:scale-105'
+                  : 'bg-white/5 text-gray-600 cursor-not-allowed'
+              }`}
+            >
+              <Zap className="w-4 h-4" />
+              {locale === 'fr' ? 'Comparer' : locale === 'es' ? 'Comparar' : locale === 'ar' ? 'قارن' : 'Compare'}
+            </button>
           </div>
 
           {/* Tool 2 */}
@@ -206,22 +218,11 @@ export default function ComparePage() {
           </p>
         )}
 
-        {/* Buttons */}
-        <div className="flex gap-3">
-          <button
-            onClick={handleCompare}
-            disabled={!canCompare}
-            className={`flex-1 flex items-center justify-center gap-2 py-3.5 rounded-2xl font-bold text-sm transition-all ${
-              canCompare
-                ? 'bg-gradient-to-r from-violet-600 to-cyan-500 hover:opacity-90 text-white shadow-lg shadow-violet-900/30 hover:scale-[1.02]'
-                : 'bg-white/5 text-gray-600 cursor-not-allowed'
-            }`}
-          >
-            <ArrowRight className="w-4 h-4" /> {t.compare}
-          </button>
+        {/* Secondary action */}
+        <div className="flex">
           <button
             onClick={handleRandom}
-            className="flex items-center gap-2 px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-gray-400 hover:text-white text-sm font-semibold transition"
+            className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-gray-400 hover:text-white text-sm font-semibold transition"
           >
             <Shuffle className="w-4 h-4" /> {t.random}
           </button>
