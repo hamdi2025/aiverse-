@@ -87,10 +87,10 @@ export default function CompareWidget() {
   };
 
   return (
-    <section className="w-full my-10 rounded-2xl border border-white/25 bg-white/[0.06] bg-gradient-to-br from-sky-500/15 via-fuchsia-500/10 to-orange-500/15 p-6 md:p-8 relative overflow-hidden shadow-2xl shadow-black/40">
-      <div className="absolute -top-20 -right-12 w-72 h-72 bg-sky-500/30 blur-3xl rounded-full pointer-events-none" />
-      <div className="absolute -bottom-20 -left-12 w-72 h-72 bg-orange-500/25 blur-3xl rounded-full pointer-events-none" />
-      <div className="absolute top-1/4 left-1/3 w-56 h-56 bg-fuchsia-500/20 blur-3xl rounded-full pointer-events-none" />
+    <section className="w-full my-10 rounded-2xl border border-gray-200 bg-gradient-to-br from-sky-50 via-white to-orange-50 p-6 md:p-8 relative overflow-hidden shadow-lg shadow-gray-200/70">
+      <div className="absolute -top-20 -right-12 w-72 h-72 bg-sky-200/50 blur-3xl rounded-full pointer-events-none" />
+      <div className="absolute -bottom-20 -left-12 w-72 h-72 bg-orange-200/50 blur-3xl rounded-full pointer-events-none" />
+      <div className="absolute top-1/4 left-1/3 w-56 h-56 bg-fuchsia-200/40 blur-3xl rounded-full pointer-events-none" />
 
       {/* Header */}
       <div className="flex items-center gap-3 mb-5">
@@ -98,8 +98,8 @@ export default function CompareWidget() {
           <ArrowLeftRight className="w-4 h-4 text-white" />
         </div>
         <div>
-          <h2 className="text-xl md:text-2xl font-black text-white">{L.title}</h2>
-          <p className="text-gray-400 text-xs md:text-sm">{L.sub}</p>
+          <h2 className="text-xl md:text-2xl font-black text-gray-900">{L.title}</h2>
+          <p className="text-gray-600 text-xs md:text-sm">{L.sub}</p>
         </div>
       </div>
 
@@ -111,7 +111,7 @@ export default function CompareWidget() {
           <select
             value={category}
             onChange={e => handleCategoryChange(e.target.value)}
-            className="w-full bg-sky-500/25 hover:bg-sky-500/40 border-2 border-sky-400/80 hover:border-sky-300 rounded-2xl pl-4 pr-10 py-3.5 text-white text-sm font-bold focus:outline-none focus:border-sky-300 focus:ring-2 focus:ring-sky-400/60 transition-all cursor-pointer appearance-none"
+            className="w-full bg-sky-500/25 hover:bg-sky-500/40 border-2 border-sky-400/80 hover:border-sky-300 rounded-2xl pl-4 pr-10 py-3.5 text-gray-900 text-sm font-bold focus:outline-none focus:border-sky-300 focus:ring-2 focus:ring-sky-400/60 transition-all cursor-pointer appearance-none"
           >
             <option value="" className="bg-[#0A0A0F]">{L.selectCat}</option>
             {CATEGORIES.map(cat => (
@@ -120,7 +120,7 @@ export default function CompareWidget() {
               </option>
             ))}
           </select>
-          <ChevronDown className="w-4 h-4 text-sky-200 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+          <ChevronDown className="w-4 h-4 text-sky-600 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
         </div>
 
         {/* Tool 1 */}
@@ -129,14 +129,14 @@ export default function CompareWidget() {
             value={tool1}
             onChange={e => setTool1(e.target.value)}
             disabled={!category}
-            className="w-full bg-orange-500/25 hover:bg-orange-500/40 border-2 border-orange-400/80 hover:border-orange-300 rounded-2xl pl-4 pr-10 py-3.5 text-white text-sm font-bold focus:outline-none focus:border-orange-300 focus:ring-2 focus:ring-orange-400/60 transition-all cursor-pointer appearance-none disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-white/[0.04] disabled:border-white/15"
+            className="w-full bg-orange-500/25 hover:bg-orange-500/40 border-2 border-orange-400/80 hover:border-orange-300 rounded-2xl pl-4 pr-10 py-3.5 text-gray-900 text-sm font-bold focus:outline-none focus:border-orange-300 focus:ring-2 focus:ring-orange-400/60 transition-all cursor-pointer appearance-none disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-white/[0.04] disabled:border-white/15"
           >
             <option value="" className="bg-[#0A0A0F]">{category ? L.tool1 : L.pickCat}</option>
             {categoryTools.map(t => (
               <option key={t.id} value={t.id} disabled={t.id === tool2} className="bg-[#0A0A0F]">{t.name}</option>
             ))}
           </select>
-          <ChevronDown className="w-4 h-4 text-orange-200 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+          <ChevronDown className="w-4 h-4 text-orange-600 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
         </div>
 
         {/* Compare button (center, replaces VS) */}
@@ -161,30 +161,30 @@ export default function CompareWidget() {
             value={tool2}
             onChange={e => setTool2(e.target.value)}
             disabled={!category}
-            className="w-full bg-yellow-500/25 hover:bg-yellow-500/40 border-2 border-yellow-400/80 hover:border-yellow-300 rounded-2xl pl-4 pr-10 py-3.5 text-white text-sm font-bold focus:outline-none focus:border-yellow-300 focus:ring-2 focus:ring-yellow-400/60 transition-all cursor-pointer appearance-none disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-white/[0.04] disabled:border-white/15"
+            className="w-full bg-yellow-500/25 hover:bg-yellow-500/40 border-2 border-yellow-400/80 hover:border-yellow-300 rounded-2xl pl-4 pr-10 py-3.5 text-gray-900 text-sm font-bold focus:outline-none focus:border-yellow-300 focus:ring-2 focus:ring-yellow-400/60 transition-all cursor-pointer appearance-none disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-white/[0.04] disabled:border-white/15"
           >
             <option value="" className="bg-[#0A0A0F]">{category ? L.tool2 : L.pickCat}</option>
             {categoryTools.map(t => (
               <option key={t.id} value={t.id} disabled={t.id === tool1} className="bg-[#0A0A0F]">{t.name}</option>
             ))}
           </select>
-          <ChevronDown className="w-4 h-4 text-yellow-200 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+          <ChevronDown className="w-4 h-4 text-yellow-600 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
         </div>
       </div>
 
       {/* Info */}
       {category && (
-        <p className="text-xs text-violet-400 font-semibold mt-3">
+        <p className="text-xs text-violet-600 font-semibold mt-3">
           {categoryTools.length} {locale === 'fr' ? 'outils disponibles' : locale === 'es' ? 'herramientas disponibles' : locale === 'ar' ? 'أداة متاحة' : 'tools available'}
         </p>
       )}
 
       {/* Quick compare links */}
       <div className="flex flex-wrap items-center gap-2 mt-4">
-        <span className="text-xs text-gray-500 font-medium">{L.popular}</span>
+        <span className="text-xs text-gray-600 font-medium">{L.popular}</span>
         {QUICK_COMPARES.map(({ label, slug }) => (
           <button key={slug} onClick={() => handleQuick(slug)}
-            className="text-xs text-gray-400 hover:text-white border border-white/[0.06] hover:border-violet-500/40 hover:bg-violet-500/10 rounded-full px-3 py-1 transition-all">
+            className="text-xs font-semibold text-gray-700 hover:text-white border border-gray-200 hover:border-violet-500 hover:bg-violet-500 rounded-full px-3 py-1 transition-all">
             {label}
           </button>
         ))}

@@ -28,9 +28,9 @@ export default function GlassCard({
       className={twMerge(
         clsx(
           'relative overflow-hidden rounded-2xl border border-gray-200',
-          'bg-white shadow-sm',
+          'bg-white shadow-md shadow-gray-200/70',
           'transition-shadow duration-300',
-          hoverGlow && 'hover:shadow-lg hover:shadow-violet-200/60 hover:border-violet-300',
+          hoverGlow && 'hover:shadow-xl hover:shadow-violet-300/50 hover:border-violet-400',
           onClick && 'cursor-pointer',
           className
         )
