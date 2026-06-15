@@ -120,9 +120,10 @@ export default function ComparePage() {
       </div>
 
       {/* Comparator — single row: [Category] [Tool1] VS [Tool2] [Button] */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-violet-600/15 via-white/[0.04] to-cyan-500/10 border border-white/20 rounded-2xl p-6 mb-12 shadow-xl shadow-violet-950/20">
-        <div className="absolute -top-16 -right-10 w-60 h-60 bg-violet-600/20 blur-3xl rounded-full pointer-events-none" />
-        <div className="absolute -bottom-16 -left-10 w-60 h-60 bg-cyan-500/10 blur-3xl rounded-full pointer-events-none" />
+      <div className="relative overflow-hidden bg-gradient-to-br from-violet-600/25 via-fuchsia-600/10 to-cyan-500/20 border border-violet-400/30 rounded-2xl p-6 mb-12 shadow-2xl shadow-violet-900/30">
+        <div className="absolute -top-20 -right-12 w-72 h-72 bg-fuchsia-600/30 blur-3xl rounded-full pointer-events-none" />
+        <div className="absolute -bottom-20 -left-12 w-72 h-72 bg-cyan-500/25 blur-3xl rounded-full pointer-events-none" />
+        <div className="absolute top-1/4 left-1/3 w-56 h-56 bg-violet-600/20 blur-3xl rounded-full pointer-events-none" />
 
         {/* Labels row */}
         <div className="grid grid-cols-1 md:grid-cols-7 gap-3 mb-1">
@@ -146,7 +147,7 @@ export default function ComparePage() {
             <select
               value={category}
               onChange={e => handleCategoryChange(e.target.value)}
-              className="w-full bg-white/[0.08] hover:bg-white/[0.13] border-2 border-white/25 hover:border-violet-500/40 rounded-2xl pl-4 pr-10 py-3.5 text-white text-sm font-semibold focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/30 appearance-none cursor-pointer transition-all"
+              className="w-full bg-violet-500/[0.14] hover:bg-violet-500/25 border-2 border-violet-400/40 hover:border-violet-400/80 rounded-2xl pl-4 pr-10 py-3.5 text-white text-sm font-semibold focus:outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-400/50 appearance-none cursor-pointer transition-all"
             >
               <option value="">{t.selectCat}</option>
               {CATEGORIES.map(cat => (
@@ -164,7 +165,7 @@ export default function ComparePage() {
               value={tool1}
               onChange={e => setTool1(e.target.value)}
               disabled={!category}
-              className="w-full bg-white/[0.08] hover:bg-white/[0.13] border-2 border-white/25 hover:border-violet-500/40 rounded-2xl pl-4 pr-10 py-3.5 text-white text-sm font-semibold focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/30 appearance-none cursor-pointer transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white/[0.05]"
+              className="w-full bg-indigo-500/[0.14] hover:bg-indigo-500/25 border-2 border-indigo-400/40 hover:border-indigo-400/80 rounded-2xl pl-4 pr-10 py-3.5 text-white text-sm font-semibold focus:outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400/50 appearance-none cursor-pointer transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-white/[0.04] disabled:border-white/15"
             >
               <option value="">{category ? t.tool1 : '← ' + t.step1}</option>
               {categoryTools.map(tool => (
@@ -199,7 +200,7 @@ export default function ComparePage() {
               value={tool2}
               onChange={e => setTool2(e.target.value)}
               disabled={!category}
-              className="w-full bg-white/[0.08] hover:bg-white/[0.13] border-2 border-white/25 hover:border-orange-500/40 rounded-2xl pl-4 pr-10 py-3.5 text-white text-sm font-semibold focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30 appearance-none cursor-pointer transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white/[0.05]"
+              className="w-full bg-amber-500/[0.14] hover:bg-amber-500/25 border-2 border-amber-400/40 hover:border-amber-400/80 rounded-2xl pl-4 pr-10 py-3.5 text-white text-sm font-semibold focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-400/50 appearance-none cursor-pointer transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-white/[0.04] disabled:border-white/15"
             >
               <option value="">{category ? t.tool2 : '← ' + t.step1}</option>
               {categoryTools.map(tool => (
