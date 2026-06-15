@@ -165,8 +165,8 @@ export default async function ComparePage({ params }: Props) {
   const faqTitle = locale === 'fr' ? 'Questions fréquentes' : locale === 'es' ? 'Preguntas frecuentes' : locale === 'ar' ? 'الأسئلة الشائعة' : 'Frequently Asked Questions';
 
   const yesNo = (val: boolean | undefined) => val
-    ? <span className="text-green-400 font-bold">✅ {locale === 'fr' ? 'Oui' : locale === 'es' ? 'Sí' : locale === 'ar' ? 'نعم' : 'Yes'}</span>
-    : <span className="text-red-400 font-semibold">❌ {locale === 'fr' ? 'Non' : locale === 'es' ? 'No' : locale === 'ar' ? 'لا' : 'No'}</span>;
+    ? <span className="text-green-700 font-bold">✅ {locale === 'fr' ? 'Oui' : locale === 'es' ? 'Sí' : locale === 'ar' ? 'نعم' : 'Yes'}</span>
+    : <span className="text-red-700 font-semibold">❌ {locale === 'fr' ? 'Non' : locale === 'es' ? 'No' : locale === 'ar' ? 'لا' : 'No'}</span>;
 
   const CL = {
     popularity: locale === 'fr' ? 'Popularité' : locale === 'es' ? 'Popularidad' : locale === 'ar' ? 'الشعبية' : 'Popularity',
@@ -187,35 +187,35 @@ export default async function ComparePage({ params }: Props) {
   const rows = [
     {
       label: L.rating,
-      v1: <div className="flex items-center gap-1"><Star className="w-4 h-4 fill-amber-400 text-amber-400" /><span className="font-black text-white">{t1.rating.toFixed(1)}/5</span></div>,
-      v2: <div className="flex items-center gap-1"><Star className="w-4 h-4 fill-amber-400 text-amber-400" /><span className="font-black text-white">{t2.rating.toFixed(1)}/5</span></div>,
+      v1: <div className="flex items-center gap-1"><Star className="w-4 h-4 fill-amber-400 text-amber-700" /><span className="font-black text-gray-900">{t1.rating.toFixed(1)}/5</span></div>,
+      v2: <div className="flex items-center gap-1"><Star className="w-4 h-4 fill-amber-400 text-amber-700" /><span className="font-black text-gray-900">{t2.rating.toFixed(1)}/5</span></div>,
       winner1: t1.rating >= t2.rating, winner2: t2.rating >= t1.rating,
     },
     {
       label: L.pricing,
-      v1: <span className={t1.pricing === 'Free' ? 'text-green-400 font-bold' : t1.pricing === 'Freemium' ? 'text-amber-400 font-semibold' : 'text-gray-300'}>{t1.pricingLocalized[locale]}</span>,
-      v2: <span className={t2.pricing === 'Free' ? 'text-green-400 font-bold' : t2.pricing === 'Freemium' ? 'text-amber-400 font-semibold' : 'text-gray-300'}>{t2.pricingLocalized[locale]}</span>,
+      v1: <span className={t1.pricing === 'Free' ? 'text-green-700 font-bold' : t1.pricing === 'Freemium' ? 'text-amber-700 font-semibold' : 'text-gray-700'}>{t1.pricingLocalized[locale]}</span>,
+      v2: <span className={t2.pricing === 'Free' ? 'text-green-700 font-bold' : t2.pricing === 'Freemium' ? 'text-amber-700 font-semibold' : 'text-gray-700'}>{t2.pricingLocalized[locale]}</span>,
       winner1: t1.pricing === 'Free' || (t1.pricing === 'Freemium' && t2.pricing === 'Paid'),
       winner2: t2.pricing === 'Free' || (t2.pricing === 'Freemium' && t1.pricing === 'Paid'),
     },
     {
       label: L.category,
-      v1: <span className="capitalize text-gray-300">{tlCategory(t1.category, locale)}</span>,
-      v2: <span className="capitalize text-gray-300">{tlCategory(t2.category, locale)}</span>,
+      v1: <span className="capitalize text-gray-700">{tlCategory(t1.category, locale)}</span>,
+      v2: <span className="capitalize text-gray-700">{tlCategory(t2.category, locale)}</span>,
       winner1: false, winner2: false,
     },
     {
       label: CL.popularity,
-      v1: <span className="text-gray-300">{popularityLabel(t1.views)}</span>,
-      v2: <span className="text-gray-300">{popularityLabel(t2.views)}</span>,
+      v1: <span className="text-gray-700">{popularityLabel(t1.views)}</span>,
+      v2: <span className="text-gray-700">{popularityLabel(t2.views)}</span>,
       winner1: t1.views >= t2.views, winner2: t2.views >= t1.views,
     },
     {
       label: CL.value,
-      v1: <span className={pricingScore(t1.pricing) === 3 ? 'text-green-400 font-bold' : pricingScore(t1.pricing) === 2 ? 'text-amber-400' : 'text-gray-300'}>
+      v1: <span className={pricingScore(t1.pricing) === 3 ? 'text-green-700 font-bold' : pricingScore(t1.pricing) === 2 ? 'text-amber-700' : 'text-gray-700'}>
         {pricingScore(t1.pricing) === 3 ? `⭐⭐⭐ ${CL.excellent}` : pricingScore(t1.pricing) === 2 ? `⭐⭐ ${CL.good}` : `⭐ ${CL.paidOnly}`}
       </span>,
-      v2: <span className={pricingScore(t2.pricing) === 3 ? 'text-green-400 font-bold' : pricingScore(t2.pricing) === 2 ? 'text-amber-400' : 'text-gray-300'}>
+      v2: <span className={pricingScore(t2.pricing) === 3 ? 'text-green-700 font-bold' : pricingScore(t2.pricing) === 2 ? 'text-amber-700' : 'text-gray-700'}>
         {pricingScore(t2.pricing) === 3 ? `⭐⭐⭐ ${CL.excellent}` : pricingScore(t2.pricing) === 2 ? `⭐⭐ ${CL.good}` : `⭐ ${CL.paidOnly}`}
       </span>,
       winner1: pricingScore(t1.pricing) >= pricingScore(t2.pricing),
@@ -223,26 +223,26 @@ export default async function ComparePage({ params }: Props) {
     },
     ...(t1.releaseDate || t2.releaseDate ? [{
       label: `📅 ${CL.releaseDate}`,
-      v1: <span className="text-gray-300">{t1.releaseDate || '—'}</span>,
-      v2: <span className="text-gray-300">{t2.releaseDate || '—'}</span>,
+      v1: <span className="text-gray-700">{t1.releaseDate || '—'}</span>,
+      v2: <span className="text-gray-700">{t2.releaseDate || '—'}</span>,
       winner1: false, winner2: false,
     }] : []),
     ...(t1.lastUpdate || t2.lastUpdate ? [{
       label: `🔄 ${CL.lastUpdate}`,
-      v1: <span className="text-green-400 font-semibold">{t1.lastUpdate || '—'}</span>,
-      v2: <span className="text-green-400 font-semibold">{t2.lastUpdate || '—'}</span>,
+      v1: <span className="text-green-700 font-semibold">{t1.lastUpdate || '—'}</span>,
+      v2: <span className="text-green-700 font-semibold">{t2.lastUpdate || '—'}</span>,
       winner1: false, winner2: false,
     }] : []),
     ...(t1.company || t2.company ? [{
       label: CL.company,
-      v1: <span className="text-gray-300">{t1.company || '—'}</span>,
-      v2: <span className="text-gray-300">{t2.company || '—'}</span>,
+      v1: <span className="text-gray-700">{t1.company || '—'}</span>,
+      v2: <span className="text-gray-700">{t2.company || '—'}</span>,
       winner1: false, winner2: false,
     }] : []),
     ...(t1.founded || t2.founded ? [{
       label: CL.founded,
-      v1: <span className="text-gray-300">{t1.founded || '—'}</span>,
-      v2: <span className="text-gray-300">{t2.founded || '—'}</span>,
+      v1: <span className="text-gray-700">{t1.founded || '—'}</span>,
+      v2: <span className="text-gray-700">{t2.founded || '—'}</span>,
       winner1: false, winner2: false,
     }] : []),
     ...(t1.hasAPI !== undefined || t2.hasAPI !== undefined ? [{
@@ -266,19 +266,19 @@ export default async function ComparePage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Back */}
-      <a href={`/${locale}`} className="text-sm text-gray-500 hover:text-white transition mb-8 inline-block">{L.back}</a>
+      <a href={`/${locale}`} className="text-sm text-gray-500 hover:text-gray-900 transition mb-8 inline-block">{L.back}</a>
 
       {/* Header */}
       <div className="text-center mb-12">
         <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#7C3AED] bg-[#7C3AED]/10 border border-[#7C3AED]/20 px-4 py-1.5 rounded-full mb-4">
           {L.compare}
         </span>
-        <h1 className="text-4xl md:text-5xl font-black text-white mb-4">
+        <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
           <span className="bg-gradient-to-r from-violet-400 to-purple-300 bg-clip-text text-transparent">{t1.name}</span>
           {' '}vs{' '}
           <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">{t2.name}</span>
         </h1>
-        <p className="text-gray-400 max-w-2xl mx-auto text-base">
+        <p className="text-gray-600 max-w-2xl mx-auto text-base">
           {t1.description[locale]}
         </p>
       </div>
@@ -286,18 +286,18 @@ export default async function ComparePage({ params }: Props) {
       {/* Winner banner */}
       {winner && (
         <div className="mb-10 flex items-center justify-center gap-3 bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/30 rounded-2xl px-6 py-4">
-          <Zap className="w-5 h-5 text-amber-400" />
-          <span className="text-white font-black text-lg">{L.winner}: <span className="text-amber-400">{winner.name}</span></span>
-          <span className="text-amber-400 text-sm font-semibold">(⭐ {winner.rating.toFixed(1)})</span>
+          <Zap className="w-5 h-5 text-amber-700" />
+          <span className="text-gray-900 font-black text-lg">{L.winner}: <span className="text-amber-700">{winner.name}</span></span>
+          <span className="text-amber-700 text-sm font-semibold">(⭐ {winner.rating.toFixed(1)})</span>
         </div>
       )}
 
       {/* Expert verdict */}
       <div className="mb-10 rounded-2xl border border-violet-500/20 bg-violet-500/[0.06] p-6">
-        <h2 className="text-sm font-bold text-violet-300 uppercase tracking-wider mb-2">
+        <h2 className="text-sm font-bold text-violet-700 uppercase tracking-wider mb-2">
           🧠 {locale === 'fr' ? "Avis d'expert" : locale === 'es' ? 'Veredicto experto' : locale === 'ar' ? 'رأي الخبراء' : 'Expert verdict'}
         </h2>
-        <p className="text-gray-200 leading-relaxed">{getExpertVerdict(t1, t2)[locale]}</p>
+        <p className="text-gray-800 leading-relaxed">{getExpertVerdict(t1, t2)[locale]}</p>
       </div>
 
       {/* Side-by-side cards */}
@@ -305,19 +305,19 @@ export default async function ComparePage({ params }: Props) {
         {[{ tool: t1, url: url1 }, { tool: t2, url: url2 }].map(({ tool, url }, i) => (
           <div key={tool.id} className={`rounded-2xl border p-6 flex flex-col gap-4 ${i === 0 ? 'border-violet-500/30 bg-violet-950/10' : 'border-orange-500/30 bg-orange-950/10'}`}>
             <div>
-              <h2 className={`text-xl font-black mb-1 ${i === 0 ? 'text-violet-300' : 'text-orange-300'}`}>{tool.name}</h2>
-              <p className="text-gray-400 text-xs leading-relaxed line-clamp-3">{tool.description[locale]}</p>
+              <h2 className={`text-xl font-black mb-1 ${i === 0 ? 'text-violet-700' : 'text-orange-700'}`}>{tool.name}</h2>
+              <p className="text-gray-600 text-xs leading-relaxed line-clamp-3">{tool.description[locale]}</p>
             </div>
             <a href={url} target="_blank" rel="noopener noreferrer"
               className={`flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-bold transition-all ${i === 0 ? 'bg-violet-600 hover:bg-violet-500 text-white' : 'bg-orange-500 hover:bg-orange-400 text-white'}`}>
               {L.visit} {tool.name} <ArrowUpRight className="w-4 h-4" />
             </a>
             <div className="flex items-center justify-center gap-3 text-xs">
-              <a href={`/${locale}/tools/${tool.id}`} className="text-gray-400 hover:text-white transition">
+              <a href={`/${locale}/tools/${tool.id}`} className="text-gray-600 hover:text-gray-900 transition">
                 {locale === 'fr' ? 'Voir la fiche' : locale === 'es' ? 'Ver detalles' : locale === 'ar' ? 'عرض التفاصيل' : 'View details'}
               </a>
               <span className="text-gray-700">·</span>
-              <a href={`/${locale}/alternatives/${tool.id}-alternatives`} className="text-gray-400 hover:text-white transition">
+              <a href={`/${locale}/alternatives/${tool.id}-alternatives`} className="text-gray-600 hover:text-gray-900 transition">
                 🔁 {locale === 'fr' ? 'Alternatives' : locale === 'es' ? 'Alternativas' : locale === 'ar' ? 'بدائل' : 'Alternatives'}
               </a>
             </div>
@@ -326,22 +326,22 @@ export default async function ComparePage({ params }: Props) {
       </div>
 
       {/* Comparison table */}
-      <div className="rounded-2xl border border-white/[0.08] overflow-hidden mb-10">
-        <div className="grid grid-cols-3 bg-white/[0.04] px-6 py-3 text-xs font-bold uppercase tracking-wider text-gray-500 border-b border-white/[0.06]">
+      <div className="rounded-2xl border border-gray-200 overflow-hidden mb-10">
+        <div className="grid grid-cols-3 bg-gray-50 px-6 py-3 text-xs font-bold uppercase tracking-wider text-gray-500 border-b border-gray-200">
           <span>{L.criteria}</span>
-          <span className="text-violet-400">{t1.name}</span>
-          <span className="text-orange-400">{t2.name}</span>
+          <span className="text-violet-700">{t1.name}</span>
+          <span className="text-orange-700">{t2.name}</span>
         </div>
         {rows.map((row, i) => (
-          <div key={i} className={`grid grid-cols-3 px-6 py-4 items-center ${i % 2 === 0 ? 'bg-white/[0.01]' : ''} border-b border-white/[0.04] last:border-0`}>
-            <span className="text-sm font-semibold text-gray-400">{row.label}</span>
+          <div key={i} className={`grid grid-cols-3 px-6 py-4 items-center ${i % 2 === 0 ? 'bg-gray-50' : ''} border-b border-gray-200 last:border-0`}>
+            <span className="text-sm font-semibold text-gray-600">{row.label}</span>
             <div className="flex items-center gap-2">
               {row.v1}
-              {row.winner1 && <Check className="w-4 h-4 text-green-400 ml-1" />}
+              {row.winner1 && <Check className="w-4 h-4 text-green-700 ml-1" />}
             </div>
             <div className="flex items-center gap-2">
               {row.v2}
-              {row.winner2 && <Check className="w-4 h-4 text-green-400 ml-1" />}
+              {row.winner2 && <Check className="w-4 h-4 text-green-700 ml-1" />}
             </div>
           </div>
         ))}
@@ -353,18 +353,18 @@ export default async function ComparePage({ params }: Props) {
           {[{ tool: t1, color: 'violet' }, { tool: t2, color: 'orange' }].map(({ tool, color }, i) => (
             tool.pros && (
               <div key={tool.id} className={`rounded-2xl border p-5 ${i === 0 ? 'border-violet-500/20 bg-violet-950/10' : 'border-orange-500/20 bg-orange-950/10'}`}>
-                <h3 className={`font-bold text-sm mb-3 ${i === 0 ? 'text-violet-300' : 'text-orange-300'}`}>{tool.name}</h3>
+                <h3 className={`font-bold text-sm mb-3 ${i === 0 ? 'text-violet-700' : 'text-orange-700'}`}>{tool.name}</h3>
                 <div className="mb-3">
-                  <p className="text-xs font-bold text-green-400 uppercase tracking-wider mb-2">✅ {L.pros}</p>
+                  <p className="text-xs font-bold text-green-700 uppercase tracking-wider mb-2">✅ {L.pros}</p>
                   <ul className="space-y-1">
-                    {tool.pros?.map((p, j) => <li key={j} className="text-xs text-gray-300 flex items-start gap-1.5"><span className="text-green-400 mt-0.5">+</span>{tl(p, locale)}</li>)}
+                    {tool.pros?.map((p, j) => <li key={j} className="text-xs text-gray-700 flex items-start gap-1.5"><span className="text-green-700 mt-0.5">+</span>{tl(p, locale)}</li>)}
                   </ul>
                 </div>
                 {tool.cons && (
                   <div>
-                    <p className="text-xs font-bold text-red-400 uppercase tracking-wider mb-2">❌ {L.cons}</p>
+                    <p className="text-xs font-bold text-red-700 uppercase tracking-wider mb-2">❌ {L.cons}</p>
                     <ul className="space-y-1">
-                      {tool.cons?.map((c, j) => <li key={j} className="text-xs text-gray-300 flex items-start gap-1.5"><span className="text-red-400 mt-0.5">−</span>{tl(c, locale)}</li>)}
+                      {tool.cons?.map((c, j) => <li key={j} className="text-xs text-gray-700 flex items-start gap-1.5"><span className="text-red-700 mt-0.5">−</span>{tl(c, locale)}</li>)}
                     </ul>
                   </div>
                 )}
@@ -379,11 +379,11 @@ export default async function ComparePage({ params }: Props) {
         <div className="grid grid-cols-2 gap-4 mb-10">
           {[{ tool: t1 }, { tool: t2 }].map(({ tool }, i) => (
             tool.useCases && (
-              <div key={tool.id} className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5">
-                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">🎯 {CL.bestFor} — {tool.name}</p>
+              <div key={tool.id} className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
+                <p className="text-xs font-bold text-gray-600 uppercase tracking-wider mb-3">🎯 {CL.bestFor} — {tool.name}</p>
                 <div className="flex flex-wrap gap-2">
                   {tool.useCases.map((u, j) => (
-                    <span key={j} className="text-xs bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-full">{tl(u, locale)}</span>
+                    <span key={j} className="text-xs bg-gray-50 border border-gray-200 text-gray-700 px-2.5 py-1 rounded-full">{tl(u, locale)}</span>
                   ))}
                 </div>
               </div>
@@ -397,11 +397,11 @@ export default async function ComparePage({ params }: Props) {
         <div className="grid grid-cols-2 gap-4 mb-10">
           {[{ tool: t1, color: 'violet' }, { tool: t2, color: 'orange' }].map(({ tool }, i) => (
             tool.tags && (
-              <div key={tool.id} className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5">
-                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">🏷️ {CL.tags} — {tool.name}</p>
+              <div key={tool.id} className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
+                <p className="text-xs font-bold text-gray-600 uppercase tracking-wider mb-3">🏷️ {CL.tags} — {tool.name}</p>
                 <div className="flex flex-wrap gap-2">
                   {tool.tags.map((tag, j) => (
-                    <span key={j} className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${i === 0 ? 'text-violet-300 bg-violet-500/10 border-violet-500/20' : 'text-orange-300 bg-orange-500/10 border-orange-500/20'}`}>{tl(tag, locale)}</span>
+                    <span key={j} className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${i === 0 ? 'text-violet-700 bg-violet-500/10 border-violet-500/20' : 'text-orange-700 bg-orange-500/10 border-orange-500/20'}`}>{tl(tag, locale)}</span>
                   ))}
                 </div>
               </div>
@@ -411,11 +411,11 @@ export default async function ComparePage({ params }: Props) {
       )}
 
       {/* Verdict — public summary */}
-      <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 mb-6">
-        <h2 className="text-lg font-black text-white mb-3 flex items-center gap-2">
-          <Zap className="w-5 h-5 text-violet-400" /> {L.verdict}
+      <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 mb-6">
+        <h2 className="text-lg font-black text-gray-900 mb-3 flex items-center gap-2">
+          <Zap className="w-5 h-5 text-violet-700" /> {L.verdict}
         </h2>
-        <p className="text-gray-300 leading-relaxed text-sm">
+        <p className="text-gray-700 leading-relaxed text-sm">
           {winner
             ? L.winnerText(winner.name, winner.rating.toFixed(1))
             : L.tieText(t1.name, t2.name)}
@@ -426,22 +426,22 @@ export default async function ComparePage({ params }: Props) {
       {(t1.verdict || t2.verdict) && (
         <div className="rounded-2xl border border-violet-500/30 bg-violet-950/10 p-6 mb-10">
           <div className="flex items-center gap-2 mb-4">
-            <Star className="w-5 h-5 text-amber-400 fill-amber-400" />
-            <h2 className="text-lg font-black text-white">
+            <Star className="w-5 h-5 text-amber-700 fill-amber-400" />
+            <h2 className="text-lg font-black text-gray-900">
               {locale === 'fr' ? 'Notre avis sur chaque outil' : locale === 'es' ? 'Nuestra opinión de cada herramienta' : locale === 'ar' ? 'رأينا في كل أداة' : 'Expert take on each tool'}
             </h2>
           </div>
           <div className="space-y-4">
             {t1.verdict && (
               <div className="bg-violet-950/30 rounded-xl p-4 border border-violet-500/20">
-                <p className="text-xs font-bold text-violet-300 mb-2">📌 {t1.name}</p>
-                <p className="text-gray-300 text-sm leading-relaxed">{tlVerdict(t1.id, t1.verdict, locale)}</p>
+                <p className="text-xs font-bold text-violet-700 mb-2">📌 {t1.name}</p>
+                <p className="text-gray-700 text-sm leading-relaxed">{tlVerdict(t1.id, t1.verdict, locale)}</p>
               </div>
             )}
             {t2.verdict && (
               <div className="bg-orange-950/30 rounded-xl p-4 border border-orange-500/20">
-                <p className="text-xs font-bold text-orange-300 mb-2">📌 {t2.name}</p>
-                <p className="text-gray-300 text-sm leading-relaxed">{tlVerdict(t2.id, t2.verdict, locale)}</p>
+                <p className="text-xs font-bold text-orange-700 mb-2">📌 {t2.name}</p>
+                <p className="text-gray-700 text-sm leading-relaxed">{tlVerdict(t2.id, t2.verdict, locale)}</p>
               </div>
             )}
           </div>
@@ -449,13 +449,13 @@ export default async function ComparePage({ params }: Props) {
       )}
 
       {/* FAQ — AEO */}
-      <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 mb-10">
-        <h2 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">❓ {faqTitle}</h2>
+      <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 mb-10">
+        <h2 className="text-sm font-bold text-gray-600 uppercase tracking-wider mb-4">❓ {faqTitle}</h2>
         <div className="space-y-4">
           {faq.map((item, idx) => (
-            <div key={idx} className="border-b border-white/[0.06] pb-4 last:border-b-0 last:pb-0">
-              <h3 className="text-white font-semibold mb-1.5">{item.question[locale] || item.question.en}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{item.answer[locale] || item.answer.en}</p>
+            <div key={idx} className="border-b border-gray-200 pb-4 last:border-b-0 last:pb-0">
+              <h3 className="text-gray-900 font-semibold mb-1.5">{item.question[locale] || item.question.en}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{item.answer[locale] || item.answer.en}</p>
             </div>
           ))}
         </div>
@@ -470,14 +470,14 @@ export default async function ComparePage({ params }: Props) {
         if (sameCategory.length === 0) return null;
         return (
           <div className="mb-10">
-            <h2 className="text-lg font-black text-white mb-4">{L.moreComparisons}</h2>
+            <h2 className="text-lg font-black text-gray-900 mb-4">{L.moreComparisons}</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {sameCategory.map(tool => (
                 <a key={tool.id}
                   href={`/${locale}/compare/${t1.id}-vs-${tool.id}`}
-                  className="flex items-center gap-2 bg-white/5 hover:bg-violet-600/10 border border-white/10 hover:border-violet-500/30 rounded-xl px-4 py-3 transition group">
-                  <span className="text-sm text-white font-semibold truncate flex-1">{t1.name} vs {tool.name}</span>
-                  <ArrowUpRight className="w-3 h-3 text-gray-600 group-hover:text-violet-400 shrink-0" />
+                  className="flex items-center gap-2 bg-gray-50 hover:bg-violet-600/10 border border-gray-200 hover:border-violet-500/30 rounded-xl px-4 py-3 transition group">
+                  <span className="text-sm text-gray-900 font-semibold truncate flex-1">{t1.name} vs {tool.name}</span>
+                  <ArrowUpRight className="w-3 h-3 text-gray-600 group-hover:text-violet-700 shrink-0" />
                 </a>
               ))}
             </div>
@@ -488,7 +488,7 @@ export default async function ComparePage({ params }: Props) {
       {/* Back to compare */}
       <div className="text-center">
         <a href={`/${locale}/compare`}
-          className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white border border-white/10 hover:border-white/20 px-5 py-2.5 rounded-xl transition">
+          className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 border border-gray-200 hover:border-gray-200 px-5 py-2.5 rounded-xl transition">
           {L.back} {L.moreComparisons}
         </a>
       </div>

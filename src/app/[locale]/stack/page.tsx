@@ -151,16 +151,16 @@ export default function StackPage() {
     <div className="max-w-7xl mx-auto px-4 py-12">
       {/* Header */}
       <div className="text-center mb-10">
-        <span className="inline-flex items-center gap-2 bg-violet-600/20 text-violet-400 text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
+        <span className="inline-flex items-center gap-2 bg-violet-600/20 text-violet-700 text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
           <Zap className="w-3 h-3" /> {t.badge}
         </span>
-        <h1 className="text-4xl md:text-5xl font-black text-white mb-3">
+        <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-3">
           {t.title}{' '}
           <span className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
             {t.titleHighlight}
           </span>
         </h1>
-        <p className="text-gray-400 max-w-xl mx-auto">{t.subtitle}</p>
+        <p className="text-gray-600 max-w-xl mx-auto">{t.subtitle}</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -171,7 +171,7 @@ export default function StackPage() {
           <input
             type="text" value={search} onChange={e => setSearch(e.target.value)}
             placeholder={t.searchPlaceholder}
-            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-violet-500 mb-4"
+            className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-500 text-sm focus:outline-none focus:border-violet-500 mb-4"
           />
 
           {/* Category filters */}
@@ -181,7 +181,7 @@ export default function StackPage() {
                 className={`text-xs font-semibold px-3 py-1.5 rounded-full border transition ${
                   category === cat.id
                     ? 'bg-violet-600 border-violet-500 text-white'
-                    : 'bg-white/5 border-white/10 text-gray-400 hover:text-white'
+                    : 'bg-gray-50 border-gray-200 text-gray-600 hover:text-gray-900'
                 }`}>
                 {cat.emoji} {cat[locale] || cat.en}
               </button>
@@ -197,17 +197,17 @@ export default function StackPage() {
                   className={`flex items-center justify-between gap-3 p-3 rounded-xl border transition ${
                     isSelected
                       ? 'bg-violet-600/10 border-violet-500/40'
-                      : 'bg-white/5 border-white/10 hover:border-white/20'
+                      : 'bg-gray-50 border-gray-200 hover:border-gray-200'
                   }`}>
                   <div className="min-w-0">
-                    <p className="text-white text-sm font-semibold truncate">{tool.name}</p>
+                    <p className="text-gray-900 text-sm font-semibold truncate">{tool.name}</p>
                     <p className="text-gray-500 text-xs truncate">{tool.pricingLocalized[locale]}</p>
                   </div>
                   <button onClick={() => toggle(tool.id)}
                     className={`shrink-0 w-8 h-8 rounded-lg flex items-center justify-center transition ${
                       isSelected
                         ? 'bg-violet-600 text-white'
-                        : 'bg-white/5 text-gray-400 hover:bg-violet-600/30 hover:text-white'
+                        : 'bg-gray-50 text-gray-600 hover:bg-violet-600/30 hover:text-white'
                     }`}>
                     {isSelected ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                   </button>
@@ -219,12 +219,12 @@ export default function StackPage() {
 
         {/* Right — Stack panel */}
         <div className="lg:col-span-1">
-          <div className="sticky top-24 bg-white/5 border border-white/10 rounded-2xl p-5">
+          <div className="sticky top-24 bg-gray-50 border border-gray-200 rounded-2xl p-5">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-white font-bold text-lg">{t.yourStack}</h2>
+              <h2 className="text-gray-900 font-bold text-lg">{t.yourStack}</h2>
               {selectedIds.length > 0 && (
                 <button onClick={() => setSelectedIds([])}
-                  className="text-xs text-gray-500 hover:text-red-400 transition">
+                  className="text-xs text-gray-500 hover:text-red-700 transition">
                   {t.clear}
                 </button>
               )}
@@ -233,20 +233,20 @@ export default function StackPage() {
             {stackTools.length === 0 ? (
               <div className="text-center py-10">
                 <p className="text-4xl mb-3">🧰</p>
-                <p className="text-gray-400 text-sm">{t.emptyStack}</p>
+                <p className="text-gray-600 text-sm">{t.emptyStack}</p>
                 <p className="text-gray-600 text-xs mt-1">{t.emptyStackSub}</p>
               </div>
             ) : (
               <>
                 <div className="space-y-2 mb-6 max-h-80 overflow-y-auto pr-1">
                   {stackTools.map(tool => (
-                    <div key={tool.id} className="flex items-center justify-between gap-2 bg-white/5 rounded-xl px-3 py-2.5">
+                    <div key={tool.id} className="flex items-center justify-between gap-2 bg-gray-50 rounded-xl px-3 py-2.5">
                       <div className="min-w-0">
-                        <p className="text-white text-sm font-semibold truncate">{tool.name}</p>
+                        <p className="text-gray-900 text-sm font-semibold truncate">{tool.name}</p>
                         <p className="text-gray-500 text-xs">{tool.pricing === 'Free' ? t.free : tool.pricingLocalized[locale]}</p>
                       </div>
                       <button onClick={() => toggle(tool.id)}
-                        className="shrink-0 w-7 h-7 rounded-lg bg-red-500/10 hover:bg-red-500/30 text-red-400 flex items-center justify-center transition">
+                        className="shrink-0 w-7 h-7 rounded-lg bg-red-500/10 hover:bg-red-500/30 text-red-700 flex items-center justify-center transition">
                         <Trash2 className="w-3 h-3" />
                       </button>
                     </div>
@@ -254,15 +254,15 @@ export default function StackPage() {
                 </div>
 
                 {/* Cost summary */}
-                <div className="bg-white/5 rounded-xl p-3 mb-4">
+                <div className="bg-gray-50 rounded-xl p-3 mb-4">
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-400 text-sm">{t.totalCost}</span>
-                    <span className="text-white font-black">
+                    <span className="text-gray-600 text-sm">{t.totalCost}</span>
+                    <span className="text-gray-900 font-black">
                       {totalCost === 0 ? t.free_total : `$${totalCost}/mo`}
                     </span>
                   </div>
                   <div className="flex justify-between items-center mt-1">
-                    <span className="text-gray-400 text-sm">{t.toolsCount(stackTools.length)}</span>
+                    <span className="text-gray-600 text-sm">{t.toolsCount(stackTools.length)}</span>
                   </div>
                 </div>
 

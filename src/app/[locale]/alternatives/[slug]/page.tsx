@@ -254,37 +254,37 @@ export default async function AlternativesPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Back */}
-      <a href={`/${locale}/alternatives`} className="text-sm text-gray-500 hover:text-white transition mb-8 inline-block">{L.back}</a>
+      <a href={`/${locale}/alternatives`} className="text-sm text-gray-500 hover:text-gray-900 transition mb-8 inline-block">{L.back}</a>
 
       {/* Header */}
       <div className="text-center mb-12">
         <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#7C3AED] bg-[#7C3AED]/10 border border-[#7C3AED]/20 px-4 py-1.5 rounded-full mb-4">
           {L.badge}
         </span>
-        <h1 className="text-4xl md:text-5xl font-black text-white mb-4">
+        <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
           {L.title(tool.name)}
         </h1>
-        <p className="text-gray-400 max-w-2xl mx-auto text-base">
+        <p className="text-gray-600 max-w-2xl mx-auto text-base">
           {L.subtitle(tool.name)}
         </p>
       </div>
 
       {/* Original tool card */}
-      <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5 mb-10 flex items-center justify-between gap-4 flex-wrap">
+      <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5 mb-10 flex items-center justify-between gap-4 flex-wrap">
         <div className="flex items-center gap-3">
           <span className="text-2xl">{CATEGORY_EMOJI[tool.category] || '🛠️'}</span>
           <div>
             <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-0.5">{L.originalLabel}</p>
-            <p className="text-white font-black">{tool.name}</p>
+            <p className="text-gray-900 font-black">{tool.name}</p>
           </div>
           <div className="flex items-center gap-1 ml-2">
-            <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
-            <span className="text-white font-bold text-sm">{tool.rating.toFixed(1)}</span>
+            <Star className="w-4 h-4 fill-amber-400 text-amber-700" />
+            <span className="text-gray-900 font-bold text-sm">{tool.rating.toFixed(1)}</span>
           </div>
-          <span className="text-gray-400 text-sm">{tool.pricingLocalized[locale]}</span>
+          <span className="text-gray-600 text-sm">{tool.pricingLocalized[locale]}</span>
         </div>
         <div className="flex items-center gap-2">
-          <a href={`/${locale}/tools/${tool.id}`} className="text-xs font-semibold text-violet-400 hover:text-violet-300 border border-violet-500/20 hover:border-violet-500/40 px-3 py-2 rounded-xl transition">{L.view}</a>
+          <a href={`/${locale}/tools/${tool.id}`} className="text-xs font-semibold text-violet-700 hover:text-violet-700 border border-violet-500/20 hover:border-violet-500/40 px-3 py-2 rounded-xl transition">{L.view}</a>
           <a href={url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-xs font-bold bg-violet-600 hover:bg-violet-500 text-white px-3 py-2 rounded-xl transition">
             {L.visit} <ArrowUpRight className="w-3 h-3" />
           </a>
@@ -293,35 +293,35 @@ export default async function AlternativesPage({ params }: Props) {
 
       {/* Alternatives grid */}
       {alternatives.length === 0 ? (
-        <p className="text-center text-gray-400 mb-10">{L.noAlternatives}</p>
+        <p className="text-center text-gray-600 mb-10">{L.noAlternatives}</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
           {alternatives.map((alt, i) => {
             const altUrl = buildAffiliateUrl(alt.id, alt.websiteUrl);
             return (
-              <div key={alt.id} className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5 flex flex-col gap-3 hover:border-violet-500/30 transition">
+              <div key={alt.id} className="rounded-2xl border border-gray-200 bg-gray-50 p-5 flex flex-col gap-3 hover:border-violet-500/30 transition">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-black text-violet-400 bg-violet-500/10 border border-violet-500/20 rounded-full w-6 h-6 flex items-center justify-center">{i + 1}</span>
+                    <span className="text-xs font-black text-violet-700 bg-violet-500/10 border border-violet-500/20 rounded-full w-6 h-6 flex items-center justify-center">{i + 1}</span>
                     <span className="text-xl">{CATEGORY_EMOJI[alt.category] || '🛠️'}</span>
-                    <h3 className="text-white font-black">{alt.name}</h3>
+                    <h3 className="text-gray-900 font-black">{alt.name}</h3>
                   </div>
                   <div className="flex items-center gap-1">
-                    <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                    <span className="text-white font-bold text-sm">{alt.rating.toFixed(1)}</span>
+                    <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-700" />
+                    <span className="text-gray-900 font-bold text-sm">{alt.rating.toFixed(1)}</span>
                   </div>
                 </div>
-                <p className="text-gray-400 text-xs leading-relaxed line-clamp-2">{alt.description[locale]}</p>
+                <p className="text-gray-600 text-xs leading-relaxed line-clamp-2">{alt.description[locale]}</p>
                 <div className="flex items-center justify-between mt-auto pt-2">
-                  <span className={`text-xs font-semibold ${alt.pricing === 'Free' ? 'text-green-400' : alt.pricing === 'Freemium' ? 'text-amber-400' : 'text-gray-300'}`}>{alt.pricingLocalized[locale]}</span>
+                  <span className={`text-xs font-semibold ${alt.pricing === 'Free' ? 'text-green-700' : alt.pricing === 'Freemium' ? 'text-amber-700' : 'text-gray-700'}`}>{alt.pricingLocalized[locale]}</span>
                   <div className="flex items-center gap-2">
-                    <a href={`/${locale}/compare/${tool.id}-vs-${alt.id}`} className="text-xs font-semibold text-gray-400 hover:text-violet-300 transition flex items-center gap-1">
+                    <a href={`/${locale}/compare/${tool.id}-vs-${alt.id}`} className="text-xs font-semibold text-gray-600 hover:text-violet-700 transition flex items-center gap-1">
                       {L.compareWith(alt.name, tool.name)} <ArrowRight className="w-3 h-3" />
                     </a>
                   </div>
                 </div>
                 <a href={altUrl} target="_blank" rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 py-2 rounded-xl text-sm font-bold bg-white/5 hover:bg-violet-600 text-gray-300 hover:text-white border border-white/10 hover:border-violet-500 transition-all">
+                  className="flex items-center justify-center gap-2 py-2 rounded-xl text-sm font-bold bg-gray-50 hover:bg-violet-600 text-gray-700 hover:text-white border border-gray-200 hover:border-violet-500 transition-all">
                   {L.visit} {alt.name} <ArrowUpRight className="w-4 h-4" />
                 </a>
               </div>
@@ -331,15 +331,15 @@ export default async function AlternativesPage({ params }: Props) {
       )}
 
       {/* FAQ */}
-      <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 mb-10">
-        <h2 className="text-lg font-black text-white mb-4 flex items-center gap-2">
-          <Zap className="w-5 h-5 text-violet-400" /> {L.faqTitle}
+      <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 mb-10">
+        <h2 className="text-lg font-black text-gray-900 mb-4 flex items-center gap-2">
+          <Zap className="w-5 h-5 text-violet-700" /> {L.faqTitle}
         </h2>
         <div className="space-y-4">
           {L.faq.map(({ q, a }, i) => (
-            <div key={i} className="border-b border-white/[0.06] last:border-0 pb-4 last:pb-0">
-              <p className="text-white font-bold text-sm mb-1.5">{FAQ_QUESTIONS[locale][q](tool.name)}</p>
-              <p className="text-gray-400 text-sm leading-relaxed">{FAQ_ANSWERS[locale][a.replace('-a', '')](tool.name, topAltName)}</p>
+            <div key={i} className="border-b border-gray-200 last:border-0 pb-4 last:pb-0">
+              <p className="text-gray-900 font-bold text-sm mb-1.5">{FAQ_QUESTIONS[locale][q](tool.name)}</p>
+              <p className="text-gray-600 text-sm leading-relaxed">{FAQ_ANSWERS[locale][a.replace('-a', '')](tool.name, topAltName)}</p>
             </div>
           ))}
         </div>
@@ -351,16 +351,16 @@ export default async function AlternativesPage({ params }: Props) {
         if (others.length === 0) return null;
         return (
           <div className="mb-10">
-            <h2 className="text-lg font-black text-white mb-4">{L.moreAlternatives}</h2>
+            <h2 className="text-lg font-black text-gray-900 mb-4">{L.moreAlternatives}</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {others.map((slug) => {
                 const otherTool = TOOLS_DATA.find((t) => t.id === getToolId(slug));
                 if (!otherTool) return null;
                 return (
                   <a key={slug} href={`/${locale}/alternatives/${slug}`}
-                    className="flex items-center gap-2 bg-white/5 hover:bg-violet-600/10 border border-white/10 hover:border-violet-500/30 rounded-xl px-4 py-3 transition group">
-                    <span className="text-sm text-white font-semibold truncate flex-1">{otherTool.name}</span>
-                    <ArrowUpRight className="w-3 h-3 text-gray-600 group-hover:text-violet-400 shrink-0" />
+                    className="flex items-center gap-2 bg-gray-50 hover:bg-violet-600/10 border border-gray-200 hover:border-violet-500/30 rounded-xl px-4 py-3 transition group">
+                    <span className="text-sm text-gray-900 font-semibold truncate flex-1">{otherTool.name}</span>
+                    <ArrowUpRight className="w-3 h-3 text-gray-600 group-hover:text-violet-700 shrink-0" />
                   </a>
                 );
               })}
@@ -372,7 +372,7 @@ export default async function AlternativesPage({ params }: Props) {
       {/* Back to hub */}
       <div className="text-center">
         <a href={`/${locale}/alternatives`}
-          className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white border border-white/10 hover:border-white/20 px-5 py-2.5 rounded-xl transition">
+          className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 border border-gray-200 hover:border-gray-200 px-5 py-2.5 rounded-xl transition">
           {L.backToHub}
         </a>
       </div>

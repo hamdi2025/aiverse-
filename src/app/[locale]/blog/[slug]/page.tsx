@@ -106,15 +106,15 @@ export default function BlogPostPage({ params }: Props) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       )}
 
-      <a href={`/${locale}/blog`} className="text-sm text-gray-500 hover:text-white transition mb-8 inline-block">{L.back}</a>
+      <a href={`/${locale}/blog`} className="text-sm text-gray-500 hover:text-gray-900 transition mb-8 inline-block">{L.back}</a>
 
       {/* Header */}
       <div className="mb-10">
         <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#7C3AED] bg-[#7C3AED]/10 border border-[#7C3AED]/20 px-4 py-1.5 rounded-full mb-4 capitalize">
           {post.emoji} {post.category}
         </span>
-        <h1 className="text-3xl md:text-4xl font-black text-white mb-4 leading-tight">{post.title[locale]}</h1>
-        <p className="text-gray-400 text-base mb-4">{post.excerpt[locale]}</p>
+        <h1 className="text-3xl md:text-4xl font-black text-gray-900 mb-4 leading-tight">{post.title[locale]}</h1>
+        <p className="text-gray-600 text-base mb-4">{post.excerpt[locale]}</p>
         <div className="flex items-center gap-4 text-xs text-gray-500">
           <span className="flex items-center gap-1"><Calendar className="w-3 h-3" />{post.publishedDate}</span>
           <span className="flex items-center gap-1"><Clock className="w-3 h-3" />{L.readTime(post.readTime)}</span>
@@ -125,21 +125,21 @@ export default function BlogPostPage({ params }: Props) {
       <div className="space-y-8 mb-12">
         {post.sections.map((section, i) => (
           <div key={i}>
-            <h2 className="text-xl font-black text-white mb-3">{section.heading[locale]}</h2>
-            <p className="text-gray-300 leading-relaxed text-sm">{section.body[locale]}</p>
+            <h2 className="text-xl font-black text-gray-900 mb-3">{section.heading[locale]}</h2>
+            <p className="text-gray-700 leading-relaxed text-sm">{section.body[locale]}</p>
           </div>
         ))}
       </div>
 
       {/* FAQ */}
       {post.faq && post.faq.length > 0 && (
-        <div className="mb-10 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
-          <h2 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">❓ {L.faqTitle}</h2>
+        <div className="mb-10 rounded-2xl border border-gray-200 bg-gray-50 p-6">
+          <h2 className="text-sm font-bold text-gray-600 uppercase tracking-wider mb-4">❓ {L.faqTitle}</h2>
           <div className="space-y-4">
             {post.faq.map((item, idx) => (
-              <div key={idx} className="border-b border-white/[0.06] pb-4 last:border-b-0 last:pb-0">
-                <h3 className="text-white font-semibold mb-1.5">{item.question[locale] || item.question.en}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{item.answer[locale] || item.answer.en}</p>
+              <div key={idx} className="border-b border-gray-200 pb-4 last:border-b-0 last:pb-0">
+                <h3 className="text-gray-900 font-semibold mb-1.5">{item.question[locale] || item.question.en}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{item.answer[locale] || item.answer.en}</p>
               </div>
             ))}
           </div>
@@ -149,7 +149,7 @@ export default function BlogPostPage({ params }: Props) {
       {/* Related comparisons */}
       {post.relatedComparisons && post.relatedComparisons.length > 0 && (
         <div className="mb-10">
-          <h2 className="text-lg font-black text-white mb-4">{L.relatedComparisons}</h2>
+          <h2 className="text-lg font-black text-gray-900 mb-4">{L.relatedComparisons}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {post.relatedComparisons.map((slug) => {
               const [id1, id2] = slug.split('-vs-');
@@ -158,9 +158,9 @@ export default function BlogPostPage({ params }: Props) {
               if (!tool1 || !tool2) return null;
               return (
                 <a key={slug} href={`/${locale}/compare/${slug}`}
-                  className="flex items-center gap-2 bg-white/5 hover:bg-violet-600/10 border border-white/10 hover:border-violet-500/30 rounded-xl px-4 py-3 transition group">
-                  <span className="text-sm text-white font-semibold truncate flex-1">{tool1.name} vs {tool2.name}</span>
-                  <ArrowUpRight className="w-3 h-3 text-gray-600 group-hover:text-violet-400 shrink-0" />
+                  className="flex items-center gap-2 bg-gray-50 hover:bg-violet-600/10 border border-gray-200 hover:border-violet-500/30 rounded-xl px-4 py-3 transition group">
+                  <span className="text-sm text-gray-900 font-semibold truncate flex-1">{tool1.name} vs {tool2.name}</span>
+                  <ArrowUpRight className="w-3 h-3 text-gray-600 group-hover:text-violet-700 shrink-0" />
                 </a>
               );
             })}
@@ -171,13 +171,13 @@ export default function BlogPostPage({ params }: Props) {
       {/* Related tools */}
       {relatedTools.length > 0 && (
         <div className="mb-10">
-          <h2 className="text-lg font-black text-white mb-4">{L.relatedTools}</h2>
+          <h2 className="text-lg font-black text-gray-900 mb-4">{L.relatedTools}</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {relatedTools.map((tool) => (
               <a key={tool.id} href={`/${locale}/tools/${tool.id}`}
-                className="flex items-center gap-2 bg-white/5 hover:bg-violet-600/10 border border-white/10 hover:border-violet-500/30 rounded-xl px-4 py-3 transition group">
-                <span className="text-sm text-white font-semibold truncate flex-1">{tool.name}</span>
-                <ArrowUpRight className="w-3 h-3 text-gray-600 group-hover:text-violet-400 shrink-0" />
+                className="flex items-center gap-2 bg-gray-50 hover:bg-violet-600/10 border border-gray-200 hover:border-violet-500/30 rounded-xl px-4 py-3 transition group">
+                <span className="text-sm text-gray-900 font-semibold truncate flex-1">{tool.name}</span>
+                <ArrowUpRight className="w-3 h-3 text-gray-600 group-hover:text-violet-700 shrink-0" />
               </a>
             ))}
           </div>
@@ -187,14 +187,14 @@ export default function BlogPostPage({ params }: Props) {
       {/* More articles */}
       {otherPosts.length > 0 && (
         <div className="mb-10">
-          <h2 className="text-lg font-black text-white mb-4">{L.moreArticles}</h2>
+          <h2 className="text-lg font-black text-gray-900 mb-4">{L.moreArticles}</h2>
           <div className="grid gap-3">
             {otherPosts.map((p) => (
               <a key={p.slug} href={`/${locale}/blog/${p.slug}`}
-                className="flex items-center gap-2 bg-white/5 hover:bg-violet-600/10 border border-white/10 hover:border-violet-500/30 rounded-xl px-4 py-3 transition group">
+                className="flex items-center gap-2 bg-gray-50 hover:bg-violet-600/10 border border-gray-200 hover:border-violet-500/30 rounded-xl px-4 py-3 transition group">
                 <span className="text-lg">{p.emoji}</span>
-                <span className="text-sm text-white font-semibold truncate flex-1">{p.title[locale]}</span>
-                <ArrowUpRight className="w-3 h-3 text-gray-600 group-hover:text-violet-400 shrink-0" />
+                <span className="text-sm text-gray-900 font-semibold truncate flex-1">{p.title[locale]}</span>
+                <ArrowUpRight className="w-3 h-3 text-gray-600 group-hover:text-violet-700 shrink-0" />
               </a>
             ))}
           </div>
@@ -204,7 +204,7 @@ export default function BlogPostPage({ params }: Props) {
       {/* Back */}
       <div className="text-center">
         <a href={`/${locale}/blog`}
-          className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white border border-white/10 hover:border-white/20 px-5 py-2.5 rounded-xl transition">
+          className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 border border-gray-200 hover:border-gray-200 px-5 py-2.5 rounded-xl transition">
           {L.back}
         </a>
       </div>

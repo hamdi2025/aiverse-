@@ -97,8 +97,8 @@ export default async function ToolPage({ params }: Props) {
   };
 
   const pricingColor =
-    tool.pricing === 'Free' ? 'text-green-400' :
-    tool.pricing === 'Freemium' ? 'text-amber-400' : 'text-gray-300';
+    tool.pricing === 'Free' ? 'text-green-700' :
+    tool.pricing === 'Freemium' ? 'text-amber-700' : 'text-gray-700';
 
   const faq = TOOL_FAQS[tool.id] || getGenericFaq(tool);
   const faqJsonLd = faq ? {
@@ -158,25 +158,25 @@ export default async function ToolPage({ params }: Props) {
       )}
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="text-sm text-gray-500 mb-8 flex flex-wrap items-center gap-1.5">
-        <a href={`/${locale}`} className="hover:text-white transition">{locale === 'fr' ? 'Accueil' : locale === 'es' ? 'Inicio' : locale === 'ar' ? 'الرئيسية' : 'Home'}</a>
+        <a href={`/${locale}`} className="hover:text-gray-900 transition">{locale === 'fr' ? 'Accueil' : locale === 'es' ? 'Inicio' : locale === 'ar' ? 'الرئيسية' : 'Home'}</a>
         <span className="text-gray-700">/</span>
-        <a href={`/${locale}?cat=${tool.category}`} className="hover:text-white transition capitalize">{tlCategory(tool.category, locale)}</a>
+        <a href={`/${locale}?cat=${tool.category}`} className="hover:text-gray-900 transition capitalize">{tlCategory(tool.category, locale)}</a>
         <span className="text-gray-700">/</span>
-        <span className="text-gray-300">{tool.name}</span>
+        <span className="text-gray-700">{tool.name}</span>
       </nav>
 
       {/* Header */}
-      <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-8 mb-6">
+      <div className="rounded-2xl border border-gray-200 bg-gray-50 p-8 mb-6">
         <div className="flex items-start justify-between gap-4 flex-wrap mb-4">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-gray-400 bg-white/[0.06] px-3 py-1 rounded-full border border-white/5">
+            <span className="text-xs font-bold uppercase tracking-wider text-gray-600 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
               {tlCategory(tool.category, locale)}
             </span>
-            <h1 className="text-4xl font-black text-white mt-3 mb-2">{tool.name}</h1>
+            <h1 className="text-4xl font-black text-gray-900 mt-3 mb-2">{tool.name}</h1>
             <div className="flex items-center gap-4 text-sm">
               <span className="flex items-center gap-1.5">
-                <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
-                <span className="font-bold text-white">{tool.rating.toFixed(1)}</span>
+                <Star className="w-4 h-4 fill-amber-400 text-amber-700" />
+                <span className="font-bold text-gray-900">{tool.rating.toFixed(1)}</span>
                 <span className="text-gray-500">/5</span>
               </span>
               <span className={`font-bold ${pricingColor}`}>
@@ -195,7 +195,7 @@ export default async function ToolPage({ params }: Props) {
           </a>
         </div>
 
-        <p className="text-gray-300 text-base leading-relaxed">
+        <p className="text-gray-700 text-base leading-relaxed">
           {tool.description[locale]}
         </p>
       </div>
@@ -203,8 +203,8 @@ export default async function ToolPage({ params }: Props) {
       {/* Our verdict */}
       {tool.verdict && (
         <div className="rounded-2xl border border-violet-500/20 bg-violet-500/[0.06] p-6 mb-6">
-          <h2 className="text-sm font-bold text-violet-300 uppercase tracking-wider mb-2">✅ {RT.verdict}</h2>
-          <p className="text-gray-200 leading-relaxed">{tlVerdict(tool.id, tool.verdict, locale)}</p>
+          <h2 className="text-sm font-bold text-violet-700 uppercase tracking-wider mb-2">✅ {RT.verdict}</h2>
+          <p className="text-gray-800 leading-relaxed">{tlVerdict(tool.id, tool.verdict, locale)}</p>
         </div>
       )}
 
@@ -213,20 +213,20 @@ export default async function ToolPage({ params }: Props) {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
           {!!tool.pros?.length && (
             <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/[0.05] p-6">
-              <h2 className="text-sm font-bold text-emerald-300 uppercase tracking-wider mb-3">👍 {RT.pros}</h2>
+              <h2 className="text-sm font-bold text-emerald-700 uppercase tracking-wider mb-3">👍 {RT.pros}</h2>
               <ul className="space-y-2">
                 {tool.pros.map((p, i) => (
-                  <li key={i} className="flex gap-2 text-sm text-gray-300"><span className="text-emerald-400">+</span><span>{tl(p, locale)}</span></li>
+                  <li key={i} className="flex gap-2 text-sm text-gray-700"><span className="text-emerald-700">+</span><span>{tl(p, locale)}</span></li>
                 ))}
               </ul>
             </div>
           )}
           {!!tool.cons?.length && (
             <div className="rounded-2xl border border-rose-500/20 bg-rose-500/[0.05] p-6">
-              <h2 className="text-sm font-bold text-rose-300 uppercase tracking-wider mb-3">👎 {RT.cons}</h2>
+              <h2 className="text-sm font-bold text-rose-700 uppercase tracking-wider mb-3">👎 {RT.cons}</h2>
               <ul className="space-y-2">
                 {tool.cons.map((c, i) => (
-                  <li key={i} className="flex gap-2 text-sm text-gray-300"><span className="text-rose-400">−</span><span>{tl(c, locale)}</span></li>
+                  <li key={i} className="flex gap-2 text-sm text-gray-700"><span className="text-rose-700">−</span><span>{tl(c, locale)}</span></li>
                 ))}
               </ul>
             </div>
@@ -236,11 +236,11 @@ export default async function ToolPage({ params }: Props) {
 
       {/* Use cases */}
       {!!tool.useCases?.length && (
-        <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 mb-6">
-          <h2 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">🎯 {RT.useCases}</h2>
+        <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 mb-6">
+          <h2 className="text-sm font-bold text-gray-600 uppercase tracking-wider mb-3">🎯 {RT.useCases}</h2>
           <div className="flex flex-wrap gap-2">
             {tool.useCases.map((u, i) => (
-              <span key={i} className="text-sm text-gray-300 border border-white/[0.08] bg-white/[0.03] rounded-lg px-3 py-1.5">{tl(u, locale)}</span>
+              <span key={i} className="text-sm text-gray-700 border border-gray-200 bg-gray-50 rounded-lg px-3 py-1.5">{tl(u, locale)}</span>
             ))}
           </div>
         </div>
@@ -248,13 +248,13 @@ export default async function ToolPage({ params }: Props) {
 
       {/* Key facts */}
       {(tool.company || tool.founded || tool.hasAPI || tool.hasMobileApp || tool.lastUpdate) && (
-        <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 mb-6">
-          <h2 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">ℹ️ {RT.keyFacts}</h2>
+        <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 mb-6">
+          <h2 className="text-sm font-bold text-gray-600 uppercase tracking-wider mb-3">ℹ️ {RT.keyFacts}</h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
-            {tool.company && (<div><div className="text-gray-500 text-xs">{RT.company}</div><div className="text-white font-semibold">{tool.company}</div></div>)}
-            {tool.founded && (<div><div className="text-gray-500 text-xs">{RT.founded}</div><div className="text-white font-semibold">{tool.founded}</div></div>)}
-            {tool.hasAPI && (<div><div className="text-gray-500 text-xs">API</div><div className="text-white font-semibold">{RT.yes}</div></div>)}
-            {tool.hasMobileApp && (<div><div className="text-gray-500 text-xs">{RT.mobile}</div><div className="text-white font-semibold">{RT.yes}</div></div>)}
+            {tool.company && (<div><div className="text-gray-500 text-xs">{RT.company}</div><div className="text-gray-900 font-semibold">{tool.company}</div></div>)}
+            {tool.founded && (<div><div className="text-gray-500 text-xs">{RT.founded}</div><div className="text-gray-900 font-semibold">{tool.founded}</div></div>)}
+            {tool.hasAPI && (<div><div className="text-gray-500 text-xs">API</div><div className="text-gray-900 font-semibold">{RT.yes}</div></div>)}
+            {tool.hasMobileApp && (<div><div className="text-gray-500 text-xs">{RT.mobile}</div><div className="text-gray-900 font-semibold">{RT.yes}</div></div>)}
           </div>
           {tool.lastUpdate && (
             <p className="text-xs text-gray-500 mt-4">{RT.updated}: {tool.lastUpdate}</p>
@@ -264,18 +264,18 @@ export default async function ToolPage({ params }: Props) {
 
       {/* Details */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-        <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 text-center">
-          <Star className="w-5 h-5 text-amber-400 mx-auto mb-2" />
-          <div className="text-2xl font-black text-white">{tool.rating.toFixed(1)}</div>
+        <div className="rounded-xl border border-gray-200 bg-gray-50 p-5 text-center">
+          <Star className="w-5 h-5 text-amber-700 mx-auto mb-2" />
+          <div className="text-2xl font-black text-gray-900">{tool.rating.toFixed(1)}</div>
           <div className="text-xs text-gray-500 mt-1">{locale === 'fr' ? 'Note' : locale === 'es' ? 'Calificación' : locale === 'ar' ? 'التقييم' : 'Rating'}</div>
         </div>
-        <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 text-center">
-          <TrendingUp className="w-5 h-5 text-purple-400 mx-auto mb-2" />
-          <div className="text-2xl font-black text-white">{(tool.views / 1000).toFixed(1)}k</div>
+        <div className="rounded-xl border border-gray-200 bg-gray-50 p-5 text-center">
+          <TrendingUp className="w-5 h-5 text-purple-700 mx-auto mb-2" />
+          <div className="text-2xl font-black text-gray-900">{(tool.views / 1000).toFixed(1)}k</div>
           <div className="text-xs text-gray-500 mt-1">{locale === 'fr' ? 'Vues' : locale === 'es' ? 'Visitas' : locale === 'ar' ? 'المشاهدات' : 'Views'}</div>
         </div>
-        <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 text-center">
-          <Globe className="w-5 h-5 text-cyan-400 mx-auto mb-2" />
+        <div className="rounded-xl border border-gray-200 bg-gray-50 p-5 text-center">
+          <Globe className="w-5 h-5 text-cyan-700 mx-auto mb-2" />
           <div className={`text-xl font-black ${pricingColor}`}>{tool.pricing}</div>
           <div className="text-xs text-gray-500 mt-1">{t('pricing')}</div>
         </div>
@@ -286,15 +286,15 @@ export default async function ToolPage({ params }: Props) {
         if (similar.length === 0) return null;
         const label = locale === 'fr' ? `Comparer ${tool.name} avec` : locale === 'es' ? `Comparar ${tool.name} con` : locale === 'ar' ? `قارن ${tool.name} مع` : `Compare ${tool.name} with`;
         return (
-          <div className="mb-8 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
-            <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">🔀 {label}</h3>
+          <div className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6">
+            <h3 className="text-sm font-bold text-gray-600 uppercase tracking-wider mb-4">🔀 {label}</h3>
             <div className="flex flex-wrap gap-2">
               {similar.map(s => (
                 <a key={s.id} href={`/${locale}/compare/${tool.id}-vs-${s.id}`}
-                  className="flex items-center gap-1.5 text-sm text-gray-300 hover:text-white border border-white/[0.08] hover:border-violet-500/50 hover:bg-violet-500/10 rounded-xl px-4 py-2 transition-all">
-                  <span className="text-violet-400 font-bold">{tool.name}</span>
+                  className="flex items-center gap-1.5 text-sm text-gray-700 hover:text-white border border-gray-200 hover:border-violet-500/50 hover:bg-violet-500/10 rounded-xl px-4 py-2 transition-all">
+                  <span className="text-violet-700 font-bold">{tool.name}</span>
                   <span className="text-gray-600 text-xs">vs</span>
-                  <span className="text-orange-400 font-bold">{s.name}</span>
+                  <span className="text-orange-700 font-bold">{s.name}</span>
                 </a>
               ))}
             </div>
@@ -304,21 +304,21 @@ export default async function ToolPage({ params }: Props) {
 
       {/* CTA */}
       <div className="rounded-2xl border border-[#7C3AED]/30 bg-[#7C3AED]/5 p-8 text-center">
-        <h2 className="text-xl font-black text-white mb-2">
+        <h2 className="text-xl font-black text-gray-900 mb-2">
           {locale === 'fr' ? `Essayer ${tool.name} maintenant` : locale === 'es' ? `Prueba ${tool.name} ahora` : locale === 'ar' ? `جرّب ${tool.name} الآن` : `Try ${tool.name} Now`}
         </h2>
-        <p className="text-gray-400 text-sm mb-6">{tool.description[locale]}</p>
+        <p className="text-gray-600 text-sm mb-6">{tool.description[locale]}</p>
         <div className="flex flex-wrap gap-3 justify-center">
           <a href={outboundUrl} target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] hover:opacity-90 text-white px-8 py-3 rounded-xl font-bold transition-all hover:scale-105">
             {locale === 'fr' ? 'Essayer' : locale === 'es' ? 'Probar' : locale === 'ar' ? 'جرّب الآن' : 'Try Free'} <ArrowUpRight className="w-4 h-4" />
           </a>
           <a href={`/${locale}/compare`}
-            className="inline-flex items-center gap-2 border border-white/20 hover:border-violet-500/50 hover:bg-violet-600/10 text-gray-300 hover:text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all">
+            className="inline-flex items-center gap-2 border border-gray-200 hover:border-violet-500/50 hover:bg-violet-600/10 text-gray-700 hover:text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all">
             ⚡ {locale === 'fr' ? `Comparer ${tool.name}` : locale === 'es' ? `Comparar ${tool.name}` : locale === 'ar' ? `قارن ${tool.name}` : `Compare ${tool.name}`}
           </a>
           <a href={`/${locale}/alternatives/${tool.id}-alternatives`}
-            className="inline-flex items-center gap-2 border border-white/20 hover:border-cyan-500/50 hover:bg-cyan-600/10 text-gray-300 hover:text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all">
+            className="inline-flex items-center gap-2 border border-gray-200 hover:border-cyan-500/50 hover:bg-cyan-600/10 text-gray-700 hover:text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all">
             🔁 {locale === 'fr' ? `Alternatives à ${tool.name}` : locale === 'es' ? `Alternativas a ${tool.name}` : locale === 'ar' ? `بدائل ${tool.name}` : `${tool.name} Alternatives`}
           </a>
         </div>
@@ -327,13 +327,13 @@ export default async function ToolPage({ params }: Props) {
 
       {/* FAQ */}
       {faq && (
-        <div className="mt-8 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
-          <h2 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">❓ {faqTitle}</h2>
+        <div className="mt-8 rounded-2xl border border-gray-200 bg-gray-50 p-6">
+          <h2 className="text-sm font-bold text-gray-600 uppercase tracking-wider mb-4">❓ {faqTitle}</h2>
           <div className="space-y-4">
             {faq.map((item, idx) => (
-              <div key={idx} className="border-b border-white/[0.06] pb-4 last:border-b-0 last:pb-0">
-                <h3 className="text-white font-semibold mb-1.5">{item.question[locale] || item.question.en}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{item.answer[locale] || item.answer.en}</p>
+              <div key={idx} className="border-b border-gray-200 pb-4 last:border-b-0 last:pb-0">
+                <h3 className="text-gray-900 font-semibold mb-1.5">{item.question[locale] || item.question.en}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{item.answer[locale] || item.answer.en}</p>
               </div>
             ))}
           </div>

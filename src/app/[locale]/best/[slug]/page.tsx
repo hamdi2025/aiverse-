@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props) {
 }
 
 const pricingColor = (p: string) =>
-  p === 'Free' ? 'text-green-400' : p === 'Freemium' ? 'text-amber-400' : 'text-gray-300';
+  p === 'Free' ? 'text-green-700' : p === 'Freemium' ? 'text-amber-700' : 'text-gray-700';
 
 export default function BestForPage({ params }: Props) {
   const g = getBestFor(params.slug);
@@ -88,35 +88,35 @@ export default function BestForPage({ params }: Props) {
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="text-sm text-gray-500 mb-6 flex flex-wrap items-center gap-1.5">
-        <a href={`/${locale}`} className="hover:text-white transition">{locale === 'fr' ? 'Accueil' : locale === 'es' ? 'Inicio' : locale === 'ar' ? 'الرئيسية' : 'Home'}</a>
+        <a href={`/${locale}`} className="hover:text-gray-900 transition">{locale === 'fr' ? 'Accueil' : locale === 'es' ? 'Inicio' : locale === 'ar' ? 'الرئيسية' : 'Home'}</a>
         <span className="text-gray-700">/</span>
-        <a href={`/${locale}/best`} className="hover:text-white transition">{locale === 'fr' ? 'Meilleurs outils' : locale === 'es' ? 'Mejores herramientas' : locale === 'ar' ? 'أفضل الأدوات' : 'Best AI Tools'}</a>
+        <a href={`/${locale}/best`} className="hover:text-gray-900 transition">{locale === 'fr' ? 'Meilleurs outils' : locale === 'es' ? 'Mejores herramientas' : locale === 'ar' ? 'أفضل الأدوات' : 'Best AI Tools'}</a>
       </nav>
 
-      <h1 className="text-3xl sm:text-4xl font-black text-white mb-4">{g.emoji} {g.title[locale]}</h1>
-      <p className="text-gray-300 leading-relaxed mb-10">{g.intro[locale]}</p>
+      <h1 className="text-3xl sm:text-4xl font-black text-gray-900 mb-4">{g.emoji} {g.title[locale]}</h1>
+      <p className="text-gray-700 leading-relaxed mb-10">{g.intro[locale]}</p>
 
       {/* Ranked tools */}
       <div className="space-y-4 mb-12">
         {tools.map((t, i) => {
           const url = buildAffiliateUrl(t.id, t.websiteUrl);
           return (
-            <div key={t.id} className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5">
+            <div key={t.id} className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-tr from-[#7C3AED] to-[#06B6D4] flex items-center justify-center text-white font-black text-sm">{i + 1}</div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between gap-3 flex-wrap">
-                    <a href={`/${locale}/tools/${t.id}`} className="text-lg font-bold text-white hover:text-violet-300 transition">{t.name}</a>
+                    <a href={`/${locale}/tools/${t.id}`} className="text-lg font-bold text-gray-900 hover:text-violet-700 transition">{t.name}</a>
                     <span className="flex items-center gap-3 text-sm">
-                      <span className="text-amber-400 font-bold">⭐ {t.rating.toFixed(1)}</span>
+                      <span className="text-amber-700 font-bold">⭐ {t.rating.toFixed(1)}</span>
                       <span className={`font-semibold ${pricingColor(t.pricing)}`}>{t.pricingLocalized[locale]}</span>
                     </span>
                   </div>
-                  <p className="text-gray-400 text-sm leading-relaxed mt-1.5">{t.description[locale]}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed mt-1.5">{t.description[locale]}</p>
                   {!!t.pros?.length && (
                     <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
                       {t.pros.slice(0, 3).map((p, k) => (
-                        <li key={k} className="text-xs text-gray-400"><span className="text-emerald-400">+</span> {tl(p, locale)}</li>
+                        <li key={k} className="text-xs text-gray-600"><span className="text-emerald-700">+</span> {tl(p, locale)}</li>
                       ))}
                     </ul>
                   )}
@@ -125,7 +125,7 @@ export default function BestForPage({ params }: Props) {
                       className="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] rounded-lg px-3 py-1.5 hover:opacity-90 transition">
                       {locale === 'fr' ? 'Visiter' : locale === 'es' ? 'Visitar' : locale === 'ar' ? 'زيارة' : 'Visit'} →
                     </a>
-                    <a href={`/${locale}/tools/${t.id}`} className="text-xs text-gray-400 hover:text-white transition">
+                    <a href={`/${locale}/tools/${t.id}`} className="text-xs text-gray-600 hover:text-gray-900 transition">
                       {locale === 'fr' ? 'Détails' : locale === 'es' ? 'Detalles' : locale === 'ar' ? 'التفاصيل' : 'Details'}
                     </a>
                   </div>
@@ -137,13 +137,13 @@ export default function BestForPage({ params }: Props) {
       </div>
 
       {/* FAQ */}
-      <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
-        <h2 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">❓ {faqTitle}</h2>
+      <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+        <h2 className="text-sm font-bold text-gray-600 uppercase tracking-wider mb-4">❓ {faqTitle}</h2>
         <div className="space-y-4">
           {faq.map((item, idx) => (
-            <div key={idx} className="border-b border-white/[0.06] pb-4 last:border-0 last:pb-0">
-              <h3 className="text-white font-semibold mb-1.5">{item.q[locale]}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{item.a[locale]}</p>
+            <div key={idx} className="border-b border-gray-200 pb-4 last:border-0 last:pb-0">
+              <h3 className="text-gray-900 font-semibold mb-1.5">{item.q[locale]}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{item.a[locale]}</p>
             </div>
           ))}
         </div>

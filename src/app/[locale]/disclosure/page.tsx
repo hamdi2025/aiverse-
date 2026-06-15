@@ -41,34 +41,34 @@ export default function DisclosurePage({ params }: Props) {
   const { locale } = params;
   return (
     <article className="max-w-3xl mx-auto px-4 py-16">
-      <Link href={`/${locale}`} className="text-sm text-gray-400 hover:text-white">← Back to AIverse</Link>
-      <h1 className="text-3xl sm:text-4xl font-black text-white mt-6 mb-2">Affiliate Disclosure</h1>
+      <Link href={`/${locale}`} className="text-sm text-gray-600 hover:text-gray-900">← Back to AIverse</Link>
+      <h1 className="text-3xl sm:text-4xl font-black text-gray-900 mt-6 mb-2">Affiliate Disclosure</h1>
       <p className="text-sm text-gray-500 mb-8">Last updated: {LAST_UPDATED}</p>
 
-      <div className="space-y-6 text-gray-300 leading-relaxed text-[15px]">
+      <div className="space-y-6 text-gray-700 leading-relaxed text-[15px]">
         <p>Transparency matters to us. This page explains how AIverse makes money and how we keep our recommendations honest.</p>
 
-        <h2 className="text-xl font-bold text-white pt-4">How AIverse Earns</h2>
+        <h2 className="text-xl font-bold text-gray-900 pt-4">How AIverse Earns</h2>
         <p>AIverse is free to use. To support the cost of running the site, some of the links to third-party tools are
           &quot;affiliate links.&quot; This means that if you click such a link and sign up for or purchase a product, we may
           receive a small commission — at <strong>no additional cost to you</strong>. We also display advertising
           (Google AdSense) on some pages.</p>
 
-        <h2 className="text-xl font-bold text-white pt-4">Editorial Independence</h2>
+        <h2 className="text-xl font-bold text-gray-900 pt-4">Editorial Independence</h2>
         <p>Commissions never determine our rankings, ratings, or reviews. Tools are evaluated on their features, pricing,
           usability, and value. A tool does not receive a higher rating, better placement, or a more favorable review because
           it has an affiliate program. Many tools we recommend have no affiliate program at all, and we list them anyway when
           they are the best choice.</p>
 
-        <h2 className="text-xl font-bold text-white pt-4">Sponsored Content</h2>
+        <h2 className="text-xl font-bold text-gray-900 pt-4">Sponsored Content</h2>
         <p>If a listing is sponsored or paid, it is clearly labeled as such (for example with a &quot;Sponsored&quot;,
           &quot;Partner&quot;, or &quot;Featured&quot; badge). Sponsorship buys visibility, not a fake review.</p>
 
-        <h2 className="text-xl font-bold text-white pt-4">Accuracy</h2>
+        <h2 className="text-xl font-bold text-gray-900 pt-4">Accuracy</h2>
         <p>Pricing and features change frequently. We do our best to keep information current, but we always recommend
           confirming the latest details on the official website of the tool before purchasing.</p>
 
-        <h2 className="text-xl font-bold text-white pt-4">Questions</h2>
+        <h2 className="text-xl font-bold text-gray-900 pt-4">Questions</h2>
         <p>If anything here is unclear, contact us at
           {' '}<a className="text-[#7C3AED] hover:underline" href="mailto:contact@getaiverse.online">contact@getaiverse.online</a>.
           See also our <Link href={`/${locale}/privacy`} className="text-[#7C3AED] hover:underline">Privacy Policy</Link>

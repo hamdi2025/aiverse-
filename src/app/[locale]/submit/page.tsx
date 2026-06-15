@@ -176,33 +176,33 @@ export default function SubmitPage() {
     <div className="max-w-5xl mx-auto px-4 py-16">
       {/* Header */}
       <div className="text-center mb-14">
-        <span className="inline-block bg-violet-600/20 text-violet-400 text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
+        <span className="inline-block bg-violet-600/20 text-violet-700 text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
           {t.badge}
         </span>
-        <h1 className="text-4xl md:text-5xl font-black text-white mb-4">
+        <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
           {t.title} <GradientText>{t.titleHighlight}</GradientText> {t.titleEnd}
         </h1>
-        <p className="text-gray-400 max-w-2xl mx-auto text-lg">{t.subtitle}</p>
+        <p className="text-gray-600 max-w-2xl mx-auto text-lg">{t.subtitle}</p>
       </div>
 
       {/* Pricing Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
         {/* Free */}
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col">
+        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 flex flex-col">
           <div className="mb-4">
-            <p className="text-gray-400 text-sm font-medium mb-1">{t.freeName}</p>
-            <p className="text-3xl font-black text-white">{t.freePriceLabel}</p>
+            <p className="text-gray-600 text-sm font-medium mb-1">{t.freeName}</p>
+            <p className="text-3xl font-black text-gray-900">{t.freePriceLabel}</p>
           </div>
           <ul className="space-y-2 mb-6 flex-1">
             {t.freeFeatures.map((f: string, i: number) => (
-              <li key={i} className="flex items-center gap-2 text-sm text-gray-300">
-                <Check className="w-4 h-4 text-green-400 shrink-0" /> {f}
+              <li key={i} className="flex items-center gap-2 text-sm text-gray-700">
+                <Check className="w-4 h-4 text-green-700 shrink-0" /> {f}
               </li>
             ))}
           </ul>
           <button
             onClick={() => document.getElementById('free-form')?.scrollIntoView({ behavior: 'smooth' })}
-            className="w-full py-2 rounded-xl border border-white/20 text-white text-sm font-semibold hover:bg-white/10 transition"
+            className="w-full py-2 rounded-xl border border-gray-200 text-gray-900 text-sm font-semibold hover:bg-gray-100 transition"
           >
             {t.freeCta}
           </button>
@@ -214,13 +214,13 @@ export default function SubmitPage() {
             {t.mostPopular}
           </span>
           <div className="mb-4">
-            <p className="text-violet-300 text-sm font-medium mb-1">{t.stdName}</p>
-            <p className="text-3xl font-black text-white">{t.stdPriceLabel}</p>
+            <p className="text-violet-700 text-sm font-medium mb-1">{t.stdName}</p>
+            <p className="text-3xl font-black text-gray-900">{t.stdPriceLabel}</p>
           </div>
           <ul className="space-y-2 mb-6 flex-1">
             {t.stdFeatures.map((f: string, i: number) => (
-              <li key={i} className="flex items-center gap-2 text-sm text-gray-200">
-                <Zap className="w-4 h-4 text-violet-400 shrink-0" /> {f}
+              <li key={i} className="flex items-center gap-2 text-sm text-gray-800">
+                <Zap className="w-4 h-4 text-violet-700 shrink-0" /> {f}
               </li>
             ))}
           </ul>
@@ -239,13 +239,13 @@ export default function SubmitPage() {
             {t.bestRoi}
           </span>
           <div className="mb-4">
-            <p className="text-amber-400 text-sm font-medium mb-1">{t.featName}</p>
-            <p className="text-3xl font-black text-white">{t.featPriceLabel}</p>
+            <p className="text-amber-700 text-sm font-medium mb-1">{t.featName}</p>
+            <p className="text-3xl font-black text-gray-900">{t.featPriceLabel}</p>
           </div>
           <ul className="space-y-2 mb-6 flex-1">
             {t.featFeatures.map((f: string, i: number) => (
-              <li key={i} className="flex items-center gap-2 text-sm text-gray-200">
-                <Crown className="w-4 h-4 text-amber-400 shrink-0" /> {f}
+              <li key={i} className="flex items-center gap-2 text-sm text-gray-800">
+                <Crown className="w-4 h-4 text-amber-700 shrink-0" /> {f}
               </li>
             ))}
           </ul>
@@ -260,57 +260,57 @@ export default function SubmitPage() {
       </div>
 
       {/* Free Submission Form */}
-      <div id="free-form" className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-10">
-        <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-          <Star className="w-5 h-5 text-violet-400" /> {t.freeFormTitle}
+      <div id="free-form" className="bg-gray-50 border border-gray-200 rounded-2xl p-8 mb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+          <Star className="w-5 h-5 text-violet-700" /> {t.freeFormTitle}
         </h2>
         {submitted ? (
           <div className="text-center py-8">
             <p className="text-3xl mb-2">🎉</p>
-            <p className="text-white font-bold text-xl">{t.successTitle}</p>
-            <p className="text-gray-400 mt-1">{t.successDesc}</p>
+            <p className="text-gray-900 font-bold text-xl">{t.successTitle}</p>
+            <p className="text-gray-600 mt-1">{t.successDesc}</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="text-sm text-gray-400 mb-1 block">{t.toolLabel}</label>
+              <label className="text-sm text-gray-600 mb-1 block">{t.toolLabel}</label>
               <input required value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })}
                 placeholder={t.toolPlaceholder}
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-violet-500" />
+                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-gray-900 placeholder-gray-500 text-sm focus:outline-none focus:border-violet-500" />
             </div>
             <div>
-              <label className="text-sm text-gray-400 mb-1 block">{t.urlLabel}</label>
+              <label className="text-sm text-gray-600 mb-1 block">{t.urlLabel}</label>
               <input required type="url" value={formData.url} onChange={e => setFormData({ ...formData, url: e.target.value })}
                 placeholder={t.urlPlaceholder}
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-violet-500" />
+                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-gray-900 placeholder-gray-500 text-sm focus:outline-none focus:border-violet-500" />
             </div>
             <div>
-              <label className="text-sm text-gray-400 mb-1 block">{t.catLabel}</label>
+              <label className="text-sm text-gray-600 mb-1 block">{t.catLabel}</label>
               <select value={formData.category} onChange={e => setFormData({ ...formData, category: e.target.value })}
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-violet-500">
+                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-gray-900 text-sm focus:outline-none focus:border-violet-500">
                 <option value="tool">{t.catOptions.tool}</option>
                 <option value="agent">{t.catOptions.agent}</option>
                 <option value="both">{t.catOptions.both}</option>
               </select>
             </div>
             <div>
-              <label className="text-sm text-gray-400 mb-1 block">{t.emailLabel}</label>
+              <label className="text-sm text-gray-600 mb-1 block">{t.emailLabel}</label>
               <input required type="email" value={formData.email} onChange={e => setFormData({ ...formData, email: e.target.value })}
                 placeholder="you@example.com"
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-violet-500" />
+                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-gray-900 placeholder-gray-500 text-sm focus:outline-none focus:border-violet-500" />
             </div>
             <div className="md:col-span-2">
-              <label className="text-sm text-gray-400 mb-1 block">{t.descLabel}</label>
+              <label className="text-sm text-gray-600 mb-1 block">{t.descLabel}</label>
               <textarea required value={formData.description} onChange={e => setFormData({ ...formData, description: e.target.value })}
                 placeholder={t.descPlaceholder} rows={3}
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-violet-500 resize-none" />
+                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-gray-900 placeholder-gray-500 text-sm focus:outline-none focus:border-violet-500 resize-none" />
             </div>
             <div className="md:col-span-2">
               <button type="submit" disabled={submitting}
                 className="w-full py-3 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-bold text-sm transition flex items-center justify-center gap-2 disabled:opacity-60">
                 <ArrowRight className="w-4 h-4" /> {submitting ? '...' : t.submitBtn}
               </button>
-              {error && <p className="text-xs text-red-400 mt-2 text-center">{errorMsg[locale]}</p>}
+              {error && <p className="text-xs text-red-700 mt-2 text-center">{errorMsg[locale]}</p>}
               <p className="text-xs text-gray-500 mt-3 text-center">{t.fine}</p>
             </div>
           </form>
@@ -318,13 +318,13 @@ export default function SubmitPage() {
       </div>
 
       {/* AI Agent Section */}
-      <div className="bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
-        <span className="inline-block bg-violet-600/20 text-violet-400 text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
+      <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 text-center">
+        <span className="inline-block bg-violet-600/20 text-violet-700 text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
           {t.agentBadge}
         </span>
-        <Bot className="w-10 h-10 text-violet-400 mx-auto mb-3" />
-        <h2 className="text-2xl font-bold text-white mb-2">{t.agentFormTitle}</h2>
-        <p className="text-gray-400 mb-6 max-w-lg mx-auto">{t.agentSubtitle}</p>
+        <Bot className="w-10 h-10 text-violet-700 mx-auto mb-3" />
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">{t.agentFormTitle}</h2>
+        <p className="text-gray-600 mb-6 max-w-lg mx-auto">{t.agentSubtitle}</p>
         <a href={`mailto:contact@aiverse.com?subject=AIverse AI Agent Submission`}
           className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-bold text-sm transition">
           <Bot className="w-4 h-4" /> {t.agentCta}

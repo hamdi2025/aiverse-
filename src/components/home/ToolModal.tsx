@@ -23,13 +23,13 @@ const CATEGORY_COLORS: Record<string, string> = {
 };
 
 const CATEGORY_BADGE: Record<string, string> = {
-  writing:      'bg-blue-500/20 text-blue-300 border-blue-500/30',
-  image:        'bg-pink-500/20 text-pink-300 border-pink-500/30',
-  code:         'bg-green-500/20 text-green-300 border-green-500/30',
-  video:        'bg-red-500/20 text-red-300 border-red-500/30',
-  productivity: 'bg-yellow-500/20 text-yellow-300 border-yellow-500/30',
-  audio:        'bg-violet-500/20 text-violet-300 border-violet-500/30',
-  marketing:    'bg-cyan-500/20 text-cyan-300 border-cyan-500/30',
+  writing:      'bg-blue-500/20 text-blue-700 border-blue-500/30',
+  image:        'bg-pink-500/20 text-pink-700 border-pink-500/30',
+  code:         'bg-green-500/20 text-green-700 border-green-500/30',
+  video:        'bg-red-500/20 text-red-700 border-red-500/30',
+  productivity: 'bg-yellow-500/20 text-yellow-700 border-yellow-500/30',
+  audio:        'bg-violet-500/20 text-violet-700 border-violet-500/30',
+  marketing:    'bg-cyan-500/20 text-cyan-700 border-cyan-500/30',
 };
 
 export default function ToolModal({ tool, onClose }: ToolModalProps) {
@@ -56,9 +56,9 @@ export default function ToolModal({ tool, onClose }: ToolModalProps) {
   const badgeClass = CATEGORY_BADGE[tool.category] || CATEGORY_BADGE.writing;
 
   const PRICING_COLOR: Record<string, string> = {
-    Free:     'text-green-400 bg-green-400/10 border-green-400/30',
-    Freemium: 'text-amber-400 bg-amber-400/10 border-amber-400/30',
-    Paid:     'text-red-400 bg-red-400/10 border-red-400/30',
+    Free:     'text-green-700 bg-green-400/10 border-green-400/30',
+    Freemium: 'text-amber-700 bg-amber-400/10 border-amber-400/30',
+    Paid:     'text-red-700 bg-red-400/10 border-red-400/30',
   };
 
   return (
@@ -88,13 +88,13 @@ export default function ToolModal({ tool, onClose }: ToolModalProps) {
                 {tool.pricing}
               </span>
             </div>
-            <h2 className="text-2xl font-black text-white tracking-tight">
+            <h2 className="text-2xl font-black text-gray-900 tracking-tight">
               <GradientText>{tool.name}</GradientText>
             </h2>
           </div>
           <button
             onClick={onClose}
-            className="ml-4 p-2 rounded-xl bg-white/[0.05] hover:bg-white/[0.12] text-gray-400 hover:text-white transition-all duration-200 flex-shrink-0"
+            className="ml-4 p-2 rounded-xl bg-gray-50 hover:bg-gray-100 text-gray-600 hover:text-gray-900 transition-all duration-200 flex-shrink-0"
           >
             <X className="w-5 h-5" />
           </button>
@@ -103,38 +103,38 @@ export default function ToolModal({ tool, onClose }: ToolModalProps) {
         {/* Body */}
         <div className="px-6 pb-4">
           {/* Description */}
-          <p className="text-gray-300 text-sm leading-relaxed mb-5">
+          <p className="text-gray-700 text-sm leading-relaxed mb-5">
             {tool.description[locale]}
           </p>
 
           {/* Stats row */}
           <div className="grid grid-cols-3 gap-3 mb-5">
-            <div className="bg-white/[0.04] rounded-xl p-3 text-center border border-white/[0.06]">
+            <div className="bg-gray-50 rounded-xl p-3 text-center border border-gray-200">
               <div className="flex items-center justify-center gap-1 mb-1">
-                <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
-                <span className="text-white font-black text-lg">{ratingFormatted}</span>
+                <Star className="w-4 h-4 fill-amber-400 text-amber-700" />
+                <span className="text-gray-900 font-black text-lg">{ratingFormatted}</span>
               </div>
               <span className="text-[11px] text-gray-500 uppercase tracking-wider">Rating</span>
             </div>
-            <div className="bg-white/[0.04] rounded-xl p-3 text-center border border-white/[0.06]">
+            <div className="bg-gray-50 rounded-xl p-3 text-center border border-gray-200">
               <div className="flex items-center justify-center gap-1 mb-1">
-                <Eye className="w-4 h-4 text-cyan-400" />
-                <span className="text-white font-black text-lg">{viewsFormatted}</span>
+                <Eye className="w-4 h-4 text-cyan-700" />
+                <span className="text-gray-900 font-black text-lg">{viewsFormatted}</span>
               </div>
               <span className="text-[11px] text-gray-500 uppercase tracking-wider">Views</span>
             </div>
-            <div className="bg-white/[0.04] rounded-xl p-3 text-center border border-white/[0.06]">
+            <div className="bg-gray-50 rounded-xl p-3 text-center border border-gray-200">
               <div className="mb-1">
-                <span className="text-white font-black text-sm leading-tight block">{tool.pricingLocalized[locale]}</span>
+                <span className="text-gray-900 font-black text-sm leading-tight block">{tool.pricingLocalized[locale]}</span>
               </div>
               <span className="text-[11px] text-gray-500 uppercase tracking-wider">{t('pricing')}</span>
             </div>
           </div>
 
           {/* URL preview */}
-          <div className="flex items-center gap-2 bg-white/[0.03] border border-white/[0.06] rounded-xl px-4 py-2.5 mb-5">
+          <div className="flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 mb-5">
             <ExternalLink className="w-4 h-4 text-gray-500 flex-shrink-0" />
-            <span className="text-gray-400 text-xs truncate">{tool.websiteUrl}</span>
+            <span className="text-gray-600 text-xs truncate">{tool.websiteUrl}</span>
           </div>
         </div>
 

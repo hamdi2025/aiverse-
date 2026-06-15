@@ -34,7 +34,7 @@ export default function AdSenseSlot({
   if (isPlaceholder || !ADSENSE_CONFIG.enabled) {
     return (
       <div
-        className={`relative flex flex-col items-center justify-center border border-dashed border-white/10 rounded-2xl bg-white/[0.02] overflow-hidden p-6 min-h-[90px] w-full text-center ${className}`}
+        className={`relative flex flex-col items-center justify-center border border-dashed border-gray-200 rounded-2xl bg-gray-50 overflow-hidden p-6 min-h-[90px] w-full text-center ${className}`}
       >
         {/* Glow backdrop */}
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-cyan-500/5 -z-10" />
@@ -42,7 +42,7 @@ export default function AdSenseSlot({
         <span className="text-[10px] uppercase tracking-wider text-gray-500 font-bold mb-1">
           Advertisement Slot
         </span>
-        <span className="text-xs text-gray-400 font-mono">
+        <span className="text-xs text-gray-600 font-mono">
           Slot ID: {slotId} ({slot})
         </span>
         <span className="text-[10px] text-gray-500 mt-2">

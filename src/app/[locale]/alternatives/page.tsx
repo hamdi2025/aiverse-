@@ -63,11 +63,11 @@ export default function AlternativesHubPage({ params }: Props) {
     <div className="max-w-5xl mx-auto px-4 py-14">
       {/* Header */}
       <div className="text-center mb-12">
-        <span className="inline-flex items-center gap-2 bg-violet-600/20 text-violet-400 text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
+        <span className="inline-flex items-center gap-2 bg-violet-600/20 text-violet-700 text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
           <Layers className="w-3 h-3" /> {t.badge}
         </span>
-        <h1 className="text-4xl md:text-5xl font-black text-white mb-3">{t.title}</h1>
-        <p className="text-gray-400 max-w-xl mx-auto">{t.subtitle}</p>
+        <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-3">{t.title}</h1>
+        <p className="text-gray-600 max-w-xl mx-auto">{t.subtitle}</p>
       </div>
 
       {/* Popular alternative guides */}
@@ -79,15 +79,15 @@ export default function AlternativesHubPage({ params }: Props) {
           if (!tool) return null;
           return (
             <Link key={slug} href={`/${locale}/alternatives/${slug}`}
-              className="group flex items-center justify-between gap-3 bg-white/5 hover:bg-violet-600/10 border border-white/10 hover:border-violet-500/40 rounded-2xl px-5 py-4 transition-all">
+              className="group flex items-center justify-between gap-3 bg-gray-50 hover:bg-violet-600/10 border border-gray-200 hover:border-violet-500/40 rounded-2xl px-5 py-4 transition-all">
               <div className="flex items-center gap-3">
                 <span className="text-2xl">{CATEGORY_EMOJI[tool.category] || '🛠️'}</span>
                 <div>
-                  <p className="text-white font-semibold text-sm">{tool.name}</p>
+                  <p className="text-gray-900 font-semibold text-sm">{tool.name}</p>
                   <p className="text-gray-500 text-xs capitalize">{tool.category}</p>
                 </div>
               </div>
-              <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-violet-400 group-hover:translate-x-1 transition-all" />
+              <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-violet-700 group-hover:translate-x-1 transition-all" />
             </Link>
           );
         })}

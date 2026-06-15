@@ -50,15 +50,15 @@ export default function BestHubPage({ params }: Props) {
   return (
     <div className="max-w-5xl mx-auto px-4 py-14">
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-black text-white mb-3">{t.title}</h1>
-        <p className="text-gray-400 max-w-xl mx-auto">{t.subtitle}</p>
+        <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-3">{t.title}</h1>
+        <p className="text-gray-600 max-w-xl mx-auto">{t.subtitle}</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {BEST_FOR.map((g) => (
           <Link key={g.slug} href={`/${locale}/best/${g.slug}`}
-            className="group flex items-start gap-3 bg-white/5 hover:bg-violet-600/10 border border-white/10 hover:border-violet-500/40 rounded-2xl px-5 py-4 transition-all">
+            className="group flex items-start gap-3 bg-gray-50 hover:bg-violet-600/10 border border-gray-200 hover:border-violet-500/40 rounded-2xl px-5 py-4 transition-all">
             <span className="text-2xl">{g.emoji}</span>
-            <span className="text-white font-semibold text-sm leading-snug group-hover:text-violet-200">{g.title[locale]}</span>
+            <span className="text-gray-900 font-semibold text-sm leading-snug group-hover:text-violet-200">{g.title[locale]}</span>
           </Link>
         ))}
       </div>

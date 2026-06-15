@@ -58,30 +58,30 @@ export default function BlogIndexPage({ params }: Props) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-16">
-      <a href={`/${locale}`} className="text-sm text-gray-500 hover:text-white transition mb-8 inline-block">{L.back}</a>
+      <a href={`/${locale}`} className="text-sm text-gray-500 hover:text-gray-900 transition mb-8 inline-block">{L.back}</a>
 
       <div className="text-center mb-12">
         <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#7C3AED] bg-[#7C3AED]/10 border border-[#7C3AED]/20 px-4 py-1.5 rounded-full mb-4">
           {L.badge}
         </span>
-        <h1 className="text-4xl md:text-5xl font-black text-white mb-4">{L.title}</h1>
-        <p className="text-gray-400 max-w-2xl mx-auto text-base">{L.subtitle}</p>
+        <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">{L.title}</h1>
+        <p className="text-gray-600 max-w-2xl mx-auto text-base">{L.subtitle}</p>
       </div>
 
       <div className="grid gap-4">
         {posts.map((post) => (
           <a key={post.slug} href={`/${locale}/blog/${post.slug}`}
-            className="group flex flex-col gap-2 rounded-2xl border border-white/[0.08] bg-white/[0.02] hover:border-violet-500/30 hover:bg-violet-950/10 p-6 transition-all">
+            className="group flex flex-col gap-2 rounded-2xl border border-gray-200 bg-gray-50 hover:border-violet-500/30 hover:bg-violet-950/10 p-6 transition-all">
             <div className="flex items-center gap-3 text-xs text-gray-500">
               <span className="text-lg">{post.emoji}</span>
               <span className="capitalize">{post.category}</span>
               <span className="flex items-center gap-1"><Clock className="w-3 h-3" />{L.readTime(post.readTime)}</span>
             </div>
-            <h2 className="text-xl font-black text-white group-hover:text-violet-300 transition-colors flex items-center gap-2">
+            <h2 className="text-xl font-black text-gray-900 group-hover:text-violet-700 transition-colors flex items-center gap-2">
               {post.title[locale]}
-              <ArrowUpRight className="w-4 h-4 text-gray-600 group-hover:text-violet-400 shrink-0" />
+              <ArrowUpRight className="w-4 h-4 text-gray-600 group-hover:text-violet-700 shrink-0" />
             </h2>
-            <p className="text-gray-400 text-sm leading-relaxed line-clamp-2">{post.excerpt[locale]}</p>
+            <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">{post.excerpt[locale]}</p>
           </a>
         ))}
       </div>

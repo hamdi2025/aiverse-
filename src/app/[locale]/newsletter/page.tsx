@@ -170,21 +170,21 @@ export default function NewsletterPage() {
 
       {/* Header */}
       <div className="text-center mb-14">
-        <span className="inline-flex items-center gap-2 bg-violet-600/20 text-violet-400 text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
+        <span className="inline-flex items-center gap-2 bg-violet-600/20 text-violet-700 text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
           <Mail className="w-3 h-3" /> {t.badge}
         </span>
-        <h1 className="text-4xl md:text-5xl font-black text-white mb-4">
+        <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
           {t.title} <GradientText>{t.titleHighlight}</GradientText>
         </h1>
-        <p className="text-gray-400 max-w-2xl mx-auto text-lg">{t.subtitle}</p>
+        <p className="text-gray-600 max-w-2xl mx-auto text-lg">{t.subtitle}</p>
       </div>
 
       {/* Stats */}
       <div className="grid grid-cols-3 gap-4 mb-14">
         {t.stats.map((s, i) => (
-          <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-5 text-center">
-            <p className="text-3xl font-black text-white mb-1">{s.value}</p>
-            <p className="text-gray-400 text-sm">{s.label}</p>
+          <div key={i} className="bg-gray-50 border border-gray-200 rounded-2xl p-5 text-center">
+            <p className="text-3xl font-black text-gray-900 mb-1">{s.value}</p>
+            <p className="text-gray-600 text-sm">{s.label}</p>
           </div>
         ))}
       </div>
@@ -192,21 +192,21 @@ export default function NewsletterPage() {
       {/* Subscribe form */}
       <div className="bg-gradient-to-br from-violet-600/10 to-purple-900/10 border border-violet-500/20 rounded-2xl p-8 mb-8">
         <div className="flex items-center gap-3 mb-6">
-          <Zap className="w-6 h-6 text-violet-400" />
-          <h2 className="text-2xl font-bold text-white">{t.freeName}</h2>
+          <Zap className="w-6 h-6 text-violet-700" />
+          <h2 className="text-2xl font-bold text-gray-900">{t.freeName}</h2>
         </div>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-8">
           {t.freeFeatures.map((f, i) => (
-            <li key={i} className="flex items-center gap-2 text-sm text-gray-300">
-              <Check className="w-4 h-4 text-green-400 shrink-0" /> {f}
+            <li key={i} className="flex items-center gap-2 text-sm text-gray-700">
+              <Check className="w-4 h-4 text-green-700 shrink-0" /> {f}
             </li>
           ))}
         </ul>
         {submitted ? (
           <div className="text-center py-4">
             <p className="text-2xl mb-1">🎉</p>
-            <p className="text-white font-bold text-lg">{t.successTitle}</p>
-            <p className="text-gray-400 text-sm mt-1">{t.successDesc}</p>
+            <p className="text-gray-900 font-bold text-lg">{t.successTitle}</p>
+            <p className="text-gray-600 text-sm mt-1">{t.successDesc}</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex gap-3 max-w-md">
@@ -214,7 +214,7 @@ export default function NewsletterPage() {
               type="email" required value={email}
               onChange={e => setEmail(e.target.value)}
               placeholder={t.freeCtaLabel}
-              className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-violet-500"
+              className="flex-1 bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-500 text-sm focus:outline-none focus:border-violet-500"
             />
             <button type="submit"
               className="flex items-center gap-2 px-5 py-3 bg-violet-600 hover:bg-violet-500 text-white text-sm font-bold rounded-xl transition whitespace-nowrap">
@@ -228,24 +228,24 @@ export default function NewsletterPage() {
       {/* Sponsor section */}
       <div className="bg-amber-500/5 border border-amber-500/20 rounded-2xl p-8">
         <div className="flex items-center justify-between mb-2 flex-wrap gap-3">
-          <h2 className="text-2xl font-bold text-white">{t.sponsorTitle}</h2>
-          <span className="bg-amber-500/20 text-amber-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+          <h2 className="text-2xl font-bold text-gray-900">{t.sponsorTitle}</h2>
+          <span className="bg-amber-500/20 text-amber-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
             {t.sponsorBadge}
           </span>
         </div>
-        <p className="text-gray-400 mb-6">{t.sponsorSubtitle}</p>
+        <p className="text-gray-600 mb-6">{t.sponsorSubtitle}</p>
 
         <div className="grid md:grid-cols-2 gap-6 mb-6">
           <ul className="space-y-2">
             {t.sponsorFeatures.map((f, i) => (
-              <li key={i} className="flex items-center gap-2 text-sm text-gray-300">
-                <Crown className="w-4 h-4 text-amber-400 shrink-0" /> {f}
+              <li key={i} className="flex items-center gap-2 text-sm text-gray-700">
+                <Crown className="w-4 h-4 text-amber-700 shrink-0" /> {f}
               </li>
             ))}
           </ul>
           <div className="flex flex-col justify-center items-center bg-amber-500/10 border border-amber-500/20 rounded-xl p-6 text-center">
-            <p className="text-5xl font-black text-white mb-1">{t.sponsorPrice}</p>
-            <p className="text-amber-400 text-sm font-semibold mb-4">{t.sponsorPer}</p>
+            <p className="text-5xl font-black text-gray-900 mb-1">{t.sponsorPrice}</p>
+            <p className="text-amber-700 text-sm font-semibold mb-4">{t.sponsorPer}</p>
             <a
               href="mailto:contact@aiverse.com?subject=Newsletter Sponsorship"
               className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-amber-500 hover:bg-amber-400 text-black text-sm font-bold rounded-xl transition"

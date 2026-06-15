@@ -112,15 +112,15 @@ export default function ComparePage() {
     <div className="max-w-5xl mx-auto px-4 py-14">
       {/* Header */}
       <div className="text-center mb-10">
-        <span className="inline-flex items-center gap-2 bg-violet-600/20 text-violet-400 text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
+        <span className="inline-flex items-center gap-2 bg-violet-600/20 text-violet-700 text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
           <Zap className="w-3 h-3" /> {t.badge}
         </span>
-        <h1 className="text-4xl md:text-5xl font-black text-white mb-3">{t.title}</h1>
-        <p className="text-gray-400 max-w-xl mx-auto">{t.subtitle}</p>
+        <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-3">{t.title}</h1>
+        <p className="text-gray-600 max-w-xl mx-auto">{t.subtitle}</p>
       </div>
 
       {/* Comparator — single row: [Category] [Tool1] VS [Tool2] [Button] */}
-      <div className="relative overflow-hidden bg-white/[0.06] bg-gradient-to-br from-sky-500/15 via-fuchsia-500/10 to-orange-500/15 border border-white/25 rounded-2xl p-6 mb-12 shadow-2xl shadow-black/40">
+      <div className="relative overflow-hidden bg-gray-100 bg-gradient-to-br from-sky-500/15 via-fuchsia-500/10 to-orange-500/15 border border-gray-200 rounded-2xl p-6 mb-12 shadow-2xl shadow-black/40">
         <div className="absolute -top-20 -right-12 w-72 h-72 bg-sky-500/30 blur-3xl rounded-full pointer-events-none" />
         <div className="absolute -bottom-20 -left-12 w-72 h-72 bg-orange-500/25 blur-3xl rounded-full pointer-events-none" />
         <div className="absolute top-1/4 left-1/3 w-56 h-56 bg-fuchsia-500/20 blur-3xl rounded-full pointer-events-none" />
@@ -128,14 +128,14 @@ export default function ComparePage() {
         {/* Labels row */}
         <div className="grid grid-cols-1 md:grid-cols-7 gap-3 mb-1">
           <div className="md:col-span-2">
-            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">{t.step1}</p>
+            <p className="text-xs font-bold text-gray-600 uppercase tracking-widest">{t.step1}</p>
           </div>
           <div className="md:col-span-2">
-            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">{t.step2}</p>
+            <p className="text-xs font-bold text-gray-600 uppercase tracking-widest">{t.step2}</p>
           </div>
           <div className="hidden md:flex items-center justify-center" />
           <div className="md:col-span-2">
-            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">{t.step3}</p>
+            <p className="text-xs font-bold text-gray-600 uppercase tracking-widest">{t.step3}</p>
           </div>
         </div>
 
@@ -147,11 +147,11 @@ export default function ComparePage() {
             <select
               value={category}
               onChange={e => handleCategoryChange(e.target.value)}
-              className="w-full bg-sky-500/25 hover:bg-sky-500/40 border-2 border-sky-400/80 hover:border-sky-300 rounded-2xl pl-4 pr-10 py-3.5 text-white text-sm font-bold focus:outline-none focus:border-sky-300 focus:ring-2 focus:ring-sky-400/60 appearance-none cursor-pointer transition-all"
+              className="w-full bg-sky-500/25 hover:bg-sky-500/40 border-2 border-sky-400/80 hover:border-sky-300 rounded-2xl pl-4 pr-10 py-3.5 text-gray-900 text-sm font-bold focus:outline-none focus:border-sky-300 focus:ring-2 focus:ring-sky-400/60 appearance-none cursor-pointer transition-all"
             >
               <option value="">{t.selectCat}</option>
               {CATEGORIES.map(cat => (
-                <option key={cat.id} value={cat.id} className="bg-[#0A0A0F]">
+                <option key={cat.id} value={cat.id} className="bg-white">
                   {cat[locale] || cat.en}
                 </option>
               ))}
@@ -165,11 +165,11 @@ export default function ComparePage() {
               value={tool1}
               onChange={e => setTool1(e.target.value)}
               disabled={!category}
-              className="w-full bg-orange-500/25 hover:bg-orange-500/40 border-2 border-orange-400/80 hover:border-orange-300 rounded-2xl pl-4 pr-10 py-3.5 text-white text-sm font-bold focus:outline-none focus:border-orange-300 focus:ring-2 focus:ring-orange-400/60 appearance-none cursor-pointer transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-white/[0.04] disabled:border-white/15"
+              className="w-full bg-orange-500/25 hover:bg-orange-500/40 border-2 border-orange-400/80 hover:border-orange-300 rounded-2xl pl-4 pr-10 py-3.5 text-gray-900 text-sm font-bold focus:outline-none focus:border-orange-300 focus:ring-2 focus:ring-orange-400/60 appearance-none cursor-pointer transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:border-gray-200"
             >
               <option value="">{category ? t.tool1 : '← ' + t.step1}</option>
               {categoryTools.map(tool => (
-                <option key={tool.id} value={tool.id} disabled={tool.id === tool2} className="bg-[#0A0A0F]">
+                <option key={tool.id} value={tool.id} disabled={tool.id === tool2} className="bg-white">
                   {tool.name}
                 </option>
               ))}
@@ -186,7 +186,7 @@ export default function ComparePage() {
               className={`w-full min-h-[52px] flex flex-col items-center justify-center gap-1 rounded-2xl font-black text-xs transition-all px-2 ${
                 canCompare
                   ? 'bg-gradient-to-tr from-rose-500 via-red-500 to-orange-500 hover:opacity-90 text-white shadow-lg shadow-red-900/40 hover:scale-105'
-                  : 'bg-white/10 text-white/70 border-2 border-white/30 cursor-not-allowed'
+                  : 'bg-gray-100 text-gray-600 border-2 border-gray-200 cursor-not-allowed'
               }`}
             >
               <Zap className="w-4 h-4" />
@@ -200,11 +200,11 @@ export default function ComparePage() {
               value={tool2}
               onChange={e => setTool2(e.target.value)}
               disabled={!category}
-              className="w-full bg-yellow-500/25 hover:bg-yellow-500/40 border-2 border-yellow-400/80 hover:border-yellow-300 rounded-2xl pl-4 pr-10 py-3.5 text-white text-sm font-bold focus:outline-none focus:border-yellow-300 focus:ring-2 focus:ring-yellow-400/60 appearance-none cursor-pointer transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-white/[0.04] disabled:border-white/15"
+              className="w-full bg-yellow-500/25 hover:bg-yellow-500/40 border-2 border-yellow-400/80 hover:border-yellow-300 rounded-2xl pl-4 pr-10 py-3.5 text-gray-900 text-sm font-bold focus:outline-none focus:border-yellow-300 focus:ring-2 focus:ring-yellow-400/60 appearance-none cursor-pointer transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:border-gray-200"
             >
               <option value="">{category ? t.tool2 : '← ' + t.step1}</option>
               {categoryTools.map(tool => (
-                <option key={tool.id} value={tool.id} disabled={tool.id === tool1} className="bg-[#0A0A0F]">
+                <option key={tool.id} value={tool.id} disabled={tool.id === tool1} className="bg-white">
                   {tool.name}
                 </option>
               ))}
@@ -215,7 +215,7 @@ export default function ComparePage() {
 
         {/* Info */}
         {category && (
-          <p className="text-xs text-violet-400 font-semibold mb-4 flex items-center gap-2">
+          <p className="text-xs text-violet-700 font-semibold mb-4 flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-violet-400 inline-block" />
             {categoryTools.length} {locale === 'fr' ? 'outils' : locale === 'es' ? 'herramientas' : locale === 'ar' ? 'أداة' : 'tools'} · {t.samecat}
           </p>
@@ -225,7 +225,7 @@ export default function ComparePage() {
         <div className="flex">
           <button
             onClick={handleRandom}
-            className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-gray-400 hover:text-white text-sm font-semibold transition"
+            className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gray-50 hover:bg-gray-100 border border-gray-200 text-gray-600 hover:text-gray-900 text-sm font-semibold transition"
           >
             <Shuffle className="w-4 h-4" /> {t.random}
           </button>
@@ -241,15 +241,15 @@ export default function ComparePage() {
           );
           return (
             <Link key={slug} href={`/${locale}/compare/${slug}`}
-              className="group flex items-center justify-between gap-3 bg-white/5 hover:bg-violet-600/10 border border-white/10 hover:border-violet-500/40 rounded-2xl px-5 py-4 transition-all">
+              className="group flex items-center justify-between gap-3 bg-gray-50 hover:bg-violet-600/10 border border-gray-200 hover:border-violet-500/40 rounded-2xl px-5 py-4 transition-all">
               <div className="flex items-center gap-3">
                 <span className="text-2xl">{emoji}</span>
                 <div>
-                  <p className="text-white font-semibold text-sm">{a}</p>
+                  <p className="text-gray-900 font-semibold text-sm">{a}</p>
                   <p className="text-gray-500 text-xs">vs {b}</p>
                 </div>
               </div>
-              <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-violet-400 group-hover:translate-x-1 transition-all" />
+              <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-violet-700 group-hover:translate-x-1 transition-all" />
             </Link>
           );
         })}
@@ -266,15 +266,15 @@ export default function ComparePage() {
           );
           return (
             <Link key={slug} href={`/${locale}/compare/${slug}`}
-              className="group flex items-center justify-between gap-3 bg-white/5 hover:bg-violet-600/10 border border-white/10 hover:border-violet-500/40 rounded-2xl px-5 py-4 transition-all">
+              className="group flex items-center justify-between gap-3 bg-gray-50 hover:bg-violet-600/10 border border-gray-200 hover:border-violet-500/40 rounded-2xl px-5 py-4 transition-all">
               <div className="flex items-center gap-3">
                 <span className="text-2xl">{emoji}</span>
                 <div>
-                  <p className="text-white font-semibold text-sm">{a}</p>
+                  <p className="text-gray-900 font-semibold text-sm">{a}</p>
                   <p className="text-gray-500 text-xs">vs {b}</p>
                 </div>
               </div>
-              <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-violet-400 group-hover:translate-x-1 transition-all" />
+              <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-violet-700 group-hover:translate-x-1 transition-all" />
             </Link>
           );
         })}
