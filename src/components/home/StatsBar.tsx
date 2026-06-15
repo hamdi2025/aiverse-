@@ -19,10 +19,10 @@ export default function StatsBar() {
       {STATS.map((s) => (
         <div
           key={s.label}
-          className="flex flex-col items-center justify-center gap-2 py-5 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur"
+          className="flex flex-col items-center justify-center gap-2 py-5 rounded-2xl border border-gray-200 bg-white shadow-sm"
         >
           {s.icon}
-          <span className="text-2xl font-black text-white">{s.value}</span>
+          <span className="text-2xl font-black text-gray-900">{s.value}</span>
           <span className="text-xs text-gray-500 font-medium tracking-wide">{s.label}</span>
         </div>
       ))}

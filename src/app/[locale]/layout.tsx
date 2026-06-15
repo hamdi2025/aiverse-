@@ -70,7 +70,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   const direction = locale === 'ar' ? 'rtl' : 'ltr';
   return (
-    <html lang={locale} dir={direction} className="dark">
+    <html lang={locale} dir={direction}>
       <head>
         <meta name="google-site-verification" content="Gc5SbwLPT2C2zV7jHnFJj2pX2EvkjI3QIOsbQUVd6_8" />
         <meta name="impact-site-verification" content="6aac91e5-f7f3-4393-bf45-173c3ca98a42" />
@@ -117,7 +117,7 @@ export default async function LocaleLayout({
           />
         )}
       </head>
-      <body className={`${inter.className} bg-[#0A0A0F] text-[#F3F4F6] min-h-screen flex flex-col selection:bg-[#7C3AED] selection:text-white antialiased overflow-x-hidden`}>
+      <body className={`${inter.className} bg-white text-gray-900 min-h-screen flex flex-col selection:bg-[#7C3AED] selection:text-white antialiased overflow-x-hidden`}>
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Header />
           <main className="flex-1">
