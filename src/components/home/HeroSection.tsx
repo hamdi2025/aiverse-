@@ -16,10 +16,10 @@ function coloredSubtitle(raw: string): React.ReactNode {
   const parts = raw.split(/(<agents>.*?<\/agents>|<tools>.*?<\/tools>)/g);
   return parts.map((part, i) => {
     if (part.startsWith('<agents>')) {
-      return <span key={i} className="font-bold text-violet-400">{part.replace(/<\/?agents>/g, '')}</span>;
+      return <span key={i} className="font-bold text-violet-600">{part.replace(/<\/?agents>/g, '')}</span>;
     }
     if (part.startsWith('<tools>')) {
-      return <span key={i} className="font-bold text-cyan-400">{part.replace(/<\/?tools>/g, '')}</span>;
+      return <span key={i} className="font-bold text-cyan-600">{part.replace(/<\/?tools>/g, '')}</span>;
     }
     return <span key={i}>{part}</span>;
   });
@@ -39,9 +39,9 @@ export default function HeroSection({ onSearch, selectedCategory, onCategoryChan
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.05 }}
-        className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-violet-900/60 to-cyan-900/40 border border-violet-500/40 backdrop-blur-md mb-5 shadow-lg shadow-violet-900/30"
+        className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-violet-100 to-cyan-100 border border-violet-300 mb-5 shadow-sm"
       >
-        <span className="text-[11px] md:text-xs font-bold text-violet-300 tracking-widest uppercase">
+        <span className="text-[11px] md:text-xs font-bold text-violet-700 tracking-widest uppercase">
           {t('badge')}
         </span>
       </motion.div>
@@ -50,18 +50,18 @@ export default function HeroSection({ onSearch, selectedCategory, onCategoryChan
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.1 }}
-        className="font-black text-white tracking-tight leading-[1.15] max-w-4xl mb-4"
+        className="font-black text-gray-900 tracking-tight leading-[1.15] max-w-4xl mb-4"
       >
         <span className="block text-3xl sm:text-4xl md:text-5xl pb-1">
-          <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
             {t('titleAgents')}
           </span>
           {' & '}
-          <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">
             {t('titleTools')}
           </span>
         </span>
-        <span className="block text-2xl sm:text-3xl md:text-4xl text-white/90 mt-1">
+        <span className="block text-2xl sm:text-3xl md:text-4xl text-gray-800 mt-1">
           {t('titleSub')}
         </span>
       </motion.h1>
@@ -70,7 +70,7 @@ export default function HeroSection({ onSearch, selectedCategory, onCategoryChan
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2 }}
-        className="text-gray-400 text-sm md:text-base max-w-2xl mb-8 leading-relaxed"
+        className="text-gray-600 text-sm md:text-base max-w-2xl mb-8 leading-relaxed"
       >
         {coloredSubtitle(subtitleRaw)}
       </motion.p>
@@ -101,7 +101,7 @@ export default function HeroSection({ onSearch, selectedCategory, onCategoryChan
           className="flex flex-wrap justify-center gap-3 mt-6"
         >
           {badgeItems.map((item: string, i: number) => (
-            <span key={i} className="text-xs text-gray-500 bg-white/[0.04] border border-white/[0.06] px-3 py-1.5 rounded-full">
+            <span key={i} className="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-3 py-1.5 rounded-full">
               {item.trim()}
             </span>
           ))}

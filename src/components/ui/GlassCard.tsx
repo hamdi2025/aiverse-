@@ -27,10 +27,10 @@ export default function GlassCard({
       onClick={onClick}
       className={twMerge(
         clsx(
-          'relative overflow-hidden rounded-2xl border border-white/[0.08]',
-          'bg-[#0E0E16]/40 backdrop-blur-xl',
+          'relative overflow-hidden rounded-2xl border border-gray-200',
+          'bg-white shadow-sm',
           'transition-shadow duration-300',
-          hoverGlow && 'hover:shadow-[0_0_30px_0_rgba(124,58,237,0.15)] hover:border-white/[0.15]',
+          hoverGlow && 'hover:shadow-lg hover:shadow-violet-200/60 hover:border-violet-300',
           onClick && 'cursor-pointer',
           className
         )
@@ -47,7 +47,7 @@ export default function GlassCard({
       )}
 
       {/* Decorative reflection element */}
-      <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-violet-300/40 to-transparent" />
 
       {children}
     </motion.div>

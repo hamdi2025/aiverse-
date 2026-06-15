@@ -69,10 +69,10 @@ export default function SearchBar({
       <div className="absolute -inset-1 bg-gradient-to-r from-[#7C3AED] via-[#3B82F6] to-[#06B6D4] rounded-2xl blur-xl opacity-30 group-focus-within:opacity-60 transition duration-500" />
 
       {/* Search container */}
-      <div className="relative flex items-center bg-[#0E0E16]/80 backdrop-blur-2xl border border-white/[0.08] group-focus-within:border-[#7C3AED]/50 rounded-2xl p-1.5 transition-all duration-300">
+      <div className="relative flex items-center bg-white border-2 border-gray-200 group-focus-within:border-[#7C3AED] rounded-2xl p-1.5 transition-all duration-300 shadow-sm">
 
         {/* Search icon */}
-        <div className="pl-3.5 pr-2 text-gray-400 group-focus-within:text-white transition-colors duration-200">
+        <div className="pl-3.5 pr-2 text-gray-400 group-focus-within:text-[#7C3AED] transition-colors duration-200">
           <Search className="w-5 h-5" />
         </div>
 
@@ -83,18 +83,18 @@ export default function SearchBar({
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder={t('search')}
-          className="flex-1 bg-transparent text-white placeholder-gray-400 focus:outline-none py-3 px-1 text-base w-full"
+          className="flex-1 bg-transparent text-gray-900 placeholder-gray-400 focus:outline-none py-3 px-1 text-base w-full"
         />
 
         {/* Category dropdown */}
-        <div className="hidden md:flex items-center border-l border-white/10 px-2 mr-1">
+        <div className="hidden md:flex items-center border-l border-gray-200 px-2 mr-1">
           <select
             value={selectedCategory}
             onChange={(e) => onCategoryChange(e.target.value)}
-            className="bg-transparent text-sm text-gray-300 focus:outline-none focus:text-white cursor-pointer py-1 px-3"
+            className="bg-transparent text-sm text-gray-700 focus:outline-none focus:text-gray-900 cursor-pointer py-1 px-3"
           >
             {categories.map((cat) => (
-              <option key={cat.id} value={cat.id} className="bg-[#0A0A0F] text-white">
+              <option key={cat.id} value={cat.id} className="bg-white text-gray-900">
                 {cat.label}
               </option>
             ))}

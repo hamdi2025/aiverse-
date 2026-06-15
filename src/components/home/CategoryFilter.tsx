@@ -44,22 +44,28 @@ export default function CategoryFilter({ selectedCategory, onCategoryChange }: C
   return (
     <div className="w-full overflow-x-auto no-scrollbar py-4">
       <div className="flex flex-wrap gap-2 px-4 md:px-0 justify-center">
-        {categories.map((cat) => {
+        {categories.map((cat, idx) => {
           const isActive = selectedCategory === cat.id;
-          const isSpecial = ['agents','translation','contract','travel'].includes(cat.id);
+          const palette = [
+            'bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-500 hover:text-white hover:border-blue-500',
+            'bg-green-50 text-green-700 border-green-200 hover:bg-green-500 hover:text-white hover:border-green-500',
+            'bg-orange-50 text-orange-700 border-orange-200 hover:bg-orange-500 hover:text-white hover:border-orange-500',
+            'bg-amber-50 text-amber-700 border-amber-200 hover:bg-amber-500 hover:text-white hover:border-amber-500',
+            'bg-violet-50 text-violet-700 border-violet-200 hover:bg-violet-500 hover:text-white hover:border-violet-500',
+            'bg-cyan-50 text-cyan-700 border-cyan-200 hover:bg-cyan-500 hover:text-white hover:border-cyan-500',
+          ][idx % 6];
           return (
             <button key={cat.id} onClick={() => onCategoryChange(cat.id)}
               className={clsx(
-                'px-4 py-2 rounded-full text-xs font-semibold tracking-wide border transition-all duration-150 active:scale-95 flex items-center gap-1.5 whitespace-nowrap hover:scale-125 hover:shadow-xl hover:z-10 relative',
-                isSpecial && !isActive && 'bg-violet-500/10 text-violet-300 border-violet-500/30 hover:bg-gradient-to-r hover:from-violet-600 hover:to-cyan-500 hover:text-white hover:border-transparent hover:shadow-violet-500/40',
-                isSpecial && isActive && 'bg-gradient-to-r from-violet-600 to-cyan-500 text-white border-transparent shadow-lg shadow-violet-500/30 scale-110',
-                !isSpecial && isActive && 'bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] text-white border-transparent shadow-lg shadow-[#7C3AED]/25 scale-110',
-                !isSpecial && !isActive && 'bg-white/[0.03] text-gray-400 border-white/[0.08] hover:bg-gradient-to-r hover:from-[#7C3AED] hover:to-[#06B6D4] hover:text-white hover:border-transparent hover:shadow-[#7C3AED]/30'
+                'px-4 py-2 rounded-full text-xs font-bold tracking-wide border transition-all duration-150 active:scale-95 flex items-center gap-1.5 whitespace-nowrap hover:scale-110 hover:shadow-lg hover:z-10 relative',
+                isActive
+                  ? 'bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] text-white border-transparent shadow-lg shadow-[#7C3AED]/30 scale-110'
+                  : palette
               )}>
               {cat.icon}{cat.label}
               {cat.badge && (
                 <span className={clsx('text-[9px] font-bold px-1.5 py-0.5 rounded-full border',
-                  cat.badge === 'HOT' ? 'text-amber-400 bg-amber-400/10 border-amber-400/20' : 'text-green-400 bg-green-400/10 border-green-400/20'
+                  cat.badge === 'HOT' ? 'text-amber-700 bg-amber-100 border-amber-300' : 'text-green-700 bg-green-100 border-green-300'
                 )}>{cat.badge}</span>
               )}
             </button>

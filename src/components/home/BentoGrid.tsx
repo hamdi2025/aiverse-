@@ -20,8 +20,8 @@ export default function BentoGrid({ tools, onToolClick }: BentoGridProps) {
 
   if (tools.length === 0) {
     return (
-      <div className="text-center py-20 border border-white/5 rounded-2xl bg-white/[0.01]">
-        <p className="text-gray-400 text-lg">{t('noResults')}</p>
+      <div className="text-center py-20 border border-gray-200 rounded-2xl bg-gray-50">
+        <p className="text-gray-600 text-lg">{t('noResults')}</p>
       </div>
     );
   }
@@ -46,16 +46,16 @@ export default function BentoGrid({ tools, onToolClick }: BentoGridProps) {
                 {t('weeklyFeatured')}
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-2">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-2">
               <GradientText>{featuredTool.name}</GradientText>
             </h2>
-            <p className="text-gray-300 text-sm md:text-base leading-relaxed max-w-2xl">
+            <p className="text-gray-700 text-sm md:text-base leading-relaxed max-w-2xl">
               {featuredTool.description[locale]}
             </p>
           </div>
           <div className="flex items-center gap-4 shrink-0">
-            <span className="text-sm font-semibold text-gray-400 bg-white/[0.04] px-3 py-1 rounded">
-              {t('pricing')}: <span className="text-white font-bold">{featuredTool.pricingLocalized[locale]}</span>
+            <span className="text-sm font-semibold text-gray-700 bg-gray-100 px-3 py-1 rounded">
+              {t('pricing')}: <span className="text-gray-900 font-bold">{featuredTool.pricingLocalized[locale]}</span>
             </span>
             <a
               href={featuredTool.websiteUrl}
