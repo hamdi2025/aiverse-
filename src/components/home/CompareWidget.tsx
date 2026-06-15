@@ -4,7 +4,7 @@ import React, { useState, useMemo } from 'react';
 import { useLocale } from 'next-intl';
 import { useRouter } from '@/navigation';
 import { TOOLS_DATA } from '@/lib/tools';
-import { ArrowLeftRight, Zap } from 'lucide-react';
+import { ArrowLeftRight, Zap, ChevronDown } from 'lucide-react';
 
 type Locale = 'en' | 'fr' | 'es' | 'ar';
 
@@ -87,8 +87,9 @@ export default function CompareWidget() {
   };
 
   return (
-    <section className="w-full my-10 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 md:p-8 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-72 h-72 bg-violet-600/5 blur-3xl rounded-full pointer-events-none" />
+    <section className="w-full my-10 rounded-2xl border border-white/20 bg-gradient-to-br from-violet-600/15 via-white/[0.04] to-cyan-500/10 p-6 md:p-8 relative overflow-hidden shadow-xl shadow-violet-950/20">
+      <div className="absolute -top-16 -right-10 w-72 h-72 bg-violet-600/20 blur-3xl rounded-full pointer-events-none" />
+      <div className="absolute -bottom-16 -left-10 w-64 h-64 bg-cyan-500/10 blur-3xl rounded-full pointer-events-none" />
 
       {/* Header */}
       <div className="flex items-center gap-3 mb-5">
@@ -105,11 +106,11 @@ export default function CompareWidget() {
       <div className="grid grid-cols-1 md:grid-cols-7 gap-3 items-center mb-2">
 
         {/* Category */}
-        <div className="md:col-span-2">
+        <div className="md:col-span-2 relative">
           <select
             value={category}
             onChange={e => handleCategoryChange(e.target.value)}
-            className="w-full bg-white/[0.05] border border-white/[0.10] hover:border-violet-500/50 rounded-xl px-3 py-3 text-white text-sm focus:outline-none focus:border-violet-500 transition-colors cursor-pointer appearance-none"
+            className="w-full bg-white/[0.08] hover:bg-white/[0.13] border-2 border-white/25 hover:border-violet-500/40 rounded-2xl pl-4 pr-10 py-3.5 text-white text-sm font-semibold focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/30 transition-all cursor-pointer appearance-none"
           >
             <option value="" className="bg-[#0A0A0F]">{L.selectCat}</option>
             {CATEGORIES.map(cat => (
@@ -118,61 +119,64 @@ export default function CompareWidget() {
               </option>
             ))}
           </select>
+          <ChevronDown className="w-4 h-4 text-violet-300 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
         </div>
 
         {/* Tool 1 */}
-        <div className="md:col-span-2">
+        <div className="md:col-span-2 relative">
           <select
             value={tool1}
             onChange={e => setTool1(e.target.value)}
             disabled={!category}
-            className="w-full bg-white/[0.05] border border-white/[0.10] hover:border-violet-500/50 rounded-xl px-3 py-3 text-white text-sm focus:outline-none focus:border-violet-500 transition-colors cursor-pointer appearance-none disabled:opacity-40 disabled:cursor-not-allowed"
+            className="w-full bg-white/[0.08] hover:bg-white/[0.13] border-2 border-white/25 hover:border-violet-500/40 rounded-2xl pl-4 pr-10 py-3.5 text-white text-sm font-semibold focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/30 transition-all cursor-pointer appearance-none disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white/[0.05]"
           >
             <option value="" className="bg-[#0A0A0F]">{category ? L.tool1 : L.pickCat}</option>
             {categoryTools.map(t => (
               <option key={t.id} value={t.id} disabled={t.id === tool2} className="bg-[#0A0A0F]">{t.name}</option>
             ))}
           </select>
+          <ChevronDown className="w-4 h-4 text-gray-400 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
         </div>
 
-        {/* VS */}
-        <div className="hidden md:flex items-center justify-center">
-          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-violet-600/30 to-orange-500/30 border border-white/10 flex items-center justify-center">
-            <span className="text-[11px] font-black text-gray-300">VS</span>
-          </div>
+        {/* Compare button (center, replaces VS) */}
+        <div className="flex items-stretch justify-center">
+          <button
+            onClick={handleCompare}
+            disabled={!canCompare}
+            aria-label={L.btn}
+            className={`w-full min-h-[48px] flex flex-col items-center justify-center gap-1 rounded-2xl font-black text-xs transition-all px-2 ${
+              canCompare
+                ? 'bg-gradient-to-tr from-violet-600 to-cyan-500 hover:opacity-90 text-white shadow-lg shadow-violet-900/40 hover:scale-105'
+                : 'bg-violet-500/15 text-violet-200/60 border border-violet-500/25 cursor-not-allowed'
+            }`}
+          >
+            <Zap className="w-4 h-4" /> {L.btn}
+          </button>
         </div>
 
         {/* Tool 2 */}
-        <div className="md:col-span-2">
+        <div className="md:col-span-2 relative">
           <select
             value={tool2}
             onChange={e => setTool2(e.target.value)}
             disabled={!category}
-            className="w-full bg-white/[0.05] border border-white/[0.10] hover:border-orange-500/50 rounded-xl px-3 py-3 text-white text-sm focus:outline-none focus:border-orange-500 transition-colors cursor-pointer appearance-none disabled:opacity-40 disabled:cursor-not-allowed"
+            className="w-full bg-white/[0.08] hover:bg-white/[0.13] border-2 border-white/25 hover:border-orange-500/40 rounded-2xl pl-4 pr-10 py-3.5 text-white text-sm font-semibold focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30 transition-all cursor-pointer appearance-none disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white/[0.05]"
           >
             <option value="" className="bg-[#0A0A0F]">{category ? L.tool2 : L.pickCat}</option>
             {categoryTools.map(t => (
               <option key={t.id} value={t.id} disabled={t.id === tool1} className="bg-[#0A0A0F]">{t.name}</option>
             ))}
           </select>
+          <ChevronDown className="w-4 h-4 text-orange-300 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
         </div>
       </div>
 
-      {/* Compare button + info */}
-      <div className="flex items-center gap-3 mt-3">
-        <button
-          onClick={handleCompare}
-          disabled={!canCompare}
-          className="flex items-center gap-2 bg-gradient-to-r from-violet-600 to-cyan-500 hover:from-violet-500 hover:to-cyan-400 text-white px-6 py-2.5 rounded-xl font-bold text-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed shadow-lg shadow-violet-900/30"
-        >
-          <Zap className="w-4 h-4" /> {L.btn}
-        </button>
-        {category && (
-          <span className="text-xs text-violet-400">
-            {categoryTools.length} tools available
-          </span>
-        )}
-      </div>
+      {/* Info */}
+      {category && (
+        <p className="text-xs text-violet-400 font-semibold mt-3">
+          {categoryTools.length} {locale === 'fr' ? 'outils disponibles' : locale === 'es' ? 'herramientas disponibles' : locale === 'ar' ? 'أداة متاحة' : 'tools available'}
+        </p>
+      )}
 
       {/* Quick compare links */}
       <div className="flex flex-wrap items-center gap-2 mt-4">
