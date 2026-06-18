@@ -3927,6 +3927,91 @@ export const TOOLS_DATA: AITool[] = [
   { id: 'skyscanner-ai', name: 'Skyscanner AI', category: 'travel',
     description: { en: "AI flight and travel search — find cheapest flights with AI price alerts and flexible date search.", fr: "Recherche de vols IA — trouvez les vols les moins chers avec alertes de prix IA.", es: "Búsqueda de vuelos IA — encuentra los vuelos más baratos con alertas de precio IA.", ar: "بحث رحلات ذكي لإيجاد أرخص الرحلات مع تنبيهات الأسعار الذكية والتواريخ المرنة." },
     rating: 4.6, pricing: 'Free', pricingLocalized: { en: 'Free', fr: 'Gratuit', es: 'Gratis', ar: 'مجاني' }, websiteUrl: 'https://skyscanner.com', views: 90000 },
+  // ===== WEEKLY UPDATE (Jun 2026) — new trending tools =====
+  {
+    id: 'google-veo',
+    name: 'Google Veo',
+    category: 'video',
+    description: {
+      en: "Google DeepMind's flagship AI video generator that creates high-resolution clips with synchronized audio, sound effects and lip-sync from a text prompt or a reference image.",
+      fr: "Le générateur vidéo IA phare de Google DeepMind, qui crée des clips haute résolution avec audio synchronisé, effets sonores et synchronisation labiale à partir d'un texte ou d'une image de référence.",
+      es: "El generador de vídeo con IA insignia de Google DeepMind, que crea clips en alta resolución con audio sincronizado, efectos de sonido y sincronización labial a partir de un texto o una imagen de referencia.",
+      ar: "مولّد الفيديو الرائد بالذكاء الاصطناعي من Google DeepMind، ينشئ مقاطع عالية الدقة مع صوت متزامن ومؤثرات صوتية ومزامنة شفاه انطلاقاً من نص أو صورة مرجعية."
+    },
+    rating: 4.7,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free in Google Vids / Google AI Pro $19.99/mo',
+      fr: 'Gratuit dans Google Vids / Google AI Pro 19,99$/mois',
+      es: 'Gratis en Google Vids / Google AI Pro $19.99/mes',
+      ar: 'مجاني في Google Vids / خطة Google AI Pro بـ 19.99 دولار شهرياً'
+    },
+    websiteUrl: 'https://deepmind.google/models/veo/',
+    views: 21000,
+    company: 'Google DeepMind', founded: '2024', hasAPI: true, hasMobileApp: true,
+    releaseDate: 'May 2024', lastUpdate: 'Jun 2026',
+    pros: ['Native synchronized audio & sound effects', 'Strong physics and motion realism', 'Available in the Gemini app, Flow, Vids and the API', 'Free access through Google Vids', '1080p and 4K output tiers'],
+    cons: ['Best quality tiers are credit-limited', 'API pricing adds up for long clips', 'Strict content and usage policies', 'Region availability varies'],
+    tags: ['Video', 'Text-to-Video', 'Image-to-Video', 'Audio', 'Google'],
+    useCases: ['Social media video clips', 'Ad creatives & product showcases', 'Short film & storyboard prototyping', 'YouTube Shorts content'],
+    verdict: 'Google Veo is the best all-around AI video generator for creators who want realistic motion plus built-in synchronized audio. The free access via Google Vids makes it an easy entry point, while the API and Flow serve heavier production workflows.',
+  },
+  {
+    id: 'genspark-ai',
+    name: 'Genspark',
+    category: 'agents',
+    description: {
+      en: "All-in-one AI workspace built around an autonomous 'Super Agent' that plans and completes multi-step tasks — research, slide decks, images, meeting notes and even placing real phone calls on your behalf.",
+      fr: "Espace de travail IA tout-en-un articulé autour d'un « Super Agent » autonome qui planifie et réalise des tâches en plusieurs étapes — recherche, présentations, images, comptes-rendus de réunion et même passer de vrais appels téléphoniques pour vous.",
+      es: "Espacio de trabajo de IA todo en uno construido en torno a un 'Súper Agente' autónomo que planifica y completa tareas de varios pasos: investigación, presentaciones, imágenes, notas de reuniones e incluso hacer llamadas telefónicas reales por ti.",
+      ar: "مساحة عمل ذكاء اصطناعي شاملة مبنية حول «وكيل خارق» مستقل يخطّط وينجز المهام متعددة الخطوات — البحث والعروض التقديمية والصور وملاحظات الاجتماعات بل وإجراء مكالمات هاتفية حقيقية نيابةً عنك."
+    },
+    rating: 4.5,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free (100 credits/day) / Plus $24.99/mo',
+      fr: 'Gratuit (100 crédits/jour) / Plus 24,99$/mois',
+      es: 'Gratis (100 créditos/día) / Plus $24.99/mes',
+      ar: 'مجاني (100 رصيد/يوم) / Plus بـ 24.99 دولار شهرياً'
+    },
+    websiteUrl: 'https://www.genspark.ai',
+    views: 17000,
+    company: 'Genspark', founded: '2024', hasAPI: true, hasMobileApp: true,
+    releaseDate: 'Apr 2025', lastUpdate: 'Jun 2026',
+    pros: ['Autonomous multi-step Super Agent', 'Orchestrates multiple LLMs and 80+ tools', 'Built-in AI Slides, images and meeting notes', '"Call For Me" places real phone calls', 'Generous free plan (100 credits/day)'],
+    cons: ['Credit system can be limiting on free tier', 'Advanced calling/dev features need higher tiers', 'Quality varies by task complexity'],
+    tags: ['AI Agent', 'Super Agent', 'Research', 'Slides', 'Automation'],
+    useCases: ['Autonomous research & reports', 'Generating slide decks', 'Meeting notes & summaries', 'Automated outreach calls'],
+    verdict: 'Genspark is a strong pick for users who want a single autonomous agent that can research, build slides and handle real-world tasks like phone calls. The free daily credits make it easy to try before upgrading.',
+  },
+  {
+    id: 'wan-video',
+    name: 'Wan',
+    category: 'video',
+    description: {
+      en: "Alibaba's open-source AI video model family that generates up to 15-second clips with native audio-visual sync, reference-to-video character consistency and multi-shot storytelling.",
+      fr: "La famille de modèles vidéo IA open source d'Alibaba, qui génère des clips jusqu'à 15 secondes avec synchronisation audio-vidéo native, cohérence de personnage par image de référence et narration multi-plans.",
+      es: "La familia de modelos de vídeo con IA de código abierto de Alibaba, que genera clips de hasta 15 segundos con sincronización audiovisual nativa, consistencia de personaje por imagen de referencia y narración multiplano.",
+      ar: "عائلة نماذج الفيديو مفتوحة المصدر من Alibaba، تولّد مقاطع تصل إلى 15 ثانية مع مزامنة صوتية-بصرية أصلية وثبات الشخصية عبر صورة مرجعية وسرد متعدد اللقطات."
+    },
+    rating: 4.5,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Open-source / free & paid hosted plans',
+      fr: 'Open source / formules hébergées gratuites et payantes',
+      es: 'Código abierto / planes alojados gratis y de pago',
+      ar: 'مفتوح المصدر / خطط مستضافة مجانية ومدفوعة'
+    },
+    websiteUrl: 'https://wan.video',
+    views: 13000,
+    company: 'Alibaba (Tongyi Lab)', founded: '2025', hasAPI: true, hasMobileApp: false,
+    releaseDate: 'Dec 2025', lastUpdate: 'Jun 2026',
+    pros: ['Fully open-source (Apache 2.0)', 'Native audio with accurate lip-sync', 'Reference-to-video character consistency', 'Up to 15-second clips in one run', 'Text-to-video and image-to-video'],
+    cons: ['Self-hosting needs strong GPUs', 'Setup more technical than closed tools', 'Hosted compute costs for heavy use'],
+    tags: ['Video', 'Open Source', 'Text-to-Video', 'Image-to-Video', 'Audio'],
+    useCases: ['Open-source video pipelines', 'Character-consistent short videos', 'Social & marketing clips', 'Research & fine-tuning'],
+    verdict: 'Wan is the standout open-source choice for developers and studios that want full control over an AI video model, including weights and code. It rivals closed tools on audio sync and character consistency while staying free to self-host.',
+  },
 ];
 
 export function getToolById(id: string): AITool | undefined {

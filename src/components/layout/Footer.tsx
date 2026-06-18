@@ -29,6 +29,12 @@ const LINKS = {
   ],
 };
 
+// Reciprocal "Featured on" partner directories (dofollow links).
+const FEATURED_ON = [
+  { label: 'Dofollow.Tools', href: 'https://dofollow.tools' },
+  { label: 'AI Toolz Dir', href: 'https://www.aitoolzdir.com' },
+];
+
 export default function Footer() {
   return (
     <footer className="w-full border-t border-gray-200 bg-gray-50 mt-20">
@@ -110,6 +116,19 @@ export default function Footer() {
               className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold text-[#7C3AED] hover:text-white hover:bg-[#7C3AED] border border-[#7C3AED]/40 hover:border-[#7C3AED] px-3 py-1.5 rounded-lg transition-all">
               💼 Advertise with us →
             </Link>
+          </div>
+        </div>
+
+        {/* Featured on — partner directories */}
+        <div className="border-t border-gray-200 pt-6 mb-6">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <span className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold">Featured on</span>
+            {FEATURED_ON.map(p => (
+              <a key={p.label} href={p.href} target="_blank" rel="noopener"
+                className="text-xs text-gray-500 hover:text-violet-700 transition-colors">
+                {p.label}
+              </a>
+            ))}
           </div>
         </div>
 

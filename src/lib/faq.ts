@@ -2868,4 +2868,94 @@ export const TOOL_FAQS: Record<string, FAQItem[]> = {
       },
     },
   ],
+  'google-veo': [
+    {
+      question: {
+        en: 'Is Google Veo free to use?',
+        fr: 'Google Veo est-il gratuit ?',
+        es: '¿Es Google Veo gratis?',
+        ar: 'هل Google Veo مجاني؟',
+      },
+      answer: {
+        en: 'You can generate Veo video clips for free inside Google Vids with any Google account. For higher limits and the most advanced quality tiers, Veo is available through Google AI Pro ($19.99/mo), Google AI Ultra, and the Gemini API with pay-as-you-go per-second pricing.',
+        fr: 'Vous pouvez générer des clips Veo gratuitement dans Google Vids avec n\'importe quel compte Google. Pour des limites plus élevées et les meilleures qualités, Veo est accessible via Google AI Pro (19,99$/mois), Google AI Ultra et l\'API Gemini avec une facturation à la seconde.',
+        es: 'Puedes generar clips de Veo gratis dentro de Google Vids con cualquier cuenta de Google. Para límites más altos y las mejores calidades, Veo está disponible mediante Google AI Pro ($19.99/mes), Google AI Ultra y la API de Gemini con pago por segundo.',
+        ar: 'يمكنك إنشاء مقاطع Veo مجاناً داخل Google Vids بأي حساب Google. وللحصول على حدود أعلى وأفضل مستويات الجودة، يتوفر Veo عبر Google AI Pro (19.99 دولار شهرياً) وGoogle AI Ultra وواجهة Gemini API بنظام الدفع لكل ثانية.',
+      },
+    },
+    {
+      question: {
+        en: 'What makes Google Veo different from other AI video generators?',
+        fr: 'Qu\'est-ce qui distingue Google Veo des autres générateurs vidéo IA ?',
+        es: '¿Qué diferencia a Google Veo de otros generadores de vídeo con IA?',
+        ar: 'ما الذي يميّز Google Veo عن مولّدات الفيديو الأخرى؟',
+      },
+      answer: {
+        en: 'Veo generates native synchronized audio — including speech with lip-sync, sound effects and ambient sound — at the same time as the video, and is known for strong physical realism in motion. It is also deeply integrated across Google products like the Gemini app, Flow, Google Vids and YouTube Shorts.',
+        fr: 'Veo génère un audio synchronisé natif — voix avec synchronisation labiale, effets sonores et sons d\'ambiance — en même temps que la vidéo, et se distingue par un réalisme de mouvement marqué. Il est aussi intégré dans les produits Google comme l\'app Gemini, Flow, Google Vids et YouTube Shorts.',
+        es: 'Veo genera audio sincronizado nativo — voz con sincronización labial, efectos de sonido y sonido ambiente — al mismo tiempo que el vídeo, y destaca por su realismo de movimiento. Además está integrado en productos de Google como la app Gemini, Flow, Google Vids y YouTube Shorts.',
+        ar: 'يولّد Veo صوتاً متزامناً أصلياً — يشمل الكلام مع مزامنة الشفاه والمؤثرات الصوتية والصوت المحيط — في الوقت نفسه مع الفيديو، ويتميّز بواقعية حركة قوية. كما أنه مدمج بعمق في منتجات Google مثل تطبيق Gemini وFlow وGoogle Vids وYouTube Shorts.',
+      },
+    },
+  ],
+  'genspark-ai': [
+    {
+      question: {
+        en: 'Is Genspark free?',
+        fr: 'Genspark est-il gratuit ?',
+        es: '¿Es Genspark gratis?',
+        ar: 'هل Genspark مجاني؟',
+      },
+      answer: {
+        en: 'Genspark has a free plan that gives you around 100 credits per day, about 1GB of AI Drive storage, and basic access to the Super Agent. Paid tiers include Plus (around $24.99/mo with roughly 10,000–12,000 monthly credits) and a Pro/Team tier for heavier use and team workspaces.',
+        fr: 'Genspark propose un plan gratuit offrant environ 100 crédits par jour, près d\'1 Go de stockage AI Drive et un accès de base au Super Agent. Les offres payantes incluent Plus (environ 24,99$/mois avec à peu près 10 000 à 12 000 crédits mensuels) et un palier Pro/Team pour un usage intensif et des espaces d\'équipe.',
+        es: 'Genspark tiene un plan gratuito que ofrece alrededor de 100 créditos al día, cerca de 1 GB de almacenamiento en AI Drive y acceso básico al Súper Agente. Los niveles de pago incluyen Plus (en torno a $24.99/mes con aproximadamente 10,000–12,000 créditos mensuales) y un nivel Pro/Team para uso intensivo y espacios de equipo.',
+        ar: 'يوفر Genspark خطة مجانية تمنحك نحو 100 رصيد يومياً، وقرابة 1 غيغابايت من تخزين AI Drive، ووصولاً أساسياً إلى الوكيل الخارق. وتشمل الخطط المدفوعة Plus (نحو 24.99 دولار شهرياً مع ما يقارب 10,000–12,000 رصيد شهري) وخطة Pro/Team للاستخدام المكثّف ومساحات الفرق.',
+      },
+    },
+    {
+      question: {
+        en: 'What can the Genspark Super Agent do?',
+        fr: 'Que peut faire le Super Agent de Genspark ?',
+        es: '¿Qué puede hacer el Súper Agente de Genspark?',
+        ar: 'ماذا يستطيع الوكيل الخارق من Genspark أن يفعل؟',
+      },
+      answer: {
+        en: 'The Super Agent plans and completes multi-step tasks autonomously: it can research a topic, build a slide deck, generate images, take meeting notes, and even place real phone calls on your behalf with its "Call For Me" feature. It orchestrates multiple LLMs and more than 80 integrated tools to choose the best one for each step.',
+        fr: 'Le Super Agent planifie et réalise des tâches en plusieurs étapes de façon autonome : il peut faire une recherche, créer une présentation, générer des images, prendre des notes de réunion et même passer de vrais appels téléphoniques pour vous grâce à sa fonction « Call For Me ». Il orchestre plusieurs LLM et plus de 80 outils intégrés pour choisir le meilleur à chaque étape.',
+        es: 'El Súper Agente planifica y completa tareas de varios pasos de forma autónoma: puede investigar un tema, crear una presentación, generar imágenes, tomar notas de reuniones e incluso hacer llamadas telefónicas reales por ti con su función "Call For Me". Orquesta varios LLM y más de 80 herramientas integradas para elegir la mejor en cada paso.',
+        ar: 'يخطّط الوكيل الخارق وينجز المهام متعددة الخطوات بشكل مستقل: يمكنه البحث في موضوع، وبناء عرض شرائح، وتوليد الصور، وتدوين ملاحظات الاجتماعات، بل وإجراء مكالمات هاتفية حقيقية نيابةً عنك عبر ميزة «Call For Me». وينسّق بين عدة نماذج لغوية وأكثر من 80 أداة مدمجة لاختيار الأنسب لكل خطوة.',
+      },
+    },
+  ],
+  'wan-video': [
+    {
+      question: {
+        en: 'Is Wan really open source?',
+        fr: 'Wan est-il vraiment open source ?',
+        es: '¿Wan es realmente de código abierto?',
+        ar: 'هل Wan مفتوح المصدر فعلاً؟',
+      },
+      answer: {
+        en: 'Yes. Wan is a family of open-source video models from Alibaba\'s Tongyi Lab, released with weights, training code and inference scripts under the Apache 2.0 license. You can self-host it for free if you have suitable GPUs, or use hosted plans on wan.video without managing infrastructure.',
+        fr: 'Oui. Wan est une famille de modèles vidéo open source du Tongyi Lab d\'Alibaba, publiée avec les poids, le code d\'entraînement et les scripts d\'inférence sous licence Apache 2.0. Vous pouvez l\'héberger gratuitement avec des GPU adaptés, ou utiliser les formules hébergées sur wan.video sans gérer l\'infrastructure.',
+        es: 'Sí. Wan es una familia de modelos de vídeo de código abierto del Tongyi Lab de Alibaba, publicada con pesos, código de entrenamiento y scripts de inferencia bajo licencia Apache 2.0. Puedes alojarlo gratis con GPU adecuadas o usar planes alojados en wan.video sin gestionar infraestructura.',
+        ar: 'نعم. Wan عائلة من نماذج الفيديو مفتوحة المصدر من Tongyi Lab التابع لـ Alibaba، صدرت مع الأوزان وكود التدريب وسكربتات الاستدلال بترخيص Apache 2.0. يمكنك استضافتها مجاناً إذا توفّرت لديك وحدات GPU مناسبة، أو استخدام الخطط المستضافة على wan.video دون إدارة البنية التحتية.',
+      },
+    },
+    {
+      question: {
+        en: 'What can Wan generate?',
+        fr: 'Que peut générer Wan ?',
+        es: '¿Qué puede generar Wan?',
+        ar: 'ماذا يمكن أن يولّد Wan؟',
+      },
+      answer: {
+        en: 'Wan supports both text-to-video and image-to-video, generating clips up to about 15 seconds with native audio-visual synchronization, including speech with lip-sync and sound effects. Its reference-to-video feature keeps a character\'s appearance consistent across multiple clips for multi-shot storytelling.',
+        fr: 'Wan prend en charge le texte-vers-vidéo et l\'image-vers-vidéo, en générant des clips jusqu\'à environ 15 secondes avec synchronisation audio-vidéo native, voix avec synchronisation labiale et effets sonores inclus. Sa fonction image de référence maintient l\'apparence d\'un personnage cohérente sur plusieurs clips pour une narration multi-plans.',
+        es: 'Wan admite texto a vídeo e imagen a vídeo, generando clips de hasta unos 15 segundos con sincronización audiovisual nativa, incluida voz con sincronización labial y efectos de sonido. Su función de imagen de referencia mantiene la apariencia de un personaje consistente en varios clips para narrar en varios planos.',
+        ar: 'يدعم Wan التحويل من نص إلى فيديو ومن صورة إلى فيديو، مولّداً مقاطع تصل إلى نحو 15 ثانية مع مزامنة صوتية-بصرية أصلية تشمل الكلام مع مزامنة الشفاه والمؤثرات الصوتية. وتحافظ ميزة الصورة المرجعية على ثبات مظهر الشخصية عبر عدة مقاطع للسرد متعدد اللقطات.',
+      },
+    },
+  ],
 };
