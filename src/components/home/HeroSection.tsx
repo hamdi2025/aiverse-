@@ -12,6 +12,14 @@ interface HeroSectionProps {
   onCategoryChange: (category: string) => void;
 }
 
+const CHIP_STYLES = [
+  { grad: 'from-violet-500 to-purple-600', glow: 'rgba(139,92,246,0.75)' },
+  { grad: 'from-cyan-500 to-blue-500', glow: 'rgba(6,182,212,0.75)' },
+  { grad: 'from-orange-500 to-amber-500', glow: 'rgba(249,115,22,0.75)' },
+  { grad: 'from-emerald-500 to-green-600', glow: 'rgba(16,185,129,0.75)' },
+  { grad: 'from-pink-500 to-rose-500', glow: 'rgba(236,72,153,0.75)' },
+];
+
 function coloredSubtitle(raw: string): React.ReactNode {
   const parts = raw.split(/(<agents>.*?<\/agents>|<tools>.*?<\/tools>)/g);
   return parts.map((part, i) => {
@@ -95,16 +103,36 @@ export default function HeroSection({ onSearch, selectedCategory, onCategoryChan
 
       {badgeItems.length > 1 && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex flex-wrap justify-center gap-3 mt-6"
+          className="mt-8 w-full max-w-2xl"
         >
-          {badgeItems.map((item: string, i: number) => (
-            <span key={i} className="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-3 py-1.5 rounded-full">
-              {item.trim()}
-            </span>
-          ))}
+          <div className="rounded-2xl border-2 border-gray-200 bg-white shadow-md px-5 py-5">
+            <div className="flex flex-wrap justify-center gap-3">
+              {badgeItems.map((item: string, i: number) => {
+                const s = CHIP_STYLES[i % CHIP_STYLES.length];
+                return (
+                  <motion.span
+                    key={i}
+                    animate={{
+                      opacity: [1, 0.45, 1],
+                      scale: [1, 1.07, 1],
+                      boxShadow: [
+                        `0 0 0px ${s.glow}`,
+                        `0 0 16px ${s.glow}`,
+                        `0 0 0px ${s.glow}`,
+                      ],
+                    }}
+                    transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut', delay: i * 0.3 }}
+                    className={`text-xs sm:text-sm font-bold text-white bg-gradient-to-r ${s.grad} px-4 py-2 rounded-full`}
+                  >
+                    {item.trim()}
+                  </motion.span>
+                );
+              })}
+            </div>
+          </div>
         </motion.div>
       )}
     </section>

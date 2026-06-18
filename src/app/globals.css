@@ -24,6 +24,10 @@
   display: inline-block;
   font-weight: 900;
 }
+/* Blinking "NEW"/"HOT" badge to grab attention */
+.badge-blink {
+  animation: blink 0.9s ease-in-out infinite;
+}
 
 /* Hero title gradients */
 .gradient-power {
