@@ -64,8 +64,8 @@ export default function CategoryFilter({ selectedCategory, onCategoryChange }: C
               )}>
               {cat.icon}{cat.label}
               {cat.badge && (
-                <span className={clsx('badge-blink text-[9px] font-bold px-1.5 py-0.5 rounded-full border',
-                  cat.badge === 'HOT' ? 'text-amber-700 bg-amber-100 border-amber-300' : 'text-green-700 bg-green-100 border-green-300'
+                <span className={clsx('text-[9px] font-bold px-1.5 py-0.5 rounded-full border',
+                  cat.badge === 'HOT' ? 'badge-blink text-amber-700 bg-amber-100 border-amber-300' : 'badge-blink-new text-green-700 bg-green-100 border-green-300'
                 )}>{cat.badge}</span>
               )}
             </button>

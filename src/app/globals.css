@@ -24,9 +24,17 @@
   display: inline-block;
   font-weight: 900;
 }
-/* Blinking "NEW"/"HOT" badge to grab attention */
+/* Blinking "HOT" badge to grab attention */
 .badge-blink {
   animation: blink 0.9s ease-in-out infinite;
+}
+/* "NEW" badge: blink alternating green <-> red */
+@keyframes newRedGreen {
+  0%, 50%      { background-color: #dcfce7; color: #15803d; border-color: #86efac; }
+  50.01%, 100% { background-color: #fee2e2; color: #dc2626; border-color: #fca5a5; }
+}
+.badge-blink-new {
+  animation: newRedGreen 1s step-end infinite;
 }
 
 /* Hero title gradients */
