@@ -774,6 +774,34 @@ export const TOOLS_DATA: AITool[] = [
     verdict: 'v0 by Vercel is the best pick for React/Next.js developers who want clean, production-ready UI code generated from simple prompts.',
   },
   {
+    id: 'roblox-gui-maker',
+    name: 'Roblox GUI Maker',
+    category: 'code',
+    description: {
+      en: "Prompt-based Roblox Studio GUI generator that creates ScreenGui-style layouts and Lua starter code.",
+      fr: "Générateur d'interfaces Roblox Studio basé sur prompt, avec mises en page ScreenGui et code Lua de départ.",
+      es: "Generador de interfaces para Roblox Studio basado en prompts que crea diseños ScreenGui y código Lua inicial.",
+      ar: "مولد واجهات Roblox Studio قائم على الأوامر النصية ينشئ تخطيطات ScreenGui وكود Lua أولياً."
+    },
+    rating: 4.4,
+    pricing: 'Free',
+    pricingLocalized: {
+      en: 'Free',
+      fr: 'Gratuit',
+      es: 'Gratis',
+      ar: 'مجاني'
+    },
+    websiteUrl: 'https://robloxguimaker.dev/',
+    views: 8600,
+    company: 'Roblox GUI Maker', founded: '2026', hasAPI: false, hasMobileApp: false,
+    releaseDate: '2026', lastUpdate: 'Jun 2026',
+    pros: ['Purpose-built for Roblox Studio GUI prototyping', 'Generates Lua starter code', 'Fast prompt-to-layout workflow', 'Free to use in the browser'],
+    cons: ['Generated code still needs review in Roblox Studio', 'Focused on GUI prototyping rather than full game logic', 'Best results come from specific UI prompts'],
+    tags: ['Code', 'Roblox', 'Lua', 'UI Generation', 'Game Development'],
+    useCases: ['Roblox ScreenGui prototyping', 'Lua UI starter code', 'Game interface planning', 'Developer workflow acceleration'],
+    verdict: 'Roblox GUI Maker is a practical choice for Roblox creators who want to draft game interfaces quickly and then adapt the generated Lua code inside Roblox Studio.',
+  },
+  {
     id: 'replit-ai',
     name: 'Replit AI',
     category: 'code',
