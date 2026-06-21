@@ -79,6 +79,7 @@ export async function generateMetadata({ params }: Props) {
         'fr': `${BASE}/fr/compare/${params.slug}`,
         'es': `${BASE}/es/compare/${params.slug}`,
         'ar': `${BASE}/ar/compare/${params.slug}`,
+        'x-default': `${BASE}/en/compare/${params.slug}`,
       },
     },
     openGraph: {

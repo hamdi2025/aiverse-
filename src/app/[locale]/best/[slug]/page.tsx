@@ -28,6 +28,7 @@ export async function generateMetadata({ params }: Props) {
       languages: {
         en: `${BASE}/en/best/${g.slug}`, fr: `${BASE}/fr/best/${g.slug}`,
         es: `${BASE}/es/best/${g.slug}`, ar: `${BASE}/ar/best/${g.slug}`,
+        'x-default': `${BASE}/en/best/${g.slug}`,
       },
     },
     openGraph: {

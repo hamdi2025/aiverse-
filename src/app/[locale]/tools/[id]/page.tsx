@@ -94,7 +94,7 @@ export default async function ToolPage({ params }: Props) {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: tool.name,
-    description: tool.description.en,
+    description: tool.description[locale] || tool.description.en,
     applicationCategory: 'AIApplication',
     operatingSystem: 'Web',
     offers: {

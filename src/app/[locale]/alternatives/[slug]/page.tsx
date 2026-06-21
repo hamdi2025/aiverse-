@@ -64,6 +64,7 @@ export async function generateMetadata({ params }: Props) {
         'fr': `${BASE}/fr/alternatives/${params.slug}`,
         'es': `${BASE}/es/alternatives/${params.slug}`,
         'ar': `${BASE}/ar/alternatives/${params.slug}`,
+        'x-default': `${BASE}/en/alternatives/${params.slug}`,
       },
     },
     openGraph: {
