@@ -73,12 +73,12 @@ export default function HomePage({ params }: { params: { locale: string } }) {
     <>
       <HomePageClient />
       <section className="max-w-4xl mx-auto px-4 py-12">
-        <h2 className="text-2xl font-black text-white mb-6 text-center">{HOME_FAQ_TITLE[locale]}</h2>
+        <h2 className="text-2xl font-black text-gray-900 mb-6 text-center">{HOME_FAQ_TITLE[locale]}</h2>
         <div className="space-y-4">
           {faq.map((item, i) => (
-            <div key={i} className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5">
-              <h3 className="text-white font-semibold mb-1.5">{item.q}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{item.a}</p>
+            <div key={i} className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
+              <h3 className="text-gray-900 font-semibold mb-1.5">{item.q}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{item.a}</p>
             </div>
           ))}
         </div>

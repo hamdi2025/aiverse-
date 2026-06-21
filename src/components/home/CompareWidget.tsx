@@ -111,11 +111,11 @@ export default function CompareWidget() {
           <select
             value={category}
             onChange={e => handleCategoryChange(e.target.value)}
-            className="w-full bg-sky-500/25 hover:bg-sky-500/40 border-2 border-sky-400/80 hover:border-sky-300 rounded-2xl pl-4 pr-10 py-3.5 text-gray-900 text-sm font-bold focus:outline-none focus:border-sky-300 focus:ring-2 focus:ring-sky-400/60 transition-all cursor-pointer appearance-none"
+            className="w-full bg-sky-100 hover:bg-sky-200 border-2 border-sky-400 hover:border-sky-500 rounded-2xl pl-4 pr-10 py-3.5 text-gray-900 text-sm font-bold focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-400/60 transition-all cursor-pointer appearance-none"
           >
-            <option value="" className="bg-[#0A0A0F]">{L.selectCat}</option>
+            <option value="" className="bg-white text-gray-900">{L.selectCat}</option>
             {CATEGORIES.map(cat => (
-              <option key={cat.id} value={cat.id} className="bg-[#0A0A0F]">
+              <option key={cat.id} value={cat.id} className="bg-white text-gray-900">
                 {cat[locale] || cat.en}
               </option>
             ))}
@@ -129,11 +129,11 @@ export default function CompareWidget() {
             value={tool1}
             onChange={e => setTool1(e.target.value)}
             disabled={!category}
-            className="w-full bg-orange-500/25 hover:bg-orange-500/40 border-2 border-orange-400/80 hover:border-orange-300 rounded-2xl pl-4 pr-10 py-3.5 text-gray-900 text-sm font-bold focus:outline-none focus:border-orange-300 focus:ring-2 focus:ring-orange-400/60 transition-all cursor-pointer appearance-none disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-white/[0.04] disabled:border-white/15"
+            className="w-full bg-orange-100 hover:bg-orange-200 border-2 border-orange-400 hover:border-orange-500 rounded-2xl pl-4 pr-10 py-3.5 text-gray-900 text-sm font-bold focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-400/60 transition-all cursor-pointer appearance-none disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-gray-100 disabled:border-gray-200"
           >
-            <option value="" className="bg-[#0A0A0F]">{category ? L.tool1 : L.pickCat}</option>
+            <option value="" className="bg-white text-gray-900">{category ? L.tool1 : L.pickCat}</option>
             {categoryTools.map(t => (
-              <option key={t.id} value={t.id} disabled={t.id === tool2} className="bg-[#0A0A0F]">{t.name}</option>
+              <option key={t.id} value={t.id} disabled={t.id === tool2} className="bg-white text-gray-900">{t.name}</option>
             ))}
           </select>
           <ChevronDown className="w-4 h-4 text-orange-600 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
@@ -148,7 +148,7 @@ export default function CompareWidget() {
             className={`w-full min-h-[48px] flex flex-col items-center justify-center gap-1 rounded-2xl font-black text-xs transition-all px-2 ${
               canCompare
                 ? 'bg-gradient-to-tr from-rose-500 via-red-500 to-orange-500 hover:opacity-90 text-white shadow-lg shadow-red-900/40 hover:scale-105'
-                : 'bg-white/10 text-white/70 border-2 border-white/30 cursor-not-allowed'
+                : 'bg-gray-100 text-gray-400 border-2 border-gray-200 cursor-not-allowed'
             }`}
           >
             <Zap className="w-4 h-4" /> {L.btn}
@@ -161,11 +161,11 @@ export default function CompareWidget() {
             value={tool2}
             onChange={e => setTool2(e.target.value)}
             disabled={!category}
-            className="w-full bg-yellow-500/25 hover:bg-yellow-500/40 border-2 border-yellow-400/80 hover:border-yellow-300 rounded-2xl pl-4 pr-10 py-3.5 text-gray-900 text-sm font-bold focus:outline-none focus:border-yellow-300 focus:ring-2 focus:ring-yellow-400/60 transition-all cursor-pointer appearance-none disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-white/[0.04] disabled:border-white/15"
+            className="w-full bg-yellow-100 hover:bg-yellow-200 border-2 border-yellow-400 hover:border-yellow-500 rounded-2xl pl-4 pr-10 py-3.5 text-gray-900 text-sm font-bold focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-400/60 transition-all cursor-pointer appearance-none disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-gray-100 disabled:border-gray-200"
           >
-            <option value="" className="bg-[#0A0A0F]">{category ? L.tool2 : L.pickCat}</option>
+            <option value="" className="bg-white text-gray-900">{category ? L.tool2 : L.pickCat}</option>
             {categoryTools.map(t => (
-              <option key={t.id} value={t.id} disabled={t.id === tool1} className="bg-[#0A0A0F]">{t.name}</option>
+              <option key={t.id} value={t.id} disabled={t.id === tool1} className="bg-white text-gray-900">{t.name}</option>
             ))}
           </select>
           <ChevronDown className="w-4 h-4 text-yellow-600 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />

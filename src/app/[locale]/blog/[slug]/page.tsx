@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: Props) {
         fr: `${BASE}/fr/blog/${post.slug}`,
         es: `${BASE}/es/blog/${post.slug}`,
         ar: `${BASE}/ar/blog/${post.slug}`,
+        'x-default': `${BASE}/en/blog/${post.slug}`,
       },
     },
     openGraph: {

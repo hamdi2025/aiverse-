@@ -71,7 +71,7 @@ export default function ToolModal({ tool, onClose }: ToolModalProps) {
 
       {/* Modal */}
       <div
-        className={`relative w-full max-w-lg rounded-2xl border bg-[#0E0E1A] bg-gradient-to-br ${colorClass} shadow-2xl overflow-hidden`}
+        className={`relative w-full max-w-lg rounded-2xl border border-gray-200 bg-white bg-gradient-to-br ${colorClass} shadow-2xl overflow-hidden`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Ambient glow */}

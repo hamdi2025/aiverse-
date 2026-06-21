@@ -43,9 +43,18 @@ export async function generateMetadata({ params }: Props) {
     ar: `${tool.name} — مراجعة، أسعار وبدائل 2026 | Aiverse`,
   };
 
+  // CTR-optimized meta descriptions (~150 chars, with call-to-action)
+  const descMap: Record<string, string> = {
+    en: `${tool.name} review (2026): features, pricing, pros, cons & the best alternatives. Compare AI tools free on AIverse.`,
+    fr: `${tool.name} (2026) : avis, fonctionnalités, prix, avantages, inconvénients & meilleures alternatives. Comparez gratuitement sur AIverse.`,
+    es: `${tool.name} (2026): reseña, funciones, precios, pros, contras y mejores alternativas. Compara gratis en AIverse.`,
+    ar: `${tool.name} (2026): مراجعة، الميزات، الأسعار، الإيجابيات والسلبيات وأفضل البدائل. قارن مجانًا على AIverse.`,
+  };
+  const metaDescription = descMap[locale] || desc;
+
   return {
     title: titleMap[locale] || `${tool.name} — Aiverse`,
-    description: desc,
+    description: metaDescription,
     keywords: keywordMap[locale],
     alternates: {
       canonical: `${BASE}/${locale}/tools/${tool.id}`,
@@ -54,11 +63,12 @@ export async function generateMetadata({ params }: Props) {
         'fr': `${BASE}/fr/tools/${tool.id}`,
         'es': `${BASE}/es/tools/${tool.id}`,
         'ar': `${BASE}/ar/tools/${tool.id}`,
+        'x-default': `${BASE}/en/tools/${tool.id}`,
       },
     },
     openGraph: {
       title: titleMap[locale] || `${tool.name} | Aiverse`,
-      description: desc,
+      description: metaDescription,
       url: `${BASE}/${locale}/tools/${tool.id}`,
       siteName: 'Aiverse',
       type: 'article',
@@ -66,7 +76,7 @@ export async function generateMetadata({ params }: Props) {
     twitter: {
       card: 'summary',
       title: titleMap[locale] || `${tool.name} | Aiverse`,
-      description: desc,
+      description: metaDescription,
     },
   };
 }
@@ -92,6 +102,21 @@ export default async function ToolPage({ params }: Props) {
       price: tool.pricing === 'Free' ? '0' : undefined,
       priceCurrency: 'USD',
       availability: 'https://schema.org/OnlineOnly',
+    },
+    // Editorial review by AIverse (honest single-source rating, not fabricated user counts)
+    review: {
+      '@type': 'Review',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: tool.rating,
+        bestRating: 5,
+        worstRating: 1,
+      },
+      author: {
+        '@type': 'Organization',
+        name: 'AIverse',
+        url: 'https://getaiverse.online',
+      },
     },
     url: outboundUrl,
   };
