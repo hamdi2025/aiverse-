@@ -145,10 +145,10 @@ export default function CompareWidget() {
             onClick={handleCompare}
             disabled={!canCompare}
             aria-label={L.btn}
-            className={`w-full min-h-[48px] flex flex-col items-center justify-center gap-1 rounded-2xl font-black text-xs transition-all px-2 ${
+            className={`w-full min-h-[48px] flex flex-col items-center justify-center gap-1 rounded-2xl font-black text-xs px-2 ${
               canCompare
-                ? 'bg-gradient-to-tr from-rose-500 via-red-500 to-orange-500 hover:opacity-90 text-white shadow-lg shadow-red-900/40 hover:scale-105'
-                : 'bg-gray-100 text-gray-400 border-2 border-gray-200 cursor-not-allowed'
+                ? 'compare-attract shadow-lg hover:opacity-90'
+                : 'bg-gray-100 text-gray-400 border-2 border-gray-200 cursor-not-allowed transition-all'
             }`}
           >
             <Zap className="w-4 h-4" /> {L.btn}
