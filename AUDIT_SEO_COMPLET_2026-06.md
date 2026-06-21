@@ -126,9 +126,28 @@ Le vrai trafic organique est donc **proche de 0** aujourd'hui. C'est le point de
 
 ---
 
-## 7. 📧 EMAIL & AFFILIATION — ⏳ À COMPLÉTER
-Le connecteur **Gmail est en erreur** au moment de l'audit (4 tentatives échouées). Je reprendrai cette partie dès qu'il répond : liste des programmes d'affiliation actifs, réponses outreach, partenariats, refus/relances.
-**Connu à ce jour :** affiliés réels actifs = HeyGen, Synthesia, HeadshotPro (via=abdelwahed) ; Lemon Squeezy **approuvé** ; placeholders restants (Jasper/Semrush via Impact, Surfer via ShareASale).
+## 7. 📧 EMAIL & AFFILIATION — ✅ COMPLÉTÉ (via brouillons Gmail)
+> Note : la lecture de l'inbox (`search_threads`) était indisponible, mais l'analyse des **brouillons Gmail** (digest automatique + outreach envoyés) a permis de reconstituer l'état complet.
+
+**Programmes d'affiliation :**
+- ✅ **Actifs/réels** : HeyGen, Synthesia, HeadshotPro (via=abdelwahed), **Pictory** (via FirstPromoter — email d'onboarding de l'affiliate manager « Ash » reçu).
+- ⏳ **En attente** :
+  - **Lemon Squeezy Affiliate Hub** — profil affilié soumis le 14/06, **pas encore approuvé**. Dès approbation → postuler à : CheatGPT, AssignmentGPT, BypassAI, FileMinutes, MagickImg, Screen Studio.
+  - **HeadshotPro** — relance envoyée le 14/06 pour une **méthode de paiement alternative** (Wise/Payoneer/virement, car PayPal indisponible au Rwanda) → pas de réponse.
+- 🔲 **Placeholders non actifs** : Jasper/Semrush (Impact), Surfer (ShareASale).
+
+**Outreach backlinks (campagne « guest posts ») — EN COURS, bon signal :**
+- **2 propositions de guest post envoyées le 17/06** (lien dofollow dans la bio auteur) :
+  1. **BusinessFirms** (businessfirms.co) — « Build vs. Buy AI in 2026 ».
+  2. **Aitude** (hello@aitude.com) — « From Point Tools to Agents ».
+- Suivi via le label Gmail **« Guest Posts »**. **Aucune réponse encore** → relance recommandée à J+7 (~24/06).
+
+**Surveillance :** un digest email automatique tourne déjà (bonne pratique).
+
+**Actions prioritaires email :**
+1. **Relancer** les 2 guest posts (BusinessFirms, Aitude) le ~24/06 si pas de réponse — ce sont des **backlinks dofollow éditoriaux à forte valeur**.
+2. Dès **Lemon Squeezy** approuvé → postuler aux 6 sous-programmes.
+3. **Relancer HeadshotPro** sur le paiement (Wise/Payoneer).
 
 ---
 

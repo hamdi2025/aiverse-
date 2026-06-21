@@ -35,6 +35,7 @@ const FEATURED_ON = [
   { label: 'AI Toolz Dir', href: 'https://www.aitoolzdir.com' },
   { label: 'SubmitAITools.org', href: 'https://submitaitools.org' },
   { label: 'Best-AI.org', href: 'https://best-ai.org' },
+  { label: 'Bowora', href: 'https://bowora.com' },
 ];
 
 export default function Footer() {
