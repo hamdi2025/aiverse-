@@ -34,6 +34,7 @@ const FEATURED_ON = [
   { label: 'Dofollow.Tools', href: 'https://dofollow.tools' },
   { label: 'AI Toolz Dir', href: 'https://www.aitoolzdir.com' },
   { label: 'SubmitAITools.org', href: 'https://submitaitools.org' },
+  { label: 'Best-AI.org', href: 'https://best-ai.org' },
 ];
 
 export default function Footer() {
