@@ -7,6 +7,10 @@ const defaultLocale = 'en';
 const intlMiddleware = createMiddleware({
   locales,
   defaultLocale,
+  // Deterministic redirects for SEO: always send the root + unprefixed URLs
+  // to /en instead of varying by the visitor's Accept-Language header.
+  localeDetection: false,
+  localePrefix: 'always',
 });
 
 const isProtectedRoute = createRouteMatcher([
