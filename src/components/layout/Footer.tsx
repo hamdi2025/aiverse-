@@ -9,6 +9,7 @@ const LINKS = {
   directory: [
     { label: 'All Tools', href: '/' },
     { label: 'Best AI Tools by Use Case', href: '/best' },
+    { label: 'Best AI Agents & LLMs 2026', href: '/ai-agents' },
     { label: 'Writing & AI', href: '/?cat=writing' },
     { label: 'Image Generation', href: '/?cat=image' },
     { label: 'Code & Dev', href: '/?cat=code' },
