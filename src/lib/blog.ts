@@ -3949,6 +3949,333 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'best-open-source-llms-2026',
+    category: 'writing',
+    emoji: '🧠',
+    publishedDate: '2026-06-23',
+    readTime: 8,
+    title: {
+      en: 'Best Open-Source LLMs in 2026: Kimi vs GLM vs MiniMax vs Qwen vs Llama',
+      fr: "Meilleurs LLM open source en 2026 : Kimi vs GLM vs MiniMax vs Qwen vs Llama",
+      es: 'Mejores LLM de código abierto en 2026: Kimi vs GLM vs MiniMax vs Qwen vs Llama',
+      ar: 'أفضل نماذج اللغة مفتوحة المصدر في 2026: Kimi مقابل GLM مقابل MiniMax مقابل Qwen مقابل Llama',
+    },
+    excerpt: {
+      en: 'Open-weight models closed the gap with GPT-5.5 and Claude in 2026. We compare Kimi K2.6, GLM 5.2, MiniMax M2.7, Qwen 3.6, Llama 4 and Hermes 4 on coding, context, price and licensing.',
+      fr: "Les modèles à poids ouverts ont rattrapé GPT-5.5 et Claude en 2026. Nous comparons Kimi K2.6, GLM 5.2, MiniMax M2.7, Qwen 3.6, Llama 4 et Hermes 4 sur le code, le contexte, le prix et la licence.",
+      es: 'Los modelos de pesos abiertos cerraron la brecha con GPT-5.5 y Claude en 2026. Comparamos Kimi K2.6, GLM 5.2, MiniMax M2.7, Qwen 3.6, Llama 4 y Hermes 4 en código, contexto, precio y licencia.',
+      ar: 'قلّصت النماذج مفتوحة الأوزان الفجوة مع GPT-5.5 وClaude في 2026. نقارن Kimi K2.6 وGLM 5.2 وMiniMax M2.7 وQwen 3.6 وLlama 4 وHermes 4 من حيث البرمجة والسياق والسعر والترخيص.',
+    },
+    sections: [
+      {
+        heading: {
+          en: 'Why open-source LLMs matter in 2026',
+          fr: 'Pourquoi les LLM open source comptent en 2026',
+          es: 'Por qué importan los LLM de código abierto en 2026',
+          ar: 'لماذا تهمّ نماذج اللغة مفتوحة المصدر في 2026',
+        },
+        body: {
+          en: 'In 2026 the gap between open and closed models narrowed dramatically. Open-weight models now tie frontier systems on several coding benchmarks while costing a fraction of the price, and they can be self-hosted so your data never leaves your infrastructure. For teams that care about cost control, privacy or the freedom to fine-tune, open models are no longer a compromise — they are often the smarter default.',
+          fr: "En 2026, l'écart entre modèles ouverts et fermés s'est fortement réduit. Les modèles à poids ouverts égalent désormais les systèmes de pointe sur plusieurs benchmarks de code tout en coûtant une fraction du prix, et ils peuvent être auto-hébergés pour que vos données ne quittent jamais votre infrastructure. Pour qui se soucie du coût, de la confidentialité ou de la liberté d'affiner, l'open source n'est plus un compromis — c'est souvent le choix le plus intelligent.",
+          es: 'En 2026 la brecha entre modelos abiertos y cerrados se redujo mucho. Los modelos de pesos abiertos ahora igualan a los sistemas de élite en varios benchmarks de código a una fracción del precio, y pueden autoalojarse para que tus datos nunca salgan de tu infraestructura. Para equipos que priorizan el coste, la privacidad o la libertad de ajustar, el código abierto ya no es un compromiso, sino a menudo la mejor opción.',
+          ar: 'في 2026 تقلّصت الفجوة بين النماذج المفتوحة والمغلقة بشكل كبير. تضاهي النماذج مفتوحة الأوزان الآن الأنظمة المتقدمة في عدة اختبارات برمجية بجزء يسير من السعر، ويمكن استضافتها ذاتياً بحيث لا تغادر بياناتك بنيتك التحتية. ولمن يهتم بالتكلفة أو الخصوصية أو حرية الضبط، لم يعد المصدر المفتوح حلاً وسطاً بل غالباً الخيار الأذكى.',
+        },
+      },
+      {
+        heading: {
+          en: 'Kimi K2.6: the open frontier leader',
+          fr: 'Kimi K2.6 : le leader open de la frontière',
+          es: 'Kimi K2.6: el líder abierto de la frontera',
+          ar: 'Kimi K2.6: المتصدّر المفتوح للحدود',
+        },
+        body: {
+          en: 'Moonshot AI\'s Kimi K2.6 is the strongest open-weight model for coding and agentic work in 2026, tying GPT-5.5 on several benchmarks with a 262K-token context and native multimodality. It is the pick when you want near-Opus capability without a closed vendor — just budget for the hardware or a hosted API, since the trillion-parameter model is heavy to run yourself.',
+          fr: "Kimi K2.6 de Moonshot AI est le modèle à poids ouverts le plus puissant pour le code et les tâches agentiques en 2026, égalant GPT-5.5 sur plusieurs benchmarks avec un contexte de 262K et une multimodalité native. C'est le choix pour une capacité proche d'Opus sans fournisseur fermé — prévoyez juste le matériel ou une API hébergée, car ce modèle à mille milliards de paramètres est lourd à exécuter soi-même.",
+          es: 'Kimi K2.6 de Moonshot AI es el modelo de pesos abiertos más potente para código y tareas agénticas en 2026, igualando a GPT-5.5 en varios benchmarks con un contexto de 262K y multimodalidad nativa. Es la elección para una capacidad casi de Opus sin un proveedor cerrado: solo presupuesta el hardware o una API alojada, ya que el modelo de un billón de parámetros es pesado de ejecutar por tu cuenta.',
+          ar: 'يُعدّ Kimi K2.6 من Moonshot AI أقوى نموذج مفتوح الأوزان للبرمجة والمهام الوكيلة في 2026، إذ يضاهي GPT-5.5 في عدة اختبارات بسياق 262 ألف رمز وقدرات متعددة الوسائط أصلية. إنه الخيار للحصول على قدرة قريبة من Opus دون مزوّد مغلق — مع تخصيص ميزانية للعتاد أو لواجهة مستضافة، فالنموذج بترليون معامل ثقيل التشغيل ذاتياً.',
+        },
+      },
+      {
+        heading: {
+          en: 'GLM 5.2, MiniMax M2.7 & Qwen 3.6: the value champions',
+          fr: 'GLM 5.2, MiniMax M2.7 et Qwen 3.6 : les champions du rapport qualité-prix',
+          es: 'GLM 5.2, MiniMax M2.7 y Qwen 3.6: los campeones de la relación calidad-precio',
+          ar: 'GLM 5.2 وMiniMax M2.7 وQwen 3.6: أبطال القيمة مقابل السعر',
+        },
+        body: {
+          en: 'GLM 5.2 is the top open-weight coding model under a permissive MIT licence, with a 1M-token context and Terminal-Bench scores just behind Claude Opus — ideal when you need to ship open weights commercially. MiniMax M2.7 wins on raw price (about $0.25 per 1M input tokens) for high-volume agentic pipelines, while Qwen 3.6 is the multilingual all-rounder that even runs on-device. All three are open weights you can fine-tune.',
+          fr: "GLM 5.2 est le meilleur modèle de code à poids ouverts sous licence MIT permissive, avec un contexte de 1M et des scores Terminal-Bench juste derrière Claude Opus — idéal pour livrer des poids ouverts en usage commercial. MiniMax M2.7 l'emporte sur le prix brut (environ 0,25 $ le million de tokens d'entrée) pour les pipelines agentiques à fort volume, tandis que Qwen 3.6 est le polyvalent multilingue qui tourne même sur l'appareil. Les trois sont des poids ouverts que vous pouvez affiner.",
+          es: 'GLM 5.2 es el mejor modelo de código de pesos abiertos bajo licencia MIT permisiva, con contexto de 1M y puntuaciones en Terminal-Bench justo detrás de Claude Opus, ideal para distribuir pesos abiertos comercialmente. MiniMax M2.7 gana en precio bruto (unos 0,25 $ por millón de tokens de entrada) para pipelines agénticos de alto volumen, mientras que Qwen 3.6 es el todoterreno multilingüe que incluso funciona en dispositivo. Los tres son pesos abiertos que puedes ajustar.',
+          ar: 'يُعدّ GLM 5.2 أفضل نموذج برمجة مفتوح الأوزان برخصة MIT متساهلة، بسياق مليون رمز ونتائج Terminal-Bench خلف Claude Opus مباشرة — مثالي لتوزيع الأوزان المفتوحة تجارياً. يتفوّق MiniMax M2.7 في السعر الخام (نحو 0.25 دولار لكل مليون رمز إدخال) لخطوط الوكلاء كثيفة الحجم، بينما Qwen 3.6 هو متعدد الاستخدامات واللغات الذي يعمل حتى على الأجهزة. وكلها أوزان مفتوحة يمكنك ضبطها.',
+        },
+      },
+      {
+        heading: {
+          en: 'How to choose: self-host vs API',
+          fr: 'Comment choisir : auto-hébergement ou API',
+          es: 'Cómo elegir: autoalojamiento o API',
+          ar: 'كيف تختار: الاستضافة الذاتية أم الواجهة البرمجية',
+        },
+        body: {
+          en: 'If privacy or long-term cost is your priority and you have GPUs, self-host an open model like GLM 5.2 or Llama 4. If you want frontier coding quality with no infrastructure, call Kimi or MiniMax through a hosted API and pay per token. For builders who need maximum control and structured output, Hermes 4 offers neutral alignment and first-class function calling. The right answer is usually a small mix: one open model for bulk, private work and a closed model for the hardest reasoning.',
+          fr: "Si la confidentialité ou le coût à long terme prime et que vous avez des GPU, auto-hébergez un modèle ouvert comme GLM 5.2 ou Llama 4. Si vous voulez une qualité de code de pointe sans infrastructure, appelez Kimi ou MiniMax via une API hébergée et payez au token. Pour les développeurs qui ont besoin d'un contrôle maximal et de sorties structurées, Hermes 4 offre un alignement neutre et un appel de fonctions de premier ordre. La bonne réponse est souvent un petit mélange : un modèle ouvert pour le volume et le privé, un modèle fermé pour le raisonnement le plus difficile.",
+          es: 'Si tu prioridad es la privacidad o el coste a largo plazo y tienes GPU, autoaloja un modelo abierto como GLM 5.2 o Llama 4. Si quieres calidad de código de élite sin infraestructura, llama a Kimi o MiniMax mediante una API alojada y paga por token. Para quienes necesitan el máximo control y salida estructurada, Hermes 4 ofrece alineación neutral y llamada a funciones de primera. La respuesta correcta suele ser una mezcla pequeña: un modelo abierto para el volumen y lo privado, y uno cerrado para el razonamiento más difícil.',
+          ar: 'إذا كانت الخصوصية أو التكلفة طويلة الأمد أولويتك ولديك وحدات معالجة رسومية، فاستضِف نموذجاً مفتوحاً مثل GLM 5.2 أو Llama 4 ذاتياً. وإذا أردت جودة برمجة متقدمة دون بنية تحتية، فاستدعِ Kimi أو MiniMax عبر واجهة مستضافة وادفع لكل رمز. وللمطوّرين الذين يحتاجون أقصى تحكّم ومخرجات منظّمة، يقدّم Hermes 4 محاذاة محايدة واستدعاء دوال متميّزاً. وغالباً ما يكون الجواب الصحيح مزيجاً صغيراً: نموذج مفتوح للعمل الكثيف والخاص، ونموذج مغلق لأصعب الاستدلال.',
+        },
+      },
+    ],
+    relatedTools: ['kimi', 'glm', 'minimax', 'qwen', 'llama', 'hermes'],
+    relatedComparisons: [],
+    faq: [
+      {
+        question: {
+          en: 'Are open-source LLMs as good as GPT-5.5 or Claude in 2026?',
+          fr: "Les LLM open source valent-ils GPT-5.5 ou Claude en 2026 ?",
+          es: '¿Los LLM de código abierto son tan buenos como GPT-5.5 o Claude en 2026?',
+          ar: 'هل نماذج اللغة مفتوحة المصدر بجودة GPT-5.5 أو Claude في 2026؟',
+        },
+        answer: {
+          en: 'On many coding and reasoning benchmarks, yes. Kimi K2.6 ties GPT-5.5 on several coding tests, and GLM 5.2, MiniMax, Qwen and Llama 4 are close behind — often at a fraction of the cost, with weights you can self-host. Closed models still lead on a few of the very hardest tasks, but the gap is small for most real work.',
+          fr: "Sur de nombreux benchmarks de code et de raisonnement, oui. Kimi K2.6 égale GPT-5.5 sur plusieurs tests de code, et GLM 5.2, MiniMax, Qwen et Llama 4 suivent de près — souvent à une fraction du coût, avec des poids auto-hébergeables. Les modèles fermés gardent l'avantage sur quelques tâches très difficiles, mais l'écart est faible pour l'essentiel du travail réel.",
+          es: 'En muchos benchmarks de código y razonamiento, sí. Kimi K2.6 iguala a GPT-5.5 en varias pruebas de código, y GLM 5.2, MiniMax, Qwen y Llama 4 vienen muy cerca, a menudo por una fracción del coste y con pesos que puedes autoalojar. Los modelos cerrados aún lideran en algunas de las tareas más difíciles, pero la diferencia es pequeña para la mayoría del trabajo real.',
+          ar: 'في كثير من اختبارات البرمجة والاستدلال، نعم. يضاهي Kimi K2.6 نموذج GPT-5.5 في عدة اختبارات برمجية، ويأتي GLM 5.2 وMiniMax وQwen وLlama 4 خلفه مباشرة — غالباً بجزء من التكلفة وبأوزان يمكنك استضافتها. لا تزال النماذج المغلقة تتصدّر في بعض أصعب المهام، لكن الفارق ضئيل لمعظم العمل الفعلي.',
+        },
+      },
+      {
+        question: {
+          en: 'Which open-source LLM is cheapest to run?',
+          fr: 'Quel LLM open source est le moins cher à exécuter ?',
+          es: '¿Qué LLM de código abierto es el más barato de ejecutar?',
+          ar: 'أي نموذج لغة مفتوح المصدر هو الأرخص تشغيلاً؟',
+        },
+        answer: {
+          en: 'Via hosted APIs, MiniMax M2.7 is among the cheapest frontier-class options at roughly $0.25 per 1M input tokens. If you self-host, smaller Qwen variants run on modest hardware, while trillion-parameter models like Kimi need serious GPUs. Always pick the smallest model that passes your quality test to keep cost and latency down.',
+          fr: "Via des API hébergées, MiniMax M2.7 fait partie des options de pointe les moins chères, à environ 0,25 $ le million de tokens d'entrée. En auto-hébergement, les petites variantes de Qwen tournent sur du matériel modeste, tandis que les modèles à mille milliards de paramètres comme Kimi exigent de gros GPU. Choisissez toujours le plus petit modèle qui passe votre test de qualité pour limiter coût et latence.",
+          es: 'Mediante APIs alojadas, MiniMax M2.7 está entre las opciones de élite más baratas, a unos 0,25 $ por millón de tokens de entrada. Si autoalojas, las variantes pequeñas de Qwen funcionan en hardware modesto, mientras que modelos de un billón de parámetros como Kimi necesitan GPU potentes. Elige siempre el modelo más pequeño que pase tu prueba de calidad para reducir coste y latencia.',
+          ar: 'عبر الواجهات المستضافة، يُعدّ MiniMax M2.7 من أرخص الخيارات المتقدمة بنحو 0.25 دولار لكل مليون رمز إدخال. وإذا استضفت ذاتياً، تعمل نسخ Qwen الأصغر على عتاد متواضع، بينما تحتاج النماذج بترليون معامل مثل Kimi إلى وحدات رسومية قوية. اختر دائماً أصغر نموذج يجتاز اختبار الجودة لديك لتقليل التكلفة وزمن الاستجابة.',
+        },
+      },
+    ],
+  },
+  {
+    slug: 'ai-agent-vs-llm-vs-coding-agent-2026',
+    category: 'agents',
+    emoji: '🤖',
+    publishedDate: '2026-06-23',
+    readTime: 6,
+    title: {
+      en: 'AI Agent vs LLM vs Coding Agent: The 2026 Beginner Guide',
+      fr: "Agent IA vs LLM vs Agent de code : le guide débutant 2026",
+      es: 'Agente de IA vs LLM vs Agente de código: la guía para principiantes 2026',
+      ar: 'وكيل الذكاء الاصطناعي مقابل نموذج اللغة مقابل وكيل البرمجة: دليل المبتدئين 2026',
+    },
+    excerpt: {
+      en: 'The word "agent" now means three very different things. This plain-English guide explains LLMs, coding agents and autonomous agents — and helps you pick the right kind for your task.',
+      fr: "Le mot « agent » recouvre désormais trois choses très différentes. Ce guide clair explique les LLM, les agents de code et les agents autonomes — et vous aide à choisir le bon type pour votre tâche.",
+      es: 'La palabra «agente» ahora significa tres cosas muy distintas. Esta guía sencilla explica los LLM, los agentes de código y los agentes autónomos, y te ayuda a elegir el tipo adecuado para tu tarea.',
+      ar: 'باتت كلمة « وكيل » تعني ثلاثة أشياء مختلفة تماماً. يشرح هذا الدليل المبسّط نماذج اللغة ووكلاء البرمجة والوكلاء المستقلين، ويساعدك على اختيار النوع المناسب لمهمتك.',
+    },
+    sections: [
+      {
+        heading: {
+          en: 'An LLM is the brain',
+          fr: 'Un LLM est le cerveau',
+          es: 'Un LLM es el cerebro',
+          ar: 'نموذج اللغة هو الدماغ',
+        },
+        body: {
+          en: 'A large language model (LLM) reads and writes text. On its own it answers questions, drafts content and reasons through problems, but it does not take actions in the world. ChatGPT, Claude, Gemini and open models like Kimi, GLM and Llama are LLMs. Think of an LLM as a very capable mind with no hands — it can tell you exactly what to do, but it cannot click a button or edit a file by itself.',
+          fr: "Un grand modèle de langage (LLM) lit et écrit du texte. Seul, il répond à des questions, rédige du contenu et raisonne, mais il n'agit pas dans le monde. ChatGPT, Claude, Gemini et des modèles ouverts comme Kimi, GLM et Llama sont des LLM. Voyez un LLM comme un esprit très capable sans mains — il peut vous dire exactement quoi faire, mais il ne peut ni cliquer ni modifier un fichier lui-même.",
+          es: 'Un gran modelo de lenguaje (LLM) lee y escribe texto. Por sí solo responde preguntas, redacta contenido y razona, pero no actúa en el mundo. ChatGPT, Claude, Gemini y modelos abiertos como Kimi, GLM y Llama son LLM. Piensa en un LLM como una mente muy capaz sin manos: puede decirte exactamente qué hacer, pero no puede hacer clic ni editar un archivo por sí mismo.',
+          ar: 'يقرأ نموذج اللغة الكبير (LLM) النص ويكتبه. بمفرده يجيب عن الأسئلة ويصيغ المحتوى ويستدلّ، لكنه لا يتصرّف في العالم. ChatGPT وClaude وGemini والنماذج المفتوحة مثل Kimi وGLM وLlama هي نماذج لغة. تخيّل نموذج اللغة كعقل قادر جداً بلا يدين — يخبرك تماماً بما تفعل لكنه لا ينقر زراً ولا يحرّر ملفاً بنفسه.',
+        },
+      },
+      {
+        heading: {
+          en: 'A coding agent builds software',
+          fr: 'Un agent de code construit du logiciel',
+          es: 'Un agente de código construye software',
+          ar: 'وكيل البرمجة يبني البرمجيات',
+        },
+        body: {
+          en: 'A coding agent uses an LLM as its brain but adds hands: it edits files, runs tests, fixes errors and opens pull requests. Codex, Devin, Claude Code, Cursor, OpenCode, Cline and Aider are coding agents. You give one a task like "add dark mode" and it actually changes the code, rather than just telling you how. They range from in-editor assistants you approve change-by-change to fully autonomous engineers that work in their own cloud.',
+          fr: "Un agent de code utilise un LLM comme cerveau mais ajoute des mains : il modifie des fichiers, lance des tests, corrige des erreurs et ouvre des pull requests. Codex, Devin, Claude Code, Cursor, OpenCode, Cline et Aider sont des agents de code. Vous lui confiez une tâche comme « ajoute le mode sombre » et il modifie réellement le code, au lieu de simplement vous expliquer comment. Ils vont de l'assistant dans l'éditeur que vous validez changement par changement à l'ingénieur entièrement autonome qui travaille dans son propre cloud.",
+          es: 'Un agente de código usa un LLM como cerebro pero añade manos: edita archivos, ejecuta pruebas, corrige errores y abre pull requests. Codex, Devin, Claude Code, Cursor, OpenCode, Cline y Aider son agentes de código. Le das una tarea como «añade el modo oscuro» y realmente cambia el código, en vez de solo decirte cómo. Van desde asistentes en el editor que apruebas cambio a cambio hasta ingenieros totalmente autónomos que trabajan en su propia nube.',
+          ar: 'يستخدم وكيل البرمجة نموذج لغة كدماغ لكنه يضيف يدين: يحرّر الملفات ويشغّل الاختبارات ويصلح الأخطاء ويفتح طلبات الدمج. Codex وDevin وClaude Code وCursor وOpenCode وCline وAider هي وكلاء برمجة. تُسند إليه مهمة مثل « أضف الوضع الداكن » فيغيّر الشيفرة فعلاً بدل أن يخبرك بالطريقة فقط. وتتراوح بين مساعد داخل المحرّر توافق على كل تغيير وبين مهندس مستقل تماماً يعمل في سحابته الخاصة.',
+        },
+      },
+      {
+        heading: {
+          en: 'An autonomous agent does everyday work',
+          fr: "Un agent autonome fait le travail quotidien",
+          es: 'Un agente autónomo hace el trabajo diario',
+          ar: 'الوكيل المستقل ينجز العمل اليومي',
+        },
+        body: {
+          en: 'An autonomous agent handles general computer work end-to-end: research, documents, spreadsheets, web tasks and more. Claude Cowork, Manus and OpenClaw are examples. Given a goal, they plan the steps, use tools, browse the web and return a finished deliverable with minimal supervision. These are the closest thing to a digital assistant that actually completes tasks rather than just chatting about them.',
+          fr: "Un agent autonome gère le travail informatique général de bout en bout : recherche, documents, tableurs, tâches web et plus. Claude Cowork, Manus et OpenClaw en sont des exemples. À partir d'un objectif, ils planifient les étapes, utilisent des outils, naviguent sur le web et renvoient un livrable fini avec un minimum de supervision. C'est ce qui se rapproche le plus d'un assistant numérique qui accomplit vraiment les tâches au lieu d'en parler.",
+          es: 'Un agente autónomo maneja el trabajo informático general de principio a fin: investigación, documentos, hojas de cálculo, tareas web y más. Claude Cowork, Manus y OpenClaw son ejemplos. Dado un objetivo, planifican los pasos, usan herramientas, navegan por la web y devuelven un entregable terminado con mínima supervisión. Es lo más parecido a un asistente digital que de verdad completa tareas en lugar de solo conversar.',
+          ar: 'يتولّى الوكيل المستقل العمل الحاسوبي العام من البداية للنهاية: بحث، مستندات، جداول، مهام ويب وغيرها. Claude Cowork وManus وOpenClaw أمثلة على ذلك. انطلاقاً من هدف، يخطّط الخطوات ويستخدم الأدوات ويتصفّح الويب ويُعيد ناتجاً مكتملاً بأقل إشراف. وهذا أقرب ما يكون لمساعد رقمي يُنجز المهام فعلاً بدل الاكتفاء بالحديث عنها.',
+        },
+      },
+      {
+        heading: {
+          en: 'Which one do you need?',
+          fr: 'De quoi avez-vous besoin ?',
+          es: '¿Cuál necesitas?',
+          ar: 'أيها تحتاج؟',
+        },
+        body: {
+          en: 'If you just want answers, drafts or analysis, an LLM chatbot is enough. If you write software, a coding agent will save the most time. If you want everyday tasks finished for you — reports, research, file work — reach for an autonomous agent. Many people use all three: an LLM for thinking, a coding agent for building, and an autonomous agent for getting routine work off their plate. Our AI agents comparison page ranks the leading options in each group.',
+          fr: "Si vous voulez seulement des réponses, des brouillons ou des analyses, un chatbot LLM suffit. Si vous écrivez du logiciel, un agent de code fera gagner le plus de temps. Si vous voulez que des tâches quotidiennes soient réalisées pour vous — rapports, recherche, fichiers — optez pour un agent autonome. Beaucoup utilisent les trois : un LLM pour réfléchir, un agent de code pour construire, un agent autonome pour déléguer la routine. Notre page de comparaison des agents IA classe les meilleures options de chaque groupe.",
+          es: 'Si solo quieres respuestas, borradores o análisis, basta un chatbot LLM. Si escribes software, un agente de código ahorra más tiempo. Si quieres que se completen tareas diarias por ti —informes, investigación, archivos— recurre a un agente autónomo. Mucha gente usa los tres: un LLM para pensar, un agente de código para construir y un agente autónomo para quitarse la rutina de encima. Nuestra página de comparación de agentes de IA clasifica las mejores opciones de cada grupo.',
+          ar: 'إذا أردت إجابات أو مسودّات أو تحليلاً فقط، يكفيك روبوت محادثة بنموذج لغة. وإذا كنت تكتب برمجيات، فوكيل البرمجة يوفّر أكبر وقت. وإذا أردت إنجاز مهام يومية نيابةً عنك — تقارير وبحث وملفات — فاختر وكيلاً مستقلاً. كثيرون يستخدمون الثلاثة: نموذج لغة للتفكير، ووكيل برمجة للبناء، ووكيل مستقل لتخفيف الأعمال الروتينية. وصفحة مقارنة وكلاء الذكاء الاصطناعي لدينا تصنّف أفضل الخيارات في كل مجموعة.',
+        },
+      },
+    ],
+    relatedTools: ['claude-cowork', 'codex', 'manus', 'openclaw', 'kimi', 'devin'],
+    relatedComparisons: [],
+    faq: [
+      {
+        question: {
+          en: 'Is ChatGPT an AI agent?',
+          fr: 'ChatGPT est-il un agent IA ?',
+          es: '¿ChatGPT es un agente de IA?',
+          ar: 'هل ChatGPT وكيل ذكاء اصطناعي؟',
+        },
+        answer: {
+          en: 'ChatGPT is primarily an LLM chatbot — it generates text and answers questions. It gains agent-like abilities when connected to tools (for example Operator for browsing or Codex for coding), but on its own the base chat experience is an assistant, not an autonomous agent that takes multi-step actions for you.',
+          fr: "ChatGPT est avant tout un chatbot LLM — il génère du texte et répond aux questions. Il acquiert des capacités d'agent lorsqu'il est connecté à des outils (par exemple Operator pour naviguer ou Codex pour coder), mais en lui-même l'expérience de chat de base est un assistant, pas un agent autonome qui agit en plusieurs étapes pour vous.",
+          es: 'ChatGPT es ante todo un chatbot LLM: genera texto y responde preguntas. Gana capacidades de agente al conectarse a herramientas (por ejemplo Operator para navegar o Codex para programar), pero por sí solo la experiencia de chat básica es un asistente, no un agente autónomo que ejecuta acciones de varios pasos por ti.',
+          ar: 'ChatGPT في الأساس روبوت محادثة بنموذج لغة — يولّد النص ويجيب عن الأسئلة. يكتسب قدرات شبيهة بالوكيل عند ربطه بأدوات (مثل Operator للتصفّح أو Codex للبرمجة)، لكنه بمفرده تجربة مساعد لا وكيل مستقل ينفّذ إجراءات متعددة الخطوات نيابةً عنك.',
+        },
+      },
+      {
+        question: {
+          en: 'Do I need to code to use an autonomous agent?',
+          fr: "Faut-il savoir coder pour utiliser un agent autonome ?",
+          es: '¿Necesito programar para usar un agente autónomo?',
+          ar: 'هل أحتاج إلى البرمجة لاستخدام وكيل مستقل؟',
+        },
+        answer: {
+          en: 'No. Autonomous agents like Claude Cowork and Manus are built for non-developers: you describe a goal in plain language and they do the work. Coding agents are the ones aimed at developers. If you want research, documents or spreadsheets done for you without writing code, an autonomous agent is the right category.',
+          fr: "Non. Les agents autonomes comme Claude Cowork et Manus sont conçus pour les non-développeurs : vous décrivez un objectif en langage clair et ils font le travail. Ce sont les agents de code qui visent les développeurs. Si vous voulez de la recherche, des documents ou des tableurs réalisés pour vous sans écrire de code, un agent autonome est la bonne catégorie.",
+          es: 'No. Los agentes autónomos como Claude Cowork y Manus están hechos para no programadores: describes un objetivo en lenguaje sencillo y hacen el trabajo. Los agentes de código son los orientados a desarrolladores. Si quieres investigación, documentos u hojas de cálculo hechos por ti sin escribir código, un agente autónomo es la categoría adecuada.',
+          ar: 'لا. الوكلاء المستقلون مثل Claude Cowork وManus مصمّمون لغير المبرمجين: تصف هدفاً بلغة بسيطة فيؤدّون العمل. أما وكلاء البرمجة فهم الموجّهون للمطوّرين. إذا أردت بحثاً أو مستندات أو جداول تُنجز نيابةً عنك دون كتابة شيفرة، فالوكيل المستقل هو الفئة المناسبة.',
+        },
+      },
+    ],
+  },
+  {
+    slug: 'how-to-choose-ai-tool-2026',
+    category: 'productivity',
+    emoji: '🎯',
+    publishedDate: '2026-06-23',
+    readTime: 7,
+    title: {
+      en: 'How to Choose the Right AI Tool in 2026: A 5-Filter Framework',
+      fr: "Comment choisir le bon outil IA en 2026 : un cadre en 5 filtres",
+      es: 'Cómo elegir la herramienta de IA adecuada en 2026: un marco de 5 filtros',
+      ar: 'كيف تختار أداة الذكاء الاصطناعي المناسبة في 2026: إطار من 5 مرشّحات',
+    },
+    excerpt: {
+      en: 'With thousands of AI tools available, choosing is harder than ever. This practical framework gives you five filters to shortlist the right tool in minutes instead of testing twenty.',
+      fr: "Avec des milliers d'outils IA disponibles, choisir n'a jamais été aussi difficile. Ce cadre pratique vous donne cinq filtres pour présélectionner le bon outil en quelques minutes au lieu d'en tester vingt.",
+      es: 'Con miles de herramientas de IA disponibles, elegir es más difícil que nunca. Este marco práctico te da cinco filtros para preseleccionar la herramienta adecuada en minutos en lugar de probar veinte.',
+      ar: 'مع توفّر آلاف أدوات الذكاء الاصطناعي، صار الاختيار أصعب من أي وقت. يمنحك هذا الإطار العملي خمسة مرشّحات لاختصار القائمة إلى الأداة المناسبة في دقائق بدل تجربة عشرين.',
+    },
+    sections: [
+      {
+        heading: {
+          en: 'Why choosing got harder, not easier',
+          fr: "Pourquoi choisir est devenu plus difficile, pas plus simple",
+          es: 'Por qué elegir se volvió más difícil, no más fácil',
+          ar: 'لماذا أصبح الاختيار أصعب لا أسهل',
+        },
+        body: {
+          en: 'There are now thousands of AI tools, and most "best AI tool" lists just pile up more options. More choice creates decision paralysis, not clarity. The fix is not testing twenty tools — it is having a repeatable way to decide. The five filters below let you shortlist the right tool quickly, whether you are a beginner or a power user.',
+          fr: "Il existe désormais des milliers d'outils IA, et la plupart des listes « meilleur outil IA » ne font qu'empiler les options. Plus de choix crée la paralysie de la décision, pas la clarté. La solution n'est pas de tester vingt outils — c'est d'avoir une méthode reproductible pour décider. Les cinq filtres ci-dessous vous permettent de présélectionner rapidement le bon outil, que vous soyez débutant ou expert.",
+          es: 'Ahora hay miles de herramientas de IA, y la mayoría de las listas de «mejor herramienta de IA» solo acumulan más opciones. Más opciones crean parálisis de decisión, no claridad. La solución no es probar veinte herramientas, sino tener un método repetible para decidir. Los cinco filtros siguientes te permiten preseleccionar la herramienta adecuada rápidamente, seas principiante o usuario avanzado.',
+          ar: 'يوجد الآن آلاف أدوات الذكاء الاصطناعي، ومعظم قوائم « أفضل أداة » تكتفي بتكديس المزيد من الخيارات. الخيارات الأكثر تخلق شللاً في القرار لا وضوحاً. الحل ليس تجربة عشرين أداة بل امتلاك طريقة متكرّرة للاختيار. تتيح لك المرشّحات الخمسة أدناه اختصار القائمة بسرعة إلى الأداة المناسبة، سواء كنت مبتدئاً أو متمرّساً.',
+        },
+      },
+      {
+        heading: {
+          en: 'Filters 1 & 2: job fit and free-tier reality',
+          fr: "Filtres 1 et 2 : l'adéquation au besoin et la réalité de l'offre gratuite",
+          es: 'Filtros 1 y 2: ajuste al trabajo y realidad del plan gratuito',
+          ar: 'المرشّحان 1 و2: ملاءمة المهمة وواقع الباقة المجانية',
+        },
+        body: {
+          en: 'Filter 1 — job fit: define the one job you need done before looking at features. A tool that is great at something you do not need is the wrong tool. Filter 2 — free-tier reality: check what the free plan actually allows, not what the marketing implies. Many free tiers are demos with limits that make real work impossible, while others (like several open models) are genuinely free to use.',
+          fr: "Filtre 1 — l'adéquation au besoin : définissez la seule tâche que vous devez accomplir avant de regarder les fonctionnalités. Un outil excellent pour ce dont vous n'avez pas besoin est le mauvais outil. Filtre 2 — la réalité de l'offre gratuite : vérifiez ce que le plan gratuit permet réellement, pas ce que le marketing laisse entendre. Beaucoup d'offres gratuites sont des démos avec des limites qui rendent le vrai travail impossible, tandis que d'autres (comme plusieurs modèles ouverts) sont vraiment gratuites.",
+          es: 'Filtro 1 — ajuste al trabajo: define la única tarea que necesitas resolver antes de mirar las funciones. Una herramienta excelente en algo que no necesitas es la herramienta equivocada. Filtro 2 — realidad del plan gratuito: comprueba qué permite realmente el plan gratis, no lo que insinúa el marketing. Muchos planes gratuitos son demos con límites que hacen imposible el trabajo real, mientras otros (como varios modelos abiertos) son de verdad gratuitos.',
+          ar: 'المرشّح 1 — ملاءمة المهمة: حدّد المهمة الوحيدة التي تحتاج إنجازها قبل النظر في الميزات. الأداة البارعة في ما لا تحتاجه هي الأداة الخطأ. المرشّح 2 — واقع الباقة المجانية: تحقّق ممّا تتيحه الباقة المجانية فعلاً لا ما يوحي به التسويق. كثير من الباقات المجانية مجرّد عروض بحدود تجعل العمل الحقيقي مستحيلاً، بينما غيرها (مثل عدة نماذج مفتوحة) مجانية فعلاً.',
+        },
+      },
+      {
+        heading: {
+          en: 'Filters 3 & 4: switching cost and data sensitivity',
+          fr: "Filtres 3 et 4 : coût de changement et sensibilité des données",
+          es: 'Filtros 3 y 4: coste de cambio y sensibilidad de los datos',
+          ar: 'المرشّحان 3 و4: كلفة التبديل وحساسية البيانات',
+        },
+        body: {
+          en: 'Filter 3 — switching cost: how locked in will you be? Tools that export your data and follow open standards (like MCP) are safer bets than closed ecosystems. Filter 4 — data sensitivity: if you handle private or regulated data, prefer tools that offer self-hosting or clear data policies. For sensitive code, an open model you can run locally beats a cloud tool that trains on your inputs.',
+          fr: "Filtre 3 — coût de changement : à quel point serez-vous enfermé ? Les outils qui exportent vos données et suivent des standards ouverts (comme MCP) sont plus sûrs que les écosystèmes fermés. Filtre 4 — sensibilité des données : si vous manipulez des données privées ou réglementées, préférez les outils qui proposent l'auto-hébergement ou des politiques claires. Pour du code sensible, un modèle ouvert exécutable localement vaut mieux qu'un outil cloud qui s'entraîne sur vos entrées.",
+          es: 'Filtro 3 — coste de cambio: ¿qué tan atado quedarás? Las herramientas que exportan tus datos y siguen estándares abiertos (como MCP) son apuestas más seguras que los ecosistemas cerrados. Filtro 4 — sensibilidad de los datos: si manejas datos privados o regulados, prefiere herramientas con autoalojamiento o políticas claras. Para código sensible, un modelo abierto que puedas ejecutar localmente supera a una herramienta en la nube que se entrena con tus entradas.',
+          ar: 'المرشّح 3 — كلفة التبديل: إلى أي مدى ستكون مقيّداً؟ الأدوات التي تصدّر بياناتك وتتبع معايير مفتوحة (مثل MCP) أكثر أماناً من الأنظمة المغلقة. المرشّح 4 — حساسية البيانات: إذا تعاملت مع بيانات خاصة أو منظَّمة، ففضّل الأدوات التي تتيح الاستضافة الذاتية أو سياسات واضحة. وللشيفرة الحسّاسة، نموذج مفتوح تشغّله محلياً أفضل من أداة سحابية تتدرّب على مدخلاتك.',
+        },
+      },
+      {
+        heading: {
+          en: 'Filter 5 and a 3-minute shortlisting method',
+          fr: "Filtre 5 et une méthode de présélection en 3 minutes",
+          es: 'Filtro 5 y un método de preselección en 3 minutos',
+          ar: 'المرشّح 5 وطريقة اختصار في 3 دقائق',
+        },
+        body: {
+          en: 'Filter 5 — total cost at real usage: estimate what you will actually pay at your true volume, not the headline price. A cheap per-seat tool can cost more than a usage-based one once you scale, and vice versa. The 3-minute method: write your one job, open a comparison page, keep only tools that pass filters 2 to 5, then pick the top-rated survivor and try its free tier. If it fits, stop looking — you have your tool.',
+          fr: "Filtre 5 — coût total à l'usage réel : estimez ce que vous paierez vraiment à votre volume réel, pas le prix affiché. Un outil bon marché par utilisateur peut coûter plus qu'un outil à l'usage une fois à l'échelle, et inversement. La méthode en 3 minutes : écrivez votre tâche unique, ouvrez une page de comparaison, ne gardez que les outils qui passent les filtres 2 à 5, puis choisissez le mieux noté des survivants et testez son offre gratuite. S'il convient, arrêtez de chercher — vous avez votre outil.",
+          es: 'Filtro 5 — coste total al uso real: estima lo que pagarás realmente a tu volumen real, no el precio de portada. Una herramienta barata por usuario puede costar más que una basada en uso al escalar, y viceversa. El método de 3 minutos: escribe tu única tarea, abre una página de comparación, conserva solo las herramientas que pasen los filtros 2 a 5, elige la mejor valorada de las supervivientes y prueba su plan gratuito. Si encaja, deja de buscar: ya tienes tu herramienta.',
+          ar: 'المرشّح 5 — التكلفة الإجمالية عند الاستخدام الفعلي: قدّر ما ستدفعه فعلاً عند حجمك الحقيقي لا السعر المعلن. قد تكلّف أداة رخيصة لكل مستخدم أكثر من أداة قائمة على الاستخدام عند التوسّع، والعكس صحيح. طريقة الدقائق الثلاث: اكتب مهمتك الوحيدة، افتح صفحة مقارنة، أبقِ فقط الأدوات التي تجتاز المرشّحات 2 إلى 5، ثم اختر الأعلى تقييماً من الباقين وجرّب باقته المجانية. إذا ناسبك، فتوقّف عن البحث — لقد وجدت أداتك.',
+        },
+      },
+    ],
+    relatedTools: ['chatgpt', 'claude', 'perplexity', 'kimi', 'glm'],
+    relatedComparisons: [],
+    faq: [
+      {
+        question: {
+          en: 'What is the best AI tool in 2026?',
+          fr: "Quel est le meilleur outil IA en 2026 ?",
+          es: '¿Cuál es la mejor herramienta de IA en 2026?',
+          ar: 'ما أفضل أداة ذكاء اصطناعي في 2026؟',
+        },
+        answer: {
+          en: 'There is no single best tool — the right one depends on the job. ChatGPT and Claude lead general assistants, Codex and Claude Code lead coding agents, and open models like Kimi and GLM lead on value. Use the 5-filter framework above to match a tool to your specific job, budget and data needs instead of chasing a universal winner.',
+          fr: "Il n'y a pas d'outil unique : le bon dépend de la tâche. ChatGPT et Claude mènent les assistants généralistes, Codex et Claude Code les agents de code, et des modèles ouverts comme Kimi et GLM dominent sur le rapport qualité-prix. Utilisez le cadre en 5 filtres ci-dessus pour faire correspondre un outil à votre tâche, votre budget et vos besoins de données plutôt que de chercher un gagnant universel.",
+          es: 'No hay una única herramienta mejor: la adecuada depende del trabajo. ChatGPT y Claude lideran los asistentes generales, Codex y Claude Code los agentes de código, y modelos abiertos como Kimi y GLM lideran en relación calidad-precio. Usa el marco de 5 filtros de arriba para ajustar una herramienta a tu trabajo, presupuesto y necesidades de datos en vez de buscar un ganador universal.',
+          ar: 'لا توجد أداة واحدة هي الأفضل — فالمناسبة تعتمد على المهمة. يتصدّر ChatGPT وClaude المساعدين العامين، ويتصدّر Codex وClaude Code وكلاء البرمجة، وتتصدّر النماذج المفتوحة مثل Kimi وGLM من حيث القيمة. استخدم إطار المرشّحات الخمسة أعلاه لمطابقة الأداة مع مهمتك وميزانيتك واحتياجات بياناتك بدل البحث عن فائز شامل.',
+        },
+      },
+      {
+        question: {
+          en: 'How many AI tools should I actually use?',
+          fr: "Combien d'outils IA devrais-je vraiment utiliser ?",
+          es: '¿Cuántas herramientas de IA debería usar realmente?',
+          ar: 'كم عدد أدوات الذكاء الاصطناعي التي ينبغي أن أستخدمها فعلاً؟',
+        },
+        answer: {
+          en: 'Most people are best served by a small, deliberate stack: one general assistant, one tool for their main craft (writing, code, design), and maybe one automation or agent. Adding more rarely helps and often means paying for overlapping features. Audit your stack a couple of times a year and drop anything you have not used in a month.',
+          fr: "La plupart des gens sont mieux servis par une pile réduite et réfléchie : un assistant généraliste, un outil pour leur métier principal (rédaction, code, design), et peut-être une automatisation ou un agent. En ajouter davantage aide rarement et signifie souvent payer pour des fonctionnalités qui se recoupent. Auditez votre pile deux fois par an et supprimez tout ce que vous n'avez pas utilisé depuis un mois.",
+          es: 'A la mayoría le conviene un stack pequeño y deliberado: un asistente general, una herramienta para su oficio principal (escritura, código, diseño) y quizá una automatización o agente. Añadir más rara vez ayuda y suele implicar pagar por funciones que se solapan. Audita tu stack un par de veces al año y elimina lo que no hayas usado en un mes.',
+          ar: 'الأفضل لمعظم الناس حزمة صغيرة ومدروسة: مساعد عام واحد، وأداة لمجالهم الأساسي (كتابة أو برمجة أو تصميم)، وربما أتمتة أو وكيل واحد. نادراً ما تساعد الإضافة الأكثر، وغالباً تعني الدفع مقابل ميزات متداخلة. راجِع حزمتك مرتين سنوياً واحذف كل ما لم تستخدمه منذ شهر.',
+        },
+      },
+    ],
+  },
 ];
 
 export function getAllBlogPosts(): BlogPost[] {
