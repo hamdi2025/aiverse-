@@ -6,6 +6,8 @@ import { buildAffiliateUrl } from '@/lib/affiliate';
 import { tl, tlCategory, tlVerdict } from '@/lib/dataI18n';
 import { getTranslations } from 'next-intl/server';
 import { Star, ArrowUpRight, Tag, Globe, TrendingUp } from 'lucide-react';
+import { buildToolArticle } from '@/lib/toolArticle';
+import { TOOL_TIPS } from '@/lib/toolTips';
 
 type Locale = 'en' | 'fr' | 'es' | 'ar';
 
@@ -163,7 +165,11 @@ export default async function ToolPage({ params }: Props) {
     founded: locale === 'fr' ? 'Fondé' : locale === 'es' ? 'Fundado' : locale === 'ar' ? 'تأسست' : 'Founded',
     mobile: locale === 'fr' ? 'App mobile' : locale === 'es' ? 'App móvil' : locale === 'ar' ? 'تطبيق جوال' : 'Mobile app',
     yes: locale === 'fr' ? 'Oui' : locale === 'es' ? 'Sí' : locale === 'ar' ? 'نعم' : 'Yes',
+    tips: locale === 'fr' ? "Astuces d'expert" : locale === 'es' ? 'Consejos de experto' : locale === 'ar' ? 'نصائح الخبراء' : 'Expert tips',
   };
+
+  const article = buildToolArticle(tool, locale);
+  const tips = TOOL_TIPS[tool.id];
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-16">
@@ -225,6 +231,18 @@ export default async function ToolPage({ params }: Props) {
         </p>
       </div>
 
+      {/* Editorial review article (original, per-tool content) */}
+      <article className="mb-8">
+        {article.map((sec, i) => (
+          <section key={i} className="mb-6">
+            <h2 className="text-xl sm:text-2xl font-black text-gray-900 mb-2">{sec.h2}</h2>
+            {sec.paras.map((p, k) => (
+              <p key={k} className="text-gray-700 leading-relaxed mb-3">{p}</p>
+            ))}
+          </section>
+        ))}
+      </article>
+
       {/* Our verdict */}
       {tool.verdict && (
         <div className="rounded-2xl border border-violet-500/20 bg-violet-500/[0.06] p-6 mb-6">
@@ -268,6 +286,18 @@ export default async function ToolPage({ params }: Props) {
               <span key={i} className="text-sm text-gray-700 border border-gray-200 bg-gray-50 rounded-lg px-3 py-1.5">{tl(u, locale)}</span>
             ))}
           </div>
+        </div>
+      )}
+
+      {/* Expert tips (unique, hand-written per tool) */}
+      {!!tips?.length && (
+        <div className="rounded-2xl border border-amber-300 bg-amber-50 p-6 mb-6">
+          <h2 className="text-sm font-bold text-amber-700 uppercase tracking-wider mb-3">💡 {RT.tips}</h2>
+          <ul className="space-y-2.5">
+            {tips.map((tip, i) => (
+              <li key={i} className="flex gap-2 text-sm text-gray-800 leading-relaxed"><span className="text-amber-600 font-bold flex-shrink-0">★</span><span>{tip[locale]}</span></li>
+            ))}
+          </ul>
         </div>
       )}
 
