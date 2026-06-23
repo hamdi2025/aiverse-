@@ -4427,6 +4427,90 @@ export const TOOLS_DATA: AITool[] = [
     useCases: ['Private, always-on personal agent', 'Local file & task automation', 'Messaging-app automation', 'Custom AgentSkills workflows'],
     verdict: 'OpenClaw is the top choice for privacy-minded users who want a free, self-hosted personal agent that actually runs tasks on their own machine. It rewards a bit of technical setup with full control and no subscription — the open-source answer to desktop agents.',
   },
+  {
+    id: 'goose',
+    name: 'Goose',
+    category: 'code',
+    description: {
+      en: "Block's free, open-source and extensible AI agent (built in Rust) that runs on your machine via desktop, CLI or API. It works with 15+ LLM providers, connects to 70+ MCP extensions, spawns parallel subagents and automates multi-step engineering workflows with reusable 'recipes'.",
+      fr: "L'agent IA gratuit, open source et extensible de Block (écrit en Rust) qui s'exécute sur votre machine via le bureau, la CLI ou l'API. Il fonctionne avec plus de 15 fournisseurs de LLM, se connecte à plus de 70 extensions MCP, lance des sous-agents en parallèle et automatise des workflows d'ingénierie multi-étapes via des « recipes » réutilisables.",
+      es: "El agente de IA gratuito, de código abierto y extensible de Block (escrito en Rust) que se ejecuta en tu máquina mediante escritorio, CLI o API. Funciona con más de 15 proveedores de LLM, se conecta a más de 70 extensiones MCP, lanza subagentes en paralelo y automatiza flujos de ingeniería de varios pasos con 'recipes' reutilizables.",
+      ar: "وكيل الذكاء الاصطناعي المجاني والمفتوح والقابل للتوسيع من Block (مكتوب بلغة Rust) ويعمل على جهازك عبر سطح المكتب أو سطر الأوامر أو الواجهة البرمجية. يعمل مع أكثر من 15 مزوّد نماذج، ويتصل بأكثر من 70 إضافة MCP، ويطلق وكلاء فرعيين بالتوازي، ويؤتمت سير عمل هندسي متعدد الخطوات عبر « recipes » قابلة لإعادة الاستخدام."
+    },
+    rating: 4.6,
+    pricing: 'Free',
+    pricingLocalized: {
+      en: 'Free & open-source (bring your own API key)',
+      fr: 'Gratuit et open source (votre propre clé API)',
+      es: 'Gratis y de código abierto (tu propia clave API)',
+      ar: 'مجاني ومفتوح المصدر (استخدم مفتاح API الخاص بك)'
+    },
+    websiteUrl: 'https://github.com/block/goose',
+    views: 13000,
+    company: 'Block', founded: '2025', hasAPI: true, hasMobileApp: false,
+    releaseDate: 'Jan 2026', lastUpdate: 'Jun 2026',
+    pros: ['Free, open-source and extensible (Rust)', 'Runs locally — desktop, CLI and API', 'Works with 15+ LLM providers (BYOK)', '70+ MCP extensions & parallel subagents', 'Reusable "recipes" for CI/CD automation'],
+    cons: ['You supply and pay for model API access', 'Setup more technical than managed tools', 'Younger, fast-moving ecosystem', 'Powerful local actions need caution'],
+    tags: ['Coding Agent', 'Open Source', 'Local', 'MCP', 'Autonomous'],
+    useCases: ['Autonomous engineering tasks', 'Multi-step workflow automation', 'Using any model you prefer', 'Shareable CI/CD recipes'],
+    verdict: 'Goose is a top open-source pick for engineers who want an extensible, model-agnostic agent that runs locally and automates real workflows with reusable recipes. It rewards a bit of setup with full control and no subscription.',
+  },
+  {
+    id: 'gemini-cli',
+    name: 'Gemini CLI',
+    category: 'code',
+    description: {
+      en: "Google's open-source terminal AI agent that brings Gemini — with a 1-million-token context — into your command line. It uses a reason-and-act loop with built-in tools (Google Search grounding, file edits, shell, web fetch) plus MCP support, and offers a generous free tier with a personal Google account.",
+      fr: "L'agent IA open source de Google pour le terminal, qui amène Gemini — avec un contexte d'un million de tokens — dans votre ligne de commande. Il utilise une boucle raisonnement-action avec des outils intégrés (recherche Google, édition de fichiers, shell, récupération web) et le support MCP, avec une offre gratuite généreuse via un compte Google personnel.",
+      es: "El agente de IA de código abierto de Google para la terminal, que lleva Gemini — con un contexto de un millón de tokens — a tu línea de comandos. Usa un bucle de razonamiento-acción con herramientas integradas (búsqueda de Google, edición de archivos, shell, web) y soporte MCP, con un nivel gratuito generoso usando una cuenta Google personal.",
+      ar: "وكيل الذكاء الاصطناعي مفتوح المصدر من Google للطرفية، يجلب Gemini — بسياق مليون رمز — إلى سطر الأوامر لديك. يستخدم حلقة تفكير-وفعل بأدوات مدمجة (بحث Google وتحرير الملفات والصدفة وجلب الويب) ودعم MCP، مع باقة مجانية سخية عبر حساب Google شخصي."
+    },
+    rating: 4.5,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free tier (personal Google account) / paid Code Assist',
+      fr: 'Offre gratuite (compte Google perso) / Code Assist payant',
+      es: 'Nivel gratis (cuenta Google personal) / Code Assist de pago',
+      ar: 'باقة مجانية (حساب Google شخصي) / Code Assist مدفوع'
+    },
+    websiteUrl: 'https://github.com/google-gemini/gemini-cli',
+    views: 15000,
+    company: 'Google', founded: '2025', hasAPI: true, hasMobileApp: false,
+    releaseDate: 'Jun 2025', lastUpdate: 'Jun 2026',
+    pros: ['Generous free tier (about 1,000 requests/day)', 'Gemini with a 1M-token context window', 'Built-in Google Search grounding', 'Open-source and MCP-extensible', 'Runs in any terminal'],
+    cons: ['Individual Code Assist tiers are migrating to Antigravity', 'Tied to a Google account/ecosystem', 'Terminal-first, less beginner-friendly', 'Free tier has rate limits'],
+    tags: ['Coding Agent', 'Open Source', 'Terminal', 'Google', 'Long Context'],
+    useCases: ['Free terminal AI coding', 'Bug fixing and test coverage', 'Long-context codebase work', 'Search-grounded tasks'],
+    verdict: 'Gemini CLI is the best free terminal agent for developers in the Google ecosystem, pairing a huge 1M-token context with built-in search grounding at no cost. Keep an eye on the Code Assist tier migration if you rely on the individual plan.',
+  },
+  {
+    id: 'openai-operator',
+    name: 'OpenAI Operator',
+    category: 'agents',
+    description: {
+      en: "OpenAI's computer-use agent that drives a web browser on your behalf — clicking, typing and navigating sites to complete tasks like booking, ordering and form-filling. Available to ChatGPT Pro subscribers.",
+      fr: "L'agent « computer-use » d'OpenAI qui pilote un navigateur web à votre place — cliquer, saisir et naviguer sur les sites pour accomplir des tâches comme réserver, commander et remplir des formulaires. Disponible pour les abonnés ChatGPT Pro.",
+      es: "El agente de uso de ordenador de OpenAI que maneja un navegador web por ti — hace clic, escribe y navega por sitios para completar tareas como reservar, pedir y rellenar formularios. Disponible para suscriptores de ChatGPT Pro.",
+      ar: "وكيل « استخدام الحاسوب » من OpenAI الذي يقود متصفّح ويب نيابةً عنك — ينقر ويكتب ويتنقّل في المواقع لإنجاز مهام مثل الحجز والطلب وتعبئة النماذج. متاح لمشتركي ChatGPT Pro."
+    },
+    rating: 3.9,
+    pricing: 'Paid',
+    pricingLocalized: {
+      en: 'ChatGPT Pro $200/mo',
+      fr: 'ChatGPT Pro 200$/mois',
+      es: 'ChatGPT Pro $200/mes',
+      ar: 'ChatGPT Pro بـ 200 دولار شهرياً'
+    },
+    websiteUrl: 'https://openai.com/index/introducing-operator/',
+    views: 16000,
+    company: 'OpenAI', founded: '2025', hasAPI: false, hasMobileApp: false,
+    releaseDate: 'Jan 2025', lastUpdate: 'Jun 2026',
+    pros: ['Autonomous web browsing & clicking', 'Handles bookings, orders and forms', 'Backed by OpenAI frontier models', 'Integrated into ChatGPT'],
+    cons: ['Expensive — ChatGPT Pro $200/mo only', 'Modest reliability (~33% on OSWorld)', 'No public API yet', 'Trails Claude on computer-use benchmarks'],
+    tags: ['AI Agent', 'Computer Use', 'Browser', 'Automation', 'OpenAI'],
+    useCases: ['Automated web bookings & orders', 'Form-filling across sites', 'Repetitive browser workflows', 'Hands-off research tasks'],
+    verdict: 'Operator is worth trying for ChatGPT Pro users who want OpenAI to automate browser tasks, but in 2026 its real-world reliability still lags Claude\'s computer use. Treat it as a promising preview rather than a dependable production worker.',
+  },
 ];
 
 export function getToolById(id: string): AITool | undefined {

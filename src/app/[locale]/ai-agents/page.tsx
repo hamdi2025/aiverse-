@@ -1,5 +1,6 @@
 import { TOOLS_DATA } from '@/lib/tools';
 import { buildAffiliateUrl } from '@/lib/affiliate';
+import { tl } from '@/lib/dataI18n';
 
 type Locale = 'en' | 'fr' | 'es' | 'ar';
 interface Props { params: { locale: Locale } }
@@ -92,6 +93,8 @@ const PAGE = {
   },
   visit: { en: 'Visit', fr: 'Visiter', es: 'Visitar', ar: 'زيارة' },
   details: { en: 'Details', fr: 'Détails', es: 'Detalles', ar: 'التفاصيل' },
+  prosLabel: { en: 'Pros', fr: 'Avantages', es: 'Ventajas', ar: 'المزايا' },
+  consLabel: { en: 'Cons', fr: 'Inconvénients', es: 'Desventajas', ar: 'العيوب' },
 };
 
 // Editorial comparison matrix (ids must exist in TOOLS_DATA).
@@ -111,6 +114,9 @@ const ROWS: { id: string; type: Record<Locale, string>; best: Record<Locale, str
   { id: 'claude-cowork', type: { en: 'Autonomous agent', fr: 'Agent autonome', es: 'Agente autónomo', ar: 'وكيل مستقل' }, best: { en: 'Non-devs finishing file & document work', fr: 'Non-devs finissant le travail sur fichiers/documents', es: 'No-devs que terminan trabajo con archivos/documentos', ar: 'غير المبرمجين لإنجاز أعمال الملفات والمستندات' }, open: false, spec: 'Acts on local files' },
   { id: 'manus', type: { en: 'Autonomous agent', fr: 'Agent autonome', es: 'Agente autónomo', ar: 'وكيل مستقل' }, best: { en: 'One agent to research, build & ship', fr: 'Un agent pour rechercher, construire et livrer', es: 'Un agente para investigar, construir y entregar', ar: 'وكيل واحد للبحث والبناء والتسليم' }, open: false, spec: 'Web + code + slides' },
   { id: 'openclaw', type: { en: 'Autonomous agent', fr: 'Agent autonome', es: 'Agente autónomo', ar: 'وكيل مستقل' }, best: { en: 'Privacy-first self-hosted personal agent', fr: 'Agent personnel auto-hébergé axé confidentialité', es: 'Agente personal autoalojado centrado en privacidad', ar: 'وكيل شخصي ذاتي الاستضافة يركّز على الخصوصية' }, open: true, spec: 'Local · 100+ skills' },
+  { id: 'goose', type: { en: 'Coding agent', fr: 'Agent de code', es: 'Agente de código', ar: 'وكيل برمجة' }, best: { en: 'Extensible local engineering agent', fr: 'Agent d’ingénierie local extensible', es: 'Agente de ingeniería local extensible', ar: 'وكيل هندسي محلي قابل للتوسيع' }, open: true, spec: 'Rust · 70+ MCP extensions' },
+  { id: 'gemini-cli', type: { en: 'Coding agent', fr: 'Agent de code', es: 'Agente de código', ar: 'وكيل برمجة' }, best: { en: 'Free terminal agent with 1M context', fr: 'Agent terminal gratuit, contexte 1M', es: 'Agente de terminal gratis, contexto 1M', ar: 'وكيل طرفية مجاني بسياق مليون' }, open: true, spec: '1M ctx · 1K req/day free' },
+  { id: 'openai-operator', type: { en: 'Autonomous agent', fr: 'Agent autonome', es: 'Agente autónomo', ar: 'وكيل مستقل' }, best: { en: 'Browser tasks: bookings, orders, forms', fr: 'Tâches navigateur : réservations, commandes, formulaires', es: 'Tareas de navegador: reservas, pedidos, formularios', ar: 'مهام المتصفّح: حجوزات وطلبات ونماذج' }, open: false, spec: 'OSWorld ~33% · $200/mo' },
 ];
 
 const FAQ: { q: Record<Locale, string>; a: Record<Locale, string> }[] = [
@@ -150,6 +156,16 @@ export async function generateMetadata({ params }: Props) {
 
 const pricingColor = (p: string) =>
   p === 'Free' ? 'text-green-700' : p === 'Freemium' ? 'text-amber-700' : 'text-gray-700';
+
+const catBadge = (cat: string) =>
+  cat === 'code' ? 'bg-blue-100 text-blue-700 border border-blue-200' :
+  cat === 'agents' ? 'bg-emerald-100 text-emerald-700 border border-emerald-200' :
+  'bg-violet-100 text-violet-700 border border-violet-200';
+
+const catAccent = (cat: string) =>
+  cat === 'code' ? 'border-l-4 border-l-blue-500' :
+  cat === 'agents' ? 'border-l-4 border-l-emerald-500' :
+  'border-l-4 border-l-violet-500';
 
 export default function AiAgentsPage({ params }: Props) {
   const locale = params.locale;
@@ -224,29 +240,33 @@ export default function AiAgentsPage({ params }: Props) {
       {/* Expert comparison table */}
       <h2 className="text-2xl font-black text-gray-900 mb-2">{PAGE.expertTitle[locale]}</h2>
       <p className="text-gray-500 text-sm mb-5">{PAGE.expertNote[locale]}</p>
-      <div className="overflow-x-auto mb-12 rounded-2xl border border-gray-200">
+      <div className="overflow-x-auto mb-12 rounded-2xl border border-gray-200 shadow-sm">
         <table className="w-full text-sm">
           <thead>
-            <tr className="bg-gray-100 text-gray-700 text-left">
-              <th className="px-3 py-2.5 font-bold">{PAGE.th.tool[locale]}</th>
-              <th className="px-3 py-2.5 font-bold">{PAGE.th.type[locale]}</th>
-              <th className="px-3 py-2.5 font-bold">{PAGE.th.best[locale]}</th>
-              <th className="px-3 py-2.5 font-bold whitespace-nowrap">{PAGE.th.open[locale]}</th>
-              <th className="px-3 py-2.5 font-bold whitespace-nowrap">{PAGE.th.price[locale]}</th>
-              <th className="px-3 py-2.5 font-bold">{PAGE.th.spec[locale]}</th>
+            <tr className="bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] text-white text-left">
+              <th className="px-3 py-3 font-bold">{PAGE.th.tool[locale]}</th>
+              <th className="px-3 py-3 font-bold">{PAGE.th.type[locale]}</th>
+              <th className="px-3 py-3 font-bold">{PAGE.th.best[locale]}</th>
+              <th className="px-3 py-3 font-bold whitespace-nowrap text-center">{PAGE.th.open[locale]}</th>
+              <th className="px-3 py-3 font-bold whitespace-nowrap">{PAGE.th.price[locale]}</th>
+              <th className="px-3 py-3 font-bold">{PAGE.th.spec[locale]}</th>
             </tr>
           </thead>
           <tbody>
-            {rows.map((r) => (
-              <tr key={r.id} className="border-t border-gray-200 align-top">
-                <td className="px-3 py-2.5 font-bold whitespace-nowrap">
+            {rows.map((r, i) => (
+              <tr key={r.id} className={`border-t border-gray-200 align-top transition-colors hover:bg-violet-50 ${i % 2 ? 'bg-gray-50/70' : 'bg-white'}`}>
+                <td className="px-3 py-3 font-bold whitespace-nowrap">
                   <a href={`/${locale}/tools/${r.id}`} className="text-violet-700 hover:underline">{r.tool.name}</a>
                 </td>
-                <td className="px-3 py-2.5 text-gray-700 whitespace-nowrap">{r.type[locale]}</td>
-                <td className="px-3 py-2.5 text-gray-700">{r.best[locale]}</td>
-                <td className="px-3 py-2.5 whitespace-nowrap">{r.open ? <span className="text-emerald-700 font-semibold">✓</span> : <span className="text-gray-400">—</span>}</td>
-                <td className={`px-3 py-2.5 whitespace-nowrap font-semibold ${pricingColor(r.tool.pricing)}`}>{r.tool.pricingLocalized[locale]}</td>
-                <td className="px-3 py-2.5 text-gray-600 whitespace-nowrap">{r.spec}</td>
+                <td className="px-3 py-3 whitespace-nowrap">
+                  <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full ${catBadge(r.tool.category)}`}>{r.type[locale]}</span>
+                </td>
+                <td className="px-3 py-3 text-gray-700">{r.best[locale]}</td>
+                <td className="px-3 py-3 whitespace-nowrap text-center">{r.open
+                  ? <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 font-bold text-xs">✓</span>
+                  : <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-rose-100 text-rose-600 font-bold text-xs">✗</span>}</td>
+                <td className={`px-3 py-3 whitespace-nowrap font-semibold ${pricingColor(r.tool.pricing)}`}>{r.tool.pricingLocalized[locale]}</td>
+                <td className="px-3 py-3"><span className="inline-block text-gray-700 text-xs font-medium bg-gray-100 rounded-md px-2 py-1 whitespace-nowrap">{r.spec}</span></td>
               </tr>
             ))}
           </tbody>
@@ -259,16 +279,37 @@ export default function AiAgentsPage({ params }: Props) {
         {rows.map((r) => {
           const url = buildAffiliateUrl(r.id, r.tool.websiteUrl);
           return (
-            <div key={r.id} className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
-              <div className="flex items-center justify-between gap-3 flex-wrap mb-1.5">
-                <a href={`/${locale}/tools/${r.id}`} className="text-lg font-bold text-gray-900 hover:text-violet-700 transition">{r.tool.name}</a>
+            <div key={r.id} className={`rounded-2xl border border-gray-200 bg-white p-5 shadow-sm ${catAccent(r.tool.category)}`}>
+              <div className="flex items-center justify-between gap-3 flex-wrap mb-2">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <a href={`/${locale}/tools/${r.id}`} className="text-lg font-bold text-gray-900 hover:text-violet-700 transition">{r.tool.name}</a>
+                  <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${catBadge(r.tool.category)}`}>{r.type[locale]}</span>
+                </div>
                 <span className="flex items-center gap-3 text-sm">
                   <span className="text-amber-700 font-bold">⭐ {r.tool.rating.toFixed(1)}</span>
                   <span className={`font-semibold ${pricingColor(r.tool.pricing)}`}>{r.tool.pricingLocalized[locale]}</span>
                 </span>
               </div>
-              {r.tool.verdict && <p className="text-gray-700 text-sm leading-relaxed">{r.tool.verdict}</p>}
-              <div className="mt-3 flex items-center gap-3">
+              {r.tool.verdict && <p className="text-gray-700 text-sm leading-relaxed mb-3">{r.tool.verdict}</p>}
+              <div className="grid sm:grid-cols-2 gap-x-6 gap-y-2 mb-3">
+                <div className="rounded-xl bg-emerald-50 border border-emerald-100 p-3">
+                  <p className="text-[11px] font-black uppercase tracking-wider text-emerald-700 mb-1.5">✓ {PAGE.prosLabel[locale]}</p>
+                  <ul className="space-y-1">
+                    {(r.tool.pros || []).slice(0, 3).map((p, k) => (
+                      <li key={k} className="text-xs text-gray-700 flex gap-1.5"><span className="text-emerald-600 font-bold flex-shrink-0">+</span><span>{tl(p, locale)}</span></li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="rounded-xl bg-rose-50 border border-rose-100 p-3">
+                  <p className="text-[11px] font-black uppercase tracking-wider text-rose-600 mb-1.5">✗ {PAGE.consLabel[locale]}</p>
+                  <ul className="space-y-1">
+                    {(r.tool.cons || []).slice(0, 3).map((c, k) => (
+                      <li key={k} className="text-xs text-gray-700 flex gap-1.5"><span className="text-rose-500 font-bold flex-shrink-0">−</span><span>{tl(c, locale)}</span></li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
                 <a href={url} target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] rounded-lg px-3 py-1.5 hover:opacity-90 transition">
                   {PAGE.visit[locale]} →
