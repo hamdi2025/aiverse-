@@ -67,6 +67,7 @@ export default function Header() {
             </select>
           </div>
 
+          <Link href="/ai-agents" className="hidden md:flex items-center gap-1.5 text-xs font-bold text-violet-700 bg-violet-50 border border-violet-300 hover:bg-violet-100 hover:border-violet-400 rounded-xl px-3 py-2 transition-all">🚀 Agents</Link>
           <Link href="/stack" className={`hidden md:flex ${navLink}`}>🧰 Stack</Link>
           <Link href="/compare" className={`hidden md:flex ${navLink}`}>⚡ Compare</Link>
           <Link href="/alternatives" className={`hidden lg:flex ${navLink}`}>🔁 Alternatives</Link>
@@ -100,6 +101,7 @@ export default function Header() {
       <div className="md:hidden border-t border-gray-200 overflow-x-auto no-scrollbar bg-white">
         <nav className="flex items-center gap-2 px-4 py-2 whitespace-nowrap text-xs font-semibold">
           <Link href="/" className="text-gray-700 hover:text-violet-700 border border-gray-200 rounded-lg px-3 py-1.5">🏠 Tools</Link>
+          <Link href="/ai-agents" className="text-violet-700 bg-violet-50 border border-violet-300 rounded-lg px-3 py-1.5 font-bold">🚀 Agents</Link>
           <Link href="/compare" className="text-gray-700 hover:text-violet-700 border border-gray-200 rounded-lg px-3 py-1.5">⚡ Compare</Link>
           <Link href="/alternatives" className="text-gray-700 hover:text-violet-700 border border-gray-200 rounded-lg px-3 py-1.5">🔁 Alternatives</Link>
           <Link href="/best" className="text-gray-700 hover:text-violet-700 border border-gray-200 rounded-lg px-3 py-1.5">🏆 Best</Link>

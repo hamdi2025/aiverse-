@@ -36,7 +36,7 @@ export default function TrendingAgents({ onCompare }: { onCompare?: () => void }
           </h2>
           <p className="text-gray-600 text-xs mt-0.5">{t.subtitle}</p>
         </div>
-        <Link href={`/${locale}/compare`}
+        <Link href={`/${locale}/ai-agents`}
           className="text-xs text-violet-600 hover:text-violet-800 font-semibold flex items-center gap-1 transition">
           {t.viewAll} <ArrowRight className="w-3 h-3" />
         </Link>

@@ -11,6 +11,7 @@ import AdSenseSlot from '@/components/ads/AdSenseSlot';
 import AgentsSpotlight from '@/components/home/AgentsSpotlight';
 import CompareWidget from '@/components/home/CompareWidget';
 import TrendingAgents from '@/components/home/TrendingAgents';
+import Trends2026 from '@/components/home/Trends2026';
 
 const ToolModal = dynamic(() => import('@/components/home/ToolModal'), { ssr: false });
 
@@ -57,6 +58,7 @@ export default function HomePageClient() {
           onCategoryChange={handleCategoryChange}
         />
         <StatsBar />
+        <Trends2026 />
         <NewsletterCTA />
         <AgentsSpotlight onExplore={() => { setSelectedCategory('agents'); scrollToGrid(); }} />
         <TrendingAgents />
