@@ -4511,6 +4511,34 @@ export const TOOLS_DATA: AITool[] = [
     useCases: ['Automated web bookings & orders', 'Form-filling across sites', 'Repetitive browser workflows', 'Hands-off research tasks'],
     verdict: 'Operator is worth trying for ChatGPT Pro users who want OpenAI to automate browser tasks, but in 2026 its real-world reliability still lags Claude\'s computer use. Treat it as a promising preview rather than a dependable production worker.',
   },
+  {
+    id: 'remio',
+    name: 'Remio',
+    category: 'productivity',
+    description: {
+      en: "Local-first AI memory and personal knowledge base that parses files, webpages, recordings, emails, messages, images and notes into local indexes and vectors.",
+      fr: "Mémoire IA et base de connaissances personnelle local-first qui analyse fichiers, pages web, enregistrements, e-mails, messages, images et notes.",
+      es: "Memoria de IA y base de conocimiento personal local-first que analiza archivos, páginas web, grabaciones, correos, mensajes, imágenes y notas.",
+      ar: "ذاكرة ذكاء اصطناعي وقاعدة معرفة شخصية محلية أولاً تفهرس الملفات وصفحات الويب والتسجيلات والبريد والرسائل والصور والملاحظات."
+    },
+    rating: 4.6,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free / paid plans',
+      fr: 'Gratuit / offres payantes',
+      es: 'Gratis / planes de pago',
+      ar: 'مجاني / خطط مدفوعة'
+    },
+    websiteUrl: 'https://remio.ai/',
+    views: 12500,
+    company: 'Remio', founded: '2024', hasAPI: false, hasMobileApp: false,
+    releaseDate: '2024', lastUpdate: 'Jun 2026',
+    pros: ['Local-first personal context', 'Parses many file and message formats', 'Reduces repeated folder scans and prompt bloat'],
+    cons: ['Requires desktop app install', 'Best after indexing personal work context'],
+    tags: ['AI Memory', 'Knowledge Base', 'Local-first', 'Productivity'],
+    useCases: ['Personal knowledge base', 'Document analysis', 'Meeting and email context retrieval', 'Agent context preparation'],
+    verdict: 'Remio is a strong fit for users who want a local-first personal AI memory layer across work files, meetings, emails, messages and notes instead of repeatedly loading raw documents into prompts.',
+  },
 ];
 
 export function getToolById(id: string): AITool | undefined {
