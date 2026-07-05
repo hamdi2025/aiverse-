@@ -4596,6 +4596,206 @@ export const TOOLS_DATA: AITool[] = [
     useCases: ['Automated web bookings & orders', 'Form-filling across sites', 'Repetitive browser workflows', 'Hands-off research tasks'],
     verdict: 'Operator is worth trying for ChatGPT Pro users who want OpenAI to automate browser tasks, but in 2026 its real-world reliability still lags Claude\'s computer use. Treat it as a promising preview rather than a dependable production worker.',
   },
+  {
+    id: 'notebooklm',
+    name: 'NotebookLM',
+    category: 'productivity',
+    description: {
+      en: "Google's source-grounded AI research assistant that answers only from the documents you upload and turns them into audio overviews, mind maps, quizzes and reports.",
+      fr: "Assistant de recherche IA de Google ancré dans vos sources : il répond uniquement à partir des documents que vous importez et les transforme en résumés audio, cartes mentales, quiz et rapports.",
+      es: "Asistente de investigación con IA de Google anclado en tus fuentes: responde solo a partir de los documentos que subes y los convierte en resúmenes de audio, mapas mentales, cuestionarios e informes.",
+      ar: "مساعد بحثي بالذكاء الاصطناعي من Google يعتمد على مصادرك: يجيب فقط انطلاقاً من المستندات التي ترفعها ويحوّلها إلى ملخصات صوتية وخرائط ذهنية واختبارات وتقارير."
+    },
+    rating: 4.7,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free / Plus $7.99/mo',
+      fr: 'Gratuit / Plus 7,99$/mois',
+      es: 'Gratis / Plus $7.99/mes',
+      ar: 'مجاني / Plus ٧٫٩٩ دولار شهرياً'
+    },
+    websiteUrl: 'https://notebooklm.google.com',
+    views: 18700,
+    company: 'Google', founded: '2023', hasAPI: false, hasMobileApp: true,
+    releaseDate: 'Jul 2023', lastUpdate: 'Jun 2026',
+    pros: ['Answers grounded in your own sources', 'Podcast-style Audio Overviews', 'Mind maps, quizzes & flashcards', 'Rarely hallucinates', 'Generous free plan'],
+    cons: ['Needs your own documents to shine', 'Free plan has daily limits', 'Not a general chatbot', 'Video overviews gated to paid tiers'],
+    tags: ['Research', 'Notes', 'Audio Overviews', 'Google', 'Study'],
+    useCases: ['Summarizing research papers', 'Studying from PDFs', 'Turning docs into podcasts', 'Grounded Q&A on sources', 'Building study guides'],
+    verdict: 'NotebookLM is the best pick for students and researchers who want an AI that answers strictly from their own documents. Its Audio Overviews and mind maps make dense material easy to digest, and the free plan covers most individual needs.',
+    faq: [
+      {
+        question: {
+          en: 'Is NotebookLM free?',
+          fr: 'NotebookLM est-il gratuit ?',
+          es: '¿NotebookLM es gratis?',
+          ar: 'هل NotebookLM مجاني؟'
+        },
+        answer: {
+          en: 'Yes. The free plan includes 100 notebooks, 50 sources per notebook and 50 daily chat questions, with audio and video overviews included. NotebookLM Plus adds higher limits for $7.99/mo.',
+          fr: 'Oui. Le plan gratuit inclut 100 carnets, 50 sources par carnet et 50 questions par jour, avec les résumés audio et vidéo. NotebookLM Plus augmente les limites pour 7,99$/mois.',
+          es: 'Sí. El plan gratuito incluye 100 cuadernos, 50 fuentes por cuaderno y 50 preguntas diarias, con resúmenes de audio y vídeo. NotebookLM Plus amplía los límites por $7.99/mes.',
+          ar: 'نعم. الخطة المجانية تتضمن 100 دفتر و50 مصدراً لكل دفتر و50 سؤالاً يومياً، مع الملخصات الصوتية والمرئية. وتوفر خطة Plus حدوداً أعلى مقابل ٧٫٩٩ دولار شهرياً.'
+        }
+      },
+      {
+        question: {
+          en: 'Does NotebookLM make things up?',
+          fr: 'NotebookLM invente-t-il des réponses ?',
+          es: '¿NotebookLM inventa respuestas?',
+          ar: 'هل يختلق NotebookLM المعلومات؟'
+        },
+        answer: {
+          en: 'Rarely. It is source-grounded, meaning it answers from the documents you upload and cites them, which greatly reduces hallucinations compared with a general chatbot.',
+          fr: 'Rarement. Il est ancré dans vos sources : il répond à partir des documents importés et les cite, ce qui réduit fortement les hallucinations par rapport à un chatbot généraliste.',
+          es: 'Rara vez. Está anclado en tus fuentes: responde a partir de los documentos que subes y los cita, lo que reduce mucho las alucinaciones frente a un chatbot general.',
+          ar: 'نادراً. فهو يعتمد على مصادرك ويجيب من المستندات التي ترفعها مع الاستشهاد بها، مما يقلّل الأخطاء مقارنةً بروبوت محادثة عام.'
+        }
+      }
+    ],
+  },
+  {
+    id: 'granola',
+    name: 'Granola',
+    category: 'productivity',
+    description: {
+      en: "AI notepad for back-to-back meetings that transcribes calls in the background and turns your rough notes into clean, structured summaries.",
+      fr: "Bloc-notes IA pour les réunions en cascade : il transcrit les appels en arrière-plan et transforme vos notes brutes en résumés clairs et structurés.",
+      es: "Bloc de notas con IA para reuniones consecutivas: transcribe las llamadas en segundo plano y convierte tus notas rápidas en resúmenes claros y estructurados.",
+      ar: "مفكرة بالذكاء الاصطناعي للاجتماعات المتتالية: تنسخ المكالمات في الخلفية وتحوّل ملاحظاتك السريعة إلى ملخصات واضحة ومنظمة."
+    },
+    rating: 4.7,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free / Business $14/user/mo',
+      fr: 'Gratuit / Business 14$/utilisateur/mois',
+      es: 'Gratis / Business $14/usuario/mes',
+      ar: 'مجاني / Business ١٤ دولار لكل مستخدم شهرياً'
+    },
+    websiteUrl: 'https://www.granola.ai',
+    views: 15300,
+    company: 'Granola', founded: '2023', hasAPI: true, hasMobileApp: true,
+    releaseDate: 'May 2024', lastUpdate: 'Jun 2026',
+    pros: ['Enhances your own notes, not just raw transcripts', 'Runs in the background, no meeting bot', 'Fast, clean structured summaries', 'Integrations with Notion, HubSpot, Slack', 'Well funded ($1.5B valuation in 2026)'],
+    cons: ['Free plan caps note history', 'Best value needs paid Business plan', 'Primarily meeting-focused', 'Requires local audio capture'],
+    tags: ['Meeting Notes', 'Transcription', 'Productivity', 'Notes', 'Summaries'],
+    useCases: ['Back-to-back meeting notes', 'Sales call summaries', 'Interview notes', 'Team standups', 'Client meeting recaps'],
+    verdict: 'Granola is the best choice for professionals in back-to-back meetings who want polished notes without a bot joining the call. It quietly captures audio and elevates your own shorthand into structured summaries.',
+    faq: [
+      {
+        question: {
+          en: 'Does Granola send a bot to my meetings?',
+          fr: 'Granola envoie-t-il un bot dans mes réunions ?',
+          es: '¿Granola envía un bot a mis reuniones?',
+          ar: 'هل يرسل Granola روبوتاً إلى اجتماعاتي؟'
+        },
+        answer: {
+          en: 'No. Granola captures your computer audio locally and transcribes in the background, so no visible bot joins the call — a key difference from many meeting notetakers.',
+          fr: 'Non. Granola capte l\'audio de votre ordinateur en local et transcrit en arrière-plan : aucun bot visible ne rejoint l\'appel, contrairement à beaucoup d\'outils de prise de notes.',
+          es: 'No. Granola captura el audio de tu ordenador de forma local y transcribe en segundo plano, así que ningún bot visible se une a la llamada, a diferencia de muchos tomadores de notas.',
+          ar: 'لا. يلتقط Granola صوت جهازك محلياً وينسخه في الخلفية، فلا ينضم أي روبوت مرئي إلى المكالمة، وهو فارق مهم عن كثير من أدوات تدوين الاجتماعات.'
+        }
+      },
+      {
+        question: {
+          en: 'How much does Granola cost?',
+          fr: 'Combien coûte Granola ?',
+          es: '¿Cuánto cuesta Granola?',
+          ar: 'كم تكلفة Granola؟'
+        },
+        answer: {
+          en: 'There is a free Basic plan with limited note history. The Business plan is $14/user/mo with unlimited history and integrations, and an Enterprise plan is $35/user/mo.',
+          fr: 'Un plan Basic gratuit existe avec un historique limité. Le plan Business est à 14$/utilisateur/mois avec historique illimité et intégrations, et le plan Enterprise à 35$/utilisateur/mois.',
+          es: 'Hay un plan Basic gratuito con historial limitado. El plan Business cuesta $14/usuario/mes con historial ilimitado e integraciones, y el plan Enterprise $35/usuario/mes.',
+          ar: 'توجد خطة Basic مجانية بسجل محدود. وخطة Business بسعر ١٤ دولار لكل مستخدم شهرياً مع سجل غير محدود وتكاملات، وخطة Enterprise بسعر ٣٥ دولار لكل مستخدم شهرياً.'
+        }
+      }
+    ],
+  },
+  {
+    id: 'wispr-flow',
+    name: 'Wispr Flow',
+    category: 'audio',
+    description: {
+      en: "AI voice dictation that lets you speak instead of type across any app, removing filler words and adapting tone to the app you are writing in.",
+      fr: "Dictée vocale IA qui vous permet de parler au lieu de taper dans n'importe quelle application, en supprimant les mots parasites et en adaptant le ton à l'app utilisée.",
+      es: "Dictado por voz con IA que te permite hablar en lugar de escribir en cualquier aplicación, eliminando muletillas y adaptando el tono a la app en la que escribes.",
+      ar: "إملاء صوتي بالذكاء الاصطناعي يتيح لك التحدث بدلاً من الكتابة في أي تطبيق، مع إزالة الكلمات الزائدة وتكييف النبرة حسب التطبيق الذي تكتب فيه."
+    },
+    rating: 4.6,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free / Pro $15/mo',
+      fr: 'Gratuit / Pro 15$/mois',
+      es: 'Gratis / Pro $15/mes',
+      ar: 'مجاني / Pro ١٥ دولار شهرياً'
+    },
+    websiteUrl: 'https://wisprflow.ai',
+    views: 11200,
+    company: 'Wispr', founded: '2021', hasAPI: false, hasMobileApp: true,
+    releaseDate: 'May 2024', lastUpdate: 'Jun 2026',
+    pros: ['Fast, accurate dictation across any app', 'Removes filler words automatically', 'Adapts tone to the app (Slack vs Gmail)', 'Works on Mac, Windows, iOS and Android', 'Command mode for voice editing'],
+    cons: ['Free plan limited to 2,000 words/week', 'No lifetime plan', 'Best features need Pro', 'Requires microphone access'],
+    tags: ['Dictation', 'Voice', 'Transcription', 'Productivity', 'Writing'],
+    useCases: ['Dictating emails & messages', 'Hands-free writing', 'Note-taking by voice', 'Coding comments by voice', 'Reducing typing strain'],
+    verdict: 'Wispr Flow is the best pick for anyone who writes faster by talking. It cleans up filler words and matches the tone of each app automatically, and it is the rare dictation tool available on all four major platforms.',
+  },
+  {
+    id: 'higgsfield-ai',
+    name: 'Higgsfield AI',
+    category: 'video',
+    description: {
+      en: "AI video generator and interface layer over frontier models like Kling, Sora and Veo, with 70+ camera presets and a product-URL-to-ad agent for creators.",
+      fr: "Générateur de vidéo IA et couche d'interface au-dessus de modèles de pointe comme Kling, Sora et Veo, avec plus de 70 préréglages de caméra et un agent qui transforme une URL produit en publicité.",
+      es: "Generador de vídeo con IA y capa de interfaz sobre modelos de vanguardia como Kling, Sora y Veo, con más de 70 presets de cámara y un agente que convierte la URL de un producto en un anuncio.",
+      ar: "مولّد فيديو بالذكاء الاصطناعي وطبقة واجهة فوق نماذج متقدمة مثل Kling وSora وVeo، مع أكثر من 70 إعداداً مسبقاً للكاميرا ووكيل يحوّل رابط المنتج إلى إعلان."
+    },
+    rating: 4.4,
+    pricing: 'Paid',
+    pricingLocalized: {
+      en: 'From $15/mo',
+      fr: 'À partir de 15$/mois',
+      es: 'Desde $15/mes',
+      ar: 'ابتداءً من ١٥ دولار شهرياً'
+    },
+    websiteUrl: 'https://higgsfield.ai',
+    views: 13800,
+    company: 'Higgsfield', founded: '2023', hasAPI: false, hasMobileApp: false,
+    releaseDate: 'Mar 2024', lastUpdate: 'Jun 2026',
+    pros: ['Access to Kling, Sora & Veo under one plan', '70+ cinematic camera presets', 'Product URL to ad video (Hermes Agent)', 'Strong for UGC and e-commerce ads', 'Frequent model updates'],
+    cons: ['No free tier', 'Premium models burn credits fast', 'Costs add up for high output', 'No public API yet'],
+    tags: ['AI Video', 'Text-to-Video', 'Ads', 'UGC', 'Cinematic'],
+    useCases: ['E-commerce ad videos', 'UGC-style social clips', 'Cinematic camera moves', 'Product marketing videos', 'Short-form content at scale'],
+    verdict: 'Higgsfield AI is worth it for marketers and creators who want multiple top video models plus directorial camera control in one subscription. Its product-URL-to-ad agent is the standout for e-commerce, though credits deplete quickly on premium models.',
+  },
+  {
+    id: 'onechat-ai',
+    name: 'OneChat AI',
+    category: 'chatbots',
+    description: {
+      en: "An all-in-one AI 'super app' that brings ChatGPT, Claude, Gemini, Perplexity, DeepSeek and other top models into a single place — plus hundreds of built-in AI tools for writing, marketing, content, image and video generation and graphic design.",
+      fr: "Une « super-app » IA tout-en-un qui réunit ChatGPT, Claude, Gemini, Perplexity, DeepSeek et d'autres grands modèles au même endroit — avec des centaines d'outils IA intégrés pour la rédaction, le marketing, le contenu, la génération d'images et de vidéos et le design graphique.",
+      es: "Una 'súper app' de IA todo en uno que reúne ChatGPT, Claude, Gemini, Perplexity, DeepSeek y otros modelos líderes en un solo lugar, además de cientos de herramientas de IA integradas para escritura, marketing, contenido, generación de imágenes y vídeo y diseño gráfico.",
+      ar: "«تطبيق خارق» شامل للذكاء الاصطناعي يجمع ChatGPT وClaude وGemini وPerplexity وDeepSeek وأبرز النماذج في مكان واحد — إضافةً إلى مئات الأدوات المدمجة للكتابة والتسويق والمحتوى وتوليد الصور والفيديو والتصميم الجرافيكي."
+    },
+    rating: 4.4,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free plan / paid plans available',
+      fr: 'Formule gratuite / offres payantes',
+      es: 'Plan gratis / planes de pago',
+      ar: 'خطة مجانية / خطط مدفوعة'
+    },
+    websiteUrl: 'https://onechatai.ai',
+    views: 8000,
+    company: 'OneChat AI', founded: '2024', hasAPI: false, hasMobileApp: true,
+    releaseDate: '2024', lastUpdate: 'Jul 2026',
+    pros: ['All top models in one app (ChatGPT, Claude, Gemini, DeepSeek…)', 'Hundreds of built-in AI tools', 'One subscription instead of many', 'Chat, images, video and design in one place', 'No need to sign up for each model separately'],
+    cons: ['Depends on third-party model APIs', 'Advanced features need a paid plan', 'Less deep than each native app', 'Output quality varies by underlying model'],
+    tags: ['AI Chat', 'Aggregator', 'Super App', 'Multi-model', 'Productivity'],
+    useCases: ['Comparing answers from multiple models', 'One-stop AI workspace', 'Content, image & video creation', 'Avoiding several separate subscriptions'],
+    verdict: 'OneChat AI is a strong pick for users who want ChatGPT, Claude, Gemini and other top models — plus hundreds of AI tools — under one roof and one subscription, instead of juggling many separate apps.',
+  },
 ];
 
 export function getToolById(id: string): AITool | undefined {

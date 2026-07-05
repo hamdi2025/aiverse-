@@ -4276,6 +4276,157 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'best-ai-meeting-note-takers-2026',
+    category: 'productivity',
+    emoji: '📝',
+    publishedDate: '2026-07-02',
+    readTime: 7,
+    title: {
+      en: 'Best AI Meeting Note Takers in 2026: Granola vs Otter vs Fireflies vs tl;dv',
+      fr: 'Meilleurs Preneurs de Notes de Réunion IA en 2026 : Granola vs Otter vs Fireflies vs tl;dv',
+      es: 'Mejores Tomadores de Notas de Reuniones con IA en 2026: Granola vs Otter vs Fireflies vs tl;dv',
+      ar: 'أفضل أدوات تدوين ملاحظات الاجتماعات بالذكاء الاصطناعي في 2026: Granola و Otter و Fireflies و tl;dv',
+    },
+    excerpt: {
+      en: 'AI meeting note takers now transcribe your calls, write structured summaries, and pull out action items automatically. We compare the leading tools of 2026 — Granola, Otter, Fireflies and tl;dv — so you can pick the right one for your meetings.',
+      fr: 'Les preneurs de notes de réunion IA transcrivent désormais vos appels, rédigent des résumés structurés et extraient automatiquement les tâches à faire. Nous comparons les meilleurs outils de 2026 — Granola, Otter, Fireflies et tl;dv — pour vous aider à choisir.',
+      es: 'Los tomadores de notas de reuniones con IA ahora transcriben tus llamadas, redactan resúmenes estructurados y extraen tareas automáticamente. Comparamos las mejores herramientas de 2026 — Granola, Otter, Fireflies y tl;dv — para que elijas la adecuada.',
+      ar: 'أصبحت أدوات تدوين ملاحظات الاجتماعات بالذكاء الاصطناعي تنسخ مكالماتك وتكتب ملخصات منظمة وتستخرج المهام تلقائياً. نقارن أبرز أدوات 2026 — Granola و Otter و Fireflies و tl;dv — لتختار الأنسب لاجتماعاتك.',
+    },
+    sections: [
+      {
+        heading: {
+          en: 'Why AI Meeting Note Takers Took Off',
+          fr: 'Pourquoi les preneurs de notes de réunion IA ont décollé',
+          es: 'Por qué despegaron los tomadores de notas con IA',
+          ar: 'لماذا انتشرت أدوات تدوين ملاحظات الاجتماعات بالذكاء الاصطناعي',
+        },
+        body: {
+          en: 'Back-to-back video calls made manual note-taking impossible — you either pay attention or you write, not both. AI meeting note takers solve this by transcribing the call, generating a clean summary, and extracting action items so you can stay present. In 2026 the category has split into two styles: tools that join the call as a visible bot (Otter, Fireflies, tl;dv) and tools that capture audio quietly in the background (Granola). Here is how the leaders compare.',
+          fr: 'Les visioconférences en cascade ont rendu la prise de notes manuelle impossible : soit vous écoutez, soit vous écrivez, pas les deux. Les preneurs de notes IA résolvent cela en transcrivant l\'appel, en générant un résumé clair et en extrayant les tâches, pour que vous restiez concentré. En 2026, la catégorie s\'est scindée en deux styles : les outils qui rejoignent l\'appel comme un bot visible (Otter, Fireflies, tl;dv) et ceux qui captent l\'audio discrètement en arrière-plan (Granola). Voici comment se comparent les leaders.',
+          es: 'Las videollamadas consecutivas hicieron imposible tomar notas a mano: o prestas atención o escribes, no ambas. Los tomadores de notas con IA lo resuelven transcribiendo la llamada, generando un resumen claro y extrayendo tareas para que sigas presente. En 2026 la categoría se dividió en dos estilos: herramientas que se unen como un bot visible (Otter, Fireflies, tl;dv) y herramientas que captan el audio discretamente en segundo plano (Granola). Así se comparan los líderes.',
+          ar: 'جعلت مكالمات الفيديو المتتالية تدوين الملاحظات يدوياً أمراً مستحيلاً — فإما أن تنتبه أو تكتب، وليس الاثنين معاً. تحل أدوات تدوين الملاحظات بالذكاء الاصطناعي ذلك عبر نسخ المكالمة وإنشاء ملخص واضح واستخراج المهام لتبقى حاضراً. في 2026 انقسمت الفئة إلى نمطين: أدوات تنضم إلى المكالمة كروبوت مرئي (Otter و Fireflies و tl;dv)، وأدوات تلتقط الصوت بهدوء في الخلفية (Granola). إليك كيف تتقارن الأدوات الرائدة.',
+        },
+      },
+      {
+        heading: {
+          en: 'Granola: Notes Without a Bot',
+          fr: 'Granola : des notes sans bot',
+          es: 'Granola: notas sin bot',
+          ar: 'Granola: ملاحظات بدون روبوت',
+        },
+        body: {
+          en: 'Granola takes a different approach: instead of sending a bot into your meeting, it captures your computer audio locally and enhances the rough notes you type yourself into a clean, structured summary. That makes it ideal for sensitive or client-facing calls where a visible recording bot would feel awkward. Backed by a $1.5B valuation in 2026, it integrates with Notion, HubSpot and Slack, and its free plan covers occasional users while the $14/user/mo Business plan unlocks unlimited history.',
+          fr: 'Granola adopte une approche différente : au lieu d\'envoyer un bot dans votre réunion, il capte l\'audio de votre ordinateur en local et transforme les notes brutes que vous tapez en un résumé clair et structuré. C\'est idéal pour les appels sensibles ou avec des clients, où un bot d\'enregistrement visible serait gênant. Valorisé à 1,5 Md$ en 2026, il s\'intègre à Notion, HubSpot et Slack ; son plan gratuit convient aux usages ponctuels, et le plan Business à 14$/utilisateur/mois débloque l\'historique illimité.',
+          es: 'Granola adopta un enfoque distinto: en lugar de enviar un bot a tu reunión, captura el audio de tu ordenador de forma local y convierte las notas rápidas que escribes en un resumen claro y estructurado. Es ideal para llamadas sensibles o con clientes, donde un bot de grabación visible resultaría incómodo. Con una valoración de 1.500 M$ en 2026, se integra con Notion, HubSpot y Slack; su plan gratuito cubre a usuarios ocasionales y el plan Business de $14/usuario/mes desbloquea el historial ilimitado.',
+          ar: 'يتّبع Granola نهجاً مختلفاً: بدلاً من إرسال روبوت إلى اجتماعك، يلتقط صوت جهازك محلياً ويحوّل الملاحظات السريعة التي تكتبها إلى ملخص واضح ومنظم. هذا يجعله مثالياً للمكالمات الحساسة أو مع العملاء، حيث يكون روبوت التسجيل المرئي محرجاً. وبتقييم بلغ 1.5 مليار دولار في 2026، يتكامل مع Notion و HubSpot و Slack؛ وخطته المجانية تناسب الاستخدام العرضي، بينما تفتح خطة Business بسعر ١٤ دولار لكل مستخدم شهرياً سجلاً غير محدود.',
+        },
+      },
+      {
+        heading: {
+          en: 'Otter, Fireflies and tl;dv: The Bot-Based Classics',
+          fr: 'Otter, Fireflies et tl;dv : les classiques à base de bot',
+          es: 'Otter, Fireflies y tl;dv: los clásicos basados en bot',
+          ar: 'Otter و Fireflies و tl;dv: الكلاسيكيات المعتمدة على الروبوت',
+        },
+        body: {
+          en: 'Otter is the veteran, with live transcription, speaker labels and an AI chat you can query after the call. Fireflies shines for teams: it joins Zoom, Meet and Teams automatically, logs summaries to your CRM, and offers conversation analytics. tl;dv is popular for its generous free tier and clip-sharing, letting you cut highlight reels from recordings. All three record via a bot that appears in the call, which is great for shared visibility but less discreet than Granola.',
+          fr: 'Otter est le vétéran, avec transcription en direct, identification des intervenants et un chat IA interrogeable après l\'appel. Fireflies brille pour les équipes : il rejoint Zoom, Meet et Teams automatiquement, enregistre les résumés dans votre CRM et propose des analyses de conversation. tl;dv est apprécié pour son offre gratuite généreuse et le partage de clips, permettant d\'extraire des moments forts des enregistrements. Les trois enregistrent via un bot visible dans l\'appel — pratique pour la visibilité partagée, mais moins discret que Granola.',
+          es: 'Otter es el veterano, con transcripción en vivo, etiquetas de hablante y un chat con IA que puedes consultar tras la llamada. Fireflies destaca para equipos: se une a Zoom, Meet y Teams automáticamente, registra resúmenes en tu CRM y ofrece analíticas de conversación. tl;dv es popular por su generoso plan gratuito y el uso compartido de clips, permitiendo cortar momentos destacados de las grabaciones. Los tres graban mediante un bot visible en la llamada: ideal para la visibilidad compartida, pero menos discreto que Granola.',
+          ar: 'يُعد Otter المخضرم، بنسخ مباشر وتسميات للمتحدثين ودردشة ذكاء اصطناعي يمكنك سؤالها بعد المكالمة. ويتألق Fireflies للفرق: ينضم إلى Zoom و Meet و Teams تلقائياً، ويسجّل الملخصات في نظام إدارة العملاء، ويوفر تحليلات للمحادثة. ويحظى tl;dv بشعبية بفضل خطته المجانية السخية ومشاركة المقاطع، مما يتيح اقتطاع أبرز اللحظات من التسجيلات. الثلاثة تسجّل عبر روبوت مرئي في المكالمة — رائع للرؤية المشتركة لكنه أقل تحفظاً من Granola.',
+        },
+      },
+      {
+        heading: {
+          en: 'Turning Documents Into Notes: NotebookLM',
+          fr: 'Transformer des documents en notes : NotebookLM',
+          es: 'Convertir documentos en notas: NotebookLM',
+          ar: 'تحويل المستندات إلى ملاحظات: NotebookLM',
+        },
+        body: {
+          en: 'Not every note comes from a live call. If you need to digest transcripts, reports or PDFs after the fact, Google\'s NotebookLM is a strong companion. It answers strictly from the sources you upload, generates podcast-style audio overviews, and builds mind maps and study guides — a great way to turn a pile of meeting transcripts into a searchable, source-grounded knowledge base. Pair it with a live note taker for end-to-end coverage.',
+          fr: 'Toutes les notes ne viennent pas d\'un appel en direct. Pour digérer des transcriptions, rapports ou PDF après coup, NotebookLM de Google est un excellent compagnon. Il répond uniquement à partir des sources importées, génère des résumés audio façon podcast et crée des cartes mentales et guides d\'étude — idéal pour transformer une pile de transcriptions en base de connaissances consultable et ancrée dans les sources. Associez-le à un preneur de notes en direct pour une couverture de bout en bout.',
+          es: 'No todas las notas vienen de una llamada en vivo. Si necesitas digerir transcripciones, informes o PDF después, NotebookLM de Google es un gran compañero. Responde solo a partir de las fuentes que subes, genera resúmenes de audio tipo podcast y crea mapas mentales y guías de estudio: ideal para convertir un montón de transcripciones en una base de conocimiento consultable y anclada en fuentes. Combínalo con un tomador de notas en vivo para una cobertura completa.',
+          ar: 'ليست كل ملاحظة تأتي من مكالمة مباشرة. إذا احتجت إلى استيعاب نصوص أو تقارير أو ملفات PDF لاحقاً، فإن NotebookLM من Google رفيق ممتاز. يجيب فقط من المصادر التي ترفعها، وينشئ ملخصات صوتية بأسلوب البودكاست، ويبني خرائط ذهنية وأدلة دراسة — طريقة رائعة لتحويل كومة من نصوص الاجتماعات إلى قاعدة معرفة قابلة للبحث ومستندة إلى المصادر. اجمعه مع أداة تدوين مباشرة لتغطية شاملة.',
+        },
+      },
+      {
+        heading: {
+          en: 'Which Meeting Note Taker Should You Choose?',
+          fr: 'Quel preneur de notes de réunion choisir ?',
+          es: '¿Qué tomador de notas deberías elegir?',
+          ar: 'أي أداة لتدوين ملاحظات الاجتماعات يجب أن تختار؟',
+        },
+        body: {
+          en: 'Choose Granola if you want polished notes without a visible bot, especially for client and sales calls. Pick Fireflies if your team needs automatic CRM logging and conversation analytics. Otter is the safe all-rounder with the longest track record, and tl;dv is the best free starting point, particularly if you share clips. And if much of your work is turning transcripts and documents into knowledge, add NotebookLM alongside whichever live tool you use.',
+          fr: 'Choisissez Granola pour des notes soignées sans bot visible, surtout pour les appels clients et commerciaux. Optez pour Fireflies si votre équipe a besoin d\'un enregistrement CRM automatique et d\'analyses de conversation. Otter est le polyvalent sûr avec la plus longue expérience, et tl;dv le meilleur point de départ gratuit, surtout si vous partagez des clips. Et si votre travail consiste souvent à transformer transcriptions et documents en savoir, ajoutez NotebookLM à l\'outil en direct que vous utilisez.',
+          es: 'Elige Granola si quieres notas pulidas sin un bot visible, sobre todo para llamadas con clientes y de ventas. Opta por Fireflies si tu equipo necesita registro automático en el CRM y analíticas de conversación. Otter es el todoterreno seguro con la trayectoria más larga, y tl;dv el mejor punto de partida gratuito, especialmente si compartes clips. Y si gran parte de tu trabajo es convertir transcripciones y documentos en conocimiento, añade NotebookLM junto a la herramienta en vivo que uses.',
+          ar: 'اختر Granola إذا أردت ملاحظات مصقولة بدون روبوت مرئي، خصوصاً لمكالمات العملاء والمبيعات. واختر Fireflies إذا احتاج فريقك إلى تسجيل تلقائي في نظام إدارة العملاء وتحليلات للمحادثة. ويُعد Otter الخيار الشامل الآمن صاحب أطول سجل، و tl;dv أفضل نقطة انطلاق مجانية، خاصة إذا كنت تشارك المقاطع. وإذا كان جزء كبير من عملك تحويل النصوص والمستندات إلى معرفة، فأضف NotebookLM إلى جانب الأداة المباشرة التي تستخدمها.',
+        },
+      },
+      {
+        heading: {
+          en: 'Explore More on AIverse',
+          fr: 'Découvrez plus sur AIverse',
+          es: 'Descubre más en AIverse',
+          ar: 'اكتشف المزيد على AIverse',
+        },
+        body: {
+          en: 'Browse our full directory of AI productivity and audio tools, compare meeting note takers side by side, and find the perfect fit for your workflow on AIverse.',
+          fr: 'Parcourez notre annuaire complet d\'outils de productivité et audio IA, comparez les preneurs de notes côte à côte, et trouvez celui qui convient le mieux à votre flux de travail sur AIverse.',
+          es: 'Explora nuestro directorio completo de herramientas de productividad y audio con IA, compara los tomadores de notas lado a lado y encuentra la opción perfecta para tu flujo de trabajo en AIverse.',
+          ar: 'تصفّح دليلنا الكامل لأدوات الإنتاجية والصوت بالذكاء الاصطناعي، وقارن أدوات تدوين الملاحظات جنباً إلى جنب، واعثر على الأنسب لسير عملك على AIverse.',
+        },
+      },
+    ],
+    relatedTools: ['granola', 'notebooklm', 'otter-ai', 'fireflies-ai', 'tldv', 'wispr-flow'],
+    relatedComparisons: [],
+    faq: [
+      {
+        question: {
+          en: 'What is the best AI meeting note taker in 2026?',
+          fr: 'Quel est le meilleur preneur de notes de réunion IA en 2026 ?',
+          es: '¿Cuál es el mejor tomador de notas de reuniones con IA en 2026?',
+          ar: 'ما أفضل أداة لتدوين ملاحظات الاجتماعات بالذكاء الاصطناعي في 2026؟',
+        },
+        answer: {
+          en: 'There is no single winner — it depends on your needs. Granola is best for discreet, bot-free notes, Fireflies for team CRM logging and analytics, Otter for a reliable all-rounder, and tl;dv for a generous free plan with clip sharing.',
+          fr: 'Il n\'y a pas de gagnant unique : cela dépend de vos besoins. Granola est le meilleur pour des notes discrètes sans bot, Fireflies pour l\'enregistrement CRM et les analyses d\'équipe, Otter pour un polyvalent fiable, et tl;dv pour un plan gratuit généreux avec partage de clips.',
+          es: 'No hay un único ganador: depende de tus necesidades. Granola es el mejor para notas discretas sin bot, Fireflies para registro en CRM y analíticas de equipo, Otter para un todoterreno fiable, y tl;dv por su generoso plan gratuito con uso compartido de clips.',
+          ar: 'لا يوجد فائز واحد — يعتمد الأمر على احتياجاتك. Granola الأفضل للملاحظات المتحفظة بدون روبوت، و Fireflies لتسجيل نظام إدارة العملاء وتحليلات الفريق، و Otter كخيار شامل موثوق، و tl;dv لخطته المجانية السخية مع مشاركة المقاطع.',
+        },
+      },
+      {
+        question: {
+          en: 'Do AI meeting note takers work without a bot joining the call?',
+          fr: 'Les preneurs de notes IA fonctionnent-ils sans qu\'un bot rejoigne l\'appel ?',
+          es: '¿Funcionan los tomadores de notas con IA sin que un bot se una a la llamada?',
+          ar: 'هل تعمل أدوات تدوين الملاحظات بالذكاء الاصطناعي دون انضمام روبوت إلى المكالمة؟',
+        },
+        answer: {
+          en: 'Yes. Granola captures your computer audio locally and transcribes in the background, so no visible bot appears in the meeting. Tools like Otter, Fireflies and tl;dv instead join the call as a recording participant.',
+          fr: 'Oui. Granola capte l\'audio de votre ordinateur en local et transcrit en arrière-plan, sans bot visible dans la réunion. Des outils comme Otter, Fireflies et tl;dv rejoignent au contraire l\'appel comme participant enregistreur.',
+          es: 'Sí. Granola captura el audio de tu ordenador de forma local y transcribe en segundo plano, sin un bot visible en la reunión. Herramientas como Otter, Fireflies y tl;dv, en cambio, se unen a la llamada como participante de grabación.',
+          ar: 'نعم. يلتقط Granola صوت جهازك محلياً وينسخه في الخلفية، فلا يظهر روبوت مرئي في الاجتماع. أما أدوات مثل Otter و Fireflies و tl;dv فتنضم إلى المكالمة كمشارك مسجّل.',
+        },
+      },
+      {
+        question: {
+          en: 'Are there free AI meeting note takers?',
+          fr: 'Existe-t-il des preneurs de notes de réunion IA gratuits ?',
+          es: '¿Hay tomadores de notas de reuniones con IA gratuitos?',
+          ar: 'هل توجد أدوات مجانية لتدوين ملاحظات الاجتماعات بالذكاء الاصطناعي؟',
+        },
+        answer: {
+          en: 'Yes. tl;dv and Otter offer capable free tiers, and Granola has a free Basic plan with limited note history. NotebookLM is also free for turning transcripts and documents into summaries. Paid plans add unlimited history, integrations and analytics.',
+          fr: 'Oui. tl;dv et Otter proposent des offres gratuites performantes, et Granola dispose d\'un plan Basic gratuit avec historique limité. NotebookLM est aussi gratuit pour transformer transcriptions et documents en résumés. Les plans payants ajoutent historique illimité, intégrations et analyses.',
+          es: 'Sí. tl;dv y Otter ofrecen planes gratuitos capaces, y Granola tiene un plan Basic gratuito con historial limitado. NotebookLM también es gratuito para convertir transcripciones y documentos en resúmenes. Los planes de pago añaden historial ilimitado, integraciones y analíticas.',
+          ar: 'نعم. يقدّم tl;dv و Otter خططاً مجانية قوية، ولدى Granola خطة Basic مجانية بسجل محدود. كما أن NotebookLM مجاني لتحويل النصوص والمستندات إلى ملخصات. وتضيف الخطط المدفوعة سجلاً غير محدود وتكاملات وتحليلات.',
+        },
+      },
+    ],
+  },
 ];
 
 export function getAllBlogPosts(): BlogPost[] {
