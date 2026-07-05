@@ -44,7 +44,7 @@ export default function HeroSection({ onSearch, selectedCategory, onCategoryChan
 
   const [langIdx, setLangIdx] = useState(0);
   useEffect(() => {
-    const id = setInterval(() => setLangIdx((i) => (i + 1) % HERO_LANGS.length), 6000);
+    const id = setInterval(() => setLangIdx((i) => (i + 1) % HERO_LANGS.length), 2500);
     return () => clearInterval(id);
   }, []);
   const badgePrefix =
