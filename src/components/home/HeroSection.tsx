@@ -1,8 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import SearchBar from '../ui/SearchBar';
 import CategoryFilter from './CategoryFilter';
 
@@ -20,6 +20,9 @@ const CHIP_STYLES = [
   { grad: 'from-pink-500 to-rose-500', glow: 'rgba(236,72,153,0.75)' },
 ];
 
+// Languages the directory covers — the word rotates every 6s in the hero badge.
+const HERO_LANGS = ['Français', 'العربية', 'English', 'Español'];
+
 function coloredSubtitle(raw: string): React.ReactNode {
   const parts = raw.split(/(<agents>.*?<\/agents>|<tools>.*?<\/tools>)/g);
   return parts.map((part, i) => {
@@ -35,8 +38,20 @@ function coloredSubtitle(raw: string): React.ReactNode {
 
 export default function HeroSection({ onSearch, selectedCategory, onCategoryChange }: HeroSectionProps) {
   const t = useTranslations('Hero');
+  const locale = useLocale();
   const badgeItems = t('badge2items').split('|');
   const subtitleRaw = t('subtitle');
+
+  const [langIdx, setLangIdx] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setLangIdx((i) => (i + 1) % HERO_LANGS.length), 6000);
+    return () => clearInterval(id);
+  }, []);
+  const badgePrefix =
+    locale === 'ar' ? 'دليل الذكاء الاصطناعي بـ' :
+    locale === 'es' ? 'El directorio de IA en' :
+    locale === 'en' ? 'The AI directory in' :
+    "L'annuaire IA en";
 
   return (
     <section className="relative w-full py-16 md:py-24 overflow-hidden flex flex-col items-center justify-center text-center px-4">
@@ -47,10 +62,19 @@ export default function HeroSection({ onSearch, selectedCategory, onCategoryChan
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.05 }}
-        className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-violet-100 to-cyan-100 border border-violet-300 mb-5 shadow-sm"
+        className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-gradient-to-r from-violet-100 via-white to-cyan-100 border-2 border-violet-300 mb-6 shadow-lg shadow-violet-200/60"
       >
-        <span className="text-[11px] md:text-xs font-bold text-violet-700 tracking-widest uppercase">
-          {t('badge')}
+        <span className="text-base md:text-xl font-black text-gray-800">🌍 {badgePrefix}</span>
+        <span className="relative inline-block min-w-[92px] md:min-w-[120px] text-center">
+          <motion.span
+            key={langIdx}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45 }}
+            className="text-lg md:text-2xl font-black bg-gradient-to-r from-violet-600 via-fuchsia-500 to-cyan-500 bg-clip-text text-transparent"
+          >
+            {HERO_LANGS[langIdx]}
+          </motion.span>
         </span>
       </motion.div>
 
