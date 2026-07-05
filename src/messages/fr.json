@@ -16,16 +16,16 @@
     "signUp": "S'inscrire"
   },
   "Hero": {
-    "badge": "🤖 L'ère des agents IA est là",
+    "badge": "🌍 L'annuaire IA en français & en arabe",
     "titleAgents": "+100 Agents IA",
     "titleTools": "+1000 Outils IA",
     "titleMain": "Choisissez plus intelligemment —",
     "titleGradient1": "Puissance maximale,",
     "titleGradient2": "Coût minimal.",
-    "subtitle": "Découvrez des centaines d'<agents>agents IA</agents> et d'<tools>outils IA</tools> qui travaillent, planifient et exécutent pour vous.",
+    "subtitle": "AIverse, l'annuaire multilingue pour découvrir, comparer et choisir les meilleurs <agents>agents IA</agents> et <tools>outils IA</tools> — en français et en arabe, gratuitement.",
     "badge2items": "+100 Agents IA|+648 Outils IA|28 Catégories|Avis impartiaux",
     "popularSearch": "Populaire : Agents IA, ChatGPT, Midjourney, FLUX, Suno",
-    "titleSub": "Trouvez le bon outil IA pour chaque tâche"
+    "titleSub": "L'annuaire des outils & agents IA en français et en arabe"
   },
   "Categories": {
     "all": "Tous les outils",

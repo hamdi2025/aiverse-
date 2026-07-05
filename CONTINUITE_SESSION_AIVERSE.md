@@ -65,7 +65,7 @@
 
 ## 9. PROCHAINES ÉTAPES (TODO)
 1. **[FAIT] Repositionnement métadonnées** : titre/description/keywords home **/ar** et **/fr** reformulés angle « annuaire IA arabophone/francophone » dans `src/app/[locale]/page-metadata.ts`. → **À PUSHER.**
-1b. **[À FAIRE] Repositionnement du HERO** : textes du hero viennent des JSON `src/messages/ar.json` et `fr.json` (namespace `Hero` : badge, titleAgents, titleTools, titleSub, subtitle, badge2items). Reformuler ar/fr pour affirmer l'angle arabe/français.
+1b. **[FAIT] Repositionnement du HERO fr/ar** : badge, titleSub et subtitle reformulés dans `src/messages/fr.json` et `ar.json` (namespace Hero) → angle « annuaire IA arabophone/francophone ». JSON validés. → **À PUSHER.** (EN/ES pas encore repositionnés — optionnel.)
 2. Ouvrir compte **X/Twitter @aiverse** (bio + logo) → démarrer le Pilier 2 (audience).
 3. **Élaguer** les pages mortes (deepseek, salesforce-einstein, compares inexistants).
 4. Créer **guides piliers profonds en arabe/français** (faible concurrence).
