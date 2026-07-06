@@ -53,6 +53,9 @@ export async function generateMetadata({ params }: Props) {
   if (!t1 || !t2) return {};
   const BASE = 'https://getaiverse.online';
   const locale = params.locale;
+  // Only the curated comparisons (in the sitemap) are indexable. Auto-generated
+  // long-tail pairs stay usable but noindex, to protect crawl budget & quality.
+  const isCurated = TOP_COMPARISONS.includes(params.slug);
 
   const titleMap: Record<string, string> = {
     en: `${t1.name} vs ${t2.name} — Which is Better in 2026? | Aiverse`,
@@ -72,6 +75,7 @@ export async function generateMetadata({ params }: Props) {
     title: titleMap[locale],
     description: descMap[locale],
     keywords: `${t1.name} vs ${t2.name}, ${t1.name} alternative, ${t2.name} alternative, best AI tool 2026, compare AI tools, meilleur outil IA, herramienta IA, أداة ذكاء اصطناعي`,
+    robots: isCurated ? undefined : { index: false, follow: true },
     alternates: {
       canonical: `${BASE}/${locale}/compare/${params.slug}`,
       languages: {
