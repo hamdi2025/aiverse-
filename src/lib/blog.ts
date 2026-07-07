@@ -5333,6 +5333,157 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'best-ai-coding-tools-arabic-developers-2026',
+    category: 'code',
+    emoji: '💻',
+    publishedDate: '2026-07-07',
+    readTime: 11,
+    title: {
+      en: 'Best AI Coding Tools for Arabic-Speaking Developers in 2026',
+      fr: 'Meilleurs Outils IA de Code pour les Développeurs Arabophones en 2026',
+      es: 'Mejores Herramientas IA de Programación para Desarrolladores de Habla Árabe en 2026',
+      ar: 'أفضل أدوات البرمجة بالذكاء الاصطناعي للمطوّرين الناطقين بالعربية في 2026',
+    },
+    excerpt: {
+      en: 'A developer-focused guide to the best AI coding tools in 2026 for Arabic and French speakers — learning to code in your language, writing and debugging with AI assistants, AI code editors and agents, open models you can self-host, and a practical workflow with the pitfalls to avoid.',
+      fr: 'Un guide pour développeurs sur les meilleurs outils IA de code en 2026 pour arabophones et francophones — apprendre à coder dans votre langue, écrire et déboguer avec des assistants IA, les éditeurs et agents de code IA, les modèles ouverts auto-hébergeables, et un workflow pratique avec les pièges à éviter.',
+      es: 'Una guía para desarrolladores sobre las mejores herramientas IA de programación en 2026 para hablantes de árabe y francés — aprender a programar en tu idioma, escribir y depurar con asistentes IA, editores y agentes de código IA, modelos abiertos auto-alojables, y un flujo de trabajo práctico con los errores a evitar.',
+      ar: 'دليل موجّه للمطوّرين حول أفضل أدوات البرمجة بالذكاء الاصطناعي في 2026 للناطقين بالعربية والفرنسية — تعلّم البرمجة بلغتك، وكتابة الشيفرة وتصحيحها بمساعدات الذكاء الاصطناعي، ومحرّرات ووكلاء الكود، والنماذج المفتوحة القابلة للاستضافة الذاتية، وسير عمل عملي مع الأخطاء التي يجب تجنّبها.',
+    },
+    sections: [
+      {
+        heading: {
+          en: 'AI Coding for Arabic & French Developers',
+          fr: 'Le code assisté par IA pour les développeurs arabophones et francophones',
+          es: 'Programación con IA para desarrolladores de árabe y francés',
+          ar: 'البرمجة بالذكاء الاصطناعي للمطوّرين العرب والفرنكوفونيين',
+        },
+        body: {
+          en: 'Code is written in English, but understanding it does not have to be. For Arabic- and French-speaking developers, AI assistants remove a long-standing barrier: you can now read documentation, understand error messages, and learn new frameworks with an assistant that explains everything in your own language while still writing correct English code and comments. This is especially powerful for self-taught developers and students in the Arab world and North Africa, where most learning resources are English-only. In 2026 the tooling has matured into clear categories — chat assistants, AI code editors, autonomous coding agents, and open models you can run yourself. This guide covers each, with honest notes on what to use when.',
+          fr: 'Le code s\'écrit en anglais, mais le comprendre n\'y oblige pas. Pour les développeurs arabophones et francophones, les assistants IA lèvent une barrière ancienne : vous pouvez désormais lire la documentation, comprendre les messages d\'erreur et apprendre de nouveaux frameworks avec un assistant qui explique tout dans votre langue, tout en écrivant du code et des commentaires corrects en anglais. C\'est particulièrement puissant pour les développeurs autodidactes et les étudiants du monde arabe et d\'Afrique du Nord, où la plupart des ressources d\'apprentissage sont uniquement en anglais. En 2026, l\'outillage s\'est structuré en catégories claires — assistants de chat, éditeurs de code IA, agents de code autonomes et modèles ouverts auto-hébergeables. Ce guide couvre chacun, avec des notes honnêtes sur quoi utiliser quand.',
+          es: 'El código se escribe en inglés, pero entenderlo no tiene por qué. Para los desarrolladores de habla árabe y francesa, los asistentes de IA eliminan una barrera de larga data: ahora puedes leer documentación, entender mensajes de error y aprender nuevos frameworks con un asistente que lo explica todo en tu idioma, mientras escribe código y comentarios correctos en inglés. Esto es especialmente potente para desarrolladores autodidactas y estudiantes del mundo árabe y el norte de África, donde la mayoría de recursos de aprendizaje son solo en inglés. En 2026 las herramientas han madurado en categorías claras — asistentes de chat, editores de código IA, agentes de código autónomos y modelos abiertos que puedes ejecutar tú mismo. Esta guía cubre cada uno, con notas honestas sobre qué usar y cuándo.',
+          ar: 'الشيفرة تُكتب بالإنجليزية، لكن فهمها لا يلزم أن يكون كذلك. بالنسبة للمطوّرين الناطقين بالعربية والفرنسية، ترفع مساعدات الذكاء الاصطناعي حاجزاً قديماً: صار بإمكانك قراءة التوثيق، وفهم رسائل الخطأ، وتعلّم أطر عمل جديدة بمساعد يشرح كل شيء بلغتك، مع كتابته شيفرة وتعليقات صحيحة بالإنجليزية. وهذا قوي خصوصاً للمطوّرين العصاميين والطلاب في العالم العربي وشمال أفريقيا، حيث معظم موارد التعلّم بالإنجليزية فقط. في 2026 نضجت الأدوات إلى فئات واضحة — مساعدات محادثة، ومحرّرات كود بالذكاء الاصطناعي، ووكلاء برمجة مستقلّون، ونماذج مفتوحة يمكنك تشغيلها بنفسك. يغطّي هذا الدليل كلاً منها، مع ملاحظات صادقة عمّا تستخدمه ومتى.',
+        },
+      },
+      {
+        heading: {
+          en: 'Learning to Code & Understanding Docs',
+          fr: 'Apprendre à coder et comprendre la documentation',
+          es: 'Aprender a programar y entender la documentación',
+          ar: 'تعلّم البرمجة وفهم التوثيق',
+        },
+        body: {
+          en: 'If you are learning, an AI assistant is the tutor most developers never had. Ask ChatGPT or Claude, in Arabic, to explain a concept like async/await, recursion or REST with a simple analogy and a code example, then ask follow-ups until it clicks. Paste an English error message and ask what it means and how to fix it, in Arabic. When you meet an unfamiliar library, ask for a minimal working example and a line-by-line explanation. This turns intimidating English documentation into an interactive lesson in your language. The key habit: do not just copy the answer — ask the model why the code works, so you build real understanding instead of dependency. Used this way, AI dramatically shortens the path from beginner to competent.',
+          fr: 'Si vous apprenez, un assistant IA est le tuteur que la plupart des développeurs n\'ont jamais eu. Demandez à ChatGPT ou Claude, en arabe, d\'expliquer un concept comme async/await, la récursion ou REST avec une analogie simple et un exemple de code, puis posez des questions jusqu\'à ce que ça fasse tilt. Collez un message d\'erreur en anglais et demandez ce qu\'il signifie et comment le corriger, en arabe. Face à une bibliothèque inconnue, demandez un exemple minimal fonctionnel et une explication ligne par ligne. Cela transforme une documentation anglaise intimidante en leçon interactive dans votre langue. L\'habitude clé : ne copiez pas juste la réponse — demandez au modèle pourquoi le code fonctionne, pour bâtir une vraie compréhension plutôt qu\'une dépendance. Ainsi utilisée, l\'IA raccourcit énormément le chemin du débutant au développeur compétent.',
+          es: 'Si estás aprendiendo, un asistente de IA es el tutor que la mayoría de desarrolladores nunca tuvo. Pide a ChatGPT o Claude, en árabe, que explique un concepto como async/await, la recursión o REST con una analogía simple y un ejemplo de código, y luego haz preguntas de seguimiento hasta que encaje. Pega un mensaje de error en inglés y pregunta qué significa y cómo arreglarlo, en árabe. Ante una biblioteca desconocida, pide un ejemplo mínimo funcional y una explicación línea por línea. Esto convierte una documentación en inglés intimidante en una lección interactiva en tu idioma. El hábito clave: no solo copies la respuesta — pregunta al modelo por qué funciona el código, para construir comprensión real en lugar de dependencia. Usada así, la IA acorta drásticamente el camino de principiante a competente.',
+          ar: 'إذا كنت تتعلّم، فمساعد الذكاء الاصطناعي هو المعلّم الذي لم يحظَ به معظم المطوّرين. اطلب من ChatGPT أو Claude بالعربية شرح مفهوم مثل async/await أو الاستدعاء الذاتي أو REST بتشبيه بسيط ومثال شيفرة، ثم اطرح أسئلة متابعة حتى تستوعب. والصق رسالة خطأ إنجليزية واسأل عن معناها وكيفية إصلاحها بالعربية. وعند لقاء مكتبة غير مألوفة، اطلب مثالاً أدنى يعمل وشرحاً سطراً بسطر. هذا يحوّل التوثيق الإنجليزي المخيف إلى درس تفاعلي بلغتك. والعادة الأساسية: لا تكتفِ بنسخ الإجابة — اسأل النموذج لماذا تعمل الشيفرة، لتبني فهماً حقيقياً بدل الاعتماد. وبهذا الاستخدام، يختصر الذكاء الاصطناعي كثيراً الطريق من مبتدئ إلى متمكّن.',
+        },
+      },
+      {
+        heading: {
+          en: 'Writing & Debugging Code with AI',
+          fr: 'Écrire et déboguer du code avec l\'IA',
+          es: 'Escribir y depurar código con IA',
+          ar: 'كتابة الشيفرة وتصحيحها بالذكاء الاصطناعي',
+        },
+        body: {
+          en: 'For day-to-day work, chat assistants like ChatGPT and Claude are strong pair programmers: describe what you need in Arabic or English and they generate functions, tests, regexes and boilerplate. Claude is especially good at reasoning through long, complex code and large files; ChatGPT is fast and versatile. For debugging, paste the code and the error and ask for the cause and a fix, then ask it to explain the bug so you learn from it. They also help with the unglamorous but valuable work: writing documentation, adding comments, converting code between languages, and generating unit tests. Treat the output as a knowledgeable draft, not gospel — always read and test generated code, because models can produce confident but subtly wrong solutions.',
+          fr: 'Pour le travail quotidien, les assistants de chat comme ChatGPT et Claude sont de solides binômes de programmation : décrivez votre besoin en arabe ou en anglais et ils génèrent fonctions, tests, regex et code standard. Claude est particulièrement bon pour raisonner sur du code long et complexe et de gros fichiers ; ChatGPT est rapide et polyvalent. Pour le débogage, collez le code et l\'erreur et demandez la cause et un correctif, puis demandez d\'expliquer le bug pour en tirer une leçon. Ils aident aussi pour le travail ingrat mais précieux : rédiger la documentation, ajouter des commentaires, convertir du code entre langages et générer des tests unitaires. Considérez le résultat comme un brouillon compétent, pas une parole d\'évangile — lisez et testez toujours le code généré, car les modèles peuvent produire des solutions sûres d\'elles mais subtilement fausses.',
+          es: 'Para el trabajo diario, los asistentes de chat como ChatGPT y Claude son sólidos compañeros de programación: describe lo que necesitas en árabe o inglés y generan funciones, pruebas, regex y código repetitivo. Claude es especialmente bueno razonando sobre código largo y complejo y archivos grandes; ChatGPT es rápido y versátil. Para depurar, pega el código y el error y pide la causa y una solución, luego pide que explique el bug para aprender de él. También ayudan con el trabajo ingrato pero valioso: escribir documentación, añadir comentarios, convertir código entre lenguajes y generar pruebas unitarias. Trata el resultado como un borrador competente, no como dogma — lee y prueba siempre el código generado, porque los modelos pueden producir soluciones seguras pero sutilmente erróneas.',
+          ar: 'للعمل اليومي، مساعدات المحادثة مثل ChatGPT وClaude شريكا برمجة قويّان: صف ما تحتاجه بالعربية أو الإنجليزية فيولّدان الدوال والاختبارات والتعبيرات النمطية والشيفرة القياسية. وClaude جيد خصوصاً في الاستدلال عبر الشيفرة الطويلة والمعقّدة والملفات الكبيرة؛ وChatGPT سريع ومتعدّد الاستخدامات. وللتصحيح، الصق الشيفرة والخطأ واطلب السبب والإصلاح، ثم اطلب شرح العلّة لتتعلّم منها. ويساعدان أيضاً في العمل غير اللامع لكنه قيّم: كتابة التوثيق، وإضافة التعليقات، وتحويل الشيفرة بين اللغات، وتوليد اختبارات الوحدة. تعامل مع الناتج كمسودة واعية لا كنص مقدّس — اقرأ واختبر الشيفرة المولّدة دائماً، فالنماذج قد تنتج حلولاً واثقة لكنها خاطئة بدقّة.',
+        },
+      },
+      {
+        heading: {
+          en: 'AI Code Editors & Agents',
+          fr: 'Éditeurs de code et agents IA',
+          es: 'Editores de código y agentes IA',
+          ar: 'محرّرات الكود ووكلاء الذكاء الاصطناعي',
+        },
+        body: {
+          en: 'Beyond chat, AI now lives inside your editor. Tools like Cursor and GitHub Copilot autocomplete code, answer questions about your whole codebase, and make multi-file edits from a plain-language instruction — you can prompt them in Arabic too. A step further are autonomous coding agents such as OpenAI Codex and others, which can take a task, plan it, write across many files, run commands and iterate with far less hand-holding. These are powerful for scaffolding features and repetitive changes, but they need supervision: review every diff, keep changes in version control, and never let an agent touch production without checks. For most developers, an AI editor like Cursor or Copilot is the highest-value upgrade; agents are worth adopting as you learn to direct them precisely.',
+          fr: 'Au-delà du chat, l\'IA vit désormais dans votre éditeur. Des outils comme Cursor et GitHub Copilot complètent le code, répondent aux questions sur tout votre projet et font des modifications multi-fichiers à partir d\'une instruction en langage naturel — vous pouvez aussi les piloter en arabe. Un cran plus loin, les agents de code autonomes comme OpenAI Codex et d\'autres peuvent prendre une tâche, la planifier, écrire dans de nombreux fichiers, lancer des commandes et itérer avec bien moins d\'accompagnement. Ils sont puissants pour échafauder des fonctionnalités et des changements répétitifs, mais exigent une supervision : relisez chaque diff, gardez les changements sous gestion de version, et ne laissez jamais un agent toucher la production sans contrôles. Pour la plupart des développeurs, un éditeur IA comme Cursor ou Copilot est l\'amélioration la plus rentable ; les agents valent la peine à mesure que vous apprenez à les diriger précisément.',
+          es: 'Más allá del chat, la IA ahora vive dentro de tu editor. Herramientas como Cursor y GitHub Copilot autocompletan código, responden preguntas sobre todo tu proyecto y hacen ediciones multiarchivo a partir de una instrucción en lenguaje natural — también puedes darles indicaciones en árabe. Un paso más allá están los agentes de código autónomos como OpenAI Codex y otros, que pueden tomar una tarea, planificarla, escribir en muchos archivos, ejecutar comandos e iterar con mucho menos acompañamiento. Son potentes para andamiar funciones y cambios repetitivos, pero necesitan supervisión: revisa cada diff, mantén los cambios en control de versiones, y nunca dejes que un agente toque producción sin comprobaciones. Para la mayoría de desarrolladores, un editor de IA como Cursor o Copilot es la mejora de mayor valor; los agentes valen la pena a medida que aprendes a dirigirlos con precisión.',
+          ar: 'أبعد من المحادثة، صار الذكاء الاصطناعي يعيش داخل محرّرك. أدوات مثل Cursor وGitHub Copilot تكمل الشيفرة، وتجيب عن أسئلة حول مشروعك كاملاً، وتجري تعديلات متعدّدة الملفات من تعليمة بلغة طبيعية — ويمكنك مخاطبتها بالعربية أيضاً. وأبعد بخطوة، وكلاء البرمجة المستقلّون مثل OpenAI Codex وغيره يستطيعون أخذ مهمة والتخطيط لها والكتابة عبر ملفات كثيرة وتشغيل الأوامر والتكرار بإشراف أقل بكثير. وهم أقوياء لبناء الميزات والتغييرات المتكرّرة، لكنهم يحتاجون إشرافاً: راجع كل فرق، وأبقِ التغييرات تحت إدارة الإصدارات، ولا تدع وكيلاً يمسّ الإنتاج دون فحوص. لمعظم المطوّرين، محرّر ذكاء اصطناعي مثل Cursor أو Copilot هو الترقية الأعلى قيمة؛ والوكلاء يستحقون التبنّي مع تعلّمك توجيههم بدقّة.',
+        },
+      },
+      {
+        heading: {
+          en: 'Open Models You Can Self-Host',
+          fr: 'Modèles ouverts que vous pouvez auto-héberger',
+          es: 'Modelos abiertos que puedes auto-alojar',
+          ar: 'نماذج مفتوحة يمكنك استضافتها ذاتياً',
+        },
+        body: {
+          en: 'For developers who care about cost, privacy or offline use, open-weight models are now genuinely capable. Qwen (Alibaba) is strong at coding and has excellent Arabic coverage; GLM (Zhipu) is a top open-weight coding model with a permissive license; and Kimi is a powerful open multimodal model. Because their weights are open, you can run them on your own hardware or a private server, keep your code off third-party clouds, and avoid per-token API costs at scale. The trade-off is setup effort and the hardware needed to host large models. A common pattern: prototype with a hosted assistant, then move heavy or sensitive workloads to a self-hosted open model. For teams in regions with data-residency concerns, this control is a real advantage.',
+          fr: 'Pour les développeurs soucieux du coût, de la confidentialité ou de l\'usage hors ligne, les modèles à poids ouverts sont désormais vraiment performants. Qwen (Alibaba) est fort en code et a une excellente couverture de l\'arabe ; GLM (Zhipu) est un modèle de code à poids ouverts de premier plan avec une licence permissive ; et Kimi est un puissant modèle multimodal ouvert. Comme leurs poids sont ouverts, vous pouvez les exécuter sur votre matériel ou un serveur privé, garder votre code hors des clouds tiers et éviter les coûts d\'API au token à grande échelle. Le compromis : l\'effort d\'installation et le matériel nécessaire pour héberger de grands modèles. Un schéma courant : prototyper avec un assistant hébergé, puis déplacer les charges lourdes ou sensibles vers un modèle ouvert auto-hébergé. Pour les équipes soumises à des contraintes de résidence des données, ce contrôle est un vrai avantage.',
+          es: 'Para los desarrolladores que se preocupan por el costo, la privacidad o el uso sin conexión, los modelos de pesos abiertos ahora son realmente capaces. Qwen (Alibaba) es fuerte en programación y tiene excelente cobertura de árabe; GLM (Zhipu) es un modelo de código de pesos abiertos de primer nivel con licencia permisiva; y Kimi es un potente modelo multimodal abierto. Como sus pesos son abiertos, puedes ejecutarlos en tu propio hardware o un servidor privado, mantener tu código fuera de nubes de terceros y evitar los costos de API por token a escala. El compromiso es el esfuerzo de configuración y el hardware necesario para alojar modelos grandes. Un patrón común: prototipar con un asistente alojado y luego mover las cargas pesadas o sensibles a un modelo abierto auto-alojado. Para equipos en regiones con requisitos de residencia de datos, este control es una ventaja real.',
+          ar: 'للمطوّرين المهتمّين بالتكلفة أو الخصوصية أو الاستخدام دون اتصال، صارت النماذج مفتوحة الأوزان قادرة فعلاً. فـ Qwen (Alibaba) قوي في البرمجة وله تغطية ممتازة للعربية؛ وGLM (Zhipu) من أفضل نماذج البرمجة مفتوحة الأوزان برخصة متساهلة؛ وKimi نموذج مفتوح متعدّد الوسائط قوي. ولأن أوزانها مفتوحة، يمكنك تشغيلها على عتادك أو خادم خاص، وإبقاء شيفرتك بعيداً عن سحابات الغير، وتجنّب تكاليف واجهة البرمجة لكل رمز على نطاق واسع. والمقايضة هي جهد الإعداد والعتاد اللازم لاستضافة النماذج الكبيرة. ونمط شائع: النمذجة بمساعد مُستضاف، ثم نقل الأحمال الثقيلة أو الحسّاسة إلى نموذج مفتوح مُستضاف ذاتياً. وللفرق في مناطق ذات متطلّبات لإقامة البيانات، تُعدّ هذه السيطرة ميزة حقيقية.',
+        },
+      },
+      {
+        heading: {
+          en: 'Your Workflow & Pitfalls to Avoid',
+          fr: 'Votre workflow et les pièges à éviter',
+          es: 'Tu flujo de trabajo y errores a evitar',
+          ar: 'سير عملك والأخطاء التي يجب تجنّبها',
+        },
+        body: {
+          en: 'A practical developer stack: an AI editor like Cursor or Copilot for daily coding, ChatGPT or Claude for explanations, architecture and debugging, and an open model like Qwen or GLM for private or high-volume work. Prompt in whatever language is fastest for you — Arabic for understanding, English for precise technical terms. Avoid the common traps: do not paste secrets, keys or proprietary code into public tools; never ship code you do not understand; always run tests and review diffs; and remember models can invent APIs and libraries that do not exist. Use AI to go faster and learn deeper, not to skip understanding. Handled this way, these tools make a solo Arabic-speaking developer dramatically more productive. Compare all of them side by side in the AIverse directory.',
+          fr: 'Une stack de développeur pratique : un éditeur IA comme Cursor ou Copilot pour le code quotidien, ChatGPT ou Claude pour les explications, l\'architecture et le débogage, et un modèle ouvert comme Qwen ou GLM pour le travail privé ou à fort volume. Formulez dans la langue la plus rapide pour vous — l\'arabe pour comprendre, l\'anglais pour les termes techniques précis. Évitez les pièges classiques : ne collez pas de secrets, de clés ou de code propriétaire dans des outils publics ; ne livrez jamais du code que vous ne comprenez pas ; lancez toujours les tests et relisez les diffs ; et rappelez-vous que les modèles peuvent inventer des API et des bibliothèques inexistantes. Utilisez l\'IA pour aller plus vite et apprendre plus profondément, pas pour éviter de comprendre. Ainsi maniés, ces outils rendent un développeur arabophone solo bien plus productif. Comparez-les tous dans l\'annuaire AIverse.',
+          es: 'Un stack de desarrollador práctico: un editor de IA como Cursor o Copilot para el código diario, ChatGPT o Claude para explicaciones, arquitectura y depuración, y un modelo abierto como Qwen o GLM para trabajo privado o de alto volumen. Formula en el idioma que te sea más rápido — árabe para entender, inglés para términos técnicos precisos. Evita las trampas comunes: no pegues secretos, claves o código propietario en herramientas públicas; nunca entregues código que no entiendes; ejecuta siempre las pruebas y revisa los diffs; y recuerda que los modelos pueden inventar APIs y bibliotecas que no existen. Usa la IA para ir más rápido y aprender más a fondo, no para saltarte la comprensión. Manejadas así, estas herramientas hacen a un desarrollador de habla árabe en solitario mucho más productivo. Compáralas todas en el directorio de AIverse.',
+          ar: 'مكدّس مطوّر عملي: محرّر ذكاء اصطناعي مثل Cursor أو Copilot للبرمجة اليومية، وChatGPT أو Claude للشرح والمعمارية والتصحيح، ونموذج مفتوح مثل Qwen أو GLM للعمل الخاص أو عالي الحجم. صُغ بأي لغة أسرع لك — العربية للفهم، والإنجليزية للمصطلحات التقنية الدقيقة. وتجنّب الأفخاخ الشائعة: لا تلصق الأسرار أو المفاتيح أو الشيفرة المملوكة في أدوات عامة؛ ولا تسلّم أبداً شيفرة لا تفهمها؛ وشغّل الاختبارات وراجع الفروق دائماً؛ وتذكّر أن النماذج قد تختلق واجهات برمجة ومكتبات لا وجود لها. استخدم الذكاء الاصطناعي لتسرع وتتعلّم بعمق، لا لتتجاوز الفهم. وبهذا التعامل، تجعل هذه الأدوات المطوّر العربي الفردي أكثر إنتاجية بكثير. قارنها جميعاً جنباً إلى جنب في دليل AIverse.',
+        },
+      },
+    ],
+    relatedTools: ['cursor', 'github-copilot', 'chatgpt', 'codex', 'qwen', 'glm'],
+    relatedComparisons: ['cursor-vs-github-copilot', 'chatgpt-vs-claude'],
+    faq: [
+      {
+        question: {
+          en: 'What is the best AI coding tool for beginners who speak Arabic?',
+          fr: 'Quel est le meilleur outil IA de code pour débutants arabophones ?',
+          es: '¿Cuál es la mejor herramienta IA de programación para principiantes que hablan árabe?',
+          ar: 'ما أفضل أداة برمجة بالذكاء الاصطناعي للمبتدئين الناطقين بالعربية؟',
+        },
+        answer: {
+          en: 'Start with ChatGPT or Claude: prompt in Arabic to have concepts, errors and documentation explained in your language while the code stays correct in English. Once you code regularly, add an AI editor like Cursor or GitHub Copilot for autocomplete and whole-project help. Both approaches have capable free or low-cost tiers.',
+          fr: 'Commencez par ChatGPT ou Claude : formulez en arabe pour faire expliquer concepts, erreurs et documentation dans votre langue, le code restant correct en anglais. Une fois que vous codez régulièrement, ajoutez un éditeur IA comme Cursor ou GitHub Copilot pour l\'autocomplétion et l\'aide sur tout le projet. Les deux approches ont des offres gratuites ou peu coûteuses performantes.',
+          es: 'Empieza con ChatGPT o Claude: formula en árabe para que te expliquen conceptos, errores y documentación en tu idioma mientras el código sigue siendo correcto en inglés. Cuando programes con regularidad, añade un editor de IA como Cursor o GitHub Copilot para autocompletado y ayuda en todo el proyecto. Ambos enfoques tienen planes gratuitos o de bajo costo capaces.',
+          ar: 'ابدأ بـ ChatGPT أو Claude: صُغ الطلب بالعربية ليشرح لك المفاهيم والأخطاء والتوثيق بلغتك بينما تبقى الشيفرة صحيحة بالإنجليزية. وعندما تبرمج بانتظام، أضف محرّر ذكاء اصطناعي مثل Cursor أو GitHub Copilot للإكمال التلقائي والمساعدة على مستوى المشروع كاملاً. وكلا النهجين له خطط مجانية أو منخفضة التكلفة وقوية.',
+        },
+      },
+      {
+        question: {
+          en: 'Can I use AI coding models in Arabic?',
+          fr: 'Puis-je utiliser des modèles de code IA en arabe ?',
+          es: '¿Puedo usar modelos de programación IA en árabe?',
+          ar: 'هل يمكنني استخدام نماذج البرمجة بالذكاء الاصطناعي بالعربية؟',
+        },
+        answer: {
+          en: 'Yes. You can prompt tools like ChatGPT, Claude, Cursor and Copilot in Arabic to explain code, describe what you want built, or understand errors — the generated code and comments stay in standard English. Qwen is a strong open model with especially good Arabic coverage if Arabic explanations are a priority.',
+          fr: 'Oui. Vous pouvez piloter des outils comme ChatGPT, Claude, Cursor et Copilot en arabe pour expliquer du code, décrire ce que vous voulez construire ou comprendre des erreurs — le code et les commentaires générés restent en anglais standard. Qwen est un modèle ouvert solide avec une très bonne couverture de l\'arabe si les explications en arabe sont une priorité.',
+          es: 'Sí. Puedes dar indicaciones en árabe a herramientas como ChatGPT, Claude, Cursor y Copilot para explicar código, describir lo que quieres construir o entender errores — el código y los comentarios generados quedan en inglés estándar. Qwen es un modelo abierto sólido con muy buena cobertura de árabe si las explicaciones en árabe son una prioridad.',
+          ar: 'نعم. يمكنك مخاطبة أدوات مثل ChatGPT وClaude وCursor وCopilot بالعربية لشرح الشيفرة، أو وصف ما تريد بناءه، أو فهم الأخطاء — وتبقى الشيفرة والتعليقات المولّدة بالإنجليزية القياسية. وQwen نموذج مفتوح قوي بتغطية عربية جيدة خصوصاً إذا كانت الشروح بالعربية أولوية.',
+        },
+      },
+      {
+        question: {
+          en: 'Are open-source AI models good enough for real coding?',
+          fr: 'Les modèles IA open source sont-ils assez bons pour du vrai code ?',
+          es: '¿Son los modelos IA de código abierto lo bastante buenos para programar de verdad?',
+          ar: 'هل النماذج المفتوحة المصدر جيدة بما يكفي للبرمجة الحقيقية؟',
+        },
+        answer: {
+          en: 'In 2026, yes. Open-weight models like GLM, Qwen and Kimi are strong at coding and, because their weights are open, you can self-host them for privacy, offline use and lower cost at scale. The trade-off is setup effort and hardware. Many developers prototype with a hosted assistant and move heavy or sensitive work to a self-hosted open model.',
+          fr: 'En 2026, oui. Les modèles à poids ouverts comme GLM, Qwen et Kimi sont forts en code et, leurs poids étant ouverts, vous pouvez les auto-héberger pour la confidentialité, l\'usage hors ligne et un coût moindre à grande échelle. Le compromis : l\'effort d\'installation et le matériel. Beaucoup de développeurs prototypent avec un assistant hébergé et déplacent le travail lourd ou sensible vers un modèle ouvert auto-hébergé.',
+          es: 'En 2026, sí. Los modelos de pesos abiertos como GLM, Qwen y Kimi son fuertes en programación y, al ser sus pesos abiertos, puedes auto-alojarlos para privacidad, uso sin conexión y menor costo a escala. El compromiso es el esfuerzo de configuración y el hardware. Muchos desarrolladores prototipan con un asistente alojado y mueven el trabajo pesado o sensible a un modelo abierto auto-alojado.',
+          ar: 'في 2026، نعم. النماذج مفتوحة الأوزان مثل GLM وQwen وKimi قوية في البرمجة، ولأن أوزانها مفتوحة يمكنك استضافتها ذاتياً للخصوصية والاستخدام دون اتصال وتكلفة أقل على نطاق واسع. والمقايضة هي جهد الإعداد والعتاد. وكثير من المطوّرين ينمذجون بمساعد مُستضاف وينقلون العمل الثقيل أو الحسّاس إلى نموذج مفتوح مُستضاف ذاتياً.',
+        },
+      },
+    ],
+  },
 ];
 
 export function getAllBlogPosts(): BlogPost[] {
