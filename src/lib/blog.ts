@@ -4578,6 +4578,157 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'chatgpt-in-arabic-guide-2026',
+    category: 'writing',
+    emoji: '💬',
+    publishedDate: '2026-07-07',
+    readTime: 10,
+    title: {
+      en: 'ChatGPT in Arabic: The Complete 2026 Guide',
+      fr: 'ChatGPT en Arabe : Le Guide Complet 2026',
+      es: 'ChatGPT en Árabe: La Guía Completa 2026',
+      ar: 'ChatGPT بالعربية: الدليل الشامل 2026',
+    },
+    excerpt: {
+      en: 'Can ChatGPT really write good Arabic — and how do you get the best results? This complete guide covers Modern Standard Arabic vs dialects, the right settings, how to prompt in Arabic, real use cases, limitations, and how ChatGPT compares to Qwen, Gemini and Claude for Arabic.',
+      fr: 'ChatGPT sait-il vraiment écrire un bon arabe — et comment en tirer le meilleur ? Ce guide complet couvre l\'arabe standard moderne face aux dialectes, les bons réglages, comment formuler vos demandes en arabe, les cas d\'usage réels, les limites, et comment ChatGPT se compare à Qwen, Gemini et Claude pour l\'arabe.',
+      es: '¿ChatGPT escribe realmente un buen árabe y cómo obtener los mejores resultados? Esta guía completa cubre el árabe estándar moderno frente a los dialectos, la configuración correcta, cómo formular tus indicaciones en árabe, casos de uso reales, límites y cómo se compara ChatGPT con Qwen, Gemini y Claude para el árabe.',
+      ar: 'هل يكتب ChatGPT عربية جيدة فعلاً — وكيف تحصل على أفضل النتائج؟ يغطي هذا الدليل الشامل الفصحى الحديثة مقابل اللهجات، والإعدادات الصحيحة، وكيفية صياغة طلباتك بالعربية، وحالات الاستخدام الواقعية، والحدود، وكيف يقارَن ChatGPT بـ Qwen و Gemini و Claude للعربية.',
+    },
+    sections: [
+      {
+        heading: {
+          en: 'Does ChatGPT Really Speak Arabic?',
+          fr: 'ChatGPT parle-t-il vraiment arabe ?',
+          es: '¿ChatGPT habla realmente árabe?',
+          ar: 'هل يتحدّث ChatGPT العربية فعلاً؟',
+        },
+        body: {
+          en: 'Yes — ChatGPT handles Modern Standard Arabic (MSA, الفصحى) fluently and can read, write, summarize and translate it at a high level. Where it gets weaker is in dialects: Egyptian, Gulf, Levantine and Maghrebi darija are all present in its training, but quality varies, and Moroccan and Algerian darija are the hardest for it. In practice, ChatGPT is excellent for formal Arabic — articles, official emails, reports, study material — and usable but less reliable for casual dialect chat. If your work is in MSA, ChatGPT is one of the strongest tools available; if you need heavy dialect fluency, test the output carefully and keep a native eye on it.',
+          fr: 'Oui — ChatGPT gère couramment l\'arabe standard moderne (MSA, الفصحى) et peut le lire, l\'écrire, le résumer et le traduire à un haut niveau. Là où il faiblit, c\'est dans les dialectes : l\'égyptien, le golfe, le levantin et la darija maghrébine sont présents dans son entraînement, mais la qualité varie, et les darijas marocaine et algérienne sont les plus difficiles pour lui. Concrètement, ChatGPT est excellent pour l\'arabe formel — articles, e-mails officiels, rapports, supports d\'étude — et utilisable mais moins fiable pour la conversation dialectale informelle. Si votre travail est en MSA, ChatGPT est l\'un des outils les plus solides ; s\'il vous faut une forte maîtrise dialectale, testez bien le résultat et gardez un œil natif dessus.',
+          es: 'Sí — ChatGPT maneja con fluidez el árabe estándar moderno (MSA, الفصحى) y puede leerlo, escribirlo, resumirlo y traducirlo a alto nivel. Donde flaquea es en los dialectos: el egipcio, el del Golfo, el levantino y la darija magrebí están presentes en su entrenamiento, pero la calidad varía, y la darija marroquí y argelina son las más difíciles para él. En la práctica, ChatGPT es excelente para el árabe formal — artículos, correos oficiales, informes, material de estudio — y utilizable pero menos fiable para la conversación dialectal informal. Si tu trabajo es en MSA, ChatGPT es una de las herramientas más sólidas; si necesitas mucha fluidez dialectal, prueba bien el resultado y mantén un ojo nativo encima.',
+          ar: 'نعم — يتعامل ChatGPT بطلاقة مع العربية الفصحى الحديثة (MSA) ويستطيع قراءتها وكتابتها وتلخيصها وترجمتها بمستوى عالٍ. ويضعف في اللهجات: فالمصرية والخليجية والشامية والدارجة المغاربية موجودة في تدريبه لكن جودتها تتفاوت، والدارجة المغربية والجزائرية هي الأصعب عليه. عملياً، ChatGPT ممتاز للعربية الرسمية — المقالات والبريد الرسمي والتقارير والمواد الدراسية — وقابل للاستخدام لكن أقل موثوقية في الدردشة العامية غير الرسمية. إذا كان عملك بالفصحى، فـ ChatGPT من أقوى الأدوات المتاحة؛ وإذا احتجت طلاقة لهجية كبيرة، فاختبر المخرجات جيداً وأبقِ عيناً من أهل اللغة عليها.',
+        },
+      },
+      {
+        heading: {
+          en: 'The Right Version & Settings for Arabic',
+          fr: 'La bonne version et les bons réglages pour l\'arabe',
+          es: 'La versión y la configuración adecuadas para el árabe',
+          ar: 'النسخة والإعدادات الصحيحة للعربية',
+        },
+        body: {
+          en: 'The free tier of ChatGPT already writes solid Arabic, but the paid tier (with the most advanced model) is noticeably better for long Arabic documents, nuanced tone and reasoning. A few settings matter. First, open Custom Instructions and tell it, in Arabic, who you are and that you want replies in Arabic by default — this stops it defaulting to English. Second, on phones set the app language and keyboard so right-to-left text displays correctly. Third, for long tasks, ask it to keep the whole answer in Arabic, because models sometimes drift back to English mid-reply. These one-time steps remove most of the friction Arabic users hit.',
+          fr: 'L\'offre gratuite de ChatGPT écrit déjà un arabe solide, mais l\'offre payante (avec le modèle le plus avancé) est nettement meilleure pour les longs documents en arabe, le ton nuancé et le raisonnement. Quelques réglages comptent. D\'abord, ouvrez les Instructions personnalisées et indiquez-lui, en arabe, qui vous êtes et que vous voulez des réponses en arabe par défaut — cela l\'empêche de basculer vers l\'anglais. Ensuite, sur téléphone, réglez la langue de l\'app et le clavier pour que le texte de droite à gauche s\'affiche correctement. Enfin, pour les tâches longues, demandez-lui de garder toute la réponse en arabe, car les modèles reviennent parfois à l\'anglais en cours de route. Ces étapes uniques suppriment l\'essentiel des frictions rencontrées par les utilisateurs arabophones.',
+          es: 'El plan gratuito de ChatGPT ya escribe un árabe sólido, pero el plan de pago (con el modelo más avanzado) es notablemente mejor para documentos largos en árabe, tono matizado y razonamiento. Algunos ajustes importan. Primero, abre las Instrucciones personalizadas y dile, en árabe, quién eres y que quieres respuestas en árabe por defecto — esto evita que cambie al inglés. Segundo, en el móvil configura el idioma de la app y el teclado para que el texto de derecha a izquierda se muestre correctamente. Tercero, para tareas largas, pídele que mantenga toda la respuesta en árabe, porque los modelos a veces vuelven al inglés a mitad de respuesta. Estos pasos únicos eliminan la mayor parte de la fricción que sufren los usuarios de árabe.',
+          ar: 'الخطة المجانية من ChatGPT تكتب عربية جيدة أصلاً، لكن الخطة المدفوعة (بأحدث نموذج) أفضل بوضوح للمستندات العربية الطويلة والنبرة الدقيقة والاستدلال. وبعض الإعدادات مهمة. أولاً، افتح «التعليمات المخصّصة» وأخبره بالعربية من أنت وأنك تريد الردود بالعربية افتراضياً — هذا يمنعه من التحوّل إلى الإنجليزية. ثانياً، على الهاتف اضبط لغة التطبيق ولوحة المفاتيح ليظهر النص من اليمين إلى اليسار بشكل صحيح. ثالثاً، في المهام الطويلة اطلب منه إبقاء الإجابة كاملة بالعربية، لأن النماذج تعود أحياناً إلى الإنجليزية في منتصف الرد. هذه الخطوات لمرة واحدة تزيل معظم العوائق التي يواجهها المستخدم العربي.',
+        },
+      },
+      {
+        heading: {
+          en: 'How to Prompt ChatGPT in Arabic for Best Results',
+          fr: 'Comment formuler vos demandes en arabe pour de meilleurs résultats',
+          es: 'Cómo formular tus indicaciones en árabe para mejores resultados',
+          ar: 'كيف تصيغ طلباتك بالعربية للحصول على أفضل النتائج',
+        },
+        body: {
+          en: 'The single biggest quality boost is writing your prompt in Arabic — asking in Arabic reliably produces more natural Arabic than asking in English and requesting an Arabic answer. Beyond that, be explicit about register: say whether you want formal MSA, a specific dialect like Egyptian or Gulf, or a neutral "simple Arabic anyone can read." Give context and audience ("a LinkedIn post for Arabic-speaking founders", "a school explanation for a 12-year-old"). Provide a one-line example of the tone you like; the model copies style fast. And for documents, ask for structure — headings, bullet points, a short summary — so the Arabic output is easy to scan. Small, specific instructions beat long vague ones every time.',
+          fr: 'Le plus grand gain de qualité vient d\'écrire votre demande en arabe — demander en arabe donne de façon fiable un arabe plus naturel que demander en anglais une réponse en arabe. Ensuite, soyez explicite sur le registre : précisez si vous voulez du MSA formel, un dialecte précis comme l\'égyptien ou le golfe, ou un « arabe simple lisible par tous » neutre. Donnez le contexte et le public (« un post LinkedIn pour des fondateurs arabophones », « une explication scolaire pour un enfant de 12 ans »). Fournissez un exemple d\'une ligne du ton souhaité ; le modèle copie vite le style. Et pour les documents, demandez une structure — titres, puces, court résumé — pour que le résultat arabe soit facile à parcourir. Des instructions courtes et précises battent toujours les longues et vagues.',
+          es: 'La mayor mejora de calidad viene de escribir tu indicación en árabe — pedir en árabe produce de forma fiable un árabe más natural que pedir en inglés una respuesta en árabe. Además, sé explícito con el registro: indica si quieres MSA formal, un dialecto concreto como el egipcio o el del Golfo, o un «árabe simple que cualquiera pueda leer» neutro. Da contexto y público («una publicación de LinkedIn para fundadores de habla árabe», «una explicación escolar para un niño de 12 años»). Aporta un ejemplo de una línea del tono que te gusta; el modelo copia el estilo rápido. Y para documentos, pide estructura — títulos, viñetas, un breve resumen — para que el resultado en árabe sea fácil de escanear. Las instrucciones cortas y específicas ganan siempre a las largas y vagas.',
+          ar: 'أكبر تحسّن في الجودة يأتي من كتابة طلبك بالعربية — فالطلب بالعربية يعطي بثبات عربية أطبع من الطلب بالإنجليزية مع طلب رد عربي. وبعد ذلك، كن واضحاً في المستوى: حدّد إن كنت تريد فصحى رسمية، أو لهجة معيّنة كالمصرية أو الخليجية، أو «عربية بسيطة يقرأها الجميع» محايدة. أعطِ السياق والجمهور («منشور لينكدإن لمؤسسي شركات ناطقين بالعربية»، «شرح مدرسي لطفل في الثانية عشرة»). قدّم مثالاً من سطر واحد على النبرة التي تعجبك؛ فالنموذج يقلّد الأسلوب بسرعة. وللمستندات، اطلب بنية — عناوين ونقاط وملخص قصير — ليكون الناتج العربي سهل التصفّح. التعليمات القصيرة المحدّدة تتفوّق دائماً على الطويلة الغامضة.',
+        },
+      },
+      {
+        heading: {
+          en: 'Best Real Use Cases in Arabic',
+          fr: 'Les meilleurs cas d\'usage réels en arabe',
+          es: 'Los mejores casos de uso reales en árabe',
+          ar: 'أفضل حالات الاستخدام الواقعية بالعربية',
+        },
+        body: {
+          en: 'ChatGPT shines on several everyday Arabic tasks. It drafts and polishes formal emails and official letters in clean MSA. It turns rough notes into structured reports, summarizes long Arabic PDFs and articles, and explains difficult concepts in simple Arabic for students. It is strong for content creation: social media captions, product descriptions, and blog posts, though you should always edit for brand voice. It translates between Arabic, English and French while preserving tone far better than old translators. And it helps with study and language learning — grammar explanations, vocabulary, and practice conversations. Treat it as a fast first-draft engine and editor, not a final authority, and it will save you hours every week.',
+          fr: 'ChatGPT excelle sur plusieurs tâches quotidiennes en arabe. Il rédige et peaufine e-mails formels et lettres officielles dans un MSA propre. Il transforme des notes brutes en rapports structurés, résume de longs PDF et articles en arabe, et explique des concepts difficiles en arabe simple pour les étudiants. Il est fort pour la création de contenu : légendes de réseaux sociaux, descriptions de produits, articles de blog — mais éditez toujours pour la voix de marque. Il traduit entre arabe, anglais et français en préservant le ton bien mieux que les anciens traducteurs. Et il aide à l\'étude et à l\'apprentissage des langues — explications de grammaire, vocabulaire, conversations d\'entraînement. Considérez-le comme un moteur de premier jet et un éditeur rapide, pas une autorité finale, et il vous fera gagner des heures chaque semaine.',
+          es: 'ChatGPT brilla en varias tareas cotidianas en árabe. Redacta y pule correos formales y cartas oficiales en un MSA limpio. Convierte notas en bruto en informes estructurados, resume PDF y artículos largos en árabe, y explica conceptos difíciles en árabe simple para estudiantes. Es fuerte para la creación de contenido: pies de redes sociales, descripciones de productos y entradas de blog, aunque siempre debes editar por la voz de marca. Traduce entre árabe, inglés y francés preservando el tono mucho mejor que los traductores antiguos. Y ayuda con el estudio y el aprendizaje de idiomas — explicaciones de gramática, vocabulario y conversaciones de práctica. Trátalo como un motor rápido de primer borrador y editor, no como una autoridad final, y te ahorrará horas cada semana.',
+          ar: 'يتألّق ChatGPT في عدة مهام يومية بالعربية. فهو يكتب ويلمّع الرسائل الرسمية والخطابات الإدارية بفصحى نظيفة. ويحوّل الملاحظات الخام إلى تقارير منظّمة، ويلخّص ملفات PDF والمقالات الطويلة بالعربية، ويشرح المفاهيم الصعبة بعربية بسيطة للطلاب. وهو قوي في صناعة المحتوى: تعليقات وسائل التواصل، وأوصاف المنتجات، ومقالات المدونة، مع أنه يجب أن تحرّر دائماً بما يناسب صوت علامتك. ويترجم بين العربية والإنجليزية والفرنسية محافظاً على النبرة أفضل بكثير من المترجمات القديمة. ويساعد في الدراسة وتعلّم اللغات — شرح القواعد، والمفردات، ومحادثات التدرّب. تعامل معه كمحرّك مسودة أولى ومحرّر سريع، لا كمرجع نهائي، وسيوفّر عليك ساعات كل أسبوع.',
+        },
+      },
+      {
+        heading: {
+          en: 'Limitations & Mistakes to Watch For',
+          fr: 'Limites et erreurs à surveiller',
+          es: 'Límites y errores a vigilar',
+          ar: 'الحدود والأخطاء التي يجب الانتباه لها',
+        },
+        body: {
+          en: 'Even in Arabic, ChatGPT makes predictable mistakes, so review its output. It can add too many diacritics (تشكيل), making text feel stiff — ask it to use them only where needed. It occasionally mixes dialects or slips a Levantine word into Gulf text. It can invent references, Quranic or hadith citations, statistics and legal details, so never trust factual claims without checking a real source. Right-to-left formatting sometimes breaks when Arabic is mixed with numbers, English words or links. And it may soften or over-formalize your tone. None of these are dealbreakers — they are simply why a native re-read is essential before you publish or send anything important.',
+          fr: 'Même en arabe, ChatGPT fait des erreurs prévisibles : relisez donc sa production. Il peut ajouter trop de diacritiques (تشكيل), rendant le texte rigide — demandez-lui de ne les mettre que là où c\'est nécessaire. Il mélange parfois les dialectes ou glisse un mot levantin dans un texte du golfe. Il peut inventer des références, des citations coraniques ou de hadith, des statistiques et des détails juridiques : ne faites donc jamais confiance à une affirmation factuelle sans vérifier une vraie source. La mise en forme de droite à gauche casse parfois quand l\'arabe est mêlé de chiffres, de mots anglais ou de liens. Et il peut adoucir ou trop formaliser votre ton. Rien de rédhibitoire — c\'est simplement pourquoi une relecture native est essentielle avant de publier ou d\'envoyer quoi que ce soit d\'important.',
+          es: 'Incluso en árabe, ChatGPT comete errores predecibles, así que revisa su salida. Puede añadir demasiadas diacríticas (تشكيل), haciendo el texto rígido — pídele que las use solo donde sean necesarias. A veces mezcla dialectos o cuela una palabra levantina en un texto del Golfo. Puede inventar referencias, citas coránicas o de hadices, estadísticas y detalles legales, así que nunca confíes en una afirmación factual sin verificar una fuente real. El formato de derecha a izquierda a veces se rompe cuando el árabe se mezcla con números, palabras en inglés o enlaces. Y puede suavizar o formalizar en exceso tu tono. Nada de esto es determinante — es simplemente por qué una relectura nativa es esencial antes de publicar o enviar algo importante.',
+          ar: 'حتى بالعربية، يرتكب ChatGPT أخطاء متوقّعة، فراجع مخرجاته. قد يضيف تشكيلاً أكثر من اللازم فيصبح النص جامداً — اطلب منه استخدامه حيث يلزم فقط. وقد يخلط اللهجات أحياناً أو يُدخل كلمة شامية في نص خليجي. وقد يختلق مراجع، أو استشهادات قرآنية أو حديثية، أو إحصاءات وتفاصيل قانونية، فلا تثق أبداً بادّعاء واقعي دون التحقّق من مصدر حقيقي. وأحياناً ينكسر التنسيق من اليمين إلى اليسار حين تختلط العربية بالأرقام أو الكلمات الإنجليزية أو الروابط. وقد يخفّف نبرتك أو يجعلها رسمية أكثر من اللازم. لا شيء من هذا قاتل — لكنه ببساطة سبب ضرورة إعادة القراءة من أهل اللغة قبل نشر أو إرسال أي شيء مهم.',
+        },
+      },
+      {
+        heading: {
+          en: 'ChatGPT vs Qwen, Gemini & Claude for Arabic',
+          fr: 'ChatGPT face à Qwen, Gemini et Claude pour l\'arabe',
+          es: 'ChatGPT frente a Qwen, Gemini y Claude para el árabe',
+          ar: 'ChatGPT مقابل Qwen و Gemini و Claude للعربية',
+        },
+        body: {
+          en: 'ChatGPT is the best all-rounder for Arabic, but it is not the only option worth knowing. Qwen, the open model from Alibaba, was trained with heavy Arabic coverage and often matches or beats ChatGPT on pure MSA fluency — try it when Arabic quality is your single priority. Google Gemini is free, fast and connected to live search, which makes it useful for current-events questions in Arabic. Claude is the strongest for long, careful Arabic documents and respects right-to-left formatting well, though it has no free image or voice features. Our practical advice: use ChatGPT as your daily driver, keep Qwen as a second opinion for demanding Arabic, and reach for Gemini when you need fresh, up-to-date answers.',
+          fr: 'ChatGPT est le meilleur polyvalent pour l\'arabe, mais ce n\'est pas la seule option à connaître. Qwen, le modèle ouvert d\'Alibaba, a été entraîné avec une forte couverture de l\'arabe et égale ou dépasse souvent ChatGPT en fluidité MSA pure — essayez-le quand la qualité de l\'arabe est votre seule priorité. Google Gemini est gratuit, rapide et connecté à la recherche en direct, ce qui le rend utile pour les questions d\'actualité en arabe. Claude est le plus fort pour les longs documents arabes soignés et respecte bien la mise en forme de droite à gauche, même s\'il n\'a pas de fonctions image ou voix gratuites. Notre conseil pratique : utilisez ChatGPT au quotidien, gardez Qwen comme deuxième avis pour l\'arabe exigeant, et passez à Gemini quand il vous faut des réponses fraîches et à jour.',
+          es: 'ChatGPT es el mejor todoterreno para el árabe, pero no es la única opción que conviene conocer. Qwen, el modelo abierto de Alibaba, se entrenó con amplia cobertura de árabe y a menudo iguala o supera a ChatGPT en fluidez pura de MSA — pruébalo cuando la calidad del árabe sea tu única prioridad. Google Gemini es gratuito, rápido y conectado a la búsqueda en vivo, lo que lo hace útil para preguntas de actualidad en árabe. Claude es el más fuerte para documentos árabes largos y cuidados y respeta bien el formato de derecha a izquierda, aunque no tiene funciones gratuitas de imagen o voz. Nuestro consejo práctico: usa ChatGPT como herramienta diaria, mantén Qwen como segunda opinión para el árabe exigente, y recurre a Gemini cuando necesites respuestas frescas y actualizadas.',
+          ar: 'ChatGPT هو الأفضل شمولاً للعربية، لكنه ليس الخيار الوحيد الجدير بالمعرفة. فـ Qwen، النموذج المفتوح من Alibaba، دُرِّب بتغطية كبيرة للعربية وغالباً ما يضاهي ChatGPT أو يتفوّق عليه في طلاقة الفصحى الصرفة — جرّبه حين تكون جودة العربية أولويتك الوحيدة. وGoogle Gemini مجاني وسريع ومتصل بالبحث المباشر، ما يجعله مفيداً لأسئلة الأحداث الجارية بالعربية. وClaude هو الأقوى للمستندات العربية الطويلة المتقنة ويحترم التنسيق من اليمين إلى اليسار جيداً، وإن كان بلا ميزات صور أو صوت مجانية. نصيحتنا العملية: استخدم ChatGPT يومياً، وأبقِ Qwen رأياً ثانياً للعربية الصعبة، والجأ إلى Gemini حين تحتاج إجابات محدّثة وطازجة.',
+        },
+      },
+    ],
+    relatedTools: ['chatgpt', 'qwen', 'gemini', 'claude', 'deepl', 'notebooklm'],
+    relatedComparisons: ['chatgpt-vs-claude', 'chatgpt-vs-gemini'],
+    faq: [
+      {
+        question: {
+          en: 'Is ChatGPT good at Arabic?',
+          fr: 'ChatGPT est-il bon en arabe ?',
+          es: '¿ChatGPT es bueno en árabe?',
+          ar: 'هل ChatGPT جيد في العربية؟',
+        },
+        answer: {
+          en: 'Yes, ChatGPT is very good at Modern Standard Arabic (الفصحى) for writing, summarizing, translating and explaining. It is weaker with local dialects, especially Moroccan and Algerian darija, and can add too many diacritics or mix dialects, so a native re-read is recommended for anything important.',
+          fr: 'Oui, ChatGPT est très bon en arabe standard moderne (الفصحى) pour rédiger, résumer, traduire et expliquer. Il est plus faible avec les dialectes locaux, surtout les darijas marocaine et algérienne, et peut ajouter trop de diacritiques ou mélanger les dialectes ; une relecture native est donc recommandée pour tout ce qui est important.',
+          es: 'Sí, ChatGPT es muy bueno en árabe estándar moderno (الفصحى) para escribir, resumir, traducir y explicar. Es más débil con los dialectos locales, sobre todo la darija marroquí y argelina, y puede añadir demasiadas diacríticas o mezclar dialectos, así que se recomienda una relectura nativa para cualquier cosa importante.',
+          ar: 'نعم، ChatGPT جيد جداً في العربية الفصحى الحديثة للكتابة والتلخيص والترجمة والشرح. وهو أضعف مع اللهجات المحلية، خاصة الدارجة المغربية والجزائرية، وقد يضيف تشكيلاً كثيراً أو يخلط اللهجات، لذا يُنصح بإعادة القراءة من أهل اللغة لأي شيء مهم.',
+        },
+      },
+      {
+        question: {
+          en: 'How do I make ChatGPT always reply in Arabic?',
+          fr: 'Comment faire pour que ChatGPT réponde toujours en arabe ?',
+          es: '¿Cómo hago que ChatGPT responda siempre en árabe?',
+          ar: 'كيف أجعل ChatGPT يرد دائماً بالعربية؟',
+        },
+        answer: {
+          en: 'Open Custom Instructions in settings and state, in Arabic, that you want all replies in Arabic by default. Writing your prompts in Arabic also strongly nudges it to answer in Arabic. For long answers, add "keep the entire response in Arabic" since models sometimes drift back to English.',
+          fr: 'Ouvrez les Instructions personnalisées dans les réglages et indiquez, en arabe, que vous voulez toutes les réponses en arabe par défaut. Écrire vos demandes en arabe l\'incite aussi fortement à répondre en arabe. Pour les longues réponses, ajoutez « garde toute la réponse en arabe », car les modèles reviennent parfois à l\'anglais.',
+          es: 'Abre las Instrucciones personalizadas en los ajustes e indica, en árabe, que quieres todas las respuestas en árabe por defecto. Escribir tus indicaciones en árabe también lo empuja mucho a responder en árabe. Para respuestas largas, añade «mantén toda la respuesta en árabe», ya que los modelos a veces vuelven al inglés.',
+          ar: 'افتح «التعليمات المخصّصة» في الإعدادات وأخبره بالعربية أنك تريد كل الردود بالعربية افتراضياً. وكتابة طلباتك بالعربية تدفعه بقوة أيضاً للرد بالعربية. وللإجابات الطويلة أضف «أبقِ الإجابة كاملة بالعربية» لأن النماذج تعود أحياناً إلى الإنجليزية.',
+        },
+      },
+      {
+        question: {
+          en: 'Is there a better free AI than ChatGPT for Arabic?',
+          fr: 'Existe-t-il une meilleure IA gratuite que ChatGPT pour l\'arabe ?',
+          es: '¿Hay una IA gratuita mejor que ChatGPT para el árabe?',
+          ar: 'هل توجد أداة ذكاء اصطناعي مجانية أفضل من ChatGPT للعربية؟',
+        },
+        answer: {
+          en: 'For pure Arabic fluency, Qwen (Alibaba\'s open model) often matches or beats ChatGPT and is free to use. Google Gemini is also free and adds live search for current-events questions. ChatGPT remains the best all-rounder, so many Arabic users keep ChatGPT as their daily tool and Qwen as a second opinion.',
+          fr: 'Pour une fluidité arabe pure, Qwen (le modèle ouvert d\'Alibaba) égale ou dépasse souvent ChatGPT et est gratuit. Google Gemini est aussi gratuit et ajoute la recherche en direct pour les questions d\'actualité. ChatGPT reste le meilleur polyvalent : beaucoup d\'arabophones gardent donc ChatGPT comme outil quotidien et Qwen comme deuxième avis.',
+          es: 'Para una fluidez árabe pura, Qwen (el modelo abierto de Alibaba) a menudo iguala o supera a ChatGPT y es gratuito. Google Gemini también es gratuito y añade búsqueda en vivo para preguntas de actualidad. ChatGPT sigue siendo el mejor todoterreno, así que muchos usuarios de árabe mantienen ChatGPT como herramienta diaria y Qwen como segunda opinión.',
+          ar: 'للطلاقة العربية الصرفة، غالباً ما يضاهي Qwen (نموذج Alibaba المفتوح) ChatGPT أو يتفوّق عليه وهو مجاني. وGoogle Gemini مجاني أيضاً ويضيف البحث المباشر لأسئلة الأحداث الجارية. ويبقى ChatGPT الأفضل شمولاً، لذا يُبقي كثير من المستخدمين العرب ChatGPT أداةً يومية وQwen رأياً ثانياً.',
+        },
+      },
+    ],
+  },
 ];
 
 export function getAllBlogPosts(): BlogPost[] {
