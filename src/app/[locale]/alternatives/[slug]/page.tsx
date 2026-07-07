@@ -53,10 +53,15 @@ export async function generateMetadata({ params }: Props) {
     ar: `تبحث عن بديل لـ ${tool.name}؟ اكتشف أفضل أدوات الذكاء الاصطناعي المجانية والمدفوعة التي تنافس ${tool.name} في 2026 — مقارنة الأسعار والتقييمات والميزات.`,
   };
 
+  // Only curated alternatives pages stay indexable; the combinatorial long
+  // tail is noindex (still browsable) to protect crawl budget / quality signal.
+  const isCurated = TOP_ALTERNATIVES.includes(params.slug);
+
   return {
     title: titleMap[locale],
     description: descMap[locale],
     keywords: `${tool.name} alternatives, ${tool.name} alternative, free ${tool.name} alternative, best AI tools 2026, alternatives à ${tool.name}, alternativas a ${tool.name}, بدائل ${tool.name}`,
+    robots: isCurated ? undefined : { index: false, follow: true },
     alternates: {
       canonical: `${BASE}/${locale}/alternatives/${params.slug}`,
       languages: {

@@ -3,6 +3,7 @@ import { TOOLS_DATA } from '@/lib/tools';
 import { BLOG_POSTS } from '@/lib/blog';
 import { TOP_ALTERNATIVES } from '@/lib/alternatives';
 import { BEST_FOR } from '@/lib/bestFor';
+import { TOP_TOOLS } from '@/lib/indexedTools';
 
 const BASE_URL = 'https://getaiverse.online';
 const LOCALES = ['en', 'fr', 'es', 'ar'];
@@ -28,7 +29,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 1.0,
   }));
 
-  const toolPages = TOOLS_DATA.flatMap(tool =>
+  // Only the curated, indexable core of tools belongs in the sitemap.
+  // The long tail is noindex, so listing it here would send Google mixed
+  // signals and waste crawl budget on thin pages.
+  const indexedTools = TOOLS_DATA.filter(tool => TOP_TOOLS.includes(tool.id));
+  const toolPages = indexedTools.flatMap(tool =>
     LOCALES.map(locale => ({
       url: `${BASE_URL}/${locale}/tools/${tool.id}`,
       lastModified: new Date(),

@@ -8,6 +8,7 @@ import { getTranslations } from 'next-intl/server';
 import { Star, ArrowUpRight, Tag, Globe, TrendingUp } from 'lucide-react';
 import { buildToolArticle } from '@/lib/toolArticle';
 import { TOOL_TIPS } from '@/lib/toolTips';
+import { isIndexedTool } from '@/lib/indexedTools';
 
 type Locale = 'en' | 'fr' | 'es' | 'ar';
 
@@ -54,10 +55,16 @@ export async function generateMetadata({ params }: Props) {
   };
   const metaDescription = descMap[locale] || desc;
 
+  // "Quality concentrated" indexation: only a curated core of strong tools
+  // stays indexable. The long tail is noindex (still browsable) so Google
+  // judges the site on its best pages, not on thin generated ones.
+  const indexable = isIndexedTool(tool.id);
+
   return {
     title: titleMap[locale] || `${tool.name} — Aiverse`,
     description: metaDescription,
     keywords: keywordMap[locale],
+    robots: indexable ? undefined : { index: false, follow: true },
     alternates: {
       canonical: `${BASE}/${locale}/tools/${tool.id}`,
       languages: {
