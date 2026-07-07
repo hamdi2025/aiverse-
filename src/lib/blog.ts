@@ -4729,6 +4729,157 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'create-arabic-content-with-ai-2026',
+    category: 'marketing',
+    emoji: '🚀',
+    publishedDate: '2026-07-07',
+    readTime: 10,
+    title: {
+      en: 'How to Create Arabic Content with AI in 2026 (Full Workflow)',
+      fr: 'Comment Créer du Contenu en Arabe avec l\'IA en 2026 (Méthode Complète)',
+      es: 'Cómo Crear Contenido en Árabe con IA en 2026 (Flujo Completo)',
+      ar: 'كيف تصنع محتوى عربياً بالذكاء الاصطناعي في 2026 (سير عمل كامل)',
+    },
+    excerpt: {
+      en: 'A practical, step-by-step workflow for creating Arabic (and French) content with AI in 2026 — from ideas and writing to images, voice and video — plus the free and paid tools that actually handle Arabic well, and a repeatable weekly system.',
+      fr: 'Une méthode pratique, étape par étape, pour créer du contenu en arabe (et en français) avec l\'IA en 2026 — des idées et de la rédaction jusqu\'aux images, à la voix et à la vidéo — avec les outils gratuits et payants qui gèrent vraiment bien l\'arabe, et un système hebdomadaire reproductible.',
+      es: 'Un flujo de trabajo práctico, paso a paso, para crear contenido en árabe (y francés) con IA en 2026 — desde las ideas y la escritura hasta las imágenes, la voz y el vídeo — con las herramientas gratuitas y de pago que realmente manejan bien el árabe, y un sistema semanal repetible.',
+      ar: 'سير عمل عملي خطوة بخطوة لصناعة محتوى عربي (وفرنسي) بالذكاء الاصطناعي في 2026 — من الأفكار والكتابة إلى الصور والصوت والفيديو — مع الأدوات المجانية والمدفوعة التي تتعامل فعلاً مع العربية بشكل جيد، ونظام أسبوعي قابل للتكرار.',
+    },
+    sections: [
+      {
+        heading: {
+          en: 'Why AI Is a Turning Point for Arabic Creators',
+          fr: 'Pourquoi l\'IA est un tournant pour les créateurs arabophones',
+          es: 'Por qué la IA es un punto de inflexión para los creadores en árabe',
+          ar: 'لماذا يُعدّ الذكاء الاصطناعي نقطة تحوّل لصنّاع المحتوى العرب',
+        },
+        body: {
+          en: 'Arabic and French content is in high demand but under-supplied — there are far fewer creators serving these audiences than serving English. AI changes the economics: one person can now research, write, illustrate, voice and subtitle content in a fraction of the old time. The catch is that most tools were built English-first, so a naive workflow produces awkward Arabic and broken layouts. This guide gives you a workflow tuned for Arabic and French specifically, using the tools that genuinely handle them, so you can publish more, faster, without sacrificing quality. Everything below works with free tiers to start, with clear notes on where paying is worth it.',
+          fr: 'Le contenu en arabe et en français est très demandé mais peu produit — il y a bien moins de créateurs servant ces publics que pour l\'anglais. L\'IA change l\'économie du travail : une seule personne peut désormais rechercher, rédiger, illustrer, sonoriser et sous-titrer un contenu en une fraction du temps d\'avant. Le piège, c\'est que la plupart des outils sont pensés en anglais d\'abord, donc un flux naïf produit un arabe maladroit et des mises en page cassées. Ce guide vous donne une méthode réglée spécifiquement pour l\'arabe et le français, avec les outils qui les gèrent vraiment, pour publier plus, plus vite, sans sacrifier la qualité. Tout ce qui suit fonctionne avec des offres gratuites au départ, avec des notes claires sur les cas où payer en vaut la peine.',
+          es: 'El contenido en árabe y francés tiene mucha demanda pero poca oferta — hay muchos menos creadores sirviendo a estos públicos que al inglés. La IA cambia la economía: una sola persona ahora puede investigar, escribir, ilustrar, poner voz y subtitular contenido en una fracción del tiempo anterior. El problema es que la mayoría de las herramientas se diseñaron primero en inglés, así que un flujo ingenuo produce árabe torpe y diseños rotos. Esta guía te da un flujo afinado específicamente para el árabe y el francés, con las herramientas que realmente los manejan, para publicar más, más rápido, sin sacrificar calidad. Todo lo de abajo funciona con planes gratuitos para empezar, con notas claras sobre cuándo vale la pena pagar.',
+          ar: 'المحتوى بالعربية والفرنسية عليه طلب كبير لكن المعروض منه قليل — فعدد صنّاع المحتوى الذين يخدمون هذه الجماهير أقل بكثير من الإنجليزية. والذكاء الاصطناعي يغيّر المعادلة: صار بإمكان شخص واحد أن يبحث ويكتب ويصمّم ويعلّق صوتياً ويترجم المحتوى في جزء يسير من الوقت السابق. لكن العائق أن معظم الأدوات مبنية بالإنجليزية أولاً، فسير العمل الساذج ينتج عربية ركيكة وتنسيقات مكسورة. يقدّم لك هذا الدليل سير عمل مضبوطاً للعربية والفرنسية تحديداً، بالأدوات التي تتعامل معهما فعلاً، لتنشر أكثر وأسرع دون التضحية بالجودة. وكل ما يلي يعمل بخطط مجانية للبدء، مع إشارات واضحة إلى متى يستحق الدفع.',
+        },
+      },
+      {
+        heading: {
+          en: 'Step 1 — Ideas & Research in Arabic',
+          fr: 'Étape 1 — Idées et recherche en arabe',
+          es: 'Paso 1 — Ideas e investigación en árabe',
+          ar: 'الخطوة 1 — الأفكار والبحث بالعربية',
+        },
+        body: {
+          en: 'Start by generating a content plan in your own language. Ask ChatGPT or Qwen, in Arabic, for 20 content ideas on your topic aimed at a specific audience, then have it group them into themes and suggest titles. For trending and current topics, Google Gemini is useful because it is connected to live search. Push further: ask the model to outline each piece, list the questions your audience actually asks, and draft a hook. Doing this research phase in Arabic matters — the ideas, phrasing and cultural references come out far more relevant than translating English ideas after the fact. In fifteen minutes you can have a month of on-topic, audience-specific ideas ready to produce.',
+          fr: 'Commencez par générer un plan de contenu dans votre langue. Demandez à ChatGPT ou Qwen, en arabe, 20 idées de contenu sur votre thème pour un public précis, puis faites-les regrouper par thèmes avec des propositions de titres. Pour les sujets d\'actualité et tendance, Google Gemini est utile car connecté à la recherche en direct. Allez plus loin : demandez au modèle de faire le plan de chaque contenu, de lister les questions que votre public se pose vraiment, et de rédiger une accroche. Faire cette phase de recherche en arabe compte — les idées, les formulations et les références culturelles sortent bien plus pertinentes que traduire des idées anglaises après coup. En quinze minutes, vous pouvez avoir un mois d\'idées ciblées prêtes à produire.',
+          es: 'Empieza generando un plan de contenido en tu propio idioma. Pide a ChatGPT o Qwen, en árabe, 20 ideas de contenido sobre tu tema dirigidas a un público concreto, y luego que las agrupe en temas y sugiera títulos. Para temas de actualidad y tendencia, Google Gemini es útil porque está conectado a la búsqueda en vivo. Ve más allá: pide al modelo que esquematice cada pieza, liste las preguntas que tu público realmente hace, y redacte un gancho. Hacer esta fase de investigación en árabe importa — las ideas, la redacción y las referencias culturales salen mucho más relevantes que traducir ideas inglesas después. En quince minutos puedes tener un mes de ideas específicas listas para producir.',
+          ar: 'ابدأ بتوليد خطة محتوى بلغتك. اطلب من ChatGPT أو Qwen بالعربية عشرين فكرة محتوى حول موضوعك موجّهة لجمهور محدّد، ثم اطلب تجميعها في محاور واقتراح عناوين. وللمواضيع الرائجة والآنية، يفيد Google Gemini لأنه متصل بالبحث المباشر. وادفع أبعد: اطلب من النموذج وضع مخطّط لكل محتوى، وسرد الأسئلة التي يطرحها جمهورك فعلاً، وكتابة مطلع جذّاب. وإجراء مرحلة البحث هذه بالعربية مهم — فالأفكار والصياغة والمرجعيات الثقافية تخرج أكثر ملاءمة بكثير من ترجمة أفكار إنجليزية لاحقاً. في خمس عشرة دقيقة يمكنك أن تملك أفكار شهر كامل مستهدفة وجاهزة للإنتاج.',
+        },
+      },
+      {
+        heading: {
+          en: 'Step 2 — Writing Posts, Articles & Scripts',
+          fr: 'Étape 2 — Rédiger posts, articles et scripts',
+          es: 'Paso 2 — Escribir publicaciones, artículos y guiones',
+          ar: 'الخطوة 2 — كتابة المنشورات والمقالات والنصوص',
+        },
+        body: {
+          en: 'For the actual writing, prompt in Arabic and specify the format, length, audience and register. ChatGPT and Claude both produce clean Modern Standard Arabic; Claude is especially good for long articles and scripts, while ChatGPT is faster for short social posts. Give the model a one-line example of your voice so it matches your style. A powerful move is to write once and repurpose: ask for a long article, then have the model turn it into a thread, a short video script, a newsletter and five social captions — all in Arabic. Always read the draft with a native eye and fix gender agreement, dialect slips and over-formal phrasing. Treat AI as your first-draft writer and yourself as the editor.',
+          fr: 'Pour la rédaction, formulez en arabe et précisez le format, la longueur, le public et le registre. ChatGPT et Claude produisent tous deux un arabe standard moderne propre ; Claude est particulièrement bon pour les longs articles et scripts, tandis que ChatGPT est plus rapide pour les posts courts. Donnez au modèle un exemple d\'une ligne de votre voix pour qu\'il colle à votre style. Un geste puissant : écrire une fois et recycler — demandez un long article, puis faites-le transformer en fil, en script vidéo court, en newsletter et en cinq légendes sociales, le tout en arabe. Relisez toujours avec un œil natif et corrigez accords de genre, écarts dialectaux et tournures trop formelles. Traitez l\'IA comme votre rédacteur de premier jet et vous-même comme l\'éditeur.',
+          es: 'Para la escritura, formula en árabe y especifica el formato, la longitud, el público y el registro. ChatGPT y Claude producen un árabe estándar moderno limpio; Claude es especialmente bueno para artículos largos y guiones, mientras que ChatGPT es más rápido para publicaciones cortas. Dale al modelo un ejemplo de una línea de tu voz para que coincida con tu estilo. Un movimiento potente es escribir una vez y reutilizar: pide un artículo largo y luego que el modelo lo convierta en un hilo, un guion de vídeo corto, un boletín y cinco pies para redes, todo en árabe. Relee siempre con ojo nativo y corrige concordancia de género, deslices dialectales y frases demasiado formales. Trata a la IA como tu redactor de primer borrador y a ti como el editor.',
+          ar: 'للكتابة الفعلية، صُغ الطلب بالعربية وحدّد الصيغة والطول والجمهور والمستوى. يُنتج كل من ChatGPT وClaude فصحى نظيفة؛ وClaude جيد خصوصاً للمقالات والنصوص الطويلة، بينما ChatGPT أسرع للمنشورات القصيرة. أعطِ النموذج مثالاً من سطر عن صوتك ليطابق أسلوبك. وهناك حركة قوية: اكتب مرة وأعد الاستخدام — اطلب مقالاً طويلاً، ثم اطلب تحويله إلى سلسلة تغريدات، ونص فيديو قصير، ونشرة بريدية، وخمسة تعليقات لوسائل التواصل، كله بالعربية. واقرأ المسودة دائماً بعين أهل اللغة وصحّح مطابقة الجنس، والانزلاقات اللهجية، والصياغة المفرطة في الرسمية. تعامل مع الذكاء الاصطناعي ككاتب مسودة أولى، ومع نفسك كمحرّر.',
+        },
+      },
+      {
+        heading: {
+          en: 'Step 3 — Visuals & the Arabic-Text Problem',
+          fr: 'Étape 3 — Visuels et le problème du texte arabe',
+          es: 'Paso 3 — Visuales y el problema del texto árabe',
+          ar: 'الخطوة 3 — الصور ومشكلة النص العربي',
+        },
+        body: {
+          en: 'Visuals are where creators hit the biggest Arabic snag: AI image generators like Midjourney and DALL-E still render Arabic script incorrectly inside images. The reliable workflow is to generate the picture with an English prompt and no text, then add your Arabic or French text yourself in Canva, which has AI design tools and proper right-to-left support. Canva is ideal for thumbnails, carousels, quote cards and social posts, and its free plan covers most needs. Keep your fonts, colors and logo consistent so your Arabic content builds a recognizable brand. This split — AI for the image, a design editor for the text — solves the single most common quality problem in Arabic visual content.',
+          fr: 'Les visuels sont là où les créateurs rencontrent le plus gros obstacle arabe : les générateurs d\'images comme Midjourney et DALL-E affichent encore mal l\'écriture arabe dans les images. Le flux fiable : générez l\'image avec un prompt en anglais et sans texte, puis ajoutez vous-même votre texte arabe ou français dans Canva, qui dispose d\'outils de design IA et d\'un vrai support de droite à gauche. Canva est idéal pour miniatures, carrousels, cartes de citation et posts sociaux, et son offre gratuite couvre l\'essentiel des besoins. Gardez polices, couleurs et logo cohérents pour que votre contenu arabe construise une marque reconnaissable. Ce partage — l\'IA pour l\'image, un éditeur de design pour le texte — résout le problème de qualité le plus courant du contenu visuel arabe.',
+          es: 'Los visuales son donde los creadores encuentran el mayor obstáculo con el árabe: los generadores de imágenes como Midjourney y DALL-E aún representan mal la escritura árabe dentro de las imágenes. El flujo fiable es generar la imagen con un prompt en inglés y sin texto, y luego añadir tú mismo tu texto árabe o francés en Canva, que tiene herramientas de diseño con IA y soporte real de derecha a izquierda. Canva es ideal para miniaturas, carruseles, tarjetas de cita y publicaciones sociales, y su plan gratuito cubre la mayoría de necesidades. Mantén tus fuentes, colores y logo coherentes para que tu contenido árabe construya una marca reconocible. Esta división — IA para la imagen, un editor de diseño para el texto — resuelve el problema de calidad más común del contenido visual árabe.',
+          ar: 'الصور هي حيث يصطدم صنّاع المحتوى بأكبر عائق عربي: فمولّدات الصور مثل Midjourney وDALL-E لا تزال تعرض الخط العربي بشكل خاطئ داخل الصور. سير العمل الموثوق: ولّد الصورة بأمر إنجليزي وبدون نص، ثم أضف نصك العربي أو الفرنسي بنفسك في Canva، الذي يملك أدوات تصميم بالذكاء الاصطناعي ودعماً حقيقياً من اليمين إلى اليسار. وCanva مثالي للصور المصغّرة والكاروسيل وبطاقات الاقتباس ومنشورات التواصل، وخطته المجانية تغطي معظم الاحتياجات. حافظ على ثبات الخطوط والألوان والشعار ليبني محتواك العربي علامة مميّزة. هذا الفصل — الذكاء الاصطناعي للصورة، ومحرّر التصميم للنص — يحلّ أكثر مشاكل الجودة شيوعاً في المحتوى العربي المرئي.',
+        },
+      },
+      {
+        heading: {
+          en: 'Step 4 — Voice & Video in Arabic',
+          fr: 'Étape 4 — Voix et vidéo en arabe',
+          es: 'Paso 4 — Voz y vídeo en árabe',
+          ar: 'الخطوة 4 — الصوت والفيديو بالعربية',
+        },
+        body: {
+          en: 'For audio, ElevenLabs offers natural Arabic and French voices that work for narration, reels, ads and accessibility — its free tier is enough to test, and paid plans unlock more characters and voices. For video, tools like HeyGen create AI avatar presenters and can dub or subtitle your video into Arabic, which is powerful for creators who do not want to appear on camera or who want to localize existing content. A common creator stack: write the script with ChatGPT, generate the voiceover in ElevenLabs, build the visuals in Canva, and assemble or dub in HeyGen. For music beds, Suno can generate royalty-free background tracks. Always preview Arabic audio for pronunciation, since names and technical terms can trip the voice model.',
+          fr: 'Pour l\'audio, ElevenLabs propose des voix arabes et françaises naturelles pour la narration, les reels, les pubs et l\'accessibilité — son offre gratuite suffit pour tester, et les plans payants débloquent plus de caractères et de voix. Pour la vidéo, des outils comme HeyGen créent des présentateurs avatars IA et peuvent doubler ou sous-titrer votre vidéo en arabe, ce qui est puissant pour les créateurs qui ne veulent pas apparaître à l\'écran ou qui veulent localiser un contenu existant. Une stack fréquente : écrire le script avec ChatGPT, générer la voix off dans ElevenLabs, créer les visuels dans Canva, et assembler ou doubler dans HeyGen. Pour les fonds musicaux, Suno génère des pistes libres de droits. Prévisualisez toujours l\'audio arabe pour la prononciation, car noms et termes techniques peuvent piéger le modèle vocal.',
+          es: 'Para el audio, ElevenLabs ofrece voces árabes y francesas naturales que sirven para narración, reels, anuncios y accesibilidad — su plan gratuito basta para probar, y los de pago desbloquean más caracteres y voces. Para vídeo, herramientas como HeyGen crean presentadores avatar con IA y pueden doblar o subtitular tu vídeo al árabe, lo que es potente para creadores que no quieren aparecer en cámara o que quieren localizar contenido existente. Un stack común: escribir el guion con ChatGPT, generar la voz en ElevenLabs, crear los visuales en Canva, y montar o doblar en HeyGen. Para fondos musicales, Suno genera pistas libres de derechos. Previsualiza siempre el audio árabe por la pronunciación, ya que nombres y términos técnicos pueden confundir al modelo de voz.',
+          ar: 'للصوت، يقدّم ElevenLabs أصواتاً عربية وفرنسية طبيعية تصلح للسرد والريلز والإعلانات وإمكانية الوصول — خطته المجانية تكفي للتجربة، والخطط المدفوعة تفتح مزيداً من الأحرف والأصوات. وللفيديو، تنشئ أدوات مثل HeyGen مقدّمين بأفاتار ذكاء اصطناعي، ويمكنها دبلجة فيديوك أو ترجمته إلى العربية، وهو أمر قوي لمن لا يريد الظهور أمام الكاميرا أو يريد توطين محتوى قائم. ومكدّس شائع لدى الصنّاع: اكتب النص بـ ChatGPT، وولّد التعليق الصوتي في ElevenLabs، وابنِ الصور في Canva، وجمّع أو دبلج في HeyGen. وللخلفيات الموسيقية، يولّد Suno مقاطع خالية من الحقوق. واستمع دائماً لمعاينة الصوت العربي للتأكّد من النطق، فالأسماء والمصطلحات التقنية قد تربك نموذج الصوت.',
+        },
+      },
+      {
+        heading: {
+          en: 'Step 5 — A Repeatable Weekly Workflow',
+          fr: 'Étape 5 — Un flux de travail hebdomadaire reproductible',
+          es: 'Paso 5 — Un flujo de trabajo semanal repetible',
+          ar: 'الخطوة 5 — سير عمل أسبوعي قابل للتكرار',
+        },
+        body: {
+          en: 'Turn the steps above into a system you repeat every week. Batch it: spend one session on ideas and outlines for the whole week, one on writing all the drafts, one on visuals and audio, and schedule everything to publish. A simple weekly rhythm might be one long article repurposed into a thread, three social posts, one short video and one newsletter — all produced in a few focused hours instead of days. Keep a reusable prompt library in a document so you are not rewriting instructions each time. The goal is consistency: publishing steadily in Arabic and French is what builds an audience, and AI is what makes that pace sustainable for a solo creator. Browse the full AIverse directory to find and compare the exact tools for each step.',
+          fr: 'Transformez les étapes ci-dessus en un système répété chaque semaine. Faites-le par lots : une session pour les idées et les plans de toute la semaine, une pour rédiger tous les brouillons, une pour les visuels et l\'audio, puis programmez toutes les publications. Un rythme hebdomadaire simple : un long article recyclé en fil, trois posts sociaux, une vidéo courte et une newsletter — le tout produit en quelques heures concentrées plutôt qu\'en plusieurs jours. Gardez une bibliothèque de prompts réutilisables dans un document pour ne pas réécrire les consignes à chaque fois. L\'objectif, c\'est la régularité : publier avec constance en arabe et en français est ce qui construit une audience, et l\'IA est ce qui rend ce rythme tenable pour un créateur solo. Parcourez l\'annuaire AIverse pour trouver et comparer les outils exacts de chaque étape.',
+          es: 'Convierte los pasos anteriores en un sistema que repites cada semana. Hazlo por lotes: una sesión para las ideas y los esquemas de toda la semana, una para escribir todos los borradores, una para los visuales y el audio, y programa todas las publicaciones. Un ritmo semanal simple: un artículo largo reutilizado en un hilo, tres publicaciones sociales, un vídeo corto y un boletín — todo producido en unas pocas horas enfocadas en lugar de días. Mantén una biblioteca de prompts reutilizables en un documento para no reescribir las instrucciones cada vez. El objetivo es la constancia: publicar de forma sostenida en árabe y francés es lo que construye una audiencia, y la IA es lo que hace ese ritmo sostenible para un creador en solitario. Explora el directorio completo de AIverse para encontrar y comparar las herramientas exactas de cada paso.',
+          ar: 'حوّل الخطوات أعلاه إلى نظام تكرّره كل أسبوع. اعمل على دفعات: جلسة للأفكار والمخطّطات لكامل الأسبوع، وجلسة لكتابة كل المسودّات، وجلسة للصور والصوت، ثم جدولة كل المنشورات للنشر. وإيقاع أسبوعي بسيط قد يكون: مقال طويل واحد يُعاد استخدامه كسلسلة، وثلاثة منشورات اجتماعية، وفيديو قصير، ونشرة بريدية — كله يُنتَج في ساعات مركّزة قليلة بدل أيام. واحتفظ بمكتبة أوامر قابلة لإعادة الاستخدام في مستند حتى لا تعيد كتابة التعليمات كل مرة. والهدف هو الانتظام: فالنشر الثابت بالعربية والفرنسية هو ما يبني الجمهور، والذكاء الاصطناعي هو ما يجعل هذا الإيقاع مستداماً لصانع فردي. تصفّح دليل AIverse الكامل لإيجاد ومقارنة الأدوات المحدّدة لكل خطوة.',
+        },
+      },
+    ],
+    relatedTools: ['chatgpt', 'canva-ai', 'elevenlabs', 'heygen', 'midjourney', 'suno'],
+    relatedComparisons: ['elevenlabs-vs-murf-ai', 'midjourney-vs-dalle3'],
+    faq: [
+      {
+        question: {
+          en: 'What is the best AI tool to create Arabic content?',
+          fr: 'Quel est le meilleur outil IA pour créer du contenu en arabe ?',
+          es: '¿Cuál es la mejor herramienta IA para crear contenido en árabe?',
+          ar: 'ما أفضل أداة ذكاء اصطناعي لصناعة المحتوى العربي؟',
+        },
+        answer: {
+          en: 'There is no single tool — you combine a few. Use ChatGPT or Claude for writing, Qwen for the most natural Arabic, Canva for visuals with Arabic text, ElevenLabs for voiceovers, and HeyGen for video. Most have free tiers, so you can build a full Arabic content stack at low cost.',
+          fr: 'Il n\'y a pas d\'outil unique — vous en combinez plusieurs. Utilisez ChatGPT ou Claude pour la rédaction, Qwen pour l\'arabe le plus naturel, Canva pour les visuels avec texte arabe, ElevenLabs pour les voix off, et HeyGen pour la vidéo. La plupart ont des offres gratuites : vous pouvez donc bâtir une stack complète de contenu arabe à faible coût.',
+          es: 'No hay una sola herramienta — combinas varias. Usa ChatGPT o Claude para escribir, Qwen para el árabe más natural, Canva para visuales con texto árabe, ElevenLabs para voces y HeyGen para vídeo. La mayoría tiene planes gratuitos, así que puedes construir un stack completo de contenido árabe a bajo costo.',
+          ar: 'لا توجد أداة واحدة — بل تجمع بين عدة. استخدم ChatGPT أو Claude للكتابة، وQwen لأكثر عربية طبيعية، وCanva للصور بنص عربي، وElevenLabs للتعليق الصوتي، وHeyGen للفيديو. ومعظمها بخطط مجانية، فيمكنك بناء مكدّس محتوى عربي كامل بتكلفة منخفضة.',
+        },
+      },
+      {
+        question: {
+          en: 'Can AI generate images with Arabic text?',
+          fr: 'L\'IA peut-elle générer des images avec du texte arabe ?',
+          es: '¿Puede la IA generar imágenes con texto árabe?',
+          ar: 'هل يستطيع الذكاء الاصطناعي توليد صور بنص عربي؟',
+        },
+        answer: {
+          en: 'Not reliably yet — image generators distort Arabic script inside pictures. The proven workaround is to generate the image with an English prompt and no text, then add your Arabic text afterward in a design editor like Canva that supports right-to-left layout and Arabic fonts.',
+          fr: 'Pas encore de façon fiable — les générateurs d\'images déforment l\'écriture arabe dans les images. La solution éprouvée est de générer l\'image avec un prompt en anglais et sans texte, puis d\'ajouter votre texte arabe ensuite dans un éditeur de design comme Canva qui gère la mise en page de droite à gauche et les polices arabes.',
+          es: 'Aún no de forma fiable — los generadores de imágenes distorsionan la escritura árabe dentro de las imágenes. La solución probada es generar la imagen con un prompt en inglés y sin texto, y luego añadir tu texto árabe en un editor de diseño como Canva que admite el diseño de derecha a izquierda y fuentes árabes.',
+          ar: 'ليس بموثوقية حتى الآن — فمولّدات الصور تشوّه الخط العربي داخل الصور. والحل المُجرَّب هو توليد الصورة بأمر إنجليزي وبدون نص، ثم إضافة نصك العربي لاحقاً في محرّر تصميم مثل Canva يدعم التنسيق من اليمين إلى اليسار والخطوط العربية.',
+        },
+      },
+      {
+        question: {
+          en: 'Can I make Arabic voiceovers and videos with AI?',
+          fr: 'Puis-je créer des voix off et des vidéos en arabe avec l\'IA ?',
+          es: '¿Puedo hacer voces y vídeos en árabe con IA?',
+          ar: 'هل يمكنني إنشاء تعليقات صوتية وفيديوهات بالعربية بالذكاء الاصطناعي؟',
+        },
+        answer: {
+          en: 'Yes. ElevenLabs generates natural Arabic and French voiceovers for narration, reels and ads, and video tools like HeyGen can create AI avatar presenters and dub or subtitle your videos into Arabic. Free tiers let you test both before upgrading. Always preview the audio to check pronunciation of names and technical terms.',
+          fr: 'Oui. ElevenLabs génère des voix off arabes et françaises naturelles pour la narration, les reels et les pubs, et des outils vidéo comme HeyGen créent des présentateurs avatars IA et peuvent doubler ou sous-titrer vos vidéos en arabe. Les offres gratuites permettent de tester les deux avant de passer au payant. Prévisualisez toujours l\'audio pour vérifier la prononciation des noms et termes techniques.',
+          es: 'Sí. ElevenLabs genera voces árabes y francesas naturales para narración, reels y anuncios, y herramientas de vídeo como HeyGen crean presentadores avatar con IA y pueden doblar o subtitular tus vídeos al árabe. Los planes gratuitos permiten probar ambos antes de mejorar. Previsualiza siempre el audio para comprobar la pronunciación de nombres y términos técnicos.',
+          ar: 'نعم. يولّد ElevenLabs تعليقات صوتية عربية وفرنسية طبيعية للسرد والريلز والإعلانات، وأدوات الفيديو مثل HeyGen تنشئ مقدّمين بأفاتار ذكاء اصطناعي ويمكنها دبلجة فيديوهاتك أو ترجمتها إلى العربية. والخطط المجانية تتيح تجربة الاثنين قبل الترقية. واستمع دائماً لمعاينة الصوت للتحقّق من نطق الأسماء والمصطلحات التقنية.',
+        },
+      },
+    ],
+  },
 ];
 
 export function getAllBlogPosts(): BlogPost[] {
