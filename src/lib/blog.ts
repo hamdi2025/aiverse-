@@ -4427,6 +4427,157 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'best-free-ai-tools-arabic-french-2026',
+    category: 'writing',
+    emoji: '🌍',
+    publishedDate: '2026-07-07',
+    readTime: 9,
+    title: {
+      en: 'Best Free AI Tools for Arabic & French Speakers in 2026',
+      fr: 'Les Meilleurs Outils IA Gratuits pour Arabophones et Francophones en 2026',
+      es: 'Las Mejores Herramientas IA Gratuitas para Hablantes de Árabe y Francés en 2026',
+      ar: 'أفضل أدوات الذكاء الاصطناعي المجانية للناطقين بالعربية والفرنسية في 2026',
+    },
+    excerpt: {
+      en: 'Most AI tools are built English-first, and their quality drops sharply in Arabic and French. This guide ranks the free AI tools that genuinely handle both languages well — for writing, translation, images and voice — plus practical tips to get better results in your own language.',
+      fr: 'La plupart des outils IA sont pensés en anglais d\'abord, et leur qualité chute nettement en arabe et en français. Ce guide classe les outils IA gratuits qui gèrent réellement bien ces deux langues — écriture, traduction, images et voix — avec des astuces concrètes pour de meilleurs résultats dans votre langue.',
+      es: 'La mayoría de las herramientas IA se diseñan primero en inglés, y su calidad cae mucho en árabe y francés. Esta guía clasifica las herramientas IA gratuitas que realmente manejan bien ambos idiomas — escritura, traducción, imágenes y voz — con consejos prácticos para obtener mejores resultados en tu idioma.',
+      ar: 'معظم أدوات الذكاء الاصطناعي مبنية بالإنجليزية أولاً، وتنخفض جودتها بشكل حاد في العربية والفرنسية. يصنّف هذا الدليل أدوات الذكاء الاصطناعي المجانية التي تتعامل فعلاً مع اللغتين بشكل جيد — للكتابة والترجمة والصور والصوت — مع نصائح عملية للحصول على نتائج أفضل بلغتك.',
+    },
+    sections: [
+      {
+        heading: {
+          en: 'Why the Language of Your AI Tool Matters',
+          fr: 'Pourquoi la langue de votre outil IA change tout',
+          es: 'Por qué el idioma de tu herramienta IA lo cambia todo',
+          ar: 'لماذا تُحدث لغة أداة الذكاء الاصطناعي فرقاً كبيراً',
+        },
+        body: {
+          en: 'Almost every popular AI tool is trained mostly on English data. In practice this means the same model that writes a flawless English email can produce awkward phrasing, wrong grammar, or a broken right-to-left layout in Arabic — and stiff, over-literal text in French. For the hundreds of millions of people who work in Arabic and French every day, choosing a tool that was actually tested in your language is the single biggest quality difference. The good news: a handful of free tools now handle Arabic and French genuinely well. This guide focuses only on those, so you do not waste time on models that quietly underperform in your language.',
+          fr: 'Presque tous les outils IA populaires sont entraînés majoritairement sur des données en anglais. Concrètement, le même modèle qui rédige un e-mail parfait en anglais peut produire des tournures maladroites, des fautes de grammaire ou une mise en page cassée de droite à gauche en arabe — et un texte rigide et trop littéral en français. Pour les centaines de millions de personnes qui travaillent chaque jour en arabe et en français, choisir un outil réellement testé dans votre langue est la plus grande différence de qualité. Bonne nouvelle : quelques outils gratuits gèrent désormais très bien l\'arabe et le français. Ce guide se concentre uniquement sur ceux-là, pour ne pas perdre de temps avec des modèles discrètement moins performants dans votre langue.',
+          es: 'Casi todas las herramientas IA populares se entrenan principalmente con datos en inglés. En la práctica, el mismo modelo que escribe un correo perfecto en inglés puede producir frases torpes, errores gramaticales o un diseño roto de derecha a izquierda en árabe — y un texto rígido y demasiado literal en francés. Para los cientos de millones de personas que trabajan cada día en árabe y francés, elegir una herramienta realmente probada en tu idioma es la mayor diferencia de calidad. La buena noticia: unas pocas herramientas gratuitas ahora manejan muy bien el árabe y el francés. Esta guía se centra solo en ellas, para que no pierdas tiempo con modelos que rinden peor en tu idioma.',
+          ar: 'تقريباً كل أدوات الذكاء الاصطناعي الشائعة مدرَّبة في الأغلب على بيانات بالإنجليزية. عملياً، هذا يعني أن النموذج نفسه الذي يكتب بريداً إلكترونياً مثالياً بالإنجليزية قد ينتج صياغة ركيكة أو أخطاء نحوية أو تنسيقاً مكسوراً من اليمين إلى اليسار بالعربية — ونصاً جامداً وحرفياً أكثر من اللازم بالفرنسية. بالنسبة لمئات الملايين الذين يعملون يومياً بالعربية والفرنسية، فإن اختيار أداة اختُبرت فعلاً بلغتك هو أكبر فرق في الجودة. الخبر الجيد: عدد قليل من الأدوات المجانية أصبح يتعامل مع العربية والفرنسية بشكل ممتاز. يركّز هذا الدليل عليها وحدها، حتى لا تضيّع وقتك مع نماذج تؤدي بشكل أضعف بلغتك دون أن تدري.',
+        },
+      },
+      {
+        heading: {
+          en: 'Best Free Conversational AI in Arabic & French',
+          fr: 'Meilleures IA conversationnelles gratuites en arabe et français',
+          es: 'Mejores IA conversacionales gratuitas en árabe y francés',
+          ar: 'أفضل روبوتات المحادثة المجانية بالعربية والفرنسية',
+        },
+        body: {
+          en: 'For everyday chat, writing and questions, four free assistants stand out. ChatGPT has a strong free tier and handles Modern Standard Arabic and French fluently, including some dialect awareness. Claude is the best of the group for long, nuanced French writing and careful reasoning, and it respects Arabic right-to-left formatting well. Google Gemini is free, fast, and connected to live search — useful when you need current answers in either language. Qwen, the open model from Alibaba, was trained with heavy Arabic and Chinese coverage and is often the strongest free option for pure Arabic fluency. Start with ChatGPT or Claude for writing, and try Qwen when Arabic quality is your top priority.',
+          fr: 'Pour discuter, rédiger et poser des questions au quotidien, quatre assistants gratuits se démarquent. ChatGPT offre une offre gratuite solide et gère couramment l\'arabe standard moderne et le français, avec une certaine connaissance des dialectes. Claude est le meilleur du groupe pour la rédaction longue et nuancée en français et le raisonnement soigné, et il respecte bien la mise en forme arabe de droite à gauche. Google Gemini est gratuit, rapide et connecté à la recherche en direct — utile pour des réponses actuelles dans les deux langues. Qwen, le modèle ouvert d\'Alibaba, a été entraîné avec une forte couverture de l\'arabe et du chinois, et c\'est souvent la meilleure option gratuite pour une fluidité arabe pure. Commencez par ChatGPT ou Claude pour écrire, et essayez Qwen quand la qualité de l\'arabe est votre priorité.',
+          es: 'Para chatear, escribir y hacer preguntas a diario, destacan cuatro asistentes gratuitos. ChatGPT tiene un plan gratuito sólido y maneja con fluidez el árabe estándar moderno y el francés, con cierto conocimiento de dialectos. Claude es el mejor del grupo para la escritura extensa y matizada en francés y el razonamiento cuidadoso, y respeta bien el formato árabe de derecha a izquierda. Google Gemini es gratuito, rápido y conectado a la búsqueda en vivo — útil para respuestas actuales en ambos idiomas. Qwen, el modelo abierto de Alibaba, se entrenó con amplia cobertura de árabe y chino, y suele ser la mejor opción gratuita para una fluidez árabe pura. Empieza con ChatGPT o Claude para escribir, y prueba Qwen cuando la calidad del árabe sea tu prioridad.',
+          ar: 'للدردشة والكتابة وطرح الأسئلة يومياً، تتميّز أربعة مساعدين مجانيين. يوفّر ChatGPT خطة مجانية قوية ويتعامل بطلاقة مع العربية الفصحى الحديثة والفرنسية، مع بعض الإلمام باللهجات. أما Claude فهو الأفضل في المجموعة للكتابة الطويلة والدقيقة بالفرنسية والاستدلال المتأنّي، ويحترم تنسيق العربية من اليمين إلى اليسار جيداً. وGoogle Gemini مجاني وسريع ومتصل بالبحث المباشر — مفيد عندما تحتاج إجابات محدّثة بأي من اللغتين. وQwen، النموذج المفتوح من Alibaba، دُرِّب بتغطية كبيرة للعربية والصينية وغالباً ما يكون الخيار المجاني الأقوى للطلاقة العربية الصرفة. ابدأ بـ ChatGPT أو Claude للكتابة، وجرّب Qwen حين تكون جودة العربية أولويتك.',
+        },
+      },
+      {
+        heading: {
+          en: 'Best Free AI for Translation & Multilingual Writing',
+          fr: 'Meilleure IA gratuite pour la traduction et l\'écriture multilingue',
+          es: 'Mejor IA gratuita para traducción y escritura multilingüe',
+          ar: 'أفضل ذكاء اصطناعي مجاني للترجمة والكتابة متعددة اللغات',
+        },
+        body: {
+          en: 'When you move between Arabic, French and English all day, a dedicated translator saves real time. DeepL produces the most natural French translations of any free tool and now supports Arabic, keeping tone and idioms far better than older services. For translating and rewriting at the same time — for example turning an Arabic note into a polished French email — a chat model like Qwen or ChatGPT is more flexible, because you can ask it to adapt the tone, shorten, or localize for a specific audience. A practical workflow: draft in your strongest language, translate with DeepL, then paste the result into ChatGPT or Claude and ask it to "make this sound natural for a native reader." That two-step method beats any single tool.',
+          fr: 'Quand vous naviguez toute la journée entre arabe, français et anglais, un traducteur dédié fait gagner un temps réel. DeepL produit les traductions françaises les plus naturelles parmi les outils gratuits et prend désormais en charge l\'arabe, en préservant bien mieux le ton et les expressions que les services plus anciens. Pour traduire et reformuler en même temps — par exemple transformer une note en arabe en un e-mail soigné en français — un modèle de chat comme Qwen ou ChatGPT est plus flexible, car vous pouvez lui demander d\'adapter le ton, de raccourcir ou de localiser pour un public précis. Un flux de travail efficace : rédigez dans votre langue la plus forte, traduisez avec DeepL, puis collez le résultat dans ChatGPT ou Claude en demandant « rends cela naturel pour un lecteur natif ». Cette méthode en deux étapes bat n\'importe quel outil unique.',
+          es: 'Cuando te mueves entre árabe, francés e inglés todo el día, un traductor dedicado ahorra tiempo real. DeepL produce las traducciones al francés más naturales de cualquier herramienta gratuita y ahora admite árabe, conservando el tono y los modismos mucho mejor que los servicios antiguos. Para traducir y reescribir a la vez — por ejemplo, convertir una nota en árabe en un correo pulido en francés — un modelo de chat como Qwen o ChatGPT es más flexible, porque puedes pedirle que adapte el tono, acorte o localice para un público concreto. Un flujo práctico: redacta en tu idioma más fuerte, traduce con DeepL y luego pega el resultado en ChatGPT o Claude pidiendo «haz que suene natural para un lector nativo». Ese método de dos pasos supera a cualquier herramienta única.',
+          ar: 'حين تتنقّل طوال اليوم بين العربية والفرنسية والإنجليزية، يوفّر عليك مترجم متخصص وقتاً حقيقياً. يُنتج DeepL أكثر الترجمات الفرنسية طبيعيةً بين الأدوات المجانية، وأصبح يدعم العربية الآن، محافظاً على النبرة والتعابير أفضل بكثير من الخدمات القديمة. أما للترجمة وإعادة الصياغة في آنٍ واحد — مثل تحويل ملاحظة بالعربية إلى بريد فرنسي أنيق — فنموذج محادثة مثل Qwen أو ChatGPT أكثر مرونة، إذ يمكنك أن تطلب منه تعديل النبرة أو الاختصار أو التكييف لجمهور محدّد. سير عمل عملي: اكتب بلغتك الأقوى، ثم ترجم بـ DeepL، ثم الصق النتيجة في ChatGPT أو Claude واطلب «اجعل هذا طبيعياً لقارئ من أهل اللغة». هذه الطريقة المكوّنة من خطوتين تتفوّق على أي أداة منفردة.',
+        },
+      },
+      {
+        heading: {
+          en: 'Best Free AI for Images, Voice & Content',
+          fr: 'Meilleure IA gratuite pour images, voix et contenu',
+          es: 'Mejor IA gratuita para imágenes, voz y contenido',
+          ar: 'أفضل ذكاء اصطناعي مجاني للصور والصوت والمحتوى',
+        },
+        body: {
+          en: 'Creative AI has a known weakness: most image generators still struggle to render correct Arabic script inside a picture. The reliable trick is to generate the visual in English prompts, then add Arabic or French text yourself in a free editor like Canva, which now has AI design features and proper right-to-left text support. For voice, ElevenLabs offers a free tier with natural Arabic and French voices for narration, videos and accessibility. For research and study, Google\'s NotebookLM is free and lets you upload documents in any language and ask questions or generate summaries in Arabic or French. Pair a chat model for the words, an editor for the layout, and a voice tool for audio — all on free plans.',
+          fr: 'L\'IA créative a une faiblesse connue : la plupart des générateurs d\'images peinent encore à afficher correctement l\'écriture arabe dans une image. L\'astuce fiable est de générer le visuel avec des prompts en anglais, puis d\'ajouter vous-même le texte arabe ou français dans un éditeur gratuit comme Canva, qui dispose désormais de fonctions de design IA et d\'un vrai support du texte de droite à gauche. Pour la voix, ElevenLabs propose une offre gratuite avec des voix arabes et françaises naturelles pour la narration, les vidéos et l\'accessibilité. Pour la recherche et l\'étude, NotebookLM de Google est gratuit : téléversez des documents dans n\'importe quelle langue et posez des questions ou générez des résumés en arabe ou en français. Associez un modèle de chat pour les mots, un éditeur pour la mise en page et un outil vocal pour l\'audio — le tout en plans gratuits.',
+          es: 'La IA creativa tiene una debilidad conocida: la mayoría de los generadores de imágenes aún tienen dificultades para representar correctamente la escritura árabe dentro de una imagen. El truco fiable es generar el visual con prompts en inglés y luego añadir tú mismo el texto árabe o francés en un editor gratuito como Canva, que ahora tiene funciones de diseño con IA y soporte real de texto de derecha a izquierda. Para la voz, ElevenLabs ofrece un plan gratuito con voces árabes y francesas naturales para narración, vídeos y accesibilidad. Para investigación y estudio, NotebookLM de Google es gratuito: sube documentos en cualquier idioma y haz preguntas o genera resúmenes en árabe o francés. Combina un modelo de chat para las palabras, un editor para el diseño y una herramienta de voz para el audio — todo en planes gratuitos.',
+          ar: 'للذكاء الاصطناعي الإبداعي نقطة ضعف معروفة: لا يزال معظم مولّدات الصور يعاني من عرض الخط العربي بشكل صحيح داخل الصورة. الحيلة الموثوقة هي توليد الصورة بأوامر إنجليزية، ثم إضافة النص العربي أو الفرنسي بنفسك في محرّر مجاني مثل Canva، الذي أصبح يملك ميزات تصميم بالذكاء الاصطناعي ودعماً حقيقياً للنص من اليمين إلى اليسار. للصوت، يقدّم ElevenLabs خطة مجانية بأصوات عربية وفرنسية طبيعية للسرد والفيديوهات وإمكانية الوصول. للبحث والدراسة، NotebookLM من Google مجاني: ارفع مستندات بأي لغة واطرح أسئلة أو ولّد ملخصات بالعربية أو الفرنسية. اجمع بين نموذج محادثة للنصوص، ومحرّر للتنسيق، وأداة صوت للمقاطع الصوتية — كلها ضمن خطط مجانية.',
+        },
+      },
+      {
+        heading: {
+          en: 'Practical Tips to Get Better Results in Arabic & French',
+          fr: 'Astuces concrètes pour de meilleurs résultats en arabe et français',
+          es: 'Consejos prácticos para mejores resultados en árabe y francés',
+          ar: 'نصائح عملية لنتائج أفضل بالعربية والفرنسية',
+        },
+        body: {
+          en: 'A few habits noticeably improve output. First, write your instruction in the same language you want the answer in — asking in Arabic almost always yields more natural Arabic than asking in English. Second, specify the register: "formal Modern Standard Arabic", "Moroccan darija", or "professional French for a client email" gives far better results than a vague request. Third, give one short example of the tone you want; models copy style quickly. Fourth, for Arabic, ask the model to "keep correct diacritics only where needed" to avoid over-formal text. Finally, always re-read AI output in your language — even the best models make gender-agreement and idiom mistakes that a native eye catches instantly.',
+          fr: 'Quelques habitudes améliorent nettement le résultat. D\'abord, rédigez votre consigne dans la langue de la réponse souhaitée — demander en arabe donne presque toujours un arabe plus naturel que demander en anglais. Ensuite, précisez le registre : « arabe standard moderne formel », « darija marocaine » ou « français professionnel pour un e-mail client » donne de bien meilleurs résultats qu\'une demande vague. Troisièmement, donnez un court exemple du ton voulu ; les modèles copient vite le style. Quatrièmement, pour l\'arabe, demandez de « ne garder les diacritiques que là où c\'est nécessaire » pour éviter un texte trop formel. Enfin, relisez toujours le résultat dans votre langue — même les meilleurs modèles font des erreurs d\'accord de genre et d\'expressions qu\'un œil natif repère instantanément.',
+          es: 'Unos pocos hábitos mejoran notablemente el resultado. Primero, escribe tu instrucción en el mismo idioma en que quieres la respuesta — pedir en árabe casi siempre da un árabe más natural que pedir en inglés. Segundo, especifica el registro: «árabe estándar moderno formal», «darija marroquí» o «francés profesional para un correo a un cliente» da mucho mejores resultados que una petición vaga. Tercero, da un ejemplo corto del tono que quieres; los modelos copian el estilo rápido. Cuarto, para el árabe, pide «mantener las diacríticas solo donde sean necesarias» para evitar un texto demasiado formal. Por último, relee siempre el resultado en tu idioma — hasta los mejores modelos cometen errores de concordancia de género y modismos que un ojo nativo detecta al instante.',
+          ar: 'بعض العادات تحسّن النتيجة بشكل ملحوظ. أولاً، اكتب تعليماتك باللغة نفسها التي تريد الإجابة بها — فالطلب بالعربية يعطي غالباً عربية أكثر طبيعية من الطلب بالإنجليزية. ثانياً، حدّد المستوى: «عربية فصحى رسمية»، أو «دارجة مغربية»، أو «فرنسية احترافية لبريد عميل» يعطي نتائج أفضل بكثير من طلب غامض. ثالثاً، أعطِ مثالاً قصيراً على النبرة المطلوبة؛ فالنماذج تقلّد الأسلوب بسرعة. رابعاً، بالنسبة للعربية، اطلب «الإبقاء على التشكيل حيث يلزم فقط» لتجنّب نص مفرط في الرسمية. أخيراً، أعد دائماً قراءة مخرجات الذكاء الاصطناعي بلغتك — فحتى أفضل النماذج ترتكب أخطاء في مطابقة الجنس والتعابير يلتقطها القارئ من أهل اللغة فوراً.',
+        },
+      },
+      {
+        heading: {
+          en: 'Which Free Tools Should You Start With?',
+          fr: 'Par quels outils gratuits commencer ?',
+          es: '¿Con qué herramientas gratuitas empezar?',
+          ar: 'بأي أدوات مجانية يجب أن تبدأ؟',
+        },
+        body: {
+          en: 'If you only pick three, start here: ChatGPT for everyday writing and questions in both languages, DeepL for fast, natural translation, and Qwen when you need the strongest pure-Arabic output. Add Claude when you write long documents in French, NotebookLM when you study or research, and ElevenLabs when you need a voiceover. Every tool here has a genuinely usable free plan, so you can build a complete Arabic-and-French AI workflow without paying anything. Explore the full, regularly updated directory on AIverse to compare these tools side by side and discover new ones as they launch.',
+          fr: 'Si vous n\'en choisissez que trois, commencez ici : ChatGPT pour l\'écriture et les questions du quotidien dans les deux langues, DeepL pour une traduction rapide et naturelle, et Qwen quand vous avez besoin du meilleur résultat en arabe pur. Ajoutez Claude pour rédiger de longs documents en français, NotebookLM pour étudier ou faire des recherches, et ElevenLabs pour une voix off. Chaque outil présenté ici a une offre gratuite réellement utilisable : vous pouvez donc bâtir un flux de travail IA complet en arabe et en français sans rien payer. Explorez l\'annuaire complet et régulièrement mis à jour sur AIverse pour comparer ces outils côte à côte et découvrir les nouveautés dès leur sortie.',
+          es: 'Si solo eliges tres, empieza aquí: ChatGPT para la escritura y las preguntas del día a día en ambos idiomas, DeepL para una traducción rápida y natural, y Qwen cuando necesites el mejor resultado en árabe puro. Añade Claude para redactar documentos largos en francés, NotebookLM para estudiar o investigar, y ElevenLabs cuando necesites una voz en off. Cada herramienta aquí tiene un plan gratuito realmente utilizable, así que puedes construir un flujo de trabajo IA completo en árabe y francés sin pagar nada. Explora el directorio completo y actualizado con regularidad en AIverse para comparar estas herramientas y descubrir nuevas a medida que se lanzan.',
+          ar: 'إذا اخترت ثلاثاً فقط، فابدأ بهذه: ChatGPT للكتابة والأسئلة اليومية باللغتين، وDeepL لترجمة سريعة وطبيعية، وQwen حين تحتاج أقوى مخرجات بالعربية الصرفة. أضف Claude لكتابة المستندات الطويلة بالفرنسية، وNotebookLM للدراسة والبحث، وElevenLabs حين تحتاج تعليقاً صوتياً. كل أداة هنا لديها خطة مجانية قابلة للاستخدام فعلاً، فيمكنك بناء سير عمل كامل بالذكاء الاصطناعي بالعربية والفرنسية دون أن تدفع شيئاً. استكشف الدليل الكامل المُحدَّث باستمرار على AIverse لمقارنة هذه الأدوات جنباً إلى جنب واكتشاف الجديد فور صدوره.',
+        },
+      },
+    ],
+    relatedTools: ['chatgpt', 'claude', 'gemini', 'qwen', 'deepl', 'notebooklm'],
+    relatedComparisons: ['chatgpt-vs-claude', 'chatgpt-vs-gemini'],
+    faq: [
+      {
+        question: {
+          en: 'What is the best free AI tool for Arabic in 2026?',
+          fr: 'Quel est le meilleur outil IA gratuit pour l\'arabe en 2026 ?',
+          es: '¿Cuál es la mejor herramienta IA gratuita para árabe en 2026?',
+          ar: 'ما أفضل أداة ذكاء اصطناعي مجانية للعربية في 2026؟',
+        },
+        answer: {
+          en: 'For pure Arabic fluency, Qwen is often the strongest free option because it was trained with heavy Arabic coverage. ChatGPT and Google Gemini are also excellent free choices and handle Modern Standard Arabic well, while DeepL is best for Arabic translation. The right pick depends on the task — chat, translation, or long-form writing.',
+          fr: 'Pour une fluidité arabe pure, Qwen est souvent la meilleure option gratuite car il a été entraîné avec une forte couverture de l\'arabe. ChatGPT et Google Gemini sont aussi d\'excellents choix gratuits et gèrent bien l\'arabe standard moderne, tandis que DeepL est le meilleur pour la traduction en arabe. Le bon choix dépend de la tâche : conversation, traduction ou rédaction longue.',
+          es: 'Para una fluidez árabe pura, Qwen suele ser la mejor opción gratuita porque se entrenó con amplia cobertura de árabe. ChatGPT y Google Gemini también son excelentes opciones gratuitas y manejan bien el árabe estándar moderno, mientras que DeepL es el mejor para la traducción al árabe. La elección adecuada depende de la tarea: chat, traducción o escritura extensa.',
+          ar: 'للطلاقة العربية الصرفة، غالباً ما يكون Qwen الخيار المجاني الأقوى لأنه دُرِّب بتغطية كبيرة للعربية. وChatGPT وGoogle Gemini خياران مجانيان ممتازان أيضاً ويتعاملان جيداً مع الفصحى الحديثة، بينما DeepL هو الأفضل للترجمة إلى العربية. الاختيار الصحيح يعتمد على المهمة: محادثة أم ترجمة أم كتابة طويلة.',
+        },
+      },
+      {
+        question: {
+          en: 'Can AI tools write correct French for professional emails?',
+          fr: 'Les outils IA peuvent-ils rédiger un français correct pour des e-mails professionnels ?',
+          es: '¿Pueden las herramientas IA escribir francés correcto para correos profesionales?',
+          ar: 'هل يمكن لأدوات الذكاء الاصطناعي كتابة فرنسية سليمة للبريد المهني؟',
+        },
+        answer: {
+          en: 'Yes. Claude and ChatGPT both write polished professional French. For the best result, ask in French, state the register (for example "formal French for a client"), and give a short example of the tone. Always re-read the output, as models can occasionally make gender-agreement mistakes.',
+          fr: 'Oui. Claude et ChatGPT rédigent tous deux un français professionnel soigné. Pour le meilleur résultat, demandez en français, précisez le registre (par exemple « français formel pour un client ») et donnez un court exemple du ton. Relisez toujours le résultat, car les modèles font parfois des erreurs d\'accord de genre.',
+          es: 'Sí. Tanto Claude como ChatGPT escriben un francés profesional pulido. Para el mejor resultado, pide en francés, indica el registro (por ejemplo «francés formal para un cliente») y da un ejemplo corto del tono. Relee siempre el resultado, ya que los modelos pueden cometer errores de concordancia de género.',
+          ar: 'نعم. يكتب كل من Claude وChatGPT فرنسية مهنية أنيقة. للحصول على أفضل نتيجة، اطلب بالفرنسية، وحدّد المستوى (مثل «فرنسية رسمية لعميل»)، وأعطِ مثالاً قصيراً على النبرة. وأعد دائماً قراءة المخرجات لأن النماذج قد ترتكب أحياناً أخطاء في مطابقة الجنس.',
+        },
+      },
+      {
+        question: {
+          en: 'Why do AI image generators struggle with Arabic text?',
+          fr: 'Pourquoi les générateurs d\'images IA ont-ils du mal avec le texte arabe ?',
+          es: '¿Por qué los generadores de imágenes IA tienen problemas con el texto árabe?',
+          ar: 'لماذا تعاني مولّدات الصور بالذكاء الاصطناعي من النص العربي؟',
+        },
+        answer: {
+          en: 'Image models render text as shapes rather than real letters, and they were trained mostly on English visuals, so Arabic\'s connected, right-to-left script often comes out malformed. The reliable workaround is to generate the image with an English prompt and no text, then add your Arabic or French text afterward in a free editor like Canva that supports right-to-left layout.',
+          fr: 'Les modèles d\'image restituent le texte comme des formes plutôt que de vraies lettres, et ils ont été entraînés surtout sur des visuels anglais ; l\'écriture arabe, liée et de droite à gauche, sort donc souvent déformée. La solution fiable est de générer l\'image avec un prompt en anglais et sans texte, puis d\'ajouter votre texte arabe ou français ensuite dans un éditeur gratuit comme Canva qui gère la mise en page de droite à gauche.',
+          es: 'Los modelos de imagen representan el texto como formas en lugar de letras reales, y se entrenaron sobre todo con visuales en inglés, por lo que la escritura árabe, conectada y de derecha a izquierda, suele salir deformada. La solución fiable es generar la imagen con un prompt en inglés y sin texto, y luego añadir tu texto árabe o francés en un editor gratuito como Canva que admite el diseño de derecha a izquierda.',
+          ar: 'تُصيّر نماذج الصور النص كأشكال لا كحروف حقيقية، وقد دُرِّبت غالباً على صور إنجليزية، لذا يخرج الخط العربي المتّصل ومن اليمين إلى اليسار مشوّهاً في الغالب. الحل الموثوق هو توليد الصورة بأمر إنجليزي وبدون نص، ثم إضافة نصك العربي أو الفرنسي لاحقاً في محرّر مجاني مثل Canva يدعم التنسيق من اليمين إلى اليسار.',
+        },
+      },
+    ],
+  },
 ];
 
 export function getAllBlogPosts(): BlogPost[] {
