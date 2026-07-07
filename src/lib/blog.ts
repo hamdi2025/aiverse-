@@ -4880,6 +4880,157 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'best-ai-tools-arabic-students-2026',
+    category: 'elearning',
+    emoji: '🎓',
+    publishedDate: '2026-07-07',
+    readTime: 10,
+    title: {
+      en: 'Best AI Tools for Arabic-Speaking Students in 2026',
+      fr: 'Meilleurs Outils IA pour les Étudiants Arabophones et Francophones en 2026',
+      es: 'Mejores Herramientas IA para Estudiantes de Habla Árabe y Francesa en 2026',
+      ar: 'أفضل أدوات الذكاء الاصطناعي للطلاب الناطقين بالعربية في 2026',
+    },
+    excerpt: {
+      en: 'A practical guide to the best AI tools for Arabic- and French-speaking students in 2026 — for research, understanding hard topics, writing essays, learning languages and revising for exams — plus how to use them honestly without cheating.',
+      fr: 'Un guide pratique des meilleurs outils IA pour les étudiants arabophones et francophones en 2026 — pour la recherche, comprendre les sujets difficiles, rédiger des devoirs, apprendre les langues et réviser les examens — et comment les utiliser honnêtement sans tricher.',
+      es: 'Una guía práctica de las mejores herramientas IA para estudiantes de habla árabe y francesa en 2026 — para investigar, entender temas difíciles, escribir trabajos, aprender idiomas y repasar exámenes — y cómo usarlas honestamente sin hacer trampa.',
+      ar: 'دليل عملي لأفضل أدوات الذكاء الاصطناعي للطلاب الناطقين بالعربية والفرنسية في 2026 — للبحث، وفهم المواضيع الصعبة، وكتابة الأبحاث، وتعلّم اللغات، والمراجعة للامتحانات — وكيفية استخدامها بأمانة دون غش.',
+    },
+    sections: [
+      {
+        heading: {
+          en: 'How AI Is Changing Study for Arabic Students',
+          fr: 'Comment l\'IA change les études pour les étudiants arabophones',
+          es: 'Cómo la IA cambia el estudio para los estudiantes de árabe',
+          ar: 'كيف يغيّر الذكاء الاصطناعي الدراسة للطلاب العرب',
+        },
+        body: {
+          en: 'For students who study in Arabic or French, AI removes a barrier that has existed for years: most of the best learning material online is in English. Now an AI assistant can explain a difficult concept in simple Arabic, translate an English textbook chapter, summarize a long PDF, and quiz you before an exam — all in your own language. Used well, these tools do not replace studying; they make it faster and less frustrating. Used badly, they become a shortcut that leaves you learning nothing. This guide shows the best tools for each study task and how to use them so you actually understand the material, not just hand in an answer.',
+          fr: 'Pour les étudiants qui étudient en arabe ou en français, l\'IA supprime une barrière qui existe depuis des années : la plupart des meilleurs supports d\'apprentissage en ligne sont en anglais. Désormais, un assistant IA peut expliquer un concept difficile en arabe simple, traduire un chapitre de manuel anglais, résumer un long PDF et vous interroger avant un examen — le tout dans votre langue. Bien utilisés, ces outils ne remplacent pas l\'étude ; ils la rendent plus rapide et moins frustrante. Mal utilisés, ils deviennent un raccourci qui ne vous apprend rien. Ce guide montre les meilleurs outils pour chaque tâche d\'étude et comment les utiliser pour vraiment comprendre la matière, pas seulement rendre une réponse.',
+          es: 'Para los estudiantes que estudian en árabe o francés, la IA elimina una barrera que ha existido durante años: la mayoría del mejor material de aprendizaje en línea está en inglés. Ahora un asistente de IA puede explicar un concepto difícil en árabe simple, traducir un capítulo de un libro en inglés, resumir un PDF largo y hacerte preguntas antes de un examen — todo en tu propio idioma. Bien usadas, estas herramientas no reemplazan el estudio; lo hacen más rápido y menos frustrante. Mal usadas, se convierten en un atajo que no te enseña nada. Esta guía muestra las mejores herramientas para cada tarea de estudio y cómo usarlas para entender de verdad la materia, no solo entregar una respuesta.',
+          ar: 'بالنسبة للطلاب الذين يدرسون بالعربية أو الفرنسية، يزيل الذكاء الاصطناعي حاجزاً قائماً منذ سنوات: فمعظم أفضل المواد التعليمية على الإنترنت بالإنجليزية. الآن يستطيع مساعد ذكي أن يشرح مفهوماً صعباً بعربية بسيطة، ويترجم فصلاً من كتاب إنجليزي، ويلخّص ملف PDF طويلاً، ويختبرك قبل الامتحان — كله بلغتك. وإذا أُحسن استخدامها، فهذه الأدوات لا تحلّ محل الدراسة؛ بل تجعلها أسرع وأقل إحباطاً. وإذا أُسيء استخدامها، صارت اختصاراً لا يعلّمك شيئاً. يعرض هذا الدليل أفضل الأدوات لكل مهمة دراسية وكيفية استخدامها لتفهم المادة فعلاً، لا لتسلّم إجابة فحسب.',
+        },
+      },
+      {
+        heading: {
+          en: 'Research & Understanding Hard Topics',
+          fr: 'Recherche et compréhension des sujets difficiles',
+          es: 'Investigación y comprensión de temas difíciles',
+          ar: 'البحث وفهم المواضيع الصعبة',
+        },
+        body: {
+          en: 'When a topic will not click, ask ChatGPT or Qwen in Arabic to explain it as if to a beginner, then ask for an example, then ask for the part you still do not get. This back-and-forth in your own language is where AI beats a static textbook. For sources you must study, Google NotebookLM is a standout free tool: upload your lecture slides, PDFs or notes in any language and it answers questions, builds summaries and even generates audio overviews grounded only in your documents — so it does not invent facts. Use ChatGPT to understand and NotebookLM to work through your actual course materials. Always verify key facts, since general models can occasionally be confidently wrong.',
+          fr: 'Quand un sujet ne rentre pas, demandez à ChatGPT ou Qwen, en arabe, de l\'expliquer comme à un débutant, puis demandez un exemple, puis la partie que vous ne comprenez toujours pas. Cet aller-retour dans votre langue est là où l\'IA bat un manuel figé. Pour les sources que vous devez étudier, Google NotebookLM est un outil gratuit remarquable : téléversez vos diapositives de cours, PDF ou notes dans n\'importe quelle langue, et il répond aux questions, construit des résumés et génère même des aperçus audio fondés uniquement sur vos documents — il n\'invente donc pas de faits. Utilisez ChatGPT pour comprendre et NotebookLM pour travailler vos vrais supports de cours. Vérifiez toujours les faits clés, car les modèles généraux peuvent parfois se tromper avec assurance.',
+          es: 'Cuando un tema no entra, pide a ChatGPT o Qwen, en árabe, que lo explique como a un principiante, luego pide un ejemplo, luego la parte que aún no entiendes. Este ida y vuelta en tu idioma es donde la IA supera a un libro estático. Para las fuentes que debes estudiar, Google NotebookLM es una herramienta gratuita destacada: sube tus diapositivas, PDF o notas en cualquier idioma y responde preguntas, crea resúmenes e incluso genera resúmenes de audio basados solo en tus documentos — así no inventa datos. Usa ChatGPT para entender y NotebookLM para trabajar tus materiales reales del curso. Verifica siempre los datos clave, ya que los modelos generales a veces se equivocan con seguridad.',
+          ar: 'حين لا يستوعب عقلك موضوعاً، اطلب من ChatGPT أو Qwen بالعربية أن يشرحه كأنك مبتدئ، ثم اطلب مثالاً، ثم الجزء الذي ما زلت لا تفهمه. هذا التبادل بلغتك هو حيث يتفوّق الذكاء الاصطناعي على الكتاب الجامد. وللمصادر التي يجب أن تدرسها، يُعد Google NotebookLM أداة مجانية بارزة: ارفع شرائح محاضراتك أو ملفات PDF أو ملاحظاتك بأي لغة، فيجيب عن الأسئلة، ويبني ملخّصات، بل ويولّد ملخّصات صوتية مبنية على مستنداتك فقط — فلا يختلق حقائق. استخدم ChatGPT للفهم، وNotebookLM للعمل على موادّ مقرّرك الفعلية. وتحقّق دائماً من الحقائق الأساسية، فالنماذج العامة قد تخطئ أحياناً بثقة.',
+        },
+      },
+      {
+        heading: {
+          en: 'Writing Essays & Reports (Without Cheating)',
+          fr: 'Rédiger devoirs et rapports (sans tricher)',
+          es: 'Escribir trabajos e informes (sin hacer trampa)',
+          ar: 'كتابة الأبحاث والتقارير (دون غش)',
+        },
+        body: {
+          en: 'The honest way to use AI for writing is as a coach, not a ghostwriter. Ask ChatGPT or Claude to help you build an outline, brainstorm arguments, and check whether your own draft is clear and well-structured. Write the actual text yourself, then paste it in and ask for feedback on grammar, flow and logic in Arabic or French. For polishing, QuillBot helps rephrase awkward sentences and check grammar. This approach improves your writing skill instead of hiding it — and it keeps you safe, since schools increasingly use AI-detection tools and submitting fully AI-written work is both risky and a wasted learning opportunity. Let AI raise the quality of your work while the thinking stays yours.',
+          fr: 'La façon honnête d\'utiliser l\'IA pour écrire, c\'est comme un coach, pas un nègre littéraire. Demandez à ChatGPT ou Claude de vous aider à bâtir un plan, à trouver des arguments, et à vérifier si votre propre brouillon est clair et bien structuré. Écrivez le texte vous-même, puis collez-le et demandez un retour sur la grammaire, la fluidité et la logique en arabe ou en français. Pour le peaufinage, QuillBot aide à reformuler les phrases maladroites et à vérifier la grammaire. Cette approche améliore votre compétence rédactionnelle au lieu de la masquer — et vous protège, car les écoles utilisent de plus en plus des détecteurs d\'IA, et rendre un travail entièrement écrit par l\'IA est à la fois risqué et une occasion d\'apprentissage gâchée. Laissez l\'IA élever la qualité de votre travail pendant que la réflexion reste la vôtre.',
+          es: 'La forma honesta de usar la IA para escribir es como entrenador, no como escritor fantasma. Pide a ChatGPT o Claude que te ayude a construir un esquema, generar argumentos y comprobar si tu propio borrador es claro y está bien estructurado. Escribe el texto tú mismo, luego pégalo y pide comentarios sobre gramática, fluidez y lógica en árabe o francés. Para pulir, QuillBot ayuda a reformular frases torpes y revisar la gramática. Este enfoque mejora tu habilidad de escritura en lugar de ocultarla — y te mantiene a salvo, ya que las escuelas usan cada vez más detectores de IA, y entregar un trabajo totalmente escrito por IA es arriesgado y una oportunidad de aprendizaje desperdiciada. Deja que la IA eleve la calidad de tu trabajo mientras el pensamiento sigue siendo tuyo.',
+          ar: 'الطريقة الأمينة لاستخدام الذكاء الاصطناعي في الكتابة هي كمدرّب، لا ككاتب شبح. اطلب من ChatGPT أو Claude مساعدتك في بناء مخطّط، وتوليد الحجج، والتحقّق مما إذا كانت مسودّتك واضحة ومنظّمة. اكتب النص بنفسك، ثم الصقه واطلب ملاحظات على القواعد والانسياب والمنطق بالعربية أو الفرنسية. وللتلميع، يساعد QuillBot في إعادة صياغة الجمل الركيكة وفحص القواعد. هذا النهج يحسّن مهارتك الكتابية بدل إخفائها — ويحميك، فالمدارس تستخدم أدوات كشف الذكاء الاصطناعي أكثر فأكثر، وتسليم عمل مكتوب بالكامل بالذكاء الاصطناعي محفوف بالمخاطر وفرصة تعلّم مهدورة. دع الذكاء الاصطناعي يرفع جودة عملك بينما يبقى التفكير لك.',
+        },
+      },
+      {
+        heading: {
+          en: 'Language Learning & Translation',
+          fr: 'Apprentissage des langues et traduction',
+          es: 'Aprendizaje de idiomas y traducción',
+          ar: 'تعلّم اللغات والترجمة',
+        },
+        body: {
+          en: 'AI is a patient, private language tutor. Ask ChatGPT to hold a conversation with you in English or French at your level, correct your mistakes gently, and explain grammar in Arabic. Have it turn any text into a vocabulary list with example sentences, or roleplay a job interview or exam oral. For translating study material, DeepL gives the most natural results and now supports Arabic, while a chat model is better when you also want the text simplified or explained. A strong routine: read an English article, translate the hard parts with DeepL, then ask ChatGPT to quiz you on the new words in Arabic. You learn the subject and the language at the same time, at your own pace and for free.',
+          fr: 'L\'IA est un tuteur de langue patient et privé. Demandez à ChatGPT de tenir une conversation avec vous en anglais ou en français à votre niveau, de corriger vos erreurs en douceur et d\'expliquer la grammaire en arabe. Faites-lui transformer n\'importe quel texte en liste de vocabulaire avec phrases d\'exemple, ou jouer un entretien d\'embauche ou un oral d\'examen. Pour traduire les supports d\'étude, DeepL donne les résultats les plus naturels et prend désormais en charge l\'arabe, tandis qu\'un modèle de chat est meilleur quand vous voulez aussi que le texte soit simplifié ou expliqué. Une bonne routine : lisez un article anglais, traduisez les passages difficiles avec DeepL, puis demandez à ChatGPT de vous interroger sur les nouveaux mots en arabe. Vous apprenez la matière et la langue en même temps, à votre rythme et gratuitement.',
+          es: 'La IA es un tutor de idiomas paciente y privado. Pide a ChatGPT que mantenga una conversación contigo en inglés o francés a tu nivel, que corrija tus errores con suavidad y que explique la gramática en árabe. Haz que convierta cualquier texto en una lista de vocabulario con frases de ejemplo, o que simule una entrevista de trabajo o un oral de examen. Para traducir material de estudio, DeepL da los resultados más naturales y ahora admite árabe, mientras que un modelo de chat es mejor cuando además quieres el texto simplificado o explicado. Una buena rutina: lee un artículo en inglés, traduce las partes difíciles con DeepL, y luego pide a ChatGPT que te examine sobre las palabras nuevas en árabe. Aprendes la materia y el idioma a la vez, a tu ritmo y gratis.',
+          ar: 'الذكاء الاصطناعي معلّم لغة صبور وخصوصي. اطلب من ChatGPT أن يجري معك محادثة بالإنجليزية أو الفرنسية على مستواك، ويصحّح أخطاءك برفق، ويشرح القواعد بالعربية. واطلب منه تحويل أي نص إلى قائمة مفردات بجمل أمثلة، أو تمثيل مقابلة عمل أو امتحان شفوي. ولترجمة المواد الدراسية، يعطي DeepL أكثر النتائج طبيعية وأصبح يدعم العربية الآن، بينما يكون نموذج المحادثة أفضل حين تريد أيضاً تبسيط النص أو شرحه. وروتين قوي: اقرأ مقالاً إنجليزياً، وترجم الأجزاء الصعبة بـ DeepL، ثم اطلب من ChatGPT أن يختبرك في الكلمات الجديدة بالعربية. تتعلّم المادة واللغة في آنٍ واحد، بوتيرتك ومجاناً.',
+        },
+      },
+      {
+        heading: {
+          en: 'Exam Prep & Revision',
+          fr: 'Préparation et révision des examens',
+          es: 'Preparación y repaso de exámenes',
+          ar: 'التحضير للامتحانات والمراجعة',
+        },
+        body: {
+          en: 'AI turns your notes into an active revision system. Paste a chapter and ask ChatGPT to create flashcards, a set of practice questions with answers, and a short quiz that gets harder as you go — all in Arabic. Ask it to explain why each wrong answer is wrong, which is where real learning happens. NotebookLM can generate a study guide and an audio recap from your own documents, useful for revising on the move. Before an exam, have the model simulate the test: give it the format and topics and let it ask you questions, then grade your answers and point out gaps. This active-recall approach, done in your own language, is far more effective than re-reading notes passively.',
+          fr: 'L\'IA transforme vos notes en système de révision actif. Collez un chapitre et demandez à ChatGPT de créer des cartes mémoire, une série de questions d\'entraînement avec réponses, et un quiz qui se durcit au fil de l\'eau — le tout en arabe. Demandez-lui d\'expliquer pourquoi chaque mauvaise réponse est fausse : c\'est là que l\'apprentissage réel se produit. NotebookLM peut générer un guide de révision et un récapitulatif audio à partir de vos propres documents, utile pour réviser en déplacement. Avant un examen, faites simuler l\'épreuve par le modèle : donnez-lui le format et les thèmes et laissez-le vous interroger, puis noter vos réponses et pointer les lacunes. Cette approche de rappel actif, faite dans votre langue, est bien plus efficace que relire ses notes passivement.',
+          es: 'La IA convierte tus apuntes en un sistema de repaso activo. Pega un capítulo y pide a ChatGPT que cree tarjetas de memoria, un conjunto de preguntas de práctica con respuestas y un cuestionario que se vuelve más difícil a medida que avanzas — todo en árabe. Pídele que explique por qué cada respuesta incorrecta está mal, que es donde ocurre el aprendizaje real. NotebookLM puede generar una guía de estudio y un resumen de audio a partir de tus propios documentos, útil para repasar en movimiento. Antes de un examen, haz que el modelo simule la prueba: dale el formato y los temas y deja que te haga preguntas, luego que califique tus respuestas y señale lagunas. Este enfoque de recuerdo activo, hecho en tu idioma, es mucho más eficaz que releer apuntes de forma pasiva.',
+          ar: 'يحوّل الذكاء الاصطناعي ملاحظاتك إلى نظام مراجعة نشط. الصق فصلاً واطلب من ChatGPT إنشاء بطاقات مراجعة، ومجموعة أسئلة تدريبية بإجاباتها، واختباراً يزداد صعوبة تدريجياً — كله بالعربية. واطلب منه شرح سبب خطأ كل إجابة خاطئة، فهنا يحدث التعلّم الحقيقي. ويستطيع NotebookLM توليد دليل مذاكرة وملخّص صوتي من مستنداتك، وهو مفيد للمراجعة أثناء التنقّل. وقبل الامتحان، اجعل النموذج يحاكي الاختبار: أعطه الصيغة والمواضيع ودعه يطرح عليك أسئلة، ثم يصحّح إجاباتك ويشير إلى الثغرات. أسلوب الاستدعاء النشط هذا، بلغتك، أفعل بكثير من إعادة قراءة الملاحظات بشكل سلبي.',
+        },
+      },
+      {
+        heading: {
+          en: 'Using AI Ethically + Your Tool Stack',
+          fr: 'Utiliser l\'IA de façon éthique + votre stack d\'outils',
+          es: 'Usar la IA con ética + tu stack de herramientas',
+          ar: 'استخدام الذكاء الاصطناعي بأخلاقية + مكدّس أدواتك',
+        },
+        body: {
+          en: 'The rule that keeps you safe and actually learning: use AI to understand, practice and check — never to submit work you did not do. Always follow your school\'s policy, cite sources, and verify facts against real references. A simple free stack covers a student\'s whole workflow: ChatGPT or Qwen for explanations and practice, NotebookLM for your course documents, DeepL for translation, and QuillBot for polishing writing. Add Claude when you tackle long, complex material. Start everything on free plans and only upgrade if you hit real limits. Used this way, AI becomes the tutor most students never had — available any time, in Arabic and French, and patient enough to explain something ten different ways.',
+          fr: 'La règle qui vous garde en sécurité et en réel apprentissage : utilisez l\'IA pour comprendre, vous entraîner et vérifier — jamais pour rendre un travail que vous n\'avez pas fait. Respectez toujours le règlement de votre établissement, citez vos sources et vérifiez les faits avec de vraies références. Une simple stack gratuite couvre tout le flux d\'un étudiant : ChatGPT ou Qwen pour les explications et l\'entraînement, NotebookLM pour vos documents de cours, DeepL pour la traduction et QuillBot pour peaufiner la rédaction. Ajoutez Claude pour la matière longue et complexe. Commencez tout en offres gratuites et ne passez au payant que si vous atteignez de vraies limites. Ainsi utilisée, l\'IA devient le tuteur que la plupart des étudiants n\'ont jamais eu — disponible à tout moment, en arabe et en français, et assez patient pour expliquer une chose de dix façons.',
+          es: 'La regla que te mantiene a salvo y aprendiendo de verdad: usa la IA para entender, practicar y comprobar — nunca para entregar un trabajo que no hiciste. Sigue siempre la política de tu escuela, cita las fuentes y verifica los datos con referencias reales. Un simple stack gratuito cubre todo el flujo de un estudiante: ChatGPT o Qwen para explicaciones y práctica, NotebookLM para tus documentos del curso, DeepL para traducir y QuillBot para pulir la escritura. Añade Claude cuando abordes material largo y complejo. Empieza todo en planes gratuitos y mejora solo si alcanzas límites reales. Usada así, la IA se convierte en el tutor que la mayoría de estudiantes nunca tuvo — disponible a cualquier hora, en árabe y francés, y lo bastante paciente para explicar algo de diez maneras distintas.',
+          ar: 'القاعدة التي تبقيك آمناً ومتعلّماً فعلاً: استخدم الذكاء الاصطناعي للفهم والتدرّب والتحقّق — لا لتسليم عمل لم تنجزه. التزم دائماً بسياسة مؤسّستك، واذكر المصادر، وتحقّق من الحقائق بمراجع حقيقية. ومكدّس مجاني بسيط يغطّي سير عمل الطالب كاملاً: ChatGPT أو Qwen للشرح والتدرّب، وNotebookLM لمستندات مقرّرك، وDeepL للترجمة، وQuillBot لتلميع الكتابة. أضف Claude حين تتناول مادة طويلة ومعقّدة. ابدأ كل شيء بالخطط المجانية ولا ترقِّ إلا إذا بلغت حدوداً حقيقية. وبهذا الاستخدام، يصبح الذكاء الاصطناعي المعلّم الذي لم يحظَ به معظم الطلاب — متاح في أي وقت، بالعربية والفرنسية، وصبور بما يكفي ليشرح الشيء بعشر طرق مختلفة.',
+        },
+      },
+    ],
+    relatedTools: ['chatgpt', 'notebooklm', 'claude', 'qwen', 'deepl', 'quillbot'],
+    relatedComparisons: ['chatgpt-vs-claude', 'grammarly-ai-vs-quillbot'],
+    faq: [
+      {
+        question: {
+          en: 'What is the best free AI tool for students in Arabic?',
+          fr: 'Quel est le meilleur outil IA gratuit pour les étudiants en arabe ?',
+          es: '¿Cuál es la mejor herramienta IA gratuita para estudiantes en árabe?',
+          ar: 'ما أفضل أداة ذكاء اصطناعي مجانية للطلاب بالعربية؟',
+        },
+        answer: {
+          en: 'For most students, ChatGPT (or Qwen for stronger Arabic) plus Google NotebookLM covers nearly everything: explanations, summaries and quizzes from ChatGPT, and grounded answers from your own documents in NotebookLM. Both have capable free plans, and DeepL is the best free add-on for translating study material.',
+          fr: 'Pour la plupart des étudiants, ChatGPT (ou Qwen pour un arabe plus fort) plus Google NotebookLM couvre presque tout : explications, résumés et quiz avec ChatGPT, et réponses fondées sur vos propres documents avec NotebookLM. Les deux ont des offres gratuites performantes, et DeepL est le meilleur complément gratuit pour traduire les supports d\'étude.',
+          es: 'Para la mayoría de estudiantes, ChatGPT (o Qwen para un árabe más fuerte) más Google NotebookLM cubre casi todo: explicaciones, resúmenes y cuestionarios con ChatGPT, y respuestas basadas en tus propios documentos con NotebookLM. Ambos tienen planes gratuitos capaces, y DeepL es el mejor complemento gratuito para traducir material de estudio.',
+          ar: 'لمعظم الطلاب، يغطّي ChatGPT (أو Qwen لعربية أقوى) مع Google NotebookLM كل شيء تقريباً: الشرح والتلخيص والاختبارات من ChatGPT، وإجابات مبنية على مستنداتك من NotebookLM. وكلاهما بخطط مجانية قوية، وDeepL أفضل إضافة مجانية لترجمة المواد الدراسية.',
+        },
+      },
+      {
+        question: {
+          en: 'Is it cheating to use AI for homework?',
+          fr: 'Est-ce tricher d\'utiliser l\'IA pour les devoirs ?',
+          es: '¿Es hacer trampa usar la IA para las tareas?',
+          ar: 'هل يُعدّ استخدام الذكاء الاصطناعي في الواجبات غشاً؟',
+        },
+        answer: {
+          en: 'It depends how you use it. Using AI to explain concepts, check your grammar, or quiz yourself is a legitimate study aid. Submitting AI-written work as your own is cheating and usually breaks school policy — and AI-detection tools are increasingly common. Always follow your institution\'s rules and do the actual thinking yourself.',
+          fr: 'Cela dépend de l\'usage. Utiliser l\'IA pour expliquer des concepts, vérifier votre grammaire ou vous interroger est une aide à l\'étude légitime. Rendre un travail écrit par l\'IA comme le vôtre est de la triche et enfreint généralement le règlement — et les détecteurs d\'IA sont de plus en plus courants. Respectez toujours les règles de votre établissement et faites vous-même la réflexion.',
+          es: 'Depende de cómo la uses. Usar la IA para explicar conceptos, revisar tu gramática o examinarte es una ayuda de estudio legítima. Entregar un trabajo escrito por IA como propio es hacer trampa y suele infringir la política escolar — y los detectores de IA son cada vez más comunes. Sigue siempre las reglas de tu institución y haz tú mismo el pensamiento.',
+          ar: 'يعتمد على كيفية استخدامك. استخدام الذكاء الاصطناعي لشرح المفاهيم أو فحص قواعدك أو اختبار نفسك هو مساعدة دراسية مشروعة. أما تسليم عمل كتبه الذكاء الاصطناعي على أنه عملك فهو غش وغالباً يخالف سياسة المدرسة — وأدوات كشف الذكاء الاصطناعي تزداد شيوعاً. التزم دائماً بقواعد مؤسّستك وقم بالتفكير بنفسك.',
+        },
+      },
+      {
+        question: {
+          en: 'Can AI help me revise and prepare for exams?',
+          fr: 'L\'IA peut-elle m\'aider à réviser et préparer les examens ?',
+          es: '¿Puede la IA ayudarme a repasar y preparar exámenes?',
+          ar: 'هل يساعدني الذكاء الاصطناعي في المراجعة والتحضير للامتحانات؟',
+        },
+        answer: {
+          en: 'Yes. Paste your notes and ask ChatGPT to make flashcards, practice questions and a progressively harder quiz in Arabic, and to explain why wrong answers are wrong. NotebookLM can build a study guide and audio recap from your own documents. This active-recall method is far more effective than passively re-reading notes.',
+          fr: 'Oui. Collez vos notes et demandez à ChatGPT de créer des cartes mémoire, des questions d\'entraînement et un quiz progressivement plus difficile en arabe, et d\'expliquer pourquoi les mauvaises réponses sont fausses. NotebookLM peut bâtir un guide de révision et un récapitulatif audio à partir de vos documents. Cette méthode de rappel actif est bien plus efficace que relire passivement.',
+          es: 'Sí. Pega tus apuntes y pide a ChatGPT que haga tarjetas, preguntas de práctica y un cuestionario progresivamente más difícil en árabe, y que explique por qué las respuestas incorrectas están mal. NotebookLM puede crear una guía de estudio y un resumen de audio a partir de tus documentos. Este método de recuerdo activo es mucho más eficaz que releer pasivamente.',
+          ar: 'نعم. الصق ملاحظاتك واطلب من ChatGPT إنشاء بطاقات مراجعة وأسئلة تدريبية واختبار يزداد صعوبة تدريجياً بالعربية، وشرح سبب خطأ الإجابات الخاطئة. ويستطيع NotebookLM بناء دليل مذاكرة وملخّص صوتي من مستنداتك. وأسلوب الاستدعاء النشط هذا أفعل بكثير من إعادة القراءة السلبية.',
+        },
+      },
+    ],
+  },
 ];
 
 export function getAllBlogPosts(): BlogPost[] {
