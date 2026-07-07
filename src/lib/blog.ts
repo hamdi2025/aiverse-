@@ -5182,6 +5182,157 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'ai-social-media-marketing-arabic-2026',
+    category: 'socialmedia',
+    emoji: '📱',
+    publishedDate: '2026-07-07',
+    readTime: 11,
+    title: {
+      en: 'AI for Social Media & Digital Marketing in Arabic (2026)',
+      fr: 'L\'IA pour les Réseaux Sociaux et le Marketing Digital en Arabe (2026)',
+      es: 'IA para Redes Sociales y Marketing Digital en Árabe (2026)',
+      ar: 'الذكاء الاصطناعي لوسائل التواصل والتسويق الرقمي بالعربية (2026)',
+    },
+    excerpt: {
+      en: 'How to run Arabic and French social media and digital marketing with AI in 2026 — content strategy, captions and hooks, scroll-stopping visuals and reels, ads and growth, analytics and a repeatable posting system — using the tools that truly work in Arabic.',
+      fr: 'Comment gérer les réseaux sociaux et le marketing digital en arabe et en français avec l\'IA en 2026 — stratégie de contenu, légendes et accroches, visuels et reels qui arrêtent le scroll, publicités et croissance, analytics et système de publication reproductible — avec les outils qui fonctionnent vraiment en arabe.',
+      es: 'Cómo gestionar las redes sociales y el marketing digital en árabe y francés con IA en 2026 — estrategia de contenido, textos y ganchos, visuales y reels que detienen el scroll, anuncios y crecimiento, analíticas y un sistema de publicación repetible — con las herramientas que realmente funcionan en árabe.',
+      ar: 'كيف تدير وسائل التواصل والتسويق الرقمي بالعربية والفرنسية بالذكاء الاصطناعي في 2026 — استراتيجية المحتوى، والعناوين والمطالع، والصور والريلز التي توقف التمرير، والإعلانات والنمو، والتحليلات، ونظام نشر قابل للتكرار — بالأدوات التي تعمل فعلاً بالعربية.',
+    },
+    sections: [
+      {
+        heading: {
+          en: 'The Arabic Social Media Opportunity',
+          fr: 'L\'opportunité des réseaux sociaux arabophones',
+          es: 'La oportunidad de las redes sociales en árabe',
+          ar: 'فرصة وسائل التواصل بالعربية',
+        },
+        body: {
+          en: 'The Arabic-speaking world is one of the most active social media regions on earth, yet high-quality, consistent Arabic content is still relatively scarce compared to demand. That gap is an opportunity for brands and creators who show up regularly and professionally. The obstacle has always been production time — writing, designing and scheduling enough content is a full-time job. AI removes that ceiling: a single person can now plan a month of posts, write captions in Arabic and French, generate visuals and analyze what works, in a fraction of the time. This guide walks through a complete AI-powered social workflow tuned for Arabic and French audiences, using the tools that genuinely handle both languages.',
+          fr: 'Le monde arabophone est l\'une des régions les plus actives sur les réseaux sociaux, pourtant un contenu arabe de qualité et régulier reste relativement rare face à la demande. Cet écart est une opportunité pour les marques et créateurs présents régulièrement et professionnellement. L\'obstacle a toujours été le temps de production — écrire, concevoir et programmer assez de contenu est un travail à plein temps. L\'IA supprime ce plafond : une seule personne peut désormais planifier un mois de posts, écrire des légendes en arabe et en français, générer des visuels et analyser ce qui marche, en une fraction du temps. Ce guide déroule un workflow social complet propulsé par l\'IA, réglé pour les publics arabophones et francophones, avec les outils qui gèrent vraiment les deux langues.',
+          es: 'El mundo de habla árabe es una de las regiones más activas en redes sociales, pero el contenido árabe de calidad y constante sigue siendo relativamente escaso frente a la demanda. Esa brecha es una oportunidad para marcas y creadores que aparecen con regularidad y profesionalidad. El obstáculo siempre ha sido el tiempo de producción — escribir, diseñar y programar suficiente contenido es un trabajo a tiempo completo. La IA elimina ese techo: una sola persona ahora puede planificar un mes de publicaciones, escribir textos en árabe y francés, generar visuales y analizar qué funciona, en una fracción del tiempo. Esta guía recorre un flujo social completo impulsado por IA, afinado para públicos árabes y franceses, con las herramientas que realmente manejan ambos idiomas.',
+          ar: 'العالم الناطق بالعربية من أكثر مناطق العالم نشاطاً على وسائل التواصل، ومع ذلك يبقى المحتوى العربي الجيد والمنتظم نادراً نسبياً مقارنة بالطلب. وهذه الفجوة فرصة للعلامات والصنّاع الذين يظهرون بانتظام واحترافية. وكان العائق دائماً وقت الإنتاج — فالكتابة والتصميم وجدولة محتوى كافٍ عمل بدوام كامل. والذكاء الاصطناعي يزيل هذا السقف: صار بإمكان شخص واحد أن يخطّط لشهر من المنشورات، ويكتب التعليقات بالعربية والفرنسية، ويولّد الصور، ويحلّل ما ينجح، في جزء يسير من الوقت. يستعرض هذا الدليل سير عمل اجتماعياً كاملاً مدعوماً بالذكاء الاصطناعي، مضبوطاً للجماهير العربية والفرنسية، بالأدوات التي تتعامل فعلاً مع اللغتين.',
+        },
+      },
+      {
+        heading: {
+          en: 'Content Strategy & Calendar',
+          fr: 'Stratégie de contenu et calendrier',
+          es: 'Estrategia de contenido y calendario',
+          ar: 'استراتيجية المحتوى والتقويم',
+        },
+        body: {
+          en: 'Start with strategy, not random posts. Ask ChatGPT, in Arabic, to define your audience, your content pillars (a few recurring themes), and the goal of each pillar — awareness, trust, or sales. Then have it build a monthly calendar: for each day, a topic, a format and a hook. For trend-driven content, Google Gemini can surface what is current in your niche because it is connected to live search. A strong prompt gives the model your business, audience and platform, and asks for 30 post ideas grouped by pillar with suggested formats. In under an hour you move from a blank page to a structured month, which is the single biggest reason creators fall behind — decision fatigue disappears when the plan already exists.',
+          fr: 'Commencez par la stratégie, pas des posts au hasard. Demandez à ChatGPT, en arabe, de définir votre audience, vos piliers de contenu (quelques thèmes récurrents) et l\'objectif de chaque pilier — notoriété, confiance ou vente. Puis faites-lui bâtir un calendrier mensuel : pour chaque jour, un sujet, un format et une accroche. Pour le contenu de tendance, Google Gemini peut faire remonter ce qui est actuel dans votre niche car connecté à la recherche en direct. Un bon prompt donne au modèle votre activité, votre public et votre plateforme, et demande 30 idées de posts groupées par pilier avec formats suggérés. En moins d\'une heure, vous passez de la page blanche à un mois structuré, ce qui est la principale raison pour laquelle les créateurs prennent du retard — la fatigue décisionnelle disparaît quand le plan existe déjà.',
+          es: 'Empieza con estrategia, no con publicaciones al azar. Pide a ChatGPT, en árabe, que defina tu público, tus pilares de contenido (unos pocos temas recurrentes) y el objetivo de cada pilar — reconocimiento, confianza o ventas. Luego que construya un calendario mensual: para cada día, un tema, un formato y un gancho. Para contenido de tendencia, Google Gemini puede sacar lo actual en tu nicho porque está conectado a la búsqueda en vivo. Un buen prompt da al modelo tu negocio, público y plataforma, y pide 30 ideas de publicaciones agrupadas por pilar con formatos sugeridos. En menos de una hora pasas de la página en blanco a un mes estructurado, que es la mayor razón por la que los creadores se retrasan — la fatiga de decisión desaparece cuando el plan ya existe.',
+          ar: 'ابدأ بالاستراتيجية لا بمنشورات عشوائية. اطلب من ChatGPT بالعربية تحديد جمهورك، وركائز محتواك (بضعة محاور متكرّرة)، وهدف كل ركيزة — وعي، أو ثقة، أو بيع. ثم اطلب منه بناء تقويم شهري: لكل يوم موضوع وصيغة ومطلع. وللمحتوى المرتبط بالرائج، يستطيع Google Gemini إبراز ما هو آنيّ في مجالك لأنه متصل بالبحث المباشر. والأمر الجيد يعطي النموذج عملك وجمهورك ومنصّتك، ويطلب 30 فكرة منشور مجمّعة حسب الركيزة مع صيغ مقترحة. في أقل من ساعة تنتقل من صفحة بيضاء إلى شهر منظّم، وهذا أكبر سبب لتأخّر الصنّاع — فإرهاق القرار يتلاشى حين تكون الخطة موجودة أصلاً.',
+        },
+      },
+      {
+        heading: {
+          en: 'Captions, Hooks & Hashtags',
+          fr: 'Légendes, accroches et hashtags',
+          es: 'Textos, ganchos y hashtags',
+          ar: 'التعليقات والمطالع والوسوم',
+        },
+        body: {
+          en: 'The first line decides whether people stop scrolling, so spend your prompts there. Ask ChatGPT in Arabic for ten hook variations for a post, then pick and refine. For captions, specify platform, length, tone and a call to action; a caption for a professional LinkedIn audience reads very differently from a punchy Instagram one. Have the model adapt the same idea for each platform rather than posting identical text everywhere. For hashtags, ask for a mix of broad and niche tags relevant to your Arabic or French audience. Always add your own voice and a real detail the model cannot know — the winning formula is AI for structure and speed, you for authenticity and the specific insight that makes people trust you.',
+          fr: 'La première ligne décide si les gens arrêtent de scroller : concentrez donc vos prompts là-dessus. Demandez à ChatGPT en arabe dix variantes d\'accroche pour un post, puis choisissez et affinez. Pour les légendes, précisez plateforme, longueur, ton et appel à l\'action ; une légende pour un public LinkedIn professionnel se lit très différemment d\'une légende Instagram percutante. Faites adapter la même idée par le modèle pour chaque plateforme plutôt que de publier un texte identique partout. Pour les hashtags, demandez un mélange de tags larges et de niche pertinents pour votre public arabe ou français. Ajoutez toujours votre voix et un détail réel que le modèle ne peut pas connaître — la formule gagnante, c\'est l\'IA pour la structure et la vitesse, vous pour l\'authenticité et l\'insight spécifique qui inspire confiance.',
+          es: 'La primera línea decide si la gente deja de hacer scroll, así que enfoca ahí tus prompts. Pide a ChatGPT en árabe diez variantes de gancho para una publicación, luego elige y refina. Para los textos, especifica plataforma, longitud, tono y llamada a la acción; un texto para un público profesional de LinkedIn se lee muy distinto a uno contundente de Instagram. Haz que el modelo adapte la misma idea para cada plataforma en lugar de publicar texto idéntico en todas partes. Para los hashtags, pide una mezcla de etiquetas amplias y de nicho relevantes para tu público árabe o francés. Añade siempre tu voz y un detalle real que el modelo no puede saber — la fórmula ganadora es IA para estructura y velocidad, tú para autenticidad y el conocimiento específico que genera confianza.',
+          ar: 'السطر الأول يقرّر ما إذا كان الناس سيتوقّفون عن التمرير، فركّز أوامرك هناك. اطلب من ChatGPT بالعربية عشر صيغ مطلع لمنشور، ثم اختر ونقّح. وللتعليقات، حدّد المنصّة والطول والنبرة ودعوة لاتّخاذ إجراء؛ فتعليق لجمهور لينكدإن المهني يُقرأ مختلفاً تماماً عن تعليق إنستغرام المؤثّر. واجعل النموذج يكيّف الفكرة نفسها لكل منصّة بدل نشر نص واحد في كل مكان. وللوسوم، اطلب مزيجاً من وسوم عامة ومتخصّصة تناسب جمهورك العربي أو الفرنسي. وأضف دائماً صوتك وتفصيلاً حقيقياً لا يعرفه النموذج — فالوصفة الرابحة هي الذكاء الاصطناعي للبنية والسرعة، وأنت للأصالة والرؤية المحدّدة التي تبني الثقة.',
+        },
+      },
+      {
+        heading: {
+          en: 'Scroll-Stopping Visuals & Reels',
+          fr: 'Visuels et reels qui arrêtent le scroll',
+          es: 'Visuales y reels que detienen el scroll',
+          ar: 'صور وريلز توقف التمرير',
+        },
+        body: {
+          en: 'Visuals carry social media, and the Arabic-text rule applies: generate imagery with Midjourney or DALL-E using English prompts and no text, then add your Arabic or French headline in Canva, which handles right-to-left layout and has templates for every format. Canva is your hub for carousels, quote cards, thumbnails and story graphics. For short video, write the script with ChatGPT, generate an Arabic voiceover with ElevenLabs, and assemble the reel with captions; add a royalty-free music bed from Suno. Keep a consistent template, font and color palette so every post is instantly recognizable as yours. Brand consistency, not just volume, is what turns scattered posts into a following.',
+          fr: 'Les visuels portent les réseaux sociaux, et la règle du texte arabe s\'applique : générez l\'image avec Midjourney ou DALL-E via des prompts en anglais et sans texte, puis ajoutez votre titre arabe ou français dans Canva, qui gère la mise en page de droite à gauche et propose des modèles pour chaque format. Canva est votre hub pour carrousels, cartes de citation, miniatures et visuels de story. Pour la vidéo courte, écrivez le script avec ChatGPT, générez une voix off arabe avec ElevenLabs et montez le reel avec sous-titres ; ajoutez un fond musical libre de droits depuis Suno. Gardez un modèle, une police et une palette cohérents pour que chaque post soit immédiatement reconnaissable. La cohérence de marque, pas seulement le volume, transforme des posts épars en une communauté.',
+          es: 'Los visuales sostienen las redes sociales, y aplica la regla del texto árabe: genera la imagen con Midjourney o DALL-E usando prompts en inglés y sin texto, luego añade tu titular árabe o francés en Canva, que maneja el diseño de derecha a izquierda y tiene plantillas para cada formato. Canva es tu centro para carruseles, tarjetas de cita, miniaturas y gráficos de historia. Para vídeo corto, escribe el guion con ChatGPT, genera una voz árabe con ElevenLabs y monta el reel con subtítulos; añade un fondo musical libre de derechos de Suno. Mantén una plantilla, fuente y paleta coherentes para que cada publicación sea reconocible al instante como tuya. La coherencia de marca, no solo el volumen, convierte publicaciones dispersas en una audiencia.',
+          ar: 'الصور تحمل وسائل التواصل، وتنطبق قاعدة النص العربي: ولّد الصورة بـ Midjourney أو DALL-E بأوامر إنجليزية وبدون نص، ثم أضف عنوانك العربي أو الفرنسي في Canva الذي يتعامل مع التنسيق من اليمين إلى اليسار ولديه قوالب لكل صيغة. وCanva مركزك للكاروسيل وبطاقات الاقتباس والصور المصغّرة ورسوم القصص. وللفيديو القصير، اكتب النص بـ ChatGPT، وولّد تعليقاً صوتياً عربياً بـ ElevenLabs، وركّب الريل مع ترجمات؛ وأضف خلفية موسيقية خالية من الحقوق من Suno. حافظ على قالب وخط ولوحة ألوان ثابتة ليكون كل منشور معروفاً فوراً بأنه لك. فثبات العلامة، لا الكمية وحدها، هو ما يحوّل المنشورات المتناثرة إلى جمهور.',
+        },
+      },
+      {
+        heading: {
+          en: 'Ads, Copy & Growth',
+          fr: 'Publicités, copy et croissance',
+          es: 'Anuncios, copy y crecimiento',
+          ar: 'الإعلانات والنصوص والنمو',
+        },
+        body: {
+          en: 'When you move to paid promotion, AI speeds up the part most people get wrong: testing. Ask ChatGPT to write several ad-copy variations in Arabic and French for the same offer, each with a different angle — pain point, benefit, social proof, urgency. Generate matching visuals in Canva and run small tests to see which resonates before scaling budget. Have the model draft audience descriptions and hooks for each segment, and write landing-page copy that matches the ad so the message stays consistent. The discipline that wins is simple: test many cheap variations, keep the winners, and let AI make producing those variations fast enough that you actually do it. Always check claims and cultural fit before publishing an ad to an Arabic audience.',
+          fr: 'Quand vous passez à la promotion payante, l\'IA accélère la partie que la plupart ratent : le test. Demandez à ChatGPT plusieurs variantes de copy publicitaire en arabe et en français pour la même offre, chacune avec un angle différent — point de douleur, bénéfice, preuve sociale, urgence. Générez des visuels assortis dans Canva et lancez de petits tests pour voir ce qui résonne avant d\'augmenter le budget. Faites rédiger par le modèle des descriptions d\'audience et des accroches pour chaque segment, et un copy de landing page cohérent avec l\'annonce. La discipline gagnante est simple : testez beaucoup de variantes peu coûteuses, gardez les gagnantes, et laissez l\'IA rendre leur production assez rapide pour que vous le fassiez vraiment. Vérifiez toujours les affirmations et l\'adéquation culturelle avant de publier une pub pour un public arabe.',
+          es: 'Cuando pasas a la promoción de pago, la IA acelera la parte que la mayoría hace mal: probar. Pide a ChatGPT varias variantes de copy publicitario en árabe y francés para la misma oferta, cada una con un ángulo distinto — punto de dolor, beneficio, prueba social, urgencia. Genera visuales a juego en Canva y haz pequeñas pruebas para ver qué resuena antes de escalar el presupuesto. Haz que el modelo redacte descripciones de público y ganchos para cada segmento, y un copy de landing coherente con el anuncio. La disciplina que gana es simple: prueba muchas variantes baratas, quédate con las ganadoras, y deja que la IA haga su producción lo bastante rápida como para que de verdad lo hagas. Verifica siempre las afirmaciones y el encaje cultural antes de publicar un anuncio para un público árabe.',
+          ar: 'حين تنتقل إلى الترويج المدفوع، يسرّع الذكاء الاصطناعي الجزء الذي يخطئ فيه معظم الناس: الاختبار. اطلب من ChatGPT عدة صيغ نص إعلاني بالعربية والفرنسية للعرض نفسه، كل واحدة بزاوية مختلفة — نقطة ألم، فائدة، دليل اجتماعي، إلحاح. وولّد صوراً مطابقة في Canva وأجرِ اختبارات صغيرة لترى ما يلامس الجمهور قبل رفع الميزانية. واجعل النموذج يكتب أوصاف الجمهور والمطالع لكل شريحة، ونص صفحة هبوط متّسق مع الإعلان. والانضباط الرابح بسيط: اختبر كثيراً من الصيغ الرخيصة، واحتفظ بالفائزة، ودع الذكاء الاصطناعي يجعل إنتاجها سريعاً بما يكفي لتفعله فعلاً. وتحقّق دائماً من الادّعاءات والملاءمة الثقافية قبل نشر إعلان لجمهور عربي.',
+        },
+      },
+      {
+        heading: {
+          en: 'Analytics, Scheduling & Your System',
+          fr: 'Analytics, planification et votre système',
+          es: 'Analíticas, programación y tu sistema',
+          ar: 'التحليلات والجدولة ونظامك',
+        },
+        body: {
+          en: 'Close the loop with data. Paste your post performance into ChatGPT and ask it to spot patterns — which formats, topics and posting times get the most engagement — then feed those lessons back into next month\'s calendar. Turn everything into a weekly system: batch content creation in one or two focused sessions, schedule posts ahead so publishing is automatic, and hold a short weekly review where AI summarizes results and drafts adjustments. Keep a reusable prompt library for hooks, captions and ad copy so you never start cold. The compounding win is consistency: AI makes it realistic for one person to post professionally in Arabic and French every day, and steady presence is exactly what builds an audience and a brand. Compare the tools for each step in the AIverse directory.',
+          fr: 'Bouclez la boucle avec les données. Collez les performances de vos posts dans ChatGPT et demandez-lui de repérer les tendances — quels formats, sujets et horaires génèrent le plus d\'engagement — puis réinjectez ces leçons dans le calendrier du mois suivant. Transformez le tout en système hebdomadaire : créez le contenu par lots en une ou deux sessions concentrées, programmez les posts à l\'avance pour une publication automatique, et tenez une courte revue hebdomadaire où l\'IA résume les résultats et propose des ajustements. Gardez une bibliothèque de prompts réutilisables pour accroches, légendes et copy publicitaire afin de ne jamais partir de zéro. Le gain cumulé, c\'est la régularité : l\'IA rend réaliste pour une personne de publier professionnellement en arabe et en français chaque jour, et la présence constante est exactement ce qui construit une audience et une marque. Comparez les outils de chaque étape dans l\'annuaire AIverse.',
+          es: 'Cierra el ciclo con datos. Pega el rendimiento de tus publicaciones en ChatGPT y pídele que detecte patrones — qué formatos, temas y horarios logran más interacción — y luego reintroduce esas lecciones en el calendario del mes siguiente. Convierte todo en un sistema semanal: crea contenido por lotes en una o dos sesiones enfocadas, programa las publicaciones con antelación para que se publiquen solas, y haz una breve revisión semanal donde la IA resume resultados y redacta ajustes. Mantén una biblioteca de prompts reutilizables para ganchos, textos y copy de anuncios para no empezar nunca en frío. La ganancia acumulada es la constancia: la IA hace realista que una persona publique profesionalmente en árabe y francés cada día, y la presencia constante es justo lo que construye una audiencia y una marca. Compara las herramientas de cada paso en el directorio de AIverse.',
+          ar: 'أغلق الدائرة بالبيانات. الصق أداء منشوراتك في ChatGPT واطلب منه رصد الأنماط — أي الصيغ والمواضيع وأوقات النشر تحقّق أكبر تفاعل — ثم أعد تغذية هذه الدروس في تقويم الشهر التالي. حوّل كل ذلك إلى نظام أسبوعي: أنشئ المحتوى على دفعات في جلسة أو جلستين مركّزتين، وجدول المنشورات مسبقاً ليكون النشر تلقائياً، واعقد مراجعة أسبوعية قصيرة يلخّص فيها الذكاء الاصطناعي النتائج ويقترح التعديلات. واحتفظ بمكتبة أوامر قابلة لإعادة الاستخدام للمطالع والتعليقات والنصوص الإعلانية حتى لا تبدأ من الصفر أبداً. والمكسب المتراكم هو الانتظام: الذكاء الاصطناعي يجعل من الواقعي لشخص واحد أن ينشر باحترافية بالعربية والفرنسية كل يوم، والحضور الثابت هو تحديداً ما يبني الجمهور والعلامة. قارن أدوات كل خطوة في دليل AIverse.',
+        },
+      },
+    ],
+    relatedTools: ['chatgpt', 'canva-ai', 'midjourney', 'elevenlabs', 'suno', 'gemini'],
+    relatedComparisons: ['midjourney-vs-dalle3', 'elevenlabs-vs-murf-ai'],
+    faq: [
+      {
+        question: {
+          en: 'What is the best AI tool for Arabic social media content?',
+          fr: 'Quel est le meilleur outil IA pour le contenu réseaux sociaux en arabe ?',
+          es: '¿Cuál es la mejor herramienta IA para contenido de redes sociales en árabe?',
+          ar: 'ما أفضل أداة ذكاء اصطناعي لمحتوى وسائل التواصل بالعربية؟',
+        },
+        answer: {
+          en: 'Combine a few: ChatGPT (or Qwen for stronger Arabic) for captions, hooks and strategy, Canva for visuals with proper Arabic text, Midjourney or DALL-E for imagery, and ElevenLabs plus Suno for reels. Most have free tiers, so you can run a full Arabic social workflow at low cost.',
+          fr: 'Combinez-en plusieurs : ChatGPT (ou Qwen pour un arabe plus fort) pour légendes, accroches et stratégie, Canva pour les visuels avec un vrai texte arabe, Midjourney ou DALL-E pour l\'image, et ElevenLabs plus Suno pour les reels. La plupart ont des offres gratuites : vous pouvez donc gérer un workflow social arabe complet à faible coût.',
+          es: 'Combina varias: ChatGPT (o Qwen para un árabe más fuerte) para textos, ganchos y estrategia, Canva para visuales con texto árabe adecuado, Midjourney o DALL-E para imágenes, y ElevenLabs más Suno para reels. La mayoría tiene planes gratuitos, así que puedes gestionar un flujo social árabe completo a bajo costo.',
+          ar: 'اجمع بين عدة: ChatGPT (أو Qwen لعربية أقوى) للتعليقات والمطالع والاستراتيجية، وCanva للصور بنص عربي سليم، وMidjourney أو DALL-E للصور، وElevenLabs مع Suno للريلز. ومعظمها بخطط مجانية، فيمكنك إدارة سير عمل اجتماعي عربي كامل بتكلفة منخفضة.',
+        },
+      },
+      {
+        question: {
+          en: 'Can AI write social media captions in Arabic?',
+          fr: 'L\'IA peut-elle écrire des légendes réseaux sociaux en arabe ?',
+          es: '¿Puede la IA escribir textos de redes sociales en árabe?',
+          ar: 'هل يستطيع الذكاء الاصطناعي كتابة تعليقات وسائل التواصل بالعربية؟',
+        },
+        answer: {
+          en: 'Yes. ChatGPT and Claude write strong Modern Standard Arabic captions and hooks; prompt in Arabic, specify the platform and tone, and ask for several hook variations. Always add your own voice and a real detail, and re-read for dialect and gender agreement before posting.',
+          fr: 'Oui. ChatGPT et Claude écrivent de solides légendes et accroches en arabe standard moderne ; formulez en arabe, précisez la plateforme et le ton, et demandez plusieurs variantes d\'accroche. Ajoutez toujours votre voix et un détail réel, et relisez pour le dialecte et l\'accord de genre avant de publier.',
+          es: 'Sí. ChatGPT y Claude escriben buenos textos y ganchos en árabe estándar moderno; formula en árabe, especifica la plataforma y el tono, y pide varias variantes de gancho. Añade siempre tu voz y un detalle real, y relee por el dialecto y la concordancia de género antes de publicar.',
+          ar: 'نعم. يكتب ChatGPT وClaude تعليقات ومطالع قوية بالفصحى الحديثة؛ صُغ الطلب بالعربية، وحدّد المنصّة والنبرة، واطلب عدة صيغ مطلع. وأضف دائماً صوتك وتفصيلاً حقيقياً، وأعد القراءة للتحقّق من اللهجة ومطابقة الجنس قبل النشر.',
+        },
+      },
+      {
+        question: {
+          en: 'How do I create social media visuals with Arabic text?',
+          fr: 'Comment créer des visuels réseaux sociaux avec du texte arabe ?',
+          es: '¿Cómo creo visuales de redes sociales con texto árabe?',
+          ar: 'كيف أنشئ صور وسائل تواصل بنص عربي؟',
+        },
+        answer: {
+          en: 'Because AI image generators distort Arabic script, generate the image with an English prompt and no text, then add your Arabic headline in Canva, which supports right-to-left layout and Arabic fonts and has templates for every platform. Keep a consistent template, font and color palette for brand recognition.',
+          fr: 'Comme les générateurs d\'images déforment l\'écriture arabe, générez l\'image avec un prompt en anglais et sans texte, puis ajoutez votre titre arabe dans Canva, qui gère la mise en page de droite à gauche, les polices arabes et propose des modèles pour chaque plateforme. Gardez modèle, police et palette cohérents pour la reconnaissance de marque.',
+          es: 'Como los generadores de imágenes distorsionan la escritura árabe, genera la imagen con un prompt en inglés y sin texto, luego añade tu titular árabe en Canva, que admite el diseño de derecha a izquierda, las fuentes árabes y tiene plantillas para cada plataforma. Mantén plantilla, fuente y paleta coherentes para el reconocimiento de marca.',
+          ar: 'لأن مولّدات الصور تشوّه الخط العربي، ولّد الصورة بأمر إنجليزي وبدون نص، ثم أضف عنوانك العربي في Canva الذي يدعم التنسيق من اليمين إلى اليسار والخطوط العربية ولديه قوالب لكل منصّة. وحافظ على قالب وخط ولوحة ألوان ثابتة لتمييز العلامة.',
+        },
+      },
+    ],
+  },
 ];
 
 export function getAllBlogPosts(): BlogPost[] {
