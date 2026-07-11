@@ -4796,6 +4796,32 @@ export const TOOLS_DATA: AITool[] = [
     useCases: ['Comparing answers from multiple models', 'One-stop AI workspace', 'Content, image & video creation', 'Avoiding several separate subscriptions'],
     verdict: 'OneChat AI is a strong pick for users who want ChatGPT, Claude, Gemini and other top models — plus hundreds of AI tools — under one roof and one subscription, instead of juggling many separate apps.',
   },
+  {
+    id: 'imagineclip',
+    name: 'ImagineClip',
+    category: 'video',
+    description: {
+      en: 'AI video generator for avatar clips, stylized scenes, and social-ready videos from prompts, images, and effects.',
+      fr: 'Generateur de videos IA pour clips d avatars, scenes stylisees et videos pour les reseaux sociaux a partir de prompts et d images.',
+      es: 'Generador de video con IA para clips de avatares, escenas estilizadas y videos para redes sociales a partir de prompts e imagenes.',
+      ar: 'AI video generator for avatar clips, stylized scenes, and social-ready videos from prompts, images, and effects.'
+    },
+    rating: 0,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free plan / paid plans available',
+      fr: 'Plan gratuit / offres payantes',
+      es: 'Plan gratuito / planes de pago',
+      ar: 'Free plan / paid plans available'
+    },
+    websiteUrl: 'https://imagineclip.com',
+    views: 0,
+    company: 'ImagineClip',
+    hasAPI: false,
+    hasMobileApp: false,
+    tags: ['AI Video', 'Text-to-Video', 'Image-to-Video', 'Avatars', 'Social Video'],
+    useCases: ['Avatar clips', 'Stylized scenes', 'Social media videos', 'Creative video effects'],
+  },
 ];
 
 export function getToolById(id: string): AITool | undefined {
