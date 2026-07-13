@@ -5484,6 +5484,217 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'best-ai-tools-hr-recruitment-2026',
+    category: 'hr',
+    emoji: '🧑‍💼',
+    publishedDate: '2026-07-09',
+    readTime: 7,
+    title: {
+      en: 'Best AI Tools for HR Teams and Recruitment in 2026',
+      fr: 'Meilleurs Outils IA pour les RH et le Recrutement en 2026',
+      es: 'Mejores Herramientas IA para RRHH y Reclutamiento en 2026',
+      ar: 'أفضل أدوات الذكاء الاصطناعي لفرق الموارد البشرية والتوظيف في 2026',
+    },
+    excerpt: {
+      en: 'From sourcing and screening candidates to onboarding and employee engagement, AI is transforming HR in 2026. We compare the top AI HR and recruitment tools so your team can hire smarter and faster.',
+      fr: "Du sourcing à l'onboarding en passant par l'engagement des employés, l'IA transforme les RH en 2026. Nous comparons les meilleurs outils IA pour les RH et le recrutement pour que votre équipe recrute plus intelligemment et rapidement.",
+      es: 'Desde la búsqueda y cribado de candidatos hasta la incorporación, la IA está transformando los RRHH en 2026. Comparamos las mejores herramientas IA para que tu equipo contrate de forma más inteligente y rápida.',
+      ar: 'من البحث عن المرشحين وفرزهم إلى الإعداد الوظيفي، يُحوّل الذكاء الاصطناعي الموارد البشرية في 2026. نقارن أفضل أدوات الذكاء الاصطناعي للموارد البشرية والتوظيف.',
+    },
+    sections: [
+      {
+        heading: {
+          en: 'Why AI Is Now Essential for HR Teams',
+          fr: "Pourquoi l'IA est maintenant indispensable pour les équipes RH",
+          es: 'Por qué la IA es ahora esencial para los equipos de RRHH',
+          ar: 'لماذا أصبح الذكاء الاصطناعي ضرورياً لفرق الموارد البشرية',
+        },
+        body: {
+          en: 'In 2026, the average corporate job posting receives over 250 applications. AI tools automate the most time-consuming parts of the hiring funnel — resume screening, interview scheduling, candidate scoring, and even preliminary video interviews — freeing HR professionals to focus on decisions that require human judgment. HR teams that once processed 20 hires a month can now handle 100 or more without additional headcount.',
+          fr: "En 2026, l'offre d'emploi d'entreprise moyenne reçoit plus de 250 candidatures. Les outils IA automatisent les parties les plus chronophages de l'entonnoir de recrutement — tri des CV, planification des entretiens, notation des candidats — libérant les professionnels RH pour les décisions humaines.",
+          es: 'En 2026, la oferta de empleo corporativa promedio recibe más de 250 solicitudes. Las herramientas de IA automatizan las partes más laboriosas del embudo de contratación — cribado de CV, programación de entrevistas, puntuación de candidatos — liberando a los profesionales de RRHH para decisiones que requieren juicio humano.',
+          ar: 'في 2026، يستقبل إعلان الوظيفة المؤسسي المتوسط أكثر من 250 طلباً. تُؤتمت أدوات الذكاء الاصطناعي الأجزاء الأكثر استهلاكاً للوقت في قمع التوظيف — فرز السير الذاتية وجدولة المقابلات وتقييم المرشحين — مما يُتيح لمتخصصي الموارد البشرية التركيز على القرارات البشرية.',
+        },
+      },
+      {
+        heading: {
+          en: 'Manatal and HireVue: AI-Powered Recruiting Platforms',
+          fr: 'Manatal et HireVue : plateformes de recrutement alimentées par IA',
+          es: 'Manatal y HireVue: plataformas de reclutamiento con IA',
+          ar: 'Manatal وHireVue: منصات التوظيف المدعومة بالذكاء الاصطناعي',
+        },
+        body: {
+          en: 'Manatal is the go-to AI applicant tracking system (ATS) for teams that need a powerful but affordable solution. It uses AI to score and rank candidates based on job requirements, integrates LinkedIn and 2,500+ job boards, and includes a built-in CRM. At $19-$39 per user per month, it covers the full hiring workflow from sourcing to offer. HireVue takes a different angle: its strength is AI-powered video interviewing. Candidates complete asynchronous video interviews and HireVue analyzes verbal and non-verbal cues to score competencies and predict job fit. It is the dominant choice for large enterprises conducting thousands of structured interviews per year.',
+          fr: "Manatal est l'ATS IA de référence pour les équipes qui ont besoin d'une solution puissante mais abordable. À 19-39$/utilisateur/mois, il couvre tout le workflow de recrutement. HireVue se distingue par l'entretien vidéo alimenté par l'IA, analysant les signaux verbaux et non verbaux pour noter les compétences. C'est le choix dominant pour les grandes entreprises.",
+          es: 'Manatal es el ATS con IA de referencia para equipos que necesitan una solución potente y asequible a $19-$39/usuario/mes. HireVue destaca por las entrevistas de vídeo con IA, analizando señales verbales y no verbales para puntuar competencias. Es la opción dominante para grandes empresas con miles de entrevistas anuales.',
+          ar: 'Manatal هو نظام ATS المفضّل بالذكاء الاصطناعي بسعر 19-39 دولار/مستخدم/شهر. أما HireVue فيتميز بالمقابلات المرئية بالذكاء الاصطناعي، محللاً الإشارات اللفظية وغير اللفظية لتقييم الكفاءات. وهو الخيار السائد للمؤسسات الكبيرة.',
+        },
+      },
+      {
+        heading: {
+          en: 'Greenhouse, Teamtailor, and Paradox: Specialized Hiring Tools',
+          fr: 'Greenhouse, Teamtailor et Paradox : outils de recrutement spécialisés',
+          es: 'Greenhouse, Teamtailor y Paradox: herramientas de contratación especializadas',
+          ar: 'Greenhouse وTeamtailor وParadox: أدوات توظيف متخصصة',
+        },
+        body: {
+          en: 'Greenhouse is the structured hiring platform for mid-market and enterprise companies wanting data-driven consistency across every hire. In 2026 it added AI-generated interview question recommendations and real-time bias detection alerts. Teamtailor stands out for employer branding: it helps HR teams build careers pages and talent communities, personalizing the candidate experience with AI. Paradox (powered by its AI assistant Olivia) automates the top of the funnel — answering candidate questions 24/7, screening applicants, and scheduling interviews without human involvement. Companies using Paradox report cutting time-to-interview by up to 80%.',
+          fr: "Greenhouse est la plateforme de recrutement structuré pour les entreprises qui veulent de la cohérence basée sur les données. En 2026, elle a ajouté des recommandations de questions d'entretien IA et des alertes de détection de biais. Teamtailor excelle en marque employeur. Paradox (avec Olivia) automatise le sommet de l'entonnoir et réduit le délai jusqu'à l'entretien de 80%.",
+          es: 'Greenhouse es la plataforma de contratación estructurada para empresas que buscan consistencia basada en datos. En 2026 añadió recomendaciones de preguntas de entrevista con IA y detección de sesgos en tiempo real. Teamtailor destaca en marca empleadora. Paradox (con Olivia) automatiza la parte alta del embudo, reduciendo el tiempo hasta la entrevista un 80%.',
+          ar: 'Greenhouse هي منصة التوظيف المنظّم للشركات الراغبة في الاتساق القائم على البيانات. في 2026 أضافت توصيات أسئلة الذكاء الاصطناعي وتنبيهات الكشف عن التحيز. يتميز Teamtailor بالعلامة التجارية لصاحب العمل. Paradox (مع Olivia) يُؤتمت قمة القمع ويخفض وقت الوصول للمقابلة 80%.',
+        },
+      },
+      {
+        heading: {
+          en: 'How to Choose the Right AI HR Tool',
+          fr: 'Comment choisir le bon outil IA pour les RH',
+          es: 'Cómo elegir la herramienta IA de RRHH adecuada',
+          ar: 'كيفية اختيار أداة الذكاء الاصطناعي للموارد البشرية المناسبة',
+        },
+        body: {
+          en: 'The right choice depends on your team size, hiring volume, and biggest bottleneck. Small teams and startups should start with Manatal. Growing companies that care about employer brand should pair an ATS with Teamtailor. Enterprises running thousands of interviews a year will find HireVue or Greenhouse worth the investment. If candidate drop-off is your pain point, Paradox can be layered on top of any existing stack. Whatever you choose, look for tools that offer bias auditing, GDPR-compliant data handling, and transparent AI scoring — regulators in the EU and several US states now require explainability in automated hiring decisions.',
+          fr: "Le bon choix dépend de la taille de votre équipe et du volume de recrutement. Les petites équipes devraient commencer par Manatal. Les entreprises en croissance devraient combiner ATS et Teamtailor. Les grandes entreprises trouveront HireVue ou Greenhouse worth la peine. Si l'abandon des candidats est votre problème, Paradox peut être ajouté à n'importe quel stack.",
+          es: 'La elección correcta depende del tamaño de tu equipo y el volumen de contratación. Los equipos pequeños deben empezar con Manatal. Las empresas en crecimiento deberían combinar ATS con Teamtailor. Las empresas grandes encontrarán HireVue o Greenhouse rentables. Si la deserción de candidatos es tu problema, Paradox puede añadirse a cualquier stack existente.',
+          ar: 'يعتمد الاختيار الصحيح على حجم الفريق وحجم التوظيف. يجب على الفرق الصغيرة البدء بـ Manatal. تجمع الشركات المتنامية بين ATS وTeamtailor. ستجد المؤسسات الكبيرة HireVue أو Greenhouse مجديَين. إذا كان تسرّب المرشحين مشكلتك، يمكن لـ Paradox أن يُضاف فوق أي مجموعة أدوات موجودة.',
+        },
+      },
+    ],
+    relatedTools: ['manatal-ai', 'hirevue-ai', 'greenhouse-ai', 'teamtailor-ai', 'paradox-ai', 'leena-ai', 'workday-ai'],
+    relatedComparisons: [],
+    faq: [
+      {
+        question: {
+          en: 'What is the best AI tool for small business recruiting?',
+          fr: 'Quel est le meilleur outil IA pour le recrutement des petites entreprises ?',
+          es: '¿Cuál es la mejor herramienta IA para el reclutamiento de pequeñas empresas?',
+          ar: 'ما أفضل أداة ذكاء اصطناعي للتوظيف في الشركات الصغيرة؟',
+        },
+        answer: {
+          en: 'Manatal is the best AI recruiting tool for small teams and SMBs in 2026. It combines an ATS, AI candidate scoring, LinkedIn sourcing, and a CRM starting at $19/user/month.',
+          fr: "Manatal est le meilleur outil de recrutement IA pour les petites équipes et PME en 2026. Il combine un ATS, le scoring IA des candidats, le sourcing LinkedIn et un CRM candidat à partir de 19$/utilisateur/mois.",
+          es: 'Manatal es la mejor herramienta de reclutamiento IA para equipos pequeños y PYMEs en 2026. Combina un ATS, puntuación de candidatos con IA, sourcing de LinkedIn y un CRM desde $19/usuario/mes.',
+          ar: 'Manatal هو أفضل أداة توظيف بالذكاء الاصطناعي للفرق الصغيرة والشركات المتوسطة في 2026. يجمع بين ATS وتقييم المرشحين واستقطاب LinkedIn ونظام CRM بدءاً من 19 دولاراً/مستخدم/شهرياً.',
+        },
+      },
+      {
+        question: {
+          en: 'Can AI tools reduce bias in hiring?',
+          fr: 'Les outils IA peuvent-ils réduire les biais dans le recrutement ?',
+          es: '¿Pueden las herramientas de IA reducir el sesgo en la contratación?',
+          ar: 'هل تستطيع أدوات الذكاء الاصطناعي تقليل التحيز في التوظيف؟',
+        },
+        answer: {
+          en: 'Potentially yes, but with caveats. AI can remove names and photos during screening to reduce unconscious bias, and structured scoring applied consistently improves fairness. However, models trained on historical data can replicate existing biases. Best-practice teams use AI to standardize the process while requiring human sign-off on all shortlisting decisions.',
+          fr: "Potentiellement oui. L'IA peut supprimer les noms et photos lors de la présélection pour réduire les biais inconscients. Cependant, les modèles entraînés sur des données historiques peuvent reproduire les biais existants. Les meilleures équipes utilisent l'IA pour standardiser tout en exigeant une validation humaine.",
+          es: 'Potencialmente sí. La IA puede eliminar nombres y fotos durante el cribado para reducir el sesgo inconsciente. Sin embargo, los modelos entrenados con datos históricos pueden replicar sesgos existentes. Los mejores equipos usan IA para estandarizar mientras requieren aprobación humana.',
+          ar: 'يُحتمل ذلك نعم. يمكن للذكاء الاصطناعي إزالة الأسماء والصور لتقليل التحيز اللاواعي. غير أن النماذج المدرّبة على البيانات التاريخية قد تنسخ التحيزات القائمة. الفرق الأفضل تستخدم الذكاء الاصطناعي للتوحيد مع المراجعة البشرية.',
+        },
+      },
+      {
+        question: {
+          en: 'How does Paradox AI work for high-volume hiring?',
+          fr: "Comment fonctionne Paradox AI pour le recrutement à volume élevé ?",
+          es: '¿Cómo funciona Paradox AI para la contratación de alto volumen?',
+          ar: 'كيف يعمل Paradox AI في التوظيف كبير الحجم؟',
+        },
+        answer: {
+          en: "Paradox's AI assistant Olivia handles the entire top of the funnel automatically: it answers candidate questions 24/7, screens applicants against job requirements conversationally, and books interviews directly into recruiters' calendars — all without human involvement. Companies report cutting time-to-interview from days to under an hour.",
+          fr: "L'assistante IA Olivia de Paradox gère automatiquement tout le sommet de l'entonnoir : elle répond aux questions 24h/24, présélectionne les candidats de manière conversationnelle, et réserve directement les entretiens dans les agendas des recruteurs. Les entreprises rapportent réduire le délai à moins d'une heure.",
+          es: 'La asistente de IA Olivia de Paradox gestiona automáticamente toda la parte alta del embudo: responde preguntas 24/7, criba candidatos de forma conversacional y reserva entrevistas directamente en los calendarios de los reclutadores. Las empresas reportan reducir el tiempo hasta la entrevista a menos de una hora.',
+          ar: 'تُدير مساعدة الذكاء الاصطناعي Olivia من Paradox الجزء العلوي من القمع تلقائياً: ترد على الأسئلة على مدار الساعة، وتفرز المتقدمين بأسلوب تحاوري، وتحجز المقابلات مباشرةً في تقويمات المُوظِّفين. تُشير الشركات إلى تقليص وقت الوصول إلى أقل من ساعة.',
+        },
+      },
+    ],
+  },
+];
+
+export function getAllBlogPosts(): BlogPost[] {
+  return [...BLOG_POSTS].sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime());
+}
+
+export function getBlogPostBySlug(slug: string): BlogPost | undefined {
+  return BLOG_POSTS.find((p) => p.slug === slug);
+}
+لة المقابلات دون تدخل بشري. وتُشير الشركات التي تستخدم Paradox إلى خفض وقت الوصول إلى المقابلة بنسبة تصل إلى 80٪، مما يجعله ذا قيمة خاصة في التوظيف كبير الحجم والساعي والموسمي.',
+        },
+      },
+      {
+        heading: {
+          en: 'AI for Onboarding and Employee Engagement',
+          fr: 'L\'IA pour l\'onboarding et l\'engagement des employés',
+          es: 'IA para la incorporación y el compromiso de los empleados',
+          ar: 'الذكاء الاصطناعي للإعداد الوظيفي ومشاركة الموظفين',
+        },
+        body: {
+          en: 'Recruitment is only half the HR story. Once a candidate accepts an offer, AI tools like Leena AI and Workday AI can automate the onboarding checklist, answer employee questions through an internal chatbot, and track new-hire satisfaction. Workday AI, embedded in the Workday HCM suite, uses machine learning to predict attrition risk, recommend learning paths, and flag performance trends before they become problems. For smaller teams, Leena AI offers a more lightweight employee experience platform that works on top of Slack or Microsoft Teams. The key principle for 2026 is that the best HR AI does not replace the HR team — it removes administrative burden so HR professionals can spend more time on culture, coaching, and strategic talent planning.',
+          fr: 'Le recrutement n\'est que la moitié de l\'histoire RH. Une fois qu\'un candidat accepte une offre, des outils IA comme Leena AI et Workday AI peuvent automatiser la checklist d\'onboarding, répondre aux questions des employés via un chatbot interne et suivre la satisfaction des nouvelles recrues. Workday AI, intégré dans la suite Workday HCM, utilise le machine learning pour prédire le risque d\'attrition, recommander des parcours d\'apprentissage et signaler les tendances de performance avant qu\'elles ne deviennent des problèmes. Pour les petites équipes, Leena AI offre une plateforme d\'expérience employé plus légère qui fonctionne avec Slack ou Microsoft Teams. Le principe clé pour 2026 est que la meilleure IA RH ne remplace pas l\'équipe RH — elle élimine le fardeau administratif pour que les professionnels RH puissent consacrer plus de temps à la culture, au coaching et à la planification stratégique des talents.',
+          es: 'El reclutamiento es solo la mitad de la historia de RRHH. Una vez que un candidato acepta una oferta, herramientas de IA como Leena AI y Workday AI pueden automatizar la lista de verificación de incorporación, responder preguntas de empleados a través de un chatbot interno y rastrear la satisfacción de los nuevos empleados. Workday AI, integrado en la suite Workday HCM, utiliza machine learning para predecir el riesgo de rotación, recomendar itinerarios de aprendizaje y señalar tendencias de rendimiento antes de que se conviertan en problemas. Para equipos más pequeños, Leena AI ofrece una plataforma de experiencia del empleado más ligera que funciona sobre Slack o Microsoft Teams. El principio clave para 2026 es que la mejor IA de RRHH no reemplaza al equipo de RRHH — elimina la carga administrativa para que los profesionales de RRHH puedan dedicar más tiempo a la cultura, el coaching y la planificación estratégica del talento.',
+          ar: 'التوظيف ليس سوى نصف قصة الموارد البشرية. بمجرد قبول المرشح للعرض، يمكن لأدوات الذكاء الاصطناعي مثل Leena AI وWorkday AI أتمتة قائمة تدقيق الإعداد الوظيفي، والإجابة على أسئلة الموظفين عبر روبوت محادثة داخلي، وتتبع رضا الموظفين الجدد. يستخدم Workday AI المدمج في مجموعة Workday HCM التعلم الآلي للتنبؤ بمخاطر الاستنزاف وتوصية مسارات التعلم والإشارة إلى اتجاهات الأداء قبل أن تتحول إلى مشاكل. للفرق الأصغر، يقدّم Leena AI منصة تجربة موظف أخف وزناً تعمل فوق Slack أو Microsoft Teams. المبدأ الأساسي لعام 2026 هو أن أفضل ذكاء اصطناعي للموارد البشرية لا يحل محل فريق الموارد البشرية — بل يزيل العبء الإداري حتى يتمكن المتخصصون من قضاء وقت أطول في الثقافة والتدريب والتخطيط الاستراتيجي للمواهب.',
+        },
+      },
+      {
+        heading: {
+          en: 'How to Choose the Right AI HR Tool',
+          fr: 'Comment choisir le bon outil IA pour les RH',
+          es: 'Cómo elegir la herramienta IA de RRHH adecuada',
+          ar: 'كيفية اختيار أداة الذكاء الاصطناعي للموارد البشرية المناسبة',
+        },
+        body: {
+          en: 'The right choice depends on your team size, hiring volume, and biggest bottleneck. Small teams and startups should start with Manatal — it covers ATS, sourcing, and basic screening at a price that does not require a procurement committee. Growing companies that care deeply about employer brand should pair an ATS with Teamtailor for candidate experience. Enterprises running thousands of interviews a year will find HireVue or Greenhouse worth the investment. If your pain point is candidate drop-off and slow response times, Paradox\'s conversational AI can be layered on top of almost any existing stack. Whatever you choose, look for tools that offer bias auditing, GDPR-compliant data handling, and transparent AI scoring — regulators in the EU and several US states now require explainability in automated hiring decisions.',
+          fr: 'Le bon choix dépend de la taille de votre équipe, du volume de recrutement et de votre principal goulot d\'étranglement. Les petites équipes et startups devraient commencer par Manatal — il couvre l\'ATS, le sourcing et la présélection de base à un prix qui ne nécessite pas de comité d\'achat. Les entreprises en croissance qui accordent beaucoup d\'importance à la marque employeur devraient coupler un ATS à Teamtailor pour l\'expérience candidat. Les grandes entreprises qui mènent des milliers d\'entretiens par an trouveront que HireVue ou Greenhouse vaut l\'investissement. Si votre point de douleur est l\'abandon des candidats et les temps de réponse lents, l\'IA conversationnelle de Paradox peut être superposée à presque n\'importe quel stack existant. Quel que soit votre choix, recherchez des outils qui offrent un audit des biais, une gestion des données conforme au RGPD et un scoring IA transparent — les régulateurs dans l\'UE et plusieurs États américains exigent désormais l\'explicabilité dans les décisions de recrutement automatisées.',
+          es: 'La elección correcta depende del tamaño de tu equipo, el volumen de contratación y tu mayor cuello de botella. Los equipos pequeños y startups deberían empezar con Manatal — cubre ATS, sourcing y cribado básico a un precio que no requiere un comité de compras. Las empresas en crecimiento que se preocupan mucho por la marca empleadora deberían combinar un ATS con Teamtailor para la experiencia del candidato. Las empresas que realizan miles de entrevistas al año encontrarán que HireVue o Greenhouse vale la inversión. Si tu punto de dolor es la deserción de candidatos y los tiempos de respuesta lentos, la IA conversacional de Paradox puede superponerse a casi cualquier stack existente. Sea lo que elijas, busca herramientas que ofrezcan auditoría de sesgos, manejo de datos conforme al GDPR y puntuación de IA transparente — los reguladores en la UE y varios estados de EE.UU. ahora exigen explicabilidad en las decisiones de contratación automatizadas.',
+          ar: 'يعتمد الاختيار الصحيح على حجم فريقك وحجم التوظيف وعنق الزجاجة الأكبر لديك. يجب على الفرق الصغيرة والشركات الناشئة البدء بـ Manatal — فهو يغطي ATS والاستقطاب والفرز الأساسي بسعر لا يستلزم لجنة مشتريات. يجب على الشركات المتنامية المهتمة كثيراً بالعلامة التجارية لصاحب العمل اقتران نظام ATS بـ Teamtailor لتجربة المرشح. ستجد المؤسسات التي تُجري آلاف المقابلات سنوياً أن HireVue أو Greenhouse يستحقان الاستثمار. إذا كانت نقطة ألمك هي تسرّب المرشحين وبطء أوقات الاستجابة، فيمكن لذكاء Paradox الاصطناعي التحاوري أن يُضاف فوق أي مجموعة أدوات موجودة تقريباً. مهما كان اختيارك، ابحث عن أدوات تقدّم تدقيقاً للتحيز ومعالجة بيانات متوافقة مع GDPR وتسجيلاً شفافاً للذكاء الاصطناعي — إذ تشترط هيئات التنظيم في الاتحاد الأوروبي وعدة ولايات أمريكية الآن إمكانية شرح قرارات التوظيف الآلية.',
+        },
+      },
+    ],
+    relatedTools: ['manatal-ai', 'hirevue-ai', 'greenhouse-ai', 'teamtailor-ai', 'paradox-ai', 'leena-ai', 'workday-ai'],
+    relatedComparisons: [],
+    faq: [
+      {
+        question: {
+          en: 'What is the best AI tool for small business recruiting?',
+          fr: 'Quel est le meilleur outil IA pour le recrutement des petites entreprises ?',
+          es: '¿Cuál es la mejor herramienta IA para el reclutamiento de pequeñas empresas?',
+          ar: 'ما أفضل أداة ذكاء اصطناعي للتوظيف في الشركات الصغيرة؟',
+        },
+        answer: {
+          en: 'Manatal is the best AI recruiting tool for small teams and SMBs in 2026. It combines an ATS, AI candidate scoring, LinkedIn sourcing, and a candidate CRM starting at $19/user/month — without the enterprise pricing of Greenhouse or HireVue.',
+          fr: 'Manatal est le meilleur outil de recrutement IA pour les petites équipes et les PME en 2026. Il combine un ATS, le scoring IA des candidats, le sourcing LinkedIn et un CRM candidat à partir de 19$/utilisateur/mois — sans la tarification entreprise de Greenhouse ou HireVue.',
+          es: 'Manatal es la mejor herramienta de reclutamiento IA para equipos pequeños y PYMEs en 2026. Combina un ATS, puntuación de candidatos con IA, sourcing de LinkedIn y un CRM de candidatos desde $19/usuario/mes — sin los precios empresariales de Greenhouse o HireVue.',
+          ar: 'Manatal هو أفضل أداة توظيف بالذكاء الاصطناعي للفرق الصغيرة والشركات المتوسطة في 2026. فهو يجمع بين ATS وتقييم المرشحين بالذكاء الاصطناعي واستقطاب LinkedIn ونظام CRM للمرشحين بدءاً من 19 دولاراً للمستخدم شهرياً — دون تسعير المؤسسات كـ Greenhouse وHireVue.',
+        },
+      },
+      {
+        question: {
+          en: 'Can AI tools reduce bias in hiring?',
+          fr: 'Les outils IA peuvent-ils réduire les biais dans le recrutement ?',
+          es: '¿Pueden las herramientas de IA reducir el sesgo en la contratación?',
+          ar: 'هل تستطيع أدوات الذكاء الاصطناعي تقليل التحيز في التوظيف؟',
+        },
+        answer: {
+          en: 'Potentially yes, but with important caveats. AI can remove names and photos during screening to reduce unconscious bias, and structured scoring rubrics applied consistently across all candidates improve fairness. However, AI models trained on historical data can also replicate existing biases. In 2026, best-practice HR teams use AI to standardize the process while requiring human sign-off on all shortlisting decisions and auditing AI scores for demographic disparities.',
+          fr: 'Potentiellement oui, mais avec des mises en garde importantes. L\'IA peut supprimer les noms et photos lors de la présélection pour réduire les biais inconscients, et les grilles de notation structurées appliquées de façon cohérente à tous les candidats améliorent l\'équité. Cependant, les modèles IA entraînés sur des données historiques peuvent aussi reproduire les biais existants. En 2026, les équipes RH appliquant les meilleures pratiques utilisent l\'IA pour standardiser le processus tout en exigeant une validation humaine sur toutes les décisions de présélection et en auditant les scores IA pour les disparités démographiques.',
+          es: 'Potencialmente sí, pero con advertencias importantes. La IA puede eliminar nombres y fotos durante el cribado para reducir el sesgo inconsciente, y las rúbricas de puntuación estructuradas aplicadas consistentemente a todos los candidatos mejoran la equidad. Sin embargo, los modelos de IA entrenados con datos históricos también pueden replicar sesgos existentes. En 2026, los equipos de RRHH con mejores prácticas usan IA para estandarizar el proceso mientras requieren aprobación humana en todas las decisiones de preselección y auditan las puntuaciones de IA en busca de disparidades demográficas.',
+          ar: 'يُحتمل ذلك نعم، لكن مع تحفظات مهمة. يمكن للذكاء الاصطناعي إزالة الأسماء والصور أثناء الفرز لتقليل التحيز اللاواعي، كما أن معايير التقييم المنظّمة المطبّقة باتساق على جميع المرشحين تُحسّن العدالة. غير أن نماذج الذكاء الاصطناعي المدرَّبة على البيانات التاريخية يمكنها أيضاً نسخ التحيزات القائمة. في 2026، تستخدم فرق الموارد البشرية الأفضل ممارسةً الذكاء الاصطناعي لتوحيد العملية مع اشتراط موافقة بشرية على جميع قرارات الإدراج في القائمة المختصرة ومراجعة درجات الذكاء الاصطناعي بحثاً عن التفاوتات الديموغرافية.',
+        },
+      },
+      {
+        question: {
+          en: 'How does Paradox AI work for high-volume hiring?',
+          fr: 'Comment fonctionne Paradox AI pour le recrutement à volume élevé ?',
+          es: '¿Cómo funciona Paradox AI para la contratación de alto volumen?',
+          ar: 'كيف يعمل Paradox AI في التوظيف كبير الحجم؟',
+        },
+        answer: {
+          en: 'Paradox\'s AI assistant Olivia handles the entire top of the funnel automatically: it answers candidate questions 24/7 on your careers site or WhatsApp, screens applicants against job requirements in a conversational way, and books interviews directly into recruiters\' calendars — all without human involvement. Companies report cutting time-to-interview from days to under an hour for hourly, retail, and seasonal positions.',
+          fr: 'L\'assistante IA Olivia de Paradox gère automatiquement tout le sommet de l\'entonnoir : elle répond aux questions des candidats 24h/24 sur votre site de carrières ou WhatsApp, présélectionne les candidats par rapport aux exigences du poste de manière conversationnelle, et réserve directement les entretiens dans les agendas des recruteurs — tout cela sans intervention humaine. Les entreprises rapportent avoir réduit le délai jusqu\'à l\'entretien de plusieurs jours à moins d\'une heure pour les postes à l\'heure, de vente au détail et saisonniers.',
+          es: 'La asistente de IA Olivia de Paradox gestiona automáticamente toda la parte alta del embudo: responde las preguntas de los candidatos 24/7 en tu sitio de carreras o WhatsApp, criba a los solicitantes según los requisitos del puesto de forma conversacional, y reserva entrevistas directamente en los calendarios de los reclutadores — todo sin intervención humana. Las empresas reportan reducir el tiempo hasta la entrevista de días a menos de una hora para posiciones por horas, de comercio minorista y estacionales.',
+          ar: 'تُدير مساعدة الذكاء الاصطناعي Olivia من Paradox الجزء العلوي من القمع تلقائياً: ترد على أسئلة المرشحين على مدار الساعة في موقع الوظائف الخاص بك أو WhatsApp، وتفرز المتقدمين وفق متطلبات الوظيفة بأسلوب تحاوري، وتحجز المقابلات مباشرةً في تقويمات المُوظِّفين — كل ذلك دون تدخل بشري. وتُشير الشركات إلى تقليص وقت الوصول إلى المقابلة من أيام إلى أقل من ساعة للوظائف بالساعة وبيع التجزئة والمواسمية.',
+        },
+      },
+    ],
+  },
 ];
 
 export function getAllBlogPosts(): BlogPost[] {
