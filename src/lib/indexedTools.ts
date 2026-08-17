@@ -13,7 +13,7 @@
 // editorial article + hand-written expert tips.
 export const TOP_TOOLS: string[] = [
   // Mainstream flagship assistants & LLMs
-  'chatgpt', 'claude', 'gemini', 'perplexity', 'notebooklm',
+  'chatgpt', 'claude', 'gemini', 'perplexity', 'notebooklm', 'grok', 'deepseek', 'mistral',
   // Trending 2026 agents & open models (enriched: article + expert tips)
   'codex', 'devin', 'opencode', 'cline', 'aider', 'trae',
   'minimax', 'kimi', 'qwen', 'glm', 'hermes', 'llama',

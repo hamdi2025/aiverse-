@@ -17,7 +17,7 @@ Categories (28): writing & LLMs, image generation, code & development, video, au
 
 ## Popular tools covered (examples)
 
-ChatGPT, Claude, Gemini, Midjourney, DALL-E 3, Stable Diffusion, GitHub Copilot, Cursor, Jasper, Writesonic, Notion AI, Grammarly, ElevenLabs, Murf, Synthesia, HeyGen, HeadshotPro, Runway, Pika, Gamma, Tome, Semrush, Surfer SEO, Suno, Descript. Trending 2026 AI agents & open models: OpenAI Codex, Devin, OpenCode, Cline, Aider, Trae, Goose, Gemini CLI, OpenAI Operator, Claude Cowork, Manus, OpenClaw, MiniMax M2.7, Kimi K2.6, Qwen 3.6, GLM 5.2, Hermes 4, Llama 4.
+ChatGPT (GPT-5.6), Claude Opus 5, Gemini 3.7, Grok 4.5, DeepSeek V4-Pro, Perplexity, Mistral, Midjourney, DALL-E 3, Stable Diffusion, GitHub Copilot, Cursor, Jasper, Writesonic, Notion AI, Grammarly, ElevenLabs, Murf, Synthesia, HeyGen, HeadshotPro, Runway, Pika, Gamma, Tome, Semrush, Surfer SEO, Suno, Descript. Latest 2026 frontier models covered: OpenAI GPT-5.6 (Sol/Terra/Luna), Anthropic Claude Opus 5 & Sonnet 5, Google Gemini 3.7 Flash, xAI Grok 4.5, DeepSeek V4-Pro. Trending 2026 AI agents & open models: OpenAI Codex, Devin, OpenCode, Cline, Aider, Trae, Goose, Gemini CLI, OpenAI Operator, Claude Cowork, Manus, OpenClaw, MiniMax M2.7, Kimi K2.6, Qwen 3.6, GLM 5.2, Hermes 4, Llama 4.
 
 ## How to cite / format notes
 
