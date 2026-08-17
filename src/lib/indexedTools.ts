@@ -35,6 +35,12 @@ export const TOP_TOOLS: string[] = [
   // Niche leaders: legal, cybersecurity, finance, sales, support, education, code, voice, medical
   'harvey', 'pentestgpt', 'garak', 'cleo-ai', 'ramp', 'clay',
   '11x', 'sierra', 'khanmigo', 'replit', 'hume-ai', 'openevidence',
+  // Wave: video/image/design/audio tools
+  'kling', 'veo', 'hailuo', 'krea', 'magnific', 'leonardo', 'freepik-ai',
+  'napkin-ai', 'photoroom', 'captions-ai', 'kits-ai', 'riverside',
+  // Wave: autonomous & business AI agents
+  'lindy', 'multion', 'bardeen', 'aomni', 'runner-h', 'simular',
+  'lutra', 'convergence-proxy', 'emergence-ai', 'camel-ai',
   // Coding
   'cursor', 'github-copilot',
   // Image
