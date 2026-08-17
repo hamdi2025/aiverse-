@@ -20,6 +20,9 @@ export const TOP_TOOLS: string[] = [
   'claude-cowork', 'manus', 'openclaw', 'goose', 'gemini-cli', 'openai-operator',
   // New trending 2026 AI agents (autonomous workspaces & enterprise)
   'genspark', 'relay-app', 'glean', 'kimi-claw',
+  // Top open-source AI projects (GitHub, thousands of stars) across domains
+  'ollama', 'open-webui', 'browser-use', 'vllm', 'continue-dev',
+  'comfyui', 'unsloth', 'llamaindex', 'anythingllm', 'jan-ai', 'langflow', 'whisper',
   // Coding
   'cursor', 'github-copilot',
   // Image
