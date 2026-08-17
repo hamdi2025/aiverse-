@@ -26,6 +26,9 @@ export const TOP_TOOLS: string[] = [
   // Open-source voice/audio, RAG/search, coding & image (GitHub)
   'coqui-tts', 'rvc', 'gpt-sovits', 'chattts', 'piper',
   'quivr', 'onyx', 'privategpt', 'haystack', 'metagpt', 'tabby', 'fooocus',
+  // Open-source video, music, automation, memory, docs & search (GitHub)
+  'hunyuanvideo', 'mochi-1', 'cogvideox', 'open-sora', 'audiocraft', 'stable-audio-open',
+  'activepieces', 'mem0', 'letta', 'marker', 'perplexica', 'iopaint',
   // Coding
   'cursor', 'github-copilot',
   // Image
