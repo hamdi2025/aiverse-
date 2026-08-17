@@ -2958,4 +2958,94 @@ export const TOOL_FAQS: Record<string, FAQItem[]> = {
       },
     },
   ],
+  'google-translate-ai': [
+    {
+      question: {
+        en: 'Is Google Translate accurate enough for professional use?',
+        fr: 'Google Translate est-il assez précis pour un usage professionnel ?',
+        es: '¿Google Translate es lo suficientemente preciso para uso profesional?',
+        ar: 'هل ترجمة Google دقيقة بما يكفي للاستخدام المهني؟',
+      },
+      answer: {
+        en: 'Google Translate is reliable for everyday communication, travel, and understanding the gist of foreign text across 133 languages, but for legal, medical, or marketing content where nuance matters, a specialized tool like DeepL or a human translator usually produces more natural results.',
+        fr: 'Google Translate est fiable pour la communication quotidienne, le voyage et la compréhension globale d\'un texte étranger dans 133 langues, mais pour du contenu juridique, médical ou marketing où la nuance compte, un outil spécialisé comme DeepL ou un traducteur humain donne généralement des résultats plus naturels.',
+        es: 'Google Translate es fiable para la comunicación cotidiana, los viajes y entender la idea general de un texto extranjero en 133 idiomas, pero para contenido legal, médico o de marketing donde el matiz importa, una herramienta especializada como DeepL o un traductor humano suele dar resultados más naturales.',
+        ar: 'ترجمة Google موثوقة للتواصل اليومي والسفر وفهم الفكرة العامة لنص أجنبي بـ133 لغة، لكن بالنسبة للمحتوى القانوني أو الطبي أو التسويقي حيث تهم الدقة، تعطي أداة متخصصة مثل DeepL أو مترجم بشري نتائج أكثر طبيعية عادةً.',
+      },
+    },
+    {
+      question: {
+        en: 'Can Google Translate translate entire documents or websites?',
+        fr: 'Google Translate peut-il traduire des documents ou sites entiers ?',
+        es: '¿Google Translate puede traducir documentos o sitios web enteros?',
+        ar: 'هل يمكن لترجمة Google ترجمة مستندات أو مواقع كاملة؟',
+      },
+      answer: {
+        en: 'Yes. Beyond text and voice, Google Translate can translate uploaded documents (Word, PDF, PowerPoint) and entire webpages in your browser, and its camera mode can translate text in real time from a photo, which is handy for menus, signs, and printed documents while traveling.',
+        fr: 'Oui. Au-delà du texte et de la voix, Google Translate peut traduire des documents importés (Word, PDF, PowerPoint) et des pages web entières dans votre navigateur, et son mode caméra traduit le texte en temps réel à partir d\'une photo, pratique pour les menus, panneaux et documents imprimés en voyage.',
+        es: 'Sí. Además de texto y voz, Google Translate puede traducir documentos subidos (Word, PDF, PowerPoint) y páginas web enteras en tu navegador, y su modo cámara traduce texto en tiempo real a partir de una foto, útil para menús, carteles y documentos impresos al viajar.',
+        ar: 'نعم. بالإضافة إلى النص والصوت، يمكن لترجمة Google ترجمة المستندات المرفوعة (Word وPDF وPowerPoint) وصفحات ويب كاملة في متصفحك، ويترجم وضع الكاميرا النص في الوقت الفعلي من صورة، وهو مفيد للقوائم واللافتات والمستندات المطبوعة أثناء السفر.',
+      },
+    },
+  ],
+  'deepl-translator': [
+    {
+      question: {
+        en: 'Why is DeepL considered more accurate than other translators?',
+        fr: 'Pourquoi DeepL est-il considéré comme plus précis que les autres traducteurs ?',
+        es: '¿Por qué se considera que DeepL es más preciso que otros traductores?',
+        ar: 'لماذا تُعتبر DeepL أكثر دقة من المترجمات الأخرى؟',
+      },
+      answer: {
+        en: 'DeepL uses neural networks specifically trained on high-quality bilingual text rather than generic web data, which helps it better capture tone, idioms, and context — especially in European language pairs. Independent blind tests have repeatedly ranked its translations as more natural-sounding than Google Translate or Microsoft Translator.',
+        fr: 'DeepL utilise des réseaux de neurones entraînés spécifiquement sur des textes bilingues de haute qualité plutôt que sur des données web génériques, ce qui l\'aide à mieux capter le ton, les idiomes et le contexte — surtout pour les paires de langues européennes. Des tests en aveugle indépendants ont classé à plusieurs reprises ses traductions comme plus naturelles que celles de Google Translate ou Microsoft Translator.',
+        es: 'DeepL utiliza redes neuronales entrenadas específicamente con texto bilingüe de alta calidad en lugar de datos web genéricos, lo que le ayuda a captar mejor el tono, los modismos y el contexto, especialmente en pares de idiomas europeos. Pruebas ciegas independientes han clasificado repetidamente sus traducciones como más naturales que las de Google Translate o Microsoft Translator.',
+        ar: 'تستخدم DeepL شبكات عصبية مدرّبة خصيصاً على نصوص ثنائية اللغة عالية الجودة بدلاً من بيانات ويب عامة، ما يساعدها على التقاط النبرة والتعابير الاصطلاحية والسياق بشكل أفضل - خصوصاً في أزواج اللغات الأوروبية. صنّفت اختبارات عمياء مستقلة ترجماتها مراراً كأكثر طبيعية من ترجمة Google أو مترجم Microsoft.',
+      },
+    },
+    {
+      question: {
+        en: 'Does DeepL have a free plan?',
+        fr: 'DeepL propose-t-il un plan gratuit ?',
+        es: '¿DeepL tiene un plan gratuito?',
+        ar: 'هل تتوفر DeepL بخطة مجانية؟',
+      },
+      answer: {
+        en: 'Yes, DeepL offers a free tier for translating text in the browser or app with a character limit, plus limited document translation. Paid plans starting around $8.74/mo remove the character limit, add unlimited document translation, and unlock the desktop app and API access.',
+        fr: 'Oui, DeepL propose un niveau gratuit pour traduire du texte dans le navigateur ou l\'application avec une limite de caractères, plus une traduction de documents limitée. Les forfaits payants à partir d\'environ 8,74$/mois suppriment la limite de caractères, ajoutent une traduction de documents illimitée et débloquent l\'application de bureau et l\'accès API.',
+        es: 'Sí, DeepL ofrece un nivel gratuito para traducir texto en el navegador o la app con un límite de caracteres, además de traducción de documentos limitada. Los planes de pago desde unos $8.74/mes eliminan el límite de caracteres, añaden traducción ilimitada de documentos y desbloquean la app de escritorio y el acceso a la API.',
+        ar: 'نعم، تقدم DeepL مستوى مجانياً لترجمة النص في المتصفح أو التطبيق بحد أقصى من الأحرف، بالإضافة إلى ترجمة مستندات محدودة. تزيل الخطط المدفوعة التي تبدأ من حوالي 8.74 دولار شهرياً حد الأحرف، وتضيف ترجمة مستندات غير محدودة، وتفتح تطبيق سطح المكتب والوصول عبر API.',
+      },
+    },
+  ],
+  'adobe-acrobat': [
+    {
+      question: {
+        en: 'What does Adobe Acrobat\'s AI Assistant actually do?',
+        fr: 'Que fait concrètement l\'assistant IA d\'Adobe Acrobat ?',
+        es: '¿Qué hace exactamente el Asistente de IA de Adobe Acrobat?',
+        ar: 'ماذا يفعل مساعد الذكاء الاصطناعي في Adobe Acrobat فعلياً؟',
+      },
+      answer: {
+        en: 'The AI Assistant reads an open PDF and can summarize it, answer specific questions about its content, generate formatted overviews, and cite the exact page a piece of information came from — saving you from reading long contracts or reports end to end.',
+        fr: 'L\'assistant IA lit un PDF ouvert et peut le résumer, répondre à des questions précises sur son contenu, générer des aperçus formatés et citer la page exacte d\'où provient une information — vous évitant de lire de longs contrats ou rapports en entier.',
+        es: 'El Asistente de IA lee un PDF abierto y puede resumirlo, responder preguntas específicas sobre su contenido, generar resúmenes con formato y citar la página exacta de donde proviene una información, ahorrándote leer contratos o informes largos de principio a fin.',
+        ar: 'يقرأ مساعد الذكاء الاصطناعي ملف PDF مفتوحاً ويمكنه تلخيصه والإجابة على أسئلة محددة حول محتواه وإنشاء ملخصات منسقة والإشارة إلى الصفحة الدقيقة التي جاءت منها معلومة معينة - موفراً عليك قراءة عقود أو تقارير طويلة من البداية للنهاية.',
+      },
+    },
+    {
+      question: {
+        en: 'Is Adobe Acrobat worth it compared to free PDF tools?',
+        fr: 'Adobe Acrobat vaut-il le coût par rapport aux outils PDF gratuits ?',
+        es: '¿Vale la pena Adobe Acrobat frente a herramientas PDF gratuitas?',
+        ar: 'هل يستحق Adobe Acrobat الاشتراك مقارنة بأدوات PDF المجانية؟',
+      },
+      answer: {
+        en: 'For occasional tasks like merging or converting files, free tools like iLovePDF or Smallpdf are usually enough. Acrobat justifies its $19.99/mo price for professionals who need advanced editing, legally binding e-signatures, redaction, accessibility checks, and AI-assisted analysis in one trusted, industry-standard app.',
+        fr: 'Pour des tâches occasionnelles comme fusionner ou convertir des fichiers, des outils gratuits comme iLovePDF ou Smallpdf suffisent généralement. Acrobat justifie son prix de 19,99$/mois pour les professionnels ayant besoin d\'édition avancée, de signatures électroniques juridiquement valables, de caviardage, de vérifications d\'accessibilité et d\'analyse assistée par IA dans une seule application de référence.',
+        es: 'Para tareas ocasionales como combinar o convertir archivos, herramientas gratuitas como iLovePDF o Smallpdf suelen bastar. Acrobat justifica su precio de $19.99/mes para profesionales que necesitan edición avanzada, firmas electrónicas legalmente vinculantes, redacción de datos sensibles, verificaciones de accesibilidad y análisis asistido por IA en una sola app de referencia.',
+        ar: 'بالنسبة للمهام العرضية مثل دمج أو تحويل الملفات، تكفي عادة أدوات مجانية مثل iLovePDF أو Smallpdf. يبرر Acrobat سعره البالغ 19.99 دولاراً شهرياً للمحترفين الذين يحتاجون إلى تحرير متقدم وتوقيعات إلكترونية ملزمة قانونياً وتنقيح للبيانات الحساسة وفحوصات إمكانية الوصول وتحليل مدعوم بالذكاء الاصطناعي في تطبيق واحد موثوق ومعياري في الصناعة.',
+      },
+    },
+  ],
 };

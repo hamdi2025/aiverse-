@@ -5062,6 +5062,793 @@ export const TOOLS_DATA: AITool[] = [
       },
     ],
   },
+  {
+    id: 'sim-ai',
+    name: 'Sim',
+    category: 'agents',
+    description: {
+      en: "Open-source AI workspace for building, deploying, and managing AI agents across 1,000+ integrations and every major LLM — visually, conversationally, or with code.",
+      fr: "Espace de travail IA open-source pour créer, déployer et gérer des agents IA sur 1 000+ intégrations et tous les grands LLM — visuellement, par conversation ou par code.",
+      es: "Espacio de trabajo de IA de código abierto para construir, desplegar y gestionar agentes de IA en 1,000+ integraciones y todos los principales LLMs — visualmente, conversacionalmente o con código.",
+      ar: "مساحة عمل ذكاء اصطناعي مفتوحة المصدر لبناء ونشر وإدارة وكلاء الذكاء الاصطناعي عبر أكثر من 1,000 تكامل وجميع نماذج اللغة الكبرى — بصرياً أو محادثةً أو بالكود.",
+    },
+    rating: 4.6,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free (self-host) / Cloud plans available',
+      fr: 'Gratuit (auto-hébergé) / Plans cloud disponibles',
+      es: 'Gratis (auto-alojado) / Planes cloud disponibles',
+      ar: 'مجاني (استضافة ذاتية) / خطط سحابية متاحة',
+    },
+    websiteUrl: 'https://www.sim.ai',
+    views: 4200,
+    company: 'Sim Studio', founded: '2025', hasAPI: true, hasMobileApp: false,
+    releaseDate: 'Mar 2026', lastUpdate: 'Jul 2026',
+    pros: [
+      'Open-source (Apache 2.0) & fully self-hostable',
+      '1,000+ integrations out of the box',
+      'Visual canvas + conversational builder — no code required',
+      'Live traces & cost logs per run',
+      'SOC2 compliant, 100K+ builders, $7M Series A',
+      '28.8K GitHub stars',
+    ],
+    cons: [
+      'Cloud pricing not fully published yet',
+      'Self-hosting requires infrastructure management',
+      'Smaller ecosystem than n8n for non-AI automations',
+    ],
+    tags: ['Agents', 'Open-Source', 'Workflow', 'Automation', 'LLM', 'No-Code'],
+    useCases: ['Building multi-step AI agent workflows', 'Connecting LLMs to internal tools and APIs', 'Replacing RPA with AI-native agents', 'Prototyping agents visually before coding'],
+    verdict: 'Sim is the best open-source pick for teams who want a visual, production-ready workspace for AI agents — comparable to n8n but purpose-built for agentic workloads with native LLM support.',
+    faq: [
+      {
+        question: {
+          en: 'Is Sim free to use?',
+          fr: 'Sim est-il gratuit ?',
+          es: '¿Sim es gratuito?',
+          ar: 'هل Sim مجاني؟',
+        },
+        answer: {
+          en: 'Yes — Sim is open-source under Apache 2.0 and can be self-hosted for free. A managed cloud option is also available for teams that prefer not to self-host.',
+          fr: 'Oui — Sim est open-source sous Apache 2.0 et peut être auto-hébergé gratuitement. Une option cloud gérée est également disponible pour les équipes qui préfèrent ne pas auto-héberger.',
+          es: 'Sí — Sim es de código abierto bajo Apache 2.0 y puede alojarse por cuenta propia de forma gratuita. También está disponible una opción cloud gestionada.',
+          ar: 'نعم — Sim مفتوح المصدر بموجب Apache 2.0 ويمكن استضافته ذاتياً مجاناً. كما تتوفر خيارات سحابية مُدارة للفرق.',
+        },
+      },
+      {
+        question: {
+          en: 'How does Sim compare to n8n for AI agents?',
+          fr: 'Comment Sim se compare-t-il à n8n pour les agents IA ?',
+          es: '¿Cómo se compara Sim con n8n para agentes de IA?',
+          ar: 'كيف تقارن Sim بـ n8n في مجال وكلاء الذكاء الاصطناعي؟',
+        },
+        answer: {
+          en: "Sim is purpose-built for AI agent workflows: every block is LLM-aware, traces are first-class, and the visual builder is designed around agentic patterns. n8n is broader and better for traditional automation; Sim is the better pick when AI reasoning is at the center of your workflow.",
+          fr: "Sim est conçu spécifiquement pour les workflows d'agents IA : chaque bloc est compatible LLM, les traces sont prioritaires, et le constructeur visuel est conçu autour des patterns agentiques. n8n est plus large et meilleur pour l'automatisation traditionnelle ; Sim est le meilleur choix quand le raisonnement IA est au cœur de votre workflow.",
+          es: "Sim está diseñado específicamente para flujos de trabajo de agentes IA: cada bloque es compatible con LLM, los trazados son de primera clase, y el constructor visual está diseñado en torno a patrones agénticos. n8n es más amplio y mejor para la automatización tradicional; Sim es la mejor opción cuando el razonamiento de IA está en el centro de tu flujo de trabajo.",
+          ar: "Sim مبني خصيصاً لسير عمل وكلاء الذكاء الاصطناعي: كل كتلة متوافقة مع LLM، والتتبع من الدرجة الأولى، والبناء المرئي مصمم حول الأنماط الوكيلة. n8n أوسع وأفضل للأتمتة التقليدية؛ Sim هو الاختيار الأفضل عندما يكون التفكير بالذكاء الاصطناعي في صميم سير عملك.",
+        },
+      },
+    ],
+  },
+  {
+    id: 'chatcut',
+    name: 'ChatCut',
+    category: 'video',
+    description: {
+      en: "AI video editor that turns natural-language prompts and transcript edits into real timeline edits — with captions, B-roll, music, voiceover, and motion graphics. Works in browser and inside ChatGPT or Codex.",
+      fr: "Éditeur vidéo IA qui transforme des instructions en langage naturel et des modifications de transcription en vraies coupes de timeline — avec sous-titres, B-roll, musique, voix off et motion design. Fonctionne dans le navigateur et dans ChatGPT ou Codex.",
+      es: "Editor de video con IA que convierte instrucciones en lenguaje natural y ediciones de transcripción en cortes reales de línea de tiempo — con subtítulos, B-roll, música, voz en off y gráficos en movimiento. Funciona en el navegador y dentro de ChatGPT o Codex.",
+      ar: "محرر فيديو بالذكاء الاصطناعي يحوّل التعليمات بالغة الطبيعية وتعديلات النص إلى تعديلات حقيقية على الجدول الزمني — مع تعليقات توضيحية وB-roll وموسيقى وتعليق صوتي ورسومات متحركة. يعمل في المتصفح وداخل ChatGPT أو Codex.",
+    },
+    rating: 4.4,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free tier / Pro plans available',
+      fr: 'Niveau gratuit / Plans Pro disponibles',
+      es: 'Nivel gratuito / Planes Pro disponibles',
+      ar: 'مستوى مجاني / خطط Pro متاحة',
+    },
+    websiteUrl: 'https://chatcut.io',
+    views: 2800,
+    company: 'ChatCut', founded: '2025', hasAPI: true, hasMobileApp: false,
+    releaseDate: 'Jul 2026', lastUpdate: 'Jul 2026',
+    pros: [
+      'Edit video by describing changes in plain English',
+      'Works directly inside ChatGPT and Codex (plugin)',
+      'Handles captions, B-roll, music, voiceover & motion graphics',
+      'Browser-based — no software install needed',
+      'Auto-removes silences and filler words from transcript',
+    ],
+    cons: [
+      'Very recently launched — feature set still maturing',
+      'Best for short-form / social content, not full film editing',
+      'Requires footage already uploaded to browser/ChatGPT',
+    ],
+    tags: ['Video Editing', 'AI', 'Content Creation', 'Captions', 'Short-form'],
+    useCases: ['Editing social media clips from raw footage', 'Generating captions and B-roll automatically', 'Repurposing long videos into shorts', 'AI-guided timeline editing via chat', 'Creator workflow inside ChatGPT'],
+    verdict: 'ChatCut is a strong pick for content creators who want to edit video conversationally without leaving their AI workflow — particularly valuable for teams already using ChatGPT or Codex as their primary workspace.',
+    faq: [
+      {
+        question: {
+          en: 'Can I use ChatCut directly inside ChatGPT?',
+          fr: 'Puis-je utiliser ChatCut directement dans ChatGPT ?',
+          es: '¿Puedo usar ChatCut directamente dentro de ChatGPT?',
+          ar: 'هل يمكنني استخدام ChatCut مباشرةً داخل ChatGPT؟',
+        },
+        answer: {
+          en: 'Yes — ChatCut has a Codex plugin that brings a full video editor into ChatGPT and Codex chats. You describe the edit you want and it applies changes to your timeline without switching apps.',
+          fr: 'Oui — ChatCut dispose d\'un plugin Codex qui apporte un éditeur vidéo complet dans les chats ChatGPT et Codex. Vous décrivez le montage souhaité et il applique les changements à votre timeline sans changer d\'application.',
+          es: 'Sí — ChatCut tiene un plugin de Codex que incorpora un editor de video completo en los chats de ChatGPT y Codex. Describes la edición que quieres y aplica cambios a tu línea de tiempo sin cambiar de aplicación.',
+          ar: 'نعم — يمتلك ChatCut مكوناً إضافياً لـ Codex يجلب محرر فيديو كاملاً إلى محادثات ChatGPT وCodex. تصف التعديل المطلوب وسيطبق التغييرات على جدولك الزمني دون تبديل التطبيقات.',
+        },
+      },
+    ],
+  },
+  {
+    id: 'fathom',
+    name: 'Fathom',
+    category: 'productivity',
+    description: {
+      en: "AI meeting assistant that records, transcribes, and summarizes video calls in 28 languages — with action items, CRM sync, and a free unlimited tier. Used by 300K+ companies.",
+      fr: "Assistant de réunion IA qui enregistre, transcrit et résume les appels vidéo en 28 langues — avec éléments d'action, synchronisation CRM et un niveau gratuit illimité. Utilisé par plus de 300 000 entreprises.",
+      es: "Asistente de reuniones con IA que graba, transcribe y resume videollamadas en 28 idiomas — con elementos de acción, sincronización CRM y un nivel gratuito ilimitado. Usado por más de 300,000 empresas.",
+      ar: "مساعد اجتماعات ذكي يسجّل مكالمات الفيديو ويحوّلها إلى نصوص ويلخصها بـ28 لغة — مع بنود العمل والمزامنة مع CRM ومستوى مجاني غير محدود. يستخدمه أكثر من 300,000 شركة.",
+    },
+    rating: 4.7,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free (unlimited) / $19/mo Premium',
+      fr: 'Gratuit (illimité) / 19$/mois Premium',
+      es: 'Gratis (ilimitado) / $19/mes Premium',
+      ar: 'مجاني (غير محدود) / ١٩ دولار شهرياً Premium',
+    },
+    websiteUrl: 'https://fathom.video',
+    views: 6500,
+    company: 'Fathom', founded: '2020', hasAPI: false, hasMobileApp: false,
+    releaseDate: 'Jan 2021', lastUpdate: 'Jun 2026',
+    pros: [
+      'Free tier is genuinely unlimited — no recording caps',
+      'Summaries and action items ready within 30 seconds post-call',
+      'Transcription in 28 languages with speaker identification',
+      'Direct CRM sync: HubSpot, Salesforce, and more',
+      'Fathom 3.0: bot-free recording (no bot joining your call)',
+      'G2 Best Software Award 2026, 4.8/5 on Trustpilot',
+    ],
+    cons: [
+      'Works with Zoom, Google Meet, and Teams only (no custom conferencing)',
+      'Free tier lacks CRM integrations (Premium required)',
+      'No video playback inside the tool — transcript/summary focused',
+    ],
+    tags: ['Meeting Notes', 'Transcription', 'Productivity', 'CRM', 'Zoom', 'Teams'],
+    useCases: ['Automatic meeting summaries', 'Action-item extraction from calls', 'Syncing call notes to CRM', 'Sales call coaching and review', 'Multilingual transcription for global teams'],
+    verdict: 'Fathom is the strongest free meeting notetaker available in 2026 — unlimited recordings, 30-second summaries, and a bot-free recording mode that does not interrupt your call experience. Premium unlocks CRM sync for sales teams.',
+    faq: [
+      {
+        question: {
+          en: 'Is Fathom really free forever?',
+          fr: 'Fathom est-il vraiment gratuit pour toujours ?',
+          es: '¿Fathom es realmente gratuito para siempre?',
+          ar: 'هل Fathom مجاني حقاً للأبد؟',
+        },
+        answer: {
+          en: 'Yes — the free tier offers unlimited meeting recordings and AI summaries with no cap. Premium ($19/mo) adds CRM integrations, custom AI templates, and team collaboration features.',
+          fr: 'Oui — le niveau gratuit offre des enregistrements de réunions illimités et des résumés IA sans limite. Premium (19$/mois) ajoute les intégrations CRM, les modèles IA personnalisés et les fonctionnalités de collaboration en équipe.',
+          es: 'Sí — el nivel gratuito ofrece grabaciones ilimitadas de reuniones y resúmenes de IA sin límite. Premium ($19/mes) añade integraciones CRM, plantillas de IA personalizadas y funciones de colaboración en equipo.',
+          ar: 'نعم — يوفر المستوى المجاني تسجيلات اجتماعات غير محدودة وملخصات ذكاء اصطناعي بدون سقف. Premium (١٩ دولار/شهر) يضيف تكاملات CRM وقوالب ذكاء اصطناعي مخصصة وميزات تعاون الفريق.',
+        },
+      },
+      {
+        question: {
+          en: "What is Fathom's bot-free recording?",
+          fr: "Qu'est-ce que l'enregistrement sans bot de Fathom ?",
+          es: '¿Qué es la grabación sin bot de Fathom?',
+          ar: 'ما هو التسجيل بدون بوت في Fathom؟',
+        },
+        answer: {
+          en: "Introduced in Fathom 3.0, bot-free recording means Fathom records your call without sending a visible bot participant into the meeting. The recording happens on your device, so your guests never see a 'Fathom Bot' join the call.",
+          fr: "Introduit dans Fathom 3.0, l'enregistrement sans bot signifie que Fathom enregistre votre appel sans envoyer un bot participant visible dans la réunion. L'enregistrement se fait sur votre appareil, de sorte que vos invités ne voient jamais un 'Fathom Bot' rejoindre l'appel.",
+          es: "Introducida en Fathom 3.0, la grabación sin bot significa que Fathom graba tu llamada sin enviar un participante bot visible a la reunión. La grabación ocurre en tu dispositivo, por lo que tus invitados nunca ven un 'Fathom Bot' unirse a la llamada.",
+          ar: "المُقدَّم في Fathom 3.0، التسجيل بدون بوت يعني أن Fathom يسجّل مكالمتك دون إرسال مشارك بوت مرئي إلى الاجتماع. يتم التسجيل على جهازك، لذا لن يرى ضيوفك أبداً 'Fathom Bot' ينضم إلى المكالمة.",
+        },
+      },
+    ],
+  },
+  {
+    id: 'kiro',
+    name: 'Kiro',
+    category: 'code',
+    description: {
+      en: "AWS's spec-driven agentic IDE that generates requirements, design docs, and task lists before writing a single line of code — built on VS Code with Claude Sonnet 4.5 inside.",
+      fr: "L'IDE agentique spec-driven d'AWS qui génère exigences, documents de conception et listes de tâches avant d'écrire la moindre ligne de code — basé sur VS Code avec Claude Sonnet 4.5 intégré.",
+      es: "El IDE agéntico spec-driven de AWS que genera requisitos, documentos de diseño y listas de tareas antes de escribir una sola línea de código — basado en VS Code con Claude Sonnet 4.5 integrado.",
+      ar: "بيئة التطوير الذكية المدفوعة بالمواصفات من AWS تولّد المتطلبات ووثائق التصميم وقوائم المهام قبل كتابة سطر واحد من الكود — مبنية على VS Code مع Claude Sonnet 4.5 مدمج.",
+    },
+    rating: 4.4,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free (50 credits/mo) / $20/mo Pro',
+      fr: 'Gratuit (50 crédits/mois) / 20$/mois Pro',
+      es: 'Gratis (50 créditos/mes) / $20/mes Pro',
+      ar: 'مجاني (50 رصيد/شهر) / ٢٠ دولار شهرياً Pro',
+    },
+    websiteUrl: 'https://kiro.dev',
+    views: 5200,
+    company: 'Amazon Web Services', founded: '2025', hasAPI: false, hasMobileApp: false,
+    releaseDate: 'May 2026', lastUpdate: 'Jul 2026',
+    pros: [
+      'Spec-first workflow: requirements & design docs generated before code',
+      'Built on VS Code — compatible with Open VSX extensions and shortcuts',
+      'Powered by Claude Sonnet 4.5 via Amazon Bedrock',
+      'MCP (Model Context Protocol) support on all tiers',
+      'Used by ~70% of Amazon software engineers',
+      'Best structured AI IDE for production-grade work',
+    ],
+    cons: [
+      'Free tier limited to 50 credits/month (not suitable for daily professional use)',
+      'Spec-driven approach too heavyweight for quick prototypes',
+      'Depends on AWS reliability and Bedrock availability',
+      'No equivalent plugin marketplace to VS Code Marketplace (Open VSX only)',
+    ],
+    tags: ['IDE', 'Agentic', 'Code', 'AWS', 'Spec-driven', 'Claude'],
+    useCases: ['Production feature development with structured specs', 'Large team codebases needing traceability', 'Replacing Amazon Q Developer', 'Agentic multi-file code generation', 'Requirements-driven software projects'],
+    verdict: 'Kiro is the most structured AI coding environment available in 2026 — ideal for teams building production software who want traceability and a plan before any code is written. The free tier is enough to evaluate the workflow; Pro ($20/mo) unlocks daily professional use.',
+    faq: [
+      {
+        question: {
+          en: 'What makes Kiro different from Cursor or GitHub Copilot?',
+          fr: 'En quoi Kiro est-il différent de Cursor ou GitHub Copilot ?',
+          es: '¿En qué se diferencia Kiro de Cursor o GitHub Copilot?',
+          ar: 'ما الذي يميّز Kiro عن Cursor أو GitHub Copilot؟',
+        },
+        answer: {
+          en: 'Kiro introduces spec-driven development: instead of jumping from prompt to code, it first generates a requirements document, a design document, and a structured task list. Only after you review and approve the plan does it write code. Cursor and Copilot go directly prompt-to-code, making Kiro better for production work and worse for quick prototypes.',
+          fr: "Kiro introduit le développement spec-driven : au lieu de passer directement du prompt au code, il génère d'abord un document d'exigences, un document de conception et une liste de tâches structurée. Ce n'est qu'après votre validation du plan qu'il écrit le code. Cursor et Copilot vont directement du prompt au code, ce qui rend Kiro meilleur pour le travail en production et moins adapté aux prototypes rapides.",
+          es: 'Kiro introduce el desarrollo spec-driven: en lugar de pasar directamente de prompt a código, primero genera un documento de requisitos, un documento de diseño y una lista de tareas estructurada. Solo después de revisar y aprobar el plan escribe código. Cursor y Copilot van directamente de prompt a código, lo que hace a Kiro mejor para trabajo en producción y menos adecuado para prototipos rápidos.',
+          ar: 'يُقدّم Kiro التطوير المدفوع بالمواصفات: بدلاً من الانتقال مباشرة من الموجّه إلى الكود، يولّد أولاً وثيقة متطلبات ووثيقة تصميم وقائمة مهام منظمة. فقط بعد مراجعتك وموافقتك على الخطة يكتب الكود. Cursor وCopilot يذهبان مباشرة من الموجّه إلى الكود، مما يجعل Kiro أفضل للعمل الإنتاجي وأقل ملاءمة للنماذج الأولية السريعة.',
+        },
+      },
+      {
+        question: {
+          en: 'Is Kiro free to use?',
+          fr: 'Kiro est-il gratuit ?',
+          es: '¿Es Kiro gratuito?',
+          ar: 'هل Kiro مجاني للاستخدام؟',
+        },
+        answer: {
+          en: 'Yes, Kiro has a free tier with 50 credits per month plus 500 bonus credits on signup. This is enough to test the spec-driven workflow on a real feature but not sufficient for full-time professional use. Pro ($20/mo) gives 1,000 credits/month.',
+          fr: 'Oui, Kiro dispose d\'un niveau gratuit avec 50 crédits par mois plus 500 crédits bonus à l\'inscription. C\'est suffisant pour tester le workflow spec-driven sur une vraie fonctionnalité, mais pas assez pour une utilisation professionnelle à temps plein. Pro (20$/mois) offre 1 000 crédits/mois.',
+          es: 'Sí, Kiro tiene un nivel gratuito con 50 créditos por mes más 500 créditos de bonificación al registrarse. Esto es suficiente para probar el flujo de trabajo spec-driven en una función real, pero no es suficiente para uso profesional a tiempo completo. Pro ($20/mes) da 1,000 créditos/mes.',
+          ar: 'نعم، يمتلك Kiro مستوى مجانياً بـ50 رصيداً شهرياً بالإضافة إلى 500 رصيد مكافأة عند التسجيل. هذا كافٍ لاختبار سير عمل المواصفات على ميزة حقيقية لكنه غير كافٍ للاستخدام المهني بدوام كامل. Pro (٢٠ دولار/شهر) يمنح 1,000 رصيد شهرياً.',
+        },
+      },
+    ],
+  },
+  {
+    id: 'plugthis',
+    name: 'PlugThis',
+    category: 'code',
+    description: {
+      en: "No-code AI Chrome extension builder — describe what you want in plain English and get a working, installable Manifest V3 Chrome extension in under two minutes.",
+      fr: "Constructeur d'extensions Chrome sans code par IA — décrivez ce que vous voulez en anglais courant et obtenez une extension Chrome Manifest V3 fonctionnelle et installable en moins de deux minutes.",
+      es: "Constructor de extensiones Chrome sin código con IA — describe lo que quieres en inglés sencillo y obtén una extensión Chrome Manifest V3 funcional e instalable en menos de dos minutos.",
+      ar: "باني إضافات Chrome بالذكاء الاصطناعي بدون كود — صِف ما تريد بلغة بسيطة واحصل على إضافة Chrome Manifest V3 تعمل وقابلة للتثبيت في أقل من دقيقتين.",
+    },
+    rating: 4.3,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free trial / ~$20/mo',
+      fr: 'Essai gratuit / ~20$/mois',
+      es: 'Prueba gratuita / ~$20/mes',
+      ar: 'تجربة مجانية / ~٢٠ دولار شهرياً',
+    },
+    websiteUrl: 'https://plugthis.ai',
+    views: 3100,
+    company: 'PlugThis', founded: '2026', hasAPI: false, hasMobileApp: false,
+    releaseDate: 'Jul 2026', lastUpdate: 'Jul 2026',
+    pros: [
+      'Go from idea to working Chrome extension in under 2 minutes',
+      'No coding knowledge required — fully conversational interface',
+      'Generates manifest, content scripts, popup UI, and service workers',
+      'Iterative chat: "Add a settings page", "Make it work on YouTube only"',
+      'Supports AI extensions with OpenAI / Anthropic / Gemini API keys',
+      '515 upvotes on Product Hunt at launch',
+    ],
+    cons: [
+      'Very recently launched — some edge cases may not be covered yet',
+      'Generated extensions may need manual review before Chrome Web Store submission',
+      'More suited to simple-to-medium complexity extensions',
+    ],
+    tags: ['Chrome Extension', 'No-Code', 'Browser', 'Code', 'AI Builder'],
+    useCases: ['Building custom productivity Chrome extensions', 'Automating repetitive browser tasks without coding', 'Creating AI-powered Chrome extensions with GPT/Claude', 'Prototyping browser tools for teams', 'Indie developers shipping browser utilities fast'],
+    verdict: 'PlugThis is the fastest way to go from an idea to an installable Chrome extension in 2026, with zero coding required. Ideal for non-developers who want a custom browser tool, or developers who want to skip the boilerplate entirely.',
+  },
+  {
+    id: 'scarlett-ai',
+    name: 'Scarlett',
+    category: 'agents',
+    description: {
+      en: "AI co-worker that lives in Slack and iMessage — she has her own computer in the cloud, writes and runs code, and completes real tasks autonomously, not just chat.",
+      fr: "Collègue IA qui vit dans Slack et iMessage — elle a son propre ordinateur dans le cloud, écrit et exécute du code, et accomplit de vraies tâches de manière autonome, pas seulement du chat.",
+      es: "Compañera de trabajo IA que vive en Slack e iMessage — tiene su propia computadora en la nube, escribe y ejecuta código, y completa tareas reales de forma autónoma, no solo chat.",
+      ar: "زميلة عمل ذكية تعيش في Slack وiMessage — تمتلك حاسوبها الخاص في السحابة وتكتب وتنفّذ الكود وتُكمل المهام الحقيقية بشكل مستقل، وليس مجرد محادثة.",
+    },
+    rating: 4.2,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free trial / Paid plans',
+      fr: 'Essai gratuit / Plans payants',
+      es: 'Prueba gratuita / Planes de pago',
+      ar: 'تجربة مجانية / خطط مدفوعة',
+    },
+    websiteUrl: 'https://tryscarlett.ai',
+    views: 2800,
+    company: 'Scarlett', founded: '2026', hasAPI: false, hasMobileApp: false,
+    releaseDate: 'Jul 2026', lastUpdate: 'Jul 2026',
+    pros: [
+      'Works inside Slack and iMessage — no new app to learn',
+      'Autonomous agent with a cloud computer, not a simple chatbot',
+      'Can write and execute code to complete tasks',
+      'Bridges CRM and marketing tasks inside existing messaging workflows',
+      '393 upvotes on Product Hunt at launch',
+    ],
+    cons: [
+      'Very early stage — limited to Slack and iMessage ecosystems',
+      'Trust and permissions need careful setup for sensitive workflows',
+      'Pricing not fully transparent yet',
+    ],
+    tags: ['Agents', 'Slack', 'Automation', 'AI Coworker', 'iMessage'],
+    useCases: ['Delegating CRM updates and lead research to an AI in Slack', 'Automating marketing tasks from a Slack command', 'Running code and data tasks without leaving iMessage', 'Replacing repetitive assistant work inside messaging tools', 'Autonomous task delegation for small teams'],
+    verdict: 'Scarlett is one of the first true AI co-workers that lives inside Slack rather than requiring a separate app — she executes code, accesses the web, and completes multi-step tasks on her own. Best for small teams who want to delegate autonomous work without leaving their existing messaging workflow.',
+    faq: [
+      {
+        question: {
+          en: 'How is Scarlett different from Slack AI or a chatbot?',
+          fr: 'En quoi Scarlett est-elle différente de Slack AI ou d\'un chatbot ?',
+          es: '¿En qué se diferencia Scarlett de Slack AI o un chatbot?',
+          ar: 'كيف تختلف Scarlett عن Slack AI أو روبوت محادثة؟',
+        },
+        answer: {
+          en: 'Scarlett is a fully autonomous AI agent, not a Q&A chatbot. She has her own cloud computer, can write and run code, browse the web, and complete multi-step tasks independently. Slack AI summarises conversations; Scarlett actually does the work — like updating a CRM, researching a lead, or running a data script — without needing you to walk her through each step.',
+          fr: "Scarlett est un agent IA entièrement autonome, pas un chatbot Q&R. Elle dispose de son propre ordinateur cloud, peut écrire et exécuter du code, naviguer sur le web et accomplir des tâches multi-étapes de manière indépendante. Slack AI résume les conversations ; Scarlett fait réellement le travail — comme mettre à jour un CRM, rechercher un prospect ou exécuter un script de données — sans que vous ayez à la guider étape par étape.",
+          es: 'Scarlett es un agente de IA completamente autónomo, no un chatbot de preguntas y respuestas. Tiene su propia computadora en la nube, puede escribir y ejecutar código, navegar por la web y completar tareas de varios pasos de forma independiente. Slack AI resume conversaciones; Scarlett realmente hace el trabajo — como actualizar un CRM, investigar un lead o ejecutar un script de datos — sin necesidad de guiarla paso a paso.',
+          ar: 'Scarlett عميل ذكاء اصطناعي مستقل تماماً، وليس روبوت محادثة للأسئلة والأجوبة. تمتلك حاسوبها السحابي الخاص، ويمكنها كتابة وتنفيذ الكود وتصفح الويب وإتمام مهام متعددة الخطوات بشكل مستقل. Slack AI يلخّص المحادثات؛ أما Scarlett فتنجز العمل فعلياً — كتحديث CRM أو البحث عن عميل محتمل أو تشغيل سكريبت بيانات — دون الحاجة إلى توجيهها خطوة بخطوة.',
+        },
+      },
+    ],
+  },
+  {
+    id: 'murmell',
+    name: 'Murmell',
+    category: 'agents',
+    description: {
+      en: "Shared cloud canvas where your team and multiple AI coding agents (Claude Code, Codex, Kimi, OpenCode) work simultaneously on the same repository without overwriting each other — conflicts are eliminated by file-claiming before writing.",
+      fr: "Canvas cloud partagé où votre équipe et plusieurs agents IA de codage (Claude Code, Codex, Kimi, OpenCode) travaillent simultanément sur le même dépôt sans se surpasser — les conflits sont éliminés grâce à la réservation de fichiers avant l'écriture.",
+      es: "Lienzo en la nube compartido donde tu equipo y múltiples agentes de codificación IA (Claude Code, Codex, Kimi, OpenCode) trabajan simultáneamente en el mismo repositorio sin sobreescribirse — los conflictos se eliminan reservando archivos antes de escribir.",
+      ar: "لوحة سحابية مشتركة يعمل فيها فريقك وعدة عملاء برمجية ذكية (Claude Code وCodex وKimi وOpenCode) في نفس الوقت على المستودع ذاته دون تعارض — يتم تجنّب التعارضات عبر حجز الملفات قبل الكتابة.",
+    },
+    rating: 4.3,
+    pricing: 'Paid',
+    pricingLocalized: {
+      en: 'From $39/mo (Solo), $69 (Pro), $149 (Builder) — 7-day free trial',
+      fr: 'À partir de 39$/mois (Solo), 69$ (Pro), 149$ (Builder) — essai gratuit 7 jours',
+      es: 'Desde $39/mes (Solo), $69 (Pro), $149 (Builder) — prueba gratuita 7 días',
+      ar: 'ابتداءً من ٣٩ دولار شهرياً (Solo)، ٦٩$ (Pro)، ١٤٩$ (Builder) — تجربة مجانية ٧ أيام',
+    },
+    websiteUrl: 'https://murmell.com',
+    views: 2600,
+    company: 'Murmell', founded: '2026', hasAPI: false, hasMobileApp: false,
+    releaseDate: 'Jul 2026', lastUpdate: 'Jul 2026',
+    pros: [
+      'Run Claude Code, Codex, Kimi and OpenCode in parallel on one shared canvas',
+      'File-claiming prevents agents from overwriting each other',
+      'Everyone on the team sees the same live canvas in real time',
+      'Work continues in the cloud even after you close your laptop',
+      'Shareable read-only watch links are free with no account required',
+      'All work lands back in git — no lock-in',
+    ],
+    cons: [
+      'Paid only — no permanent free tier',
+      'Very early stage; mobile simulator support is still coming',
+      'Currently limited to the agents it explicitly supports (Claude Code, Codex, Kimi, OpenCode)',
+      'Requires cloud compute budget in addition to the subscription',
+    ],
+    tags: ['Multi-Agent', 'Coding', 'Collaboration', 'Cloud IDE', 'Agents'],
+    useCases: [
+      'Running multiple AI coding agents in parallel on the same codebase',
+      'Letting engineering teams and agents co-edit a repository in real time',
+      'Delegating overnight coding sprints to AI agents without supervision',
+      'Prototyping full-stack features with several specialized agents at once',
+      'Remote team collaboration on AI-driven software projects',
+    ],
+    verdict: 'Murmell is the first shared canvas built specifically for multi-agent coding teams. If you want to run Claude Code, Codex, and Kimi simultaneously on the same repo without conflicts — and have your whole team watching in real time — Murmell is the only tool that does this out of the box.',
+    faq: [
+      {
+        question: {
+          en: 'How does Murmell prevent multiple agents from overwriting each other?',
+          fr: 'Comment Murmell empêche-t-il plusieurs agents de s\'écraser mutuellement ?',
+          es: '¿Cómo evita Murmell que varios agentes se sobreescriban?',
+          ar: 'كيف يمنع Murmell عدة عملاء من الكتابة فوق بعضهم البعض؟',
+        },
+        answer: {
+          en: 'Each AI agent "claims" the files it is about to write before making any changes. This file-locking system means that if Claude Code is editing auth.ts, no other agent can touch that file at the same time. Once the agent finishes, the lock is released and another agent or team member can pick it up. All changes ultimately land back in git, so your history stays clean.',
+          fr: "Chaque agent IA « réserve » les fichiers qu'il va modifier avant d'effectuer des changements. Ce système de verrouillage signifie que si Claude Code modifie auth.ts, aucun autre agent ne peut toucher ce fichier en même temps. Une fois l'agent terminé, le verrou est libéré. Tous les changements atterrissent dans git, donc votre historique reste propre.",
+          es: 'Cada agente IA "reclama" los archivos que va a escribir antes de hacer cambios. Este sistema de bloqueo significa que si Claude Code está editando auth.ts, ningún otro agente puede tocar ese archivo al mismo tiempo. Una vez que el agente termina, el bloqueo se libera. Todos los cambios terminan en git, por lo que tu historial permanece limpio.',
+          ar: 'يقوم كل عميل ذكي بـ"حجز" الملفات التي سيكتب فيها قبل إجراء أي تغييرات. هذا النظام يعني أنه إذا كان Claude Code يعدّل auth.ts، فلا يمكن لأي عميل آخر لمس ذلك الملف في نفس الوقت. بمجرد انتهاء العميل، يُرفع الحجز وتعود التغييرات إلى git.',
+        },
+      },
+      {
+        question: {
+          en: 'Can I watch a Murmell canvas without a paid account?',
+          fr: 'Puis-je regarder un canvas Murmell sans compte payant ?',
+          es: '¿Puedo ver un canvas de Murmell sin una cuenta de pago?',
+          ar: 'هل يمكنني مشاهدة لوحة Murmell بدون حساب مدفوع؟',
+        },
+        answer: {
+          en: 'Yes. Read-only watch links are free and uncapped — no account required. Anyone with the link can see the live canvas, who has joined, which agent window they are watching, and where cursors are. Only creating and running agents requires a paid plan.',
+          fr: 'Oui. Les liens de lecture seule sont gratuits et illimités — aucun compte requis. Toute personne disposant du lien peut voir le canvas en direct, qui a rejoint, quel agent est en cours, et où sont les curseurs. Seule la création et l\'exécution d\'agents nécessite un plan payant.',
+          es: 'Sí. Los enlaces de solo lectura son gratuitos e ilimitados — no se requiere cuenta. Cualquiera con el enlace puede ver el canvas en vivo, quién se ha unido, qué ventana de agente están viendo y dónde están los cursores. Solo crear y ejecutar agentes requiere un plan de pago.',
+          ar: 'نعم. روابط المشاهدة للقراءة فقط مجانية وغير محدودة — ولا تتطلب حساباً. يمكن لأي شخص لديه الرابط رؤية اللوحة مباشرةً، ومن انضم، وأي نافذة عميل يشاهدونها، وأين المؤشرات. فقط إنشاء وتشغيل العملاء يتطلب خطة مدفوعة.',
+        },
+      },
+    ],
+  },
+  {
+    id: 'mina-meeting',
+    name: 'Mina',
+    category: 'productivity',
+    description: {
+      en: "AI meeting assistant that actively speaks and executes tasks during live calls — not just transcribes. Mina integrates with 200+ tools (Slack, HubSpot, Salesforce, Jira, Notion) to update CRMs, file tickets, and send follow-ups before the meeting ends.",
+      fr: "Assistant IA pour réunions qui parle et exécute des tâches pendant les appels en direct — pas seulement de la transcription. Mina s'intègre à 200+ outils (Slack, HubSpot, Salesforce, Jira, Notion) pour mettre à jour les CRM, créer des tickets et envoyer des suivis avant la fin de la réunion.",
+      es: "Asistente de reuniones IA que habla activamente y ejecuta tareas durante las llamadas en vivo — no solo transcribe. Mina se integra con 200+ herramientas (Slack, HubSpot, Salesforce, Jira, Notion) para actualizar CRMs, crear tickets y enviar seguimientos antes de que termine la reunión.",
+      ar: "مساعد اجتماعات ذكي يتحدث وينفّذ المهام أثناء المكالمات المباشرة — وليس مجرد نسخ. يتكامل Mina مع أكثر من 200 أداة (Slack وHubSpot وSalesforce وJira وNotion) لتحديث CRM وإنشاء تذاكر وإرسال متابعات قبل انتهاء الاجتماع.",
+    },
+    rating: 4.5,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free trial / Paid plans',
+      fr: 'Essai gratuit / Plans payants',
+      es: 'Prueba gratuita / Planes de pago',
+      ar: 'تجربة مجانية / خطط مدفوعة',
+    },
+    websiteUrl: 'https://getmina.ai',
+    views: 3400,
+    company: 'Mina AI', founded: '2025', hasAPI: true, hasMobileApp: false,
+    releaseDate: 'Jun 2026', lastUpdate: 'Jul 2026',
+    pros: [
+      'Actively speaks during calls — not just a silent transcriber',
+      '200+ integrations including Slack, HubSpot, Salesforce, Jira, GitHub, Notion',
+      'Files tickets, updates CRM, and books follow-ups in real time during the meeting',
+      'Supports sales calls, standups, interviews, and customer conversations',
+      '#1 Product of the Day on Product Hunt (497 upvotes, June 2026)',
+      'Works on Zoom, Google Meet, and Microsoft Teams',
+    ],
+    cons: [
+      'Very recently launched — fewer user reviews available yet',
+      'Pricing not fully transparent (requires signup to see plans)',
+      'Speaking during calls may feel intrusive in formal settings',
+      'Relies heavily on integrations being correctly configured',
+    ],
+    tags: ['Meetings', 'AI Assistant', 'CRM', 'Automation', 'Productivity'],
+    useCases: [
+      'Sales calls: live objection handling and instant CRM updates',
+      'Engineering standups: auto-filing Jira tickets and Slack summaries',
+      'Customer interviews: live synthesis and Notion doc generation',
+      'Hiring interviews: structured note-taking and ATS updates during the call',
+      'Team retrospectives: action item capture and automatic assignment',
+    ],
+    verdict: 'Mina is the next generation of meeting assistant — it does not just record and transcribe after the fact, it acts during the call. If your work involves sales, hiring, or customer conversations where CRM data and follow-ups matter, Mina removes the entire post-meeting admin loop.',
+    faq: [
+      {
+        question: {
+          en: 'How is Mina different from Otter.ai, Fireflies, or Granola?',
+          fr: 'En quoi Mina est-elle différente d\'Otter.ai, Fireflies ou Granola ?',
+          es: '¿En qué se diferencia Mina de Otter.ai, Fireflies o Granola?',
+          ar: 'كيف يختلف Mina عن Otter.ai وFireflies وGranola؟',
+        },
+        answer: {
+          en: 'Otter, Fireflies, and Granola are passive transcribers — they record, then generate summaries after the meeting ends. Mina is active: it can speak during the call, pull context from your connected tools in real time, and execute tasks (update a CRM field, file a Jira ticket, post to Slack) while the conversation is still happening. The meeting ends with the admin already done.',
+          fr: 'Otter, Fireflies et Granola sont des transcripteurs passifs — ils enregistrent, puis génèrent des résumés après la réunion. Mina est active : elle peut parler pendant l\'appel, récupérer du contexte depuis vos outils connectés en temps réel, et exécuter des tâches (mettre à jour un champ CRM, créer un ticket Jira, poster sur Slack) pendant que la conversation se déroule encore. La réunion se termine avec l\'administration déjà faite.',
+          es: 'Otter, Fireflies y Granola son transcriptores pasivos — graban y luego generan resúmenes después de que termina la reunión. Mina es activa: puede hablar durante la llamada, obtener contexto de tus herramientas conectadas en tiempo real y ejecutar tareas (actualizar un campo de CRM, crear un ticket de Jira, publicar en Slack) mientras la conversación todavía está ocurriendo. La reunión termina con la administración ya hecha.',
+          ar: 'Otter وFireflies وGranola أدوات نسخ سلبية — تسجّل ثم تولّد ملخصات بعد انتهاء الاجتماع. أما Mina فهي نشطة: يمكنها التحدث أثناء المكالمة وجلب السياق من أدواتك المتصلة في الوقت الفعلي وتنفيذ المهام (تحديث CRM، إنشاء تذكرة Jira، النشر على Slack) بينما المحادثة لا تزال جارية. تنتهي الاجتماع وقد اكتملت جميع المهام الإدارية.',
+        },
+      },
+    ],
+  },
+  {
+    id: 'storychief-connect',
+    name: 'StoryChief Connect',
+    category: 'marketing',
+    description: {
+      en: "Unified AI content marketing workspace: write once, publish to WordPress, social media, and newsletters simultaneously. Features AI writing, SEO scoring, DataForSEO keyword data, and native Claude MCP integration to import AI-written content with one click.",
+      fr: "Espace de travail IA unifié pour le marketing de contenu : rédigez une fois, publiez sur WordPress, réseaux sociaux et newsletters simultanément. Inclut la rédaction IA, le scoring SEO, les données de mots-clés DataForSEO, et une intégration MCP Claude native pour importer du contenu IA en un clic.",
+      es: "Espacio de trabajo de marketing de contenidos con IA unificado: escribe una vez, publica en WordPress, redes sociales y newsletters simultáneamente. Incluye redacción IA, puntuación SEO, datos de palabras clave DataForSEO e integración nativa Claude MCP para importar contenido IA con un clic.",
+      ar: "مساحة عمل موحّدة لتسويق المحتوى بالذكاء الاصطناعي: اكتب مرة واحدة وانشر على WordPress ووسائل التواصل الاجتماعي والنشرات الإخبارية في نفس الوقت. يتضمن كتابة ذكية وتقييم SEO وبيانات كلمات مفتاحية من DataForSEO وتكامل Claude MCP لاستيراد المحتوى بنقرة واحدة.",
+    },
+    rating: 4.4,
+    pricing: 'Paid',
+    pricingLocalized: {
+      en: 'From €29/mo per user (Small Business) — no free plan, free trial available',
+      fr: 'À partir de 29€/mois par utilisateur (Small Business) — pas de plan gratuit, essai gratuit disponible',
+      es: 'Desde €29/mes por usuario (Small Business) — sin plan gratuito, prueba gratuita disponible',
+      ar: 'ابتداءً من ٢٩ يورو شهرياً للمستخدم (Small Business) — لا يوجد خطة مجانية، تجربة مجانية متاحة',
+    },
+    websiteUrl: 'https://www.storychief.io',
+    views: 3100,
+    company: 'StoryChief', founded: '2017', hasAPI: true, hasMobileApp: false,
+    releaseDate: 'Jan 2017', lastUpdate: 'Jul 2026',
+    pros: [
+      'Write once, publish everywhere: WordPress, social, newsletters from a single editor',
+      '1,000+ integrations covering every major CMS, social, and email platform',
+      'Native Claude MCP integration — import AI-written content directly from Claude',
+      'Built-in AI SEO scoring, readability checks, and DataForSEO keyword data',
+      'Real-time team collaboration with task assignment and approval workflows',
+      'AI-driven content audits to find and fix underperforming pages',
+    ],
+    cons: [
+      'No free plan — pricing starts at €29/mo per user',
+      'Can feel overwhelming for solo bloggers or very small teams',
+      'AI Content Agent add-on is an extra €50/mo',
+      'Some users report a learning curve for the full distribution setup',
+    ],
+    tags: ['Content Marketing', 'SEO', 'Multi-Channel Publishing', 'Claude MCP', 'Social Media'],
+    useCases: [
+      'Publishing blog content to WordPress and social in one click',
+      'Running a content calendar for a marketing team of 3–20 people',
+      'Importing Claude-written drafts directly into StoryChief via MCP',
+      'Auditing and repurposing existing content for SEO improvements',
+      'Agencies managing multi-client content publishing workflows',
+    ],
+    verdict: 'StoryChief Connect is the most complete "write once, distribute everywhere" platform for content marketing teams. Its 2026 Claude MCP integration means you can now research and write in Claude and push the final draft directly into StoryChief without copy-pasting — a genuine workflow improvement for teams already using Claude.',
+    faq: [
+      {
+        question: {
+          en: 'What does the Claude MCP integration in StoryChief actually do?',
+          fr: 'Que fait concrètement l\'intégration MCP Claude dans StoryChief ?',
+          es: '¿Qué hace concretamente la integración Claude MCP en StoryChief?',
+          ar: 'ماذا تفعل تكامل Claude MCP في StoryChief بشكل عملي؟',
+        },
+        answer: {
+          en: 'StoryChief\'s Claude MCP integration works in both directions. First, you can write or draft content inside Claude (claude.ai or the desktop app) and import it directly into StoryChief with a couple of clicks — no copy-pasting. Second, Claude (and other connected AI assistants) can read, search, and update scheduled or published posts in StoryChief via the MCP, so you can ask Claude to fetch last week\'s posts, suggest edits, and push the updated copy — all from within Claude.',
+          fr: "L'intégration MCP Claude de StoryChief fonctionne dans les deux sens. D'abord, vous pouvez rédiger du contenu dans Claude et l'importer directement dans StoryChief en quelques clics. Ensuite, Claude peut lire, rechercher et mettre à jour des posts programmés ou publiés dans StoryChief via le MCP — tout depuis Claude.",
+          es: 'La integración Claude MCP de StoryChief funciona en ambas direcciones. Primero, puedes redactar contenido en Claude e importarlo directamente en StoryChief con un par de clics. Segundo, Claude puede leer, buscar y actualizar posts programados o publicados en StoryChief vía el MCP, todo desde dentro de Claude.',
+          ar: 'يعمل تكامل Claude MCP في StoryChief في الاتجاهين. أولاً، يمكنك كتابة المحتوى في Claude واستيراده مباشرة إلى StoryChief بنقرات قليلة. ثانياً، يمكن لـ Claude قراءة وتحديث المنشورات المجدولة أو المنشورة في StoryChief عبر MCP — كل ذلك من داخل Claude.',
+        },
+      },
+    ],
+  },
+  {
+    id: 'spellbook',
+    name: 'Spellbook',
+    category: 'legal',
+    description: {
+      en: "AI contract review and drafting tool that plugs into Microsoft Word, redlining agreements against 2,300+ market-standard clauses and custom firm playbooks.",
+      fr: "Outil IA de révision et rédaction de contrats intégré à Microsoft Word, qui annote les accords en les comparant à plus de 2300 clauses standards du marché et à des playbooks personnalisés.",
+      es: "Herramienta de IA para revisar y redactar contratos integrada en Microsoft Word, que compara los acuerdos con más de 2300 cláusulas estándar del mercado y playbooks personalizados.",
+      ar: "أداة بالذكاء الاصطناعي لمراجعة وصياغة العقود تعمل داخل Microsoft Word، وتقارن الاتفاقيات بأكثر من 2300 بند معياري في السوق وبأدلة عمل مخصصة للشركة."
+    },
+    rating: 4.6,
+    pricing: 'Paid',
+    pricingLocalized: {
+      en: 'From $89/user/mo',
+      fr: 'À partir de 89$/utilisateur/mois',
+      es: 'Desde $89/usuario/mes',
+      ar: 'ابتداءً من ٨٩ دولاراً لكل مستخدم شهرياً'
+    },
+    websiteUrl: 'https://www.spellbook.legal',
+    views: 5200,
+    company: 'Spellbook', founded: '2019', hasAPI: false, hasMobileApp: false,
+    releaseDate: 'Jul 2022', lastUpdate: 'Aug 2026',
+    pros: ['Works directly inside Microsoft Word', 'Benchmarks clauses against 2,300+ market standards', 'Custom playbooks for firm-specific rules', 'SOC 2 Type II & zero data retention', 'Used by 4,000+ law firms and legal teams'],
+    cons: ['No public pricing — custom quotes only', 'Word-centric, no standalone web editor for drafting', 'Steeper learning curve for non-technical staff', 'Best value requires higher-tier plans'],
+    tags: ['Legal AI', 'Contract Review', 'Redlining', 'Microsoft Word', 'Legal Tech'],
+    useCases: ['Contract review & redlining', 'Clause benchmarking against market standards', 'NDA and MSA drafting', 'In-house legal team workflows', 'Law firm contract negotiation'],
+    verdict: 'Spellbook is the strongest pick for transactional lawyers and in-house teams who live in Microsoft Word and want AI that benchmarks contracts against real market data rather than generic suggestions.',
+    faq: [
+      {
+        question: {
+          en: 'Does Spellbook replace a lawyer?',
+          fr: 'Spellbook remplace-t-il un avocat ?',
+          es: '¿Spellbook reemplaza a un abogado?',
+          ar: 'هل يحل Spellbook محل المحامي؟'
+        },
+        answer: {
+          en: 'No. Spellbook speeds up contract review and drafting by flagging risky clauses and suggesting redlines, but a qualified lawyer should still review and approve final agreements.',
+          fr: "Non. Spellbook accélère la révision et la rédaction des contrats en signalant les clauses à risque, mais un avocat qualifié doit toujours valider les accords finaux.",
+          es: 'No. Spellbook acelera la revisión y redacción de contratos señalando cláusulas de riesgo, pero un abogado calificado debe revisar y aprobar los acuerdos finales.',
+          ar: 'لا. يسرّع Spellbook مراجعة وصياغة العقود من خلال الإشارة إلى البنود الخطرة، لكن يجب أن يراجع محامٍ مؤهل الاتفاقيات النهائية ويعتمدها.'
+        }
+      },
+      {
+        question: {
+          en: 'Is Spellbook only for Microsoft Word?',
+          fr: 'Spellbook fonctionne-t-il uniquement avec Microsoft Word ?',
+          es: '¿Spellbook funciona solo con Microsoft Word?',
+          ar: 'هل يعمل Spellbook فقط مع Microsoft Word؟'
+        },
+        answer: {
+          en: 'Spellbook is built primarily as a Word add-in, which is where most contract drafting and review happens at law firms. It does not offer a full standalone web editor.',
+          fr: "Spellbook est conçu principalement comme un module complémentaire Word, là où se déroule la majorité de la rédaction et révision de contrats en cabinet. Il n'offre pas d'éditeur web autonome complet.",
+          es: 'Spellbook está diseñado principalmente como un complemento de Word, donde ocurre la mayoría de la redacción y revisión de contratos en despachos. No ofrece un editor web independiente completo.',
+          ar: 'تم تصميم Spellbook أساساً كإضافة لبرنامج Word، وهو المكان الذي تتم فيه معظم صياغة ومراجعة العقود في مكاتب المحاماة. لا يوفر محرر ويب مستقل كامل.'
+        }
+      }
+    ],
+  },
+  {
+    id: 'verdent',
+    name: 'Verdent',
+    category: 'code',
+    description: {
+      en: "AI-native coding suite that orchestrates multiple frontier models (Claude, Gemini, GPT) in parallel across isolated git worktrees, generating a reviewable plan before touching code.",
+      fr: "Suite de développement IA qui orchestre plusieurs modèles de pointe (Claude, Gemini, GPT) en parallèle dans des worktrees Git isolés, en générant un plan révisable avant de toucher au code.",
+      es: "Suite de codificación con IA que orquesta varios modelos de vanguardia (Claude, Gemini, GPT) en paralelo dentro de worktrees de Git aislados, generando un plan revisable antes de tocar el código.",
+      ar: "مجموعة برمجة مدعومة بالذكاء الاصطناعي تنسّق عدة نماذج متطورة (Claude وGemini وGPT) بالتوازي داخل مساحات عمل Git منعزلة، وتولّد خطة قابلة للمراجعة قبل لمس الكود."
+    },
+    rating: 4.5,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free trial / $19+/mo',
+      fr: 'Essai gratuit / 19$+/mois',
+      es: 'Prueba gratis / $19+/mes',
+      ar: 'تجربة مجانية / ١٩ دولاراً+ شهرياً'
+    },
+    websiteUrl: 'https://www.verdent.ai',
+    views: 3100,
+    company: 'Verdent', founded: '2025', hasAPI: false, hasMobileApp: false,
+    releaseDate: '2025', lastUpdate: 'Aug 2026',
+    pros: ['76.1% single-attempt SWE-bench Verified score', 'Parallel multi-agent execution in isolated worktrees', 'Plan-first workflow with reviewable visual plans', 'Supports Claude, Gemini and GPT models', 'SOC 2 Type I audit completed'],
+    cons: ['Steep onboarding curve for newcomers', 'Running top-tier models raises usage costs', 'Verification can miss logical edge cases', 'Mac-only desktop app (Windows coming)'],
+    tags: ['AI Coding Agent', 'Multi-Agent', 'Git Worktrees', 'SWE-bench', 'Developer Tools'],
+    useCases: ['Parallel multi-agent feature development', 'Automated code review before merge', 'Large refactors across a codebase', 'Model-assisted synthesis for complex bugs', 'Reproducible engineering workflows'],
+    verdict: 'Verdent is worth a look for senior developers and teams who want a plan-first, multi-model coding agent with strong SWE-bench results, though the learning curve and cost are real trade-offs versus simpler tools.',
+    faq: [
+      {
+        question: {
+          en: 'What makes Verdent different from Cursor or Claude Code?',
+          fr: 'Qu\'est-ce qui différencie Verdent de Cursor ou Claude Code ?',
+          es: '¿Qué diferencia a Verdent de Cursor o Claude Code?',
+          ar: 'ما الذي يميز Verdent عن Cursor أو Claude Code؟'
+        },
+        answer: {
+          en: 'Verdent runs multiple AI agents in parallel across isolated git worktrees and generates a reviewable plan before writing code, aiming to reduce merge conflicts and let you verify intent before execution.',
+          fr: "Verdent exécute plusieurs agents IA en parallèle dans des worktrees Git isolés et génère un plan révisable avant d'écrire le code, afin de réduire les conflits de fusion et de vérifier l'intention avant l'exécution.",
+          es: 'Verdent ejecuta varios agentes de IA en paralelo dentro de worktrees de Git aislados y genera un plan revisable antes de escribir código, con el objetivo de reducir conflictos de fusión y verificar la intención antes de ejecutar.',
+          ar: 'يشغّل Verdent عدة وكلاء ذكاء اصطناعي بالتوازي داخل مساحات عمل Git منعزلة، ويولّد خطة قابلة للمراجعة قبل كتابة الكود، بهدف تقليل تعارضات الدمج والتحقق من النية قبل التنفيذ.'
+        }
+      },
+      {
+        question: {
+          en: 'Is Verdent free to try?',
+          fr: 'Verdent propose-t-il un essai gratuit ?',
+          es: '¿Verdent tiene una prueba gratuita?',
+          ar: 'هل يوفر Verdent تجربة مجانية؟'
+        },
+        answer: {
+          en: 'Yes, Verdent offers a free trial before moving to paid plans starting around $19/mo, plus pay-as-you-go credit top-ups and an Eco Mode for lower-cost model usage.',
+          fr: "Oui, Verdent propose un essai gratuit avant de passer à des forfaits payants à partir d'environ 19$/mois, avec des recharges de crédits à l'usage et un mode Eco pour réduire les coûts.",
+          es: 'Sí, Verdent ofrece una prueba gratuita antes de pasar a planes pagos desde unos $19/mes, con recargas de créditos por uso y un modo Eco para reducir costos.',
+          ar: 'نعم، يوفر Verdent تجربة مجانية قبل الانتقال إلى الخطط المدفوعة التي تبدأ من حوالي ١٩ دولاراً شهرياً، مع إمكانية شراء أرصدة إضافية ووضع اقتصادي لخفض التكلفة.'
+        }
+      }
+    ],
+  },
+  {
+    id: 'kayak-ask-ai',
+    name: 'KAYAK Ask AI',
+    category: 'travel',
+    description: {
+      en: "Conversational AI trip planner from KAYAK that lets you search flights, hotels and cars in natural language while live, bookable results update alongside the chat.",
+      fr: "Planificateur de voyage conversationnel IA de KAYAK qui permet de rechercher vols, hôtels et voitures en langage naturel, avec des résultats réservables qui se mettent à jour en direct pendant la conversation.",
+      es: "Planificador de viajes conversacional con IA de KAYAK que permite buscar vuelos, hoteles y coches en lenguaje natural, con resultados reservables que se actualizan en vivo durante la conversación.",
+      ar: "مخطط رحلات حواري بالذكاء الاصطناعي من KAYAK يتيح البحث عن الرحلات الجوية والفنادق والسيارات بلغة طبيعية، مع نتائج قابلة للحجز تتحدث مباشرة أثناء المحادثة."
+    },
+    rating: 4.4,
+    pricing: 'Free',
+    pricingLocalized: {
+      en: 'Free',
+      fr: 'Gratuit',
+      es: 'Gratis',
+      ar: 'مجاني'
+    },
+    websiteUrl: 'https://www.kayak.com',
+    views: 4300,
+    company: 'KAYAK (Booking Holdings)', founded: '2004', hasAPI: false, hasMobileApp: true,
+    releaseDate: 'May 2026', lastUpdate: 'Aug 2026',
+    pros: ['Live, bookable results update inside the chat', 'No tab-switching to refine a search', 'Built on KAYAK\'s existing flight/hotel/car inventory', 'Completely free to use', 'Backed by 20+ years of KAYAK search data'],
+    cons: ['Ties you to KAYAK\'s own inventory & partners', 'Newer feature, still maturing for complex multi-city trips', 'Less useful for pure inspiration without booking intent', 'No standalone app separate from KAYAK'],
+    tags: ['Travel Planning', 'Conversational AI', 'Flights', 'Hotels', 'Trip Planner'],
+    useCases: ['Planning multi-city trips in natural language', 'Comparing flights and hotels near an event', 'Finding deals within a budget', 'Booking rental cars alongside flights', 'Real-time itinerary refinement'],
+    verdict: 'KAYAK Ask AI is a solid free option for travelers who want to plan and book in one continuous chat instead of juggling separate search tabs, backed by KAYAK\'s large travel inventory.',
+    faq: [
+      {
+        question: {
+          en: 'Is KAYAK Ask AI free to use?',
+          fr: 'KAYAK Ask AI est-il gratuit ?',
+          es: '¿KAYAK Ask AI es gratis?',
+          ar: 'هل KAYAK Ask AI مجاني؟'
+        },
+        answer: {
+          en: 'Yes, Ask AI is a free feature built into KAYAK\'s existing search experience — there is no subscription, KAYAK earns revenue through travel bookings as usual.',
+          fr: "Oui, Ask AI est une fonctionnalité gratuite intégrée à l'expérience de recherche KAYAK — pas d'abonnement, KAYAK génère ses revenus via les réservations comme d'habitude.",
+          es: 'Sí, Ask AI es una función gratuita integrada en la experiencia de búsqueda de KAYAK; no hay suscripción, KAYAK genera ingresos a través de las reservas como siempre.',
+          ar: 'نعم، Ask AI ميزة مجانية مدمجة في تجربة البحث في KAYAK — لا يوجد اشتراك، وتحقق KAYAK إيراداتها عبر حجوزات السفر كالمعتاد.'
+        }
+      },
+      {
+        question: {
+          en: 'Can KAYAK Ask AI actually book my trip?',
+          fr: 'KAYAK Ask AI peut-il réserver mon voyage ?',
+          es: '¿KAYAK Ask AI puede reservar mi viaje?',
+          ar: 'هل يمكن لـ KAYAK Ask AI حجز رحلتي فعلياً؟'
+        },
+        answer: {
+          en: 'Ask AI surfaces live, bookable flight, hotel and car results as you chat, and takes you to KAYAK\'s standard booking flow with its travel partners to complete the purchase.',
+          fr: "Ask AI affiche des résultats de vols, hôtels et voitures réservables en direct pendant la conversation, puis vous redirige vers le parcours de réservation habituel de KAYAK avec ses partenaires.",
+          es: 'Ask AI muestra resultados de vuelos, hoteles y coches reservables en vivo mientras chateas, y te lleva al flujo de reserva estándar de KAYAK con sus socios de viaje para completar la compra.',
+          ar: 'يعرض Ask AI نتائج رحلات وفنادق وسيارات قابلة للحجز مباشرة أثناء المحادثة، وينقلك إلى مسار الحجز المعتاد في KAYAK مع شركائه لإتمام الشراء.'
+        }
+      }
+    ],
+  },
+  {
+    id: 'dropzone-ai',
+    name: 'Dropzone AI',
+    category: 'cybersecurity',
+    description: {
+      en: "Autonomous AI SOC analyst that investigates security alerts end-to-end, integrating with 60+ SIEM, EDR and cloud tools to triage incidents at machine speed.",
+      fr: "Analyste SOC autonome basé sur l'IA qui enquête de bout en bout sur les alertes de sécurité, en s'intégrant à plus de 60 outils SIEM, EDR et cloud pour trier les incidents à grande vitesse.",
+      es: "Analista SOC autónomo con IA que investiga alertas de seguridad de extremo a extremo, integrándose con más de 60 herramientas SIEM, EDR y de nube para triar incidentes a gran velocidad.",
+      ar: "محلل مركز عمليات أمنية (SOC) مستقل يعمل بالذكاء الاصطناعي ويحقق في التنبيهات الأمنية من البداية للنهاية، ويتكامل مع أكثر من 60 أداة SIEM وEDR وسحابية لفرز الحوادث بسرعة عالية."
+    },
+    rating: 4.6,
+    pricing: 'Paid',
+    pricingLocalized: {
+      en: 'Custom pricing (from ~$36k/yr)',
+      fr: 'Tarification sur devis (à partir de ~36 000$/an)',
+      es: 'Precio a medida (desde ~$36,000/año)',
+      ar: 'تسعير مخصص (يبدأ من حوالي ٣٦ ألف دولار سنوياً)'
+    },
+    websiteUrl: 'https://www.dropzone.ai',
+    views: 2600,
+    company: 'Dropzone AI', founded: '2023', hasAPI: true, hasMobileApp: false,
+    releaseDate: '2023', lastUpdate: 'Aug 2026',
+    pros: ['Autonomous end-to-end alert investigation', 'Integrates with 60+ SIEM/EDR/cloud tools', 'False-negative rate below 1%', 'Unlimited users included in subscription', '$37M Series B, used by 300+ organizations'],
+    cons: ['No public self-serve pricing — sales-quoted only', 'Enterprise-focused, overkill for small teams', 'Requires existing security stack to integrate with', 'No mobile app'],
+    tags: ['Cybersecurity', 'SOC', 'AI Agent', 'Threat Investigation', 'SIEM'],
+    useCases: ['Tier 1 security alert triage', 'Automated incident investigation', 'Reducing SOC analyst workload', 'Threat hunting support', 'Security alert fatigue reduction'],
+    verdict: 'Dropzone AI is a strong option for security teams drowning in alert volume who want an AI analyst to handle Tier 1 triage autonomously, though pricing and integration depth make it best suited to mid-size and enterprise SOCs.',
+    faq: [
+      {
+        question: {
+          en: 'Does Dropzone AI replace human security analysts?',
+          fr: "Dropzone AI remplace-t-il les analystes sécurité humains ?",
+          es: '¿Dropzone AI reemplaza a los analistas de seguridad humanos?',
+          ar: 'هل يحل Dropzone AI محل محللي الأمن البشريين؟'
+        },
+        answer: {
+          en: 'No. It automates Tier 1 triage and investigation so human analysts can focus on complex incidents, response decisions and strategic security work instead of repetitive alert review.',
+          fr: "Non. Il automatise le tri et l'investigation de niveau 1 pour que les analystes humains se concentrent sur les incidents complexes et les décisions de réponse plutôt que sur l'examen répétitif des alertes.",
+          es: 'No. Automatiza el triaje e investigación de nivel 1 para que los analistas humanos se centren en incidentes complejos y decisiones de respuesta en lugar de la revisión repetitiva de alertas.',
+          ar: 'لا. فهو يؤتمت الفرز والتحقيق من المستوى الأول ليتفرغ المحللون البشريون للحوادث المعقدة وقرارات الاستجابة بدلاً من المراجعة المتكررة للتنبيهات.'
+        }
+      },
+      {
+        question: {
+          en: 'What tools does Dropzone AI integrate with?',
+          fr: 'Avec quels outils Dropzone AI s\'intègre-t-il ?',
+          es: '¿Con qué herramientas se integra Dropzone AI?',
+          ar: 'مع أي أدوات يتكامل Dropzone AI؟'
+        },
+        answer: {
+          en: 'Dropzone AI integrates with over 60 security tools including SIEM, EDR, firewall and cloud platforms, plus curated threat intelligence feeds, to pull context automatically during investigations.',
+          fr: "Dropzone AI s'intègre à plus de 60 outils de sécurité, dont SIEM, EDR, pare-feu et plateformes cloud, ainsi que des flux de threat intelligence, pour récupérer automatiquement le contexte lors des investigations.",
+          es: 'Dropzone AI se integra con más de 60 herramientas de seguridad, incluyendo SIEM, EDR, firewall y plataformas en la nube, además de fuentes de inteligencia de amenazas, para obtener contexto automáticamente durante las investigaciones.',
+          ar: 'يتكامل Dropzone AI مع أكثر من 60 أداة أمنية بما في ذلك SIEM وEDR وجدران الحماية والمنصات السحابية، بالإضافة إلى مصادر معلومات التهديدات، لجمع السياق تلقائياً أثناء التحقيقات.'
+        }
+      }
+    ],
+  },
 ];
 
 export function getToolById(id: string): AITool | undefined {
