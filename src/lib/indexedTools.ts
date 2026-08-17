@@ -32,6 +32,9 @@ export const TOP_TOOLS: string[] = [
   // Open-source 3D, data/SQL, translation, scraping, frameworks & web agents
   'triposr', 'hunyuan3d', 'pandasai', 'vanna', 'libretranslate', 'argos-translate',
   'firecrawl', 'crawl4ai', 'dspy', 'pydantic-ai', 'skyvern', 'docling',
+  // Niche leaders: legal, cybersecurity, finance, sales, support, education, code, voice, medical
+  'harvey', 'pentestgpt', 'garak', 'cleo-ai', 'ramp', 'clay',
+  '11x', 'sierra', 'khanmigo', 'replit', 'hume-ai', 'openevidence',
   // Coding
   'cursor', 'github-copilot',
   // Image
