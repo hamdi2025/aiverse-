@@ -18,6 +18,8 @@ export const TOP_TOOLS: string[] = [
   'codex', 'devin', 'opencode', 'cline', 'aider', 'trae',
   'minimax', 'kimi', 'qwen', 'glm', 'hermes', 'llama',
   'claude-cowork', 'manus', 'openclaw', 'goose', 'gemini-cli', 'openai-operator',
+  // New trending 2026 AI agents (autonomous workspaces & enterprise)
+  'genspark', 'relay-app', 'glean', 'kimi-claw',
   // Coding
   'cursor', 'github-copilot',
   // Image
