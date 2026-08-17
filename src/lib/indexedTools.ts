@@ -41,6 +41,9 @@ export const TOP_TOOLS: string[] = [
   // Wave: autonomous & business AI agents
   'lindy', 'multion', 'bardeen', 'aomni', 'runner-h', 'simular',
   'lutra', 'convergence-proxy', 'emergence-ai', 'camel-ai',
+  // Campaign: new & free/open-source AI agents
+  'open-interpreter', 'openhands', 'smolagents', 'suna', 'magentic-one', 'stagehand',
+  'nanobrowser', 'agno', 'openai-agents-sdk', 'google-adk', 'strands-agents', 'langgraph',
   // Coding
   'cursor', 'github-copilot',
   // Image
