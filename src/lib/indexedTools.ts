@@ -29,6 +29,9 @@ export const TOP_TOOLS: string[] = [
   // Open-source video, music, automation, memory, docs & search (GitHub)
   'hunyuanvideo', 'mochi-1', 'cogvideox', 'open-sora', 'audiocraft', 'stable-audio-open',
   'activepieces', 'mem0', 'letta', 'marker', 'perplexica', 'iopaint',
+  // Open-source 3D, data/SQL, translation, scraping, frameworks & web agents
+  'triposr', 'hunyuan3d', 'pandasai', 'vanna', 'libretranslate', 'argos-translate',
+  'firecrawl', 'crawl4ai', 'dspy', 'pydantic-ai', 'skyvern', 'docling',
   // Coding
   'cursor', 'github-copilot',
   // Image
