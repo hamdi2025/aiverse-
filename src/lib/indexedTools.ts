@@ -23,6 +23,9 @@ export const TOP_TOOLS: string[] = [
   // Top open-source AI projects (GitHub, thousands of stars) across domains
   'ollama', 'open-webui', 'browser-use', 'vllm', 'continue-dev',
   'comfyui', 'unsloth', 'llamaindex', 'anythingllm', 'jan-ai', 'langflow', 'whisper',
+  // Open-source voice/audio, RAG/search, coding & image (GitHub)
+  'coqui-tts', 'rvc', 'gpt-sovits', 'chattts', 'piper',
+  'quivr', 'onyx', 'privategpt', 'haystack', 'metagpt', 'tabby', 'fooocus',
   // Coding
   'cursor', 'github-copilot',
   // Image
