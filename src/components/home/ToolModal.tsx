@@ -143,7 +143,7 @@ export default function ToolModal({ tool, onClose }: ToolModalProps) {
           <a
             href={outboundUrl}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="sponsored nofollow noopener noreferrer"
             className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] hover:from-[#8B5CF6] hover:to-[#22D3EE] text-white py-3.5 rounded-xl font-bold text-sm transition-all duration-300 shadow-lg shadow-[#7C3AED]/25 hover:shadow-[#06B6D4]/25 hover:scale-[1.01] active:scale-[0.99]"
           >
             {t('visit')}

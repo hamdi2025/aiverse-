@@ -88,7 +88,7 @@ export default function ToolCard({ tool, isLarge = false, onClick }: ToolCardPro
           <a
             href={outboundUrl}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="sponsored nofollow noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
             aria-label={t('visit')}
             className="flex items-center justify-center w-9 h-9 rounded-xl bg-gray-100 hover:bg-[#7C3AED] border border-gray-200 hover:border-[#7C3AED] text-gray-600 hover:text-white transition-all duration-200"

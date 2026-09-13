@@ -226,7 +226,7 @@ export default async function ToolPage({ params }: Props) {
           <a
             href={outboundUrl}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="sponsored nofollow noopener noreferrer"
             className="flex items-center gap-2 bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] hover:opacity-90 text-white px-6 py-3 rounded-xl font-bold text-sm transition-all hover:scale-105 shadow-lg shadow-purple-900/30"
           >
             {t('visit')} <ArrowUpRight className="w-4 h-4" />
@@ -371,7 +371,7 @@ export default async function ToolPage({ params }: Props) {
         </h2>
         <p className="text-gray-600 text-sm mb-6">{tool.description[locale]}</p>
         <div className="flex flex-wrap gap-3 justify-center">
-          <a href={outboundUrl} target="_blank" rel="noopener noreferrer"
+          <a href={outboundUrl} target="_blank" rel="sponsored nofollow noopener noreferrer"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] hover:opacity-90 text-white px-8 py-3 rounded-xl font-bold transition-all hover:scale-105">
             {locale === 'fr' ? 'Essayer' : locale === 'es' ? 'Probar' : locale === 'ar' ? 'جرّب الآن' : 'Try Free'} <ArrowUpRight className="w-4 h-4" />
           </a>

@@ -336,7 +336,7 @@ export default function AiAgentsPage({ params }: Props) {
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <a href={url} target="_blank" rel="noopener noreferrer"
+                <a href={url} target="_blank" rel="sponsored nofollow noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] rounded-lg px-3 py-1.5 hover:opacity-90 transition">
                   {PAGE.visit[locale]} →
                 </a>

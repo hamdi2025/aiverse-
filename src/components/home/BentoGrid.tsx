@@ -60,7 +60,7 @@ export default function BentoGrid({ tools, onToolClick }: BentoGridProps) {
             <a
               href={featuredTool.websiteUrl}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="sponsored nofollow noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
               className="bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] hover:from-[#8B5CF6] hover:to-[#22D3EE] text-white px-6 py-3 rounded-xl text-sm font-bold shadow-lg transition-all duration-300 hover:scale-[1.02]"
             >

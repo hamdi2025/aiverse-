@@ -81,7 +81,7 @@ export default function TrendingAgents({ onCompare }: { onCompare?: () => void }
 
               {/* Buttons */}
               <div className="flex gap-1.5">
-                <a href={url} target="_blank" rel="noopener noreferrer"
+                <a href={url} target="_blank" rel="sponsored nofollow noopener noreferrer"
                   onClick={e => e.stopPropagation()}
                   className="flex-1 flex items-center justify-center gap-1 py-1.5 bg-violet-600 hover:bg-violet-700 text-white text-[11px] font-bold rounded-lg transition">
                   Try <ArrowUpRight className="w-3 h-3" />

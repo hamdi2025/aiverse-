@@ -92,7 +92,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  const STATIC_PAGES = ['about', 'privacy', 'terms', 'disclosure', 'contact', 'submit', 'newsletter', 'stack', 'compare', 'ai-agents'];
+  const STATIC_PAGES = ['about', 'privacy', 'terms', 'disclosure', 'contact', 'submit', 'newsletter', 'stack', 'compare', 'ai-agents', 'advertise', 'methodology'];
   const staticPages = STATIC_PAGES.flatMap(slug =>
     LOCALES.map(locale => ({
       url: `${BASE_URL}/${locale}/${slug}`,

@@ -291,7 +291,7 @@ export default async function AlternativesPage({ params }: Props) {
         </div>
         <div className="flex items-center gap-2">
           <a href={`/${locale}/tools/${tool.id}`} className="text-xs font-semibold text-violet-700 hover:text-violet-700 border border-violet-500/20 hover:border-violet-500/40 px-3 py-2 rounded-xl transition">{L.view}</a>
-          <a href={url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-xs font-bold bg-violet-600 hover:bg-violet-500 text-white px-3 py-2 rounded-xl transition">
+          <a href={url} target="_blank" rel="sponsored nofollow noopener noreferrer" className="flex items-center gap-1.5 text-xs font-bold bg-violet-600 hover:bg-violet-500 text-white px-3 py-2 rounded-xl transition">
             {L.visit} <ArrowUpRight className="w-3 h-3" />
           </a>
         </div>
@@ -326,7 +326,7 @@ export default async function AlternativesPage({ params }: Props) {
                     </a>
                   </div>
                 </div>
-                <a href={altUrl} target="_blank" rel="noopener noreferrer"
+                <a href={altUrl} target="_blank" rel="sponsored nofollow noopener noreferrer"
                   className="flex items-center justify-center gap-2 py-2 rounded-xl text-sm font-bold bg-gray-50 hover:bg-violet-600 text-gray-700 hover:text-white border border-gray-200 hover:border-violet-500 transition-all">
                   {L.visit} {alt.name} <ArrowUpRight className="w-4 h-4" />
                 </a>

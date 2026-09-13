@@ -122,7 +122,7 @@ export default function BestForPage({ params }: Props) {
                     </ul>
                   )}
                   <div className="mt-3 flex items-center gap-3">
-                    <a href={url} target="_blank" rel="noopener noreferrer"
+                    <a href={url} target="_blank" rel="sponsored nofollow noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-gradient-to-r from-[#7C3AED] to-[#06B6D4] rounded-lg px-3 py-1.5 hover:opacity-90 transition">
                       {locale === 'fr' ? 'Visiter' : locale === 'es' ? 'Visitar' : locale === 'ar' ? 'زيارة' : 'Visit'} →
                     </a>

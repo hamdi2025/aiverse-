@@ -1,5 +1,6 @@
 import { auth, currentUser } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
+import type { Metadata } from 'next';
 import { TOOLS_DATA } from '@/lib/tools';
 import {
   BarChart2, Users, Star, Zap, Crown, CheckCircle,
@@ -7,6 +8,11 @@ import {
 } from 'lucide-react';
 
 const ADMIN_EMAIL = 'hamdi.abdwd@gmail.com';
+
+// Private dashboard: never indexed by search engines.
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 // Mock pending submissions (in production, these would come from a database)
 const MOCK_SUBMISSIONS = [

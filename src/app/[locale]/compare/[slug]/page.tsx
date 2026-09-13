@@ -313,7 +313,7 @@ export default async function ComparePage({ params }: Props) {
               <h2 className={`text-xl font-black mb-1 ${i === 0 ? 'text-violet-700' : 'text-orange-700'}`}>{tool.name}</h2>
               <p className="text-gray-600 text-xs leading-relaxed line-clamp-3">{tool.description[locale]}</p>
             </div>
-            <a href={url} target="_blank" rel="noopener noreferrer"
+            <a href={url} target="_blank" rel="sponsored nofollow noopener noreferrer"
               className={`flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-bold transition-all ${i === 0 ? 'bg-violet-600 hover:bg-violet-500 text-white' : 'bg-orange-500 hover:bg-orange-400 text-white'}`}>
               {L.visit} {tool.name} <ArrowUpRight className="w-4 h-4" />
             </a>

@@ -18,19 +18,23 @@ const LINKS = {
   ],
   monetize: [
     { label: 'Submit Your Tool', href: '/submit' },
-    { label: 'Advertise / Sponsor', href: '/submit#featured' },
-    { label: 'Partner With Us', href: '/contact' },
+    { label: 'Advertise / Sponsor', href: '/advertise' },
+    { label: 'Guest Post', href: '/advertise#guest-post' },
     { label: 'Newsletter Sponsorship', href: '/newsletter' },
+    { label: 'Partner With Us', href: '/contact' },
   ],
   company: [
     { label: 'About AIverse', href: '/about' },
+    { label: 'Our Methodology', href: '/methodology' },
     { label: 'Privacy Policy', href: '/privacy' },
     { label: 'Terms of Service', href: '/terms' },
     { label: 'Affiliate Disclosure', href: '/disclosure' },
   ],
 };
 
-// Reciprocal "Featured on" partner directories (dofollow links).
+// "Featured on" partner directories — outbound links are qualified
+// (nofollow) per Google's link spam policies: reciprocal directory
+// cross-linking must not pass ranking credit.
 const FEATURED_ON = [
   { label: 'Dofollow.Tools', href: 'https://dofollow.tools' },
   { label: 'AI Toolz Dir', href: 'https://www.aitoolzdir.com' },
@@ -116,7 +120,7 @@ export default function Footer() {
               ))}
             </ul>
             {/* Advertise CTA */}
-            <Link href="/submit"
+            <Link href="/advertise"
               className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold text-[#7C3AED] hover:text-white hover:bg-[#7C3AED] border border-[#7C3AED]/40 hover:border-[#7C3AED] px-3 py-1.5 rounded-lg transition-all">
               💼 Advertise with us →
             </Link>
@@ -128,7 +132,7 @@ export default function Footer() {
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <span className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold">Featured on</span>
             {FEATURED_ON.map(p => (
-              <a key={p.label} href={p.href} target="_blank" rel="noopener"
+              <a key={p.label} href={p.href} target="_blank" rel="nofollow noopener"
                 className="text-xs text-gray-500 hover:text-violet-700 transition-colors">
                 {p.label}
               </a>

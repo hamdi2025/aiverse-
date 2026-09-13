@@ -14,10 +14,10 @@ export const SPONSORED_LISTINGS: SponsoredListing[] = [
   {
     toolId: 'chatgpt',
     badgeText: {
-      en: 'Partner',
-      fr: 'Partenaire',
-      es: 'Socio',
-      ar: 'شريك المبادرة'
+      en: 'Editor\'s Pick',
+      fr: 'Choix de la rédaction',
+      es: 'Selección del editor',
+      ar: 'اختيار المحرر'
     },
     glowColor: 'from-emerald-500/25 to-teal-500/25',
     priority: 10

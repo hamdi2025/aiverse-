@@ -7424,6 +7424,681 @@ export const TOOLS_DATA: AITool[] = [
       }
     ],
   },
+  {
+    id: 'zetik',
+    name: 'Zetik',
+    category: 'agents',
+    description: {
+      en: "AI 'chief of staff' agent team that runs a full intelligence cycle — collect, filter, analyze, brief — across podcasts, papers, code, X/Twitter and news, 24/7, delivering a personalized daily brief on whatever you tell it matters.",
+      fr: "Équipe d'agents IA « chef de cabinet » qui exécute un cycle de veille complet — collecte, filtrage, analyse, synthèse — sur podcasts, articles, code, X/Twitter et actualités, 24h/24, et livre un brief quotidien personnalisé sur ce qui compte pour vous.",
+      es: "Equipo de agentes IA 'jefe de gabinete' que ejecuta un ciclo de inteligencia completo — recopilar, filtrar, analizar, resumir — en podcasts, papers, código, X/Twitter y noticias, las 24 horas, entregando un brief diario personalizado sobre lo que te importa.",
+      ar: "فريق وكلاء ذكاء اصطناعي بدور 'رئيس أركان' ينفذ دورة استخبارات كاملة — جمع وتصفية وتحليل وتلخيص — عبر البودكاست والأبحاث والكود وX/تويتر والأخبار على مدار الساعة، ويقدم ملخصاً يومياً مخصصاً حول ما يهمك."
+    },
+    rating: 4.5,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free / Plus & Pro (7-day trial)',
+      fr: 'Gratuit / Plus et Pro (essai 7 jours)',
+      es: 'Gratis / Plus y Pro (prueba de 7 días)',
+      ar: 'مجاني / Plus وPro (تجربة ٧ أيام)'
+    },
+    websiteUrl: 'https://www.zetik.com',
+    views: 3200,
+    company: 'Zetik', founded: '2026', hasAPI: false, hasMobileApp: true,
+    releaseDate: 'Aug 2026', lastUpdate: 'Aug 2026',
+    pros: ['Tracks podcasts, papers, code, X and news in one brief', 'Separates guaranteed topics (Trackers) from serendipitous discovery (Explore)', 'Personalized daily brief that improves over time', 'iOS and Android apps', 'Fast-rising Product Hunt launch (#4 day rank)'],
+    cons: ['Very new product, limited track record', 'Exact Plus/Pro pricing not fully public yet', 'Best value needs the paid tiers', 'Quality depends on how well you define trackers'],
+    tags: ['AI Agent', 'Chief of Staff', 'News Intelligence', 'Productivity', 'Research'],
+    useCases: ['Tracking industry news & competitors', 'Following niche research topics', 'Daily briefing instead of doomscrolling', 'Monitoring startup & funding news', 'Personal information radar'],
+    verdict: "Zetik is worth trying for anyone drowning in scattered sources — podcasts, papers, X, GitHub — who wants one daily brief instead of a dozen open tabs. It's an early but promising entrant in the fast-growing 'AI chief of staff' category.",
+    faq: [
+      {
+        question: {
+          en: 'Is Zetik free to use?',
+          fr: 'Zetik est-il gratuit ?',
+          es: '¿Zetik es gratis?',
+          ar: 'هل Zetik مجاني؟'
+        },
+        answer: {
+          en: 'Zetik has a free tier to create trackers and receive briefs. Paid Plus and Pro plans (with a 7-day free trial) unlock unlimited messages, up to 200 trackers, Deep Dives and more advanced models.',
+          fr: "Zetik propose un plan gratuit pour créer des trackers et recevoir des briefs. Les plans payants Plus et Pro (essai gratuit de 7 jours) débloquent des messages illimités, jusqu'à 200 trackers, les Deep Dives et des modèles plus avancés.",
+          es: 'Zetik tiene un plan gratuito para crear trackers y recibir briefs. Los planes de pago Plus y Pro (con prueba gratuita de 7 días) desbloquean mensajes ilimitados, hasta 200 trackers, Deep Dives y modelos más avanzados.',
+          ar: 'يوفر Zetik خطة مجانية لإنشاء المتتبعات وتلقي الملخصات. تفتح خطتا Plus وPro المدفوعتان (مع تجربة مجانية لمدة ٧ أيام) رسائل غير محدودة وحتى ٢٠٠ متتبع وميزة Deep Dives ونماذج أكثر تقدماً.'
+        }
+      },
+      {
+        question: {
+          en: 'How is Zetik different from a news aggregator or RSS reader?',
+          fr: "En quoi Zetik diffère-t-il d'un agrégateur de news ou d'un lecteur RSS ?",
+          es: '¿En qué se diferencia Zetik de un agregador de noticias o un lector RSS?',
+          ar: 'كيف يختلف Zetik عن مجمّع الأخبار أو قارئ RSS؟'
+        },
+        answer: {
+          en: 'Zetik reads across formats an RSS feed cannot — podcasts, videos, code repos, X/Reddit threads and papers — then cross-checks and synthesizes them into a single briefed insight instead of a pile of raw links.',
+          fr: "Zetik lit des formats qu'un flux RSS ne couvre pas — podcasts, vidéos, dépôts de code, fils X/Reddit et articles — puis les recoupe et les synthétise en un seul insight, au lieu d'une pile de liens bruts.",
+          es: 'Zetik lee formatos que un feed RSS no cubre — podcasts, vídeos, repositorios de código, hilos de X/Reddit y papers — y luego los verifica y sintetiza en un único insight, en lugar de una pila de enlaces sin procesar.',
+          ar: 'يقرأ Zetik صيغاً لا يغطيها خلاصات RSS — بودكاست وفيديوهات ومستودعات كود ومناقشات X/Reddit وأبحاث — ثم يتحقق منها ويلخصها في رؤية واحدة بدلاً من كومة روابط خام.'
+        }
+      }
+    ],
+  },
+  {
+    id: 'miora-design',
+    name: 'Miora',
+    category: 'image',
+    description: {
+      en: "Tencent's agentic creative studio: turn one natural-language brief into a coordinated set of on-brand images, video, UI/UX and 3D assets on a single infinite canvas, with persistent memory of your brand colors, tone and creative rules.",
+      fr: "Studio créatif agentique de Tencent : transformez un seul brief en langage naturel en un ensemble coordonné d'images, vidéos, UI/UX et assets 3D sur un canevas infini unique, avec une mémoire persistante de vos couleurs de marque, ton et règles créatives.",
+      es: "Estudio creativo agéntico de Tencent: convierte un único brief en lenguaje natural en un conjunto coordinado de imágenes, vídeo, UI/UX y activos 3D en un lienzo infinito único, con memoria persistente de tus colores de marca, tono y reglas creativas.",
+      ar: "استوديو إبداعي وكيلي من Tencent: حوّل موجزاً واحداً بلغة طبيعية إلى مجموعة متناسقة من الصور والفيديو وواجهات المستخدم وأصول ثلاثية الأبعاد على قماش لا نهائي واحد، مع ذاكرة دائمة لألوان علامتك التجارية ونبرتها وقواعدها الإبداعية."
+    },
+    rating: 4.6,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free credits / paid plans',
+      fr: 'Crédits gratuits / offres payantes',
+      es: 'Créditos gratis / planes de pago',
+      ar: 'أرصدة مجانية / خطط مدفوعة'
+    },
+    websiteUrl: 'https://miora.design',
+    views: 4100,
+    company: 'Tencent', founded: '2026', hasAPI: false, hasMobileApp: false,
+    releaseDate: 'May 2026', lastUpdate: 'Jul 2026',
+    pros: ['One brief generates image, video, UI/UX and 3D together', 'Persistent brand memory (colors, tone, "never do this")', 'No tool-switching — everything on one canvas', 'Built-in Brand, Storyboard, Illustration, UI/UX, Video and 3D specialists', 'Reusable Skills system shareable with a team'],
+    cons: ['Backed by Tencent — data residency/privacy questions for some teams', 'Newer platform, specialist agents still expanding', 'Best results need a well-written brief', 'International beta, feature set still evolving'],
+    tags: ['Creative Studio', 'Agentic', 'Image', 'Video', '3D', 'UI/UX'],
+    useCases: ['Full campaign asset packs from one brief', 'Brand-consistent social & ad creative', 'Storyboard-to-video production', 'UI/UX mockups alongside marketing visuals', '3D product renders for campaigns'],
+    verdict: "Miora is a strong pick for creative and marketing teams who want one agentic tool to produce a whole on-brand asset pack — image, video, UI/UX and 3D — without juggling five separate apps. Its brand-memory system is the real differentiator versus one-shot generators.",
+    faq: [
+      {
+        question: {
+          en: 'What can Miora generate?',
+          fr: 'Que peut générer Miora ?',
+          es: '¿Qué puede generar Miora?',
+          ar: 'ماذا يمكن أن يولّد Miora؟'
+        },
+        answer: {
+          en: 'From a single brief, Miora can generate images, video, UI/UX mockups and 3D assets together on one canvas, using specialist AI agents for each medium.',
+          fr: "À partir d'un seul brief, Miora peut générer ensemble des images, vidéos, maquettes UI/UX et assets 3D sur un même canevas, grâce à des agents IA spécialisés pour chaque média.",
+          es: 'A partir de un único brief, Miora puede generar juntos imágenes, vídeo, maquetas de UI/UX y activos 3D en un mismo lienzo, usando agentes de IA especializados para cada medio.',
+          ar: 'انطلاقاً من موجز واحد، يمكن لـ Miora توليد الصور والفيديو ونماذج واجهات المستخدم والأصول ثلاثية الأبعاد معاً على قماش واحد، باستخدام وكلاء ذكاء اصطناعي متخصصين لكل وسيط.'
+        }
+      },
+      {
+        question: {
+          en: 'Does Miora remember my brand style between projects?',
+          fr: 'Miora mémorise-t-il mon style de marque entre les projets ?',
+          es: '¿Miora recuerda mi estilo de marca entre proyectos?',
+          ar: 'هل يتذكر Miora أسلوب علامتي التجارية بين المشاريع؟'
+        },
+        answer: {
+          en: "Yes. Miora's Creative Agent keeps persistent memory of your brand colors, tone and creative rules, so new projects stay visually consistent instead of starting from a blank prompt each time.",
+          fr: "Oui. L'agent créatif de Miora conserve une mémoire persistante de vos couleurs de marque, votre ton et vos règles créatives, pour que les nouveaux projets restent cohérents sans repartir de zéro à chaque fois.",
+          es: 'Sí. El Agente Creativo de Miora conserva una memoria persistente de tus colores de marca, tono y reglas creativas, para que los nuevos proyectos se mantengan visualmente consistentes sin partir de cero cada vez.',
+          ar: 'نعم. يحتفظ الوكيل الإبداعي في Miora بذاكرة دائمة لألوان علامتك التجارية ونبرتها وقواعدها الإبداعية، لتبقى المشاريع الجديدة متناسقة بصرياً دون البدء من الصفر في كل مرة.'
+        }
+      }
+    ],
+  },
+  {
+    id: 'caimera-ai',
+    name: 'Caimera',
+    category: 'image',
+    description: {
+      en: "AI visual production platform for fashion and e-commerce teams: turn flat-lay photos into on-model shoots, generate studio-quality product images, videos and print designs in bulk, with a library of AI fashion models and 20,000+ creative templates.",
+      fr: "Plateforme de production visuelle IA pour les équipes mode et e-commerce : transformez des photos à plat en shootings sur mannequin, générez en masse des visuels produits, vidéos et designs d'impression de qualité studio, avec une bibliothèque de mannequins IA et plus de 20 000 modèles créatifs.",
+      es: "Plataforma de producción visual con IA para equipos de moda y e-commerce: convierte fotos en plano en sesiones con modelo, genera en masa imágenes de producto, vídeos y diseños de impresión de calidad de estudio, con una biblioteca de modelos de moda IA y más de 20.000 plantillas creativas.",
+      ar: "منصة إنتاج بصري بالذكاء الاصطناعي لفرق الأزياء والتجارة الإلكترونية: حوّل صور المسطحات إلى جلسات تصوير بعارضي أزياء، وأنشئ بالجملة صور منتجات وفيديوهات وتصاميم طباعة بجودة استوديو، مع مكتبة عارضي أزياء بالذكاء الاصطناعي وأكثر من 20,000 قالب إبداعي."
+    },
+    rating: 4.6,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free (20 credits) / $15-$117/mo',
+      fr: 'Gratuit (20 crédits) / 15-117$/mois',
+      es: 'Gratis (20 créditos) / $15-$117/mes',
+      ar: 'مجاني (٢٠ رصيداً) / ١٥-١١٧ دولار شهرياً'
+    },
+    websiteUrl: 'https://www.caimera.ai',
+    views: 5600,
+    company: 'Bahaal Technologies', founded: '2023', hasAPI: true, hasMobileApp: false,
+    releaseDate: 'Feb 2024', lastUpdate: 'Aug 2026',
+    pros: ['Used by H&M, Puma, Steve Madden, Superdry and more', 'Flat-lay to bulk catalog in minutes', 'Large AI fashion model library + 20,000+ templates', 'Sketch-to-image, image-to-video and print design tools', 'API access on paid plans for bulk automation'],
+    cons: ['Free tier limited to 20 one-time credits', 'Aimed squarely at fashion/apparel, not general product photography', 'Credit costs add up fast at scale (video especially)', 'Enterprise tier ($1,500+/mo) is steep for small brands'],
+    tags: ['Fashion AI', 'Product Photography', 'E-commerce', 'AI Models', 'Marketing'],
+    useCases: ['Fashion product photography without a studio', 'Bulk catalog image generation from flat lays', 'Ad and campaign visuals', 'Product image-to-video for PDPs', 'Print and textile design'],
+    verdict: "Caimera is the strongest specialized pick for fashion and apparel brands that want to replace or supplement traditional photoshoots. Its flat-lay-to-catalog pipeline and roster of enterprise customers (H&M, Puma, Steve Madden) show real traction, though pricing rewards teams generating at volume.",
+    faq: [
+      {
+        question: {
+          en: 'Is Caimera free to try?',
+          fr: 'Peut-on essayer Caimera gratuitement ?',
+          es: '¿Se puede probar Caimera gratis?',
+          ar: 'هل يمكن تجربة Caimera مجاناً؟'
+        },
+        answer: {
+          en: 'Yes. The Free plan gives $0 access with 20 one-time credits and no credit card required, enough to test editorial and catalog image generation before upgrading to a paid plan starting at $15/user/month.',
+          fr: "Oui. Le plan gratuit donne accès sans frais avec 20 crédits à usage unique et sans carte bancaire requise, suffisant pour tester la génération d'images éditoriales et catalogue avant de passer à un plan payant à partir de 15$/utilisateur/mois.",
+          es: 'Sí. El plan gratuito da acceso a $0 con 20 créditos de un solo uso y sin necesidad de tarjeta, suficiente para probar la generación de imágenes editoriales y de catálogo antes de pasar a un plan de pago desde $15/usuario/mes.',
+          ar: 'نعم. توفر الخطة المجانية وصولاً بسعر ٠ دولار مع ٢٠ رصيداً لمرة واحدة ودون الحاجة لبطاقة ائتمان، وهو ما يكفي لتجربة توليد الصور التحريرية وصور الكتالوج قبل الترقية لخطة مدفوعة تبدأ من ١٥ دولاراً لكل مستخدم شهرياً.'
+        }
+      },
+      {
+        question: {
+          en: 'What can Caimera generate besides product photos?',
+          fr: 'Que peut générer Caimera en dehors des photos produit ?',
+          es: '¿Qué puede generar Caimera además de fotos de producto?',
+          ar: 'ماذا يمكن أن ينتج Caimera بخلاف صور المنتجات؟'
+        },
+        answer: {
+          en: 'Beyond product photos, Caimera can turn images into short videos (image-to-video), convert sketches into finished designs, create repeat and placement prints for textiles, and generate complete tech packs.',
+          fr: "Au-delà des photos produit, Caimera peut transformer des images en courtes vidéos (image-to-video), convertir des croquis en designs finis, créer des motifs répétés pour le textile, et générer des tech packs complets.",
+          es: 'Más allá de las fotos de producto, Caimera puede convertir imágenes en vídeos cortos (imagen a vídeo), transformar bocetos en diseños terminados, crear estampados repetidos para textiles y generar tech packs completos.',
+          ar: 'إلى جانب صور المنتجات، يمكن لـ Caimera تحويل الصور إلى مقاطع فيديو قصيرة، وتحويل الرسومات التخطيطية إلى تصاميم نهائية، وإنشاء أنماط طباعة متكررة للمنسوجات، وتوليد حزم تقنية (tech packs) كاملة.'
+        }
+      }
+    ],
+  },
+  {
+    id: 'airjelly-ai',
+    name: 'AirJelly',
+    category: 'productivity',
+    description: {
+      en: "Always-on local AI companion for macOS that watches your workflow across apps (Slack, Zoom, Docs, Calendar), remembers everything, and proactively surfaces tasks, follow-ups and daily briefs — with 100% local processing and no cloud sync.",
+      fr: "Compagnon IA local toujours actif pour macOS qui observe votre travail dans toutes vos apps (Slack, Zoom, Docs, Calendrier), se souvient de tout, et fait remonter proactivement tâches, relances et briefs quotidiens — traitement 100% local, sans synchronisation cloud.",
+      es: "Compañero de IA local siempre activo para macOS que observa tu flujo de trabajo en todas las apps (Slack, Zoom, Docs, Calendario), lo recuerda todo, y muestra proactivamente tareas, seguimientos y resúmenes diarios — procesamiento 100% local, sin sincronización en la nube.",
+      ar: "رفيق ذكاء اصطناعي محلي يعمل باستمرار على macOS يراقب سير عملك عبر التطبيقات (Slack وZoom وDocs والتقويم)، ويتذكر كل شيء، ويعرض بشكل استباقي المهام والمتابعات والملخصات اليومية — بمعالجة محلية 100% دون أي مزامنة سحابية."
+    },
+    rating: 4.4,
+    pricing: 'Free',
+    pricingLocalized: {
+      en: 'Free (macOS)',
+      fr: 'Gratuit (macOS)',
+      es: 'Gratis (macOS)',
+      ar: 'مجاني (macOS)'
+    },
+    websiteUrl: 'https://www.airjelly.ai',
+    views: 2400,
+    company: 'Low Entropy Group', founded: '2026', hasAPI: false, hasMobileApp: false,
+    releaseDate: 'Aug 2026', lastUpdate: 'Aug 2026',
+    pros: ['100% local processing — nothing uploaded, no training on your data', 'Auto-captures tasks from meetings and messages with due dates', 'Searchable timeline of everything it has seen across apps', 'Proactive alerts for overdue follow-ups and unprepared meetings', 'Completely free at launch'],
+    cons: ['macOS only — no Windows or Linux yet', 'Very new, small community (Discord-based support)', 'Always-on screen watching requires trust in the app', 'No mobile app'],
+    tags: ['AI Agent', 'Second Brain', 'Local AI', 'Productivity', 'macOS'],
+    useCases: ['Auto-capturing tasks from meetings & chats', 'End-of-day work summaries', 'Meeting prep briefs from calendar context', 'Searching past decisions and conversations', 'Following up on promises made in Slack/email'],
+    verdict: "AirJelly stands out for privacy-conscious professionals who want a proactive second brain without sending screen data to the cloud. It's macOS-only and early-stage, but fully local processing and automatic task capture make it worth watching.",
+    faq: [
+      {
+        question: {
+          en: 'Is AirJelly free?',
+          fr: 'AirJelly est-il gratuit ?',
+          es: '¿AirJelly es gratis?',
+          ar: 'هل AirJelly مجاني؟'
+        },
+        answer: {
+          en: 'Yes, AirJelly is currently a free download for macOS with no premium tiers listed. Windows and Linux support is planned but not yet available.',
+          fr: "Oui, AirJelly est actuellement un téléchargement gratuit pour macOS, sans offre premium à ce jour. Le support Windows et Linux est prévu mais pas encore disponible.",
+          es: 'Sí, AirJelly es actualmente una descarga gratuita para macOS, sin niveles premium por ahora. El soporte para Windows y Linux está previsto pero aún no disponible.',
+          ar: 'نعم، AirJelly متاح حالياً كتحميل مجاني على macOS دون خطط مدفوعة معلنة. دعم Windows وLinux مخطط له لكنه غير متاح بعد.'
+        }
+      },
+      {
+        question: {
+          en: 'Does AirJelly upload my data to the cloud?',
+          fr: 'AirJelly envoie-t-il mes données dans le cloud ?',
+          es: '¿AirJelly sube mis datos a la nube?',
+          ar: 'هل يرفع AirJelly بياناتي إلى السحابة؟'
+        },
+        answer: {
+          en: 'No. AirJelly runs entirely on your machine — your screen activity, notes and conversations never leave your computer, with no cloud sync and no training on your data.',
+          fr: "Non. AirJelly fonctionne entièrement sur votre machine : votre activité écran, vos notes et vos conversations ne quittent jamais votre ordinateur, sans synchronisation cloud ni entraînement sur vos données.",
+          es: 'No. AirJelly funciona íntegramente en tu equipo: tu actividad en pantalla, notas y conversaciones nunca salen de tu ordenador, sin sincronización en la nube ni entrenamiento con tus datos.',
+          ar: 'لا. يعمل AirJelly بالكامل على جهازك — نشاط شاشتك وملاحظاتك ومحادثاتك لا تغادر جهازك أبداً، دون مزامنة سحابية أو تدريب على بياناتك.'
+        }
+      }
+    ],
+  },
+  // ── August 2026 additions ──
+  {
+    id: 'kiro',
+    name: 'Kiro',
+    category: 'code',
+    description: {
+      en: "Amazon's spec-driven AI IDE (GA March 2026) built on VS Code and powered by Claude via Amazon Bedrock. Kiro generates requirements, design docs and task lists before writing a single line of code — ideal for developers building production systems on AWS who want structured, reviewable AI assistance.",
+      fr: "L'IDE IA spec-driven d'Amazon (dispo mars 2026), basé sur VS Code et propulsé par Claude via Amazon Bedrock. Kiro génère exigences, docs d'architecture et listes de tâches avant d'écrire la moindre ligne de code — idéal pour les développeurs AWS qui veulent une assistance IA structurée et auditable.",
+      es: "El IDE de IA spec-driven de Amazon (disponible desde marzo de 2026), basado en VS Code y potenciado por Claude vía Amazon Bedrock. Kiro genera requisitos, documentos de diseño y listas de tareas antes de escribir una sola línea de código — ideal para desarrolladores AWS que buscan asistencia IA estructurada y revisable.",
+      ar: "بيئة التطوير المتكاملة المدعومة بالذكاء الاصطناعي من Amazon (متاحة منذ مارس 2026)، مبنية على VS Code ومشغّلة بـ Claude عبر Amazon Bedrock. يولّد Kiro متطلبات ووثائق تصميم وقوائم مهام قبل كتابة أي سطر كود — مثالي لمطوري AWS الباحثين عن مساعدة ذكاء اصطناعي منظمة وقابلة للمراجعة."
+    },
+    rating: 4.4,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free preview / Paid (credit-based)',
+      fr: 'Aperçu gratuit / Payant (crédits)',
+      es: 'Vista previa gratis / Pago (basado en créditos)',
+      ar: 'معاينة مجانية / مدفوع (على أساس الاعتمادات)'
+    },
+    websiteUrl: 'https://kiro.dev',
+    views: 5800,
+    company: 'Amazon Web Services', founded: '2025', hasAPI: false, hasMobileApp: false,
+    releaseDate: 'Jul 2025', lastUpdate: 'Aug 2026',
+    pros: ['Spec-driven approach reduces rework on complex features', 'Built on familiar VS Code base', 'Native AWS context — no extra configuration', 'Claude Opus 5 under the hood via Bedrock', 'Good for teams needing auditable AI decisions'],
+    cons: ['Credit economics can be expensive for heavy use', 'Autocomplete lags Cursor and Copilot in speed', 'Less useful outside AWS environments', 'Plugin ecosystem still maturing'],
+    tags: ['IDE', 'AWS', 'Spec-driven', 'Claude', 'VS Code'],
+    useCases: ['Building production AWS applications', 'Generating feature specs before coding', 'Multi-file refactors with structured planning', 'Team code reviews with AI-generated docs'],
+    verdict: 'Kiro is the go-to AI IDE for developers building on AWS who want structured, spec-first AI assistance. If you are on Azure or GCP, Cursor remains the better daily driver — but for AWS-native teams, Kiro is a compelling alternative.',
+    faq: [
+      {
+        question: { en: 'Is Kiro free?', fr: 'Kiro est-il gratuit ?', es: '¿Kiro es gratis?', ar: 'هل Kiro مجاني؟' },
+        answer: {
+          en: 'Kiro launched with a free preview period. Post-GA it uses a credit-based model via Amazon Bedrock; exact pricing depends on model usage and AWS account tier.',
+          fr: "Kiro a été lancé avec une période de prévisualisation gratuite. Après la disponibilité générale, il utilise un modèle de crédits via Amazon Bedrock ; le coût exact dépend de l'utilisation du modèle et du niveau de compte AWS.",
+          es: 'Kiro se lanzó con un período de vista previa gratuita. Tras la disponibilidad general, usa un modelo de créditos vía Amazon Bedrock; el coste exacto depende del uso del modelo y el nivel de cuenta AWS.',
+          ar: 'أُطلق Kiro بفترة معاينة مجانية. بعد الإتاحة العامة، يعتمد على نموذج اعتمادات عبر Amazon Bedrock؛ والتكلفة الدقيقة تعتمد على استخدام النموذج ومستوى حساب AWS.'
+        }
+      },
+      {
+        question: { en: 'How does Kiro differ from Cursor?', fr: 'En quoi Kiro diffère-t-il de Cursor ?', es: '¿En qué se diferencia Kiro de Cursor?', ar: 'كيف يختلف Kiro عن Cursor؟' },
+        answer: {
+          en: 'Cursor optimises for speed and flow inside the editor. Kiro optimises for structured planning — it produces a spec (requirements, architecture, tasks) before generating code. Kiro also has native AWS integration, while Cursor is cloud-agnostic.',
+          fr: "Cursor optimise la vitesse et le flux dans l'éditeur. Kiro optimise la planification structurée — il produit une spécification (exigences, architecture, tâches) avant de générer du code. Kiro dispose également d'une intégration AWS native, tandis que Cursor est agnostique du cloud.",
+          es: 'Cursor optimiza la velocidad y el flujo dentro del editor. Kiro optimiza la planificación estructurada: genera una especificación (requisitos, arquitectura, tareas) antes de generar código. Kiro también tiene integración nativa con AWS, mientras que Cursor es agnóstico al cloud.',
+          ar: 'يُحسّن Cursor السرعة والتدفق داخل المحرر. أما Kiro فيُحسّن التخطيط المنظم — إذ ينتج مواصفات (متطلبات، بنية، مهام) قبل توليد الكود. كما يتمتع Kiro بتكامل AWS أصلي، في حين أن Cursor محايد تجاه السحابة.'
+        }
+      }
+    ],
+  },
+  {
+    id: 'vapi',
+    name: 'Vapi',
+    category: 'audio',
+    description: {
+      en: "Voice AI infrastructure platform for developers. Vapi lets you build, deploy and scale conversational voice agents with sub-500ms latency, supporting any LLM (OpenAI, Anthropic, Google) and any voice provider (ElevenLabs, Azure, Cartesia). Used by startups and enterprises to automate inbound/outbound phone operations.",
+      fr: "Plateforme d'infrastructure Voice IA pour développeurs. Vapi permet de créer, déployer et scaler des agents vocaux conversationnels avec une latence inférieure à 500 ms, compatible avec n'importe quel LLM (OpenAI, Anthropic, Google) et fournisseur vocal (ElevenLabs, Azure, Cartesia). Utilisé par startups et grandes entreprises pour automatiser leurs opérations téléphoniques.",
+      es: "Plataforma de infraestructura Voice AI para desarrolladores. Vapi permite crear, desplegar y escalar agentes de voz conversacionales con latencia inferior a 500 ms, compatible con cualquier LLM (OpenAI, Anthropic, Google) y proveedor de voz (ElevenLabs, Azure, Cartesia). Usado por startups y empresas para automatizar operaciones telefónicas entrantes y salientes.",
+      ar: "منصة بنية تحتية للذكاء الاصطناعي الصوتي للمطورين. تتيح Vapi بناء ونشر وتوسيع وكلاء صوتيين محادثاتيين بزمن استجابة أقل من 500 ميلي ثانية، مع دعم أي نموذج لغوي كبير (OpenAI وAnthropic وGoogle) وأي مزود صوتي (ElevenLabs وAzure وCartesia). يُستخدم من قِبل الشركات الناشئة والمؤسسات لأتمتة عمليات الهاتف الواردة والصادرة."
+    },
+    rating: 4.5,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'From $0.05/min (platform fee) + LLM/voice costs',
+      fr: 'À partir de 0,05 $/min (frais plateforme) + coûts LLM/voix',
+      es: 'Desde $0,05/min (tarifa plataforma) + costos LLM/voz',
+      ar: 'من ٠٫٠٥ دولار/دقيقة (رسوم المنصة) + تكاليف النموذج اللغوي/الصوت'
+    },
+    websiteUrl: 'https://vapi.ai',
+    views: 4200,
+    company: 'Vapi AI', founded: '2023', hasAPI: true, hasMobileApp: false,
+    releaseDate: 'Jan 2023', lastUpdate: 'Aug 2026',
+    pros: ['Sub-500ms latency for natural real-time conversations', 'LLM-agnostic — works with OpenAI, Anthropic, Google, custom endpoints', 'Supports ElevenLabs, Azure, Cartesia and custom voices', 'SOC 2 and PCI compliant; HIPAA available on Enterprise', 'Comprehensive REST API and SDKs'],
+    cons: ['$0.05/min is just the platform fee — full stack costs $0.15–0.30+/min', 'Complex to configure for non-developers', 'Enterprise HIPAA tier requires custom contract', 'No built-in UI builder for end-user interfaces'],
+    tags: ['Voice AI', 'API', 'Conversational AI', 'Phone Agents', 'LLM'],
+    useCases: ['Automated inbound customer support calls', 'AI outbound sales and follow-up calls', 'Healthcare appointment scheduling', 'Restaurant reservations & order taking', 'Real-time voice assistants for apps'],
+    verdict: 'Vapi is the leading infrastructure choice for teams building production voice agents in 2026. If you need sub-500ms latency, full control over LLM and voice provider, and enterprise compliance, Vapi is the benchmark to beat.',
+    faq: [
+      {
+        question: { en: 'How much does Vapi actually cost per minute?', fr: 'Combien coûte réellement Vapi par minute ?', es: '¿Cuánto cuesta realmente Vapi por minuto?', ar: 'كم تكلّف Vapi فعلياً في الدقيقة؟' },
+        answer: {
+          en: "Vapi charges $0.05/min as a platform fee, but you also pay separately for LLM tokens, voice synthesis, and phone usage. In practice, a full production minute costs $0.15–$0.30+ depending on the providers you stack.",
+          fr: "Vapi facture 0,05 $/min en frais de plateforme, mais vous payez aussi séparément les tokens LLM, la synthèse vocale et l'utilisation téléphonique. En pratique, une minute complète en production coûte 0,15–0,30 $ ou plus selon les fournisseurs combinés.",
+          es: "Vapi cobra $0,05/min como tarifa de plataforma, pero también pagas por separado los tokens del LLM, la síntesis de voz y el uso telefónico. En la práctica, un minuto completo en producción cuesta $0,15–$0,30+ dependiendo de los proveedores que combines.",
+          ar: "تتقاضى Vapi ٠٫٠٥ دولار/دقيقة كرسوم منصة، لكنك تدفع أيضاً بشكل منفصل مقابل رموز النموذج اللغوي وتوليف الصوت واستخدام الهاتف. في الواقع، تكلف الدقيقة الكاملة في الإنتاج ٠٫١٥–٠٫٣٠ دولار أو أكثر حسب المزودين الذين تجمعهم."
+        }
+      }
+    ],
+  },
+  {
+    id: 'cline',
+    name: 'Cline',
+    category: 'code',
+    description: {
+      en: "Open-source, model-agnostic AI coding agent for VS Code (formerly Claude-Dev). Cline reads and writes files, runs terminal commands, uses a headless browser for testing, and integrates with MCP tools — all with human approval at each step. Bring your own API key (OpenAI, Anthropic, Gemini, or any custom endpoint).",
+      fr: "Agent de code IA open source et agnostique pour VS Code (anciennement Claude-Dev). Cline lit et écrit des fichiers, exécute des commandes terminal, utilise un navigateur headless pour les tests, et s'intègre aux outils MCP — avec validation humaine à chaque étape. Apportez votre propre clé API (OpenAI, Anthropic, Gemini ou tout endpoint personnalisé).",
+      es: "Agente de codificación IA de código abierto y agnóstico para VS Code (antes Claude-Dev). Cline lee y escribe archivos, ejecuta comandos de terminal, usa un navegador headless para pruebas e integra herramientas MCP — todo con aprobación humana en cada paso. Usa tu propia clave API (OpenAI, Anthropic, Gemini o cualquier endpoint personalizado).",
+      ar: "وكيل كود ذكاء اصطناعي مفتوح المصدر ومحايد تجاه النماذج لـ VS Code (المعروف سابقاً بـ Claude-Dev). يقرأ Cline الملفات ويكتبها، وينفّذ أوامر الطرفية، ويستخدم متصفحاً بدون رأس للاختبار، ويتكامل مع أدوات MCP — مع موافقة بشرية عند كل خطوة. أحضر مفتاح API الخاص بك (OpenAI أو Anthropic أو Gemini أو أي نقطة نهاية مخصصة)."
+    },
+    rating: 4.5,
+    pricing: 'Free',
+    pricingLocalized: {
+      en: 'Free (BYOK — API costs vary)',
+      fr: 'Gratuit (BYOK — coûts API selon usage)',
+      es: 'Gratis (BYOK — costes API variables)',
+      ar: 'مجاني (أحضر مفتاحك — تكاليف API تتفاوت)'
+    },
+    websiteUrl: 'https://github.com/cline/cline',
+    views: 3900,
+    company: 'Cline (open source)', founded: '2024', hasAPI: false, hasMobileApp: false,
+    releaseDate: 'Jun 2024', lastUpdate: 'Aug 2026',
+    pros: ['Completely free to use — only pay for API tokens', 'Model-agnostic: works with any LLM provider', 'Full terminal, browser, and file-system access', 'MCP tool integration for extensibility', 'Human-in-the-loop by default — every action needs approval', 'Works in VS Code, Codespaces, remote SSH, WSL'],
+    cons: ['API costs add up fast with large contexts', 'Can be slow on very large codebases', 'Quality varies significantly by model chosen', 'No built-in autocomplete (agent-mode only)'],
+    tags: ['Open Source', 'VS Code', 'BYOK', 'MCP', 'Autonomous Coding'],
+    useCases: ['Multi-file refactors with human review', 'Browser-automated testing and debugging', 'Complex feature implementation from specs', 'Privacy-first coding on sensitive codebases'],
+    verdict: 'Cline is the most capable free AI coding agent for VS Code in 2026 — a must-try for developers who want full autonomy, model choice, and zero subscription fees. API costs are the only trade-off.',
+    faq: [
+      {
+        question: { en: 'Is Cline really free?', fr: 'Cline est-il vraiment gratuit ?', es: '¿Cline es realmente gratis?', ar: 'هل Cline مجاني حقاً؟' },
+        answer: {
+          en: 'The extension itself is free and open source. You pay only for the API tokens consumed by whichever LLM you connect — Claude Sonnet 5 or GPT-5.5 Mini are popular cost-effective choices.',
+          fr: "L'extension elle-même est gratuite et open source. Vous ne payez que les tokens API consommés par le LLM que vous connectez — Claude Sonnet 5 ou GPT-5.5 Mini sont des choix populaires et économiques.",
+          es: 'La extensión en sí es gratuita y de código abierto. Solo pagas por los tokens API que consume el LLM que conectes — Claude Sonnet 5 o GPT-5.5 Mini son opciones populares y rentables.',
+          ar: 'الإضافة نفسها مجانية ومفتوحة المصدر. تدفع فقط مقابل رموز API التي يستهلكها النموذج الذي تتصل به — Claude Sonnet 5 أو GPT-5.5 Mini خيارات شائعة وفعّالة من حيث التكلفة.'
+        }
+      }
+    ],
+  },
+  {
+    id: 'cartesia',
+    name: 'Cartesia Sonic',
+    category: 'audio',
+    description: {
+      en: "Ultra-low-latency text-to-speech API built on a state-space model architecture. Cartesia Sonic 3 delivers 40ms time-to-first-audio — the fastest commercial TTS available — with natural, expressive voices, voice cloning, and multilingual support. Widely used in real-time voice agents and interactive applications.",
+      fr: "API de synthèse vocale à latence ultra-faible basée sur une architecture de modèle à espace d'états. Cartesia Sonic 3 offre un temps jusqu'au premier audio de 40 ms — le TTS commercial le plus rapide — avec des voix naturelles et expressives, le clonage de voix et le support multilingue. Largement utilisé dans les agents vocaux temps réel et les applications interactives.",
+      es: "API de síntesis de voz de latencia ultrabaja construida sobre una arquitectura de modelo de espacio de estados. Cartesia Sonic 3 entrega 40ms de tiempo hasta el primer audio — el TTS comercial más rápido disponible — con voces naturales y expresivas, clonación de voz y soporte multilingüe. Ampliamente usado en agentes de voz en tiempo real y aplicaciones interactivas.",
+      ar: "واجهة برمجة تطبيقات لتحويل النص إلى كلام بزمن استجابة منخفض للغاية، مبنية على بنية نموذج الفضاء الحالتي. يوفر Cartesia Sonic 3 وقت 40 ميلي ثانية حتى أول صوت — أسرع TTS تجاري متاح — مع أصوات طبيعية ومعبّرة واستنساخ صوتي ودعم متعدد اللغات. يُستخدم على نطاق واسع في وكلاء الصوت الفوري والتطبيقات التفاعلية."
+    },
+    rating: 4.6,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free (20K credits) / From $4/mo',
+      fr: 'Gratuit (20 K crédits) / À partir de 4 $/mois',
+      es: 'Gratis (20K créditos) / Desde $4/mes',
+      ar: 'مجاني (٢٠ ألف اعتماد) / من ٤ دولارات شهرياً'
+    },
+    websiteUrl: 'https://cartesia.ai',
+    views: 3100,
+    company: 'Cartesia AI', founded: '2024', hasAPI: true, hasMobileApp: false,
+    releaseDate: 'Mar 2024', lastUpdate: 'Aug 2026',
+    pros: ['40ms time-to-first-audio — fastest commercial TTS in 2026', 'State-space model: lower compute cost than transformer TTS', 'Voice cloning on Pro plan and above', 'Multilingual support', 'Generous free tier (20K credits/month)', 'Cheaper than ElevenLabs at scale'],
+    cons: ['Fewer voice styles than ElevenLabs', 'Enterprise plan requires contacting sales', 'Credits model can be confusing to estimate costs', 'Less brand recognition than established TTS players'],
+    tags: ['TTS', 'Voice Cloning', 'Real-time', 'API', 'Voice AI'],
+    useCases: ['Real-time voice agents and chatbots', 'Podcast and content narration', 'Interactive app voice interfaces', 'Multilingual customer support automation'],
+    verdict: "Cartesia Sonic 3 is the best choice for developers who need ultra-low-latency TTS in voice agents. At 40ms it beats every competitor in responsiveness, and the free tier is generous enough for prototyping. For purely expressive studio audio, ElevenLabs still has the edge.",
+    faq: [
+      {
+        question: { en: 'How does Cartesia compare to ElevenLabs?', fr: 'Comment Cartesia se compare-t-il à ElevenLabs ?', es: '¿Cómo se compara Cartesia con ElevenLabs?', ar: 'كيف يُقارن Cartesia بـ ElevenLabs؟' },
+        answer: {
+          en: 'Cartesia wins on speed (40ms vs ~250ms for ElevenLabs) and cost at scale. ElevenLabs offers more voice styles and a more polished consumer product. For real-time voice agents, Cartesia is the better fit; for expressive studio-quality narration, ElevenLabs leads.',
+          fr: "Cartesia gagne sur la vitesse (40 ms vs ~250 ms pour ElevenLabs) et le coût à grande échelle. ElevenLabs propose davantage de styles de voix et un produit grand public plus abouti. Pour les agents vocaux en temps réel, Cartesia est le meilleur choix ; pour une narration expressive en qualité studio, ElevenLabs domine.",
+          es: 'Cartesia gana en velocidad (40ms vs ~250ms de ElevenLabs) y coste a escala. ElevenLabs ofrece más estilos de voz y un producto de consumo más pulido. Para agentes de voz en tiempo real, Cartesia encaja mejor; para narración expresiva de calidad de estudio, ElevenLabs lidera.',
+          ar: 'يتفوق Cartesia في السرعة (40 ميلي ثانية مقابل ~250 ميلي ثانية لـ ElevenLabs) والتكلفة على نطاق واسع. يقدم ElevenLabs مزيداً من أنماط الأصوات ومنتجاً استهلاكياً أكثر صقلاً. لوكلاء الصوت الفوري، Cartesia هو الاختيار الأفضل؛ للسرد التعبيري بجودة الاستوديو، يتصدر ElevenLabs.'
+        }
+      }
+    ],
+  },
+  {
+    id: 'seedance',
+    name: 'Seedance',
+    category: 'video',
+    description: {
+      en: "ByteDance's flagship AI video generator. Seedance 2.5 (June 2026) is the first model to natively produce a full 30-second 4K clip in a single pass — no stitching. Accepts text, image, and audio inputs; generates lip-synced dialogue and SFX simultaneously with the visuals.",
+      fr: "Le générateur vidéo IA phare de ByteDance. Seedance 2.5 (juin 2026) est le premier modèle à produire nativement un clip 4K de 30 secondes en un seul passage, sans assemblage. Accepte texte, image et audio en entrée ; génère dialogue synchronisé et effets sonores simultanément.",
+      es: "El generador de vídeo IA insignia de ByteDance. Seedance 2.5 (junio 2026) es el primer modelo que produce nativamente un clip 4K de 30 segundos en un solo pase, sin empalmes. Acepta entradas de texto, imagen y audio; genera diálogo con lip-sync y SFX de forma simultánea.",
+      ar: "مولّد الفيديو بالذكاء الاصطناعي الرائد من ByteDance. Seedance 2.5 (يونيو 2026) هو أول نموذج ينتج مقطع فيديو 4K مدته 30 ثانية بشكل أصلي دون تجميع. يقبل النصوص والصور والصوت كمدخلات ويولّد الحوار المتزامن مع الحركة والمؤثرات الصوتية في آنٍ واحد."
+    },
+    rating: 4.7,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Free tier / ~$9/min (API)',
+      fr: 'Niveau gratuit / ~9$/min (API)',
+      es: 'Plan gratuito / ~$9/min (API)',
+      ar: 'مستوى مجاني / ~٩ دولار/دقيقة (API)'
+    },
+    websiteUrl: 'https://seedance.ai',
+    views: 5800,
+    company: 'ByteDance (SEED Lab)', founded: '2026', hasAPI: true, hasMobileApp: false,
+    releaseDate: 'Feb 2026', lastUpdate: 'Jun 2026',
+    pros: ['First model to generate native 30-second 4K in one pass', 'Simultaneous audio+video generation with lip-sync', '30% faster than previous generation', 'Accepts text, image and audio as input', 'High-fidelity 1080p/4K output'],
+    cons: ['Seedance 2.5 still in enterprise beta', 'No public self-serve pricing for 2.5 yet', 'Primarily API-focused, limited consumer UI', 'Compute-intensive; credits can run out fast'],
+    tags: ['Text-to-Video', 'Image-to-Video', '4K', 'Lip-sync', 'ByteDance'],
+    useCases: ['Cinematic short film creation', 'Marketing & ad video production', 'Social media content', 'Storyboard-to-clip workflows', 'Audio-conditioned video generation'],
+    verdict: "Seedance 2.5 is the most technically impressive video generation model available in mid-2026 — the only one that generates a full 30-second 4K clip natively. Enterprise teams needing top-tier cinematic quality should put it on their radar; consumer access is still limited.",
+    faq: [
+      {
+        question: { en: 'How does Seedance compare to Runway and Kling?', fr: 'Comment Seedance se compare-t-il à Runway et Kling ?', es: '¿Cómo se compara Seedance con Runway y Kling?', ar: 'كيف يُقارن Seedance بـ Runway وKling؟' },
+        answer: {
+          en: 'Seedance 2.5 leads on raw clip length (30 s native 4K vs ~10 s for Kling/Runway), simultaneous audio generation, and speed. Runway Gen-3 and Kling 2.0 have more mature consumer products with easier UIs and broader availability today.',
+          fr: "Seedance 2.5 est en tête pour la longueur native des clips (30 s en 4K natif vs ~10 s pour Kling/Runway), la génération audio simultanée et la vitesse. Runway Gen-3 et Kling 2.0 proposent des produits grand public plus matures avec des interfaces plus simples.",
+          es: 'Seedance 2.5 lidera en duración nativa del clip (30 s 4K nativo vs ~10 s de Kling/Runway), generación de audio simultánea y velocidad. Runway Gen-3 y Kling 2.0 tienen productos de consumo más maduros con interfaces más sencillas.',
+          ar: 'يتصدر Seedance 2.5 في طول المقطع الأصلي (30 ثانية 4K مقابل ~10 ثوانٍ لـ Kling/Runway)، وتوليد الصوت المتزامن، والسرعة. يمتلك Runway Gen-3 وKling 2.0 منتجات استهلاكية أكثر نضجاً وواجهات أسهل.'
+        }
+      },
+      {
+        question: { en: 'Is Seedance 2.5 publicly available?', fr: 'Seedance 2.5 est-il disponible au public ?', es: '¿Está Seedance 2.5 disponible al público?', ar: 'هل Seedance 2.5 متاح للعموم؟' },
+        answer: {
+          en: 'As of September 2026, Seedance 2.5 is in global enterprise beta. Seedance 2.0 is publicly accessible via API at ~$9/min. A broader public launch for 2.5 is expected later in 2026.',
+          fr: "En septembre 2026, Seedance 2.5 est en bêta entreprise mondiale. Seedance 2.0 est accessible publiquement via API à ~9$/min. Un lancement public plus large pour la 2.5 est attendu plus tard en 2026.",
+          es: 'A septiembre de 2026, Seedance 2.5 está en beta empresarial global. Seedance 2.0 es accesible públicamente vía API a ~$9/min. Se espera un lanzamiento público más amplio de la 2.5 más adelante en 2026.',
+          ar: 'اعتباراً من سبتمبر 2026، يوجد Seedance 2.5 في مرحلة بيتا للمؤسسات عالمياً. Seedance 2.0 متاح للجمهور عبر API بسعر ~٩ دولار/دقيقة. من المتوقع إطلاق عام أوسع للنسخة 2.5 لاحقاً في 2026.'
+        }
+      }
+    ],
+  },
+  {
+    id: 'monid',
+    name: 'Monid',
+    category: 'agents',
+    description: {
+      en: "The 'OpenRouter for AI agent tools' — a unified marketplace where AI agents can discover, compare, and pay for 200+ tools (web search, social scrapers, lead enrichment, blockchain data, etc.) on demand, per-call, with no subscriptions. Raised $2.1M pre-seed in 2026.",
+      fr: "L'«OpenRouter des outils pour agents IA» — une marketplace unifiée où les agents IA peuvent découvrir, comparer et payer plus de 200 outils (recherche web, scrapers sociaux, enrichissement de leads, données blockchain, etc.) à la demande, par appel, sans abonnement. Levée de 2,1 M$ en 2026.",
+      es: "El 'OpenRouter de herramientas para agentes IA' — un marketplace unificado donde los agentes de IA pueden descubrir, comparar y pagar por más de 200 herramientas (búsqueda web, scrapers sociales, enriquecimiento de leads, datos blockchain, etc.) bajo demanda, por llamada, sin suscripciones. Captó $2,1M pre-seed en 2026.",
+      ar: "«OpenRouter لأدوات وكلاء الذكاء الاصطناعي» — سوق موحّدة يتيح لوكلاء الذكاء الاصطناعي اكتشاف أكثر من 200 أداة (بحث الويب، كشط الشبكات الاجتماعية، إثراء العملاء المحتملين، بيانات البلوكشين، إلخ) ومقارنتها والدفع مقابلها عند الطلب لكل استدعاء دون اشتراكات. جمعت 2.1 مليون دولار تمويلاً أولياً في 2026."
+    },
+    rating: 4.4,
+    pricing: 'Freemium',
+    pricingLocalized: {
+      en: 'Pay-per-call (no subscription)',
+      fr: 'Paiement par appel (sans abonnement)',
+      es: 'Pago por llamada (sin suscripción)',
+      ar: 'دفع لكل استدعاء (بدون اشتراك)'
+    },
+    websiteUrl: 'https://monid.ai',
+    views: 2900,
+    company: 'Monid', founded: '2025', hasAPI: true, hasMobileApp: false,
+    releaseDate: 'Dec 2025', lastUpdate: 'May 2026',
+    pros: ['200+ pre-integrated tools for agents', 'No subscriptions — true pay-per-call', 'Unified auth & billing across all tools', 'OpenAPI schema for each tool — plug into any agent framework', 'Already at 4M+ agent transactions'],
+    cons: ['Primarily B2B/developer-facing, no consumer UI', 'Pay-per-call costs can add up for high-volume agents', 'Still maturing; tool catalog growing', 'Less known outside AI developer circles'],
+    tags: ['AI Agents', 'Marketplace', 'Tool Calling', 'MCP', 'Developer'],
+    useCases: ['Giving AI agents access to web search and data APIs', 'Building agentic workflows without managing multiple API keys', 'Agent cost management and observability', 'Lead enrichment pipelines for sales agents'],
+    verdict: "Monid solves a real pain point in the agent stack: managing dozens of API keys and billing relationships for all the tools your agents need. For agent developers, it's the fastest way to give agents access to 200+ real-world tools with a single integration.",
+  },
+  {
+    id: 'sight-ai',
+    name: 'Sight AI',
+    category: 'seo',
+    description: {
+      en: "AI-native SEO + GEO platform that tracks your brand mentions across ChatGPT, Claude, Perplexity, Gemini and Grok, identifies content gaps, and auto-publishes optimized articles via 13 specialized AI agents — including a Slack approval workflow to keep humans in the loop.",
+      fr: "Plateforme SEO + GEO native IA qui suit vos mentions de marque dans ChatGPT, Claude, Perplexity, Gemini et Grok, identifie les lacunes de contenu et publie automatiquement des articles optimisés via 13 agents IA spécialisés — avec un workflow d'approbation Slack pour garder l'humain dans la boucle.",
+      es: "Plataforma SEO + GEO nativa de IA que rastrea menciones de tu marca en ChatGPT, Claude, Perplexity, Gemini y Grok, identifica brechas de contenido y publica automáticamente artículos optimizados mediante 13 agentes de IA especializados — con un flujo de aprobación en Slack para mantener al humano en el proceso.",
+      ar: "منصة SEO + GEO أصيلة بالذكاء الاصطناعي تتتبع إشارات علامتك التجارية عبر ChatGPT وClaude وPerplexity وGemini وGrok، وتحدد الفجوات في المحتوى، وتنشر تلقائياً مقالات محسّنة عبر 13 وكيل ذكاء اصطناعي متخصص — مع سير عمل موافقة عبر Slack للحفاظ على رقابة بشرية."
+    },
+    rating: 4.2,
+    pricing: 'Paid',
+    pricingLocalized: {
+      en: 'From $49/mo (Starter)',
+      fr: 'À partir de 49$/mois (Starter)',
+      es: 'Desde $49/mes (Starter)',
+      ar: 'ابتداءً من ٤٩ دولار/شهرياً (Starter)'
+    },
+    websiteUrl: 'https://www.trysight.ai',
+    views: 1800,
+    company: 'Sight AI', founded: '2025', hasAPI: false, hasMobileApp: false,
+    releaseDate: 'Oct 2025', lastUpdate: 'Aug 2026',
+    pros: ['Tracks brand mentions across 5 major AI assistants', 'Autopilot mode: end-to-end content generation & publishing', 'Slack approval workflow — agentic but not blind', 'Covers both traditional SEO and new GEO (Generative Engine Optimization)', 'Actionable competitive intelligence on LLM visibility'],
+    cons: ['No free tier', 'Content quality still needs human polish', 'Starter plan limited to 10 tracked prompts', 'Relatively new; brand recognition still growing'],
+    tags: ['GEO', 'SEO', 'LLM Visibility', 'AI Content', 'Brand Monitoring'],
+    useCases: ['Tracking brand presence in AI-generated answers', 'Automated SEO content publishing', 'Competitive analysis in AI search', 'Marketing agencies managing multiple client brands'],
+    verdict: "Sight AI is the right tool if you're serious about GEO — getting your brand cited by AI assistants, not just ranked on Google. The Slack approval workflow is a smart design choice: you get autonomous publishing without losing editorial control. Worth trying at the $49 Starter tier.",
+    faq: [
+      {
+        question: { en: 'What is GEO and why does it matter in 2026?', fr: "Qu'est-ce que le GEO et pourquoi est-il important en 2026 ?", es: '¿Qué es el GEO y por qué importa en 2026?', ar: 'ما هو GEO ولماذا يهمّ في 2026؟' },
+        answer: {
+          en: 'GEO (Generative Engine Optimization) is the practice of optimizing content so that AI assistants like ChatGPT, Perplexity, and Gemini cite your brand in their answers. As AI search grows, being mentioned in AI responses is becoming as important as ranking on Google.',
+          fr: "Le GEO (Generative Engine Optimization) est la pratique d'optimiser son contenu pour que les assistants IA comme ChatGPT, Perplexity et Gemini citent votre marque dans leurs réponses. Avec la croissance de la recherche IA, être mentionné dans les réponses IA devient aussi important que d'être bien classé sur Google.",
+          es: 'El GEO (Generative Engine Optimization) es la práctica de optimizar contenido para que asistentes de IA como ChatGPT, Perplexity y Gemini citen tu marca en sus respuestas. A medida que crece la búsqueda por IA, aparecer en respuestas de IA es tan importante como rankear en Google.',
+          ar: 'GEO (تحسين محركات البحث التوليدية) هو ممارسة تحسين المحتوى لكي يستشهد مساعدو الذكاء الاصطناعي مثل ChatGPT وPerplexity وGemini بعلامتك التجارية في إجاباتهم. مع نمو البحث بالذكاء الاصطناعي، أصبح الظهور في إجابات الذكاء الاصطناعي بنفس أهمية التصنيف في Google.'
+        }
+      }
+    ],
+  },
+  {
+    id: 'grok-build',
+    name: 'Grok Build',
+    category: 'code',
+    description: {
+      en: "xAI's open-source terminal coding agent (Apache 2.0) — reads your codebase, edits files, runs shell commands, and spawns up to 8 parallel subagents in isolated git worktrees. Reached v1.0 on August 7 2026, defaults to Grok 4.6, and includes a plan-first workflow and Arena Mode for competing outputs.",
+      fr: "Agent de codage terminal open-source de xAI (Apache 2.0) — lit votre code, édite les fichiers, exécute des commandes shell et génère jusqu'à 8 sous-agents parallèles dans des worktrees git isolés. Sorti en v1.0 le 7 août 2026, utilise Grok 4.6 par défaut et inclut un mode plan et Arena Mode.",
+      es: "Agente de codificación terminal open-source de xAI (Apache 2.0) — lee tu código, edita archivos, ejecuta comandos shell y genera hasta 8 subagentes paralelos en worktrees git aislados. Llegó a v1.0 el 7 de agosto de 2026, usa Grok 4.6 por defecto e incluye un flujo plan-first y Arena Mode.",
+      ar: "وكيل برمجة طرفية مفتوح المصدر من xAI (Apache 2.0) — يقرأ قاعدة الكود، ويحرر الملفات، وينفذ أوامر Shell، ويولّد حتى 8 وكلاء فرعيين متوازيين في worktrees git معزولة. وصل إلى الإصدار 1.0 في 7 أغسطس 2026، ويستخدم Grok 4.6 افتراضياً مع سير عمل قائم على الخطة ووضع Arena."
+    },
+    rating: 4.6,
+    pricing: 'Paid',
+    pricingLocalized: {
+      en: 'SuperGrok $30/mo (or X Premium+)',
+      fr: 'SuperGrok 30$/mois (ou X Premium+)',
+      es: 'SuperGrok $30/mes (o X Premium+)',
+      ar: 'SuperGrok 30 دولار/شهر (أو X Premium+)'
+    },
+    websiteUrl: 'https://x.ai/news/grok-build-cli',
+    views: 9200,
+    company: 'xAI', founded: '2026', hasAPI: true, hasMobileApp: false,
+    releaseDate: 'May 2026', lastUpdate: 'Aug 2026',
+    pros: [
+      'Up to 8 parallel subagents in isolated git worktrees',
+      'Plan-first workflow — review before any code changes',
+      'Open source (Apache 2.0)',
+      'Arena Mode: competing agent outputs for best result',
+      'Low API cost: $1/$2 per 1M tokens via grok-build-0.1'
+    ],
+    cons: [
+      'Requires SuperGrok ($30/mo) or X Premium+ subscription',
+      'No free tier or standalone plan',
+      'CLI-only — no IDE integration yet',
+      'Still maturing ecosystem compared to Cursor or Claude Code'
+    ],
+    tags: ['CLI', 'Coding Agent', 'xAI', 'Grok 4.6', 'Parallel Agents', 'Terminal'],
+    useCases: [
+      'Autonomous codebase refactoring',
+      'Multi-file feature development from the terminal',
+      'Parallel experimentation with Arena Mode',
+      'Delegating long-running coding tasks to subagents'
+    ],
+    verdict: 'Grok Build is xAI\'s serious entry into the coding-agent race, standing out with 8 parallel subagents and a plan-before-execute workflow that keeps you in control. If you\'re already a SuperGrok or X Premium+ subscriber, it\'s a no-brainer to try alongside Claude Code or Cursor.',
+    faq: [
+      {
+        question: {
+          en: 'Do I need a separate Grok Build subscription?',
+          fr: 'Ai-je besoin d\'un abonnement Grok Build séparé ?',
+          es: '¿Necesito una suscripción separada para Grok Build?',
+          ar: 'هل أحتاج إلى اشتراك منفصل لـ Grok Build؟'
+        },
+        answer: {
+          en: 'No. Grok Build is included in SuperGrok ($30/mo) and X Premium+ subscriptions — no standalone plan exists. The underlying grok-build-0.1 API is also available to developers at $1/$2 per 1M tokens.',
+          fr: 'Non. Grok Build est inclus dans les abonnements SuperGrok (30$/mois) et X Premium+ — il n\'existe pas de plan autonome. L\'API grok-build-0.1 est également disponible pour les développeurs à 1$/2$ par million de tokens.',
+          es: 'No. Grok Build está incluido en las suscripciones SuperGrok ($30/mes) y X Premium+ — no existe un plan independiente. La API grok-build-0.1 también está disponible para desarrolladores a $1/$2 por 1M de tokens.',
+          ar: 'لا. Grok Build مضمن في اشتراكي SuperGrok (30 دولار/شهر) و X Premium+ — لا يوجد خطة مستقلة. تتوفر أيضاً API الخاصة بـ grok-build-0.1 للمطورين بسعر 1/2 دولار لكل مليون رمز.'
+        }
+      },
+      {
+        question: {
+          en: 'How does Arena Mode work in Grok Build?',
+          fr: 'Comment fonctionne le mode Arena dans Grok Build ?',
+          es: '¿Cómo funciona el Arena Mode en Grok Build?',
+          ar: 'كيف يعمل وضع Arena في Grok Build؟'
+        },
+        answer: {
+          en: 'Arena Mode runs two or more subagents against the same task simultaneously, each in its own isolated git worktree, then presents the results side-by-side so you can pick the best implementation.',
+          fr: 'Le mode Arena exécute deux sous-agents ou plus sur la même tâche simultanément, chacun dans son propre worktree git isolé, puis présente les résultats côte à côte pour que vous puissiez choisir la meilleure implémentation.',
+          es: 'El Arena Mode ejecuta dos o más subagentes en la misma tarea simultáneamente, cada uno en su propio worktree git aislado, y luego presenta los resultados en paralelo para que elijas la mejor implementación.',
+          ar: 'يشغّل وضع Arena وكيلين فرعيين أو أكثر على نفس المهمة في آنٍ واحد، كلٌّ منهم في worktree git معزول خاص، ثم يعرض النتائج جنباً إلى جنب لتختار أفضل تنفيذ.'
+        }
+      }
+    ]
+  },
+  {
+    id: 'pigment-ai',
+    name: 'Pigment',
+    category: 'finance',
+    description: {
+      en: "Enterprise AI business planning and FP&A platform — combines dynamic financial modeling with autonomous AI agents (Modeler and Analyst) to build, stress-test, and update financial plans in real time. Used by Figma, Brex, Deliveroo and Carta. Positions itself as the modern alternative to Anaplan.",
+      fr: "Plateforme de planification financière d'entreprise et FP&A — combine la modélisation financière dynamique avec des agents IA autonomes (Modeler et Analyst) pour construire, tester et mettre à jour les plans financiers en temps réel. Utilisé par Figma, Brex, Deliveroo et Carta.",
+      es: "Plataforma de planificación financiera empresarial y FP&A — combina modelado financiero dinámico con agentes de IA autónomos (Modeler y Analyst) para construir, probar y actualizar planes financieros en tiempo real. Usado por Figma, Brex, Deliveroo y Carta.",
+      ar: "منصة تخطيط مالي مؤسسي وFP&A — تجمع بين النمذجة المالية الديناميكية ووكلاء الذكاء الاصطناعي المستقلين (Modeler وAnalyst) لبناء الخطط المالية واختبارها وتحديثها في الوقت الفعلي. تستخدمها شركات Figma وBrex وDeliveroo وCarta."
+    },
+    rating: 4.5,
+    pricing: 'Paid',
+    pricingLocalized: {
+      en: 'Custom enterprise pricing',
+      fr: 'Tarification entreprise sur devis',
+      es: 'Precio empresarial personalizado',
+      ar: 'تسعير مؤسسي مخصص'
+    },
+    websiteUrl: 'https://pigment.com',
+    views: 6800,
+    company: 'Pigment', founded: '2019', hasAPI: true, hasMobileApp: false,
+    releaseDate: 'Jan 2021', lastUpdate: 'Aug 2026',
+    pros: [
+      'Modeler AI agent converts plain-English intent into governed financial models',
+      'Analyst agent proactively flags anomalies and drafts reports',
+      '30+ native connectors for real-time data sync',
+      'Faster implementation than legacy EPM (2-4 months vs 4-12 for Anaplan)',
+      'Intuitive UX with dedicated views per team (org chart, geo maps, etc.)'
+    ],
+    cons: [
+      'Enterprise-only pricing — no free or self-serve plan',
+      'Overkill for small teams or simple budgeting needs',
+      'Requires dedicated onboarding and change management',
+      'Custom pricing makes budgeting comparisons difficult'
+    ],
+    tags: ['FP&A', 'Financial Planning', 'Enterprise', 'AI Agents', 'Forecasting', 'CFO'],
+    useCases: [
+      'Financial planning and forecasting',
+      'Scenario modeling and stress-testing',
+      'Headcount and revenue planning',
+      'Cross-functional business performance management'
+    ],
+    verdict: 'Pigment is the top choice for mid-market and enterprise finance teams that have outgrown spreadsheets and want AI-native FP&A — without the 12-month Anaplan implementation. The Modeler and Analyst agents make it genuinely autonomous, not just a pretty dashboard.'
+  },
+  {
+    id: 'hebbia-ai',
+    name: 'Hebbia',
+    category: 'data',
+    description: {
+      en: "Enterprise AI research platform for finance and legal teams — uses an agent-swarm architecture to reason over unlimited documents (PDFs, spreadsheets, redlines, emails) with an effective infinite context window. Trusted by top global asset managers and law firms. Every reasoning step is auditable and collaborative.",
+      fr: "Plateforme de recherche IA d'entreprise pour les équipes finance et juridique — utilise une architecture d'essaim d'agents pour raisonner sur un nombre illimité de documents (PDF, tableaux, emails) avec une fenêtre de contexte effectivement infinie. Chaque étape de raisonnement est auditable.",
+      es: "Plataforma de investigación IA empresarial para equipos de finanzas y legal — usa arquitectura de enjambre de agentes para razonar sobre documentos ilimitados (PDFs, hojas de cálculo, emails) con una ventana de contexto efectivamente infinita. Cada paso de razonamiento es auditable.",
+      ar: "منصة بحث ذكاء اصطناعي مؤسسية لفرق المالية والقانون — تستخدم بنية سرب الوكلاء للتفكير في مستندات غير محدودة (PDF، جداول بيانات، بريد إلكتروني) مع نافذة سياق فعّالة لا نهاية لها. كل خطوة استدلال قابلة للتدقيق."
+    },
+    rating: 4.5,
+    pricing: 'Paid',
+    pricingLocalized: {
+      en: 'Enterprise (custom pricing)',
+      fr: 'Entreprise (tarif sur mesure)',
+      es: 'Empresa (precio personalizado)',
+      ar: 'مؤسسي (تسعير مخصص)'
+    },
+    websiteUrl: 'https://hebbia.ai',
+    views: 5200,
+    company: 'Hebbia', founded: '2020', hasAPI: false, hasMobileApp: false,
+    releaseDate: 'Jan 2023', lastUpdate: 'Jul 2026',
+    pros: [
+      'Agent-swarm architecture handles millions of pages across documents',
+      'Infinite effective context window — no arbitrary document limits',
+      'Full audit trail of every reasoning step',
+      'Handles PDFs, spreadsheets, redlines, emails, and nested tables',
+      'Trusted by top-tier global asset managers'
+    ],
+    cons: [
+      'Enterprise-only, high five-to-six-figure annual contract',
+      'Not self-serve — requires sales engagement and onboarding',
+      'Overkill for teams that only need basic document Q&A',
+      'No public pricing or free trial'
+    ],
+    tags: ['Finance Research', 'Legal Research', 'Enterprise AI', 'Document Analysis', 'Agent Swarm'],
+    useCases: [
+      'Due diligence across thousands of documents',
+      'Investment research and portfolio analysis',
+      'Contract review and legal discovery',
+      'Regulatory compliance document review'
+    ],
+    verdict: 'Hebbia is the gold standard for enterprise-grade document intelligence in finance and legal. If your team reads millions of pages for work — earnings transcripts, deal documents, regulatory filings — and needs an auditable AI that doesn\'t hallucinate or lose context, Hebbia is worth the enterprise price tag.'
+  },
 ];
 
 export function getToolById(id: string): AITool | undefined {

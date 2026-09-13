@@ -3048,4 +3048,124 @@ export const TOOL_FAQS: Record<string, FAQItem[]> = {
       },
     },
   ],
+  zetik: [
+    {
+      question: {
+        en: 'Is Zetik free to use?',
+        fr: 'Zetik est-il gratuit ?',
+        es: '¿Zetik es gratis?',
+        ar: 'هل Zetik مجاني؟',
+      },
+      answer: {
+        en: 'Zetik has a free tier to create trackers and receive briefs. Paid Plus and Pro plans (with a 7-day free trial) unlock unlimited messages, up to 200 trackers, Deep Dives and more advanced models.',
+        fr: "Zetik propose un plan gratuit pour créer des trackers et recevoir des briefs. Les plans payants Plus et Pro (essai gratuit de 7 jours) débloquent des messages illimités, jusqu'à 200 trackers, les Deep Dives et des modèles plus avancés.",
+        es: 'Zetik tiene un plan gratuito para crear trackers y recibir briefs. Los planes de pago Plus y Pro (con prueba gratuita de 7 días) desbloquean mensajes ilimitados, hasta 200 trackers, Deep Dives y modelos más avanzados.',
+        ar: 'يوفر Zetik خطة مجانية لإنشاء المتتبعات وتلقي الملخصات. تفتح خطتا Plus وPro المدفوعتان (مع تجربة مجانية لمدة ٧ أيام) رسائل غير محدودة وحتى ٢٠٠ متتبع وميزة Deep Dives ونماذج أكثر تقدماً.',
+      },
+    },
+    {
+      question: {
+        en: 'How is Zetik different from a news aggregator or RSS reader?',
+        fr: "En quoi Zetik diffère-t-il d'un agrégateur de news ou d'un lecteur RSS ?",
+        es: '¿En qué se diferencia Zetik de un agregador de noticias o un lector RSS?',
+        ar: 'كيف يختلف Zetik عن مجمّع الأخبار أو قارئ RSS؟',
+      },
+      answer: {
+        en: 'Zetik reads across formats an RSS feed cannot — podcasts, videos, code repos, X/Reddit threads and papers — then cross-checks and synthesizes them into a single briefed insight instead of a pile of raw links.',
+        fr: "Zetik lit des formats qu'un flux RSS ne couvre pas — podcasts, vidéos, dépôts de code, fils X/Reddit et articles — puis les recoupe et les synthétise en un seul insight, au lieu d'une pile de liens bruts.",
+        es: 'Zetik lee formatos que un feed RSS no cubre — podcasts, vídeos, repositorios de código, hilos de X/Reddit y papers — y luego los verifica y sintetiza en un único insight, en lugar de una pila de enlaces sin procesar.',
+        ar: 'يقرأ Zetik صيغاً لا يغطيها خلاصات RSS — بودكاست وفيديوهات ومستودعات كود ومناقشات X/Reddit وأبحاث — ثم يتحقق منها ويلخصها في رؤية واحدة بدلاً من كومة روابط خام.',
+      },
+    },
+  ],
+  'miora-design': [
+    {
+      question: {
+        en: 'What can Miora generate?',
+        fr: 'Que peut générer Miora ?',
+        es: '¿Qué puede generar Miora?',
+        ar: 'ماذا يمكن أن يولّد Miora؟',
+      },
+      answer: {
+        en: 'From a single brief, Miora can generate images, video, UI/UX mockups and 3D assets together on one canvas, using specialist AI agents for each medium.',
+        fr: "À partir d'un seul brief, Miora peut générer ensemble des images, vidéos, maquettes UI/UX et assets 3D sur un même canevas, grâce à des agents IA spécialisés pour chaque média.",
+        es: 'A partir de un único brief, Miora puede generar juntos imágenes, vídeo, maquetas de UI/UX y activos 3D en un mismo lienzo, usando agentes de IA especializados para cada medio.',
+        ar: 'انطلاقاً من موجز واحد، يمكن لـ Miora توليد الصور والفيديو ونماذج واجهات المستخدم والأصول ثلاثية الأبعاد معاً على قماش واحد، باستخدام وكلاء ذكاء اصطناعي متخصصين لكل وسيط.',
+      },
+    },
+    {
+      question: {
+        en: 'Does Miora remember my brand style between projects?',
+        fr: 'Miora mémorise-t-il mon style de marque entre les projets ?',
+        es: '¿Miora recuerda mi estilo de marca entre proyectos?',
+        ar: 'هل يتذكر Miora أسلوب علامتي التجارية بين المشاريع؟',
+      },
+      answer: {
+        en: "Yes. Miora's Creative Agent keeps persistent memory of your brand colors, tone and creative rules, so new projects stay visually consistent instead of starting from a blank prompt each time.",
+        fr: "Oui. L'agent créatif de Miora conserve une mémoire persistante de vos couleurs de marque, votre ton et vos règles créatives, pour que les nouveaux projets restent cohérents sans repartir de zéro à chaque fois.",
+        es: 'Sí. El Agente Creativo de Miora conserva una memoria persistente de tus colores de marca, tono y reglas creativas, para que los nuevos proyectos se mantengan visualmente consistentes sin partir de cero cada vez.',
+        ar: 'نعم. يحتفظ الوكيل الإبداعي في Miora بذاكرة دائمة لألوان علامتك التجارية ونبرتها وقواعدها الإبداعية، لتبقى المشاريع الجديدة متناسقة بصرياً دون البدء من الصفر في كل مرة.',
+      },
+    },
+  ],
+  'caimera-ai': [
+    {
+      question: {
+        en: 'Is Caimera free to try?',
+        fr: 'Peut-on essayer Caimera gratuitement ?',
+        es: '¿Se puede probar Caimera gratis?',
+        ar: 'هل يمكن تجربة Caimera مجاناً؟',
+      },
+      answer: {
+        en: 'Yes. The Free plan gives $0 access with 20 one-time credits and no credit card required, enough to test editorial and catalog image generation before upgrading to a paid plan starting at $15/user/month.',
+        fr: "Oui. Le plan gratuit donne accès sans frais avec 20 crédits à usage unique et sans carte bancaire requise, suffisant pour tester la génération d'images éditoriales et catalogue avant de passer à un plan payant à partir de 15$/utilisateur/mois.",
+        es: 'Sí. El plan gratuito da acceso a $0 con 20 créditos de un solo uso y sin necesidad de tarjeta, suficiente para probar la generación de imágenes editoriales y de catálogo antes de pasar a un plan de pago desde $15/usuario/mes.',
+        ar: 'نعم. توفر الخطة المجانية وصولاً بسعر ٠ دولار مع ٢٠ رصيداً لمرة واحدة ودون الحاجة لبطاقة ائتمان، وهو ما يكفي لتجربة توليد الصور التحريرية وصور الكتالوج قبل الترقية لخطة مدفوعة تبدأ من ١٥ دولاراً لكل مستخدم شهرياً.',
+      },
+    },
+    {
+      question: {
+        en: 'What can Caimera generate besides product photos?',
+        fr: 'Que peut générer Caimera en dehors des photos produit ?',
+        es: '¿Qué puede generar Caimera además de fotos de producto?',
+        ar: 'ماذا يمكن أن ينتج Caimera بخلاف صور المنتجات؟',
+      },
+      answer: {
+        en: 'Beyond product photos, Caimera can turn images into short videos (image-to-video), convert sketches into finished designs, create repeat and placement prints for textiles, and generate complete tech packs.',
+        fr: "Au-delà des photos produit, Caimera peut transformer des images en courtes vidéos (image-to-video), convertir des croquis en designs finis, créer des motifs répétés pour le textile, et générer des tech packs complets.",
+        es: 'Más allá de las fotos de producto, Caimera puede convertir imágenes en vídeos cortos (imagen a vídeo), transformar bocetos en diseños terminados, crear estampados repetidos para textiles y generar tech packs completos.',
+        ar: 'إلى جانب صور المنتجات، يمكن لـ Caimera تحويل الصور إلى مقاطع فيديو قصيرة، وتحويل الرسومات التخطيطية إلى تصاميم نهائية، وإنشاء أنماط طباعة متكررة للمنسوجات، وتوليد حزم تقنية (tech packs) كاملة.',
+      },
+    },
+  ],
+  'airjelly-ai': [
+    {
+      question: {
+        en: 'Is AirJelly free?',
+        fr: 'AirJelly est-il gratuit ?',
+        es: '¿AirJelly es gratis?',
+        ar: 'هل AirJelly مجاني؟',
+      },
+      answer: {
+        en: 'Yes, AirJelly is currently a free download for macOS with no premium tiers listed. Windows and Linux support is planned but not yet available.',
+        fr: "Oui, AirJelly est actuellement un téléchargement gratuit pour macOS, sans offre premium à ce jour. Le support Windows et Linux est prévu mais pas encore disponible.",
+        es: 'Sí, AirJelly es actualmente una descarga gratuita para macOS, sin niveles premium por ahora. El soporte para Windows y Linux está previsto pero aún no disponible.',
+        ar: 'نعم، AirJelly متاح حالياً كتحميل مجاني على macOS دون خطط مدفوعة معلنة. دعم Windows وLinux مخطط له لكنه غير متاح بعد.',
+      },
+    },
+    {
+      question: {
+        en: 'Does AirJelly upload my data to the cloud?',
+        fr: 'AirJelly envoie-t-il mes données dans le cloud ?',
+        es: '¿AirJelly sube mis datos a la nube?',
+        ar: 'هل يرفع AirJelly بياناتي إلى السحابة؟',
+      },
+      answer: {
+        en: 'No. AirJelly runs entirely on your machine — your screen activity, notes and conversations never leave your computer, with no cloud sync and no training on your data.',
+        fr: "Non. AirJelly fonctionne entièrement sur votre machine : votre activité écran, vos notes et vos conversations ne quittent jamais votre ordinateur, sans synchronisation cloud ni entraînement sur vos données.",
+        es: 'No. AirJelly funciona íntegramente en tu equipo: tu actividad en pantalla, notas y conversaciones nunca salen de tu ordenador, sin sincronización en la nube ni entrenamiento con tus datos.',
+        ar: 'لا. يعمل AirJelly بالكامل على جهازك — نشاط شاشتك وملاحظاتك ومحادثاتك لا تغادر جهازك أبداً، دون مزامنة سحابية أو تدريب على بياناتك.',
+      },
+    },
+  ],
 };
